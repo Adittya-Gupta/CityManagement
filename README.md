@@ -7,4 +7,5 @@
     - Centauri.ttf
     - Exo2-Regular.ttf
     - Exo2-Bold.ttf
+    - Abhaya Libre Medium.ttf
 - Now you can contribute

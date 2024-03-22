@@ -48,25 +48,28 @@ Partial Class User_SignUpForm
         ' 
         ' EmailTextBox
         ' 
+        EmailTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailTextBox.Font = New Font("Exo 2", 12F)
         EmailTextBox.Location = New Point(951, 254)
         EmailTextBox.Name = "EmailTextBox"
         EmailTextBox.Size = New Size(259, 31)
-        EmailTextBox.TabIndex = 12
+        EmailTextBox.TabIndex = 2
         ' 
         ' EmailLabel
         ' 
+        EmailLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailLabel.AutoSize = True
         EmailLabel.Font = New Font("Exo 2", 12F)
         EmailLabel.ForeColor = Color.White
         EmailLabel.Location = New Point(944, 218)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New Size(61, 24)
+        EmailLabel.Size = New Size(70, 24)
         EmailLabel.TabIndex = 15
-        EmailLabel.Text = "Email"
+        EmailLabel.Text = "Email*"
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.Font = New Font("Centauri", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
@@ -78,6 +81,7 @@ Partial Class User_SignUpForm
         ' 
         ' LoginLabel
         ' 
+        LoginLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         LoginLabel.AutoSize = True
         LoginLabel.Cursor = Cursors.Hand
         LoginLabel.Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -90,6 +94,7 @@ Partial Class User_SignUpForm
         ' 
         ' SignUpButton
         ' 
+        SignUpButton.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         SignUpButton.Cursor = Cursors.Hand
         SignUpButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         SignUpButton.Location = New Point(796, 731)
@@ -101,63 +106,70 @@ Partial Class User_SignUpForm
         ' 
         ' NameTextBox
         ' 
+        NameTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         NameTextBox.Font = New Font("Exo 2", 12F)
         NameTextBox.Location = New Point(643, 254)
         NameTextBox.Name = "NameTextBox"
         NameTextBox.Size = New Size(259, 31)
-        NameTextBox.TabIndex = 19
+        NameTextBox.TabIndex = 1
         ' 
         ' Label3
         ' 
+        Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 12F)
         Label3.ForeColor = Color.White
         Label3.Location = New Point(637, 218)
         Label3.Name = "Label3"
-        Label3.Size = New Size(64, 24)
+        Label3.Size = New Size(73, 24)
         Label3.TabIndex = 20
-        Label3.Text = "Name"
+        Label3.Text = "Name*"
         ' 
         ' ContactTextBox
         ' 
+        ContactTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         ContactTextBox.Font = New Font("Exo 2", 12F)
         ContactTextBox.Location = New Point(643, 377)
         ContactTextBox.Name = "ContactTextBox"
         ContactTextBox.Size = New Size(259, 31)
-        ContactTextBox.TabIndex = 23
+        ContactTextBox.TabIndex = 3
         ' 
         ' Label4
         ' 
+        Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Exo 2", 12F)
         Label4.ForeColor = Color.White
         Label4.Location = New Point(637, 342)
         Label4.Name = "Label4"
-        Label4.Size = New Size(81, 24)
+        Label4.Size = New Size(90, 24)
         Label4.TabIndex = 24
-        Label4.Text = "Contact"
+        Label4.Text = "Contact*"
         ' 
         ' ConfirmPasswordTextBox
         ' 
+        ConfirmPasswordTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         ConfirmPasswordTextBox.Font = New Font("Exo 2", 12F)
         ConfirmPasswordTextBox.Location = New Point(643, 620)
         ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox"
         ConfirmPasswordTextBox.Size = New Size(365, 31)
-        ConfirmPasswordTextBox.TabIndex = 31
+        ConfirmPasswordTextBox.TabIndex = 6
         ' 
         ' Label2
         ' 
+        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Exo 2", 12F)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(637, 583)
         Label2.Name = "Label2"
-        Label2.Size = New Size(176, 24)
+        Label2.Size = New Size(185, 24)
         Label2.TabIndex = 32
-        Label2.Text = "Confirm Password"
+        Label2.Text = "Confirm Password*"
         ' 
         ' Label6
         ' 
+        Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label6.AutoSize = True
         Label6.Font = New Font("Exo 2", 12F)
         Label6.ForeColor = Color.White
@@ -169,25 +181,28 @@ Partial Class User_SignUpForm
         ' 
         ' PasswordTextBox
         ' 
+        PasswordTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         PasswordTextBox.Font = New Font("Exo 2", 12F)
         PasswordTextBox.Location = New Point(643, 495)
         PasswordTextBox.Name = "PasswordTextBox"
         PasswordTextBox.Size = New Size(365, 31)
-        PasswordTextBox.TabIndex = 27
+        PasswordTextBox.TabIndex = 5
         ' 
         ' Label7
         ' 
+        Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label7.AutoSize = True
         Label7.Font = New Font("Exo 2", 12F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(637, 459)
         Label7.Name = "Label7"
-        Label7.Size = New Size(99, 24)
+        Label7.Size = New Size(108, 24)
         Label7.TabIndex = 28
-        Label7.Text = "Password"
+        Label7.Text = "Password*"
         ' 
         ' Label8
         ' 
+        Label8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label8.AutoSize = True
         Label8.Font = New Font("Exo 2", 12F)
         Label8.ForeColor = Color.White
@@ -199,24 +214,28 @@ Partial Class User_SignUpForm
         ' 
         ' GenderComboBox
         ' 
+        GenderComboBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         GenderComboBox.Font = New Font("Exo 2", 11F)
         GenderComboBox.FormattingEnabled = True
+        GenderComboBox.ItemHeight = 22
         GenderComboBox.Location = New Point(1047, 495)
         GenderComboBox.Name = "GenderComboBox"
         GenderComboBox.Size = New Size(163, 30)
-        GenderComboBox.TabIndex = 35
+        GenderComboBox.TabIndex = 7
         ' 
         ' DateOfBirthDateTimePicker
         ' 
+        DateOfBirthDateTimePicker.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         DateOfBirthDateTimePicker.Font = New Font("Exo 2", 11F)
         DateOfBirthDateTimePicker.Format = DateTimePickerFormat.Short
         DateOfBirthDateTimePicker.Location = New Point(1047, 620)
         DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker"
         DateOfBirthDateTimePicker.Size = New Size(163, 29)
-        DateOfBirthDateTimePicker.TabIndex = 36
+        DateOfBirthDateTimePicker.TabIndex = 8
         ' 
         ' LoginPic
         ' 
+        LoginPic.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         LoginPic.BackgroundImage = My.Resources.Resources.loginImage
         LoginPic.BackgroundImageLayout = ImageLayout.Stretch
         LoginPic.Location = New Point(-3, -1)
@@ -234,6 +253,7 @@ Partial Class User_SignUpForm
         ' 
         ' Label5
         ' 
+        Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label5.AutoSize = True
         Label5.Font = New Font("Exo 2", 12F)
         Label5.ForeColor = Color.White
@@ -245,10 +265,11 @@ Partial Class User_SignUpForm
         ' 
         ' Button1
         ' 
+        Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button1.Location = New Point(951, 377)
         Button1.Name = "Button1"
         Button1.Size = New Size(259, 32)
-        Button1.TabIndex = 38
+        Button1.TabIndex = 4
         Button1.Text = "Upload Picture"
         Button1.UseVisualStyleBackColor = True
         ' 

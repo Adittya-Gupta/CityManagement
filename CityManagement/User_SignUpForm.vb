@@ -2,7 +2,6 @@
 Imports System.IO
 Imports System.Text
 Imports System.Security.Cryptography
-Imports Org.BouncyCastle.Bcpg
 
 Public Class User_SignUpForm
 
@@ -10,6 +9,8 @@ Public Class User_SignUpForm
     Dim conn As New MySqlConnection(connString)
     Dim selectedImagePath As String = ""
     Private Sub SignUpForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.WindowState = FormWindowState.Maximized
 
         ' Populate the gender ComboBox
         GenderComboBox.Items.AddRange({"Select", "Male", "Female", "Non Binary", "Prefer not to say"})

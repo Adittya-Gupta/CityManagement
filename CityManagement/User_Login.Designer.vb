@@ -42,6 +42,7 @@ Partial Class User_Login
         ' 
         ' PasswordLabel
         ' 
+        PasswordLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         PasswordLabel.AutoSize = True
         PasswordLabel.Font = New Font("Exo 2", 12F)
         PasswordLabel.ForeColor = Color.White
@@ -53,6 +54,7 @@ Partial Class User_Login
         ' 
         ' EmailLabel
         ' 
+        EmailLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailLabel.AutoSize = True
         EmailLabel.Font = New Font("Exo 2", 12F)
         EmailLabel.ForeColor = Color.White
@@ -64,6 +66,7 @@ Partial Class User_Login
         ' 
         ' EmailTextBox
         ' 
+        EmailTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailTextBox.BackColor = Color.LightGray
         EmailTextBox.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         EmailTextBox.Location = New Point(756, 334)
@@ -73,6 +76,7 @@ Partial Class User_Login
         ' 
         ' PasswordTextBox
         ' 
+        PasswordTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         PasswordTextBox.BackColor = Color.LightGray
         PasswordTextBox.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         PasswordTextBox.Location = New Point(756, 417)
@@ -88,6 +92,7 @@ Partial Class User_Login
         ' 
         ' TogglePasswordButton
         ' 
+        TogglePasswordButton.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         TogglePasswordButton.BackColor = Color.LightGray
         TogglePasswordButton.BackgroundImage = CType(resources.GetObject("TogglePasswordButton.BackgroundImage"), Image)
         TogglePasswordButton.BackgroundImageLayout = ImageLayout.Stretch
@@ -100,6 +105,7 @@ Partial Class User_Login
         ' 
         ' LoginButton
         ' 
+        LoginButton.Anchor = AnchorStyles.Right
         LoginButton.BackColor = SystemColors.ControlDarkDark
         LoginButton.Cursor = Cursors.Hand
         LoginButton.FlatAppearance.BorderSize = 0
@@ -115,6 +121,7 @@ Partial Class User_Login
         ' 
         ' Label2
         ' 
+        Label2.Anchor = AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Cursor = Cursors.Hand
         Label2.Font = New Font("Exo 2", 9F)
@@ -127,6 +134,7 @@ Partial Class User_Login
         ' 
         ' SignUpLabel
         ' 
+        SignUpLabel.Anchor = AnchorStyles.Right
         SignUpLabel.AutoSize = True
         SignUpLabel.Cursor = Cursors.Hand
         SignUpLabel.Font = New Font("Exo 2", 9F)
@@ -139,6 +147,7 @@ Partial Class User_Login
         ' 
         ' LoginPic
         ' 
+        LoginPic.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         LoginPic.BackgroundImage = My.Resources.Resources.loginImage
         LoginPic.BackgroundImageLayout = ImageLayout.Stretch
         LoginPic.Location = New Point(-1, -3)
@@ -150,6 +159,7 @@ Partial Class User_Login
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.Font = New Font("Centauri", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White

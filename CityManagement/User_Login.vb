@@ -9,6 +9,8 @@ Public Class User_Login
     Public Shared GlobalSID As Integer = -1
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+
 
         ' Set initial visibility of login labels
         EmailLabel.Visible = False

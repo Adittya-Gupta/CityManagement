@@ -97,6 +97,12 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="My Project\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_Queries_User.resx">
       <DependentUpon>Banking_Queries_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

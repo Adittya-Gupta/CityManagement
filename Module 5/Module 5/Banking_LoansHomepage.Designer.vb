@@ -22,6 +22,12 @@ Partial Class Banking_LoanHomepage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
+=======
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Home_btn = New System.Windows.Forms.Button()
@@ -65,6 +71,7 @@ Partial Class Banking_LoanHomepage
         Me.PendingRequests_btn = New System.Windows.Forms.Button()
         Me.PayNow_panel = New System.Windows.Forms.Panel()
         Me.ApplyNow_btn = New System.Windows.Forms.Button()
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -76,11 +83,54 @@ Partial Class Banking_LoanHomepage
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+=======
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.PayNow_panel.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.PictureBox2.Location = New System.Drawing.Point(-1, 71)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(1547, 58)
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1547, 74)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox11.Image = Global.Banking.My.Resources.Resources.Bank_Logo
+        Me.PictureBox11.Location = New System.Drawing.Point(12, 4)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(65, 61)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 9
+        Me.PictureBox11.TabStop = False
+        '
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.TextBox1.Font = New System.Drawing.Font("Centauri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(93, 12)
         Me.TextBox1.Multiline = True
@@ -94,7 +144,11 @@ Partial Class Banking_LoanHomepage
         '
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.TextBox2.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TextBox2.ForeColor = System.Drawing.Color.White
         Me.TextBox2.Location = New System.Drawing.Point(1163, 18)
         Me.TextBox2.Multiline = True
@@ -107,7 +161,11 @@ Partial Class Banking_LoanHomepage
         'Home_btn
         '
         Me.Home_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Home_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Home_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Home_btn.ForeColor = System.Drawing.Color.White
         Me.Home_btn.Location = New System.Drawing.Point(25, 79)
         Me.Home_btn.Name = "Home_btn"
@@ -119,7 +177,11 @@ Partial Class Banking_LoanHomepage
         'Loans_btn
         '
         Me.Loans_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Loans_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Loans_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Loans_btn.ForeColor = System.Drawing.Color.White
         Me.Loans_btn.Location = New System.Drawing.Point(148, 79)
         Me.Loans_btn.Name = "Loans_btn"
@@ -131,7 +193,11 @@ Partial Class Banking_LoanHomepage
         'CreditCard_btn
         '
         Me.CreditCard_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.CreditCard_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.CreditCard_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.CreditCard_btn.ForeColor = System.Drawing.Color.White
         Me.CreditCard_btn.Location = New System.Drawing.Point(458, 79)
         Me.CreditCard_btn.Name = "CreditCard_btn"
@@ -143,7 +209,11 @@ Partial Class Banking_LoanHomepage
         'MoneyTransfer_btn
         '
         Me.MoneyTransfer_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.MoneyTransfer_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.MoneyTransfer_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.MoneyTransfer_btn.ForeColor = System.Drawing.Color.White
         Me.MoneyTransfer_btn.Location = New System.Drawing.Point(266, 79)
         Me.MoneyTransfer_btn.Name = "MoneyTransfer_btn"
@@ -155,7 +225,11 @@ Partial Class Banking_LoanHomepage
         'ContactUs_btn
         '
         Me.ContactUs_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.ContactUs_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.ContactUs_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.ContactUs_btn.ForeColor = System.Drawing.Color.White
         Me.ContactUs_btn.Location = New System.Drawing.Point(805, 79)
         Me.ContactUs_btn.Name = "ContactUs_btn"
@@ -167,7 +241,11 @@ Partial Class Banking_LoanHomepage
         'Passbook_btn
         '
         Me.Passbook_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Passbook_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Passbook_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Passbook_btn.ForeColor = System.Drawing.Color.White
         Me.Passbook_btn.Location = New System.Drawing.Point(667, 79)
         Me.Passbook_btn.Name = "Passbook_btn"
@@ -179,7 +257,11 @@ Partial Class Banking_LoanHomepage
         'Logout_btn
         '
         Me.Logout_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Logout_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Logout_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Logout_btn.ForeColor = System.Drawing.Color.White
         Me.Logout_btn.Location = New System.Drawing.Point(1422, 79)
         Me.Logout_btn.Name = "Logout_btn"
@@ -192,7 +274,11 @@ Partial Class Banking_LoanHomepage
         '
         Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.TextBox3.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TextBox3.ForeColor = System.Drawing.Color.White
         Me.TextBox3.Location = New System.Drawing.Point(1291, 142)
         Me.TextBox3.Multiline = True
@@ -205,7 +291,11 @@ Partial Class Banking_LoanHomepage
         'HomeLoan_tb
         '
         Me.HomeLoan_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.HomeLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.HomeLoan_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.HomeLoan_tb.Location = New System.Drawing.Point(1300, 216)
         Me.HomeLoan_tb.Name = "HomeLoan_tb"
         Me.HomeLoan_tb.ReadOnly = True
@@ -216,27 +306,45 @@ Partial Class Banking_LoanHomepage
         'Label3
         '
         Me.Label3.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(1296, 189)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(123, 25)
+=======
+        Me.Label3.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(1296, 189)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label3.TabIndex = 25
         Me.Label3.Text = "Home Loans"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(1298, 268)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(158, 25)
+=======
+        Me.Label4.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(1298, 268)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(158, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "Education Loans"
         '
         'EduLoan_tb
         '
         Me.EduLoan_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.EduLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.EduLoan_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.EduLoan_tb.Location = New System.Drawing.Point(1300, 295)
         Me.EduLoan_tb.Name = "EduLoan_tb"
         Me.EduLoan_tb.ReadOnly = True
@@ -247,17 +355,28 @@ Partial Class Banking_LoanHomepage
         'Label5
         '
         Me.Label5.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(1296, 352)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(151, 25)
+=======
+        Me.Label5.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(1296, 352)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(149, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label5.TabIndex = 29
         Me.Label5.Text = "Business Loans"
         '
         'BusinessLowRisk_tb
         '
         Me.BusinessLowRisk_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.BusinessLowRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.BusinessLowRisk_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.BusinessLowRisk_tb.Location = New System.Drawing.Point(1300, 401)
         Me.BusinessLowRisk_tb.Name = "BusinessLowRisk_tb"
         Me.BusinessLowRisk_tb.ReadOnly = True
@@ -268,17 +387,28 @@ Partial Class Banking_LoanHomepage
         'Label6
         '
         Me.Label6.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(1296, 521)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(155, 25)
+=======
+        Me.Label6.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(1296, 521)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(160, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "Transport Loans"
         '
         'TransportLoan_tb
         '
         Me.TransportLoan_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.TransportLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.TransportLoan_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TransportLoan_tb.Location = New System.Drawing.Point(1300, 548)
         Me.TransportLoan_tb.Name = "TransportLoan_tb"
         Me.TransportLoan_tb.ReadOnly = True
@@ -289,17 +419,28 @@ Partial Class Banking_LoanHomepage
         'Label7
         '
         Me.Label7.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(1296, 595)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(148, 25)
+=======
+        Me.Label7.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(1296, 595)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(149, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Personal Loans"
         '
         'PersonalMedical_tb
         '
         Me.PersonalMedical_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.PersonalMedical_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.PersonalMedical_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.PersonalMedical_tb.Location = New System.Drawing.Point(1300, 643)
         Me.PersonalMedical_tb.Name = "PersonalMedical_tb"
         Me.PersonalMedical_tb.ReadOnly = True
@@ -310,7 +451,11 @@ Partial Class Banking_LoanHomepage
         'BusinessHighRisk_tb
         '
         Me.BusinessHighRisk_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.BusinessHighRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.BusinessHighRisk_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.BusinessHighRisk_tb.Location = New System.Drawing.Point(1300, 471)
         Me.BusinessHighRisk_tb.Name = "BusinessHighRisk_tb"
         Me.BusinessHighRisk_tb.ReadOnly = True
@@ -321,7 +466,11 @@ Partial Class Banking_LoanHomepage
         'PersonalOtherwise_tb
         '
         Me.PersonalOtherwise_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.PersonalOtherwise_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+=======
+        Me.PersonalOtherwise_tb.Font = New System.Drawing.Font("Exo 2", 13.8!)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.PersonalOtherwise_tb.Location = New System.Drawing.Point(1300, 709)
         Me.PersonalOtherwise_tb.Name = "PersonalOtherwise_tb"
         Me.PersonalOtherwise_tb.ReadOnly = True
@@ -368,7 +517,11 @@ Partial Class Banking_LoanHomepage
         'Balance_tb
         '
         Me.Balance_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Balance_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Balance_tb.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Balance_tb.Location = New System.Drawing.Point(106, 17)
         Me.Balance_tb.Name = "Balance_tb"
         Me.Balance_tb.ReadOnly = True
@@ -379,27 +532,45 @@ Partial Class Banking_LoanHomepage
         'Label1
         '
         Me.Label1.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 25)
+=======
+        Me.Label1.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(17, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(83, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Balance"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(270, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 25)
+=======
+        Me.Label2.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(270, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(107, 24)
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "CIBIL score"
         '
         'CIBILScore_tb
         '
         Me.CIBILScore_tb.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.CIBILScore_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.CIBILScore_tb.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.CIBILScore_tb.Location = New System.Drawing.Point(383, 17)
         Me.CIBILScore_tb.Name = "CIBILScore_tb"
         Me.CIBILScore_tb.ReadOnly = True
@@ -411,7 +582,11 @@ Partial Class Banking_LoanHomepage
         '
         Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.TextBox4.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.TextBox4.ForeColor = System.Drawing.Color.White
         Me.TextBox4.Location = New System.Drawing.Point(37, 209)
         Me.TextBox4.Multiline = True
@@ -424,7 +599,11 @@ Partial Class Banking_LoanHomepage
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.Button1.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(1, 0)
         Me.Button1.Name = "Button1"
@@ -502,7 +681,11 @@ Partial Class Banking_LoanHomepage
         'PendingRequests_btn
         '
         Me.PendingRequests_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.PendingRequests_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.PendingRequests_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.PendingRequests_btn.ForeColor = System.Drawing.Color.White
         Me.PendingRequests_btn.Location = New System.Drawing.Point(300, 707)
         Me.PendingRequests_btn.Name = "PendingRequests_btn"
@@ -522,7 +705,11 @@ Partial Class Banking_LoanHomepage
         'ApplyNow_btn
         '
         Me.ApplyNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         Me.ApplyNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.ApplyNow_btn.Font = New System.Drawing.Font("Exo 2", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.ApplyNow_btn.ForeColor = System.Drawing.Color.White
         Me.ApplyNow_btn.Location = New System.Drawing.Point(649, 707)
         Me.ApplyNow_btn.Name = "ApplyNow_btn"
@@ -531,6 +718,7 @@ Partial Class Banking_LoanHomepage
         Me.ApplyNow_btn.Text = "Apply Now"
         Me.ApplyNow_btn.UseVisualStyleBackColor = False
         '
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         'PictureBox11
         '
         Me.PictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -560,6 +748,8 @@ Partial Class Banking_LoanHomepage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+=======
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         'Banking_LoanHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -602,13 +792,22 @@ Partial Class Banking_LoanHomepage
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Banking_LoanHomepage"
         Me.Text = "Loan Management"
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
+=======
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PayNow_panel.ResumeLayout(False)
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.Designer.vb
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.Designer.vb
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

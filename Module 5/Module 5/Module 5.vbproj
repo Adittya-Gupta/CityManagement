@@ -115,6 +115,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,8 +157,13 @@
     <EmbeddedResource Include="Banking_Queries_User.resx">
       <DependentUpon>Banking_Queries_User.vb</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD:Module 5/Module 5/Module 5.vbproj
     <EmbeddedResource Include="Email_Landing.resx">
       <DependentUpon>Email_Landing.vb</DependentUpon>
+=======
+    <EmbeddedResource Include="My Project\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking.vbproj
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

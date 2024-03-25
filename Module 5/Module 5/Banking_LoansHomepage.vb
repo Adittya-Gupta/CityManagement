@@ -43,8 +43,11 @@ Public Class Banking_LoanHomepage
     Private Sub ApplyNow_btn_Click(sender As Object, e As EventArgs) Handles ApplyNow_btn.Click
         'Open loans apply page
     End Sub
+<<<<<<< HEAD:Module 5/Module 5/Banking_LoansHomepage.vb
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
+=======
+>>>>>>> 7a0b7499ca40b7f46c7ff5ff947adc5d1360e87d:Banking Module/Banking/Banking_LoansHomepage.vb
 End Class

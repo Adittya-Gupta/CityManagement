@@ -2,16 +2,16 @@
     ' Declare instances of the forms
     Public ServiceHistoryForm As New ServiceHistory(Me)
     Public chatsForm As New Chats(Me)
+    Public listofChatsForm As New ListOfChats(Me)
     Public listofServicesForm As New ListofServices_Citizen(Me)
     Public listofWorkersForm As New ListofWorkers_Citizen(Me)
     Public HomePage As Object = listofServicesForm
-
+    Public Chatspage As Object = listofChatsForm
     Private Sub UrbanClapNav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the UrbanClapNav form with Panel1 initially empty
         Panel1.Controls.Clear()
         ShowFormInPanel(listofServicesForm)
         HideCurvedLabels()
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -26,7 +26,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ' Show ChatsForm inside Panel1
-        ShowFormInPanel(chatsForm)
+        ShowFormInPanel(Chatspage)
 
         ' Show curved label 2 and hide curved label 1
         CurvedLabel1.Visible = False

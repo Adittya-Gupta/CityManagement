@@ -40,7 +40,7 @@ Partial Class ListItem
         ' 
         ' CurvedLabel2
         ' 
-        CurvedLabel2.BackColor = SystemColors.WindowFrame
+        CurvedLabel2.BackColor = Color.FromArgb(CByte(50), CByte(0), CByte(0), CByte(0))
         CurvedLabel2.CornerRadius = 25
         CurvedLabel2.Location = New Point(3, 0)
         CurvedLabel2.Name = "CurvedLabel2"

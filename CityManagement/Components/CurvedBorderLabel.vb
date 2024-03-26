@@ -11,12 +11,14 @@ Public Class CurvedLabel
 
     Public Overrides Property AutoSize As Boolean
         Get
-            Return False
+            Return MyBase.AutoSize
         End Get
         Set(value As Boolean)
-            ' Do nothing or provide custom behavior if needed
+            MyBase.AutoSize = value
+            Me.Invalidate() ' Redraw the control when the AutoSize property changes
         End Set
     End Property
+
 
     Public Property CornerRadius As Integer
         Get
@@ -25,15 +27,6 @@ Public Class CurvedLabel
         Set(value As Integer)
             _cornerRadius = value
             Me.Invalidate() ' Redraw the control when the corner radius changes
-        End Set
-    End Property
-
-    Public Property CornerRadius1 As Integer
-        Get
-            Return _cornerRadius
-        End Get
-        Set(value As Integer)
-            _cornerRadius = value
         End Set
     End Property
 

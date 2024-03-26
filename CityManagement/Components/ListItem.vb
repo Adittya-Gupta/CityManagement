@@ -1,7 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
-
+Imports System.Windows.Documents
 Public Class ListItem
-
     Public Sub New(Optional ByVal name As String = "Default Name", Optional ByVal address As String = "Default Address", Optional ByVal numberOfRatings As String = "0 ratings", Optional ByVal phoneNumber As String = "+91 9049381111", Optional ByVal rating As Double = 3.0)
         ' This call is required by the designer.
         InitializeComponent()
@@ -26,4 +25,10 @@ Public Class ListItem
         ' Set the PictureBox's region to the circle defined by the GraphicsPath
         pictureBox.Region = New Region(path)
     End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        UrbanClapNavform.chatsForm.Label2.Text = Label1.Text
+        UrbanClapNavform.ShowFormInPanel(UrbanClapNavform.chatsForm)
+    End Sub
+
 End Class

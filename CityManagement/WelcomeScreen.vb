@@ -10,8 +10,7 @@ Public Class WelcomeScreen
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Load the ListofWorkers_Citizen form
-        UrbanClapNavform.Show()
+        MainPanel.Show()
+        Me.Hide()
     End Sub
-
 End Class

@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.CityManagement.MainPanel
+            Me.MainForm = Global.CityManagement.FestivalEvents_EventDetails
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -299,4 +299,7 @@ Public Class User_Profile
         LoadNotifications()
     End Sub
 
+    Private Sub NameLabel_Click(sender As Object, e As EventArgs) Handles NameLabel.Click
+
+    End Sub
 End Class

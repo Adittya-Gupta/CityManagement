@@ -22,7 +22,7 @@ Public Class Chatlistitem
     End Sub
 
     Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click, Label1.Click, Label2.Click
-        UrbanClapNavform.Chatspage = UrbanClapNavform.chatsForm
-        UrbanClapNavform.ShowFormInPanel(UrbanClapNavform.Chatspage)
+        Globals.Chatspage = Globals.chatsForm
+        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.Chatspage)
     End Sub
 End Class

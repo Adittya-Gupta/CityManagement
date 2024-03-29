@@ -22,6 +22,7 @@ Partial Class Chats
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         CurvedLabel9 = New CurvedLabel()
         CurvedLabel1 = New CurvedLabel()
         Label1 = New Label()
@@ -29,6 +30,7 @@ Partial Class Chats
         RichTextBox1 = New RichTextBox()
         Label2 = New Label()
         PictureBox1 = New PictureBox()
+        Timer1 = New Timer(components)
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -65,6 +67,7 @@ Partial Class Chats
         ' Panel1
         ' 
         Panel1.AutoScroll = True
+        Panel1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         Panel1.Location = New Point(27, 65)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1104, 722)
@@ -86,7 +89,7 @@ Partial Class Chats
         ' 
         ' Label2
         ' 
-        Label2.BackColor = Color.Transparent
+        Label2.BackColor = Color.White
         Label2.FlatStyle = FlatStyle.Flat
         Label2.Font = New Font("Exo 2", 19.8000011F)
         Label2.Location = New Point(359, 9)
@@ -100,11 +103,15 @@ Partial Class Chats
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.Electrician3
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(371, 11)
+        PictureBox1.Location = New Point(371, 10)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(46, 46)
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Interval = 2000
         ' 
         ' Chats
         ' 
@@ -133,5 +140,6 @@ Partial Class Chats
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class
 

@@ -1,10 +1,15 @@
 ﻿Public Class ListofWorkers_Citizen
-    Private UrbanClapNavForm As UrbanClapNav
-
-    Public Sub New(ParentForm As UrbanClapNav)
+    Private Filterform As New Workersfilter()
+    Public Sub New()
         InitializeComponent()
-        Me.UrbanClapNavForm = ParentForm
+        AddHandler Me.VisibleChanged, AddressOf ListofWorkers_Citizen_VisibleChanged
     End Sub
+    Private Sub ListofWorkers_Citizen_VisibleChanged(sender As Object, e As EventArgs)
+        If Not Me.Visible Then
+            Filterform.Hide()
+        End If
+    End Sub
+
     Private Sub ListofWorkers_Citizen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Create a new instance of ListItem
         Dim listItem1 As New ListItem("John Doe", "123 Main St", "5 ratings", "+91 9049382222", 4.5)
@@ -34,8 +39,8 @@
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
         ' Show list of Workers form inside Panel1
-        UrbanClapNavForm.HomePage = UrbanClapNavForm.listofServicesForm
-        UrbanClapNavForm.ShowFormInPanel(UrbanClapNavForm.listofServicesForm)
+        Globals.HomePage = Globals.listofServicesForm
+        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.listofServicesForm)
     End Sub
 
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
@@ -52,7 +57,15 @@
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        ' Check if Filterform is already visible
+        If Filterform.Visible Then
+            ' If Filterform is already visible, hide it
+            Filterform.Hide()
+        Else
+            Filterform.BringToFront()
+            ' If Filterform is not visible, show it
+            Filterform.Show()
+        End If
     End Sub
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class HistoryItem
+﻿Imports System.Drawing.Drawing2D
+
+Public Class HistoryItem
     ' Enumeration for different states of the appointment
     Enum AppointmentState
         EnquirySent
@@ -127,6 +129,18 @@
 
         ' Initialize the appointment state
         UpdateAppointmentState(currentState)
+
+        ' Make the PictureBox round
+        MakePictureBoxRound(PictureBox1)
+    End Sub
+
+    Private Sub MakePictureBoxRound(pictureBox As PictureBox)
+        ' Create a GraphicsPath to define a circle
+        Dim path As New GraphicsPath()
+        path.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height)
+
+        ' Set the PictureBox's region to the circle defined by the GraphicsPath
+        pictureBox.Region = New Region(path)
     End Sub
 
     Private Sub CurvedLabel4_Click(sender As Object, e As EventArgs) Handles CurvedLabel4.Click
@@ -139,7 +153,15 @@
             Case AppointmentState.InProgress
                 HandleAction(CustomerAction.Pay)
             Case AppointmentState.Completed
-                HandleAction(CustomerAction.Rate)
+                Using rateform As New Rate()
+                    'Change the position to be in the centre of the screen
+                    Dim result As DialogResult = rateform.ShowDialog()
+                    If result = DialogResult.OK Then
+                        ' Get the selected stars count from the child form
+                        Dim selectedStarsCount As Integer = rateform.SelectedStars
+                        HandleAction(CustomerAction.Rate)
+                    End If
+                End Using
         End Select
     End Sub
 End Class

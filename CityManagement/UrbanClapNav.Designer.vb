@@ -28,6 +28,7 @@ Partial Class UrbanClapNav
         CurvedLabel1 = New CurvedLabel()
         CurvedLabel2 = New CurvedLabel()
         Panel1 = New Panel()
+        Button3 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -46,7 +47,7 @@ Partial Class UrbanClapNav
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Exo 2", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(191, 0)
+        Button1.Location = New Point(113, 0)
         Button1.Name = "Button1"
         Button1.Size = New Size(333, 73)
         Button1.TabIndex = 1
@@ -60,7 +61,7 @@ Partial Class UrbanClapNav
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Exo 2", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(687, 0)
+        Button2.Location = New Point(494, 0)
         Button2.Name = "Button2"
         Button2.Size = New Size(327, 73)
         Button2.TabIndex = 2
@@ -71,7 +72,7 @@ Partial Class UrbanClapNav
         ' 
         CurvedLabel1.BackColor = Color.White
         CurvedLabel1.CornerRadius = 5
-        CurvedLabel1.Location = New Point(213, -5)
+        CurvedLabel1.Location = New Point(135, -5)
         CurvedLabel1.Name = "CurvedLabel1"
         CurvedLabel1.Size = New Size(287, 11)
         CurvedLabel1.TabIndex = 3
@@ -80,7 +81,7 @@ Partial Class UrbanClapNav
         ' 
         CurvedLabel2.BackColor = Color.White
         CurvedLabel2.CornerRadius = 5
-        CurvedLabel2.Location = New Point(788, -5)
+        CurvedLabel2.Location = New Point(598, -5)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Size = New Size(119, 11)
         CurvedLabel2.TabIndex = 5
@@ -92,12 +93,28 @@ Partial Class UrbanClapNav
         Panel1.Size = New Size(1156, 908)
         Panel1.TabIndex = 6
         ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.Black
+        Button3.Cursor = Cursors.Hand
+        Button3.FlatAppearance.BorderSize = 0
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Exo 2", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(811, 0)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(333, 73)
+        Button3.TabIndex = 7
+        Button3.Text = "Work Section"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' UrbanClapNav
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1156, 980)
+        Controls.Add(Button3)
         Controls.Add(Panel1)
         Controls.Add(CurvedLabel2)
         Controls.Add(CurvedLabel1)
@@ -116,4 +133,6 @@ Partial Class UrbanClapNav
     Friend WithEvents CurvedLabel1 As CurvedLabel
     Friend WithEvents CurvedLabel2 As CurvedLabel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents CurvedLabel3 As CurvedLabel
 End Class

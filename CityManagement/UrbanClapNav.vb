@@ -54,4 +54,11 @@
         CurvedLabel2.Visible = True
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Create an instance of Form2
+        Dim WorkPage As New Services_WorkSect()
+        ' Show Form2
+        WorkPage.Show()
+        Me.Hide()
+    End Sub
 End Class

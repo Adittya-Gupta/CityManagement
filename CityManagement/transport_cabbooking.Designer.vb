@@ -25,7 +25,6 @@ Partial Class transport_cabbooking
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_cabbooking))
         Panel1 = New Panel()
         Panel3 = New Panel()
-        Button2 = New Button()
         Button1 = New Button()
         TextBox2 = New TextBox()
         TextBox1 = New TextBox()
@@ -40,6 +39,7 @@ Partial Class transport_cabbooking
         Label3 = New Label()
         Label4 = New Label()
         PictureBox4 = New PictureBox()
+        DateTimePicker1 = New DateTimePicker()
         Panel1.SuspendLayout()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
@@ -62,7 +62,7 @@ Partial Class transport_cabbooking
         ' Panel3
         ' 
         Panel3.BackColor = SystemColors.ControlLightLight
-        Panel3.Controls.Add(Button2)
+        Panel3.Controls.Add(DateTimePicker1)
         Panel3.Controls.Add(Button1)
         Panel3.Controls.Add(TextBox2)
         Panel3.Controls.Add(TextBox1)
@@ -72,21 +72,11 @@ Partial Class transport_cabbooking
         Panel3.Size = New Size(397, 350)
         Panel3.TabIndex = 2
         ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.Silver
-        Button2.Location = New Point(187, 211)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(155, 38)
-        Button2.TabIndex = 4
-        Button2.Text = "Schedule for Later" & vbCrLf
-        Button2.UseVisualStyleBackColor = False
-        ' 
         ' Button1
         ' 
         Button1.BackColor = SystemColors.ActiveCaptionText
         Button1.ForeColor = SystemColors.ButtonHighlight
-        Button1.Location = New Point(65, 211)
+        Button1.Location = New Point(153, 266)
         Button1.Name = "Button1"
         Button1.Size = New Size(110, 38)
         Button1.TabIndex = 3
@@ -96,27 +86,27 @@ Partial Class transport_cabbooking
         ' TextBox2
         ' 
         TextBox2.BackColor = Color.Silver
-        TextBox2.Font = New Font("Segoe UI Variable Display Light", 13.0F)
+        TextBox2.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox2.Location = New Point(65, 147)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(277, 36)
+        TextBox2.PlaceholderText = "Enter Destination"
+        TextBox2.Size = New Size(277, 34)
         TextBox2.TabIndex = 2
-        TextBox2.Text = "Enter Destination"
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = Color.Silver
-        TextBox1.Font = New Font("Segoe UI Variable Display Light", 13.0F)
+        TextBox1.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(65, 96)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(277, 36)
+        TextBox1.PlaceholderText = "Enter Pickup location"
+        TextBox1.Size = New Size(277, 34)
         TextBox1.TabIndex = 1
-        TextBox1.Text = "Enter Pickup location"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Historic", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(76, 18)
         Label1.Name = "Label1"
         Label1.Size = New Size(230, 41)
@@ -228,9 +218,17 @@ Partial Class transport_cabbooking
         PictureBox4.TabIndex = 18
         PictureBox4.TabStop = False
         ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Location = New Point(65, 206)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(277, 31)
+        DateTimePicker1.TabIndex = 4
+        ' 
         ' transport_cabbooking
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1370, 689)
         Controls.Add(PictureBox4)
@@ -263,7 +261,6 @@ Partial Class transport_cabbooking
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
@@ -272,4 +269,5 @@ Partial Class transport_cabbooking
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

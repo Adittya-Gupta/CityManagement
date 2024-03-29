@@ -36,9 +36,9 @@ Partial Class ListofServices_Citizen
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label4.Location = New Point(420, 88)
+        Label4.Location = New Point(469, 68)
         Label4.Name = "Label4"
         Label4.Size = New Size(311, 61)
         Label4.TabIndex = 11
@@ -70,7 +70,7 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel6.CornerRadius = 10
         CurvedLabel6.Image = My.Resources.Resources.image_39
-        CurvedLabel6.Location = New Point(627, 358)
+        CurvedLabel6.Location = New Point(684, 358)
         CurvedLabel6.Name = "CurvedLabel6"
         CurvedLabel6.Size = New Size(270, 140)
         CurvedLabel6.TabIndex = 15
@@ -80,7 +80,7 @@ Partial Class ListofServices_Citizen
         CurvedLabel2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel2.CornerRadius = 10
         CurvedLabel2.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel2.Location = New Point(627, 358)
+        CurvedLabel2.Location = New Point(681, 358)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Padding = New Padding(0, 0, 10, 10)
         CurvedLabel2.Size = New Size(471, 140)
@@ -114,7 +114,7 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel8.CornerRadius = 10
         CurvedLabel8.Image = My.Resources.Resources.image_39__1_
-        CurvedLabel8.Location = New Point(627, 698)
+        CurvedLabel8.Location = New Point(679, 698)
         CurvedLabel8.Name = "CurvedLabel8"
         CurvedLabel8.Size = New Size(270, 140)
         CurvedLabel8.TabIndex = 19
@@ -124,7 +124,7 @@ Partial Class ListofServices_Citizen
         CurvedLabel4.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel4.CornerRadius = 10
         CurvedLabel4.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel4.Location = New Point(627, 698)
+        CurvedLabel4.Location = New Point(679, 698)
         CurvedLabel4.Name = "CurvedLabel4"
         CurvedLabel4.Padding = New Padding(0, 0, 10, 10)
         CurvedLabel4.Size = New Size(471, 140)
@@ -137,7 +137,7 @@ Partial Class ListofServices_Citizen
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1156, 908)
+        ClientSize = New Size(1254, 908)
         Controls.Add(CurvedLabel8)
         Controls.Add(CurvedLabel4)
         Controls.Add(CurvedLabel7)

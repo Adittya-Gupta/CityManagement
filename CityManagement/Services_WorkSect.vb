@@ -6,8 +6,16 @@ Public Class Services_WorkSect
     'Public chatsForm As New Chats(Me)
     'Public listofChatsForm As New ListOfChats(Me)
     'Public Chatspage As Object = listofChatsForm
+    Private MainPanelForm As MainPanel
+
+    'Constructor
+    Public Sub New(ParentForm As MainPanel)
+        InitializeComponent()
+        Me.MainPanelForm = ParentForm ' Initialize MainPanelForm
+    End Sub
 
     Private Sub Services_WorkSect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CurvedLabel2.Visible = False
         ' Create new instances of requests with specified values and states
         Dim pendingRequest1 As New SerReq_worker_pending("John Doe")
         Dim pendingRequest2 As New SerReq_worker_pending("Jane Smith")
@@ -35,9 +43,12 @@ Public Class Services_WorkSect
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         ' Show Form1 again
-        Dim UrbanClap As New UrbanClapNav()
-        UrbanClap.Show()
-        Me.Hide()
+        'Dim UrbanClap As New UrbanClapNav()
+        'UrbanClap.Show()
+        'Me.Hide()
+
+        ' Show UrbanClapNavForm inside Panel1
+        MainPanelForm.ShowFormInPanel(New UrbanClapNav(MainPanelForm))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

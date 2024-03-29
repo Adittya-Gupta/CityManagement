@@ -1,4 +1,15 @@
 ﻿Public Class UrbanClapNav
+    Private MainPanelForm As MainPanel
+
+    'Constructor
+    Public Sub New(ParentForm As MainPanel)
+        InitializeComponent()
+        Me.MainPanelForm = ParentForm ' Initialize 
+    End Sub
+
+    Public Sub New()
+    End Sub
+
     Private Sub UrbanClapNav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the UrbanClapNav form with Panel1 initially empty
         Panel1.Controls.Clear()
@@ -56,9 +67,11 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ' Create an instance of Form2
-        Dim WorkPage As New Services_WorkSect()
+        'Dim WorkPage As New Services_WorkSect()
         ' Show Form2
-        WorkPage.Show()
-        Me.Hide()
+        'WorkPage.Show()
+        'Me.Hide()
+        'ShowFormInPanel(Services_WorkSect)
+        MainPanelForm.ShowFormInPanel(New Services_WorkSect(MainPanelForm))
     End Sub
 End Class

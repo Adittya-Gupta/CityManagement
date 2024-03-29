@@ -48,6 +48,7 @@ Partial Class EmploymentPortal
         ' 
         Button1.AutoSize = True
         Button1.BackColor = Color.Black
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Exo 2", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))

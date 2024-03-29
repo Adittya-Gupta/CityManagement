@@ -55,14 +55,15 @@ Partial Class Services_WorkSect
         ' 
         ' Panel2
         ' 
-        Panel2.AutoSize = True
-        Panel2.Location = New Point(70, 166)
+        Panel2.AutoScroll = True
+        Panel2.Location = New Point(120, 161)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1110, 727)
+        Panel2.Size = New Size(1060, 727)
         Panel2.TabIndex = 2
         ' 
         ' Label3
         ' 
+        Label3.Cursor = Cursors.Hand
         Label3.Image = My.Resources.Resources.Frame_1054__2_
         Label3.Location = New Point(1016, 40)
         Label3.Name = "Label3"
@@ -85,7 +86,7 @@ Partial Class Services_WorkSect
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Abhaya Libre Medium", 20F)
         Button1.ForeColor = SystemColors.Control
-        Button1.Location = New Point(870, -1)
+        Button1.Location = New Point(873, 0)
         Button1.Name = "Button1"
         Button1.Size = New Size(178, 73)
         Button1.TabIndex = 3
@@ -99,9 +100,9 @@ Partial Class Services_WorkSect
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Abhaya Libre Medium", 20F)
         Button2.ForeColor = SystemColors.Control
-        Button2.Location = New Point(1054, -1)
+        Button2.Location = New Point(1051, 0)
         Button2.Name = "Button2"
-        Button2.Size = New Size(178, 73)
+        Button2.Size = New Size(203, 73)
         Button2.TabIndex = 4
         Button2.Text = "Back"
         Button2.UseVisualStyleBackColor = False
@@ -129,7 +130,6 @@ Partial Class Services_WorkSect
         Name = "Services_WorkSect"
         Text = "Services_WorkSect"
         Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
         ResumeLayout(False)
     End Sub
 

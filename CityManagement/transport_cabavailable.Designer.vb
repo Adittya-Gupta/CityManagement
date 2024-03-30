@@ -55,6 +55,7 @@ Partial Class Form1
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(Panel2)
+        Panel1.Controls.Add(Panel3)
         Panel1.Location = New Point(193, 54)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(922, 193)
@@ -63,7 +64,7 @@ Partial Class Form1
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(519, 136)
         Label7.Name = "Label7"
         Label7.Size = New Size(94, 28)
@@ -73,7 +74,7 @@ Partial Class Form1
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(289, 136)
         Label6.Name = "Label6"
         Label6.Size = New Size(128, 28)
@@ -103,7 +104,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(58, 110)
         Label3.Name = "Label3"
         Label3.Size = New Size(76, 28)
@@ -115,7 +116,7 @@ Partial Class Form1
         Panel2.BackColor = Color.LightBlue
         Panel2.Location = New Point(0, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(922, 37)
+        Panel2.Size = New Size(922, 27)
         Panel2.TabIndex = 0
         ' 
         ' Panel3
@@ -123,7 +124,7 @@ Partial Class Form1
         Panel3.BackColor = Color.DarkGray
         Panel3.Controls.Add(DateTimePicker1)
         Panel3.Controls.Add(Label1)
-        Panel3.Location = New Point(190, 75)
+        Panel3.Location = New Point(0, 33)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(922, 45)
         Panel3.TabIndex = 1
@@ -138,7 +139,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(15, 10)
         Label1.Name = "Label1"
         Label1.Size = New Size(91, 20)
@@ -148,7 +149,7 @@ Partial Class Form1
         ' Button1
         ' 
         Button1.BackColor = Color.Firebrick
-        Button1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button1.ForeColor = SystemColors.ControlLightLight
         Button1.Location = New Point(466, 269)
         Button1.Name = "Button1"
@@ -160,7 +161,7 @@ Partial Class Form1
         ' Button2
         ' 
         Button2.BackColor = Color.DarkOliveGreen
-        Button2.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Location = New Point(660, 269)
         Button2.Name = "Button2"
@@ -198,7 +199,7 @@ Partial Class Form1
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.Silver
+        Label9.ForeColor = Color.Black
         Label9.Location = New Point(447, 9)
         Label9.Name = "Label9"
         Label9.Size = New Size(182, 29)
@@ -227,7 +228,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1370, 689)
         Controls.Add(PictureBox2)
@@ -237,7 +238,6 @@ Partial Class Form1
         Controls.Add(Label2)
         Controls.Add(Button2)
         Controls.Add(Button1)
-        Controls.Add(Panel3)
         Controls.Add(Panel1)
         Name = "Form1"
         Text = "Form1"

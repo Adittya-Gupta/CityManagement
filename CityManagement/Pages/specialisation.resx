@@ -124,23 +124,32 @@
     <value>141, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Guna2PictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAA4o8AAOKPAYfBh90AAACTSURBVEhL7ZTLCYAwEAVjBTYgtmEtHizBTsQP2ocH+1Pf
-        KgtigiZugggODCSHvLlF/biQwBp2QmkjhRo5XDxZQI0INtD0wMUe0pYRaeRynHkasRpnXCNO44xt5NE4
-        cxcRjTM0MMLz+ATF40wLz4EBeuMP3PL9AP20MwwWIEp4jHgPEMdIkADBkWq7BSKD8X58FaVWQlCX4VKI
-        IXsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAADQSURBVEhL7ZTJCsJAFAQHF/QuqLjj/1/1J0TFBY2i36LV
+        mAYvOc3LSQuKhEC6M5OXpD+RNMpjOE1sf07jSxS+wgNOdAFa5TEEPfkeX3jFKYqQEm/HGC+okgJrK9EK
+        ailxyPdKbuiSkBfvkhFqBSq54wxFSIkmSvTRL36LHQzBBT3coAo0vl3Mxls0wDMq/IlLFFlb5PAhnlDh
+        D1ygyAr3zVXhWWPqcE2Ot0WTM0eRFW70q9ihwjX7HsuQcKGgNR4xPNxoFZ71kA+qilrDf5aU3ir5JeWs
+        OKklAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAANBJREFUSEvtlMkKwkAUBAcX9C6ouOP/X/UnRMUFjaLfotWYBi85zctJC4qEQLoz
-        k5ekP5E0ymM4TWx/TuNLFL7CA050AVrlMQQ9+R5feMUpipASb8cYL6iSAmsr0QpqKXHI90pu6JKQF++S
-        EWoFKrnjDEVIiSZK9NEvfosdDMEFPdygCjS+XczGWzTAMyr8iUsUWVvk8CGeUOEPXKDICvfNVeFZY+pw
-        TY63RZMzR5EVbvSr2KHCNfsey5BwoaA1HjE83GgVnvWQD6qKWsN/lpTeKvkl5aw4qSUAAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAADi
+        jQAA4o0B+D9EVAAAAJNJREFUSEvtlMsJgDAQBWMFNiC2YS0eLMFOxA/ahwf7U98qC2KCJm6CCA4MJIe8
+        uUX9uJDAGnZCaSOFGjlcPFlAjQg20PTAxR7SlhFp5HKceRqxGmdcI07jjG3k0ThzFxGNMzQwwvP4BMXj
+        TAvPgQF64w/c8v0A/bQzDBYgSniMeA8Qx0iQAMGRarsFIoPxfnwVpVZCUJfhUoghewAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="Guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAADi
+        jgAA4o4BVYZlOQAAAJNJREFUSEvtlMsJgDAQBWMFNiC2YS0eLMFOxA/ahwf7U98qC2KCJm6CCA4MJIe8
+        uUX9uJDAGnZCaSOFGjlcPFlAjQg20PTAxR7SlhFp5HKceRqxGmdcI07jjG3k0ThzFxGNMzQwwvP4BMXj
+        TAvPgQF64w/c8v0A/bQzDBYgSniMeA8Qx0iQAMGRarsFIoPxfnwVpVZCUJfhUoghewAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>

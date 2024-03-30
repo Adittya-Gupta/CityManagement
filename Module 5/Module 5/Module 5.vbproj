@@ -147,6 +147,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking_Passbook.Designer.vb">
+      <DependentUpon>Banking_Passbook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Passbook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Queries_User.Designer.vb">
+      <DependentUpon>Banking_Queries_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Queries_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Landing.Designer.vb">
+      <DependentUpon>Email_Landing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Landing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Money_Management_Credit_Card.Designer.vb">
       <DependentUpon>Money_Management_Credit_Card.vb</DependentUpon>
     </Compile>
@@ -183,6 +201,18 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Newsletter_AddNews.Designer.vb">
+      <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_AddNews.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Editor.Designer.vb">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Editor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registration.Designer.vb">
       <DependentUpon>Registration.vb</DependentUpon>
     </Compile>
@@ -190,9 +220,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Profile.Designer.vb">
-      <DependentUpon>Registration.vb</DependentUpon>
+      <DependentUpon>Profile.vb</DependentUpon>
     </Compile>
     <Compile Include="Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_ContactUs.Designer.vb">
+      <DependentUpon>Banking_ContactUs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_ContactUs.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -213,6 +249,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Banking_Passbook.resx">
+      <DependentUpon>Banking_Passbook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Queries_User.resx">
+      <DependentUpon>Banking_Queries_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Landing.resx">
+      <DependentUpon>Email_Landing.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Money_Management_Credit_Card.resx">
       <DependentUpon>Money_Management_Credit_Card.vb</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +273,12 @@
     <EmbeddedResource Include="Money_Management_Net_Banking.resx">
       <DependentUpon>Money_Management_Net_Banking.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_AddNews.resx">
+      <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Editor.resx">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_ContactUs.resx">
+      <DependentUpon>Banking_ContactUs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

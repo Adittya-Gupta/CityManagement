@@ -25,6 +25,8 @@ Partial Class transport_businfo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_businfo))
         Panel1 = New Panel()
         Panel2 = New Panel()
+        TextBox4 = New TextBox()
+        Button3 = New Button()
         PictureBox4 = New PictureBox()
         Label11 = New Label()
         DateTimePicker1 = New DateTimePicker()
@@ -43,8 +45,6 @@ Partial Class transport_businfo
         Label2 = New Label()
         Label3 = New Label()
         PictureBox2 = New PictureBox()
-        TextBox4 = New TextBox()
-        Button3 = New Button()
         Button4 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -86,6 +86,26 @@ Partial Class transport_businfo
         Panel2.Size = New Size(745, 405)
         Panel2.TabIndex = 13
         ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TextBox4.Location = New Point(69, 143)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(254, 35)
+        TextBox4.TabIndex = 21
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(255), CByte(86), CByte(86))
+        Button3.FlatStyle = FlatStyle.Popup
+        Button3.Font = New Font("Exo 2", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(289, 321)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(141, 45)
+        Button3.TabIndex = 20
+        Button3.Text = "Book"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' PictureBox4
         ' 
         PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), Image)
@@ -100,11 +120,11 @@ Partial Class transport_businfo
         ' 
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Black
         Label11.Location = New Point(69, 197)
         Label11.Name = "Label11"
-        Label11.Size = New Size(270, 27)
+        Label11.Size = New Size(284, 28)
         Label11.TabIndex = 19
         Label11.Text = "Departure Date and Time"
         ' 
@@ -120,17 +140,17 @@ Partial Class transport_businfo
         ' 
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
         Label9.Location = New Point(69, 101)
         Label9.Name = "Label9"
-        Label9.Size = New Size(115, 27)
+        Label9.Size = New Size(122, 28)
         Label9.TabIndex = 15
         Label9.Text = "Vacancies"
         ' 
         ' TextBox3
         ' 
-        TextBox3.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TextBox3.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TextBox3.Location = New Point(69, 48)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(254, 35)
@@ -140,11 +160,11 @@ Partial Class transport_businfo
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Black
         Label7.Location = New Point(69, 18)
         Label7.Name = "Label7"
-        Label7.Size = New Size(156, 27)
+        Label7.Size = New Size(165, 28)
         Label7.TabIndex = 14
         Label7.Text = "Driver's Name"
         ' 
@@ -161,7 +181,7 @@ Partial Class transport_businfo
         ' 
         ' TextBox2
         ' 
-        TextBox2.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TextBox2.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TextBox2.Location = New Point(660, 131)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(160, 35)
@@ -169,7 +189,7 @@ Partial Class transport_businfo
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(221, 131)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(160, 35)
@@ -179,11 +199,11 @@ Partial Class transport_businfo
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.White
         Label6.Location = New Point(710, 101)
         Label6.Name = "Label6"
-        Label6.Size = New Size(39, 27)
+        Label6.Size = New Size(40, 28)
         Label6.TabIndex = 10
         Label6.Text = "To"
         ' 
@@ -191,11 +211,11 @@ Partial Class transport_businfo
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Exo 2", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.White
         Label5.Location = New Point(256, 101)
         Label5.Name = "Label5"
-        Label5.Size = New Size(67, 27)
+        Label5.Size = New Size(69, 28)
         Label5.TabIndex = 8
         Label5.Text = "From"
         ' 
@@ -277,26 +297,6 @@ Partial Class transport_businfo
         PictureBox2.Size = New Size(24, 23)
         PictureBox2.TabIndex = 13
         PictureBox2.TabStop = False
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(69, 143)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(254, 35)
-        TextBox4.TabIndex = 21
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.FromArgb(CByte(255), CByte(86), CByte(86))
-        Button3.FlatStyle = FlatStyle.Popup
-        Button3.Font = New Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(289, 321)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(141, 45)
-        Button3.TabIndex = 20
-        Button3.Text = "Book"
-        Button3.UseVisualStyleBackColor = False
         ' 
         ' Button4
         ' 

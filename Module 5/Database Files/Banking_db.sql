@@ -1,5 +1,5 @@
-create database bankingdatabase;
-use bankingdatabase;
+create database banking_database;
+use banking_database;
 
 CREATE TABLE UserData (
   Bank_Account_Number INT,
@@ -76,5 +76,5 @@ CREATE TABLE Admindata (
 Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values
 (1,2,'Hello',1200,'2022-03-30','nanana');
 
-drop database bankingdatabase;
+drop database banking_database;
 

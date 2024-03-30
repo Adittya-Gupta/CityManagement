@@ -38,4 +38,8 @@
     Private Sub Guna2TextBox2_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click, Guna2GradientTileButton5.Click
+
+    End Sub
 End Class

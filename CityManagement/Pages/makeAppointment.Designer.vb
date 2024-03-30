@@ -81,24 +81,24 @@ Partial Class makeAppointment
         ' 
         ComboBox2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ComboBox2.DrawMode = DrawMode.OwnerDrawVariable
-        ComboBox2.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ComboBox2.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
         ComboBox2.IntegralHeight = False
         ComboBox2.ItemHeight = 24
-        ComboBox2.Location = New Point(534, 85)
+        ComboBox2.Location = New Point(748, 82)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(160, 30)
+        ComboBox2.Size = New Size(170, 30)
         ComboBox2.TabIndex = 1
         ComboBox2.Text = "      Specialisation"
         ' 
         ' Button1
         ' 
         Button1.ImageAlign = ContentAlignment.MiddleRight
-        Button1.Location = New Point(693, 39)
+        Button1.Location = New Point(1037, 39)
         Button1.Name = "Button1"
-        Button1.Size = New Size(95, 23)
+        Button1.Size = New Size(107, 23)
         Button1.TabIndex = 5
         Button1.TextAlign = ContentAlignment.MiddleLeft
         Button1.UseVisualStyleBackColor = True
@@ -108,7 +108,7 @@ Partial Class makeAppointment
         PictureBox1.BackColor = Color.LightGray
         PictureBox1.BackgroundImageLayout = ImageLayout.None
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(772, 41)
+        PictureBox1.Location = New Point(1216, 42)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(14, 11)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
@@ -125,14 +125,14 @@ Partial Class makeAppointment
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.FillColor = Color.White
-        Guna2Button1.Font = New Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2Button1.Font = New Font("Segoe UI", 8.25F)
         Guna2Button1.ForeColor = Color.Black
-        Guna2Button1.Location = New Point(-6, 34)
+        Guna2Button1.Location = New Point(-5, 36)
         Guna2Button1.Margin = New Padding(0)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.PressedColor = SystemColors.Info
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button1.Size = New Size(79, 24)
+        Guna2Button1.Size = New Size(70, 26)
         Guna2Button1.TabIndex = 8
         Guna2Button1.Text = "Hospital"
         Guna2Button1.TextAlign = HorizontalAlignment.Right
@@ -147,14 +147,14 @@ Partial Class makeAppointment
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.FillColor = Color.White
-        Guna2Button2.Font = New Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2Button2.Font = New Font("Segoe UI", 10F)
         Guna2Button2.ForeColor = Color.Black
         Guna2Button2.Location = New Point(68, 34)
         Guna2Button2.Margin = New Padding(0)
         Guna2Button2.Name = "Guna2Button2"
         Guna2Button2.PressedColor = SystemColors.Info
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button2.Size = New Size(116, 24)
+        Guna2Button2.Size = New Size(112, 29)
         Guna2Button2.TabIndex = 9
         Guna2Button2.Text = "Specialisation"
         Guna2Button2.TextAlign = HorizontalAlignment.Right
@@ -164,7 +164,7 @@ Partial Class makeAppointment
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(68, 39)
+        Guna2PictureBox1.Location = New Point(68, 42)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox1.Size = New Size(15, 15)
@@ -177,7 +177,7 @@ Partial Class makeAppointment
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges7
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(175, 39)
+        Guna2PictureBox2.Location = New Point(175, 41)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2PictureBox2.Size = New Size(15, 15)
@@ -195,14 +195,14 @@ Partial Class makeAppointment
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button3.FillColor = Color.White
-        Guna2Button3.Font = New Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2Button3.Font = New Font("Segoe UI", 9F)
         Guna2Button3.ForeColor = Color.Black
-        Guna2Button3.Location = New Point(186, 34)
+        Guna2Button3.Location = New Point(186, 35)
         Guna2Button3.Margin = New Padding(0)
         Guna2Button3.Name = "Guna2Button3"
         Guna2Button3.PressedColor = SystemColors.Info
         Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Button3.Size = New Size(67, 24)
+        Guna2Button3.Size = New Size(67, 27)
         Guna2Button3.TabIndex = 16
         Guna2Button3.Text = "Doctor"
         Guna2Button3.TextAlign = HorizontalAlignment.Right
@@ -227,7 +227,7 @@ Partial Class makeAppointment
         RichTextBox2.BorderStyle = BorderStyle.None
         RichTextBox2.Location = New Point(-6, -1)
         RichTextBox2.Name = "RichTextBox2"
-        RichTextBox2.Size = New Size(807, 35)
+        RichTextBox2.Size = New Size(1262, 35)
         RichTextBox2.TabIndex = 18
         RichTextBox2.Text = ""
         ' 
@@ -241,12 +241,12 @@ Partial Class makeAppointment
         Guna2GradientTileButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton1.FillColor = Color.Black
         Guna2GradientTileButton1.FillColor2 = Color.Black
-        Guna2GradientTileButton1.Font = New Font("Segoe UI", 9F)
+        Guna2GradientTileButton1.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2GradientTileButton1.ForeColor = Color.White
-        Guna2GradientTileButton1.Location = New Point(6, -1)
+        Guna2GradientTileButton1.Location = New Point(43, -1)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
         Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2GradientTileButton1.Size = New Size(180, 35)
+        Guna2GradientTileButton1.Size = New Size(202, 35)
         Guna2GradientTileButton1.TabIndex = 19
         Guna2GradientTileButton1.Text = "Specialisations"
         ' 
@@ -260,9 +260,9 @@ Partial Class makeAppointment
         Guna2GradientTileButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton2.FillColor = Color.Black
         Guna2GradientTileButton2.FillColor2 = Color.Black
-        Guna2GradientTileButton2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2GradientTileButton2.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
         Guna2GradientTileButton2.ForeColor = Color.White
-        Guna2GradientTileButton2.Location = New Point(209, -1)
+        Guna2GradientTileButton2.Location = New Point(344, -1)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
         Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2GradientTileButton2.Size = New Size(180, 35)
@@ -279,9 +279,9 @@ Partial Class makeAppointment
         Guna2GradientTileButton3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton3.FillColor = Color.Black
         Guna2GradientTileButton3.FillColor2 = Color.Black
-        Guna2GradientTileButton3.Font = New Font("Segoe UI", 9F)
+        Guna2GradientTileButton3.Font = New Font("Segoe UI", 11F)
         Guna2GradientTileButton3.ForeColor = Color.White
-        Guna2GradientTileButton3.Location = New Point(414, -1)
+        Guna2GradientTileButton3.Location = New Point(687, -1)
         Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
         Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2GradientTileButton3.Size = New Size(180, 35)
@@ -298,9 +298,9 @@ Partial Class makeAppointment
         Guna2GradientTileButton4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton4.FillColor = Color.Black
         Guna2GradientTileButton4.FillColor2 = Color.Black
-        Guna2GradientTileButton4.Font = New Font("Segoe UI", 9F)
+        Guna2GradientTileButton4.Font = New Font("Segoe UI", 11F)
         Guna2GradientTileButton4.ForeColor = Color.White
-        Guna2GradientTileButton4.Location = New Point(596, -2)
+        Guna2GradientTileButton4.Location = New Point(947, -1)
         Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
         Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2GradientTileButton4.Size = New Size(180, 35)
@@ -312,11 +312,11 @@ Partial Class makeAppointment
         Guna2DateTimePicker1.Checked = True
         Guna2DateTimePicker1.CustomizableEdges = CustomizableEdges19
         Guna2DateTimePicker1.FillColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        Guna2DateTimePicker1.Font = New Font("Segoe UI", 9F)
+        Guna2DateTimePicker1.Font = New Font("Segoe UI", 11F)
         Guna2DateTimePicker1.ForeColor = Color.Black
         Guna2DateTimePicker1.Format = DateTimePickerFormat.Long
         Guna2DateTimePicker1.ImeMode = ImeMode.NoControl
-        Guna2DateTimePicker1.Location = New Point(236, 85)
+        Guna2DateTimePicker1.Location = New Point(416, 82)
         Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
@@ -337,7 +337,7 @@ Partial Class makeAppointment
         Guna2Button4.ForeColor = Color.Black
         Guna2Button4.Image = CType(resources.GetObject("Guna2Button4.Image"), Image)
         Guna2Button4.ImageAlign = HorizontalAlignment.Left
-        Guna2Button4.Location = New Point(351, 129)
+        Guna2Button4.Location = New Point(528, 119)
         Guna2Button4.Name = "Guna2Button4"
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2Button4.Size = New Size(91, 30)
@@ -355,16 +355,17 @@ Partial Class makeAppointment
         Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox1.Font = New Font("Segoe UI", 11F)
         Guna2TextBox1.ForeColor = Color.Black
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(107, 85)
+        Guna2TextBox1.Location = New Point(252, 82)
+        Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        Guna2TextBox1.Size = New Size(129, 30)
+        Guna2TextBox1.Size = New Size(161, 30)
         Guna2TextBox1.TabIndex = 26
         ' 
         ' Guna2TextBox2
@@ -377,15 +378,16 @@ Partial Class makeAppointment
         Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox2.Font = New Font("Segoe UI", 11F)
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(395, 85)
+        Guna2TextBox2.Location = New Point(575, 82)
+        Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox2.Name = "Guna2TextBox2"
         Guna2TextBox2.PasswordChar = ChrW(0)
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        Guna2TextBox2.Size = New Size(139, 30)
+        Guna2TextBox2.Size = New Size(171, 30)
         Guna2TextBox2.TabIndex = 27
         ' 
         ' makeAppointment
@@ -393,7 +395,7 @@ Partial Class makeAppointment
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(800, 414)
+        ClientSize = New Size(1156, 749)
         Controls.Add(Guna2TextBox2)
         Controls.Add(Guna2TextBox1)
         Controls.Add(Guna2Button4)

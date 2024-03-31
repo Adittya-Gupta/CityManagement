@@ -147,10 +147,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking_LoanDetails.Designer.vb">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoanDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_LoansApplication.Designer.vb">
       <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
     </Compile>
     <Compile Include="Banking_LoansApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.Designer.vb">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_Passbook.Designer.vb">
@@ -261,11 +273,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Banking_LoanDetails.resx">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_LoansApplication.resx">
       <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_LoansHomepage.resx">
       <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansPayNow.resx">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_Passbook.resx">
       <DependentUpon>Banking_Passbook.vb</DependentUpon>
@@ -344,6 +362,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank img2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

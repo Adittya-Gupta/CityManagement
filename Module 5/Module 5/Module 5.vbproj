@@ -147,10 +147,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking_LoansApplication.Designer.vb">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_Passbook.Designer.vb">
       <DependentUpon>Banking_Passbook.vb</DependentUpon>
     </Compile>
     <Compile Include="Banking_Passbook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.Designer.vb">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_Queries_User.Designer.vb">
@@ -249,6 +261,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Banking_LoansApplication.resx">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansHomepage.resx">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_Passbook.resx">
       <DependentUpon>Banking_Passbook.vb</DependentUpon>
     </EmbeddedResource>

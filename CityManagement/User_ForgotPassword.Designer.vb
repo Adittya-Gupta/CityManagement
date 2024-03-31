@@ -23,6 +23,11 @@ Partial Class ForgotPassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Label6 = New Label()
+        Label5 = New Label()
+        Label4 = New Label()
+        Button3 = New Button()
+        Label3 = New Label()
         Label11 = New Label()
         Label1 = New Label()
         Label14 = New Label()
@@ -37,6 +42,11 @@ Partial Class ForgotPassword
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(Label6)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(Button3)
+        Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(Label11)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(Label14)
@@ -50,68 +60,123 @@ Partial Class ForgotPassword
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(605, 556)
+        Panel1.Size = New Size(800, 556)
         Panel1.TabIndex = 7
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(204, 392)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(197, 18)
+        Label6.TabIndex = 45
+        Label6.Text = "Enter OTP recieved on Mail :"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(204, 291)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(206, 18)
+        Label5.TabIndex = 44
+        Label5.Text = "Time left before code expires :"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(204, 128)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(235, 18)
+        Label4.TabIndex = 43
+        Label4.Text = "Enter your registered email below :"
+        ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.Black
+        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(637, 36)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(151, 30)
+        Button3.TabIndex = 42
+        Button3.Text = " Back To Login"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = SystemColors.ControlText
+        Label3.Location = New Point(204, 430)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(52, 18)
+        Label3.TabIndex = 41
+        Label3.Text = "OTP :"
         ' 
         ' Label11
         ' 
         Label11.Anchor = AnchorStyles.None
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Microsoft YaHei", 17F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(120, 26)
+        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(194, 36)
         Label11.Name = "Label11"
-        Label11.Size = New Size(300, 39)
+        Label11.Size = New Size(281, 39)
         Label11.TabIndex = 40
-        Label11.Text = "OTP VERIFICATION"
+        Label11.Text = "OTP Verification"
         ' 
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.None
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(102, 112)
+        Label1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(204, 176)
         Label1.Name = "Label1"
-        Label1.Size = New Size(57, 24)
+        Label1.Size = New Size(68, 20)
         Label1.TabIndex = 39
-        Label1.Text = "Email"
+        Label1.Text = "Email :"
         ' 
         ' Label14
         ' 
         Label14.Anchor = AnchorStyles.None
         Label14.AutoSize = True
         Label14.BackColor = Color.Transparent
-        Label14.Font = New Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(113, 376)
+        Label14.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Location = New Point(413, 604)
         Label14.Name = "Label14"
-        Label14.Size = New Size(46, 24)
+        Label14.Size = New Size(46, 20)
         Label14.TabIndex = 38
         Label14.Text = "OTP"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft YaHei", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(102, 234)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 25)
+        Label2.Size = New Size(0, 22)
         Label2.TabIndex = 13
         ' 
         ' TimeLeftLabel
         ' 
         TimeLeftLabel.AutoSize = True
-        TimeLeftLabel.Font = New Font("Microsoft YaHei", 13.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TimeLeftLabel.Location = New Point(160, 304)
+        TimeLeftLabel.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TimeLeftLabel.Location = New Point(204, 339)
         TimeLeftLabel.Name = "TimeLeftLabel"
-        TimeLeftLabel.Size = New Size(139, 30)
+        TimeLeftLabel.Size = New Size(121, 25)
         TimeLeftLabel.TabIndex = 12
         TimeLeftLabel.Text = "Time Left : "
         ' 
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(194, 112)
+        TextBox2.Location = New Point(283, 170)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(226, 26)
@@ -120,7 +185,7 @@ Partial Class ForgotPassword
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(194, 376)
+        TextBox1.Location = New Point(273, 430)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(226, 26)
@@ -128,12 +193,12 @@ Partial Class ForgotPassword
         ' 
         ' Button2
         ' 
-        Button2.BackColor = Color.black
+        Button2.BackColor = Color.Black
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(204, 431)
+        Button2.Location = New Point(306, 483)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
         Button2.Size = New Size(138, 40)
@@ -143,12 +208,12 @@ Partial Class ForgotPassword
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.black
+        Button1.BackColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(204, 169)
+        Button1.Location = New Point(306, 219)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(138, 40)
@@ -160,11 +225,11 @@ Partial Class ForgotPassword
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(605, 556)
+        BackColor = Color.LightGray
+        ClientSize = New Size(800, 556)
         Controls.Add(Panel1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "ForgotPassword"
-        Text = "ForgotPassword"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
@@ -177,7 +242,12 @@ Partial Class ForgotPassword
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
 End Class

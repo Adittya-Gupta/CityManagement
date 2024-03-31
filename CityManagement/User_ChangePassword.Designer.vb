@@ -37,7 +37,7 @@ Partial Class User_ChangePassword
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(40, 131)
+        Label1.Location = New Point(196, 131)
         Label1.Name = "Label1"
         Label1.Size = New Size(128, 23)
         Label1.TabIndex = 0
@@ -46,7 +46,7 @@ Partial Class User_ChangePassword
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(215, 128)
+        TextBox1.Location = New Point(382, 131)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(183, 30)
@@ -56,7 +56,7 @@ Partial Class User_ChangePassword
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(40, 186)
+        Label2.Location = New Point(196, 186)
         Label2.Name = "Label2"
         Label2.Size = New Size(148, 23)
         Label2.TabIndex = 0
@@ -65,7 +65,7 @@ Partial Class User_ChangePassword
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(215, 182)
+        TextBox2.Location = New Point(382, 179)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(183, 30)
@@ -76,14 +76,14 @@ Partial Class User_ChangePassword
         Button1.BackColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(124, 272)
+        Button1.Location = New Point(321, 291)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(117, 42)
         Button1.TabIndex = 2
-        Button1.Text = "SET"
+        Button1.Text = "RESET"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' CheckBox1
@@ -93,8 +93,8 @@ Partial Class User_ChangePassword
         CheckBox1.Checked = True
         CheckBox1.CheckState = CheckState.Checked
         CheckBox1.Cursor = Cursors.Hand
-        CheckBox1.Font = New Font("Microsoft YaHei", 7F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CheckBox1.Location = New Point(43, 222)
+        CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Location = New Point(196, 244)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(117, 21)
@@ -122,22 +122,22 @@ Partial Class User_ChangePassword
         Label3.Anchor = AnchorStyles.None
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Microsoft YaHei", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(37, 32)
+        Label3.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(241, 26)
         Label3.Name = "Label3"
-        Label3.Size = New Size(271, 31)
+        Label3.Size = New Size(305, 42)
         Label3.TabIndex = 24
-        Label3.Text = "CHANGE PASSWORD"
+        Label3.Text = "Reset Password"
         ' 
         ' User_ChangePassword
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(808, 524)
+        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        ClientSize = New Size(800, 556)
         Controls.Add(Panel1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "User_ChangePassword"
-        Text = "Change Password"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)

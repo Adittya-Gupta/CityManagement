@@ -152,4 +152,13 @@ Public Class ForgotPassword
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Open the login form when the button is clicked
+        Dim LoginForm As New User_Login()
+        LoginForm.StartPosition = FormStartPosition.Manual
+        LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+        LoginForm.Show()
+        Me.Hide()
+    End Sub
 End Class

@@ -197,4 +197,12 @@ Public Class User_Login
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Dim ForgotPAsswordForm As New ForgotPassword()
+        ForgotPAsswordForm.Show()
+        Me.Hide()
+    End Sub
+
+
 End Class

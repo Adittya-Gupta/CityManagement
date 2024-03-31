@@ -16,6 +16,8 @@ Public Class User_SignUpForm
         GenderComboBox.Items.AddRange({"Select", "Male", "Female", "Non Binary", "Prefer not to say"})
         ' Select the first item by default
         GenderComboBox.SelectedIndex = 0
+
+        StrengthCheckLabel.Visible = False
     End Sub
 
     ' Function to generate a unique SID
@@ -56,6 +58,121 @@ Public Class User_SignUpForm
         End Using
     End Function
 
+    'a function that verifies if there is any upper case alphabet in the entered password
+    Function ContainsUpperCase(ByVal inputString As String) As Boolean
+        'iterating through whole input string entered
+        For Each character As Char In inputString
+            If Char.IsUpper(character) Then
+                Return True
+            End If
+        Next
+
+        Return False
+    End Function
+
+    'a function that verifies if there is any lower case alphabet in the entered password
+    Function ContainsLowerCase(ByVal inputString As String) As Boolean
+        'iterating through whole input string entered
+        For Each character As Char In inputString
+            If Char.IsLower(character) Then
+                Return True
+            End If
+        Next
+
+        Return False
+    End Function
+
+    'a function that verifies if there is any digit(0-9) in the entered password
+    Function ContainsDigit(ByVal inputString As String) As Boolean
+        'iterating through whole input string entered
+        For Each character As Char In inputString
+            If Char.IsDigit(character) Then
+                Return True
+            End If
+        Next
+
+        Return False
+    End Function
+
+    'a function that verifies if there is any special character in the entered password
+    Function ContainsSpecialCharacter(ByVal inputString As String) As Boolean
+        'iterating through whole input string entered
+        For Each character As Char In inputString
+            If Not Char.IsLetterOrDigit(character) Then
+                ' If the character is not a letter or digit, consider it as a special character
+                Return True
+            End If
+        Next
+
+        Return False
+    End Function
+
+    Private Sub PasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles PasswordTextBox.TextChanged
+        If Not String.IsNullOrEmpty(PasswordTextBox.Text) Then
+            ' If the password is not empty and not the default text, make the strength label visible
+            StrengthCheckLabel.Visible = True
+        Else
+            ' Otherwise, hide the strength label
+            StrengthCheckLabel.Visible = False
+        End If
+    End Sub
+
+    Private Function PasswordStrengthCheck(ByVal InputString As String) As Integer
+        Dim checkVar As Integer = 0
+        Dim message As String = "Password Strength Check:" & vbCrLf
+
+        ' Checking length criteria
+        If InputString.Length >= 8 Then
+            checkVar += 1
+            message &= "✓ Length should be at least 8 characters." & vbCrLf
+        Else
+            message &= "✗ Length should be at least 8 characters." & vbCrLf
+        End If
+
+        ' Checking if the password has a digit
+        If ContainsDigit(InputString) Then
+            checkVar += 1
+            message &= "✓ Contains at least one digit." & vbCrLf
+        Else
+            message &= "✗ Should contain at least one digit." & vbCrLf
+        End If
+
+        ' Checking if the password has a lowercase letter
+        If ContainsLowerCase(InputString) Then
+            checkVar += 1
+            message &= "✓ Contains at least one lowercase letter." & vbCrLf
+        Else
+            message &= "✗ Should contain at least one lowercase letter." & vbCrLf
+        End If
+
+        ' Checking if the password has a special character
+        If ContainsSpecialCharacter(InputString) Then
+            checkVar += 1
+            message &= "✓ Contains at least one special character." & vbCrLf
+        Else
+            message &= "✗ Should contain at least one special character." & vbCrLf
+        End If
+
+        ' Checking if the password has an uppercase letter
+        If ContainsUpperCase(InputString) Then
+            checkVar += 1
+            message &= "✓ Contains at least one uppercase letter." & vbCrLf
+        Else
+            message &= "✗ Should contain at least one uppercase letter." & vbCrLf
+        End If
+
+        If checkVar < 5 Then
+            MessageBox.Show(message, "Password Strength", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+        Return checkVar
+
+    End Function
+
+    Private Sub CheckStrengthClick() Handles StrengthCheckLabel.Click
+        PasswordStrengthCheck(PasswordTextBox.Text)
+
+    End Sub
 
     Private Sub SignUpButton_Click(sender As Object, e As EventArgs) Handles SignUpButton.Click
         ' Perform signup logic here

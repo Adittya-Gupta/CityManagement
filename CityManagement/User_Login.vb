@@ -34,7 +34,7 @@ Public Class User_Login
         End Using
     End Function
 
-    Private Sub EmailTextBox_Enter(sender As Object, e As EventArgs) Handles EmailTextBox.Click
+    Private Sub EmailTextBox_Enter(sender As Object, e As EventArgs) Handles EmailTextBox.Click, EmailTextBox.GotFocus
         If EmailTextBox.Text = "Email" Then
             EmailTextBox.Text = ""
             EmailLabel.ForeColor = Color.Black ' Set initial color to black
@@ -43,7 +43,7 @@ Public Class User_Login
         End If
     End Sub
 
-    Private Sub EmailTextBox_Leave(sender As Object, e As EventArgs) Handles EmailTextBox.Leave
+    Private Sub EmailTextBox_Leave(sender As Object, e As EventArgs) Handles EmailTextBox.Leave, EmailTextBox.LostFocus
         If EmailTextBox.Text = "" Then
             EmailTextBox.Text = "Email"
             Timer1.Stop() ' Stop the animation timer
@@ -64,7 +64,7 @@ Public Class User_Login
         End If
     End Sub
 
-    Private Sub PasswordTextBox_Enter(sender As Object, e As EventArgs) Handles PasswordTextBox.Click
+    Private Sub PasswordTextBox_Enter(sender As Object, e As EventArgs) Handles PasswordTextBox.Click, PasswordTextBox.GotFocus
         If PasswordTextBox.Text = "Password" Then
             PasswordTextBox.Text = ""
             PasswordTextBox.PasswordChar = "•" ' Set password character
@@ -74,7 +74,7 @@ Public Class User_Login
         End If
     End Sub
 
-    Private Sub PasswordTextBox_Leave(sender As Object, e As EventArgs) Handles PasswordTextBox.Leave
+    Private Sub PasswordTextBox_Leave(sender As Object, e As EventArgs) Handles PasswordTextBox.Leave, PasswordTextBox.LostFocus
         If PasswordTextBox.Text = "" Then
             PasswordTextBox.Text = "Password"
             PasswordTextBox.PasswordChar = ControlChars.NullChar ' Reset password character

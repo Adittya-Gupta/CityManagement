@@ -43,6 +43,7 @@ Partial Class User_SignUpForm
         OpenFileDialog1 = New OpenFileDialog()
         Label5 = New Label()
         Button1 = New Button()
+        StrengthCheckLabel = New Label()
         CType(LoginPic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -273,12 +274,25 @@ Partial Class User_SignUpForm
         Button1.Text = "Upload Picture"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' StrengthCheckLabel
+        ' 
+        StrengthCheckLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
+        StrengthCheckLabel.AutoSize = True
+        StrengthCheckLabel.BackColor = SystemColors.ActiveCaptionText
+        StrengthCheckLabel.ForeColor = Color.White
+        StrengthCheckLabel.Location = New Point(644, 540)
+        StrengthCheckLabel.Name = "StrengthCheckLabel"
+        StrengthCheckLabel.Size = New Size(118, 21)
+        StrengthCheckLabel.TabIndex = 38
+        StrengthCheckLabel.Text = "Check Strength."
+        ' 
         ' User_SignUpForm
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(1254, 896)
+        Controls.Add(StrengthCheckLabel)
         Controls.Add(Button1)
         Controls.Add(Label5)
         Controls.Add(DateOfBirthDateTimePicker)
@@ -327,4 +341,6 @@ Partial Class User_SignUpForm
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents StrengthCheckLabel As Label
+    Friend WithEvents Label9 As Label
 End Class

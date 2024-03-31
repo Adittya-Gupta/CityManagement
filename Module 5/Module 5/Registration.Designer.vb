@@ -24,6 +24,8 @@ Partial Class Registration
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registration))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -73,8 +75,6 @@ Partial Class Registration
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
@@ -139,17 +139,41 @@ Partial Class Registration
         Me.Panel1.Controls.Add(Me.TextBoxEmail)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBoxName)
-        Me.Panel1.Location = New System.Drawing.Point(183, 0)
+        Me.Panel1.Location = New System.Drawing.Point(181, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1096, 697)
         Me.Panel1.TabIndex = 0
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Bodoni MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(98, 25)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(272, 56)
+        Me.Label15.TabIndex = 37
+        Me.Label15.Text = "CITY BANK"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Bodoni MT", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(723, 53)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(495, 36)
+        Me.Label16.TabIndex = 39
+        Me.Label16.Text = "Welcome to Personal Internet Banking"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox1.Location = New System.Drawing.Point(531, 343)
+        Me.CheckBox1.Location = New System.Drawing.Point(611, 344)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
         Me.CheckBox1.TabIndex = 31
@@ -167,7 +191,7 @@ Partial Class Registration
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(417, 343)
+        Me.Label13.Location = New System.Drawing.Point(507, 344)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(0, 13)
         Me.Label13.TabIndex = 28
@@ -176,9 +200,9 @@ Partial Class Registration
         '
         Me.ButtonPhoto.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonPhoto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonPhoto.Location = New System.Drawing.Point(223, 567)
+        Me.ButtonPhoto.Location = New System.Drawing.Point(208, 567)
         Me.ButtonPhoto.Name = "ButtonPhoto"
-        Me.ButtonPhoto.Size = New System.Drawing.Size(74, 27)
+        Me.ButtonPhoto.Size = New System.Drawing.Size(99, 27)
         Me.ButtonPhoto.TabIndex = 27
         Me.ButtonPhoto.Text = "Photo"
         Me.ButtonPhoto.UseVisualStyleBackColor = True
@@ -187,9 +211,9 @@ Partial Class Registration
         '
         Me.ButtonSign.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonSign.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSign.Location = New System.Drawing.Point(418, 549)
+        Me.ButtonSign.Location = New System.Drawing.Point(365, 568)
         Me.ButtonSign.Name = "ButtonSign"
-        Me.ButtonSign.Size = New System.Drawing.Size(74, 30)
+        Me.ButtonSign.Size = New System.Drawing.Size(74, 26)
         Me.ButtonSign.TabIndex = 26
         Me.ButtonSign.Text = "Signature"
         Me.ButtonSign.UseVisualStyleBackColor = True
@@ -197,7 +221,7 @@ Partial Class Registration
         'PictureBoxSign
         '
         Me.PictureBoxSign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxSign.Location = New System.Drawing.Point(370, 502)
+        Me.PictureBoxSign.Location = New System.Drawing.Point(360, 521)
         Me.PictureBoxSign.Name = "PictureBoxSign"
         Me.PictureBoxSign.Size = New System.Drawing.Size(167, 41)
         Me.PictureBoxSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -220,7 +244,7 @@ Partial Class Registration
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(545, 632)
+        Me.Label12.Location = New System.Drawing.Point(643, 650)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(37, 15)
         Me.Label12.TabIndex = 22
@@ -229,7 +253,7 @@ Partial Class Registration
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(415, 632)
+        Me.Label11.Location = New System.Drawing.Point(513, 650)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(139, 13)
         Me.Label11.TabIndex = 21
@@ -239,7 +263,7 @@ Partial Class Registration
         '
         Me.ButtonRegister.BackColor = System.Drawing.SystemColors.Highlight
         Me.ButtonRegister.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonRegister.Location = New System.Drawing.Point(412, 593)
+        Me.ButtonRegister.Location = New System.Drawing.Point(510, 611)
         Me.ButtonRegister.Name = "ButtonRegister"
         Me.ButtonRegister.Size = New System.Drawing.Size(170, 29)
         Me.ButtonRegister.TabIndex = 20
@@ -250,7 +274,7 @@ Partial Class Registration
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(612, 297)
+        Me.Label10.Location = New System.Drawing.Point(761, 308)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(159, 20)
         Me.Label10.TabIndex = 19
@@ -260,7 +284,7 @@ Partial Class Registration
         '
         Me.TextBoxConfermPassword.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxConfermPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxConfermPassword.Location = New System.Drawing.Point(612, 317)
+        Me.TextBoxConfermPassword.Location = New System.Drawing.Point(761, 328)
         Me.TextBoxConfermPassword.Name = "TextBoxConfermPassword"
         Me.TextBoxConfermPassword.Size = New System.Drawing.Size(172, 21)
         Me.TextBoxConfermPassword.TabIndex = 18
@@ -289,7 +313,7 @@ Partial Class Registration
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(412, 297)
+        Me.Label8.Location = New System.Drawing.Point(488, 295)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 20)
         Me.Label8.TabIndex = 15
@@ -299,7 +323,7 @@ Partial Class Registration
         '
         Me.TextBoxpassword.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpassword.Location = New System.Drawing.Point(412, 317)
+        Me.TextBoxpassword.Location = New System.Drawing.Point(492, 318)
         Me.TextBoxpassword.Name = "TextBoxpassword"
         Me.TextBoxpassword.Size = New System.Drawing.Size(172, 21)
         Me.TextBoxpassword.TabIndex = 14
@@ -329,7 +353,7 @@ Partial Class Registration
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(412, 374)
+        Me.Label6.Location = New System.Drawing.Point(492, 372)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 20)
         Me.Label6.TabIndex = 11
@@ -339,7 +363,7 @@ Partial Class Registration
         '
         Me.TextBoxAddress.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxAddress.Location = New System.Drawing.Point(412, 394)
+        Me.TextBoxAddress.Location = New System.Drawing.Point(492, 395)
         Me.TextBoxAddress.Multiline = True
         Me.TextBoxAddress.Name = "TextBoxAddress"
         Me.TextBoxAddress.Size = New System.Drawing.Size(172, 96)
@@ -349,7 +373,7 @@ Partial Class Registration
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(612, 240)
+        Me.Label5.Location = New System.Drawing.Point(761, 251)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 20)
         Me.Label5.TabIndex = 9
@@ -359,7 +383,7 @@ Partial Class Registration
         '
         Me.TextBoxGender.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxGender.Location = New System.Drawing.Point(612, 260)
+        Me.TextBoxGender.Location = New System.Drawing.Point(761, 271)
         Me.TextBoxGender.Name = "TextBoxGender"
         Me.TextBoxGender.Size = New System.Drawing.Size(172, 21)
         Me.TextBoxGender.TabIndex = 8
@@ -368,7 +392,7 @@ Partial Class Registration
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(412, 240)
+        Me.Label4.Location = New System.Drawing.Point(492, 241)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(181, 20)
         Me.Label4.TabIndex = 7
@@ -378,7 +402,7 @@ Partial Class Registration
         '
         Me.TextBoxIndentificationNumber.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxIndentificationNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxIndentificationNumber.Location = New System.Drawing.Point(412, 260)
+        Me.TextBoxIndentificationNumber.Location = New System.Drawing.Point(492, 261)
         Me.TextBoxIndentificationNumber.Name = "TextBoxIndentificationNumber"
         Me.TextBoxIndentificationNumber.Size = New System.Drawing.Size(178, 21)
         Me.TextBoxIndentificationNumber.TabIndex = 6
@@ -683,30 +707,6 @@ Partial Class Registration
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Dashboard"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Bodoni MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(98, 25)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(272, 56)
-        Me.Label15.TabIndex = 37
-        Me.Label15.Text = "CITY BANK"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Bodoni MT", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(723, 53)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(495, 36)
-        Me.Label16.TabIndex = 39
-        Me.Label16.Text = "Welcome to Personal Internet Banking"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '

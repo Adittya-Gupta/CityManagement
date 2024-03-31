@@ -24,6 +24,13 @@ Partial Class Profile
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Profile))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
@@ -49,14 +56,28 @@ Partial Class Profile
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelLabelName = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxAccountNumber = New System.Windows.Forms.TextBox()
+        Me.TextBoxBalence = New System.Windows.Forms.TextBox()
+        Me.TextBoxCIBILScore = New System.Windows.Forms.TextBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,12 +91,23 @@ Partial Class Profile
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.Panel7)
+        Me.Panel1.Controls.Add(Me.Panel6)
+        Me.Panel1.Controls.Add(Me.Panel5)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label14)
@@ -84,9 +116,120 @@ Partial Class Profile
         Me.Panel1.Size = New System.Drawing.Size(1074, 655)
         Me.Panel1.TabIndex = 2
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Button15)
+        Me.Panel3.Controls.Add(Me.Button11)
+        Me.Panel3.Controls.Add(Me.Button14)
+        Me.Panel3.Controls.Add(Me.Button10)
+        Me.Panel3.Controls.Add(Me.Button13)
+        Me.Panel3.Controls.Add(Me.Button12)
+        Me.Panel3.Location = New System.Drawing.Point(0, 97)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1074, 57)
+        Me.Panel3.TabIndex = 42
+        '
+        'Button15
+        '
+        Me.Button15.BackColor = System.Drawing.Color.Black
+        Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button15.FlatAppearance.BorderSize = 0
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button15.ForeColor = System.Drawing.Color.White
+        Me.Button15.Location = New System.Drawing.Point(1177, 0)
+        Me.Button15.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(145, 53)
+        Me.Button15.TabIndex = 6
+        Me.Button15.Text = "CONTACT US"
+        Me.Button15.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.Black
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.ForeColor = System.Drawing.Color.White
+        Me.Button11.Location = New System.Drawing.Point(207, 0)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(145, 53)
+        Me.Button11.TabIndex = 2
+        Me.Button11.Text = "LOANS"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button14
+        '
+        Me.Button14.BackColor = System.Drawing.Color.Black
+        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button14.FlatAppearance.BorderSize = 0
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button14.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.ForeColor = System.Drawing.Color.White
+        Me.Button14.Location = New System.Drawing.Point(919, 0)
+        Me.Button14.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(145, 53)
+        Me.Button14.TabIndex = 5
+        Me.Button14.Text = "PASSBOOK"
+        Me.Button14.UseVisualStyleBackColor = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.Black
+        Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.ForeColor = System.Drawing.Color.White
+        Me.Button10.Location = New System.Drawing.Point(29, 2)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(145, 53)
+        Me.Button10.TabIndex = 1
+        Me.Button10.Text = "HOME"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.Black
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.ForeColor = System.Drawing.Color.White
+        Me.Button13.Location = New System.Drawing.Point(658, 3)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(230, 53)
+        Me.Button13.TabIndex = 4
+        Me.Button13.Text = "CREDIT/DEBIT CARD"
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.Black
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(411, 3)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(220, 53)
+        Me.Button12.TabIndex = 3
+        Me.Button12.Text = "MONEY TRANSFER"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(142, 205)
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 269)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(134, 166)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -392,116 +535,209 @@ Partial Class Profile
         Me.Label18.Text = "CITY BANK"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel3
+        'Label1
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.Button15)
-        Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Controls.Add(Me.Button14)
-        Me.Panel3.Controls.Add(Me.Button10)
-        Me.Panel3.Controls.Add(Me.Button13)
-        Me.Panel3.Controls.Add(Me.Button12)
-        Me.Panel3.Location = New System.Drawing.Point(0, 97)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1074, 57)
-        Me.Panel3.TabIndex = 42
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(296, 179)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(336, 29)
+        Me.Label1.TabIndex = 43
+        Me.Label1.Text = "WELCOME TO  CITY BANK"
         '
-        'Button15
+        'LabelLabelName
         '
-        Me.Button15.BackColor = System.Drawing.Color.Black
-        Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button15.FlatAppearance.BorderSize = 0
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.ForeColor = System.Drawing.Color.White
-        Me.Button15.Location = New System.Drawing.Point(1177, 0)
-        Me.Button15.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(145, 53)
-        Me.Button15.TabIndex = 6
-        Me.Button15.Text = "CONTACT US"
-        Me.Button15.UseVisualStyleBackColor = False
+        Me.LabelLabelName.AutoSize = True
+        Me.LabelLabelName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLabelName.Location = New System.Drawing.Point(13, 21)
+        Me.LabelLabelName.Name = "LabelLabelName"
+        Me.LabelLabelName.Size = New System.Drawing.Size(99, 20)
+        Me.LabelLabelName.TabIndex = 44
+        Me.LabelLabelName.Text = "LabelName"
         '
-        'Button11
+        'Label7
         '
-        Me.Button11.BackColor = System.Drawing.Color.Black
-        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(207, 0)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(145, 53)
-        Me.Button11.TabIndex = 2
-        Me.Button11.Text = "LOANS"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(19, 80)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(72, 16)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "Balance :"
         '
-        'Button14
+        'Label6
         '
-        Me.Button14.BackColor = System.Drawing.Color.Black
-        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button14.FlatAppearance.BorderSize = 0
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button14.ForeColor = System.Drawing.Color.White
-        Me.Button14.Location = New System.Drawing.Point(919, 0)
-        Me.Button14.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(145, 53)
-        Me.Button14.TabIndex = 5
-        Me.Button14.Text = "PASSBOOK"
-        Me.Button14.UseVisualStyleBackColor = False
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(19, 18)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(86, 16)
+        Me.Label6.TabIndex = 46
+        Me.Label6.Text = "Username :"
         '
-        'Button10
+        'Label8
         '
-        Me.Button10.BackColor = System.Drawing.Color.Black
-        Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(29, 2)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(145, 53)
-        Me.Button10.TabIndex = 1
-        Me.Button10.Text = "HOME"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(19, 111)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(104, 16)
+        Me.Label8.TabIndex = 48
+        Me.Label8.Text = "CIBIL Score :  "
         '
-        'Button13
+        'Panel4
         '
-        Me.Button13.BackColor = System.Drawing.Color.Black
-        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.ForeColor = System.Drawing.Color.White
-        Me.Button13.Location = New System.Drawing.Point(658, 3)
-        Me.Button13.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(230, 53)
-        Me.Button13.TabIndex = 4
-        Me.Button13.Text = "CREDIT/DEBIT CARD"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.Panel4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.TextBoxCIBILScore)
+        Me.Panel4.Controls.Add(Me.TextBoxBalence)
+        Me.Panel4.Controls.Add(Me.TextBoxAccountNumber)
+        Me.Panel4.Controls.Add(Me.TextBoxUsername)
+        Me.Panel4.Controls.Add(Me.CheckBox1)
+        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.Label7)
+        Me.Panel4.Controls.Add(Me.Label6)
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Location = New System.Drawing.Point(240, 348)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(360, 175)
+        Me.Panel4.TabIndex = 49
         '
-        'Button12
+        'Label5
         '
-        Me.Button12.BackColor = System.Drawing.Color.Black
-        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(411, 3)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(220, 53)
-        Me.Button12.TabIndex = 3
-        Me.Button12.Text = "MONEY TRANSFER"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 47)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(94, 16)
+        Me.Label5.TabIndex = 51
+        Me.Label5.Text = "Account No.:"
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.Label4)
+        Me.Panel5.Controls.Add(Me.LabelLabelName)
+        Me.Panel5.Location = New System.Drawing.Point(240, 238)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(347, 100)
+        Me.Panel5.TabIndex = 50
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(27, 65)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.TabIndex = 53
+        Me.Label4.Text = "Address"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CheckBox1.Location = New System.Drawing.Point(276, 142)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(49, 17)
+        Me.CheckBox1.TabIndex = 53
+        Me.CheckBox1.Text = "HIde"
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'TextBoxUsername
+        '
+        Me.TextBoxUsername.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxUsername.Location = New System.Drawing.Point(162, 15)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(163, 13)
+        Me.TextBoxUsername.TabIndex = 54
+        Me.TextBoxUsername.Text = "TextBox0"
+        '
+        'TextBoxAccountNumber
+        '
+        Me.TextBoxAccountNumber.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBoxAccountNumber.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxAccountNumber.Location = New System.Drawing.Point(162, 42)
+        Me.TextBoxAccountNumber.Name = "TextBoxAccountNumber"
+        Me.TextBoxAccountNumber.Size = New System.Drawing.Size(163, 13)
+        Me.TextBoxAccountNumber.TabIndex = 55
+        Me.TextBoxAccountNumber.Text = "TextBox1"
+        '
+        'TextBoxBalence
+        '
+        Me.TextBoxBalence.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBoxBalence.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxBalence.Location = New System.Drawing.Point(162, 80)
+        Me.TextBoxBalence.Name = "TextBoxBalence"
+        Me.TextBoxBalence.Size = New System.Drawing.Size(163, 13)
+        Me.TextBoxBalence.TabIndex = 56
+        Me.TextBoxBalence.Text = "TextBox2"
+        '
+        'TextBoxCIBILScore
+        '
+        Me.TextBoxCIBILScore.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBoxCIBILScore.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxCIBILScore.Location = New System.Drawing.Point(162, 111)
+        Me.TextBoxCIBILScore.Name = "TextBoxCIBILScore"
+        Me.TextBoxCIBILScore.Size = New System.Drawing.Size(163, 13)
+        Me.TextBoxCIBILScore.TabIndex = 57
+        Me.TextBoxCIBILScore.Text = "TextBox3"
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.Label2)
+        Me.Panel6.Location = New System.Drawing.Point(702, 238)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(331, 175)
+        Me.Panel6.TabIndex = 58
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(109, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(101, 20)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "Active Card"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.Label3)
+        Me.Panel7.Location = New System.Drawing.Point(702, 441)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(331, 175)
+        Me.Panel7.TabIndex = 59
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(109, 15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 20)
+        Me.Label3.TabIndex = 54
+        Me.Label3.Text = "Active Loan"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(30, 541)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(666, 103)
+        Me.DataGridView1.TabIndex = 60
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(30, 504)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(150, 13)
+        Me.Label9.TabIndex = 61
+        Me.Label9.Text = "Your recent transaction history"
         '
         'Profile
         '
@@ -534,6 +770,7 @@ Partial Class Profile
         Me.Text = "Profile"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -548,7 +785,15 @@ Partial Class Profile
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -586,4 +831,24 @@ Partial Class Profile
     Friend WithEvents Button10 As Button
     Friend WithEvents Button13 As Button
     Friend WithEvents Button12 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents LabelLabelName As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents TextBoxUsername As TextBox
+    Friend WithEvents TextBoxCIBILScore As TextBox
+    Friend WithEvents TextBoxBalence As TextBox
+    Friend WithEvents TextBoxAccountNumber As TextBox
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label3 As Label
 End Class

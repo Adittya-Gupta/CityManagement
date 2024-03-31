@@ -48,4 +48,15 @@ Public Class Profile
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        TextBoxUsername.UseSystemPasswordChar = CheckBox1.Checked
+        TextBoxAccountNumber.UseSystemPasswordChar = CheckBox1.Checked
+        TextBoxBalence.UseSystemPasswordChar = CheckBox1.Checked
+        TextBoxCIBILScore.UseSystemPasswordChar = CheckBox1.Checked
+    End Sub
 End Class

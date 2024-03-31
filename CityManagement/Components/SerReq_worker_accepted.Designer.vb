@@ -68,6 +68,7 @@ Partial Class SerReq_worker_accepted
         ' 
         ' Button1
         ' 
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
@@ -81,6 +82,7 @@ Partial Class SerReq_worker_accepted
         ' 
         ' Button2
         ' 
+        Button2.Cursor = Cursors.Hand
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
@@ -112,16 +114,18 @@ Partial Class SerReq_worker_accepted
         ' 
         ' Label7
         ' 
+        Label7.Cursor = Cursors.Hand
         Label7.Image = My.Resources.Resources.Vector
-        Label7.Location = New Point(446, 55)
+        Label7.Location = New Point(467, 55)
         Label7.Name = "Label7"
         Label7.Size = New Size(33, 22)
         Label7.TabIndex = 12
         ' 
         ' Label8
         ' 
+        Label8.Cursor = Cursors.Hand
         Label8.Image = My.Resources.Resources.Vector
-        Label8.Location = New Point(446, 87)
+        Label8.Location = New Point(466, 87)
         Label8.Name = "Label8"
         Label8.Size = New Size(33, 22)
         Label8.TabIndex = 13
@@ -137,7 +141,7 @@ Partial Class SerReq_worker_accepted
         ' 
         TextBox2.Location = New Point(274, 84)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(125, 27)
+        TextBox2.Size = New Size(166, 27)
         TextBox2.TabIndex = 15
         ' 
         ' SerReq_worker_accepted

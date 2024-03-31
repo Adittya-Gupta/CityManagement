@@ -49,7 +49,7 @@ Partial Class EmployApplication
         backButton.FlatStyle = FlatStyle.Flat
         backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
-        backButton.Location = New Point(1113, 12)
+        backButton.Location = New Point(1131, 12)
         backButton.Name = "backButton"
         backButton.Size = New Size(111, 43)
         backButton.TabIndex = 30
@@ -104,9 +104,10 @@ Partial Class EmployApplication
         ' Button1
         ' 
         Button1.BackColor = SystemColors.ActiveCaption
+        Button1.Cursor = Cursors.Hand
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 15F)
-        Button1.Location = New Point(563, 858)
+        Button1.Location = New Point(563, 824)
         Button1.Name = "Button1"
         Button1.Size = New Size(157, 55)
         Button1.TabIndex = 36
@@ -163,7 +164,7 @@ Partial Class EmployApplication
         ' 
         Label6.BackColor = SystemColors.ControlDark
         Label6.Font = New Font("Segoe UI", 15F)
-        Label6.Location = New Point(412, 793)
+        Label6.Location = New Point(412, 756)
         Label6.Name = "Label6"
         Label6.Size = New Size(445, 41)
         Label6.TabIndex = 45
@@ -171,6 +172,7 @@ Partial Class EmployApplication
         ' 
         ' Label7
         ' 
+        Label7.Cursor = Cursors.Hand
         Label7.Image = My.Resources.Resources.Vector
         Label7.Location = New Point(1021, 337)
         Label7.Name = "Label7"
@@ -190,7 +192,7 @@ Partial Class EmployApplication
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1254, 953)
         Controls.Add(Label8)
         Controls.Add(Label7)
         Controls.Add(Label6)

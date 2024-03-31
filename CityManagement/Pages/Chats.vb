@@ -11,7 +11,7 @@ Public Class Chats
 
     Private Sub CurvedLabel9_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CurvedLabel9.Click
         Globals.Chatspage = Globals.listofChatsForm
-        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.Chatspage)
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
     End Sub
     Private Sub MakePictureBoxRound(ByVal pictureBox As PictureBox)
         ' Create a GraphicsPath to define a circle

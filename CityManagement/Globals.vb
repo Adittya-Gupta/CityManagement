@@ -1,17 +1,20 @@
 ﻿Module Globals
-    'Navigation
-    Public UrbanClapNavForm As New UrbanClapNav()
 
     '5 Forms
+    Public listofServicesForm As New ListofServices_Citizen()
     Public ServiceHistoryForm As New ServiceHistory()
     Public chatsForm As New Chats()
     Public listofChatsForm As New ListOfChats()
-    Public listofServicesForm As New ListofServices_Citizen()
     Public listofWorkersForm As New ListofWorkers_Citizen()
-
+    Public WorkPage As New Services_WorkSect()
     'Used for Back reference
     Public HomePage As Object = listofServicesForm
     Public Chatspage As Object = listofChatsForm
+
+    'Navigation
+    Public UrbanClapNavForm As New UrbanClapNav()
+
+    Public MainPanelForm As New MainPanel()
 
     'Global Variables
     Public UserId As Integer

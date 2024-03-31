@@ -39,7 +39,7 @@ Public Class ServiceHistory
     End Sub
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
-        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.HomePage)
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
         Globals.UrbanClapNavForm.HideCurvedLabels()
     End Sub
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
@@ -67,4 +67,5 @@ Public Class ServiceHistory
             Historyfilterform.Show()
         End If
     End Sub
+
 End Class

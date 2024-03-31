@@ -33,7 +33,7 @@ Partial Class Rate
         ' 
         CurvedLabel1.BackColor = Color.FromArgb(CByte(97), CByte(160), CByte(255))
         CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Font = New Font("Abhaya Libre Medium", 20F)
+        CurvedLabel1.Font = New Font("Segoe UI", 24F)
         CurvedLabel1.ForeColor = Color.White
         CurvedLabel1.Location = New Point(36, 271)
         CurvedLabel1.Name = "CurvedLabel1"
@@ -44,7 +44,7 @@ Partial Class Rate
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Abhaya Libre Medium", 10F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.Location = New Point(36, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(317, 79)

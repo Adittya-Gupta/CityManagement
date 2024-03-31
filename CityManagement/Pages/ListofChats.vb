@@ -37,6 +37,6 @@
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
         Globals.UrbanClapNavForm.HideCurvedLabels()
-        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.HomePage)
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
     End Sub
 End Class

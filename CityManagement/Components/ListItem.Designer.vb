@@ -70,7 +70,7 @@ Partial Class ListItem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Exo 2", 9F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(136, 7)
         Label1.Name = "Label1"
@@ -81,7 +81,7 @@ Partial Class ListItem
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Exo 2 Semi Bold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(171, 43)
         Label2.Name = "Label2"
@@ -92,7 +92,7 @@ Partial Class ListItem
         ' Label3
         ' 
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Exo 2 Thin", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Abhaya Libre Medium", 9F)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(136, 79)
         Label3.Name = "Label3"

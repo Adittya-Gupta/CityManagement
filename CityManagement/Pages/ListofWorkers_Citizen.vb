@@ -39,8 +39,9 @@
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
         ' Show list of Workers form inside Panel1
+        Globals.listofServicesForm = New ListofServices_Citizen()
         Globals.HomePage = Globals.listofServicesForm
-        Globals.UrbanClapNavForm.ShowFormInPanel(Globals.listofServicesForm)
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
     End Sub
 
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus

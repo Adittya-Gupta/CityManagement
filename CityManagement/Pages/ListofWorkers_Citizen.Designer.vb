@@ -34,7 +34,7 @@ Partial Class LIstofWorkers_Citizen
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Frame_1054__2_
-        Label1.Location = New Point(964, 66)
+        Label1.Location = New Point(1079, 66)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 73)
         Label1.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class LIstofWorkers_Citizen
         ' Label2
         ' 
         Label2.Image = My.Resources.Resources.Group_183
-        Label2.Location = New Point(559, 66)
+        Label2.Location = New Point(619, 66)
         Label2.Name = "Label2"
         Label2.Size = New Size(382, 73)
         Label2.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class LIstofWorkers_Citizen
         TextBox1.BorderStyle = BorderStyle.None
         TextBox1.Font = New Font("Exo 2 Medium", 12F)
         TextBox1.ForeColor = Color.Gray
-        TextBox1.Location = New Point(582, 88)
+        TextBox1.Location = New Point(642, 88)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(285, 34)
@@ -64,7 +64,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         Label3.BackColor = Color.Black
         Label3.Image = My.Resources.Resources.Search_icon
-        Label3.Location = New Point(864, 75)
+        Label3.Location = New Point(924, 75)
         Label3.Name = "Label3"
         Label3.Size = New Size(66, 51)
         Label3.TabIndex = 3
@@ -92,7 +92,7 @@ Partial Class LIstofWorkers_Citizen
         CurvedLabel9.CornerRadius = 10
         CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
         CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1008, 0)
+        CurvedLabel9.Location = New Point(1107, 0)
         CurvedLabel9.Name = "CurvedLabel9"
         CurvedLabel9.Size = New Size(148, 52)
         CurvedLabel9.TabIndex = 21
@@ -104,7 +104,7 @@ Partial Class LIstofWorkers_Citizen
         AutoScaleDimensions = New SizeF(8F, 22F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1156, 908)
+        ClientSize = New Size(1254, 953)
         Controls.Add(CurvedLabel9)
         Controls.Add(Label4)
         Controls.Add(Panel1)

@@ -24,6 +24,7 @@ Partial Class Event_Participation
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Event_Participation))
         Panel1 = New Panel()
+        Button1 = New Button()
         EventTime = New Label()
         Label8 = New Label()
         EventDate = New Label()
@@ -34,9 +35,10 @@ Partial Class Event_Participation
         PictureBox1 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
-        Button1 = New Button()
+        Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -51,10 +53,21 @@ Partial Class Event_Participation
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(EventName)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(132, 137)
+        Panel1.Location = New Point(129, 177)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(991, 605)
         Panel1.TabIndex = 29
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.LightSkyBlue
+        Button1.Font = New Font("Segoe UI", 20F)
+        Button1.Location = New Point(41, 354)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(318, 67)
+        Button1.TabIndex = 8
+        Button1.Text = "Register Now"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' EventTime
         ' 
@@ -134,7 +147,7 @@ Partial Class Event_Participation
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 12F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(132, 78)
+        Label1.Location = New Point(129, 118)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(145, 20)
@@ -146,39 +159,37 @@ Partial Class Event_Participation
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(285, 78)
+        Label2.Location = New Point(282, 118)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(174, 20)
         Label2.TabIndex = 28
         Label2.Text = "Participant Registration"
         ' 
-        ' Button1
+        ' Panel2
         ' 
-        Button1.BackColor = Color.LightSkyBlue
-        Button1.Font = New Font("Segoe UI", 20F)
-        Button1.Location = New Point(41, 354)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(318, 67)
-        Button1.TabIndex = 8
-        Button1.Text = "Register Now"
-        Button1.UseVisualStyleBackColor = False
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(Panel1)
+        Panel2.Controls.Add(Label1)
+        Panel2.Location = New Point(96, 12)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(1254, 896)
+        Panel2.TabIndex = 30
         ' 
         ' Event_Participation
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1395, 786)
-        Controls.Add(Panel1)
-        Controls.Add(Label1)
-        Controls.Add(Label2)
+        ClientSize = New Size(1444, 900)
+        Controls.Add(Panel2)
         Name = "Event_Participation"
         Text = "Event_Participation"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
@@ -193,4 +204,5 @@ Partial Class Event_Participation
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Panel2 As Panel
 End Class

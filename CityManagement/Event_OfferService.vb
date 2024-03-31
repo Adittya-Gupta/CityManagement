@@ -7,8 +7,8 @@ Public Class Event_OfferService
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    Dim EventId As Integer = 4
-    Dim UserSID = 1
+    Dim EventId As Integer = CurrEventID
+    Dim UserSID As Integer = CurrUserSID
     Dim vendorServiceTags As List(Of VendorServiceTag)
 
 

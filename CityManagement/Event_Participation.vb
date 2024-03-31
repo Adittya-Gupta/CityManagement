@@ -7,11 +7,11 @@ Public Class Event_Participation
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    Dim EventId As Integer = 4
-    Dim UserSID = 1
+    Dim EventId As Integer = CurrEventID
+    Dim UserSID As Integer = CurrUserSID
 
     Private Sub Event_Participation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+
 
         If UserSID <> -1 Then
             ' Assume EventID is somehow determined or passed to this form

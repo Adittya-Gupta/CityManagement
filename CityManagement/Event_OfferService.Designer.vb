@@ -36,8 +36,10 @@ Partial Class Event_OfferService
         Label4 = New Label()
         EventName = New Label()
         PictureBox1 = New PictureBox()
+        Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
@@ -45,7 +47,7 @@ Partial Class Event_OfferService
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 12F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(104, 119)
+        Label1.Location = New Point(129, 24)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(145, 20)
@@ -57,7 +59,7 @@ Partial Class Event_OfferService
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(257, 119)
+        Label2.Location = New Point(282, 24)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(109, 20)
@@ -77,16 +79,16 @@ Partial Class Event_OfferService
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(EventName)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(104, 178)
+        Panel1.Location = New Point(129, 83)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(991, 605)
+        Panel1.Size = New Size(991, 719)
         Panel1.TabIndex = 26
         ' 
         ' FlowLayoutPanelVendorServices
         ' 
         FlowLayoutPanelVendorServices.Location = New Point(41, 376)
         FlowLayoutPanelVendorServices.Name = "FlowLayoutPanelVendorServices"
-        FlowLayoutPanelVendorServices.Size = New Size(875, 200)
+        FlowLayoutPanelVendorServices.Size = New Size(875, 322)
         FlowLayoutPanelVendorServices.TabIndex = 9
         ' 
         ' Label10
@@ -172,21 +174,30 @@ Partial Class Event_OfferService
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(Panel1)
+        Panel2.Controls.Add(Label2)
+        Panel2.Location = New Point(90, 97)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(1254, 896)
+        Panel2.TabIndex = 27
+        ' 
         ' Event_OfferService
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1781, 799)
-        Controls.Add(Panel1)
-        Controls.Add(Label1)
-        Controls.Add(Label2)
+        ClientSize = New Size(1444, 900)
+        Controls.Add(Panel2)
         Name = "Event_OfferService"
         Text = "Event_OfferService"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
@@ -202,4 +213,5 @@ Partial Class Event_OfferService
     Friend WithEvents EventName As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents FlowLayoutPanelVendorServices As FlowLayoutPanel
+    Friend WithEvents Panel2 As Panel
 End Class

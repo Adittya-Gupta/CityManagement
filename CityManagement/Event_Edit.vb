@@ -9,13 +9,14 @@ Public Class Event_Edit
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    Dim EventId As Integer = 4
-    Dim UserSID = 1
+    Dim EventId As Integer = CurrEventID
+    Dim UserSID As Integer = CurrUserSID
+
+
 
     ' This method is called when the Edit_Event form loads
     Private Sub Edit_Event_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set the window state to maximized to make the form take up the full screen
-        Me.WindowState = FormWindowState.Maximized
+
 
         ' Check if the global user ID from the login form is valid (not -1)
         If UserSID <> -1 Then
@@ -151,6 +152,10 @@ Public Class Event_Edit
         Finally
             conn.Close() ' Close the database connection to free resources
         End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
 

@@ -31,7 +31,7 @@ Partial Class Services_WorkSect
         ' 
         ' Panel2
         ' 
-        Panel2.AutoSize = True
+        Panel2.AutoScroll = True
         Panel2.Location = New Point(72, 176)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1110, 727)
@@ -80,7 +80,6 @@ Partial Class Services_WorkSect
         Name = "Services_WorkSect"
         Text = "Services_WorkSect"
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel2 As Panel

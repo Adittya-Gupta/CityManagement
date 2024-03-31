@@ -54,7 +54,7 @@ Partial Class HistoryItem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Electrician2
+        PictureBox1.Image = My.Resources.Resources.download
         PictureBox1.Location = New Point(29, 12)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(93, 93)

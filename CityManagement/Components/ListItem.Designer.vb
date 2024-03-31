@@ -59,7 +59,7 @@ Partial Class ListItem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Electrician2
+        PictureBox1.Image = My.Resources.Resources.download
         PictureBox1.Location = New Point(32, 12)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(93, 93)
@@ -102,7 +102,7 @@ Partial Class ListItem
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.Image = My.Resources.Resources.Location
+        PictureBox2.Image = My.Resources.Resources.download__2_
         PictureBox2.Location = New Point(136, 43)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(15, 22)

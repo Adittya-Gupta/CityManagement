@@ -23,7 +23,6 @@ Partial Class MainPanel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPanel))
-        Panel1 = New Panel()
         Button1 = New Button()
         Button2 = New Button()
         Button3 = New Button()
@@ -43,6 +42,7 @@ Partial Class MainPanel
         PictureBox8 = New PictureBox()
         PictureBox9 = New PictureBox()
         PictureBox10 = New PictureBox()
+        Panel1 = New Panel()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -55,16 +55,6 @@ Partial Class MainPanel
         CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Panel1
-        ' 
-        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel1.BackColor = Color.White
-        Panel1.Location = New Point(201, 1)
-        Panel1.Margin = New Padding(4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(815, 638)
-        Panel1.TabIndex = 0
-        ' 
         ' Button1
         ' 
         Button1.BackColor = Color.Transparent
@@ -72,7 +62,7 @@ Partial Class MainPanel
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(40, 137)
+        Button1.Location = New Point(31, 137)
         Button1.Margin = New Padding(0)
         Button1.Name = "Button1"
         Button1.Size = New Size(145, 53)
@@ -87,7 +77,7 @@ Partial Class MainPanel
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(40, 190)
+        Button2.Location = New Point(12, 190)
         Button2.Margin = New Padding(0)
         Button2.Name = "Button2"
         Button2.Size = New Size(145, 41)
@@ -102,7 +92,7 @@ Partial Class MainPanel
         Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ControlLightLight
-        Button3.Location = New Point(40, 242)
+        Button3.Location = New Point(10, 242)
         Button3.Margin = New Padding(0)
         Button3.Name = "Button3"
         Button3.Size = New Size(145, 41)
@@ -117,12 +107,13 @@ Partial Class MainPanel
         Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ControlLightLight
-        Button4.Location = New Point(52, 301)
+        Button4.Location = New Point(43, 308)
         Button4.Margin = New Padding(0)
         Button4.Name = "Button4"
-        Button4.Size = New Size(145, 41)
+        Button4.Size = New Size(163, 29)
         Button4.TabIndex = 1
         Button4.Text = "Urban Company"
+        Button4.TextAlign = ContentAlignment.MiddleLeft
         Button4.UseVisualStyleBackColor = False
         ' 
         ' Button5
@@ -132,7 +123,7 @@ Partial Class MainPanel
         Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = SystemColors.ControlLightLight
-        Button5.Location = New Point(40, 352)
+        Button5.Location = New Point(24, 352)
         Button5.Margin = New Padding(0)
         Button5.Name = "Button5"
         Button5.Size = New Size(145, 41)
@@ -147,7 +138,7 @@ Partial Class MainPanel
         Button6.FlatAppearance.BorderSize = 0
         Button6.FlatStyle = FlatStyle.Flat
         Button6.ForeColor = SystemColors.ControlLightLight
-        Button6.Location = New Point(40, 407)
+        Button6.Location = New Point(17, 407)
         Button6.Margin = New Padding(0)
         Button6.Name = "Button6"
         Button6.Size = New Size(145, 41)
@@ -162,7 +153,7 @@ Partial Class MainPanel
         Button7.FlatAppearance.BorderSize = 0
         Button7.FlatStyle = FlatStyle.Flat
         Button7.ForeColor = SystemColors.ControlLightLight
-        Button7.Location = New Point(52, 463)
+        Button7.Location = New Point(40, 463)
         Button7.Margin = New Padding(0)
         Button7.Name = "Button7"
         Button7.Size = New Size(145, 41)
@@ -177,12 +168,13 @@ Partial Class MainPanel
         Button8.FlatAppearance.BorderSize = 0
         Button8.FlatStyle = FlatStyle.Flat
         Button8.ForeColor = SystemColors.ControlLightLight
-        Button8.Location = New Point(40, 517)
+        Button8.Location = New Point(45, 523)
         Button8.Margin = New Padding(0)
         Button8.Name = "Button8"
-        Button8.Size = New Size(145, 41)
+        Button8.Size = New Size(145, 31)
         Button8.TabIndex = 1
-        Button8.Text = "Complaints"
+        Button8.Text = "Employment"
+        Button8.TextAlign = ContentAlignment.MiddleLeft
         Button8.UseVisualStyleBackColor = False
         ' 
         ' Button9
@@ -192,7 +184,7 @@ Partial Class MainPanel
         Button9.FlatAppearance.BorderSize = 0
         Button9.FlatStyle = FlatStyle.Flat
         Button9.ForeColor = SystemColors.ControlLightLight
-        Button9.Location = New Point(40, 575)
+        Button9.Location = New Point(20, 575)
         Button9.Margin = New Padding(0)
         Button9.Name = "Button9"
         Button9.Size = New Size(145, 41)
@@ -203,7 +195,7 @@ Partial Class MainPanel
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(40, 153)
+        PictureBox1.Location = New Point(21, 153)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(22, 22)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -213,7 +205,7 @@ Partial Class MainPanel
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(40, 199)
+        PictureBox2.Location = New Point(20, 199)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(22, 22)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -223,7 +215,7 @@ Partial Class MainPanel
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(40, 251)
+        PictureBox3.Location = New Point(19, 251)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(22, 22)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -233,7 +225,7 @@ Partial Class MainPanel
         ' PictureBox4
         ' 
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(40, 310)
+        PictureBox4.Location = New Point(19, 310)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(22, 22)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -243,7 +235,7 @@ Partial Class MainPanel
         ' PictureBox5
         ' 
         PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(40, 416)
+        PictureBox5.Location = New Point(20, 416)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(22, 22)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
@@ -253,7 +245,7 @@ Partial Class MainPanel
         ' PictureBox6
         ' 
         PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(40, 361)
+        PictureBox6.Location = New Point(20, 361)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(22, 22)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
@@ -263,7 +255,7 @@ Partial Class MainPanel
         ' PictureBox7
         ' 
         PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(40, 472)
+        PictureBox7.Location = New Point(20, 472)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(22, 22)
         PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
@@ -273,7 +265,7 @@ Partial Class MainPanel
         ' PictureBox8
         ' 
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(40, 526)
+        PictureBox8.Location = New Point(20, 526)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(22, 22)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
@@ -283,7 +275,7 @@ Partial Class MainPanel
         ' PictureBox9
         ' 
         PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
-        PictureBox9.Location = New Point(40, 584)
+        PictureBox9.Location = New Point(20, 584)
         PictureBox9.Name = "PictureBox9"
         PictureBox9.Size = New Size(22, 22)
         PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage
@@ -300,12 +292,23 @@ Partial Class MainPanel
         PictureBox10.TabIndex = 3
         PictureBox10.TabStop = False
         ' 
+        ' Panel1
+        ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel1.AutoScroll = True
+        Panel1.BackColor = Color.White
+        Panel1.Location = New Point(246, 0)
+        Panel1.Margin = New Padding(0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1211, 978)
+        Panel1.TabIndex = 0
+        ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(9F, 18F)
+        AutoScaleDimensions = New SizeF(11F, 22F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
-        ClientSize = New Size(1016, 639)
+        ClientSize = New Size(1460, 979)
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)
@@ -342,8 +345,6 @@ Partial Class MainPanel
         CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
@@ -363,4 +364,5 @@ Partial Class MainPanel
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class

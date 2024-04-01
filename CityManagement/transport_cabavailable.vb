@@ -12,9 +12,9 @@ Public Class transport_cabavailable
     Dim conn2 As New MySqlConnection(connString)
     Dim pathNodesMap As New Dictionary(Of Integer, List(Of Integer))
     Dim relpathNodesMap As New Dictionary(Of Integer, List(Of Integer))
-    Dim fromNodeId As Integer
-    Dim toNodeId As Integer
-    Dim cab_arrival_times As New Dictionary(Of Integer, DateTime)
+    Public Shared fromNodeId As Integer
+    Public Shared toNodeId As Integer
+    Public Shared cab_arrival_times As New Dictionary(Of Integer, DateTime)
     'Dim arrivalTimes As New List(Of Integer)
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 

@@ -1,4 +1,5 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
+﻿Imports System.Drawing.Text
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 
 Public Class Event_Participation
@@ -10,8 +11,23 @@ Public Class Event_Participation
     Dim EventId As Integer = CurrEventID
     Dim UserSID As Integer = CurrUserSID
 
-    Private Sub Event_Participation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    'Dim EventId As Integer = 4
+    'Dim UserSID As Integer = 1
 
+    Private Sub Event_Participation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Load font from file
+        Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
+        Dim customFont As New PrivateFontCollection()
+        customFont.AddFontFile(fontFilePath)
+
+        ' Apply font to all controls on the form
+        ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
+        EventName.Font = New Font(customFont.Families(0), 24)
+        Label1.Font = New Font(customFont.Families(0), 24)
+        Label2.Font = New Font(customFont.Families(0), 24)
+
+        ' Dispose the font collection
+        customFont.Dispose()
 
         If UserSID <> -1 Then
             ' Assume EventID is somehow determined or passed to this form
@@ -148,4 +164,14 @@ Public Class Event_Participation
         End Try
         Return festivalDetails
     End Function
+
+    Private Sub ApplyFontToControl(ByVal control As Control, ByVal font As Font)
+        ' Set font for the current control
+        control.Font = font
+
+        ' Recursively set font for all child controls
+        For Each childControl As Control In control.Controls
+            ApplyFontToControl(childControl, font)
+        Next
+    End Sub
 End Class

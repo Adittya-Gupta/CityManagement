@@ -1,4 +1,6 @@
-﻿Imports System.Xml
+﻿Imports System.Drawing.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Xml
 Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Asn1.IsisMtt.X509
 
@@ -12,11 +14,24 @@ Public Class Event_Edit
     Dim EventId As Integer = CurrEventID
     Dim UserSID As Integer = CurrUserSID
 
+    'Dim EventId As Integer = 4
+    'Dim UserSID As Integer = 1
+
 
 
     ' This method is called when the Edit_Event form loads
     Private Sub Edit_Event_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Load font from file
+        Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
+        Dim customFont As New PrivateFontCollection()
+        customFont.AddFontFile(fontFilePath)
 
+        ' Apply font to all controls on the form
+        ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
+        Label1.Font = New Font(customFont.Families(0), 24)
+        Label2.Font = New Font(customFont.Families(0), 24)
+        ' Dispose the font collection
+        customFont.Dispose()
 
         ' Check if the global user ID from the login form is valid (not -1)
         If UserSID <> -1 Then
@@ -138,7 +153,7 @@ Public Class Event_Edit
                 End If
 
                 ' Bind the EventID to the query parameter
-                cmd.Parameters.AddWithValue("@EventID", EventID)
+                cmd.Parameters.AddWithValue("@EventID", EventId)
 
                 ' Execute the SQL command
                 cmd.ExecuteNonQuery()
@@ -154,8 +169,15 @@ Public Class Event_Edit
         End Try
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub ApplyFontToControl(ByVal control As Control, ByVal font As Font)
+        ' Set font for the current control
+        control.Font = font
 
+        ' Recursively set font for all child controls
+        For Each childControl As Control In control.Controls
+            ApplyFontToControl(childControl, font)
+        Next
     End Sub
+
 End Class
 

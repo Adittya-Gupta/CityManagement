@@ -51,33 +51,34 @@ Partial Class Event_Edit
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12F)
+        Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(138, 119)
+        Label1.Location = New Point(62, 55)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(145, 20)
+        Label1.Size = New Size(293, 37)
         Label1.TabIndex = 22
         Label1.Text = "Events & Festivals  >"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12F)
+        Label2.Font = New Font("Microsoft Sans Serif", 24F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(291, 119)
+        Label2.Location = New Point(347, 55)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(82, 20)
+        Label2.Size = New Size(161, 37)
         Label2.TabIndex = 23
         Label2.Text = "Edit Event"
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.LightGray
-        Button1.Location = New Point(212, 489)
+        Button1.BackColor = Color.Black
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(191, 521)
         Button1.Name = "Button1"
-        Button1.Size = New Size(167, 41)
+        Button1.Size = New Size(193, 54)
         Button1.TabIndex = 25
         Button1.Text = "Upload an Image"
         Button1.UseVisualStyleBackColor = False
@@ -86,9 +87,10 @@ Partial Class Event_Edit
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), Image)
-        PictureBox1.Location = New Point(138, 187)
+        PictureBox1.Location = New Point(62, 170)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(327, 283)
+        PictureBox1.Size = New Size(458, 317)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 26
         PictureBox1.TabStop = False
         ' 
@@ -182,7 +184,8 @@ Partial Class Event_Edit
         ' 
         ' Button2
         ' 
-        Button2.BackColor = Color.SteelBlue
+        Button2.BackColor = Color.Black
+        Button2.ForeColor = Color.White
         Button2.Location = New Point(802, 674)
         Button2.Name = "Button2"
         Button2.Size = New Size(194, 63)

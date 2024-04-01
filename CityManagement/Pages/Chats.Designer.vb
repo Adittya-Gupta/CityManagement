@@ -101,7 +101,7 @@ Partial Class Chats
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.Electrician3
+        PictureBox1.BackgroundImage = My.Resources.Resources.download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(483, 10)
         PictureBox1.Name = "PictureBox1"

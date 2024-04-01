@@ -39,7 +39,7 @@
 
     End Sub
 
-    Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click, Guna2GradientTileButton5.Click
+    Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
 
     End Sub
 End Class

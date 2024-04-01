@@ -30,7 +30,7 @@ Partial Class ChatElement
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.Electrician3
+        PictureBox1.BackgroundImage = My.Resources.Resources.download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(15, 6)
         PictureBox1.Name = "PictureBox1"

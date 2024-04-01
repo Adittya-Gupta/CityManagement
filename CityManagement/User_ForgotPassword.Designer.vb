@@ -203,7 +203,7 @@ Partial Class ForgotPassword
         ' 
         TimeLeftLabel.AutoSize = True
         TimeLeftLabel.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TimeLeftLabel.Location = New Point(12, 413)
+        TimeLeftLabel.Location = New Point(12, 320)
         TimeLeftLabel.Name = "TimeLeftLabel"
         TimeLeftLabel.Size = New Size(121, 25)
         TimeLeftLabel.TabIndex = 12

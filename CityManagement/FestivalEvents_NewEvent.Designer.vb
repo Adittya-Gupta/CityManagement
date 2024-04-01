@@ -23,6 +23,7 @@ Partial Class FestivalEvents_NewEvent
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FestivalEvents_NewEvent))
         NameTextBox = New TextBox()
         Label3 = New Label()
         EmailLabel = New Label()
@@ -30,11 +31,9 @@ Partial Class FestivalEvents_NewEvent
         Label1 = New Label()
         Label4 = New Label()
         Label5 = New Label()
-        TextBox1 = New TextBox()
         Label6 = New Label()
         TextBox2 = New TextBox()
         Label7 = New Label()
-        TextBox3 = New TextBox()
         Label8 = New Label()
         TextBox4 = New TextBox()
         Label9 = New Label()
@@ -44,6 +43,10 @@ Partial Class FestivalEvents_NewEvent
         TextBox6 = New TextBox()
         ContextMenuStrip1 = New ContextMenuStrip(components)
         Button2 = New Button()
+        PictureBox1 = New PictureBox()
+        DateTimePicker1 = New DateTimePicker()
+        DateTimePicker2 = New DateTimePicker()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' NameTextBox
@@ -80,65 +83,56 @@ Partial Class FestivalEvents_NewEvent
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Abhaya Libre Medium", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(305, 90)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(209, 29)
+        Label2.Size = New Size(208, 28)
         Label2.TabIndex = 26
         Label2.Text = "Request for Event "
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Abhaya Libre Medium", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
         Label1.Location = New Point(44, 90)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(230, 29)
+        Label1.Size = New Size(225, 28)
         Label1.TabIndex = 25
         Label1.Text = "Events & Festivals    >"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label4.Font = New Font("Exo 2", 7.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(466, 165)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(114, 20)
+        Label4.Size = New Size(116, 19)
         Label4.TabIndex = 27
         Label4.Text = "Name of Event"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label5.Font = New Font("Exo 2", 7.999999F)
         Label5.Location = New Point(806, 165)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(107, 20)
+        Label5.Size = New Size(108, 19)
         Label5.TabIndex = 29
         Label5.Text = "Date of Event"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12.0F)
-        TextBox1.Location = New Point(806, 189)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(287, 35)
-        TextBox1.TabIndex = 28
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label6.Font = New Font("Exo 2", 7.999999F)
         Label6.Location = New Point(466, 318)
         Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(185, 20)
+        Label6.Size = New Size(188, 19)
         Label6.TabIndex = 31
         Label6.Text = "Expected space required"
         ' 
@@ -154,31 +148,22 @@ Partial Class FestivalEvents_NewEvent
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label7.Font = New Font("Exo 2", 7.999999F)
         Label7.Location = New Point(806, 318)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(210, 20)
+        Label7.Size = New Size(218, 19)
         Label7.TabIndex = 33
         Label7.Text = "Expected timing of the event"
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Font = New Font("Microsoft Sans Serif", 12.0F)
-        TextBox3.Location = New Point(806, 342)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(287, 35)
-        TextBox3.TabIndex = 32
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label8.Font = New Font("Exo 2", 7.999999F)
         Label8.Location = New Point(466, 449)
         Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(400, 20)
+        Label8.Size = New Size(419, 19)
         Label8.TabIndex = 35
         Label8.Text = "Special features (like only for Docs, Only 500 seats etc.)"
         ' 
@@ -194,11 +179,11 @@ Partial Class FestivalEvents_NewEvent
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label9.Font = New Font("Exo 2", 7.999999F)
         Label9.Location = New Point(914, 449)
         Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(117, 20)
+        Label9.Size = New Size(122, 19)
         Label9.TabIndex = 37
         Label9.Text = "Indoor/Outdoor"
         ' 
@@ -213,7 +198,8 @@ Partial Class FestivalEvents_NewEvent
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(92, 548)
+        Button1.Font = New Font("Exo 2 Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(99, 548)
         Button1.Name = "Button1"
         Button1.Size = New Size(210, 69)
         Button1.TabIndex = 38
@@ -223,11 +209,11 @@ Partial Class FestivalEvents_NewEvent
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 8.0F)
+        Label10.Font = New Font("Exo 2", 7.999999F)
         Label10.Location = New Point(466, 548)
         Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(181, 20)
+        Label10.Size = New Size(188, 19)
         Label10.TabIndex = 39
         Label10.Text = " Description of the event"
         ' 
@@ -257,12 +243,44 @@ Partial Class FestivalEvents_NewEvent
         Button2.Text = "Request"
         Button2.UseVisualStyleBackColor = False
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(22, 218)
+        PictureBox1.Margin = New Padding(4, 5, 4, 5)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(384, 306)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 43
+        PictureBox1.TabStop = False
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Abhaya Libre Medium", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Format = DateTimePickerFormat.Short
+        DateTimePicker1.Location = New Point(806, 193)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(287, 31)
+        DateTimePicker1.TabIndex = 45
+        ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.CalendarFont = New Font("Abhaya Libre Medium", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.Location = New Point(806, 346)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(287, 31)
+        DateTimePicker2.TabIndex = 46
+        ' 
         ' FestivalEvents_NewEvent
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1387, 970)
+        Controls.Add(DateTimePicker2)
+        Controls.Add(DateTimePicker1)
+        Controls.Add(PictureBox1)
         Controls.Add(Button2)
         Controls.Add(TextBox6)
         Controls.Add(Label10)
@@ -272,19 +290,19 @@ Partial Class FestivalEvents_NewEvent
         Controls.Add(Label8)
         Controls.Add(TextBox4)
         Controls.Add(Label7)
-        Controls.Add(TextBox3)
         Controls.Add(Label6)
         Controls.Add(TextBox2)
         Controls.Add(Label5)
-        Controls.Add(TextBox1)
         Controls.Add(Label4)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(NameTextBox)
         Controls.Add(Label3)
         Controls.Add(EmailLabel)
+        FormBorderStyle = FormBorderStyle.None
         Name = "FestivalEvents_NewEvent"
         Text = "FestivalEvents_NewEvent"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -296,11 +314,9 @@ Partial Class FestivalEvents_NewEvent
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label9 As Label
@@ -310,4 +326,7 @@ Partial Class FestivalEvents_NewEvent
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
 End Class

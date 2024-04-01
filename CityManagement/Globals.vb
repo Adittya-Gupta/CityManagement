@@ -14,7 +14,7 @@
     'Navigation
     Public UrbanClapNavForm As New UrbanClapNav()
 
-    Public MainPanelForm As New MainPanel()
+    'Public MainPanelForm As New MainPanel()
 
     'Global Variables
     Public UserId As Integer

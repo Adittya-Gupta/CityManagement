@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
 Public Class Banking_Passbook
@@ -16,6 +18,16 @@ Public Class Banking_Passbook
     Public database As String = "bankingdatabase"
 
     Public bank_account_no As Integer = 1
+
+    Private Sub ClearFields()
+        Label16.Text = ""
+        Label17.Text = ""
+        Label18.Text = ""
+        Label19.Text = ""
+        Label20.Text = ""
+        Label21.Text = ""
+        Label22.Text = ""
+    End Sub
     Private Sub LoadFields()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
@@ -43,6 +55,11 @@ Public Class Banking_Passbook
         End If
         Mysqlconn.Close()
         sqlCmd.Dispose()
+    End Sub
+    Private Sub ClearDataGrid()
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            DataGridView1.Rows.Remove(row)
+        Next
     End Sub
     Private Sub RefreshDataGrid()
         For Each row As DataGridViewRow In DataGridView1.SelectedRows
@@ -85,7 +102,10 @@ Public Class Banking_Passbook
         Button14.BackColor = Color.FromArgb(1, 0, 70)
         Button15.BackColor = Color.FromArgb(1, 0, 70)
 
+        'LoadFields()
         RefreshDataGrid()
+        ClearFields()
+
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -141,6 +161,96 @@ Public Class Banking_Passbook
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+
+    End Sub
+
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+
+    End Sub
+
+    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+
+    End Sub
+
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+
+    End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        If e.ColumnIndex >= 0 Then
+            'If Not, exit the event handler without performing any action
+            'MessageBox.Show("Error")
+            Return
+        End If
+
+        Dim Trans_ID As String = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
+
+
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        ' Open the connection
+        Mysqlconn.Open()
+        Dim sqlCmd As New MySqlCommand
+
+
+        sqlCmd.Connection = Mysqlconn
+        sqlCmd.CommandText = "Select * from bankingdatabase.transactionlog where Transaction_ID = @ID;"
+
+        sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = Trans_ID
+
+
+        Dim adapter As New MySqlDataAdapter(sqlCmd)
+        Dim table As New DataTable()
+
+
+        adapter.Fill(table)
+
+        If table.Rows.Count = 1 Then
+            Label16.Text = table.Rows(0)(0).ToString()
+            Label17.Text = table.Rows(0)(4).ToString()
+            Label18.Text = table.Rows(0)(2).ToString()
+            Label19.Text = table.Rows(0)(1).ToString()
+            Label20.Text = table.Rows(0)(3).ToString()
+            Label21.Text = table.Rows(0)(5).ToString()
+            Label22.Text = table.Rows(0)(6).ToString()
+
+        Else
+            MessageBox.Show("Error has occured")
+        End If
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+        RefreshDataGrid()
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+
+    End Sub
+
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
 
     End Sub
 End Class

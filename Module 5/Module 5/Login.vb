@@ -60,7 +60,7 @@ Public Class Login
                 If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
                     'Form51.ReceivedEmail = enteredEmail
                     Profile.current_user = Username
-                    'Me.Hide()
+                    Me.Hide()
                     Profile.Show()
                     'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())
                     'Dim ms As New System.IO.MemoryStream(imageBytes)

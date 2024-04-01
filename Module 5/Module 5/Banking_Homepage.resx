@@ -117,21 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Customers beware! Do follow these important Security Tips for safe online banking:
-Access your bank website only by typing the URL in the address bar of your browser.
-Do not click on any links in any e-mail message to access the site.
-The City Bank or any of its affiliates never send you email/SMS or calls to get your personal information, password or one time password (OTP). Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on  if you receive any such e-mail/SMS or Phone call. Please lock your user access immediately, if you have accidentally revealed your credentials.
-Scan your computer regularly with Antivirus to ensure that the system is Virus/Trojan free.
-Change your Internet Banking password at periodical intervals.
-Avoid accessing Internet banking accounts from cyber cafes or shared PCs.
-Be vigilant, be safe.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJ8AAACOCAYAAAAvkdreAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAACP1JREFUeF7t3H2IHPUdx/EgrVWKGrG1VBsQa4U0YoXSP9qAFYmV9Dm00EJAxGhK
+        DQAACw0B7QfALAAACP1JREFUeF7t3H2IHPUdx/EgrVWKGrG1VBsQa4U0YoXSP9qAFYmV9Dm00EJAxGhK
         EelTqvRJ7h9biK3VhMRGE66EpppAUx8wbSQai6a9muJxR7nLJZfs9R4a9m5zl81dkjbtkX6+w3eG2Znf
         3M7uWfTk/YIvuze/7+83c/v73jztJIsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAMACVK1Wl586dervc8XJkycPTk9PPzszM7P++PHjKzds2PAe7z4vIyMjN8brmJqa2u6LS5ucnHwo
@@ -175,7 +165,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAS9JREFUSEutlOFxwyAMhT1CRugIHcljAPnjEbJBs0lH8QgeIdXDTxTJB6ZO350u
+        DQAACw0B7QfALAAAAS9JREFUSEutlOFxwyAMhT1CRugIHcljAPnjEbJBs0lH8QgeIdXDTxTJB6ZO350u
         8EAfIIinq1qW5ZZSmhFo035PSwgfKcZV4sVY4XH4mhwUv6U9DJdjft5j/L6ntDG5jjUICIG2eqdwTGgA
         MwBATp0O8FbNzXFDeIxcjoHLhdL+lavhq95ZT24zFuyhCA515fJsKfwgfwtY+yPBlF1iFCjrZSZpfySY
         sktNram+CJyEp8H4lic3pAx2d3kTr0G9Eil9cfig5uKazG7+FsQYn9h53r1AW89Oc3PUi1er2WMMqM41
@@ -186,7 +176,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAcVJREFUSEvtVO1RwzAMzQiMwAiMwAiMkBH4aZvckQ3KBnSDsAEjdISO0BFATzyl
+        DQAACw0B7QfALAAAAcVJREFUSEvtVO1RwzAMzQiMwAiMwAiMkBH4aZvckQ3KBnSDsAEjdISO0BFATzyl
         Tuu4Mu3xi3enSyzLera+uhpSjF+3FrouAwYvKR3ku7+BOAlj/OTyKsDPP2GXQhiHEB65vAouwlvCRTiO
         411KqRcZ5cCzfB+41YwqIYjEYAODgkxjCPc0daNKKBs7bGoPhvAm0usLj/20byVdJZSwvdLpDi+legYK
         CftwQJULRUINJSdLqLzADrdUcJFwiPEJSoSRqiJA5LHLUSRENXpurtX7Q/iBtTiz/KqokYDpUR0jVyaM
@@ -200,7 +190,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAANNJREFUOE/Nk+0RwiAMhh3BERjBERzBDRzBbqCbOIo/2wYwIzhCR9A3NGg/qIXz
+        DQAACw0B7QfALAAAANNJREFUOE/Nk+0RwiAMhh3BERjBERzBDRzBbqCbOIo/2wYwIzhCR9A3NGg/qIXz
         j+9dDhLCEwjHZk3MvPVNUzHRTkNl4ro2d6KHJ7rKyM4ddSlPb0DbXoZ+NmgKiMoGLQGidL1b7NEaQCSN
         Dqexdq+hsZxzByTc1J1JAfytyKdK4s5ZgKhU84oAUUNQ2QnQD50GRRCsmwLkZQA36vZCp8+hMqpqKEj8
         WTLkra00v18D9TQKZEpOh33YhsKYPOVvSLDUpLiMAfKL/RlE75ZMyDA8CJsXI37sYvC9K44AAAAASUVO
@@ -210,7 +200,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAShJREFUSEvtVMFxwjAQdAmUQAmUQCmUwFM6PBN1EDqgBJeQEiiBEiiB3Cp7kuxY
+        DQAACw0B7QfALAAAAShJREFUSEvtVMFxwjAQdAmUQAmUQCmUwFM6PBN1EDqgBJeQEiiBEiiB3Cp7kuxY
         RpBHHrAzO7Z0eyd7T1L3xgsihLBSrhu4YspjEO8vylsDL8G5NdPaICI7JB9Erigww1iccbyfmdqGg/df
         MdG5HadGsAVgjz7jgprzyfAy8LsscK35y/gtvots7E+89/soWIKKTywwFI0c0RZIY5EPm+v7fqtz9car
         KHn8Rw6zzS8EZVMfolmGXrJsBgIgh0/BFX3kVMZ0Afp89zBNddM6CRaAf2m7/nDW05rOxpRlWMB2E/ws
@@ -221,7 +211,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAJVJREFUOE9jwAVqamocqisr94NwVVVVAlQYP2hoaBAAaiioqqy8D9JYU1HhAMKV
+        DQAACw0B7QfALAAAAJVJREFUOE9jwAVqamocqisr94NwVVVVAlQYP2hoaBAAaiioqqy8D9JYU1HhAMKV
         lZULQGI4DQJpBErWV1dVvQcqXA/SBJWCg4qKCgUkg+obgHywBFTTfzLxewYQA2wSGQCslxIXgPQiTEKi
         QQDozwZkDBXGqnbUACAYWAOgaR9rPBPEIINhmQZsGgkApAekl8K8UHkfAAEgS9rLxbZLAAAAAElFTkSu
         QmCC
@@ -230,7 +220,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAQdJREFUOE+dk1ERwjAQRJGABCRUAlKQgANwAA7AARKQgIR8tJ1+RgLsy9wxgTZp
+        DQAACw0B7QfALAAAAQdJREFUOE+dk1ERwjAQRJGABCRUAlKQgANwAA7AARKQgIR8tJ1+RgLsy9wxgTZp
         YWd2ck1379K7dFVD13VN27Zbe1yOEMKaVQmekHgYhg3rLBDKFInzBFqD2BBXYUI35QmIH8RFSNC4SbwX
         4vIp+r4/ZMJJqqlHk48hAZWqVJGbyafB2KZGV9ofQVWiyHHf32qTYS9NpwpVOZuYaeyMaTLixWRlWDU3
         5AyLLxOQYUfDtF7Evd/ORUAsU/oPIPFsAgR2DxjX9/GdvNuPPsWM3n0Ys+NDjB99wZPMejjZZtRxj7VZ
@@ -240,7 +230,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAVNJREFUSEvtk91twzAMhD1CRugoHaEjeIRuUG/QbtBu0GyQETJCRhDg30f3TqFV
+        DQAACw0B7QfALAAAAVNJREFUSEvtk91twzAMhD1CRugoHaEjeIRuUG/QbtBu0GyQETJCRhDg30f3TqFV
         iqJs9K0P+QDC0Jk6yjTVPPh/LMvyNM/zZRzHME3T1Wqif1LjO+ZYrQoTkHhD0OgD0TraF4pxfQshnPq+
         f7Ga2JXQAEmrPomnSdEV0YnkagUwu7AVsox4GoHRFXGWZcTTMmD0jYQgy4inEWhsiS1QaBnDMDwjge14
         21pitXVdTyj6Tg1f1zLH06rAsGMiY2uN1lTEXuPJtmTaIfLDOn0apb3yq0TmP2qtVsDNPC0SOc/1Hh6A
@@ -252,7 +242,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAURJREFUSEvtlW1xwzAQRA0hEAKhEAKhEAIhEMKgZZAyaBkEQiAEQiCo+5RVbeuj
+        DQAACw0B7QfALAAAAURJREFUSEvtlW1xwzAQRA0hEAKhEAKhEAIhEMKgZZAyaBkEQiAEQiCo+5RVbeuj
         lv2z0zezM729PVu2G2n4ZxMhhKP0Kd2tFvRuEtmjx9sotJOuEjB8sc4N0UsLAW628+VK1GQAlleToZnT
         czRcbc1R4/Dsh5Ot1WiWp4KDrRGZqdl8RPXepC+XBcxyAXG2NSLzQ7q7rKI+36f+CgzXkC4uRzqHezJ8
         6DLTObw9s2VYfxffJM/80GxMyDO1mZoXaYRnK8wzeQ01L9ITXqqh5kV6wks11LyITPaUm8tIHl6qQTX/
@@ -263,7 +253,7 @@ Be vigilant, be safe.</value>
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAVhJREFUOE+tlFF5wzAMhAOhEAohEAKhEMpgY7BCKIOOwcagEAahEArBu1/WJXaX
+        DQAACw0B7QfALAAAAVhJREFUOE+tlFF5wzAMhAOhEAohEAKhEMpgY7BCKIOOwcagEAahEArBu1/WJXaX
         hz34vu9iS7rYsqVkGo5SylG8iY+Gd/GckoDst/Rb8yPy3jElISIALLINltScq1meojXMwd0LLdUut3Ak
         ZJMt+E6bjMCWhSD7q7rl18OLXTK+Iv2xK6P4iEAD+S6IhGX4YnOdl2vGA7J9zHYx7ugQgoRsCgBmjIOI
         CHJ+gtB3FBXV6AxcQRNsGcsgu7aCxpqt5mz6Gd4evDenbIOcHM3sjmPgb3Xp7qEA2dFL5ilDK+RjoVYD
@@ -271,5 +261,15 @@ Be vigilant, be safe.</value>
         Gc1IRV12fjcgfgAa/UFHBRu6KLWVNNlrRsDFRuk1shH2HrpPETE7Uil/JqT/+rshk1YD//TjAEzTL89+
         U6K1nObgAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Customers beware! Do follow these important Security Tips for safe online banking:
+Access your bank website only by typing the URL in the address bar of your browser.
+Do not click on any links in any e-mail message to access the site.
+The City Bank or any of its affiliates never send you email/SMS or calls to get your personal information, password or one time password (OTP). Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on  if you receive any such e-mail/SMS or Phone call. Please lock your user access immediately, if you have accidentally revealed your credentials.
+Scan your computer regularly with Antivirus to ensure that the system is Virus/Trojan free.
+Change your Internet Banking password at periodical intervals.
+Avoid accessing Internet banking accounts from cyber cafes or shared PCs.
+Be vigilant, be safe.</value>
   </data>
 </root>

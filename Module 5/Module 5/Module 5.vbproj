@@ -88,8 +88,14 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.3.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlConnector.2.3.6\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -147,6 +153,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking_Homepage.Designer.vb">
+      <DependentUpon>Banking_Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_LoanDetails.Designer.vb">
       <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
     </Compile>
@@ -231,12 +243,6 @@
     <Compile Include="Newsletter_AddNews.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Newsletter_Editor.Designer.vb">
-      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Newsletter_Editor.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Registration.Designer.vb">
       <DependentUpon>Registration.vb</DependentUpon>
     </Compile>
@@ -273,6 +279,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Banking_Homepage.resx">
+      <DependentUpon>Banking_Homepage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_LoanDetails.resx">
       <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -311,9 +320,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_AddNews.resx">
       <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Newsletter_Editor.resx">
-      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>

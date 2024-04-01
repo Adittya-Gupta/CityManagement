@@ -1,4 +1,8 @@
-﻿Public Class Health_ViewAppointment
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Health_ViewAppointment
+
+    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Dim listView1 As New ListView()
     Private Sub Health_ViewAppointment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -17,12 +21,24 @@
         listView1.HeaderStyle = ColumnHeaderStyle.Nonclickable ' Make column headers non-clickable
         listView1.HideSelection = True ' Remove highlighting effect after clicking
 
-        ' Add sample data rows to the ListView
-        Dim row1 As New ListViewItem(New String() {"12021", "John Doe", "Male", "2024-02-15", "13:15"})
-        Dim row2 As New ListViewItem(New String() {"22012", "Jane Smith", "Female", "2024-02-16", "14:20"})
-        Dim row3 As New ListViewItem(New String() {"32321", "Emily Johnson", "Female", "2024-02-17", "09:45"})
-        Dim row4 As New ListViewItem(New String() {"41234", "Michael Brown", "Male", "2024-02-18", "10:20"})
-        listView1.Items.AddRange(New ListViewItem() {row1, row2, row3, row4})
+        Dim queryString As String = "SELECT appointment_id, user_id, DATE(date) as date, time FROM hospitalAppointment"
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            connection.Open()
+
+            Dim reader As MySqlDataReader = command.ExecuteReader()
+            Try
+                While reader.Read()
+                    Dim userId As String = reader("user_id").ToString()
+                    Dim userDetails As String() = GetUserDetails(userId, connectionString).Split(",")
+                    Dim row As New ListViewItem(New String() {reader("appointment_id").ToString(), userDetails(0), userDetails(1), Convert.ToDateTime(reader("date")).ToString("yyyy-MM-dd"), reader("time").ToString()})
+                    listView1.Items.Add(row)
+                End While
+            Finally
+                reader.Close()
+            End Try
+        End Using
 
         ' Set the location of the ListView
         listView1.Location = New Point(44, 130) ' Set location to (30, 200)
@@ -38,4 +54,22 @@
         ' Bring the ListView to the front
         listView1.BringToFront()
     End Sub
+
+    Private Function GetUserDetails(userId As String, connectionString As String) As String
+        Dim queryString As String = "SELECT Name, Gender FROM User WHERE SID = @userId"
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            command.Parameters.AddWithValue("@userId", userId)
+            connection.Open()
+
+            Dim reader As MySqlDataReader = command.ExecuteReader()
+            If reader.Read() Then
+                Return String.Format("{0},{1}", reader("Name"), reader("Gender"))
+            Else
+                Return "User details not found"
+            End If
+        End Using
+    End Function
+
 End Class

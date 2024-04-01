@@ -23,7 +23,6 @@ Partial Class transport_cabbooking
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_cabbooking))
-        Panel1 = New Panel()
         Panel3 = New Panel()
         RadioButton1 = New RadioButton()
         DateTimePicker1 = New DateTimePicker()
@@ -33,33 +32,21 @@ Partial Class transport_cabbooking
         Label1 = New Label()
         Panel2 = New Panel()
         PictureBox2 = New PictureBox()
-        PictureBox1 = New PictureBox()
+        Label2 = New Label()
         Button3 = New Button()
         Button4 = New Button()
-        Label2 = New Label()
-        PictureBox3 = New PictureBox()
         Label3 = New Label()
         Label4 = New Label()
-        PictureBox4 = New PictureBox()
-        Panel1.SuspendLayout()
+        PictureBox1 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        Panel1 = New Panel()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(Panel3)
-        Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(97, 41)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1025, 444)
-        Panel1.TabIndex = 0
         ' 
         ' Panel3
         ' 
@@ -70,19 +57,19 @@ Partial Class transport_cabbooking
         Panel3.Controls.Add(TextBox2)
         Panel3.Controls.Add(TextBox1)
         Panel3.Controls.Add(Label1)
-        Panel3.Location = New Point(88, 140)
-        Panel3.Margin = New Padding(3, 2, 3, 2)
+        Panel3.Location = New Point(502, 283)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(347, 262)
+        Panel3.Size = New Size(397, 349)
         Panel3.TabIndex = 2
         ' 
         ' RadioButton1
         ' 
         RadioButton1.AutoSize = True
         RadioButton1.Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton1.Location = New Point(57, 198)
+        RadioButton1.Location = New Point(65, 264)
+        RadioButton1.Margin = New Padding(3, 4, 3, 4)
         RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(64, 18)
+        RadioButton1.Size = New Size(78, 22)
         RadioButton1.TabIndex = 5
         RadioButton1.TabStop = True
         RadioButton1.Text = "Private"
@@ -91,20 +78,18 @@ Partial Class transport_cabbooking
         ' DateTimePicker1
         ' 
         DateTimePicker1.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(57, 154)
-        DateTimePicker1.Margin = New Padding(3, 2, 3, 2)
+        DateTimePicker1.Location = New Point(65, 205)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(243, 27)
+        DateTimePicker1.Size = New Size(277, 31)
         DateTimePicker1.TabIndex = 4
         ' 
         ' Button1
         ' 
         Button1.BackColor = SystemColors.ActiveCaptionText
         Button1.ForeColor = SystemColors.ButtonHighlight
-        Button1.Location = New Point(133, 218)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(152, 291)
         Button1.Name = "Button1"
-        Button1.Size = New Size(96, 28)
+        Button1.Size = New Size(110, 37)
         Button1.TabIndex = 3
         Button1.Text = "Request Now" & vbCrLf
         Button1.UseVisualStyleBackColor = False
@@ -113,31 +98,29 @@ Partial Class transport_cabbooking
         ' 
         TextBox2.BackColor = Color.Silver
         TextBox2.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(57, 110)
-        TextBox2.Margin = New Padding(3, 2, 3, 2)
+        TextBox2.Location = New Point(65, 147)
         TextBox2.Name = "TextBox2"
         TextBox2.PlaceholderText = "Enter Destination"
-        TextBox2.Size = New Size(243, 29)
+        TextBox2.Size = New Size(277, 34)
         TextBox2.TabIndex = 2
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = Color.Silver
         TextBox1.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(57, 72)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
+        TextBox1.Location = New Point(65, 96)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Enter Pickup location"
-        TextBox1.Size = New Size(243, 29)
+        TextBox1.Size = New Size(277, 34)
         TextBox1.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(66, 14)
+        Label1.Location = New Point(75, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(187, 32)
+        Label1.Size = New Size(230, 41)
         Label1.TabIndex = 0
         Label1.Text = "Request a Ride"
         ' 
@@ -145,55 +128,19 @@ Partial Class transport_cabbooking
         ' 
         Panel2.BackColor = SystemColors.ControlLightLight
         Panel2.Controls.Add(PictureBox2)
-        Panel2.Location = New Point(88, 60)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Location = New Point(502, 194)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(347, 62)
+        Panel2.Size = New Size(397, 83)
         Panel2.TabIndex = 1
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(134, 0)
-        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Location = New Point(170, 0)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(66, 62)
+        PictureBox2.Size = New Size(75, 83)
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(3, 2)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1019, 421)
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = SystemColors.ActiveCaptionText
-        Button3.ForeColor = SystemColors.ButtonHighlight
-        Button3.Location = New Point(921, 5)
-        Button3.Margin = New Padding(3, 2, 3, 2)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(96, 34)
-        Button3.TabIndex = 4
-        Button3.Text = "My Activity" & vbCrLf
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = SystemColors.ActiveCaptionText
-        Button4.ForeColor = SystemColors.ButtonHighlight
-        Button4.Location = New Point(1023, 5)
-        Button4.Margin = New Padding(3, 2, 3, 2)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(96, 34)
-        Button4.TabIndex = 5
-        Button4.Text = "Look for Bus" & vbCrLf
-        Button4.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
@@ -201,22 +148,35 @@ Partial Class transport_cabbooking
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Silver
-        Label2.Location = New Point(100, 9)
+        Label2.Location = New Point(32, 19)
         Label2.Name = "Label2"
-        Label2.Size = New Size(185, 24)
+        Label2.Size = New Size(234, 29)
         Label2.TabIndex = 11
         Label2.Text = "Transport Services"
         ' 
-        ' PictureBox3
+        ' Button3
         ' 
-        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
-        PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(291, 16)
-        PictureBox3.Margin = New Padding(3, 2, 3, 2)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(21, 17)
-        PictureBox3.TabIndex = 15
-        PictureBox3.TabStop = False
+        Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button3.BackColor = SystemColors.ActiveCaptionText
+        Button3.ForeColor = SystemColors.ButtonHighlight
+        Button3.Location = New Point(1042, 14)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(110, 45)
+        Button3.TabIndex = 4
+        Button3.Text = "My Activity" & vbCrLf
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button4
+        ' 
+        Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button4.BackColor = SystemColors.ActiveCaptionText
+        Button4.ForeColor = SystemColors.ButtonHighlight
+        Button4.Location = New Point(1214, 14)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(110, 45)
+        Button4.TabIndex = 5
+        Button4.Text = "Look for Bus" & vbCrLf
+        Button4.UseVisualStyleBackColor = False
         ' 
         ' Label3
         ' 
@@ -224,9 +184,9 @@ Partial Class transport_cabbooking
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Silver
-        Label3.Location = New Point(318, 10)
+        Label3.Location = New Point(315, 19)
         Label3.Name = "Label3"
-        Label3.Size = New Size(47, 24)
+        Label3.Size = New Size(60, 29)
         Label3.TabIndex = 16
         Label3.Text = "Cab"
         ' 
@@ -236,53 +196,70 @@ Partial Class transport_cabbooking
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(398, 11)
+        Label4.Location = New Point(436, 19)
         Label4.Name = "Label4"
-        Label4.Size = New Size(57, 24)
+        Label4.Size = New Size(73, 29)
         Label4.TabIndex = 17
         Label4.Text = "Book"
         ' 
-        ' PictureBox4
+        ' PictureBox1
         ' 
-        PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), Image)
-        PictureBox4.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox4.Location = New Point(371, 15)
-        PictureBox4.Margin = New Padding(3, 2, 3, 2)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(21, 17)
-        PictureBox4.TabIndex = 18
-        PictureBox4.TabStop = False
+        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox1.Location = New Point(272, 25)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(24, 23)
+        PictureBox1.TabIndex = 18
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
+        PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox3.Location = New Point(394, 25)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(24, 23)
+        PictureBox3.TabIndex = 19
+        PictureBox3.TabStop = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel1.BackColor = SystemColors.ControlLightLight
+        Panel1.Controls.Add(PictureBox3)
+        Panel1.Controls.Add(Button3)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(Button4)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(Label3)
+        Panel1.Location = New Point(0, 4)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1377, 72)
+        Panel1.TabIndex = 2
         ' 
         ' transport_cabbooking
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1199, 517)
-        Controls.Add(PictureBox4)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(PictureBox3)
-        Controls.Add(Label2)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(1370, 689)
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "transport_cabbooking"
         Text = "Form1"
-        Panel1.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         Panel2.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel3 As Panel
@@ -293,10 +270,11 @@ Partial Class transport_cabbooking
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class

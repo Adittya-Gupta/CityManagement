@@ -1,8 +1,9 @@
 ﻿Public Class transport_cabbooking
     Public Shared FromLocation As String
     Public Shared ToLocation As String
-    Public Shared departTime As DateTime
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Public Shared sqlFormattedDateTime As String
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -23,16 +24,24 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FromLocation = TextBox1.Text
-        ToLocation = TextBox2.Text
-        departTime = DateTimePicker1.Value
+        FromLocation = TextBox1.Text.ToString()
+        ToLocation = TextBox2.Text.ToString()
+        'departTime = DateTimePicker1.Value.TimeOfDay
+
+        Dim selectedDateTime As DateTime = DateTimePicker1.Value
+
+        ' Format the DateTime object as a string in the required format for SQL
+        sqlFormattedDateTime = selectedDateTime.ToString("yyyy-MM-dd HH:mm:ss")
+
+        ' Now you can use sqlFormattedDateTime in your SQL query
+        'MessageBox.Show("Selected date and time in SQL format: " & sqlFormattedDateTime)
         Dim cab As New transport_cabavailable
         cab.Show()
         Me.Hide()
     End Sub
 
     Private Sub transport_cabbooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
 

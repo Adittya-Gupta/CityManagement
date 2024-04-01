@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class Profile
 
-    Public current_user As String
+    Public username As String = "admin"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
     End Sub

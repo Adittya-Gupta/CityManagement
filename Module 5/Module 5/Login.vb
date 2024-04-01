@@ -2,6 +2,8 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
+
+    Public username As String = "admin"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
         Dim Username As String = TextBoxUsername.Text.Trim()
         Dim Password As String = TextBoxpassword.Text.Trim()
@@ -59,7 +61,7 @@ Public Class Login
             Else
                 If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
                     'Form51.ReceivedEmail = enteredEmail
-                    Profile.current_user = Username
+                    Profile.username = Username
                     Me.Hide()
                     Profile.Show()
                     'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())

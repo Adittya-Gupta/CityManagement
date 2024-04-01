@@ -114,7 +114,7 @@ Partial Class Banking_ContactUs
         Me.Panel1.Location = New System.Drawing.Point(201, 1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1345, 771)
+        Me.Panel1.Size = New System.Drawing.Size(1035, 771)
         Me.Panel1.TabIndex = 0
         '
         'Panel3
@@ -286,7 +286,7 @@ Partial Class Banking_ContactUs
         Me.Panel4.Location = New System.Drawing.Point(-1, 0)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1346, 771)
+        Me.Panel4.Size = New System.Drawing.Size(1036, 771)
         Me.Panel4.TabIndex = 9
         '
         'Panel6
@@ -875,7 +875,7 @@ Partial Class Banking_ContactUs
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1546, 772)
+        Me.ClientSize = New System.Drawing.Size(1236, 772)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox8)

@@ -22,6 +22,7 @@ Partial Class User_ChangePassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_ChangePassword))
         Label1 = New Label()
         TextBox1 = New TextBox()
         Label2 = New Label()
@@ -29,15 +30,19 @@ Partial Class User_ChangePassword
         Button1 = New Button()
         CheckBox1 = New CheckBox()
         Panel1 = New Panel()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         Label3 = New Label()
         Panel1.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(196, 131)
+        Label1.Location = New Point(9, 110)
         Label1.Name = "Label1"
         Label1.Size = New Size(128, 23)
         Label1.TabIndex = 0
@@ -46,7 +51,7 @@ Partial Class User_ChangePassword
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(382, 131)
+        TextBox1.Location = New Point(205, 110)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(183, 30)
@@ -56,7 +61,7 @@ Partial Class User_ChangePassword
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(196, 186)
+        Label2.Location = New Point(9, 155)
         Label2.Name = "Label2"
         Label2.Size = New Size(148, 23)
         Label2.TabIndex = 0
@@ -65,7 +70,7 @@ Partial Class User_ChangePassword
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(382, 179)
+        TextBox2.Location = New Point(205, 155)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(183, 30)
@@ -76,9 +81,9 @@ Partial Class User_ChangePassword
         Button1.BackColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(321, 291)
+        Button1.Location = New Point(96, 245)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(117, 42)
@@ -93,8 +98,8 @@ Partial Class User_ChangePassword
         CheckBox1.Checked = True
         CheckBox1.CheckState = CheckState.Checked
         CheckBox1.Cursor = Cursors.Hand
-        CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CheckBox1.Location = New Point(196, 244)
+        CheckBox1.Font = New Font("Microsoft YaHei", 7F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Location = New Point(9, 197)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(117, 21)
@@ -104,6 +109,8 @@ Partial Class User_ChangePassword
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(CheckBox1)
         Panel1.Controls.Add(Button1)
@@ -117,13 +124,31 @@ Partial Class User_ChangePassword
         Panel1.Size = New Size(798, 509)
         Panel1.TabIndex = 13
         ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(455, 131)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(65, 71)
+        PictureBox2.TabIndex = 48
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(537, 29)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(261, 306)
+        PictureBox1.TabIndex = 25
+        PictureBox1.TabStop = False
+        ' 
         ' Label3
         ' 
         Label3.Anchor = AnchorStyles.None
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(241, 26)
+        Label3.Location = New Point(9, 34)
         Label3.Name = "Label3"
         Label3.Size = New Size(305, 42)
         Label3.TabIndex = 24
@@ -131,7 +156,7 @@ Partial Class User_ChangePassword
         ' 
         ' User_ChangePassword
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(800, 556)
@@ -140,6 +165,8 @@ Partial Class User_ChangePassword
         Name = "User_ChangePassword"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
 
     End Sub
@@ -151,4 +178,6 @@ Partial Class User_ChangePassword
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

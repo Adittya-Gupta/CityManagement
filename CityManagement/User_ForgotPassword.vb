@@ -161,4 +161,6 @@ Public Class ForgotPassword
         LoginForm.Show()
         Me.Hide()
     End Sub
+
 End Class
+

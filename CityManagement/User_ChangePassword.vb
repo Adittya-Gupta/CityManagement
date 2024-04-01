@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Text
 Imports System.Security.Cryptography
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class User_ChangePassword
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
@@ -9,7 +10,7 @@ Public Class User_ChangePassword
 
     ' Function to hash the password using SHA256
     Private Function HashPassword(password As String) As String
-        Using sha256 As SHA256 = sha256.Create()
+        Using sha256 As SHA256 = SHA256.Create()
             Dim hashedBytes As Byte() = sha256.ComputeHash(Encoding.UTF8.GetBytes(password))
             Dim builder As New StringBuilder()
             For Each b As Byte In hashedBytes
@@ -222,4 +223,5 @@ Public Class User_ChangePassword
     Private Sub Button5_Click_1(sender As Object, e As EventArgs)
 
     End Sub
+
 End Class

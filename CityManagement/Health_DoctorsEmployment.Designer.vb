@@ -22,43 +22,19 @@ Partial Class Health_DoctorsEmployment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Panel1 = New Panel()
-        Label1 = New Label()
         Label2 = New Label()
         ComboBox1 = New ComboBox()
         Label3 = New Label()
         Button1 = New Button()
         FlowLayoutPanel1 = New FlowLayoutPanel()
-        Panel1.SuspendLayout()
+        backButton = New Button()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = Color.Black
-        Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1254, 80)
-        Panel1.TabIndex = 2
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Black
-        Label1.Cursor = Cursors.Hand
-        Label1.Font = New Font("Segoe UI", 18.0F)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(55, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(224, 41)
-        Label1.TabIndex = 0
-        Label1.Text = "Apply For Work"
         ' 
         ' Label2
         ' 
         Label2.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label2.Font = New Font("Segoe UI", 18.0F)
-        Label2.Location = New Point(117, 140)
+        Label2.Font = New Font("Segoe UI", 18F)
+        Label2.Location = New Point(117, 79)
         Label2.Name = "Label2"
         Label2.Size = New Size(333, 57)
         Label2.TabIndex = 31
@@ -67,9 +43,9 @@ Partial Class Health_DoctorsEmployment
         ' 
         ' ComboBox1
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 18.0F)
+        ComboBox1.Font = New Font("Segoe UI", 18F)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(750, 148)
+        ComboBox1.Location = New Point(750, 87)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(385, 49)
         ComboBox1.TabIndex = 32
@@ -77,8 +53,8 @@ Partial Class Health_DoctorsEmployment
         ' Label3
         ' 
         Label3.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label3.Font = New Font("Segoe UI", 18.0F)
-        Label3.Location = New Point(277, 859)
+        Label3.Font = New Font("Segoe UI", 18F)
+        Label3.Location = New Point(277, 798)
         Label3.Name = "Label3"
         Label3.Size = New Size(700, 52)
         Label3.TabIndex = 34
@@ -92,8 +68,8 @@ Partial Class Health_DoctorsEmployment
         Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 18.0F)
-        Button1.Location = New Point(532, 931)
+        Button1.Font = New Font("Segoe UI", 18F)
+        Button1.Location = New Point(532, 871)
         Button1.Name = "Button1"
         Button1.Size = New Size(190, 63)
         Button1.TabIndex = 35
@@ -102,37 +78,50 @@ Partial Class Health_DoctorsEmployment
         ' 
         ' FlowLayoutPanel1
         ' 
-        FlowLayoutPanel1.Location = New Point(117, 239)
+        FlowLayoutPanel1.Location = New Point(117, 178)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Size = New Size(1018, 583)
         FlowLayoutPanel1.TabIndex = 36
         ' 
+        ' backButton
+        ' 
+        backButton.AutoSize = True
+        backButton.BackColor = Color.Black
+        backButton.Cursor = Cursors.Hand
+        backButton.FlatAppearance.BorderSize = 0
+        backButton.FlatStyle = FlatStyle.Flat
+        backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        backButton.ForeColor = Color.White
+        backButton.Location = New Point(1131, 12)
+        backButton.Name = "backButton"
+        backButton.Size = New Size(111, 43)
+        backButton.TabIndex = 37
+        backButton.Text = "Back"
+        backButton.UseVisualStyleBackColor = False
+        ' 
         ' Health_DoctorsEmployment
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1254, 1026)
+        ClientSize = New Size(1254, 953)
+        Controls.Add(backButton)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(Button1)
         Controls.Add(Label3)
         Controls.Add(ComboBox1)
         Controls.Add(Label2)
-        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "Health_DoctorsEmployment"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Health_DoctorsEmployment"
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents backButton As Button
 End Class

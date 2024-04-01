@@ -1,4 +1,12 @@
 ﻿Public Class Health_DoctorsEmployment
+    Private EmploymentPortalForm As EmploymentPortal
+
+    'Constructor
+    Public Sub New(ParentForm As EmploymentPortal)
+        InitializeComponent()
+        Me.EmploymentPortalForm = ParentForm ' Initialize EmploymentPortalForm
+    End Sub
+
     Private Sub Health_DoctorsEmployment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FlowLayoutPanel1.AutoScroll = True
         ComboBox1.Height = 50 ' Set height to 50
@@ -29,5 +37,9 @@
             ' Add the ListBox to the FlowLayoutPanel
             FlowLayoutPanel1.Controls.Add(botton)
         Next
+    End Sub
+
+    Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
+        EmploymentPortalForm.LoadListOfOrgForm()
     End Sub
 End Class

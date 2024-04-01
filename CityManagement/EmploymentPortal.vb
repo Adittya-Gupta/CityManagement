@@ -34,6 +34,11 @@
         ShowFormInPanel(New RegularServicesList(Me))
     End Sub
 
+    Public Sub LoadDoctorEmploymentForm()
+        ' Load DoctorEmploymentForm into Panel1
+        ShowFormInPanel(New Health_DoctorsEmployment(Me))
+    End Sub
+
     Public Sub LoadApplicationForm()
         ' Load ApplicationForm into Panel1
         ShowFormInPanel(New EmployApplication(Me))
@@ -41,7 +46,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'ShowFormInPanel(hosProposalForm)
-
+        ShowFormInPanel(New Health_HospitalListing(Me))
         CurvedLabel1.Visible = True
     End Sub
 

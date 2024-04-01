@@ -22,10 +22,6 @@ Partial Class Health_HospitalListing
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Panel1 = New Panel()
-        Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
         Label4 = New Label()
         TextBox1 = New TextBox()
         Label5 = New Label()
@@ -45,55 +41,14 @@ Partial Class Health_HospitalListing
         Label13 = New Label()
         Label14 = New Label()
         Label15 = New Label()
-        PictureBox1 = New PictureBox()
-        Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Label2 = New Label()
+        backButton = New Button()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = Color.Black
-        Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1254, 80)
-        Panel1.TabIndex = 0
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Black
-        Label1.Font = New Font("Segoe UI", 12.0F)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(1017, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(211, 28)
-        Label1.TabIndex = 0
-        Label1.Text = "New Hospital Proposal"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(12, 92)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(93, 20)
-        Label2.TabIndex = 1
-        Label2.Text = "Employment"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
-        Label3.Location = New Point(115, 92)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(258, 20)
-        Label3.TabIndex = 2
-        Label3.Text = "Fill Form for New Hospital Proposal"
         ' 
         ' Label4
         ' 
         Label4.BorderStyle = BorderStyle.FixedSingle
-        Label4.Location = New Point(118, 272)
+        Label4.Location = New Point(118, 227)
         Label4.Name = "Label4"
         Label4.Size = New Size(375, 67)
         Label4.TabIndex = 3
@@ -102,8 +57,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox1.BackColor = SystemColors.Control
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Segoe UI", 15.0F)
-        TextBox1.Location = New Point(134, 287)
+        TextBox1.Font = New Font("Segoe UI", 15F)
+        TextBox1.Location = New Point(134, 242)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(340, 34)
         TextBox1.TabIndex = 4
@@ -111,7 +66,7 @@ Partial Class Health_HospitalListing
         ' Label5
         ' 
         Label5.BorderStyle = BorderStyle.FixedSingle
-        Label5.Location = New Point(914, 272)
+        Label5.Location = New Point(914, 227)
         Label5.Name = "Label5"
         Label5.Size = New Size(252, 67)
         Label5.TabIndex = 5
@@ -120,8 +75,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox3.BackColor = SystemColors.Control
         TextBox3.BorderStyle = BorderStyle.None
-        TextBox3.Font = New Font("Segoe UI", 15.0F)
-        TextBox3.Location = New Point(581, 286)
+        TextBox3.Font = New Font("Segoe UI", 15F)
+        TextBox3.Location = New Point(581, 241)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(293, 34)
         TextBox3.TabIndex = 8
@@ -129,7 +84,7 @@ Partial Class Health_HospitalListing
         ' Label6
         ' 
         Label6.BorderStyle = BorderStyle.FixedSingle
-        Label6.Location = New Point(563, 272)
+        Label6.Location = New Point(563, 227)
         Label6.Name = "Label6"
         Label6.Size = New Size(329, 67)
         Label6.TabIndex = 7
@@ -137,7 +92,7 @@ Partial Class Health_HospitalListing
         ' Label7
         ' 
         Label7.BorderStyle = BorderStyle.FixedSingle
-        Label7.Location = New Point(118, 643)
+        Label7.Location = New Point(118, 598)
         Label7.Name = "Label7"
         Label7.Size = New Size(376, 67)
         Label7.TabIndex = 9
@@ -146,8 +101,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox5.BackColor = SystemColors.Control
         TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Font = New Font("Segoe UI", 15.0F)
-        TextBox5.Location = New Point(136, 448)
+        TextBox5.Font = New Font("Segoe UI", 15F)
+        TextBox5.Location = New Point(136, 403)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(340, 34)
         TextBox5.TabIndex = 12
@@ -155,7 +110,7 @@ Partial Class Health_HospitalListing
         ' Label8
         ' 
         Label8.BorderStyle = BorderStyle.FixedSingle
-        Label8.Location = New Point(119, 434)
+        Label8.Location = New Point(119, 389)
         Label8.Name = "Label8"
         Label8.Size = New Size(375, 67)
         Label8.TabIndex = 11
@@ -164,8 +119,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox6.BackColor = SystemColors.Control
         TextBox6.BorderStyle = BorderStyle.None
-        TextBox6.Font = New Font("Segoe UI", 12.0F)
-        TextBox6.Location = New Point(581, 448)
+        TextBox6.Font = New Font("Segoe UI", 12F)
+        TextBox6.Location = New Point(581, 403)
         TextBox6.Multiline = True
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(569, 249)
@@ -174,7 +129,7 @@ Partial Class Health_HospitalListing
         ' Label9
         ' 
         Label9.BorderStyle = BorderStyle.FixedSingle
-        Label9.Location = New Point(563, 434)
+        Label9.Location = New Point(563, 389)
         Label9.Name = "Label9"
         Label9.Size = New Size(603, 276)
         Label9.TabIndex = 13
@@ -183,8 +138,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox2.BackColor = SystemColors.Control
         TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Font = New Font("Segoe UI", 15.0F)
-        TextBox2.Location = New Point(929, 286)
+        TextBox2.Font = New Font("Segoe UI", 15F)
+        TextBox2.Location = New Point(929, 241)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(225, 34)
         TextBox2.TabIndex = 8
@@ -193,8 +148,8 @@ Partial Class Health_HospitalListing
         ' 
         TextBox4.BackColor = SystemColors.Control
         TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Font = New Font("Segoe UI", 15.0F)
-        TextBox4.Location = New Point(135, 660)
+        TextBox4.Font = New Font("Segoe UI", 15F)
+        TextBox4.Location = New Point(135, 615)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(340, 34)
         TextBox4.TabIndex = 8
@@ -204,8 +159,8 @@ Partial Class Health_HospitalListing
         Button1.BackColor = Color.FromArgb(CByte(92), CByte(137), CByte(181))
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Button1.Location = New Point(528, 855)
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button1.Location = New Point(522, 766)
         Button1.Name = "Button1"
         Button1.Size = New Size(198, 81)
         Button1.TabIndex = 17
@@ -215,8 +170,8 @@ Partial Class Health_HospitalListing
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label10.Location = New Point(563, 391)
+        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label10.Location = New Point(563, 346)
         Label10.Name = "Label10"
         Label10.Size = New Size(272, 28)
         Label10.TabIndex = 18
@@ -225,8 +180,8 @@ Partial Class Health_HospitalListing
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label11.Location = New Point(563, 228)
+        Label11.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label11.Location = New Point(563, 183)
         Label11.Name = "Label11"
         Label11.Size = New Size(157, 28)
         Label11.TabIndex = 19
@@ -235,8 +190,8 @@ Partial Class Health_HospitalListing
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label12.Location = New Point(117, 228)
+        Label12.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label12.Location = New Point(117, 183)
         Label12.Name = "Label12"
         Label12.Size = New Size(150, 28)
         Label12.TabIndex = 20
@@ -245,8 +200,8 @@ Partial Class Health_HospitalListing
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label13.Location = New Point(117, 391)
+        Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label13.Location = New Point(117, 346)
         Label13.Name = "Label13"
         Label13.Size = New Size(108, 28)
         Label13.TabIndex = 21
@@ -255,8 +210,8 @@ Partial Class Health_HospitalListing
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label14.Location = New Point(119, 598)
+        Label14.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label14.Location = New Point(119, 553)
         Label14.Name = "Label14"
         Label14.Size = New Size(93, 28)
         Label14.TabIndex = 22
@@ -265,30 +220,46 @@ Partial Class Health_HospitalListing
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        Label15.Location = New Point(914, 228)
+        Label15.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label15.Location = New Point(914, 183)
         Label15.Name = "Label15"
         Label15.Size = New Size(215, 28)
         Label15.TabIndex = 23
         Label15.Text = "Bank Account Details"
         ' 
-        ' PictureBox1
+        ' Label2
         ' 
-        PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Image = My.Resources.Resources.arrow_icons
-        PictureBox1.Location = New Point(102, 95)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(15, 15)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 24
-        PictureBox1.TabStop = False
+        Label2.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
+        Label2.Location = New Point(413, 68)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(393, 52)
+        Label2.TabIndex = 25
+        Label2.Text = "New Hospital Proposal"
+        ' 
+        ' backButton
+        ' 
+        backButton.AutoSize = True
+        backButton.BackColor = Color.Black
+        backButton.Cursor = Cursors.Hand
+        backButton.FlatAppearance.BorderSize = 0
+        backButton.FlatStyle = FlatStyle.Flat
+        backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        backButton.ForeColor = Color.White
+        backButton.Location = New Point(1131, 12)
+        backButton.Name = "backButton"
+        backButton.Size = New Size(111, 43)
+        backButton.TabIndex = 31
+        backButton.Text = "Back"
+        backButton.UseVisualStyleBackColor = False
         ' 
         ' Health_HospitalListing
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1254, 1026)
-        Controls.Add(PictureBox1)
+        ClientSize = New Size(1254, 953)
+        Controls.Add(backButton)
+        Controls.Add(Label2)
         Controls.Add(Label15)
         Controls.Add(Label14)
         Controls.Add(Label13)
@@ -308,23 +279,12 @@ Partial Class Health_HospitalListing
         Controls.Add(Label5)
         Controls.Add(TextBox1)
         Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "Health_HospitalListing"
         Text = "Health_HospitalListing"
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
@@ -344,5 +304,6 @@ Partial Class Health_HospitalListing
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents backButton As Button
 End Class

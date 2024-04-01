@@ -18,4 +18,7 @@
         EmploymentPortalForm.LoadRegularServicesForm()
     End Sub
 
+    Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click
+        EmploymentPortalForm.LoadDoctorEmploymentForm()
+    End Sub
 End Class

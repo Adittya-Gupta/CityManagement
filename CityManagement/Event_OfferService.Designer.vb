@@ -26,8 +26,8 @@ Partial Class Event_OfferService
         Label1 = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
-        FlowLayoutPanelVendorServices = New FlowLayoutPanel()
         Label10 = New Label()
+        FlowLayoutPanelVendorServices = New FlowLayoutPanel()
         EventTime = New Label()
         Label8 = New Label()
         EventDate = New Label()
@@ -45,32 +45,32 @@ Partial Class Event_OfferService
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12F)
+        Label1.Font = New Font("Microsoft Sans Serif", 24F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(129, 24)
+        Label1.Location = New Point(35, 24)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(145, 20)
+        Label1.Size = New Size(293, 37)
         Label1.TabIndex = 24
         Label1.Text = "Events & Festivals  >"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12F)
+        Label2.Font = New Font("Microsoft Sans Serif", 24F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(282, 24)
+        Label2.Location = New Point(322, 24)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(109, 20)
+        Label2.Size = New Size(217, 37)
         Label2.TabIndex = 25
         Label2.Text = "Offer Services"
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Gainsboro
-        Panel1.Controls.Add(FlowLayoutPanelVendorServices)
         Panel1.Controls.Add(Label10)
+        Panel1.Controls.Add(FlowLayoutPanelVendorServices)
         Panel1.Controls.Add(EventTime)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(EventDate)
@@ -79,32 +79,32 @@ Partial Class Event_OfferService
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(EventName)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(129, 83)
+        Panel1.Location = New Point(35, 83)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(991, 719)
+        Panel1.Size = New Size(1182, 781)
         Panel1.TabIndex = 26
-        ' 
-        ' FlowLayoutPanelVendorServices
-        ' 
-        FlowLayoutPanelVendorServices.Location = New Point(41, 376)
-        FlowLayoutPanelVendorServices.Name = "FlowLayoutPanelVendorServices"
-        FlowLayoutPanelVendorServices.Size = New Size(875, 322)
-        FlowLayoutPanelVendorServices.TabIndex = 9
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 24F)
-        Label10.Location = New Point(29, 310)
+        Label10.Location = New Point(54, 480)
         Label10.Name = "Label10"
         Label10.Size = New Size(205, 45)
         Label10.TabIndex = 8
         Label10.Text = "Services Tags"
         ' 
+        ' FlowLayoutPanelVendorServices
+        ' 
+        FlowLayoutPanelVendorServices.Location = New Point(54, 548)
+        FlowLayoutPanelVendorServices.Name = "FlowLayoutPanelVendorServices"
+        FlowLayoutPanelVendorServices.Size = New Size(1078, 211)
+        FlowLayoutPanelVendorServices.TabIndex = 9
+        ' 
         ' EventTime
         ' 
         EventTime.AutoSize = True
-        EventTime.Location = New Point(610, 264)
+        EventTime.Location = New Point(913, 341)
         EventTime.Name = "EventTime"
         EventTime.Size = New Size(77, 25)
         EventTime.TabIndex = 7
@@ -113,7 +113,7 @@ Partial Class Event_OfferService
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(516, 264)
+        Label8.Location = New Point(819, 341)
         Label8.Name = "Label8"
         Label8.Size = New Size(59, 25)
         Label8.TabIndex = 6
@@ -122,7 +122,7 @@ Partial Class Event_OfferService
         ' EventDate
         ' 
         EventDate.AutoSize = True
-        EventDate.Location = New Point(610, 224)
+        EventDate.Location = New Point(913, 301)
         EventDate.Name = "EventDate"
         EventDate.Size = New Size(86, 25)
         EventDate.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class Event_OfferService
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(516, 224)
+        Label6.Location = New Point(819, 301)
         Label6.Name = "Label6"
         Label6.Size = New Size(58, 25)
         Label6.TabIndex = 4
@@ -140,7 +140,7 @@ Partial Class Event_OfferService
         ' EventVenue
         ' 
         EventVenue.AutoSize = True
-        EventVenue.Location = New Point(610, 184)
+        EventVenue.Location = New Point(913, 261)
         EventVenue.Name = "EventVenue"
         EventVenue.Size = New Size(137, 25)
         EventVenue.TabIndex = 3
@@ -149,7 +149,7 @@ Partial Class Event_OfferService
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(516, 184)
+        Label4.Location = New Point(819, 261)
         Label4.Name = "Label4"
         Label4.Size = New Size(69, 25)
         Label4.TabIndex = 2
@@ -159,7 +159,7 @@ Partial Class Event_OfferService
         ' 
         EventName.AutoSize = True
         EventName.Font = New Font("Segoe UI", 18F)
-        EventName.Location = New Point(516, 127)
+        EventName.Location = New Point(819, 204)
         EventName.Name = "EventName"
         EventName.Size = New Size(107, 32)
         EventName.TabIndex = 1
@@ -168,9 +168,10 @@ Partial Class Event_OfferService
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(34, 32)
+        PictureBox1.Location = New Point(54, 48)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(460, 260)
+        PictureBox1.Size = New Size(673, 379)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
@@ -179,7 +180,7 @@ Partial Class Event_OfferService
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Panel1)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(90, 97)
+        Panel2.Location = New Point(86, 24)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1254, 896)
         Panel2.TabIndex = 27

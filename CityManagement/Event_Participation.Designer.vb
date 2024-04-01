@@ -53,18 +53,19 @@ Partial Class Event_Participation
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(EventName)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(129, 177)
+        Panel1.Location = New Point(29, 141)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(991, 605)
+        Panel1.Size = New Size(1182, 712)
         Panel1.TabIndex = 29
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.LightSkyBlue
+        Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI", 20F)
-        Button1.Location = New Point(41, 354)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(225, 527)
         Button1.Name = "Button1"
-        Button1.Size = New Size(318, 67)
+        Button1.Size = New Size(376, 96)
         Button1.TabIndex = 8
         Button1.Text = "Register Now"
         Button1.UseVisualStyleBackColor = False
@@ -72,7 +73,7 @@ Partial Class Event_Participation
         ' EventTime
         ' 
         EventTime.AutoSize = True
-        EventTime.Location = New Point(610, 264)
+        EventTime.Location = New Point(905, 265)
         EventTime.Name = "EventTime"
         EventTime.Size = New Size(77, 25)
         EventTime.TabIndex = 7
@@ -81,7 +82,7 @@ Partial Class Event_Participation
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(516, 264)
+        Label8.Location = New Point(811, 265)
         Label8.Name = "Label8"
         Label8.Size = New Size(59, 25)
         Label8.TabIndex = 6
@@ -90,7 +91,7 @@ Partial Class Event_Participation
         ' EventDate
         ' 
         EventDate.AutoSize = True
-        EventDate.Location = New Point(610, 224)
+        EventDate.Location = New Point(905, 225)
         EventDate.Name = "EventDate"
         EventDate.Size = New Size(86, 25)
         EventDate.TabIndex = 5
@@ -99,7 +100,7 @@ Partial Class Event_Participation
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(516, 224)
+        Label6.Location = New Point(811, 225)
         Label6.Name = "Label6"
         Label6.Size = New Size(58, 25)
         Label6.TabIndex = 4
@@ -108,7 +109,7 @@ Partial Class Event_Participation
         ' EventVenue
         ' 
         EventVenue.AutoSize = True
-        EventVenue.Location = New Point(610, 184)
+        EventVenue.Location = New Point(905, 185)
         EventVenue.Name = "EventVenue"
         EventVenue.Size = New Size(137, 25)
         EventVenue.TabIndex = 3
@@ -117,7 +118,7 @@ Partial Class Event_Participation
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(516, 184)
+        Label4.Location = New Point(811, 185)
         Label4.Name = "Label4"
         Label4.Size = New Size(69, 25)
         Label4.TabIndex = 2
@@ -127,7 +128,7 @@ Partial Class Event_Participation
         ' 
         EventName.AutoSize = True
         EventName.Font = New Font("Segoe UI", 18F)
-        EventName.Location = New Point(516, 127)
+        EventName.Location = New Point(811, 128)
         EventName.Name = "EventName"
         EventName.Size = New Size(107, 32)
         EventName.TabIndex = 1
@@ -136,33 +137,34 @@ Partial Class Event_Participation
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(41, 29)
+        PictureBox1.Location = New Point(74, 68)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(460, 260)
+        PictureBox1.Size = New Size(673, 379)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12F)
+        Label1.Font = New Font("Microsoft Sans Serif", 24F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(129, 118)
+        Label1.Location = New Point(29, 62)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(145, 20)
+        Label1.Size = New Size(293, 37)
         Label1.TabIndex = 27
         Label1.Text = "Events & Festivals  >"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12F)
+        Label2.Font = New Font("Microsoft Sans Serif", 24F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(282, 118)
+        Label2.Location = New Point(317, 62)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(174, 20)
+        Label2.Size = New Size(348, 37)
         Label2.TabIndex = 28
         Label2.Text = "Participant Registration"
         ' 

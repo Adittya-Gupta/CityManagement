@@ -33,7 +33,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< HEAD
+            Me.MainForm = Global.CityManagement.FestivalEvents_EventDetails
+=======
             Me.MainForm = Global.CityManagement.User_ChangePassword
+>>>>>>> e9b3e44c76a0c7801e3fc2d9d89a72e7a7ea6de1
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

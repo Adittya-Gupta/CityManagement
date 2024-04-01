@@ -6,7 +6,7 @@ Public Class FestivalEvents_EventDetails
     Dim conn As New MySqlConnection(connString)
     Private Sub FestivalEvents_EventDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Make this form full screen
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         'Hide the title bar
         Me.Text = String.Empty
         Me.ControlBox = False
@@ -46,6 +46,14 @@ Public Class FestivalEvents_EventDetails
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

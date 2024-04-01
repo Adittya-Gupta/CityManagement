@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing.Text
+Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json
 Public Class Event_OfferService
 
@@ -9,6 +10,10 @@ Public Class Event_OfferService
 
     Dim EventId As Integer = CurrEventID
     Dim UserSID As Integer = CurrUserSID
+
+    'Dim EventId As Integer = 4
+    'Dim UserSID As Integer = 1
+
     Dim vendorServiceTags As List(Of VendorServiceTag)
 
 
@@ -21,7 +26,17 @@ Public Class Event_OfferService
 
 
     Private Sub Event_OfferService_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+        ' Load font from file
+        Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
+        Dim customFont As New PrivateFontCollection()
+        customFont.AddFontFile(fontFilePath)
+
+        ' Apply font to all controls on the form
+        ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
+        Label1.Font = New Font(customFont.Families(0), 24)
+        Label2.Font = New Font(customFont.Families(0), 24)
+        Label10.Font = New Font(customFont.Families(0), 24)
+        EventName.Font = New Font(customFont.Families(0), 24)
 
         If UserSID <> -1 Then
             ' Assume EventID is somehow determined or passed to this form
@@ -70,7 +85,7 @@ Public Class Event_OfferService
             Dim label As New Label With {.Text = ServiceTag.TagServiceName, .Width = 200, .Dock = DockStyle.Left}
             panel.Controls.Add(label)
 
-            Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right}
+            Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right, .Width = 100, .Height = 30, .BackColor = Color.Black, .ForeColor = Color.White}
             AddHandler button.Click, AddressOf VendorServiceButton_Click
             panel.Controls.Add(button)
 
@@ -159,5 +174,16 @@ Public Class Event_OfferService
         End Try
         Return festivalDetails
     End Function
+
+
+    Private Sub ApplyFontToControl(ByVal control As Control, ByVal font As Font)
+        ' Set font for the current control
+        control.Font = font
+
+        ' Recursively set font for all child controls
+        For Each childControl As Control In control.Controls
+            ApplyFontToControl(childControl, font)
+        Next
+    End Sub
 
 End Class

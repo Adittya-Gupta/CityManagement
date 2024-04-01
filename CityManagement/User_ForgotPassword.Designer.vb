@@ -77,7 +77,7 @@ Partial Class ForgotPassword
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(204, 291)
+        Label5.Location = New Point(185, 298)
         Label5.Name = "Label5"
         Label5.Size = New Size(206, 18)
         Label5.TabIndex = 44
@@ -87,7 +87,7 @@ Partial Class ForgotPassword
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(204, 128)
+        Label4.Location = New Point(185, 75)
         Label4.Name = "Label4"
         Label4.Size = New Size(235, 18)
         Label4.TabIndex = 43
@@ -97,11 +97,12 @@ Partial Class ForgotPassword
         ' 
         Button3.AutoSize = True
         Button3.BackColor = Color.Black
+        Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(637, 36)
+        Button3.Location = New Point(646, 9)
         Button3.Name = "Button3"
-        Button3.Size = New Size(151, 30)
+        Button3.Size = New Size(151, 32)
         Button3.TabIndex = 42
         Button3.Text = " Back To Login"
         Button3.UseVisualStyleBackColor = False
@@ -124,7 +125,7 @@ Partial Class ForgotPassword
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
         Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(194, 36)
+        Label11.Location = New Point(185, 9)
         Label11.Name = "Label11"
         Label11.Size = New Size(281, 39)
         Label11.TabIndex = 40
@@ -136,7 +137,7 @@ Partial Class ForgotPassword
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(204, 176)
+        Label1.Location = New Point(185, 116)
         Label1.Name = "Label1"
         Label1.Size = New Size(68, 20)
         Label1.TabIndex = 39
@@ -167,7 +168,7 @@ Partial Class ForgotPassword
         ' 
         TimeLeftLabel.AutoSize = True
         TimeLeftLabel.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TimeLeftLabel.Location = New Point(204, 339)
+        TimeLeftLabel.Location = New Point(185, 325)
         TimeLeftLabel.Name = "TimeLeftLabel"
         TimeLeftLabel.Size = New Size(121, 25)
         TimeLeftLabel.TabIndex = 12
@@ -176,7 +177,7 @@ Partial Class ForgotPassword
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(283, 170)
+        TextBox2.Location = New Point(284, 116)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(226, 26)
@@ -213,7 +214,7 @@ Partial Class ForgotPassword
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(306, 219)
+        Button1.Location = New Point(306, 175)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(138, 40)

@@ -67,7 +67,7 @@ Public Class ForgotPassword
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Label2.Visible = True
         Label2.Text = "Sending code....."
-        Label2.ForeColor = Color.YellowGreen
+        Label2.ForeColor = Color.Black
 
         Dim EmailAddress As String = TextBox2.Text
 

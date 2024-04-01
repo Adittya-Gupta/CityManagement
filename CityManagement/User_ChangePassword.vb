@@ -143,27 +143,50 @@ Public Class User_ChangePassword
 
 
         ' Hash the password
-        Dim password As String = inputString
-        Dim hashedPassword As String = HashPassword(password)
+        Dim newpassword As String = inputString
+        Dim newhashedPassword As String = HashPassword(newpassword)
 
         Using connection As New MySqlConnection(connString)
             Try
                 connection.Open()
 
-                Dim query As String = "UPDATE User SET PasswordHash = @PasswordHash WHERE EmailAddress = @Email"
+                Dim query As String = "SELECT PasswordHash FROM User WHERE EmailAddress = @Email"
+                Dim cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.AddWithValue("@Email", Email)
+                Dim existingHash As String = Convert.ToString(cmd.ExecuteScalar())
+
+                If newhashedPassword = existingHash Then
+                    MessageBox.Show("Congratulations!! You have remembered your old password.... No need to change it now.", "Password Unchanged", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    Dim LoginForm As New User_Login()
+                    LoginForm.StartPosition = FormStartPosition.Manual
+                    LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+                    LoginForm.Show()
+                    Me.Close()
+                    Return
+                End If
+
+                query = "UPDATE User SET PasswordHash = @PasswordHash WHERE EmailAddress = @Email"
 
                 ' Make sure you use the "connection" object you've created and opened.
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@Email", Email)
-                command.Parameters.AddWithValue("@PasswordHash", hashedPassword)
+                command.Parameters.AddWithValue("@PasswordHash", newhashedPassword)
 
                 Dim result As Integer = command.ExecuteNonQuery()
 
                 ' Check if the update was successful based on affected rows.
                 If result > 0 Then
-                    MessageBox.Show("Password updated successfully!!")
+                    MessageBox.Show("Password updated successfully!! , You will now be redirected back to Login Page")
+
+                    Dim LoginForm As New User_Login()
+                    LoginForm.StartPosition = FormStartPosition.Manual
+                    LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+                    LoginForm.Show()
+                    Me.Close()
+
                 Else
-                    MessageBox.Show("Password update failed. The email address may not exist.")
+                    MessageBox.Show("Password update failed!!")
                 End If
 
             Catch ex As MySqlException
@@ -177,10 +200,6 @@ Public Class User_ChangePassword
 
     Private Sub ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    End Sub
-
-    Private Sub Button5_Click(ByVal sender As Object, ByVal e As EventArgs)
-        MessageBox.Show("For stronger password please ensure that it has atleast 8 characters and to include atleast one uppercase letter, one lower case letter, one digit and one special character")
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged

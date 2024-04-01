@@ -81,7 +81,11 @@
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-
+        Banking_Card_Management.bank_username = bank_username
+        'ChildForm(Panel1, Banking_Card_Management)
+        'ChildForm(Panel1, Banking_Debit_Card_Page)
+        'ChildForm(Panel1, Banking_Credit_Card_Page)
+        ChildForm(Panel1, Banking_Apply_Credit_Card)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click

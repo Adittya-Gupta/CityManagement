@@ -18,6 +18,7 @@ Public Class Banking_Passbook
     Public database As String = "bankingdatabase"
 
     Public bank_account_no As Integer = 1
+    Public bank_username As String = "admin"
 
     Private Sub ClearFields()
         Label16.Text = ""
@@ -92,59 +93,51 @@ Public Class Banking_Passbook
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.WindowState = FormWindowState.Maximized
-        Panel2.BackColor = Color.FromArgb(1, 12, 40)
-        Panel3.BackColor = Color.FromArgb(1, 0, 70)
-        Button10.BackColor = Color.FromArgb(1, 0, 70)
-        Button11.BackColor = Color.FromArgb(1, 0, 70)
-        Button12.BackColor = Color.FromArgb(1, 0, 70)
-        Button13.BackColor = Color.FromArgb(1, 0, 70)
-        Button14.BackColor = Color.FromArgb(1, 0, 70)
-        Button15.BackColor = Color.FromArgb(1, 0, 70)
+        'Me.WindowState = FormWindowState.Maximized
 
         'LoadFields()
         RefreshDataGrid()
         ClearFields()
-
-
-    End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TextBox1.Text = bank_username
 
     End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -152,51 +145,51 @@ Public Class Banking_Passbook
 
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+    Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+    Private Sub Label9_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+    Private Sub Label16_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+    Private Sub Label18_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+    Private Sub Label19_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+    Private Sub Label17_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+    Private Sub Label20_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+    Private Sub Label21_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+    Private Sub Label22_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -246,11 +239,19 @@ Public Class Banking_Passbook
         RefreshDataGrid()
     End Sub
 
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+    Private Sub Label12_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+    Private Sub Label15_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Label22_Click_1(sender As Object, e As EventArgs) Handles Label22.Click
 
     End Sub
 End Class

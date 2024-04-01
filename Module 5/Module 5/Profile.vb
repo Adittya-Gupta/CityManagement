@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class Profile
 
-    Public username As String = "admin"
+    Public bank_username As String = "admin"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -16,7 +16,7 @@ Public Class Profile
 
         Try
             conn.Open()
-            Dim query = "SELECT * FROM `BankUsers` WHERE username = '" & current_user & "'"
+            Dim query = "SELECT * FROM `BankUsers` WHERE username = '" & bank_username & "'"
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
             Dim sqlDt As New DataTable

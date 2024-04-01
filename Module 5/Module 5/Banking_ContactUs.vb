@@ -3,6 +3,15 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
 Public Class Banking_ContactUs
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand
@@ -17,6 +26,7 @@ Public Class Banking_ContactUs
     Public database As String = "bankingdatabase"
 
     Public bank_account_no As Integer = 1
+    Public bank_username As String = "admin"
 
     Private Sub CLearFields()
         TextBox2.Text = ""
@@ -48,15 +58,7 @@ Public Class Banking_ContactUs
         MessageBox.Show("Query Sent!")
     End Sub
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Panel2.BackColor = Color.FromArgb(1, 12, 40)
-        Panel3.BackColor = Color.FromArgb(1, 0, 70)
-        Button10.BackColor = Color.FromArgb(1, 0, 70)
-        Button11.BackColor = Color.FromArgb(1, 0, 70)
-        Button12.BackColor = Color.FromArgb(1, 0, 70)
-        Button13.BackColor = Color.FromArgb(1, 0, 70)
-        Button14.BackColor = Color.FromArgb(1, 0, 70)
-        Button15.BackColor = Color.FromArgb(1, 0, 70)
+        'Me.WindowState = FormWindowState.Maximized
         Button16.BackColor = Color.FromArgb(1, 12, 40)
         Button17.BackColor = Color.FromArgb(1, 12, 40)
         Label12.BackColor = Color.FromArgb(1, 12, 40)
@@ -69,44 +71,46 @@ Public Class Banking_ContactUs
         ComboBox1.Items.Add("Report Unauthorised Transaction")
         ComboBox1.Items.Add("Others")
 
-    End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TextBox1.Text = bank_username
 
     End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub Label12_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -114,14 +118,8 @@ Public Class Banking_ContactUs
         InsertData()
     End Sub
 
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        Banking_Queries_User.bank_account_no = bank_account_no
-        Me.Hide()
-        Banking_Queries_User.Show()
 
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -133,11 +131,28 @@ Public Class Banking_ContactUs
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+
+    End Sub
+
+    Private Sub Button17_Click_1(sender As Object, e As EventArgs) Handles Button17.Click
+        Banking_Homepage.bank_username = bank_username
+        ChildForm(Banking_Main.Panel1, Banking_Queries_User)
+    End Sub
+
+    Private Sub Button16_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
     End Sub
 End Class

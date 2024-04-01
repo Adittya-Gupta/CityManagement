@@ -61,7 +61,7 @@ Public Class Login
             Else
                 If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
                     'Form51.ReceivedEmail = enteredEmail
-                    Profile.username = Username
+                    Profile.bank_username = Username
                     Me.Hide()
                     Profile.Show()
                     'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())

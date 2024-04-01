@@ -2,6 +2,9 @@
 
 Public Class Banking_Queries_User
 
+    Public bank_account_no As Integer = 1
+    Public bank_username As String = "admin"
+
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand
     Public sqlRd As MySqlDataReader
@@ -14,7 +17,6 @@ Public Class Banking_Queries_User
     Public password As String = "Aasneh18"
     Public database As String = "bankingdatabase"
 
-    Public bank_account_no As Integer = 1
 
     Private Sub ClearFields()
         Label16.Text = ""
@@ -59,84 +61,77 @@ Public Class Banking_Queries_User
         DataGridView1.DataSource = sqlDt
     End Sub
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Panel2.BackColor = Color.FromArgb(1, 12, 40)
-        Panel3.BackColor = Color.FromArgb(1, 0, 70)
-        Button10.BackColor = Color.FromArgb(1, 0, 70)
-        Button11.BackColor = Color.FromArgb(1, 0, 70)
-        Button12.BackColor = Color.FromArgb(1, 0, 70)
-        Button13.BackColor = Color.FromArgb(1, 0, 70)
-        Button14.BackColor = Color.FromArgb(1, 0, 70)
-        Button15.BackColor = Color.FromArgb(1, 0, 70)
+        'Me.WindowState = FormWindowState.Maximized
 
         RefreshDataGrid()
         ClearFields()
+        TextBox1.Text = bank_username
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+    Private Sub Label16_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+    Private Sub Label18_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+    Private Sub Label19_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+    Private Sub Label17_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+    Private Sub Label20_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+    Private Sub Label21_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -168,6 +163,7 @@ Public Class Banking_Queries_User
 
 
         adapter.Fill(table)
+        ' MessageBox.Show("Hello!")
 
         If table.Rows.Count = 1 Then
             Label16.Text = table.Rows(0)(0).ToString()
@@ -177,12 +173,27 @@ Public Class Banking_Queries_User
             Label20.Text = table.Rows(0)(2).ToString()
             Label21.Text = table.Rows(0)(4).ToString()
             Label22.Text = table.Rows(0)(6).ToString()
-
         Else
             MessageBox.Show("Error has occured")
         End If
         Mysqlconn.Close()
         sqlCmd.Dispose()
         RefreshDataGrid()
+    End Sub
+
+    Private Sub Label16_Click_1(sender As Object, e As EventArgs) Handles Label16.Click
+
+    End Sub
+
+    Private Sub Label18_Click_1(sender As Object, e As EventArgs) Handles Label18.Click
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

@@ -177,6 +177,12 @@
     <Compile Include="Banking_LoansPayNow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Banking_Main.Designer.vb">
+      <DependentUpon>Banking_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_Passbook.Designer.vb">
       <DependentUpon>Banking_Passbook.vb</DependentUpon>
     </Compile>
@@ -243,6 +249,29 @@
     <Compile Include="Newsletter_AddNews.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Newsletter_ApplyForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Newsletter_ApplyForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Editor.Designer.vb">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Editor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Homepage.Designer.vb">
+      <DependentUpon>Newsletter_Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Main.Designer.vb">
+      <DependentUpon>Newsletter_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registration.Designer.vb">
       <DependentUpon>Registration.vb</DependentUpon>
     </Compile>
@@ -294,6 +323,9 @@
     <EmbeddedResource Include="Banking_LoansPayNow.resx">
       <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Main.resx">
+      <DependentUpon>Banking_Main.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_Passbook.resx">
       <DependentUpon>Banking_Passbook.vb</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +352,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_AddNews.resx">
       <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_ApplyForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Newsletter_ApplyForm.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Editor.resx">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Homepage.resx">
+      <DependentUpon>Newsletter_Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Main.resx">
+      <DependentUpon>Newsletter_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>

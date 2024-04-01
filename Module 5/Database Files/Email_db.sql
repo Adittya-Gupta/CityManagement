@@ -3,6 +3,7 @@ use emaildatabase;
 
 CREATE TABLE UserData (
   Username varchar(100),
+  email varchar(100),
   Password varchar(100),
   Primary Key (Username)
 );

@@ -35,14 +35,24 @@
 
         ' Now you can use sqlFormattedDateTime in your SQL query
         'MessageBox.Show("Selected date and time in SQL format: " & sqlFormattedDateTime)
-        Dim cab As New transport_cabavailable
-        cab.Show()
+        Dim form2 As New transport_cabavailable()
+
+        ' Show Form2
         Me.Hide()
+        form2.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub transport_cabbooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim form2 As New transport_cabdriverlogin()
 
+        ' Show Form2
+        Me.Hide()
+        form2.ShowDialog()
+        Me.Show()
+    End Sub
 End Class

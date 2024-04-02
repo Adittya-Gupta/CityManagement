@@ -23,6 +23,8 @@ Partial Class Health_Create_New_Vacancy
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Label8 = New Label()
+        Label7 = New Label()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -41,8 +43,6 @@ Partial Class Health_Create_New_Vacancy
         Label12 = New Label()
         Label15 = New Label()
         PictureBox1 = New PictureBox()
-        Label7 = New Label()
-        Label8 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -58,6 +58,30 @@ Partial Class Health_Create_New_Vacancy
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1097, 60)
         Panel1.TabIndex = 0
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Black
+        Label8.Font = New Font("Segoe UI", 12.0F)
+        Label8.ForeColor = Color.White
+        Label8.Location = New Point(103, 18)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(151, 21)
+        Label8.TabIndex = 2
+        Label8.Text = "Create New Vacancy"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.BackColor = Color.Black
+        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.ForeColor = Color.White
+        Label7.Location = New Point(462, 18)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(179, 21)
+        Label7.TabIndex = 1
+        Label7.Text = "View Previous Vacancies"
         ' 
         ' Label1
         ' 
@@ -243,30 +267,6 @@ Partial Class Health_Create_New_Vacancy
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 24
         PictureBox1.TabStop = False
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.Black
-        Label7.Font = New Font("Segoe UI", 12.0F)
-        Label7.ForeColor = Color.White
-        Label7.Location = New Point(462, 18)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(179, 21)
-        Label7.TabIndex = 1
-        Label7.Text = "View Previous Vacancies"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.BackColor = Color.Black
-        Label8.Font = New Font("Segoe UI", 12.0F)
-        Label8.ForeColor = Color.White
-        Label8.Location = New Point(103, 18)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(151, 21)
-        Label8.TabIndex = 2
-        Label8.Text = "Create New Vacancy"
         ' 
         ' Health_Create_New_Vacancy
         ' 

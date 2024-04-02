@@ -1,9 +1,13 @@
 ﻿Public Class Health_Create_New_Vacancy
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        Health_View_Previous_Vacancies.Show()
+        Me.Close()
 
     End Sub
 
-    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
-
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Health_Doctor_Employment_Requests.Show()
+        Me.Close()
     End Sub
 End Class

@@ -39,6 +39,7 @@ Partial Class EmploymentPortal
         ' 
         ' Panel1
         ' 
+        Panel1.BackColor = Color.WhiteSmoke
         Panel1.Location = New Point(0, 73)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1254, 953)

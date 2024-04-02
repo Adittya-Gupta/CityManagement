@@ -16,9 +16,17 @@
     Private Sub CurvedLabel10_Click(sender As Object, e As EventArgs) Handles CurvedLabel10.Click
         ' Load RegularServicesForm when Regular Services button is clicked
         EmploymentPortalForm.LoadRegularServicesForm()
+
     End Sub
 
-    Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click
-        EmploymentPortalForm.LoadDoctorEmploymentForm()
+    Private Sub CurvedLabel4_Click(sender As Object, e As EventArgs) Handles CurvedLabel4.Click
+        ' Load LoadApplicationForm when Regular Services button is clicked
+        EmploymentPortalForm.LoadApplicationForm()
+
+    End Sub
+
+    Private Sub CurvedLabel2_Click(sender As Object, e As EventArgs) Handles CurvedLabel2.Click
+        ' Load LoadApplicationForm when Regular Services button is clicked
+        EmploymentPortalForm.LoadApplicationForm()
     End Sub
 End Class

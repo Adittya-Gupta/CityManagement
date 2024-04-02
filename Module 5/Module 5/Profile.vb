@@ -24,24 +24,26 @@ Public Class Profile
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
             Dim sqlDt As New DataTable
+            sqlDt.Clear()
             sqlDt.Load(reader)
 
             Dim rowCount = sqlDt.Rows.Count
             Dim columnCount = sqlDt.Columns.Count
 
-            Dim imageBytes = DirectCast(sqlDt.Rows(0)(10), Byte())
+            Dim imageBytes = DirectCast(sqlDt.Rows(0)(11), Byte())
             Dim ms As New MemoryStream(imageBytes)
             Dim image As Image = image.FromStream(ms)
             PictureBox1.Image = image
             'DataGridView1.DataSource = sqlDt
 
-            TextBoxBalence.Text = sqlDt.Rows(0)(8).ToString()
+            TextBoxBalence.Text = sqlDt.Rows(0)(9).ToString()
             TextBoxAccountNumber.Text = sqlDt.Rows(0)(0).ToString()
-            TextBoxCIBILScore.Text = sqlDt.Rows(0)(9).ToString()
-            TextBoxUsername.Text = sqlDt.Rows(0)(6).ToString()
+            TextBoxCIBILScore.Text = sqlDt.Rows(0)(10).ToString()
+            TextBoxUsername.Text = sqlDt.Rows(0)(5).ToString()
 
             LabelName.Text = sqlDt.Rows(0)(2).ToString()
             LabelAddress.Text = sqlDt.Rows(0)(3).ToString()
+            sqlDt.Clear()
             reader.Close()
 
         Catch ex As Exception
@@ -64,7 +66,7 @@ Public Class Profile
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         TextBoxUsername.UseSystemPasswordChar = CheckBox1.Checked
         TextBoxAccountNumber.UseSystemPasswordChar = CheckBox1.Checked
         TextBoxBalence.UseSystemPasswordChar = CheckBox1.Checked
@@ -86,4 +88,6 @@ Public Class Profile
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
+
+
 End Class

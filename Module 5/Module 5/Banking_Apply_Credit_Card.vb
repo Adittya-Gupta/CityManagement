@@ -1,5 +1,18 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Banking_Apply_Credit_Card
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public bank_username As String = "admin"
+
     Dim can_apply As Boolean = True
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim conn As New MySqlConnection(connString)
@@ -18,8 +31,8 @@ Public Class Banking_Apply_Credit_Card
 
 
 
-            Dim query = "INSERT INTO CreditDebitCard (CardNumber, Bank_Account_Number, Type, CIBIL_Score, Cvv)
-                        VALUES (' " & randomString & "'," & bank_account_number & ", 
+            Dim query = "INSERT INTO CreditDebitCard (CardNumber, bank_username, Type, CIBIL_Score, Cvv)
+                        VALUES (' " & randomString & "','" & bank_username & "', 
                             'CREDIT', 0, 500);"
 
             Dim cmd = New MySqlCommand(query, conn)
@@ -32,9 +45,11 @@ Public Class Banking_Apply_Credit_Card
 
             MessageBox.Show("You have been granted a Credit Card")
 
-            Dim form1 As New Banking_Credit_Card_Page()
-            form1.Show()
-            Me.Hide()
+            'Dim form1 As New Banking_Credit_Card_Page()
+            'form1.Show()
+            'Me.Hide()
+            Banking_Credit_Card_Page.bank_username = bank_username
+            ChildForm(Banking_Main.Panel1, Banking_Credit_Card_Page)
 
 
         Catch ex As Exception

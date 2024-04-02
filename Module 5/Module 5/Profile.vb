@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Reflection.Emit
 Imports MySql.Data.MySqlClient
 
 Public Class Profile
@@ -11,12 +12,12 @@ Public Class Profile
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' connection to database
-        Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management"
+        Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
         Dim conn = New MySqlConnection(connString)
 
         Try
             conn.Open()
-            Dim query = "SELECT * FROM `BankUsers` WHERE username = '" & bank_username & "'"
+            Dim query = "SELECT * FROM `UserData` WHERE username = '" & current_user & "'"
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
             Dim sqlDt As New DataTable
@@ -27,7 +28,7 @@ Public Class Profile
 
             Dim imageBytes = DirectCast(sqlDt.Rows(0)(10), Byte())
             Dim ms As New MemoryStream(imageBytes)
-            Dim image As Image = Image.FromStream(ms)
+            Dim image As Image = image.FromStream(ms)
             PictureBox1.Image = image
             'DataGridView1.DataSource = sqlDt
 

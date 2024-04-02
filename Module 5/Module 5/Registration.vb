@@ -107,7 +107,7 @@ Public Class Registration
 
 
         ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management"
+        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
@@ -115,7 +115,7 @@ Public Class Registration
             conn.Open()
             MessageBox.Show("Connected to MySQL database!")
 
-            Dim query As String = "INSERT INTO `BankUsers` (`Name`, `Email`, `Phone`, `Identification_number`, `Gender`, `Username`, `Password`, `Date_of_Birth`, `Address`,`photo`, `Sign`,`Approved`) VALUES ('" & Name & "', '" & Email & "', '" & Phone & "', '" & IdentificationNumber & "', '" & Gender & "', '" & Username & "', '" & Password & "', '" & DOB & "', '" & Address & "', ?photo, ?sign,0)"
+            Dim query As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('', '" & Email & "','" & Name & "', '" & Address & "', '" & Phone & "', '" & Username & "', '" & Password & "', '" & DOB & "','0','0', ?photo, ?sign, '" & IdentificationNumber & "', '" & Gender & "','0')"
             'Dim query As String = "SELECT * FROM BankUsers"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             'Dim reader As MySqlDataReader = cmd.ExecuteReader()

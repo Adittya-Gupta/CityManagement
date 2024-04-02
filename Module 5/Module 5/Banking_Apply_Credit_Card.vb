@@ -14,12 +14,12 @@ Public Class Banking_Apply_Credit_Card
 
     Public bank_username As String = "admin"
 
-    Dim can_apply As Boolean = True
+    'Dim can_apply As Boolean = True
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim bank_account_number As Integer = 123
     Private Sub Apply_btn_Click(sender As Object, e As EventArgs) Handles Apply_btn.Click
-
+        Dim can_apply As Boolean = True
         If CheckBox.Checked Then
             can_apply = False
             MessageBox.Show("You are not eligible for a credit card !!")
@@ -90,9 +90,6 @@ Public Class Banking_Apply_Credit_Card
         End If
     End Sub
 
-    Private Sub Banking_Apply_Credit_Card_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Choose_btn_Click(sender As Object, e As EventArgs) Handles Choose_btn.Click
         Dim openFileDialog As New OpenFileDialog()

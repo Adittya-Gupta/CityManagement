@@ -151,6 +151,7 @@ Partial Class Email_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1739, 965)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox12)

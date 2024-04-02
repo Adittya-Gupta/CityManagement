@@ -2,7 +2,7 @@
 
     'Make this form full screen
     Public bank_account_no As Integer = 1
-    Public bank_username As String = "abinash"
+    Public bank_username As String = "samuel"
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False

@@ -37,8 +37,8 @@ Partial Class Email_Register
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SignUp_btn = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.username_tb = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.username_tb = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -194,15 +194,6 @@ Partial Class Email_Register
         Me.Panel4.Size = New System.Drawing.Size(613, 55)
         Me.Panel4.TabIndex = 125
         '
-        'username_tb
-        '
-        Me.username_tb.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.username_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.username_tb.Location = New System.Drawing.Point(221, 15)
-        Me.username_tb.Name = "username_tb"
-        Me.username_tb.Size = New System.Drawing.Size(389, 19)
-        Me.username_tb.TabIndex = 1
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -213,10 +204,20 @@ Partial Class Email_Register
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Enter Username"
         '
+        'username_tb
+        '
+        Me.username_tb.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.username_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.username_tb.Location = New System.Drawing.Point(221, 15)
+        Me.username_tb.Name = "username_tb"
+        Me.username_tb.Size = New System.Drawing.Size(389, 19)
+        Me.username_tb.TabIndex = 1
+        '
         'Email_Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1739, 965)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.SignUp_btn)

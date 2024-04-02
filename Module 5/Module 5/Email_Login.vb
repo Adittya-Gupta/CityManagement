@@ -23,11 +23,13 @@ Public Class Email_Login
             sqlDt.Load(reader)
             reader.Close()
 
-
+            If sqlDt.Rows.Count = 0 Then
+                MessageBox.Show("Incorrect email/password")
+            Else
+                Dim username As String = sqlDt.Rows(0)("Username").ToString()
+                MessageBox.Show("You have been successfully logged in with username " & username)
+            End If
             conn.Close()
-            Dim username As String = sqlDt.Rows(0)("Username").ToString()
-            MessageBox.Show("You have been successfully logged in with username " & username)
-
 
         Catch ex As Exception
             MessageBox.Show("Error: {0}", ex.Message)
@@ -35,4 +37,5 @@ Public Class Email_Login
         End Try
 
     End Sub
+
 End Class

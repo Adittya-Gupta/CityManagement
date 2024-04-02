@@ -14,7 +14,7 @@ Public Class Services_WorkSect
         InitializeComponent()
 
         ' Populate the ComboBox with filter options
-        Guna2ComboBox1.Items.AddRange({"All", "Pending", "Accepted", "Completed"})
+        Guna2ComboBox1.Items.AddRange({"All", "Pending", "Accepted", "Completed", "Payment_Due"})
         Guna2ComboBox1.SelectedIndex = 0 ' Select "All" by default
     End Sub
 
@@ -29,10 +29,11 @@ Public Class Services_WorkSect
         Dim pendingRequests As New List(Of SerReq_worker_pending)()
         Dim acceptedRequests As New List(Of SerReq_worker_accepted)()
         Dim completedRequests As New List(Of SerReq_worker_completed)()
+        Dim paymentDueRequests As New List(Of SerReq_worker_paymentDue)()
 
         Try
             conn.Open()
-            Dim query As String = "SELECT clientName, serviceTime, billAmount, status FROM serviceBooking"
+            Dim query As String = "SELECT clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = 1"
             Using cmd As New MySqlCommand(query, conn)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
@@ -41,12 +42,14 @@ Public Class Services_WorkSect
                         Dim billAmount As Object = reader("billAmount")
                         Dim billAmountString As String = If(IsDBNull(billAmount), "N/A", billAmount.ToString()) ' If billAmount is null, set it to "N/A"
                         Dim status As String = reader.GetString("status")
-                        If status = "enquirySent" Then
+                        If status = "EnquirySent" Then
                             pendingRequests.Add(New SerReq_worker_pending(name, time))
-                        ElseIf status = "upcoming" Then
+                        ElseIf status = "Upcoming" Then
                             acceptedRequests.Add(New SerReq_worker_accepted(name, time))
-                        ElseIf status = "completed" Then
+                        ElseIf status = "Completed" Then
                             completedRequests.Add(New SerReq_worker_completed(name, time, billAmountString))
+                        ElseIf status = "InProgress" Then
+                            paymentDueRequests.Add(New SerReq_worker_paymentDue(name, time, billAmountString))
                         End If
 
                     End While
@@ -75,10 +78,13 @@ Public Class Services_WorkSect
                 filteredRequests.AddRange(acceptedRequests)
             Case "Completed"
                 filteredRequests.AddRange(completedRequests)
+            Case "Payment_Due"
+                filteredRequests.AddRange(paymentDueRequests)
             Case Else ' Display all requests if "All" or an invalid option is selected
                 filteredRequests.AddRange(pendingRequests)
                 filteredRequests.AddRange(acceptedRequests)
                 filteredRequests.AddRange(completedRequests)
+                filteredRequests.AddRange(paymentDueRequests)
         End Select
 
         ' Add the filtered requests to Panel2

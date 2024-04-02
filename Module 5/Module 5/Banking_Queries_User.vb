@@ -2,7 +2,7 @@
 
 Public Class Banking_Queries_User
 
-    Public bank_account_no As Integer = 1
+    Public bank_account_no As String = "1"
     Public bank_username As String = "admin"
 
     Public Mysqlconn As New MySqlConnection
@@ -23,7 +23,22 @@ Public Class Banking_Queries_User
     Public password As String = "nimda"
     Public database As String = "banking_database"
 
+    Private Sub CalcBankAccNo()
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        ' Open the connection
+        Mysqlconn.Open()
+        Dim query As String = "SELECT Bank_Account_Number FROM banking_database.UserData WHERE Username = '" & bank_username & "';"
 
+        ' Create a MySqlCommand object
+        Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
+
+        ' Execute the query and get the result
+        bank_account_no = sqlCmd.ExecuteScalar().ToString
+        TextBox1.Text = bank_account_no
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+    End Sub
     Private Sub ClearFields()
         Label16.Text = ""
         Label17.Text = ""
@@ -51,9 +66,7 @@ Public Class Banking_Queries_User
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM banking_database.QueryLog where Bank_Account_Number = @BAC;"
-
-        sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
+        sqlCmd.CommandText = "SELECT * FROM banking_database.QueryLog where Bank_Account_Number = '" & bank_account_no & "';"
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)
@@ -68,10 +81,10 @@ Public Class Banking_Queries_User
     End Sub
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
-
-        RefreshDataGrid()
+        ' MessageBox.Show(bank_username)
         ClearFields()
-        TextBox1.Text = bank_username
+        CalcBankAccNo()
+        RefreshDataGrid()
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)
 
@@ -200,6 +213,10 @@ Public Class Banking_Queries_User
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Label21_Click_1(sender As Object, e As EventArgs) Handles Label21.Click
 
     End Sub
 End Class

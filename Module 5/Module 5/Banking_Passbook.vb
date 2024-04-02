@@ -22,7 +22,7 @@ Public Class Banking_Passbook
     Public password As String = "nimda"
     Public database As String = "banking_database"
 
-    Public bank_account_no As Integer = 1
+    Public bank_account_no As String = "1"
     Public bank_username As String = "admin"
 
     Private Sub ClearFields()
@@ -34,6 +34,22 @@ Public Class Banking_Passbook
         Label21.Text = ""
         Label22.Text = ""
     End Sub
+    Private Sub CalcBankAccNo()
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        ' Open the connection
+        Mysqlconn.Open()
+        Dim query As String = "SELECT Bank_Account_Number FROM banking_database.UserData WHERE Username = '" & bank_username & "';"
+
+        ' Create a MySqlCommand object
+        Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
+
+        ' Execute the query and get the result
+        bank_account_no = sqlCmd.ExecuteScalar().ToString
+        TextBox1.Text = bank_account_no
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+    End Sub
     Private Sub LoadFields()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
@@ -44,7 +60,7 @@ Public Class Banking_Passbook
         sqlCmd.Connection = Mysqlconn
         sqlCmd.CommandText = "Select * from bankingdatabase.UserData where Bank_Account_Number = @BAC;"
 
-        sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
+        sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
@@ -82,7 +98,7 @@ Public Class Banking_Passbook
         sqlCmd.Connection = Mysqlconn
         sqlCmd.CommandText = "SELECT * FROM banking_database.TransactionLog where Bank_Account_Number = @BAC;"
 
-        sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
+        sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)
@@ -99,11 +115,13 @@ Public Class Banking_Passbook
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Me.WindowState = FormWindowState.Maximized
+        'MessageBox.Show(bank_username)
 
         'LoadFields()
+        CalcBankAccNo()
         RefreshDataGrid()
         ClearFields()
-        TextBox1.Text = bank_username
+        ' TextBox1.Text = bank_username
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)

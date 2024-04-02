@@ -3,6 +3,23 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
 Public Class Banking_ContactUs
+
+    Private Sub CalcBankAccNo()
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        ' Open the connection
+        Mysqlconn.Open()
+        Dim query As String = "SELECT Bank_Account_Number FROM banking_database.UserData WHERE Username = '" & bank_username & "';"
+
+        ' Create a MySqlCommand object
+        Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
+
+        ' Execute the query and get the result
+        bank_account_no = sqlCmd.ExecuteScalar().ToString
+        TextBox1.Text = bank_account_no
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+    End Sub
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
@@ -30,7 +47,7 @@ Public Class Banking_ContactUs
     Public password As String = "nimda"
     Public database As String = "banking_database"
 
-    Public bank_account_no As Integer = 1
+    Public bank_account_no As String = "1"
     Public bank_username As String = "admin"
 
     Private Sub CLearFields()
@@ -49,7 +66,7 @@ Public Class Banking_ContactUs
         sqlCmd.CommandText = "INSERT INTO banking_database.QueryLog(Bank_Account_Number,Type_of_Query,Day,Query,Status,Reply)" &
                              "VALUES (@BAN,'" & query_type & "',CURDATE(),'" & TextBox2.Text & "','PENDING','-');"
 
-        sqlCmd.Parameters.Add("@BAN", MySqlDbType.Int64).Value = bank_account_no
+        sqlCmd.Parameters.Add("@BAN", MySqlDbType.VarChar).Value = bank_account_no
 
 
         If sqlCmd.ExecuteNonQuery() = 1 Then
@@ -62,6 +79,7 @@ Public Class Banking_ContactUs
         sqlCmd.Dispose()
         MessageBox.Show("Query Sent!")
     End Sub
+
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
         Button16.BackColor = Color.FromArgb(1, 12, 40)
@@ -76,9 +94,10 @@ Public Class Banking_ContactUs
         ComboBox1.Items.Add("Report Unauthorised Transaction")
         ComboBox1.Items.Add("Others")
 
-        TextBox1.Text = bank_username
+        CalcBankAccNo()
 
     End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -149,7 +168,7 @@ Public Class Banking_ContactUs
     End Sub
 
     Private Sub Button17_Click_1(sender As Object, e As EventArgs) Handles Button17.Click
-        Banking_Homepage.bank_username = bank_username
+        Banking_Queries_User.bank_username = bank_username
         ChildForm(Banking_Main.Panel1, Banking_Queries_User)
     End Sub
 
@@ -158,6 +177,10 @@ Public Class Banking_ContactUs
     End Sub
 
     Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
 End Class

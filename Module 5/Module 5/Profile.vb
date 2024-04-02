@@ -14,6 +14,8 @@ Public Class Profile
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' connection to database
+        MessageBox.Show(bank_username)
+
         Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
         'Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         Dim conn = New MySqlConnection(connString)

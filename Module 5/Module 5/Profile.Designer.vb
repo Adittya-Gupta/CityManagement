@@ -55,21 +55,19 @@ Partial Class Profile
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(2, 385)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(2, 313)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(185, 16)
+        Me.Label9.Size = New System.Drawing.Size(150, 13)
         Me.Label9.TabIndex = 70
         Me.Label9.Text = "Your recent transaction history"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 416)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 338)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 138)
+        Me.DataGridView1.Size = New System.Drawing.Size(578, 112)
         Me.DataGridView1.TabIndex = 69
         '
         'Panel7
@@ -77,20 +75,18 @@ Partial Class Profile
         Me.Panel7.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel7.Controls.Add(Me.Label3)
-        Me.Panel7.Location = New System.Drawing.Point(799, 310)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel7.Location = New System.Drawing.Point(599, 252)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(367, 202)
+        Me.Panel7.Size = New System.Drawing.Size(276, 164)
         Me.Panel7.TabIndex = 68
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(117, 16)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(88, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(126, 25)
+        Me.Label3.Size = New System.Drawing.Size(103, 20)
         Me.Label3.TabIndex = 54
         Me.Label3.Text = "Active Loan"
         '
@@ -99,20 +95,18 @@ Partial Class Profile
         Me.Panel6.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel6.Controls.Add(Me.Label2)
-        Me.Panel6.Location = New System.Drawing.Point(799, 58)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel6.Location = New System.Drawing.Point(599, 47)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(367, 203)
+        Me.Panel6.Size = New System.Drawing.Size(276, 165)
         Me.Panel6.TabIndex = 67
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(118, 14)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(88, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 25)
+        Me.Label2.Size = New System.Drawing.Size(101, 20)
         Me.Label2.TabIndex = 54
         Me.Label2.Text = "Active Card"
         '
@@ -120,19 +114,17 @@ Partial Class Profile
         '
         Me.Panel5.Controls.Add(Me.LabelAddress)
         Me.Panel5.Controls.Add(Me.LabelName)
-        Me.Panel5.Location = New System.Drawing.Point(282, 58)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel5.Location = New System.Drawing.Point(212, 47)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(463, 123)
+        Me.Panel5.Size = New System.Drawing.Size(347, 100)
         Me.Panel5.TabIndex = 66
         '
         'LabelAddress
         '
         Me.LabelAddress.AutoSize = True
-        Me.LabelAddress.Location = New System.Drawing.Point(36, 80)
-        Me.LabelAddress.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelAddress.Location = New System.Drawing.Point(27, 65)
         Me.LabelAddress.Name = "LabelAddress"
-        Me.LabelAddress.Size = New System.Drawing.Size(58, 16)
+        Me.LabelAddress.Size = New System.Drawing.Size(45, 13)
         Me.LabelAddress.TabIndex = 53
         Me.LabelAddress.Text = "Address"
         '
@@ -140,10 +132,9 @@ Partial Class Profile
         '
         Me.LabelName.AutoSize = True
         Me.LabelName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelName.Location = New System.Drawing.Point(17, 26)
-        Me.LabelName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelName.Location = New System.Drawing.Point(13, 21)
         Me.LabelName.Name = "LabelName"
-        Me.LabelName.Size = New System.Drawing.Size(121, 25)
+        Me.LabelName.Size = New System.Drawing.Size(99, 20)
         Me.LabelName.TabIndex = 44
         Me.LabelName.Text = "LabelName"
         '
@@ -160,20 +151,18 @@ Partial Class Profile
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.Label8)
-        Me.Panel4.Location = New System.Drawing.Point(282, 193)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel4.Location = New System.Drawing.Point(212, 157)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(479, 215)
+        Me.Panel4.Size = New System.Drawing.Size(360, 175)
         Me.Panel4.TabIndex = 65
         '
         'TextBoxCIBILScore
         '
         Me.TextBoxCIBILScore.BackColor = System.Drawing.SystemColors.HotTrack
         Me.TextBoxCIBILScore.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxCIBILScore.Location = New System.Drawing.Point(216, 137)
-        Me.TextBoxCIBILScore.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxCIBILScore.Location = New System.Drawing.Point(162, 111)
         Me.TextBoxCIBILScore.Name = "TextBoxCIBILScore"
-        Me.TextBoxCIBILScore.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxCIBILScore.Size = New System.Drawing.Size(163, 13)
         Me.TextBoxCIBILScore.TabIndex = 57
         Me.TextBoxCIBILScore.Text = "TextBox3"
         '
@@ -181,10 +170,9 @@ Partial Class Profile
         '
         Me.TextBoxBalence.BackColor = System.Drawing.SystemColors.HotTrack
         Me.TextBoxBalence.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxBalence.Location = New System.Drawing.Point(216, 98)
-        Me.TextBoxBalence.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxBalence.Location = New System.Drawing.Point(162, 80)
         Me.TextBoxBalence.Name = "TextBoxBalence"
-        Me.TextBoxBalence.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxBalence.Size = New System.Drawing.Size(163, 13)
         Me.TextBoxBalence.TabIndex = 56
         Me.TextBoxBalence.Text = "TextBox2"
         '
@@ -192,10 +180,9 @@ Partial Class Profile
         '
         Me.TextBoxAccountNumber.BackColor = System.Drawing.SystemColors.HotTrack
         Me.TextBoxAccountNumber.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxAccountNumber.Location = New System.Drawing.Point(216, 52)
-        Me.TextBoxAccountNumber.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxAccountNumber.Location = New System.Drawing.Point(162, 42)
         Me.TextBoxAccountNumber.Name = "TextBoxAccountNumber"
-        Me.TextBoxAccountNumber.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxAccountNumber.Size = New System.Drawing.Size(163, 13)
         Me.TextBoxAccountNumber.TabIndex = 55
         Me.TextBoxAccountNumber.Text = "TextBox1"
         '
@@ -203,10 +190,9 @@ Partial Class Profile
         '
         Me.TextBoxUsername.BackColor = System.Drawing.SystemColors.HotTrack
         Me.TextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxUsername.Location = New System.Drawing.Point(216, 18)
-        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(162, 15)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(163, 13)
         Me.TextBoxUsername.TabIndex = 54
         Me.TextBoxUsername.Text = "TextBox0"
         '
@@ -214,10 +200,9 @@ Partial Class Profile
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.CheckBox1.Location = New System.Drawing.Point(368, 175)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox1.Location = New System.Drawing.Point(276, 142)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(58, 20)
+        Me.CheckBox1.Size = New System.Drawing.Size(49, 17)
         Me.CheckBox1.TabIndex = 53
         Me.CheckBox1.Text = "HIde"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -226,10 +211,9 @@ Partial Class Profile
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(25, 58)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(19, 47)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(117, 20)
+        Me.Label5.Size = New System.Drawing.Size(94, 16)
         Me.Label5.TabIndex = 51
         Me.Label5.Text = "Account No.:"
         '
@@ -237,10 +221,9 @@ Partial Class Profile
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(25, 98)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(19, 80)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 20)
+        Me.Label7.Size = New System.Drawing.Size(72, 16)
         Me.Label7.TabIndex = 45
         Me.Label7.Text = "Balance :"
         '
@@ -248,10 +231,9 @@ Partial Class Profile
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(25, 22)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(19, 18)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 20)
+        Me.Label6.Size = New System.Drawing.Size(86, 16)
         Me.Label6.TabIndex = 46
         Me.Label6.Text = "Username :"
         '
@@ -259,10 +241,9 @@ Partial Class Profile
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(25, 137)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(19, 111)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(135, 20)
+        Me.Label8.Size = New System.Drawing.Size(104, 16)
         Me.Label8.TabIndex = 48
         Me.Label8.Text = "CIBIL Score :  "
         '
@@ -270,19 +251,17 @@ Partial Class Profile
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(127, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(412, 36)
+        Me.Label1.Size = New System.Drawing.Size(336, 29)
         Me.Label1.TabIndex = 64
         Me.Label1.Text = "WELCOME TO  CITY BANK"
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 96)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 78)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(179, 204)
+        Me.PictureBox1.Size = New System.Drawing.Size(134, 166)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 63
         Me.PictureBox1.TabStop = False
@@ -290,18 +269,17 @@ Partial Class Profile
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(398, 24)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Location = New System.Drawing.Point(298, 20)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(0, 16)
+        Me.Label14.Size = New System.Drawing.Size(0, 13)
         Me.Label14.TabIndex = 62
         '
         'Profile
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1277, 603)
+        Me.ClientSize = New System.Drawing.Size(958, 490)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.DataGridView1)
@@ -313,7 +291,6 @@ Partial Class Profile
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label14)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Profile"
         Me.Text = "Profile"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -87,7 +87,7 @@ Public Class Login
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
         TextBoxpassword.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click

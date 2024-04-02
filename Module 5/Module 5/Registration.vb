@@ -28,7 +28,7 @@ Public Class Registration
 
     End Sub
 
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs)
+    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles ButtonPhoto.Click
         ' Show the OpenFileDialog
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif, *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp"
@@ -42,7 +42,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonSign.Click
         ' Show the OpenFileDialog
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif, *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp"
@@ -56,7 +56,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub ButtonRegister_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonRegister_Click(sender As Object, e As EventArgs) Handles ButtonRegister.Click
         Dim Name As String = TextBoxName.Text.Trim()
         Dim Email As String = TextBoxEmail.Text.Trim()
         Dim Phone As String = TextBoxPhone.Text.Trim()
@@ -140,6 +140,7 @@ Public Class Registration
             cmd.Parameters.Add("?sign", MySqlDbType.MediumBlob).Value = SignBytes
             cmd.ExecuteNonQuery()
 
+            MessageBox.Show("you have sucessfully registered.")
             'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob).Value = PhotoBytes
             'cmd.Parameters.Add("?sign", MySqlDbType.LongBlob).Value = SignBytes
             'cmd.ExecuteNonQuery()
@@ -154,7 +155,7 @@ Public Class Registration
 
     End Sub
 
-    Private Sub TextBoxpassword_TextChanged(sender As Object, e As EventArgs)
+    Private Sub TextBoxpassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxpassword.TextChanged
         password_strength_check()
     End Sub
 
@@ -199,7 +200,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs)
+    Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxConfermPassword.TextChanged
         If TextBoxConfermPassword.Text = TextBoxpassword.Text Then
 
             Label14.ForeColor = Color.Green
@@ -211,7 +212,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
         TextBoxpassword.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
@@ -311,10 +312,9 @@ Public Class Registration
 
     End Sub
 
-    Private Sub ButtonPhoto_Click(sender As Object, e As EventArgs) Handles ButtonPhoto.Click
-
-    End Sub
 
     Private Sub Label12_Click_1(sender As Object, e As EventArgs)
     End Sub
+
+
 End Class

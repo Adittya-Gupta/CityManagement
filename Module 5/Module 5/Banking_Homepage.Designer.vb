@@ -33,7 +33,6 @@ Partial Class Banking_Homepage
         '
         'Panel4
         '
-        'Me.Panel4.BackgroundImage = Global.Banking.My.Resources.Resources.Banking_Home
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Location = New System.Drawing.Point(0, 0)

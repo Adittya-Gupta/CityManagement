@@ -18,4 +18,8 @@
         Me.Hide()
         Banking_LoanHomepage.Show()
     End Sub
+
+    Private Sub Banking_LoanDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

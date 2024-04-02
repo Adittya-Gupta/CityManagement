@@ -69,7 +69,7 @@ Partial Class Banking_LoanDetails
         '
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Exo 2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.White
         Me.TextBox2.Location = New System.Drawing.Point(1163, 17)
         Me.TextBox2.Multiline = True
@@ -83,7 +83,7 @@ Partial Class Banking_LoanDetails
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Centauri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(93, 11)
         Me.TextBox1.Multiline = True
@@ -307,10 +307,10 @@ Partial Class Banking_LoanDetails
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(42, 156)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(321, 28)
+        Me.Label8.Size = New System.Drawing.Size(332, 29)
         Me.Label8.TabIndex = 49
         Me.Label8.Text = "Please enter personal details:"
         '
@@ -318,11 +318,11 @@ Partial Class Banking_LoanDetails
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Label9.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(785, 208)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(258, 28)
+        Me.Label9.Size = New System.Drawing.Size(266, 29)
         Me.Label9.TabIndex = 50
         Me.Label9.Text = "Enter Loan Plan details:"
         '

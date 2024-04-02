@@ -3,13 +3,28 @@ Imports MySql.Data.MySqlClient
 
 Public Class Login
 
-    Public username As String = "admin"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public bank_username As String = "admin"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
         Dim Username As String = TextBoxUsername.Text.Trim()
         Dim Password As String = TextBoxpassword.Text.Trim()
 
         ' connection to database
         Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        ' Dim connString As String = "server=" & server & ";user id=" & Username & ";password=" & Password & ";database=" & database & ";"
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
@@ -45,8 +60,10 @@ Public Class Login
                 If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
                     'Form51.ReceivedEmail = enteredEmail
                     Profile.bank_username = Username
-                    Me.Hide()
-                    Profile.Show()
+                    'Me.Hide()
+                    'Profile.Show()
+                    ChildForm(Banking_Main.Panel1, Profile)
+
                     'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())
                     'Dim ms As New System.IO.MemoryStream(imageBytes)
                     'Dim image As Image = Image.FromStream(ms)
@@ -67,19 +84,18 @@ Public Class Login
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         TextBoxpassword.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-        Registration.Show()
-        Me.Hide()
+        ChildForm(Banking_Main.Panel1, Registration)
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class

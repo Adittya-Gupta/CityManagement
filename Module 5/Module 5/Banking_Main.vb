@@ -71,16 +71,45 @@
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        For Each ctrl As Control In Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return
+            End If
+        Next
         Banking_ContactUs.bank_username = bank_username
         ChildForm(Panel1, Banking_ContactUs)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        ' Iterate through each control within Panel1
+        For Each ctrl As Control In Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return
+            End If
+        Next
+
         Banking_Passbook.bank_username = bank_username
         ChildForm(Panel1, Banking_Passbook)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        For Each ctrl As Control In Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return
+            End If
+        Next
         Banking_Card_Management.bank_username = bank_username
         'ChildForm(Panel1, Banking_Card_Management)
         'ChildForm(Panel1, Banking_Debit_Card_Page)
@@ -93,15 +122,44 @@
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-
+        For Each ctrl As Control In Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return
+            End If
+        Next
+        Banking_LoanHomepage.bank_username = bank_username
+        ChildForm(Panel1, Banking_LoanHomepage)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Banking_Homepage.bank_username = bank_username
+        'Banking_Homepage.bank_username = bank_username
         ChildForm(Panel1, Banking_Homepage)
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        ' Iterate through each control within Panel1
+        For Each ctrl As Control In Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return
+            End If
+        Next
+        Login.bank_username = bank_username
+        ChildForm(Panel1, Login)
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
 End Class

@@ -35,6 +35,7 @@ Public Class Banking_LoanHomepage
     Public database As String = "banking_database"
 
     Public bank_account_no As Integer = 1
+    Public bank_username As String = "admin"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ' Call the load_table function here
         LoadFields()

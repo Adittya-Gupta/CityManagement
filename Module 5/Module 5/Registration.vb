@@ -4,13 +4,23 @@ Imports MySql.Data.MySqlClient
 
 Public Class Registration
 
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
     Dim PhotoPath As String
     Dim SignPath As String
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxUsername.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -18,7 +28,7 @@ Public Class Registration
 
     End Sub
 
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles ButtonPhoto.Click
+    Private Sub btnUpload_Click(sender As Object, e As EventArgs)
         ' Show the OpenFileDialog
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif, *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp"
@@ -32,7 +42,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonSign.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         ' Show the OpenFileDialog
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif, *.bmp)|*.jpg; *.jpeg; *.png; *.gif; *.bmp"
@@ -46,7 +56,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub ButtonRegister_Click(sender As Object, e As EventArgs) Handles ButtonRegister.Click
+    Private Sub ButtonRegister_Click(sender As Object, e As EventArgs)
         Dim Name As String = TextBoxName.Text.Trim()
         Dim Email As String = TextBoxEmail.Text.Trim()
         Dim Phone As String = TextBoxPhone.Text.Trim()
@@ -144,7 +154,7 @@ Public Class Registration
 
     End Sub
 
-    Private Sub TextBoxpassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxpassword.TextChanged
+    Private Sub TextBoxpassword_TextChanged(sender As Object, e As EventArgs)
         password_strength_check()
     End Sub
 
@@ -189,7 +199,7 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxConfermPassword.TextChanged
+    Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs)
         If TextBoxConfermPassword.Text = TextBoxpassword.Text Then
 
             Label14.ForeColor = Color.Green
@@ -201,104 +211,110 @@ Public Class Registration
         End If
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         TextBoxpassword.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-        Me.Hide()
-        Login.Show()
+        ChildForm(Banking_Main.Panel1, Login)
     End Sub
 
-    Private Sub TextBoxDOB_TextChanged(sender As Object, e As EventArgs) Handles TextBoxDOB.TextChanged
-
-    End Sub
-
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+    Private Sub TextBoxDOB_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub Label14_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBoxSign_Click(sender As Object, e As EventArgs) Handles PictureBoxSign.Click
+    Private Sub Label13_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBoxPhoto_Click(sender As Object, e As EventArgs) Handles PictureBoxPhoto.Click
+    Private Sub PictureBoxSign_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub PictureBoxPhoto_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+    Private Sub Label9_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxAddress_TextChanged(sender As Object, e As EventArgs) Handles TextBoxAddress.TextChanged
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub TextBoxAddress_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxGender_TextChanged(sender As Object, e As EventArgs) Handles TextBoxGender.TextChanged
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub TextBoxGender_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxIndentificationNumber_TextChanged(sender As Object, e As EventArgs) Handles TextBoxIndentificationNumber.TextChanged
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub TextBoxIndentificationNumber_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxPhone_TextChanged(sender As Object, e As EventArgs) Handles TextBoxPhone.TextChanged
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub TextBoxPhone_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxEmail_TextChanged(sender As Object, e As EventArgs) Handles TextBoxEmail.TextChanged
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub TextBoxEmail_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBoxName_TextChanged(sender As Object, e As EventArgs) Handles TextBoxName.TextChanged
+    Private Sub Label11_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+    Private Sub TextBoxName_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Label17_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ButtonPhoto_Click(sender As Object, e As EventArgs) Handles ButtonPhoto.Click
+
+    End Sub
+
+    Private Sub Label12_Click_1(sender As Object, e As EventArgs)
     End Sub
 End Class

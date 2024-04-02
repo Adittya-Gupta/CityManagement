@@ -2,7 +2,10 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Profile
-
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
     Public bank_username As String = "admin"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
@@ -12,6 +15,7 @@ Public Class Profile
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' connection to database
         Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        'Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         Dim conn = New MySqlConnection(connString)
 
         Try
@@ -48,30 +52,38 @@ Public Class Profile
         End Try
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
         TextBoxUsername.UseSystemPasswordChar = CheckBox1.Checked
         TextBoxAccountNumber.UseSystemPasswordChar = CheckBox1.Checked
         TextBoxBalence.UseSystemPasswordChar = CheckBox1.Checked
         TextBoxCIBILScore.UseSystemPasswordChar = CheckBox1.Checked
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

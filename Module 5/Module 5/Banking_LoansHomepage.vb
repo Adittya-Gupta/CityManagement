@@ -35,6 +35,17 @@ Public Class Banking_LoanHomepage
     Public database As String = "banking_database"
 
     Public bank_account_no As Integer = 1
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ' Call the load_table function here
         LoadFields()
@@ -124,14 +135,17 @@ Public Class Banking_LoanHomepage
 
     Private Sub ApplyNow_btn_Click(sender As Object, e As EventArgs) Handles ApplyNow_btn.Click
         'Open loans application page
-        Me.Hide()
-        Banking_LoansApplication.Show()
+        'Me.Hide()
+        'Banking_LoansApplication.Show()
+
+        ChildForm(Banking_Main.Panel1, Banking_LoansApplication)
     End Sub
 
     Private Sub PayNow_btn_Click(sender As Object, e As EventArgs) Handles PayNow_btn.Click
         'Open loans payment page
-        Me.Hide()
-        Banking_LoansPayNow.Show()
-    End Sub
+        'Me.Hide()
+        'Banking_LoansPayNow.Show()
 
+        ChildForm(Banking_Main.Panel1, Banking_LoansPayNow)
+    End Sub
 End Class

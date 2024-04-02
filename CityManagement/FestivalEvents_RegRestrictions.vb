@@ -1,54 +1,61 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json.Linq
 
+
 Public Class FestivalEvents_RegRestrictions
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Private Sub FestivalEvents_RegRestrictions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the initial state of CheckBox1 and adjust controls accordingly
         Try
-            Dim query As String = "SELECT * FROM festivals WHERE id = @CurrEventId "
+            conn.Open()
+            Dim query As String = "SELECT * FROM festivals WHERE name = @CurrEvent "
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@CurrEventId", Module1.CurrEventID)
+                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEvent)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 reader.Read()
                 Dim restrictions As String = If(Not IsDBNull(reader("restrictions")), reader("restrictions").ToString(), "{}")
-                Dim restrictionsArray As JArray = JArray.Parse(restrictions)
+                Dim restrictionsObject As JObject = JObject.Parse(restrictions)
 
                 ' Variables to store extracted fields
-                Dim age1 As String = Nothing
-                Dim age2 As String = Nothing
-                Dim numOfParticipants As String = Nothing
+                Dim minAge As Integer? = Nothing
+                Dim maxAge As Integer? = Nothing
+                Dim maxParticipants As Integer? = Nothing
 
-                ' Iterate through JSON array and extract fields
-                For Each item As JObject In restrictionsArray
-                    If item.ContainsKey("age1") Then
-                        age1 = item("age1").ToString()
-                    ElseIf item.ContainsKey("age2") Then
-                        age2 = item("age2").ToString()
-                    ElseIf item.ContainsKey("numOfParticipants") Then
-                        numOfParticipants = item("numOfParticipants").ToString()
-                    End If
-                Next
-                If age1 Is Nothing AndAlso age2 Is Nothing Then
-                    ' If both are null, uncheck CheckBox1
-                    CheckBox1.Checked = False
-                Else
-                    ' If at least one of them is non-null, populate TextBox1 and TextBox2 accordingly
-                    TextBox1.Text = If(age1, "") ' Put age1 in TextBox1, empty if null
-                    TextBox2.Text = If(age2, "") ' Put age2 in TextBox2, empty if null
+                ' Extract fields from JSON object
+                If restrictionsObject.ContainsKey("minAge") Then
+                    minAge = restrictionsObject("minAge").ToObject(Of Integer?)()
+                End If
+
+                If restrictionsObject.ContainsKey("maxAge") Then
+                    maxAge = restrictionsObject("maxAge").ToObject(Of Integer?)()
+                End If
+
+                If restrictionsObject.ContainsKey("maxParticipants") Then
+                    maxParticipants = restrictionsObject("maxParticipants").ToObject(Of Integer?)()
+                End If
+
+                ' Populate UI controls based on extracted fields
+                If minAge.HasValue OrElse maxAge.HasValue Then
+                    ' At least one age value is present
+                    TextBox1.Text = If(minAge, "") ' Put minAge in TextBox1, empty if null
+                    TextBox2.Text = If(maxAge, "") ' Put maxAge in TextBox2, empty if null
                     CheckBox1.Checked = True ' Check CheckBox1
-                End If
-
-                ' Check if numOfParticipants is null/nothing
-                If numOfParticipants Is Nothing Then
-                    ' If it's null, uncheck CheckBox2
-                    CheckBox2.Checked = False
                 Else
-                    ' If it's not null, populate TextBox3
-                    TextBox3.Text = numOfParticipants ' Put numOfParticipants in TextBox3
-                    CheckBox2.Checked = True ' Check CheckBox2
+                    ' Neither minAge nor maxAge is present
+                    CheckBox1.Checked = False ' Uncheck CheckBox1
                 End If
+                CheckBox1_CheckedChanged(Nothing, Nothing) ' Trigger the event handler manually
+                If maxParticipants.HasValue Then
+                    ' maxParticipants value is present
+                    TextBox3.Text = maxParticipants.ToString() ' Put maxParticipants in TextBox3
+                    CheckBox2.Checked = True ' Check CheckBox2
+                Else
+                    ' maxParticipants value is not present
+                    CheckBox2.Checked = False ' Uncheck CheckBox2
+                End If
+                CheckBox2_CheckedChanged(Nothing, Nothing) ' Trigger the event handler manually
+
             End Using
         Catch ex As Exception
             MessageBox.Show("Error fetching festival details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -110,15 +117,12 @@ Public Class FestivalEvents_RegRestrictions
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Check if CheckBox1 is checked and TextBox1 and TextBox2 have values
         If CheckBox1.Checked AndAlso String.IsNullOrEmpty(TextBox1.Text) AndAlso String.IsNullOrEmpty(TextBox2.Text) Then
             MessageBox.Show("Enter a value in alteast one of Minimum or Maximum age.")
@@ -143,50 +147,51 @@ Public Class FestivalEvents_RegRestrictions
             Return
         End If
         Try
-            Dim updatedRestrictions As New JArray()
-            If CheckBox1.Checked AndAlso Not String.IsNullOrEmpty(TextBox1.Text) AndAlso Not String.IsNullOrEmpty(TextBox2.Text) Then
-                ' Create a JSON object for age1 and age2
-                Dim ageObject As New JObject()
-                ageObject.Add("age1", TextBox1.Text)
-                ageObject.Add("age2", TextBox2.Text)
-                ' Add ageObject to updatedRestrictions
-                updatedRestrictions.Add(ageObject)
+            Dim updatedRestrictions As New JObject()
+
+            ' Check if CheckBox1 is checked and TextBox1 and TextBox2 have values
+            If CheckBox1.Checked Then
+                ' Create a JSON object for minAge and maxAge
+                updatedRestrictions.Add("minAge", If(Not String.IsNullOrEmpty(TextBox1.Text), TextBox1.Text, Nothing))
+                updatedRestrictions.Add("maxAge", If(Not String.IsNullOrEmpty(TextBox2.Text), TextBox2.Text, Nothing))
+            Else
+                ' Add null values for minAge and maxAge
+                updatedRestrictions.Add("minAge", Nothing)
+                updatedRestrictions.Add("maxAge", Nothing)
             End If
 
             ' Check if CheckBox2 is checked and TextBox3 has a value
-            If CheckBox2.Checked AndAlso Not String.IsNullOrEmpty(TextBox3.Text) Then
-                ' Create a JSON object for numOfParticipants
-                Dim participantsObject As New JObject()
-                participantsObject.Add("numOfParticipants", TextBox3.Text)
-                ' Add participantsObject to updatedRestrictions
-                updatedRestrictions.Add(participantsObject)
+            If CheckBox2.Checked Then
+                ' Add numOfParticipants to updatedRestrictions
+                updatedRestrictions.Add("maxParticipants", TextBox3.Text)
+            Else
+                ' Add null value for numOfParticipants
+                updatedRestrictions.Add("maxParticipants", Nothing)
             End If
 
-            ' Convert the updatedRestrictions JArray to a JSON string
+            ' Convert the updatedRestrictions JObject to a JSON string
             Dim updatedRestrictionsJson As String = updatedRestrictions.ToString()
 
             ' Update the database with the new JSON string
-            Dim query As String = "UPDATE festivals SET restrictions = @RestrictionsJson WHERE id = @CurrEventId"
+            Dim query As String = "UPDATE festivals SET restrictions = @RestrictionsJson WHERE name = @CurrEvent"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@RestrictionsJson", updatedRestrictionsJson)
-                cmd.Parameters.AddWithValue("@CurrEventId", Module1.CurrEventID)
+                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEvent)
                 conn.Open()
                 cmd.ExecuteNonQuery()
-                conn.Close()
             End Using
 
             ' Show a success message
-            MessageBox.Show("Restrictions updated successfully.")
+            MessageBox.Show("Restrictions updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MessageBox.Show("An error occurred: " & ex.Message)
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
         End Try
 
 
+
         ' If all conditions are met
-        MessageBox.Show("All conditions met.")
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+        'MessageBox.Show("All conditions met.")
     End Sub
 End Class

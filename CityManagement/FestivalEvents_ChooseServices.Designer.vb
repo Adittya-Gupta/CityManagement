@@ -40,13 +40,14 @@ Partial Class FestivalEvents_ChooseServices
         Label9 = New Label()
         Label10 = New Label()
         Panel1 = New Panel()
+        Button5 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 16.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(23, 31)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
@@ -250,12 +251,25 @@ Partial Class FestivalEvents_ChooseServices
         Panel1.Size = New Size(652, 256)
         Panel1.TabIndex = 51
         ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.Black
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.ForeColor = Color.White
+        Button5.Location = New Point(26, 367)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(94, 35)
+        Button5.TabIndex = 52
+        Button5.Text = "Save"
+        Button5.UseVisualStyleBackColor = False
+        ' 
         ' FestivalEvents_ChooseServices
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(711, 429)
+        Controls.Add(Button5)
         Controls.Add(Panel1)
         Controls.Add(Label3)
         Name = "FestivalEvents_ChooseServices"
@@ -284,4 +298,5 @@ Partial Class FestivalEvents_ChooseServices
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button5 As Button
 End Class

@@ -40,19 +40,19 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(32, 47)
+        Label3.Location = New Point(28, 45)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(415, 33)
+        Label3.Size = New Size(388, 31)
         Label3.TabIndex = 31
         Label3.Text = "Event Registration Restrictions"
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(13, 28)
+        CheckBox1.Location = New Point(12, 27)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(59, 25)
+        CheckBox1.Size = New Size(58, 24)
         CheckBox1.TabIndex = 32
         CheckBox1.Text = "Age"
         CheckBox1.UseVisualStyleBackColor = True
@@ -60,9 +60,9 @@ Partial Class FestivalEvents_RegRestrictions
         ' CheckBox2
         ' 
         CheckBox2.AutoSize = True
-        CheckBox2.Location = New Point(13, 111)
+        CheckBox2.Location = New Point(12, 106)
         CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(192, 25)
+        CheckBox2.Size = New Size(183, 24)
         CheckBox2.TabIndex = 33
         CheckBox2.Text = "Number of Participants"
         CheckBox2.UseVisualStyleBackColor = True
@@ -70,49 +70,49 @@ Partial Class FestivalEvents_RegRestrictions
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(311, 32)
+        Label1.Location = New Point(276, 30)
         Label1.Name = "Label1"
-        Label1.Size = New Size(109, 21)
+        Label1.Size = New Size(103, 20)
         Label1.TabIndex = 34
         Label1.Text = "Minimum Age"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(586, 32)
+        Label2.Location = New Point(521, 30)
         Label2.Name = "Label2"
-        Label2.Size = New Size(111, 21)
+        Label2.Size = New Size(106, 20)
         Label2.TabIndex = 35
         Label2.Text = "Maximum Age"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(226, 28)
+        TextBox1.Location = New Point(201, 27)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(79, 29)
+        TextBox1.Size = New Size(71, 27)
         TextBox1.TabIndex = 36
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(501, 28)
+        TextBox2.Location = New Point(445, 27)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(79, 29)
+        TextBox2.Size = New Size(71, 27)
         TextBox2.TabIndex = 37
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(311, 114)
+        Label4.Location = New Point(276, 109)
         Label4.Name = "Label4"
-        Label4.Size = New Size(241, 21)
+        Label4.Size = New Size(228, 20)
         Label4.TabIndex = 38
         Label4.Text = "Maximum number of Participants"
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(226, 111)
+        TextBox3.Location = New Point(201, 106)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(79, 29)
+        TextBox3.Size = New Size(71, 27)
         TextBox3.TabIndex = 39
         ' 
         ' Panel1
@@ -126,9 +126,9 @@ Partial Class FestivalEvents_RegRestrictions
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(TextBox1)
-        Panel1.Location = New Point(32, 106)
+        Panel1.Location = New Point(28, 101)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(735, 182)
+        Panel1.Size = New Size(653, 173)
         Panel1.TabIndex = 41
         ' 
         ' Button1
@@ -138,20 +138,20 @@ Partial Class FestivalEvents_RegRestrictions
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(45, 331)
+        Button1.Location = New Point(40, 315)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(132, 44)
+        Button1.Size = New Size(117, 42)
         Button1.TabIndex = 43
         Button1.Text = "Save"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' FestivalEvents_RegRestrictions
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(711, 429)
         Controls.Add(Button1)
         Controls.Add(Panel1)
         Controls.Add(Label3)

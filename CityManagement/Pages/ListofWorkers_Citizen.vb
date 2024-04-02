@@ -1,41 +1,70 @@
-﻿Public Class ListofWorkers_Citizen
+﻿Imports MySql.Data.MySqlClient
+
+Public Class ListofWorkers_Citizen
     Private Filterform As New Workersfilter()
     Public Sub New()
         InitializeComponent()
         AddHandler Me.VisibleChanged, AddressOf ListofWorkers_Citizen_VisibleChanged
+        ' Subscribe to the Job_SelectedChanged event
+        AddHandler Globals.Job_SelectedChanged, AddressOf Job_SelectedChanged_Handler
     End Sub
     Private Sub ListofWorkers_Citizen_VisibleChanged(sender As Object, e As EventArgs)
         If Not Me.Visible Then
             Filterform.Hide()
         End If
     End Sub
+    Private Sub Job_SelectedChanged_Handler(sender As Object, e As EventArgs)
 
-    Private Sub ListofWorkers_Citizen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Create a new instance of ListItem
-        Dim listItem1 As New ListItem("John Doe", "123 Main St", "5 ratings", "+91 9049382222", 4.5)
-        Dim listItem2 As New ListItem("Jane Smith", "456 Oak Ave", "10 ratings", "+91 9049383333", 3.8)
-        Dim listItem3 As New ListItem("Bob Johnson", "789 Elm Blvd", "3 ratings", "+91 9049384444", 2.7)
-        Dim listItem4 As New ListItem("Alice Williams", "321 Pine Ln", "8 ratings", "+91 9049385555", 4.2)
-        Dim listItem5 As New ListItem()
+        ' Clear existing controls from Panel1
+        Panel1.Controls.Clear()
 
-        ' Add the list items to the form
-        Panel1.Controls.Add(listItem1)
-        Panel1.Controls.Add(listItem2)
-        Panel1.Controls.Add(listItem3)
-        Panel1.Controls.Add(listItem4)
-        Panel1.Controls.Add(listItem5)
+        ' Execute SQL query to fetch data from the database
+        Dim query As String = "SELECT U.Name AS WorkerName, O.Location AS OrgLocation, SW.rating AS WorkerRating, SW.noOfRatings AS WorkerNumberOfRatings, U.ContactNo AS WorkerPhoneNumber FROM serviceWorkers SW JOIN User U ON SW.userID = U.SID JOIN serviceOrganizations O ON SW.orgID = O.OrgID WHERE U.Designation = @Designation"
 
-        ' Position the message label based on the previous messages
-        If Panel1.Controls.Count > 1 Then
-            Dim prevMessageLabel As Control = Panel1.Controls(Panel1.Controls.Count - 2)
-            listItem1.Top = 0
-            listItem2.Top = 200
-            listItem3.Top = 400
-            listItem4.Top = 600
-            listItem5.Top = 800
-        End If
+        ' Create MySQL connection
+        ' Create MySQL connection
+        Using connection As New MySqlConnection(Globals.connectionstring)
+            ' Open the connection
+            connection.Open()
+
+            ' Create MySqlCommand
+            Using command As New MySqlCommand(query, connection)
+                ' Add parameters
+                command.Parameters.AddWithValue("@Designation", Globals.Job_Selected)
+
+                ' Execute the command and create a reader
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    ' Initialize variable to track top position
+                    Dim topPosition As Integer = 0
+
+                    ' Loop through the results and create ListItems
+                    While reader.Read()
+                        ' Read data from the reader
+                        Dim workerName As String = reader("WorkerName").ToString()
+                        Dim orgLocation As String = reader("OrgLocation").ToString()
+                        Dim workerRating As String = reader("WorkerRating").ToString()
+                        Dim workerNumberOfRatings As String = reader("WorkerNumberOfRatings").ToString()
+                        Dim workerPhoneNumber As String = reader("WorkerPhoneNumber").ToString()
+
+                        ' Create ListItem
+                        Dim listItem As New ListItem(workerName, orgLocation, workerNumberOfRatings & " ratings", workerPhoneNumber, Double.Parse(workerRating))
+
+                        ' Set the top position of the ListItem
+                        listItem.Top = topPosition
+
+                        ' Add the ListItem to Panel1
+                        Panel1.Controls.Add(listItem)
+
+                        ' Increment top position for the next ListItem
+                        topPosition += 200
+                    End While
+                End Using
+            End Using
+        End Using
 
     End Sub
+
+
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
         ' Show list of Workers form inside Panel1

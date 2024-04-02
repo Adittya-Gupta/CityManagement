@@ -2,8 +2,8 @@
 
     Private Sub UrbanClapNav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the UrbanClapNav form with Panel1 initially empty
-        Dim X As Boolean = Me IsNot UrbanClapNavForm
-        UrbanClapNavForm.Show()
+        'Dim X As Boolean = Me IsNot Globals.UrbanClapNavForm
+        'Globals.UrbanClapNavForm.Show()
         Me.Panel1.Controls.Clear()
         ShowFormInPanel1(Globals.listofServicesForm)
         HideCurvedLabels()

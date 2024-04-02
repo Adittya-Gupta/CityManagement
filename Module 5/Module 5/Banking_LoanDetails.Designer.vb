@@ -32,30 +32,30 @@ Partial Class Banking_LoanDetails
         Me.Loans_btn = New System.Windows.Forms.Button()
         Me.Home_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Name_tb = New System.Windows.Forms.RichTextBox()
+        Me.ACno_tb = New System.Windows.Forms.RichTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.Purpose_tb = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
+        Me.Email_tb = New System.Windows.Forms.RichTextBox()
+        Me.Aadhar_tb = New System.Windows.Forms.RichTextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
+        Me.Principal_tb = New System.Windows.Forms.RichTextBox()
+        Me.InterestRate_tb = New System.Windows.Forms.RichTextBox()
+        Me.CIBILscore_tb = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.RichTextBox9 = New System.Windows.Forms.RichTextBox()
+        Me.Duration_tb = New System.Windows.Forms.RichTextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Submit_btn = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -187,23 +187,23 @@ Partial Class Banking_LoanDetails
         Me.Label1.TabIndex = 35
         Me.Label1.Text = "Name"
         '
-        'RichTextBox1
+        'Name_tb
         '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.White
-        Me.RichTextBox1.Location = New System.Drawing.Point(133, 218)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox1.TabIndex = 36
-        Me.RichTextBox1.Text = ""
+        Me.Name_tb.BackColor = System.Drawing.Color.White
+        Me.Name_tb.Location = New System.Drawing.Point(133, 218)
+        Me.Name_tb.Name = "Name_tb"
+        Me.Name_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Name_tb.TabIndex = 36
+        Me.Name_tb.Text = ""
         '
-        'RichTextBox2
+        'ACno_tb
         '
-        Me.RichTextBox2.BackColor = System.Drawing.Color.White
-        Me.RichTextBox2.Location = New System.Drawing.Point(133, 284)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox2.TabIndex = 38
-        Me.RichTextBox2.Text = ""
+        Me.ACno_tb.BackColor = System.Drawing.Color.White
+        Me.ACno_tb.Location = New System.Drawing.Point(133, 284)
+        Me.ACno_tb.Name = "ACno_tb"
+        Me.ACno_tb.Size = New System.Drawing.Size(294, 41)
+        Me.ACno_tb.TabIndex = 38
+        Me.ACno_tb.Text = ""
         '
         'Label2
         '
@@ -227,14 +227,14 @@ Partial Class Banking_LoanDetails
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Type:"
         '
-        'RichTextBox4
+        'Purpose_tb
         '
-        Me.RichTextBox4.BackColor = System.Drawing.Color.White
-        Me.RichTextBox4.Location = New System.Drawing.Point(129, 348)
-        Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.Size = New System.Drawing.Size(424, 163)
-        Me.RichTextBox4.TabIndex = 42
-        Me.RichTextBox4.Text = ""
+        Me.Purpose_tb.BackColor = System.Drawing.Color.White
+        Me.Purpose_tb.Location = New System.Drawing.Point(129, 348)
+        Me.Purpose_tb.Name = "Purpose_tb"
+        Me.Purpose_tb.Size = New System.Drawing.Size(424, 163)
+        Me.Purpose_tb.TabIndex = 42
+        Me.Purpose_tb.Text = ""
         '
         'Label4
         '
@@ -286,23 +286,23 @@ Partial Class Banking_LoanDetails
         Me.Label7.TabIndex = 46
         Me.Label7.Text = "Aadhar No."
         '
-        'RichTextBox3
+        'Email_tb
         '
-        Me.RichTextBox3.BackColor = System.Drawing.Color.White
-        Me.RichTextBox3.Location = New System.Drawing.Point(169, 640)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox3.TabIndex = 47
-        Me.RichTextBox3.Text = ""
+        Me.Email_tb.BackColor = System.Drawing.Color.White
+        Me.Email_tb.Location = New System.Drawing.Point(169, 640)
+        Me.Email_tb.Name = "Email_tb"
+        Me.Email_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Email_tb.TabIndex = 47
+        Me.Email_tb.Text = ""
         '
-        'RichTextBox5
+        'Aadhar_tb
         '
-        Me.RichTextBox5.BackColor = System.Drawing.Color.White
-        Me.RichTextBox5.Location = New System.Drawing.Point(169, 706)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox5.TabIndex = 48
-        Me.RichTextBox5.Text = ""
+        Me.Aadhar_tb.BackColor = System.Drawing.Color.White
+        Me.Aadhar_tb.Location = New System.Drawing.Point(169, 706)
+        Me.Aadhar_tb.Name = "Aadhar_tb"
+        Me.Aadhar_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Aadhar_tb.TabIndex = 48
+        Me.Aadhar_tb.Text = ""
         '
         'Label8
         '
@@ -338,32 +338,32 @@ Partial Class Banking_LoanDetails
         Me.Label10.TabIndex = 51
         Me.Label10.Text = "Principal Amount:"
         '
-        'RichTextBox6
+        'Principal_tb
         '
-        Me.RichTextBox6.BackColor = System.Drawing.Color.White
-        Me.RichTextBox6.Location = New System.Drawing.Point(990, 254)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox6.TabIndex = 52
-        Me.RichTextBox6.Text = ""
+        Me.Principal_tb.BackColor = System.Drawing.Color.White
+        Me.Principal_tb.Location = New System.Drawing.Point(990, 254)
+        Me.Principal_tb.Name = "Principal_tb"
+        Me.Principal_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Principal_tb.TabIndex = 52
+        Me.Principal_tb.Text = ""
         '
-        'RichTextBox7
+        'InterestRate_tb
         '
-        Me.RichTextBox7.BackColor = System.Drawing.Color.White
-        Me.RichTextBox7.Location = New System.Drawing.Point(990, 373)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox7.TabIndex = 54
-        Me.RichTextBox7.Text = ""
+        Me.InterestRate_tb.BackColor = System.Drawing.Color.White
+        Me.InterestRate_tb.Location = New System.Drawing.Point(990, 373)
+        Me.InterestRate_tb.Name = "InterestRate_tb"
+        Me.InterestRate_tb.Size = New System.Drawing.Size(294, 41)
+        Me.InterestRate_tb.TabIndex = 54
+        Me.InterestRate_tb.Text = ""
         '
-        'RichTextBox8
+        'CIBILscore_tb
         '
-        Me.RichTextBox8.BackColor = System.Drawing.Color.White
-        Me.RichTextBox8.Location = New System.Drawing.Point(169, 545)
-        Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox8.TabIndex = 55
-        Me.RichTextBox8.Text = ""
+        Me.CIBILscore_tb.BackColor = System.Drawing.Color.White
+        Me.CIBILscore_tb.Location = New System.Drawing.Point(169, 545)
+        Me.CIBILscore_tb.Name = "CIBILscore_tb"
+        Me.CIBILscore_tb.Size = New System.Drawing.Size(294, 41)
+        Me.CIBILscore_tb.TabIndex = 55
+        Me.CIBILscore_tb.Text = ""
         '
         'Label12
         '
@@ -387,14 +387,14 @@ Partial Class Banking_LoanDetails
         Me.Label11.TabIndex = 53
         Me.Label11.Text = "Interest Rate:"
         '
-        'RichTextBox9
+        'Duration_tb
         '
-        Me.RichTextBox9.BackColor = System.Drawing.Color.White
-        Me.RichTextBox9.Location = New System.Drawing.Point(990, 437)
-        Me.RichTextBox9.Name = "RichTextBox9"
-        Me.RichTextBox9.Size = New System.Drawing.Size(294, 41)
-        Me.RichTextBox9.TabIndex = 58
-        Me.RichTextBox9.Text = ""
+        Me.Duration_tb.BackColor = System.Drawing.Color.White
+        Me.Duration_tb.Location = New System.Drawing.Point(990, 437)
+        Me.Duration_tb.Name = "Duration_tb"
+        Me.Duration_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Duration_tb.TabIndex = 58
+        Me.Duration_tb.Text = ""
         '
         'Label13
         '
@@ -418,17 +418,17 @@ Partial Class Banking_LoanDetails
         Me.CheckBox1.Text = "I agree to the Terms and Conditions for availing the Loan."
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Submit_btn
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(836, 662)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(119, 39)
-        Me.Button1.TabIndex = 60
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Submit_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Submit_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Submit_btn.ForeColor = System.Drawing.Color.White
+        Me.Submit_btn.Location = New System.Drawing.Point(836, 662)
+        Me.Submit_btn.Name = "Submit_btn"
+        Me.Submit_btn.Size = New System.Drawing.Size(119, 39)
+        Me.Submit_btn.TabIndex = 60
+        Me.Submit_btn.Text = "Submit"
+        Me.Submit_btn.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -474,30 +474,30 @@ Partial Class Banking_LoanDetails
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1546, 772)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Submit_btn)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.RichTextBox9)
+        Me.Controls.Add(Me.Duration_tb)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.RichTextBox8)
-        Me.Controls.Add(Me.RichTextBox7)
+        Me.Controls.Add(Me.CIBILscore_tb)
+        Me.Controls.Add(Me.InterestRate_tb)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.RichTextBox6)
+        Me.Controls.Add(Me.Principal_tb)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.RichTextBox5)
-        Me.Controls.Add(Me.RichTextBox3)
+        Me.Controls.Add(Me.Aadhar_tb)
+        Me.Controls.Add(Me.Email_tb)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.RichTextBox4)
+        Me.Controls.Add(Me.Purpose_tb)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.RichTextBox2)
+        Me.Controls.Add(Me.ACno_tb)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Name_tb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Logout_btn)
         Me.Controls.Add(Me.Passbook_btn)
@@ -535,29 +535,29 @@ Partial Class Banking_LoanDetails
     Friend WithEvents Home_btn As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Name_tb As RichTextBox
+    Friend WithEvents ACno_tb As RichTextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents Purpose_tb As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox5 As RichTextBox
+    Friend WithEvents Email_tb As RichTextBox
+    Friend WithEvents Aadhar_tb As RichTextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents RichTextBox6 As RichTextBox
-    Friend WithEvents RichTextBox7 As RichTextBox
-    Friend WithEvents RichTextBox8 As RichTextBox
+    Friend WithEvents Principal_tb As RichTextBox
+    Friend WithEvents InterestRate_tb As RichTextBox
+    Friend WithEvents CIBILscore_tb As RichTextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents RichTextBox9 As RichTextBox
+    Friend WithEvents Duration_tb As RichTextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Submit_btn As Button
     Friend WithEvents RichTextBox10 As RichTextBox
 End Class

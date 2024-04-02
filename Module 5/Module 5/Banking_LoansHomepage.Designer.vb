@@ -52,8 +52,8 @@ Partial Class Banking_LoanHomepage
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CIBILScore_tb = New System.Windows.Forms.RichTextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TableTitle = New System.Windows.Forms.TextBox()
+        Me.PayNow_btn = New System.Windows.Forms.Button()
         Me.CurrentLoans_table = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -407,31 +407,31 @@ Partial Class Banking_LoanHomepage
         Me.CIBILScore_tb.TabIndex = 40
         Me.CIBILScore_tb.Text = ""
         '
-        'TextBox4
+        'TableTitle
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(37, 209)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(165, 35)
-        Me.TextBox4.TabIndex = 41
-        Me.TextBox4.Text = "Current Loans:"
+        Me.TableTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.TableTitle.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TableTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TableTitle.ForeColor = System.Drawing.Color.White
+        Me.TableTitle.Location = New System.Drawing.Point(37, 209)
+        Me.TableTitle.Multiline = True
+        Me.TableTitle.Name = "TableTitle"
+        Me.TableTitle.ReadOnly = True
+        Me.TableTitle.Size = New System.Drawing.Size(226, 35)
+        Me.TableTitle.TabIndex = 41
+        Me.TableTitle.Text = "Current Loans:"
         '
-        'Button1
+        'PayNow_btn
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(1, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(119, 39)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Pay Now"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.PayNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.PayNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PayNow_btn.ForeColor = System.Drawing.Color.White
+        Me.PayNow_btn.Location = New System.Drawing.Point(1, 0)
+        Me.PayNow_btn.Name = "PayNow_btn"
+        Me.PayNow_btn.Size = New System.Drawing.Size(119, 39)
+        Me.PayNow_btn.TabIndex = 42
+        Me.PayNow_btn.Text = "Pay Now"
+        Me.PayNow_btn.UseVisualStyleBackColor = False
         '
         'CurrentLoans_table
         '
@@ -513,7 +513,7 @@ Partial Class Banking_LoanHomepage
         '
         'PayNow_panel
         '
-        Me.PayNow_panel.Controls.Add(Me.Button1)
+        Me.PayNow_panel.Controls.Add(Me.PayNow_btn)
         Me.PayNow_panel.Location = New System.Drawing.Point(856, 295)
         Me.PayNow_panel.Name = "PayNow_panel"
         Me.PayNow_panel.Size = New System.Drawing.Size(123, 333)
@@ -570,7 +570,7 @@ Partial Class Banking_LoanHomepage
         Me.Controls.Add(Me.PendingRequests_btn)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.CurrentLoans_table)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TableTitle)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -647,8 +647,8 @@ Partial Class Banking_LoanHomepage
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CIBILScore_tb As RichTextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TableTitle As TextBox
+    Friend WithEvents PayNow_btn As Button
     Friend WithEvents CurrentLoans_table As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn

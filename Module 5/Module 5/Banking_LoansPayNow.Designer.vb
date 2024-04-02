@@ -48,7 +48,7 @@ Partial Class Banking_LoansPayNow
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PayNow_btn = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
@@ -341,17 +341,17 @@ Partial Class Banking_LoansPayNow
         Me.RichTextBox5.TabIndex = 59
         Me.RichTextBox5.Text = ""
         '
-        'Button1
+        'PayNow_btn
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(446, 712)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(186, 39)
-        Me.Button1.TabIndex = 61
-        Me.Button1.Text = "Pay Now"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.PayNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.PayNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PayNow_btn.ForeColor = System.Drawing.Color.White
+        Me.PayNow_btn.Location = New System.Drawing.Point(446, 712)
+        Me.PayNow_btn.Name = "PayNow_btn"
+        Me.PayNow_btn.Size = New System.Drawing.Size(186, 39)
+        Me.PayNow_btn.TabIndex = 61
+        Me.PayNow_btn.Text = "Pay Now"
+        Me.PayNow_btn.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -490,7 +490,7 @@ Partial Class Banking_LoansPayNow
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.RichTextBox6)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.PayNow_btn)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.RichTextBox5)
         Me.Controls.Add(Me.Label6)
@@ -554,7 +554,7 @@ Partial Class Banking_LoansPayNow
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents PayNow_btn As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents RichTextBox6 As RichTextBox

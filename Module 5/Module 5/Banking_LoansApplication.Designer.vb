@@ -33,7 +33,7 @@ Partial Class Banking_LoansApplication
         Me.Loans_btn = New System.Windows.Forms.Button()
         Me.Home_btn = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.HomeLoan_btn = New System.Windows.Forms.Button()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -41,16 +41,16 @@ Partial Class Banking_LoansApplication
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.EduLoan_btn = New System.Windows.Forms.Button()
         Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PersLoan_btn = New System.Windows.Forms.Button()
         Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox9 = New System.Windows.Forms.RichTextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TranspLoan_btn = New System.Windows.Forms.Button()
         Me.RichTextBox10 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox11 = New System.Windows.Forms.RichTextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.BusnLoan_btn = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,17 +179,17 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox1.TabIndex = 27
         Me.RichTextBox1.Text = "Click on the loan type you wish to apply for:"
         '
-        'Button1
+        'HomeLoan_btn
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(94, 190)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 47)
-        Me.Button1.TabIndex = 28
-        Me.Button1.Text = "Home"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.HomeLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.HomeLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HomeLoan_btn.ForeColor = System.Drawing.Color.White
+        Me.HomeLoan_btn.Location = New System.Drawing.Point(94, 190)
+        Me.HomeLoan_btn.Name = "HomeLoan_btn"
+        Me.HomeLoan_btn.Size = New System.Drawing.Size(120, 47)
+        Me.HomeLoan_btn.TabIndex = 28
+        Me.HomeLoan_btn.Text = "Home"
+        Me.HomeLoan_btn.UseVisualStyleBackColor = False
         '
         'RichTextBox2
         '
@@ -264,17 +264,17 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox5.TabIndex = 33
         Me.RichTextBox5.Text = ""
         '
-        'Button2
+        'EduLoan_btn
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(400, 190)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 47)
-        Me.Button2.TabIndex = 31
-        Me.Button2.Text = "Education"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.EduLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.EduLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EduLoan_btn.ForeColor = System.Drawing.Color.White
+        Me.EduLoan_btn.Location = New System.Drawing.Point(400, 190)
+        Me.EduLoan_btn.Name = "EduLoan_btn"
+        Me.EduLoan_btn.Size = New System.Drawing.Size(120, 47)
+        Me.EduLoan_btn.TabIndex = 31
+        Me.EduLoan_btn.Text = "Education"
+        Me.EduLoan_btn.UseVisualStyleBackColor = False
         '
         'RichTextBox6
         '
@@ -298,17 +298,17 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox7.TabIndex = 36
         Me.RichTextBox7.Text = ""
         '
-        'Button3
+        'PersLoan_btn
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(703, 190)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 47)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "Personal"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.PersLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.PersLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PersLoan_btn.ForeColor = System.Drawing.Color.White
+        Me.PersLoan_btn.Location = New System.Drawing.Point(703, 190)
+        Me.PersLoan_btn.Name = "PersLoan_btn"
+        Me.PersLoan_btn.Size = New System.Drawing.Size(120, 47)
+        Me.PersLoan_btn.TabIndex = 34
+        Me.PersLoan_btn.Text = "Personal"
+        Me.PersLoan_btn.UseVisualStyleBackColor = False
         '
         'RichTextBox8
         '
@@ -332,17 +332,17 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox9.TabIndex = 39
         Me.RichTextBox9.Text = ""
         '
-        'Button4
+        'TranspLoan_btn
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(1004, 190)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(120, 47)
-        Me.Button4.TabIndex = 37
-        Me.Button4.Text = "Transport"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.TranspLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.TranspLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TranspLoan_btn.ForeColor = System.Drawing.Color.White
+        Me.TranspLoan_btn.Location = New System.Drawing.Point(1004, 190)
+        Me.TranspLoan_btn.Name = "TranspLoan_btn"
+        Me.TranspLoan_btn.Size = New System.Drawing.Size(120, 47)
+        Me.TranspLoan_btn.TabIndex = 37
+        Me.TranspLoan_btn.Text = "Transport"
+        Me.TranspLoan_btn.UseVisualStyleBackColor = False
         '
         'RichTextBox10
         '
@@ -366,17 +366,17 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox11.TabIndex = 42
         Me.RichTextBox11.Text = ""
         '
-        'Button5
+        'BusnLoan_btn
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(1307, 190)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(120, 47)
-        Me.Button5.TabIndex = 40
-        Me.Button5.Text = "Business"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.BusnLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.BusnLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BusnLoan_btn.ForeColor = System.Drawing.Color.White
+        Me.BusnLoan_btn.Location = New System.Drawing.Point(1307, 190)
+        Me.BusnLoan_btn.Name = "BusnLoan_btn"
+        Me.BusnLoan_btn.Size = New System.Drawing.Size(120, 47)
+        Me.BusnLoan_btn.TabIndex = 40
+        Me.BusnLoan_btn.Text = "Business"
+        Me.BusnLoan_btn.UseVisualStyleBackColor = False
         '
         'Banking_LoansApplication
         '
@@ -386,19 +386,19 @@ Partial Class Banking_LoansApplication
         Me.ClientSize = New System.Drawing.Size(1546, 772)
         Me.Controls.Add(Me.RichTextBox10)
         Me.Controls.Add(Me.RichTextBox11)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.BusnLoan_btn)
         Me.Controls.Add(Me.RichTextBox8)
         Me.Controls.Add(Me.RichTextBox9)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.TranspLoan_btn)
         Me.Controls.Add(Me.RichTextBox6)
         Me.Controls.Add(Me.RichTextBox7)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.PersLoan_btn)
         Me.Controls.Add(Me.RichTextBox4)
         Me.Controls.Add(Me.RichTextBox5)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.EduLoan_btn)
         Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.RichTextBox3)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.HomeLoan_btn)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Logout_btn)
         Me.Controls.Add(Me.Passbook_btn)
@@ -435,19 +435,19 @@ Partial Class Banking_LoansApplication
     Friend WithEvents Home_btn As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents HomeLoan_btn As Button
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents RichTextBox3 As RichTextBox
     Friend WithEvents RichTextBox4 As RichTextBox
     Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents EduLoan_btn As Button
     Friend WithEvents RichTextBox6 As RichTextBox
     Friend WithEvents RichTextBox7 As RichTextBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents PersLoan_btn As Button
     Friend WithEvents RichTextBox8 As RichTextBox
     Friend WithEvents RichTextBox9 As RichTextBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents TranspLoan_btn As Button
     Friend WithEvents RichTextBox10 As RichTextBox
     Friend WithEvents RichTextBox11 As RichTextBox
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BusnLoan_btn As Button
 End Class

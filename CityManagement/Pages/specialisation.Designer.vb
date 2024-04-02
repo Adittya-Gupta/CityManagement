@@ -51,6 +51,7 @@ Partial Class specialisation
         Guna2GradientTileButton2 = New Guna.UI2.WinForms.Guna2GradientTileButton()
         Guna2GradientTileButton1 = New Guna.UI2.WinForms.Guna2GradientTileButton()
         RichTextBox2 = New RichTextBox()
+        Panel1 = New Panel()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -63,14 +64,14 @@ Partial Class specialisation
         ' 
         ' ComboBox2
         ' 
-        ComboBox2.BackColor = Color.FromArgb(217, 217, 217)
+        ComboBox2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ComboBox2.DrawMode = DrawMode.OwnerDrawVariable
-        ComboBox2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        ComboBox2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
         ComboBox2.IntegralHeight = False
         ComboBox2.ItemHeight = 24
-        ComboBox2.Location = New Point(500, 78)
+        ComboBox2.Location = New Point(434, 82)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
         ComboBox2.Size = New Size(283, 30)
@@ -81,17 +82,17 @@ Partial Class specialisation
         ' 
         Guna2TextBox1.BorderThickness = 0
         Guna2TextBox1.CustomizableEdges = CustomizableEdges13
-        Guna2TextBox1.DefaultText = "Doctors of City " + vbCrLf + "as per Specialisation" + vbCrLf
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208)
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226)
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138)
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138)
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255)
-        Guna2TextBox1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Guna2TextBox1.DefaultText = "Doctors of City " & vbCrLf & "as per Specialisation" & vbCrLf
+        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox1.ForeColor = Color.Black
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255)
-        Guna2TextBox1.Location = New Point(204, 70)
-        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
+        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Location = New Point(138, 74)
+        Guna2TextBox1.Margin = New Padding(4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
@@ -105,7 +106,7 @@ Partial Class specialisation
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(903, 83)
+        Guna2PictureBox2.Location = New Point(837, 87)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2PictureBox2.Size = New Size(22, 19)
@@ -117,7 +118,7 @@ Partial Class specialisation
         ' 
         ComboBox1.Font = New Font("Segoe UI", 11F)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(899, 78)
+        ComboBox1.Location = New Point(833, 82)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(100, 28)
         ComboBox1.TabIndex = 35
@@ -127,7 +128,7 @@ Partial Class specialisation
         ' 
         ComboBox3.Font = New Font("Segoe UI", 11F)
         ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(1005, 78)
+        ComboBox3.Location = New Point(939, 82)
         ComboBox3.Name = "ComboBox3"
         ComboBox3.Size = New Size(100, 28)
         ComboBox3.TabIndex = 36
@@ -138,7 +139,7 @@ Partial Class specialisation
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(1006, 83)
+        Guna2PictureBox1.Location = New Point(940, 87)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2PictureBox1.Size = New Size(22, 19)
@@ -151,9 +152,9 @@ Partial Class specialisation
         Guna2GradientTileButton4.CustomizableEdges = CustomizableEdges1
         Guna2GradientTileButton4.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton4.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientTileButton4.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton4.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        Guna2GradientTileButton4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton4.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton4.FillColor = Color.Black
         Guna2GradientTileButton4.FillColor2 = Color.Black
         Guna2GradientTileButton4.Font = New Font("Segoe UI", 13F)
@@ -170,9 +171,9 @@ Partial Class specialisation
         Guna2GradientTileButton3.CustomizableEdges = CustomizableEdges3
         Guna2GradientTileButton3.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton3.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientTileButton3.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton3.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        Guna2GradientTileButton3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton3.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton3.FillColor = Color.Black
         Guna2GradientTileButton3.FillColor2 = Color.Black
         Guna2GradientTileButton3.Font = New Font("Segoe UI", 13F)
@@ -189,12 +190,12 @@ Partial Class specialisation
         Guna2GradientTileButton2.CustomizableEdges = CustomizableEdges5
         Guna2GradientTileButton2.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientTileButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton2.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        Guna2GradientTileButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton2.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton2.FillColor = Color.Black
         Guna2GradientTileButton2.FillColor2 = Color.Black
-        Guna2GradientTileButton2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        Guna2GradientTileButton2.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton2.ForeColor = Color.White
         Guna2GradientTileButton2.Location = New Point(327, 6)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
@@ -208,12 +209,12 @@ Partial Class specialisation
         Guna2GradientTileButton1.CustomizableEdges = CustomizableEdges7
         Guna2GradientTileButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientTileButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
-        Guna2GradientTileButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        Guna2GradientTileButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton1.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2GradientTileButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientTileButton1.FillColor = Color.Black
         Guna2GradientTileButton1.FillColor2 = Color.Black
-        Guna2GradientTileButton1.Font = New Font("Segoe UI", 13F)
+        Guna2GradientTileButton1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         Guna2GradientTileButton1.ForeColor = Color.White
         Guna2GradientTileButton1.Location = New Point(26, 6)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
@@ -232,12 +233,21 @@ Partial Class specialisation
         RichTextBox2.TabIndex = 46
         RichTextBox2.Text = ""
         ' 
+        ' Panel1
+        ' 
+        Panel1.AutoScroll = True
+        Panel1.Location = New Point(74, 221)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(970, 457)
+        Panel1.TabIndex = 51
+        ' 
         ' specialisation
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1156, 749)
+        ClientSize = New Size(1097, 770)
+        Controls.Add(Panel1)
         Controls.Add(Guna2GradientTileButton4)
         Controls.Add(Guna2GradientTileButton3)
         Controls.Add(Guna2GradientTileButton2)
@@ -273,4 +283,5 @@ Partial Class specialisation
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class

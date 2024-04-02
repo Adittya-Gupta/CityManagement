@@ -42,13 +42,29 @@ Public Class makeAppointment
     End Sub
 
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
-        specialisation.Show()
-        Me.Close()
+        Dim specialisation As New specialisation()
+
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+
+        ' Check if the main form instance is not null
+        If Temp2 IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            Temp2.ShowChildFormInPanel(specialisation)
+        End If
     End Sub
 
     Private Sub Guna2GradientTileButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton2.Click
-        listHospitals.Show()
-        Me.Close()
+        Dim listHospitals As New listHospitals()
+
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+
+        ' Check if the main form instance is not null
+        If Temp2 IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            Temp2.ShowChildFormInPanel(listHospitals)
+        End If
     End Sub
 
     Private Sub Guna2GradientTileButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton3.Click
@@ -83,10 +99,10 @@ Public Class makeAppointment
 
         If Panel1.Controls.Count > 1 Then
             Dim prevMessageLabel As Control = Panel1.Controls(Panel1.Controls.Count - 2)
-            Doctor1.Left = 20
-            Doctor2.Left = 300
-            Doctor3.Left = 590
-            Doctor4.Left = 880
+            Doctor1.Left = 60
+            Doctor2.Left = Doctor1.Width + 60 + 20
+            Doctor3.Left = 60 + Doctor1.Width + 20 + Doctor2.Width + 20
+            Doctor4.Left = 60 + Doctor1.Width + 20 + Doctor2.Width + 20 + Doctor3.Width + 20
 
             Doctor3.Top = 0
             Doctor2.Top = 0

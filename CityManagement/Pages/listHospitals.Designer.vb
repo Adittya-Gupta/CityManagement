@@ -97,7 +97,7 @@ Partial Class listHospitals
         Guna2TextBox2.ForeColor = Color.Black
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Location = New Point(151, 99)
-        Guna2TextBox2.Margin = New Padding(4, 4, 4, 4)
+        Guna2TextBox2.Margin = New Padding(4)
         Guna2TextBox2.Name = "Guna2TextBox2"
         Guna2TextBox2.PasswordChar = ChrW(0)
         Guna2TextBox2.PlaceholderText = ""
@@ -254,7 +254,7 @@ Partial Class listHospitals
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1156, 749)
+        ClientSize = New Size(1097, 770)
         Controls.Add(Guna2GradientTileButton4)
         Controls.Add(Guna2GradientTileButton3)
         Controls.Add(Guna2GradientTileButton2)

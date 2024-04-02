@@ -31,12 +31,12 @@ Partial Class cListHospitals
         CurvedLabel5 = New CurvedLabel()
         CurvedLabel6 = New CurvedLabel()
         CurvedLabel4 = New CurvedLabel()
-        CurvedLabel2 = New CurvedLabel()
         CurvedLabel1 = New CurvedLabel()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
         Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         CurvedLabel3 = New CurvedLabel()
+        CurvedLabel2 = New CurvedLabel()
         SuspendLayout()
         ' 
         ' CurvedLabel5
@@ -75,23 +75,11 @@ Partial Class cListHospitals
         CurvedLabel4.TabIndex = 20
         CurvedLabel4.Text = "Hospital"
         ' 
-        ' CurvedLabel2
-        ' 
-        CurvedLabel2.AutoSize = True
-        CurvedLabel2.BackColor = Color.White
-        CurvedLabel2.CornerRadius = 10
-        CurvedLabel2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel2.Location = New Point(367, 61)
-        CurvedLabel2.Name = "CurvedLabel2"
-        CurvedLabel2.Size = New Size(161, 19)
-        CurvedLabel2.TabIndex = 18
-        CurvedLabel2.Text = "CurvedLabel1 Adityta"
-        ' 
         ' CurvedLabel1
         ' 
         CurvedLabel1.AutoSize = True
         CurvedLabel1.BackColor = Color.White
-        CurvedLabel1.CornerRadius = 10
+        CurvedLabel1.CornerRadius = 1
         CurvedLabel1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel1.Location = New Point(50, 61)
         CurvedLabel1.Name = "CurvedLabel1"
@@ -135,11 +123,11 @@ Partial Class cListHospitals
         Guna2TileButton1.FocusedColor = Color.White
         Guna2TileButton1.Font = New Font("Segoe UI", 9F)
         Guna2TileButton1.ForeColor = Color.White
-        Guna2TileButton1.Location = New Point(0, 8)
+        Guna2TileButton1.Location = New Point(-1, 8)
         Guna2TileButton1.Name = "Guna2TileButton1"
         Guna2TileButton1.PressedColor = Color.BlanchedAlmond
         Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TileButton1.Size = New Size(925, 91)
+        Guna2TileButton1.Size = New Size(928, 91)
         Guna2TileButton1.TabIndex = 15
         Guna2TileButton1.TextRenderingHint = Drawing.Text.TextRenderingHint.SystemDefault
         ' 
@@ -170,7 +158,7 @@ Partial Class cListHospitals
         ' 
         CurvedLabel3.AutoSize = True
         CurvedLabel3.BackColor = Color.White
-        CurvedLabel3.CornerRadius = 10
+        CurvedLabel3.CornerRadius = 1
         CurvedLabel3.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel3.Location = New Point(671, 61)
         CurvedLabel3.Name = "CurvedLabel3"
@@ -178,18 +166,30 @@ Partial Class cListHospitals
         CurvedLabel3.TabIndex = 25
         CurvedLabel3.Text = "CurvedLabel1 Adityta"
         ' 
+        ' CurvedLabel2
+        ' 
+        CurvedLabel2.AutoSize = True
+        CurvedLabel2.BackColor = Color.White
+        CurvedLabel2.CornerRadius = 1
+        CurvedLabel2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel2.Location = New Point(363, 61)
+        CurvedLabel2.Name = "CurvedLabel2"
+        CurvedLabel2.Size = New Size(161, 19)
+        CurvedLabel2.TabIndex = 26
+        CurvedLabel2.Text = "CurvedLabel1 Adityta"
+        ' 
         ' cListHospitals
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         BorderStyle = BorderStyle.FixedSingle
+        Controls.Add(CurvedLabel2)
         Controls.Add(CurvedLabel3)
         Controls.Add(Guna2TextBox2)
         Controls.Add(CurvedLabel5)
         Controls.Add(CurvedLabel6)
         Controls.Add(CurvedLabel4)
-        Controls.Add(CurvedLabel2)
         Controls.Add(CurvedLabel1)
         Controls.Add(Guna2TextBox1)
         Controls.Add(Guna2TileButton1)
@@ -202,11 +202,11 @@ Partial Class cListHospitals
     Friend WithEvents CurvedLabel5 As CurvedLabel
     Friend WithEvents CurvedLabel6 As CurvedLabel
     Friend WithEvents CurvedLabel4 As CurvedLabel
-    Friend WithEvents CurvedLabel2 As CurvedLabel
     Friend WithEvents CurvedLabel1 As CurvedLabel
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CurvedLabel3 As CurvedLabel
+    Friend WithEvents CurvedLabel2 As CurvedLabel
 
 End Class

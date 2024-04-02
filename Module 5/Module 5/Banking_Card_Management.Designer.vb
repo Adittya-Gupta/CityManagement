@@ -70,7 +70,7 @@ Partial Class Banking_Card_Management
         'Debit_Card_btn
         '
         Me.Debit_Card_btn.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Debit_Card_btn.Font = New System.Drawing.Font("Adobe Hebrew", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Debit_Card_btn.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Debit_Card_btn.ForeColor = System.Drawing.Color.White
         Me.Debit_Card_btn.Location = New System.Drawing.Point(715, 162)
         Me.Debit_Card_btn.Name = "Debit_Card_btn"
@@ -82,7 +82,7 @@ Partial Class Banking_Card_Management
         'Credit_Card_btn
         '
         Me.Credit_Card_btn.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Credit_Card_btn.Font = New System.Drawing.Font("Adobe Hebrew", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Credit_Card_btn.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Credit_Card_btn.ForeColor = System.Drawing.Color.White
         Me.Credit_Card_btn.Location = New System.Drawing.Point(715, 290)
         Me.Credit_Card_btn.Name = "Credit_Card_btn"
@@ -105,6 +105,7 @@ Partial Class Banking_Card_Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1333, 594)
         Me.Controls.Add(Me.Credit_Card_btn)
         Me.Controls.Add(Me.Debit_Card_btn)

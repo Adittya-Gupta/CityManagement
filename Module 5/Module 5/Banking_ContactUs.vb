@@ -20,10 +20,15 @@ Public Class Banking_ContactUs
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "bankingdatabase"
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
+
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
 
     Public bank_account_no As Integer = 1
     Public bank_username As String = "admin"
@@ -41,7 +46,7 @@ Public Class Banking_ContactUs
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "INSERT INTO bankingdatabase.QueryLog(Bank_Account_Number,Type_of_Query,Day,Query,Status,Reply)" &
+        sqlCmd.CommandText = "INSERT INTO banking_database.QueryLog(Bank_Account_Number,Type_of_Query,Day,Query,Status,Reply)" &
                              "VALUES (@BAN,'" & query_type & "',CURDATE(),'" & TextBox2.Text & "','PENDING','-');"
 
         sqlCmd.Parameters.Add("@BAN", MySqlDbType.Int64).Value = bank_account_no

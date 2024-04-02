@@ -2,6 +2,16 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Banking_Card_Management
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
     Public bank_username As String = "admin"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim conn As New MySqlConnection(connString)
@@ -9,46 +19,41 @@ Public Class Banking_Card_Management
 
     Private Sub Debit_Card_btn_Click(sender As Object, e As EventArgs) Handles Debit_Card_btn.Click
         ' Create an instance of the new form
-        Dim form2 As New Banking_Debit_Card_Page()
 
         ' Show the new form
         'form2.Show()
-        ' Close the current form
-        'Me.Hide()
-        Dim childForm As New Banking_Debit_Card_Page()
-
-        ' Set the bank username property of the new child form
-        childForm.bank_username = Me.bank_username
-
-        ' Access the parent form and call the ChildForm method to load the new child form
+        Banking_Debit_Card_Page.bank_username = bank_username
+        ChildForm(Banking_Main.Panel1, Banking_Debit_Card_Page)
 
     End Sub
 
     Private Sub Credit_Card_btn_Click(sender As Object, e As EventArgs) Handles Credit_Card_btn.Click
         If has_credit_card Then
             ' Open form1
-            Dim form1 As New Banking_Credit_Card_Page()
-            form1.Show()
+            'Dim form1 As New Banking_Credit_Card_Page()
+            'form1.Show()
+            Banking_Credit_Card_Page.bank_username = bank_username
+            ChildForm(Banking_Main.Panel1, Banking_Credit_Card_Page)
         Else
             'Open form2
-            Dim form2 As New Banking_Apply_Credit_Card()
-            form2.Show()
+            Banking_Apply_Credit_Card.bank_username = bank_username
+            ChildForm(Banking_Main.Panel1, Banking_Apply_Credit_Card)
         End If
         ' Close the current form
-        Me.Hide()
+        'Me.Hide()
 
     End Sub
 
     Private Sub Banking_Card_Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim bank_account_number As Integer = 123
-
+        'Dim bank_account_number As Integer = 123
+        'MessageBox.Show(bank_username)
         Try
             conn.Open()
 
 
             Dim query = "SELECT CardNumber, Type, CIBIL_Score, Expiry_Date, Cvv
                  FROM CreditDebitCard
-                WHERE Type='CREDIT' and Bank_Account_Number = " & bank_account_number & ";"
+                WHERE Type='CREDIT' and bank_username = '" & bank_username & "';"
 
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader

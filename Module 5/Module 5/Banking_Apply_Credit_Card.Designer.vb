@@ -24,14 +24,16 @@ Partial Class Banking_Apply_Credit_Card
     Private Sub InitializeComponent()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Apply_btn = New System.Windows.Forms.Button()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.CheckBox = New System.Windows.Forms.CheckBox()
+        Me.Income_Proof_tb = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Income_tb = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Choose_btn = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,29 +64,28 @@ Partial Class Banking_Apply_Credit_Card
         Me.Apply_btn.Text = "Apply"
         Me.Apply_btn.UseVisualStyleBackColor = False
         '
-        'CheckBox2
+        'CheckBox
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(649, 346)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(22, 21)
-        Me.CheckBox2.TabIndex = 130
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox.AutoSize = True
+        Me.CheckBox.Location = New System.Drawing.Point(649, 346)
+        Me.CheckBox.Name = "CheckBox"
+        Me.CheckBox.Size = New System.Drawing.Size(22, 21)
+        Me.CheckBox.TabIndex = 130
+        Me.CheckBox.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'Income_Proof_tb
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Adobe Hebrew", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(649, 241)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(284, 46)
-        Me.TextBox6.TabIndex = 128
-        Me.TextBox6.Text = "  Income.pdf"
+        Me.Income_Proof_tb.BackColor = System.Drawing.Color.White
+        Me.Income_Proof_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Income_Proof_tb.Font = New System.Drawing.Font("Adobe Hebrew", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Income_Proof_tb.ForeColor = System.Drawing.Color.Black
+        Me.Income_Proof_tb.Location = New System.Drawing.Point(649, 241)
+        Me.Income_Proof_tb.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Income_Proof_tb.Multiline = True
+        Me.Income_Proof_tb.Name = "Income_Proof_tb"
+        Me.Income_Proof_tb.ReadOnly = True
+        Me.Income_Proof_tb.Size = New System.Drawing.Size(284, 46)
+        Me.Income_Proof_tb.TabIndex = 128
         '
         'TextBox7
         '
@@ -134,20 +135,19 @@ Partial Class Banking_Apply_Credit_Card
         Me.PictureBox3.TabIndex = 124
         Me.PictureBox3.TabStop = False
         '
-        'TextBox4
+        'Income_tb
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Adobe Hebrew", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(649, 135)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(284, 41)
-        Me.TextBox4.TabIndex = 123
-        Me.TextBox4.Text = "  XXXXX"
+        Me.Income_tb.BackColor = System.Drawing.Color.White
+        Me.Income_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Income_tb.Font = New System.Drawing.Font("Adobe Hebrew", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Income_tb.ForeColor = System.Drawing.Color.Black
+        Me.Income_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Income_tb.Location = New System.Drawing.Point(649, 135)
+        Me.Income_tb.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Income_tb.Multiline = True
+        Me.Income_tb.Name = "Income_tb"
+        Me.Income_tb.Size = New System.Drawing.Size(284, 41)
+        Me.Income_tb.TabIndex = 123
         '
         'TextBox3
         '
@@ -164,20 +164,37 @@ Partial Class Banking_Apply_Credit_Card
         Me.TextBox3.TabIndex = 122
         Me.TextBox3.Text = "Annual Salary" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'Choose_btn
+        '
+        Me.Choose_btn.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Choose_btn.Font = New System.Drawing.Font("Adobe Hebrew", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Choose_btn.ForeColor = System.Drawing.Color.White
+        Me.Choose_btn.Location = New System.Drawing.Point(959, 241)
+        Me.Choose_btn.Name = "Choose_btn"
+        Me.Choose_btn.Size = New System.Drawing.Size(109, 46)
+        Me.Choose_btn.TabIndex = 133
+        Me.Choose_btn.Text = "Choose"
+        Me.Choose_btn.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Banking_Apply_Credit_Card
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1798, 843)
+        Me.Controls.Add(Me.Choose_btn)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Apply_btn)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.CheckBox)
+        Me.Controls.Add(Me.Income_Proof_tb)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Income_tb)
         Me.Controls.Add(Me.TextBox3)
         Me.Name = "Banking_Apply_Credit_Card"
         Me.Text = "Apply_Credit_Card"
@@ -189,12 +206,14 @@ Partial Class Banking_Apply_Credit_Card
 
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Apply_btn As Button
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents CheckBox As CheckBox
+    Friend WithEvents Income_Proof_tb As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Income_tb As TextBox
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Choose_btn As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

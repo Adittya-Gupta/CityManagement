@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Banking_Credit_Card_Page
 
+    Public bank_username As String = "admin"
+
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim bank_account_number As Integer = 123
@@ -13,7 +15,7 @@ Public Class Banking_Credit_Card_Page
 
             Dim query = "SELECT CardNumber,Join_date
                  FROM CreditDebitCard
-                WHERE Type='CREDIT' and Bank_Account_Number = " & bank_account_number & ";"
+                WHERE Type='CREDIT' and bank_username = '" & bank_username & "';"
 
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
@@ -52,6 +54,26 @@ Public Class Banking_Credit_Card_Page
                 Card_Number_lbl.Text = cardNumber
                 Member_Since_lbl.Text = month & "/" & year
                 Valid_Thru_lbl.Text = expiryMonth & "/" & expiryYear
+
+                'MessageBox.Show(bank_username)
+
+                Dim query2 = "SELECT Name
+                 From UserData
+                WHERE Username = '" & bank_username & "';"
+
+                Dim cmd2 = New MySqlCommand(query2, conn)
+                Dim reader2 = cmd2.ExecuteReader
+                Dim sqlDt2 As New DataTable
+                sqlDt2.Load(reader2)
+
+                Dim Name As String = sqlDt2.Rows(0)("Name").ToString()
+                Name_lbl.Text = Name
+
+                reader2.Close()
+                ' sqlDt.Load(reader)
+                ' reader.Close()
+
+
             End If
 
 

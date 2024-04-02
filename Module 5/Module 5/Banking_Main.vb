@@ -2,7 +2,7 @@
 
     'Make this form full screen
     Public bank_account_no As Integer = 1
-    Public bank_username As String = "admin"
+    Public bank_username As String = "abinash"
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
@@ -12,6 +12,18 @@
         parentpanel.Controls.Add(childform)
         childform.Show()
     End Sub
+    Public Shared Function NavBarCheck() As Boolean
+        For Each ctrl As Control In Banking_Main.Panel1.Controls
+            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
+                Return True
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+                Return True
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
 
 
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -71,50 +83,32 @@
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        For Each ctrl As Control In Panel1.Controls
-            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
-                Return
-            End If
-        Next
+        If NavBarCheck() Then
+            Return
+        End If
         Banking_ContactUs.bank_username = bank_username
         ChildForm(Panel1, Banking_ContactUs)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
         ' Iterate through each control within Panel1
-        For Each ctrl As Control In Panel1.Controls
-            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
-                Return
-            End If
-        Next
+        If NavBarCheck() Then
+            Return
+        End If
 
         Banking_Passbook.bank_username = bank_username
         ChildForm(Panel1, Banking_Passbook)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        For Each ctrl As Control In Panel1.Controls
-            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
-                Return
-            End If
-        Next
+        If NavBarCheck() Then
+            Return
+        End If
         Banking_Card_Management.bank_username = bank_username
-        'ChildForm(Panel1, Banking_Card_Management)
+        ChildForm(Panel1, Banking_Card_Management)
         'ChildForm(Panel1, Banking_Debit_Card_Page)
         'ChildForm(Panel1, Banking_Credit_Card_Page)
-        ChildForm(Panel1, Banking_Apply_Credit_Card)
+        'ChildForm(Panel1, Banking_Apply_Credit_Card)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -122,17 +116,11 @@
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        For Each ctrl As Control In Panel1.Controls
-            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
-                Return
-            End If
-        Next
-        Banking_LoanHomepage.bank_username = bank_username
-        ChildForm(Panel1, Banking_LoanHomepage)
+        If NavBarCheck() Then
+            Return
+        End If
+        'Banking_LoanHomepage.bank_username = bank_username
+        ' ChildForm(Panel1, Banking_LoanHomepage)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
@@ -142,15 +130,9 @@
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         ' Iterate through each control within Panel1
-        For Each ctrl As Control In Panel1.Controls
-            If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
-                Return
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
-                Return
-            End If
-        Next
+        If NavBarCheck() Then
+            Return
+        End If
         Login.bank_username = bank_username
         ChildForm(Panel1, Login)
     End Sub

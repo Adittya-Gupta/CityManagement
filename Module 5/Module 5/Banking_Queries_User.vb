@@ -12,10 +12,16 @@ Public Class Banking_Queries_User
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "bankingdatabase"
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    ' Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
+
+
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
 
 
     Private Sub ClearFields()
@@ -45,7 +51,7 @@ Public Class Banking_Queries_User
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM bankingdatabase.QueryLog where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "SELECT * FROM banking_database.QueryLog where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
 
@@ -153,7 +159,7 @@ Public Class Banking_Queries_User
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from bankingdatabase.querylog where Query_ID = @ID;"
+        sqlCmd.CommandText = "Select * from banking_database.QueryLog where Query_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = Query_ID
 

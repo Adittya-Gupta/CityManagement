@@ -1,4 +1,16 @@
-﻿Public Class Banking_LoanDetails
+﻿Imports System.IO
+
+Public Class Banking_LoanDetails
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
     Private Sub Submit_btn_Click(sender As Object, e As EventArgs) Handles Submit_btn.Click
         'do form validation
         Name_tb.Clear()
@@ -11,12 +23,12 @@
         InterestRate_tb.Clear()
         Duration_tb.Clear()
 
-        MessageBox.Show("Submit Success!")
-    End Sub
+        If CheckBox1.Checked = True Then
+            MessageBox.Show("Submit Success!")
+        Else
+            MessageBox.Show("You must agree to the terms and conditions.")
+        End If
 
-    Private Sub Loans_btn_Click(sender As Object, e As EventArgs) Handles Loans_btn.Click
-        Me.Hide()
-        Banking_LoanHomepage.Show()
     End Sub
 
     Private Sub Banking_LoanDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,11 +1,8 @@
 ﻿Public Class ListOfChats
-    'New instance of UrbanClapNav
-    Private UrbanClapNavForm As UrbanClapNav
 
     'Constructor
-    Public Sub New(ParentForm As UrbanClapNav)
+    Public Sub New()
         InitializeComponent()
-        Me.UrbanClapNavForm = ParentForm
     End Sub
 
     'Load the form
@@ -39,7 +36,7 @@
     End Sub
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
-        UrbanClapNavForm.HideCurvedLabels()
-        UrbanClapNavForm.ShowFormInPanel(UrbanClapNavForm.HomePage)
+        Globals.UrbanClapNavForm.HideCurvedLabels()
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
     End Sub
 End Class

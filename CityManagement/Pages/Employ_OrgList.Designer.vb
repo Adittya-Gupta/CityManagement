@@ -164,7 +164,7 @@ Partial Class EmployOrgList
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1254, 953)
         Controls.Add(CurvedLabel9)
         Controls.Add(CurvedLabel10)
         Controls.Add(CurvedLabel8)

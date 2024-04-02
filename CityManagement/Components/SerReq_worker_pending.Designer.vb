@@ -65,6 +65,7 @@ Partial Class SerReq_worker_pending
         ' 
         ' Button1
         ' 
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
@@ -78,6 +79,7 @@ Partial Class SerReq_worker_pending
         ' 
         ' Button2
         ' 
+        Button2.Cursor = Cursors.Hand
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
@@ -106,6 +108,7 @@ Partial Class SerReq_worker_pending
         ' 
         ' Label7
         ' 
+        Label7.Cursor = Cursors.Hand
         Label7.Image = My.Resources.Resources.Vector
         Label7.Location = New Point(467, 62)
         Label7.Name = "Label7"

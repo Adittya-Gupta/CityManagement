@@ -34,7 +34,7 @@ Partial Class ListofChats
         ' 
         Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label4.Location = New Point(211, 105)
+        Label4.Location = New Point(242, 105)
         Label4.Name = "Label4"
         Label4.Size = New Size(198, 61)
         Label4.TabIndex = 6
@@ -44,7 +44,7 @@ Partial Class ListofChats
         ' 
         Label1.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label1.Location = New Point(769, 105)
+        Label1.Location = New Point(846, 105)
         Label1.Name = "Label1"
         Label1.Size = New Size(176, 61)
         Label1.TabIndex = 7
@@ -62,8 +62,8 @@ Partial Class ListofChats
         ' SplitContainer1.Panel2
         ' 
         SplitContainer1.Panel2.AutoScroll = True
-        SplitContainer1.Size = New Size(1100, 690)
-        SplitContainer1.SplitterDistance = 550
+        SplitContainer1.Size = New Size(1188, 729)
+        SplitContainer1.SplitterDistance = 594
         SplitContainer1.TabIndex = 8
         ' 
         ' CurvedLabel9
@@ -71,7 +71,7 @@ Partial Class ListofChats
         CurvedLabel9.CornerRadius = 10
         CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
         CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1008, 0)
+        CurvedLabel9.Location = New Point(1108, 0)
         CurvedLabel9.Name = "CurvedLabel9"
         CurvedLabel9.Size = New Size(148, 52)
         CurvedLabel9.TabIndex = 24
@@ -83,7 +83,7 @@ Partial Class ListofChats
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1156, 908)
+        ClientSize = New Size(1254, 953)
         Controls.Add(CurvedLabel9)
         Controls.Add(SplitContainer1)
         Controls.Add(Label1)

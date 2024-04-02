@@ -59,7 +59,7 @@ Partial Class ListItem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Electrician2
+        PictureBox1.Image = My.Resources.Resources.download
         PictureBox1.Location = New Point(32, 12)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(93, 93)
@@ -70,7 +70,7 @@ Partial Class ListItem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Exo 2", 9F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(136, 7)
         Label1.Name = "Label1"
@@ -81,7 +81,7 @@ Partial Class ListItem
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Exo 2 Semi Bold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(171, 43)
         Label2.Name = "Label2"
@@ -92,7 +92,7 @@ Partial Class ListItem
         ' Label3
         ' 
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Exo 2 Thin", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Abhaya Libre Medium", 9F)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(136, 79)
         Label3.Name = "Label3"
@@ -102,7 +102,7 @@ Partial Class ListItem
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.Image = My.Resources.Resources.Location
+        PictureBox2.Image = My.Resources.Resources.download__2_
         PictureBox2.Location = New Point(136, 43)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(15, 22)

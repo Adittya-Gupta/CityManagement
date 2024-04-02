@@ -33,7 +33,7 @@ Partial Class Chatlistitem
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Exo 2 Semi Bold", 10F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 10F)
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(133, 65)
         Label2.Name = "Label2"
@@ -43,7 +43,7 @@ Partial Class Chatlistitem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Electrician2
+        PictureBox1.Image = My.Resources.Resources.download
         PictureBox1.Location = New Point(25, 11)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(93, 93)
@@ -73,7 +73,7 @@ Partial Class Chatlistitem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Exo 2", 11F, FontStyle.Bold)
+        Label1.Font = New Font("Exo 2 Semi Bold", 12F, FontStyle.Bold)
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(133, 20)
         Label1.Name = "Label1"

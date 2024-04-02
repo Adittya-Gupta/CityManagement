@@ -2,17 +2,16 @@
 Imports System.Windows.Media.Effects
 
 Public Class Chats
-    Private UrbanClapNavForm As UrbanClapNav
     Public username As String
-    Public Sub New(ByVal ParentForm As UrbanClapNav, Optional ByVal Username As String = "John Doe")
+    Public MsgBox As MessageBox
+    Public Sub New(Optional ByVal Username As String = "John Doe")
         InitializeComponent()
-        Me.UrbanClapNavForm = ParentForm
         Me.username = Username
     End Sub
 
     Private Sub CurvedLabel9_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CurvedLabel9.Click
-        UrbanClapNavForm.Chatspage = UrbanClapNavForm.listofChatsForm
-        UrbanClapNavForm.ShowFormInPanel(UrbanClapNavForm.Chatspage)
+        Globals.Chatspage = Globals.listofChatsForm
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
     End Sub
     Private Sub MakePictureBoxRound(ByVal pictureBox As PictureBox)
         ' Create a GraphicsPath to define a circle
@@ -21,6 +20,9 @@ Public Class Chats
 
         ' Set the PictureBox's region to the circle defined by the GraphicsPath
         pictureBox.Region = New Region(path)
+    End Sub
+    Private Sub Chats_Show(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.VisibleChanged
+        Panel1.AutoScrollPosition = New Point(0, Panel1.VerticalScroll.Maximum)
     End Sub
     Private Sub Chats_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Label2.Text = username
@@ -36,7 +38,7 @@ Public Class Chats
     Private Sub Label1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Label1.Click
         ' Get the text from RichTextBox1 and trim whitespace
         Dim message As String = RichTextBox1.Text.Trim()
-        If message.Length > 0 And message IsNot "Type a message" Then
+        If message.Length > 0 And message <> "Type a message" Then
             ' Create a new ChatElement with the message text
             Dim newChatElement As New ChatElement(message)
 
@@ -53,8 +55,10 @@ Public Class Chats
             Panel1.Controls.Add(newChatElement)
             RichTextBox1.Clear()
         Else
+            ' Start the timer
+            Timer1.Start()
             ' Show an error message if the message is empty
-            MessageBox.Show("Please enter a message.")
+            MessageBox.Show("Please enter a message.", "Empty Text", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
@@ -71,6 +75,11 @@ Public Class Chats
             RichTextBox1.ForeColor = Color.Gray ' Change text color to placeholder color
         End If
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' Close the form when the timer ticks
+    End Sub
+
 
     Private Sub Label2_Paint(sender As Object, e As PaintEventArgs) Handles Label2.Paint
         Dim rect As Rectangle = Label2.ClientRectangle

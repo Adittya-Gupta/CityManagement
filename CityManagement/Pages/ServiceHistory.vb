@@ -1,11 +1,15 @@
 ﻿Imports CityManagement.HistoryItem
 
 Public Class ServiceHistory
-    Private UrbanClapNavForm As UrbanClapNav
-
-    Public Sub New(ParentForm As UrbanClapNav)
+    Private Historyfilterform As New Historyfilter()
+    Public Sub New()
         InitializeComponent()
-        Me.UrbanClapNavForm = ParentForm
+        AddHandler Me.VisibleChanged, AddressOf ServiceHistory_VisibleChanged
+    End Sub
+    Private Sub ServiceHistory_VisibleChanged(sender As Object, e As EventArgs)
+        If Not Me.Visible Then
+            Historyfilterform.Hide()
+        End If
     End Sub
 
     Private Sub ServiceHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,8 +39,8 @@ Public Class ServiceHistory
     End Sub
 
     Private Sub CurvedLabel9_Click(sender As Object, e As EventArgs) Handles CurvedLabel9.Click
-        UrbanClapNavForm.ShowFormInPanel(UrbanClapNavForm.HomePage)
-        UrbanClapNavForm.HideCurvedLabels()
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
+        Globals.UrbanClapNavForm.HideCurvedLabels()
     End Sub
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
         If TextBox1.Text = "Search History" Then
@@ -51,4 +55,17 @@ Public Class ServiceHistory
             TextBox1.ForeColor = Color.Gray ' Change text color to placeholder color
         End If
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        ' Check if Filterform is already visible
+        If Historyfilterform.Visible Then
+            ' If Filterform is already visible, hide it
+            Historyfilterform.Hide()
+        Else
+            Historyfilterform.BringToFront()
+            ' If Filterform is not visible, show it
+            Historyfilterform.Show()
+        End If
+    End Sub
+
 End Class

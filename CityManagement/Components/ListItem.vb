@@ -27,8 +27,9 @@ Public Class ListItem
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        UrbanClapNavform.chatsForm.Label2.Text = Label1.Text
-        UrbanClapNavform.ShowFormInPanel(UrbanClapNavform.chatsForm)
+        Globals.chatsForm.Label2.Text = Label1.Text
+        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
+        Globals.UrbanClapNavForm.ShowCurvedLabels_chats()
     End Sub
 
 End Class

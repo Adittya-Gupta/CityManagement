@@ -145,7 +145,7 @@ Partial Class RegularServicesList
         backButton.FlatStyle = FlatStyle.Flat
         backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
-        backButton.Location = New Point(1098, 12)
+        backButton.Location = New Point(1131, 12)
         backButton.Name = "backButton"
         backButton.Size = New Size(111, 43)
         backButton.TabIndex = 29
@@ -156,7 +156,7 @@ Partial Class RegularServicesList
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1254, 953)
         Controls.Add(backButton)
         Controls.Add(CurvedLabel8)
         Controls.Add(CurvedLabel4)

@@ -15,6 +15,9 @@ Public Class transport_cabavailable
     Public Shared fromNodeId As Integer
     Public Shared toNodeId As Integer
     Public Shared cab_arrival_times As New Dictionary(Of Integer, DateTime)
+    Public Shared selected_cab As Integer
+    Public Shared extended As Integer = 0
+    Public Shared newcab As Integer = 0
     'Dim arrivalTimes As New List(Of Integer)
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
@@ -102,11 +105,22 @@ Public Class transport_cabavailable
                             End Using
                             If vacancies > 0 Then
                                 gotCab = True
+
                                 Dim card As New transport_cabCards
                                 card.Label6.Text = transport_cabbooking.FromLocation
                                 card.Label7.Text = transport_cabbooking.ToLocation
                                 card.Label5.Text = arrivalTime.ToString
                                 card.Label8.Text = driverName
+                                AddHandler card.Button1.Click, Sub()
+                                                                   ' Open the page here
+                                                                   ' For example, you can open a new form
+
+                                                                   selected_cab = cabId
+                                                                   Dim newForm As New transport_cabconfirm()
+
+                                                                   newForm.ShowDialog()
+                                                               End Sub
+
                                 FlowLayoutPanel1.Controls.Add(card)
                             End If
 
@@ -150,11 +164,21 @@ Public Class transport_cabavailable
                                 End Using
                                 If vacancies > 0 Then
                                     gotCab = True
+
                                     Dim card As New transport_cabCards
                                     card.Label6.Text = transport_cabbooking.FromLocation
                                     card.Label7.Text = transport_cabbooking.ToLocation
                                     card.Label5.Text = arrivalTime.ToString
                                     card.Label8.Text = driverName
+                                    AddHandler card.Button1.Click, Sub()
+                                                                       ' Open the page here
+                                                                       ' For example, you can open a new form
+                                                                       extended = newPathId
+                                                                       selected_cab = cabId
+                                                                       Dim newForm As New transport_cabconfirm()
+
+                                                                       newForm.ShowDialog()
+                                                                   End Sub
                                     FlowLayoutPanel1.Controls.Add(card)
                                 End If
                             End If
@@ -196,11 +220,14 @@ Public Class transport_cabavailable
                             driverName = Convert.ToString(result)
                         End If
                     End Using
+                    selected_cab = availableCabId
+                    newcab = 1
                     Dim card As New transport_cabCards
                     card.Label6.Text = transport_cabbooking.FromLocation
                     card.Label7.Text = transport_cabbooking.ToLocation
                     card.Label5.Text = transport_cabbooking.sqlFormattedDateTime.ToString
                     card.Label8.Text = driverName
+                    AddHandler card.Button1.Click, AddressOf CardButton_Click
                     FlowLayoutPanel1.Controls.Add(card)
                 Else
                     ' No available cabs
@@ -214,6 +241,13 @@ Public Class transport_cabavailable
         End Try
     End Sub
 
+    Private Sub CardButton_Click(sender As Object, e As EventArgs)
+        ' Open the page here
+        ' For example, you can open a new form
+        Dim newForm As New transport_cabconfirm()
+
+        newForm.ShowDialog()
+    End Sub
     Private Function extend_path(cabId As Integer) As Boolean
         Dim isPrefixPath As Boolean = True
         Try

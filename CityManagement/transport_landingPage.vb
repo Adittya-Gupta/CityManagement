@@ -6,7 +6,7 @@
         Dim form2 As New transport_busSearch
 
         ' Show Form2
-        form2.Show
+        form2.Show()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -36,5 +36,9 @@
 
         form2.ShowDialog()
         Me.Show()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 End Class

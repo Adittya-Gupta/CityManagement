@@ -32,27 +32,30 @@ Partial Class transport_citymap
         ' 
         ' Panel1
         ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.Black
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(148, 1)
+        Panel1.Location = New Point(1, 1)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1056, 84)
+        Panel1.Size = New Size(1405, 84)
         Panel1.TabIndex = 7
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Yu Gothic", 21.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Exo 2", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(175, 22)
+        Label1.Location = New Point(335, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(668, 48)
+        Label1.Size = New Size(700, 48)
         Label1.TabIndex = 0
         Label1.Text = "Welcome to Transportation Module!"
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.Location = New Point(223, 92)

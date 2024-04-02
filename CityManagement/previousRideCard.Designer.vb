@@ -28,9 +28,9 @@ Partial Class previousRideCard
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
+        Label11 = New Label()
         Label10 = New Label()
         PictureBox1 = New PictureBox()
-        Label11 = New Label()
         Panel4.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -45,28 +45,27 @@ Partial Class previousRideCard
         Panel4.Controls.Add(Label11)
         Panel4.Controls.Add(Label10)
         Panel4.Controls.Add(PictureBox1)
-        Panel4.Location = New Point(3, 2)
-        Panel4.Margin = New Padding(3, 2, 3, 2)
+        Panel4.Location = New Point(3, 3)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(470, 123)
+        Panel4.Size = New Size(537, 164)
         Panel4.TabIndex = 5
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Label15.Location = New Point(126, 62)
+        Label15.Location = New Point(185, 85)
         Label15.Name = "Label15"
-        Label15.Size = New Size(67, 19)
+        Label15.Size = New Size(78, 23)
         Label15.TabIndex = 6
         Label15.Text = "RK Plaza"
         ' 
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Location = New Point(101, 64)
+        Label14.Location = New Point(137, 85)
         Label14.Name = "Label14"
-        Label14.Size = New Size(18, 15)
+        Label14.Size = New Size(23, 20)
         Label14.TabIndex = 5
         Label14.Text = "to"
         ' 
@@ -74,58 +73,58 @@ Partial Class previousRideCard
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Label13.Location = New Point(6, 63)
+        Label13.Location = New Point(7, 84)
         Label13.Name = "Label13"
-        Label13.Size = New Size(91, 19)
+        Label13.Size = New Size(109, 23)
         Label13.TabIndex = 4
         Label13.Text = "Rajiv Chowk"
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Location = New Point(6, 39)
+        Label12.Location = New Point(7, 52)
         Label12.Name = "Label12"
-        Label12.Size = New Size(102, 15)
+        Label12.Size = New Size(128, 20)
         Label12.TabIndex = 3
         Label12.Text = "Prime Sedan from"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label11.Location = New Point(3, 15)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(219, 23)
+        Label11.TabIndex = 2
+        Label11.Text = "Tue, 3rd March, 10:05 AM"
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Label10.Location = New Point(285, 11)
+        Label10.Location = New Point(326, 15)
         Label10.Name = "Label10"
-        Label10.Size = New Size(44, 19)
+        Label10.Size = New Size(53, 23)
         Label10.TabIndex = 1
         Label10.Text = "97 Rs"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(261, 39)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(298, 52)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(100, 41)
+        PictureBox1.Size = New Size(114, 55)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Label11.Location = New Point(3, 11)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(180, 19)
-        Label11.TabIndex = 2
-        Label11.Text = "Tue, 3rd March, 10:05 AM"
-        ' 
         ' previousRideCard
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Panel4)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "previousRideCard"
-        Size = New Size(364, 91)
+        Size = New Size(416, 121)
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

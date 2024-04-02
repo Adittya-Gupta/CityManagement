@@ -55,4 +55,13 @@
         form2.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim form2 As New transport_cabuserhistory()
+
+        ' Show Form2
+        Me.Hide()
+        form2.ShowDialog()
+        Me.Show()
+    End Sub
 End Class

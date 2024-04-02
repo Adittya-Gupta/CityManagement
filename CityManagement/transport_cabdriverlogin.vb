@@ -1,4 +1,6 @@
-﻿Public Class transport_cabdriverlogin
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class transport_cabdriverlogin
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim conn2 As New MySqlConnection(connString)
@@ -9,6 +11,7 @@
     Public Shared cabId As Integer
     Private Sub transport_cabdriverlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        TextBox3.UseSystemPasswordChar = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

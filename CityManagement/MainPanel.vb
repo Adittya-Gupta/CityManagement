@@ -3,6 +3,7 @@
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
@@ -34,5 +35,14 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim form2 As New transport_landingPage()
+
+        ' Show Form2
+        Me.Hide()
+        form2.ShowDialog()
+        Me.Show()
     End Sub
 End Class

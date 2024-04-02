@@ -122,7 +122,7 @@ Partial Class transport_cabbooking
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Historic", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(83, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(230, 41)

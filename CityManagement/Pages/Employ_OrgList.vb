@@ -29,4 +29,12 @@
         ' Load LoadApplicationForm when Regular Services button is clicked
         EmploymentPortalForm.LoadApplicationForm()
     End Sub
+
+    Private Sub CurvedLabel1_Click_1(sender As Object, e As EventArgs) Handles CurvedLabel1.Click
+        EmploymentPortalForm.LoadDoctorEmploymentForm()
+    End Sub
+
+    Private Sub CurvedLabel3_Click(sender As Object, e As EventArgs) Handles CurvedLabel3.Click
+        EmploymentPortalForm.LoadApplicationForm()
+    End Sub
 End Class

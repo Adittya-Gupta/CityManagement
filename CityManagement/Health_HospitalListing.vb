@@ -8,6 +8,6 @@
     End Sub
 
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
-        EmploymentPortalForm.LoadRegularServicesForm()
+        EmploymentPortalForm.LoadListOfOrgForm()
     End Sub
 End Class

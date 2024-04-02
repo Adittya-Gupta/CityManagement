@@ -173,7 +173,7 @@ Partial Class Registration
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox1.Location = New System.Drawing.Point(611, 344)
+        Me.CheckBox1.Location = New System.Drawing.Point(611, 349)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
         Me.CheckBox1.TabIndex = 31
@@ -183,7 +183,7 @@ Partial Class Registration
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(620, 348)
+        Me.Label14.Location = New System.Drawing.Point(763, 362)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(0, 13)
         Me.Label14.TabIndex = 29

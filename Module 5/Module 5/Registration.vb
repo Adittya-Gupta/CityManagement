@@ -113,23 +113,32 @@ Public Class Registration
         Try
             ' Open connection
             conn.Open()
-            MessageBox.Show("Connected to MySQL database!")
+            'MessageBox.Show("Connected to MySQL database!")
 
-            Dim query As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('', '" & Email & "','" & Name & "', '" & Address & "', '" & Phone & "', '" & Username & "', '" & Password & "', '" & DOB & "','0','0', ?photo, ?sign, '" & IdentificationNumber & "', '" & Gender & "','0')"
+            Dim query As String = "INSERT INTO `BankUsers` (`Name`, `Email`, `Phone`, `Identification_number`, `Username`, `Password`, `Date_of_Birth`, `Address`,`photo`, `Sign`,`Approved`) VALUES ('" & Name & "', '" & Email & "', '" & Phone & "', '" & IdentificationNumber & "', '" & Username & "', '" & Password & "', '" & DOB & "', '" & Address & "', ?photo, ?sign,0)"
             'Dim query As String = "SELECT * FROM BankUsers"
-            Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
+
+            Dim query2 As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
+            Dim cmd As MySqlCommand = New MySqlCommand(query2, conn)
             'Dim reader As MySqlDataReader = cmd.ExecuteReader()
             'reader.Close()
 
-            cmd.Parameters.Add("?photo", MySqlDbType.LongBlob).Value = PhotoBytes
-            cmd.Parameters.Add("?sign", MySqlDbType.LongBlob).Value = SignBytes
+            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob)
+            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob)
+            'cmd.Parameters.Add("?Sign", MySqlDbType.LongBlob)
+            cmd.Parameters.Add("?photo", MySqlDbType.MediumBlob).Value = PhotoBytes
+            cmd.Parameters.Add("?sign", MySqlDbType.MediumBlob).Value = SignBytes
             cmd.ExecuteNonQuery()
+
+            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob).Value = PhotoBytes
+            'cmd.Parameters.Add("?sign", MySqlDbType.LongBlob).Value = SignBytes
+            'cmd.ExecuteNonQuery()
 
         Catch ex As Exception
             MessageBox.Show("Error: {0}", ex.Message)
         Finally
             conn.Close()
-            MessageBox.Show("Connection closed.")
+            'MessageBox.Show("Connection closed.")
         End Try
 
 
@@ -197,7 +206,7 @@ Public Class Registration
     End Sub
 
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-        Me.Close()
+        Me.Hide()
         Login.Show()
     End Sub
 

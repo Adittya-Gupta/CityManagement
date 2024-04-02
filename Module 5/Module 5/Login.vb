@@ -9,30 +9,13 @@ Public Class Login
         Dim Password As String = TextBoxpassword.Text.Trim()
 
         ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management"
+        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
             conn.Open()
-            'Dim query As String = "SELECT photo FROM `BankUsers` WHERE username = '" & Username & "'"
-            'Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
-            'cmd = New MySqlCommand(query, conn)
-            'cmd.Parameters.AddWithValue("@ID", IdentificationNumber) ' Assuming IdentificationNumber is the identifier you're using
-            'Dim imageData As Byte() = CType(cmd.ExecuteScalar(), Byte())
 
-            ' Convert the binary image data to an Image object
-            'If imageData IsNot Nothing Then
-            'Using ms As New MemoryStream(imageData)
-            'Dim img As Image = Image.FromStream(ms)
-            ' Display the image in PictureBox control
-            'PictureB'ox1.Image = img
-            'End Using
-            'Else
-            ' Handle case where no image is found for the given ID
-            'MessageBox.Show("No image found for the given ID.")
-            'End If
-
-            Dim query As String = "SELECT * FROM `BankUsers` WHERE username = '" & Username & "'"
+            Dim query As String = "SELECT * FROM `UserData` WHERE username = '" & Username & "'"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             Dim sqlDt As New DataTable
@@ -79,7 +62,7 @@ Public Class Login
             MessageBox.Show("Error: {0}", ex.Message)
         Finally
             conn.Close()
-            MessageBox.Show("Connection closed.")
+            'MessageBox.Show("Connection closed.")
         End Try
 
     End Sub
@@ -89,7 +72,7 @@ Public Class Login
     End Sub
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
         Registration.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load

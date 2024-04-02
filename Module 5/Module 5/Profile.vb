@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports System.Reflection.Emit
 Imports MySql.Data.MySqlClient
 
 Public Class Profile
@@ -17,7 +16,7 @@ Public Class Profile
 
         Try
             conn.Open()
-            Dim query = "SELECT * FROM `UserData` WHERE username = '" & current_user & "'"
+            Dim query = "SELECT * FROM `UserData` WHERE username = '" & bank_username & "'"
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
             Dim sqlDt As New DataTable
@@ -32,13 +31,20 @@ Public Class Profile
             PictureBox1.Image = image
             'DataGridView1.DataSource = sqlDt
 
+            TextBoxBalence.Text = sqlDt.Rows(0)(8).ToString()
+            TextBoxAccountNumber.Text = sqlDt.Rows(0)(0).ToString()
+            TextBoxCIBILScore.Text = sqlDt.Rows(0)(9).ToString()
+            TextBoxUsername.Text = sqlDt.Rows(0)(6).ToString()
+
+            LabelName.Text = sqlDt.Rows(0)(2).ToString()
+            LabelAddress.Text = sqlDt.Rows(0)(3).ToString()
             reader.Close()
 
         Catch ex As Exception
             MessageBox.Show("Error: {0}", ex.Message)
         Finally
             conn.Close()
-            MessageBox.Show("Connection closed.")
+            'MessageBox.Show("Connection closed.")
         End Try
     End Sub
 

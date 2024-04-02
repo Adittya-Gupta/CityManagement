@@ -99,13 +99,13 @@ Partial Class cListHospitals
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Font = New Font("Segoe UI", 9F)
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(2, 18)
+        Guna2TextBox1.Location = New Point(0, 18)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox1.Size = New Size(925, 26)
+        Guna2TextBox1.Size = New Size(930, 26)
         Guna2TextBox1.TabIndex = 16
         ' 
         ' Guna2TileButton1
@@ -151,7 +151,7 @@ Partial Class cListHospitals
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox2.Size = New Size(929, 19)
+        Guna2TextBox2.Size = New Size(931, 19)
         Guna2TextBox2.TabIndex = 23
         ' 
         ' CurvedLabel3

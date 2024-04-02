@@ -8,5 +8,15 @@
         CurvedLabel1.Text = Gender
         CurvedLabel4.Text = Time
         CurvedLabel2.Text = rating
+
+        ' Add a Click event handler to the form
+        AddHandler Me.Click, AddressOf Form_Click
     End Sub
+
+    Private Sub Form_Click(sender As Object, e As EventArgs)
+        ' Set the clicked form as the active form
+        Me.BackColor = Color.LightGray
+    End Sub
+
+
 End Class

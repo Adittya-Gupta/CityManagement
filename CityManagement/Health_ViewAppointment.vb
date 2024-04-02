@@ -72,4 +72,29 @@ Public Class Health_ViewAppointment
         End Using
     End Function
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Dim specialisation As New specialisation()
+
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+
+        ' Check if the main form instance is not null
+        If Temp2 IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            Temp2.ShowChildFormInPanel(specialisation)
+        End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Dim listHospitals As New listHospitals()
+
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+
+        ' Check if the main form instance is not null
+        If Temp2 IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            Temp2.ShowChildFormInPanel(listHospitals)
+        End If
+    End Sub
 End Class

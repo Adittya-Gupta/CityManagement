@@ -73,7 +73,16 @@ Public Class makeAppointment
 
 
     Private Sub Guna2GradientTileButton4_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton4.Click
+        Dim Health_ViewAppointment As New Health_ViewAppointment()
 
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+
+        ' Check if the main form instance is not null
+        If Temp2 IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            Temp2.ShowChildFormInPanel(Health_ViewAppointment)
+        End If
     End Sub
 
     Private Sub Guna2DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles Guna2DateTimePicker1.ValueChanged
@@ -90,12 +99,21 @@ Public Class makeAppointment
         Dim Doctor3 As New cMakeAppointment("Dr. Bob Johnson", "6 Years", "Male", "9 am to 11 am ", 2.7)
         Dim Doctor4 As New cMakeAppointment("Dr. Hello", "8 Years", "Male", "2 pm to 5 pm ", 4.7)
 
+        Dim Doctor5 As New cMakeAppointment("Dr. John Doe", "10 Years", "Male", "9 am to 12 am", 4.5)
+        Dim Doctor6 As New cMakeAppointment("Dr. Jane Smith", "4 Years", "Male", "3 pm to 5 pm", 3.8)
+        Dim Doctor7 As New cMakeAppointment("Dr. Bob Johnson", "6 Years", "Male", "9 am to 11 am ", 2.7)
+        Dim Doctor8 As New cMakeAppointment("Dr. Hello", "8 Years", "Male", "2 pm to 5 pm ", 4.7)
 
 
         Panel1.Controls.Add(Doctor1)
         Panel1.Controls.Add(Doctor2)
         Panel1.Controls.Add(Doctor3)
         Panel1.Controls.Add(Doctor4)
+
+        Panel1.Controls.Add(Doctor5)
+        Panel1.Controls.Add(Doctor6)
+        Panel1.Controls.Add(Doctor7)
+        Panel1.Controls.Add(Doctor8)
 
         If Panel1.Controls.Count > 1 Then
             Dim prevMessageLabel As Control = Panel1.Controls(Panel1.Controls.Count - 2)
@@ -104,9 +122,19 @@ Public Class makeAppointment
             Doctor3.Left = 60 + Doctor1.Width + 20 + Doctor2.Width + 20
             Doctor4.Left = 60 + Doctor1.Width + 20 + Doctor2.Width + 20 + Doctor3.Width + 20
 
-            Doctor3.Top = 0
+            Doctor5.Left = 60
+            Doctor6.Left = Doctor5.Width + 60 + 20
+            Doctor7.Left = 60 + Doctor5.Width + 20 + Doctor6.Width + 20
+            Doctor8.Left = 60 + Doctor5.Width + 20 + Doctor6.Width + 20 + Doctor7.Width + 20
+
+            Doctor3.Top =
             Doctor2.Top = 0
             Doctor4.Top = 0
+
+            Doctor5.Top = Doctor1.Height + 20
+            Doctor6.Top = Doctor1.Height + 20
+            Doctor7.Top = Doctor1.Height + 20
+            Doctor8.Top = Doctor1.Height + 20
 
 
         End If

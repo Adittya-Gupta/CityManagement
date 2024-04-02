@@ -36,6 +36,8 @@ Partial Class makeAppointment
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         ComboBox2 = New ComboBox()
         Button1 = New Button()
@@ -54,6 +56,7 @@ Partial Class makeAppointment
         Label1 = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
+        Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -227,6 +230,7 @@ Partial Class makeAppointment
         Guna2Button4.ImageAlign = HorizontalAlignment.Left
         Guna2Button4.Location = New Point(512, 144)
         Guna2Button4.Name = "Guna2Button4"
+        Guna2Button4.PressedColor = Color.Lime
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button4.Size = New Size(85, 38)
         Guna2Button4.TabIndex = 25
@@ -263,8 +267,25 @@ Partial Class makeAppointment
         Panel1.ForeColor = Color.Black
         Panel1.Location = New Point(18, 233)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1066, 377)
+        Panel1.Size = New Size(1066, 402)
         Panel1.TabIndex = 30
+        ' 
+        ' Guna2TileButton1
+        ' 
+        Guna2TileButton1.CustomizableEdges = CustomizableEdges13
+        Guna2TileButton1.DisabledState.BorderColor = Color.DarkGray
+        Guna2TileButton1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2TileButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2TileButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2TileButton1.FillColor = Color.Lime
+        Guna2TileButton1.Font = New Font("Bahnschrift SemiBold", 12F, FontStyle.Bold)
+        Guna2TileButton1.ForeColor = Color.Black
+        Guna2TileButton1.Location = New Point(492, 665)
+        Guna2TileButton1.Name = "Guna2TileButton1"
+        Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2TileButton1.Size = New Size(180, 43)
+        Guna2TileButton1.TabIndex = 31
+        Guna2TileButton1.Text = "Make Appointment"
         ' 
         ' makeAppointment
         ' 
@@ -272,6 +293,7 @@ Partial Class makeAppointment
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1097, 770)
+        Controls.Add(Guna2TileButton1)
         Controls.Add(Panel1)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -314,4 +336,5 @@ Partial Class makeAppointment
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
 End Class

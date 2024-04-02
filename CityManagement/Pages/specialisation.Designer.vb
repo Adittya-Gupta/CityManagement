@@ -236,9 +236,9 @@ Partial Class specialisation
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.Location = New Point(74, 221)
+        Panel1.Location = New Point(74, 193)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(970, 457)
+        Panel1.Size = New Size(970, 565)
         Panel1.TabIndex = 51
         ' 
         ' specialisation

@@ -15,7 +15,7 @@
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -24,8 +24,8 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FromLocation = TextBox1.Text.ToString()
-        ToLocation = TextBox2.Text.ToString()
+        FromLocation = ComboBox1.SelectedItem.ToString()
+        ToLocation = ComboBox1.SelectedItem.ToString()
         'departTime = DateTimePicker1.Value.TimeOfDay
 
         Dim selectedDateTime As DateTime = DateTimePicker1.Value

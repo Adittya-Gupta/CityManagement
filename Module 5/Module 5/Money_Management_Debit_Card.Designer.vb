@@ -32,21 +32,19 @@ Partial Class Money_Management_Debit_Card
         Me.Home_btn = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Remark = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_CVV = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_PIN = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Expiry_Date = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Card_Number = New System.Windows.Forms.RichTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -65,7 +63,7 @@ Partial Class Money_Management_Debit_Card
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(43, 628)
+        Me.Label11.Location = New System.Drawing.Point(43, 524)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(112, 32)
         Me.Label11.TabIndex = 16
@@ -182,14 +180,14 @@ Partial Class Money_Management_Debit_Card
         Me.PictureBox1.TabIndex = 75
         Me.PictureBox1.TabStop = False
         '
-        'RichTextBox6
+        'RichTextBox_Remark
         '
-        Me.RichTextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox6.Location = New System.Drawing.Point(49, 661)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox6.TabIndex = 17
-        Me.RichTextBox6.Text = ""
+        Me.RichTextBox_Remark.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Remark.Location = New System.Drawing.Point(49, 557)
+        Me.RichTextBox_Remark.Name = "RichTextBox_Remark"
+        Me.RichTextBox_Remark.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Remark.TabIndex = 17
+        Me.RichTextBox_Remark.Text = ""
         '
         'Label6
         '
@@ -235,28 +233,26 @@ Partial Class Money_Management_Debit_Card
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Transfer Money"
         '
-        'RichTextBox4
+        'RichTextBox_CVV
         '
-        Me.RichTextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox4.Location = New System.Drawing.Point(49, 474)
-        Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox4.TabIndex = 14
-        Me.RichTextBox4.Text = ""
+        Me.RichTextBox_CVV.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_CVV.Location = New System.Drawing.Point(49, 360)
+        Me.RichTextBox_CVV.Name = "RichTextBox_CVV"
+        Me.RichTextBox_CVV.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_CVV.TabIndex = 14
+        Me.RichTextBox_CVV.Text = ""
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.RichTextBox6)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Remark)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.RichTextBox2)
-        Me.Panel2.Controls.Add(Me.RichTextBox4)
-        Me.Panel2.Controls.Add(Me.RichTextBox3)
-        Me.Panel2.Controls.Add(Me.RichTextBox5)
+        Me.Panel2.Controls.Add(Me.RichTextBox_PIN)
+        Me.Panel2.Controls.Add(Me.RichTextBox_CVV)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Expiry_Date)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.RichTextBox1)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Card_Number)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -265,59 +261,50 @@ Partial Class Money_Management_Debit_Card
         Me.Panel2.Size = New System.Drawing.Size(870, 797)
         Me.Panel2.TabIndex = 88
         '
-        'RichTextBox2
+        'RichTextBox_PIN
         '
-        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(49, 568)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox2.TabIndex = 15
-        Me.RichTextBox2.Text = ""
+        Me.RichTextBox_PIN.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_PIN.Location = New System.Drawing.Point(49, 455)
+        Me.RichTextBox_PIN.Name = "RichTextBox_PIN"
+        Me.RichTextBox_PIN.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_PIN.TabIndex = 15
+        Me.RichTextBox_PIN.Text = ""
         '
-        'RichTextBox3
+        'RichTextBox_Expiry_Date
         '
-        Me.RichTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox3.Location = New System.Drawing.Point(49, 371)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox3.TabIndex = 13
-        Me.RichTextBox3.Text = ""
-        '
-        'RichTextBox5
-        '
-        Me.RichTextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox5.Location = New System.Drawing.Point(49, 258)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox5.TabIndex = 12
-        Me.RichTextBox5.Text = ""
+        Me.RichTextBox_Expiry_Date.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Expiry_Date.Location = New System.Drawing.Point(49, 258)
+        Me.RichTextBox_Expiry_Date.Name = "RichTextBox_Expiry_Date"
+        Me.RichTextBox_Expiry_Date.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Expiry_Date.TabIndex = 12
+        Me.RichTextBox_Expiry_Date.Text = ""
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Navy
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(252, 734)
+        Me.Button1.Location = New System.Drawing.Point(252, 683)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(473, 57)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Verify"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'RichTextBox1
+        'RichTextBox_Card_Number
         '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(49, 156)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox1.TabIndex = 6
-        Me.RichTextBox1.Text = ""
+        Me.RichTextBox_Card_Number.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Card_Number.Location = New System.Drawing.Point(49, 156)
+        Me.RichTextBox_Card_Number.Name = "RichTextBox_Card_Number"
+        Me.RichTextBox_Card_Number.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Card_Number.TabIndex = 6
+        Me.RichTextBox_Card_Number.Text = ""
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(43, 535)
+        Me.Label10.Location = New System.Drawing.Point(43, 422)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(60, 32)
         Me.Label10.TabIndex = 5
@@ -327,21 +314,11 @@ Partial Class Money_Management_Debit_Card
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(43, 437)
+        Me.Label9.Location = New System.Drawing.Point(43, 323)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 32)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "CVV"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(43, 329)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(152, 32)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "IFSC Code"
         '
         'Label7
         '
@@ -359,9 +336,9 @@ Partial Class Money_Management_Debit_Card
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(43, 114)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(265, 32)
+        Me.Label2.Size = New System.Drawing.Size(256, 32)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Credit Card Number"
+        Me.Label2.Text = "Debit Card Number"
         '
         'Label1
         '
@@ -369,9 +346,9 @@ Partial Class Money_Management_Debit_Card
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(41, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(234, 46)
+        Me.Label1.Size = New System.Drawing.Size(220, 46)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Credit Card"
+        Me.Label1.Text = "Debit Card"
         '
         'Panel1
         '
@@ -470,21 +447,19 @@ Partial Class Money_Management_Debit_Card
     Friend WithEvents Home_btn As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents RichTextBox_Remark As RichTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents RichTextBox_CVV As RichTextBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox5 As RichTextBox
+    Friend WithEvents RichTextBox_PIN As RichTextBox
+    Friend WithEvents RichTextBox_Expiry_Date As RichTextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents RichTextBox_Card_Number As RichTextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

@@ -23,6 +23,9 @@ Partial Class Money_Management_Net_Banking
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.RichTextBox_Remark = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Password = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Username = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -45,9 +48,6 @@ Partial Class Money_Management_Net_Banking
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,9 +57,9 @@ Partial Class Money_Management_Net_Banking
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.RichTextBox3)
-        Me.Panel2.Controls.Add(Me.RichTextBox2)
-        Me.Panel2.Controls.Add(Me.RichTextBox1)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Remark)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Password)
+        Me.Panel2.Controls.Add(Me.RichTextBox_Username)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
@@ -69,6 +69,33 @@ Partial Class Money_Management_Net_Banking
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(870, 797)
         Me.Panel2.TabIndex = 74
+        '
+        'RichTextBox_Remark
+        '
+        Me.RichTextBox_Remark.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Remark.Location = New System.Drawing.Point(49, 625)
+        Me.RichTextBox_Remark.Name = "RichTextBox_Remark"
+        Me.RichTextBox_Remark.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Remark.TabIndex = 14
+        Me.RichTextBox_Remark.Text = ""
+        '
+        'RichTextBox_Password
+        '
+        Me.RichTextBox_Password.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Password.Location = New System.Drawing.Point(49, 305)
+        Me.RichTextBox_Password.Name = "RichTextBox_Password"
+        Me.RichTextBox_Password.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Password.TabIndex = 13
+        Me.RichTextBox_Password.Text = ""
+        '
+        'RichTextBox_Username
+        '
+        Me.RichTextBox_Username.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Username.Location = New System.Drawing.Point(49, 172)
+        Me.RichTextBox_Username.Name = "RichTextBox_Username"
+        Me.RichTextBox_Username.Size = New System.Drawing.Size(548, 59)
+        Me.RichTextBox_Username.TabIndex = 12
+        Me.RichTextBox_Username.Text = ""
         '
         'Button1
         '
@@ -108,9 +135,9 @@ Partial Class Money_Management_Net_Banking
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(43, 122)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 32)
+        Me.Label2.Size = New System.Drawing.Size(144, 32)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "User ID"
+        Me.Label2.Text = "Username"
         '
         'Label1
         '
@@ -331,33 +358,6 @@ Partial Class Money_Management_Net_Banking
         Me.PictureBox1.TabIndex = 61
         Me.PictureBox1.TabStop = False
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(49, 172)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox1.TabIndex = 12
-        Me.RichTextBox1.Text = ""
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(49, 305)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox2.TabIndex = 13
-        Me.RichTextBox2.Text = ""
-        '
-        'RichTextBox3
-        '
-        Me.RichTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox3.Location = New System.Drawing.Point(49, 625)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(548, 59)
-        Me.RichTextBox3.TabIndex = 14
-        Me.RichTextBox3.Text = ""
-        '
         'Money_Management_Net_Banking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -414,7 +414,7 @@ Partial Class Money_Management_Net_Banking
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents RichTextBox_Remark As RichTextBox
+    Friend WithEvents RichTextBox_Password As RichTextBox
+    Friend WithEvents RichTextBox_Username As RichTextBox
 End Class

@@ -29,7 +29,6 @@ Partial Class SerReq_worker_accepted
         Button2 = New Button()
         Label6 = New Label()
         Label3 = New Label()
-        Label7 = New Label()
         Label8 = New Label()
         TextBox1 = New TextBox()
         TextBox2 = New TextBox()
@@ -112,15 +111,6 @@ Partial Class SerReq_worker_accepted
         Label3.TabIndex = 10
         Label3.Text = "Bill Amount: Rs. "
         ' 
-        ' Label7
-        ' 
-        Label7.Cursor = Cursors.Hand
-        Label7.Image = My.Resources.Resources.Vector
-        Label7.Location = New Point(467, 55)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(33, 22)
-        Label7.TabIndex = 12
-        ' 
         ' Label8
         ' 
         Label8.Cursor = Cursors.Hand
@@ -152,7 +142,6 @@ Partial Class SerReq_worker_accepted
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)
         Controls.Add(Label8)
-        Controls.Add(Label7)
         Controls.Add(Label3)
         Controls.Add(Label6)
         Controls.Add(Button2)

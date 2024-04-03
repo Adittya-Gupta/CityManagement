@@ -1,4 +1,6 @@
 ﻿Public Class SerReq_worker_completed
+
+
     ' Constructor with optional parameters
     Public Sub New(Optional ByVal name As String = "Name",
                    Optional ByVal serviceTime As String = "Will be updated",

@@ -4,9 +4,7 @@ Imports CityManagement.SerReq_worker_pending
 Imports MySql.Data.MySqlClient
 
 Public Class Services_WorkSect
-    'Public chatsForm As New Chats(Me)
-    'Public listofChatsForm As New ListOfChats(Me)
-    'Public Chatspage As Object = listofChatsForm
+    'Dim connString As String = "server=localhost;userid=root;password=<password_here>;database=smart_city_management"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
@@ -22,7 +20,7 @@ Public Class Services_WorkSect
         LoadServiceRequests() ' Load all service requests initially
     End Sub
 
-    Private Sub LoadServiceRequests()
+    Public Sub LoadServiceRequests()
         ' Clear existing controls from Panel2
         Panel2.Controls.Clear()
         ' Create instances of requests with specified values and states
@@ -31,21 +29,22 @@ Public Class Services_WorkSect
         Dim completedRequests As New List(Of SerReq_worker_completed)()
         Dim paymentDueRequests As New List(Of SerReq_worker_paymentDue)()
 
+        conn.Open()
         Try
-            conn.Open()
-            Dim query As String = "SELECT clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = 1"
+            Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = 1"
             Using cmd As New MySqlCommand(query, conn)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
+                        Dim reqId As Integer = reader.GetInt32("serviceBookingId")
                         Dim name As String = reader.GetString("clientName")
                         Dim time As String = reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss")
                         Dim billAmount As Object = reader("billAmount")
                         Dim billAmountString As String = If(IsDBNull(billAmount), "N/A", billAmount.ToString()) ' If billAmount is null, set it to "N/A"
                         Dim status As String = reader.GetString("status")
                         If status = "EnquirySent" Then
-                            pendingRequests.Add(New SerReq_worker_pending(name, time))
+                            pendingRequests.Add(New SerReq_worker_pending(reqId, name, time, billAmountString))
                         ElseIf status = "Upcoming" Then
-                            acceptedRequests.Add(New SerReq_worker_accepted(name, time))
+                            acceptedRequests.Add(New SerReq_worker_accepted(reqId, name, time, billAmountString))
                         ElseIf status = "Completed" Then
                             completedRequests.Add(New SerReq_worker_completed(name, time, billAmountString))
                         ElseIf status = "InProgress" Then
@@ -60,14 +59,6 @@ Public Class Services_WorkSect
         Finally
             conn.Close()
         End Try
-
-        '' Sample service requests (you may fetch these from your database or another source)
-        'pendingRequests.Add(New SerReq_worker_pending("John Doe"))
-        'pendingRequests.Add(New SerReq_worker_pending("Jane Smith"))
-        'acceptedRequests.Add(New SerReq_worker_accepted("Bob Johnson", "3 hours"))
-        'completedRequests.Add(New SerReq_worker_completed("Alice Williams", "2.5 hours", "$70"))
-        'acceptedRequests.Add(New SerReq_worker_accepted("Eve Roberts", "2 hours"))
-        'completedRequests.Add(New SerReq_worker_completed("Michael Brown", "1 hour", "$45"))
 
         ' Filter service requests based on selected status
         Dim filteredRequests As New List(Of Control)()

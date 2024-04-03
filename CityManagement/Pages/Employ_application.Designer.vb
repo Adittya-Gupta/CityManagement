@@ -37,6 +37,7 @@ Partial Class EmployApplication
         Label6 = New Label()
         Label7 = New Label()
         Label8 = New Label()
+        Label9 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -107,7 +108,7 @@ Partial Class EmployApplication
         Button1.Cursor = Cursors.Hand
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 15F)
-        Button1.Location = New Point(563, 824)
+        Button1.Location = New Point(563, 845)
         Button1.Name = "Button1"
         Button1.Size = New Size(157, 55)
         Button1.TabIndex = 36
@@ -162,11 +163,13 @@ Partial Class EmployApplication
         ' 
         ' Label6
         ' 
+        Label6.AllowDrop = True
         Label6.BackColor = SystemColors.ControlDark
+        Label6.Cursor = Cursors.Hand
         Label6.Font = New Font("Segoe UI", 15F)
         Label6.Location = New Point(412, 756)
         Label6.Name = "Label6"
-        Label6.Size = New Size(445, 41)
+        Label6.Size = New Size(445, 45)
         Label6.TabIndex = 45
         Label6.Text = "Browse or Drag n Drop any Document"
         ' 
@@ -188,11 +191,21 @@ Partial Class EmployApplication
         Label8.TabIndex = 47
         Label8.Text = "Application Form"
         ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(595, 813)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(12, 20)
+        Label9.TabIndex = 48
+        Label9.Text = "."
+        ' 
         ' EmployApplication
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1254, 953)
+        Controls.Add(Label9)
         Controls.Add(Label8)
         Controls.Add(Label7)
         Controls.Add(Label6)
@@ -231,4 +244,5 @@ Partial Class EmployApplication
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

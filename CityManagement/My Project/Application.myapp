@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
 <MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MySubMain>true</MySubMain>
-<<<<<<< HEAD
-  <MainForm>FestivalEvents_EventDetails</MainForm>
-=======
-  <MainForm>User_ChangePassword</MainForm>
->>>>>>> e9b3e44c76a0c7801e3fc2d9d89a72e7a7ea6de1
+  <MainForm>User_Login</MainForm>
   <SingleInstance>false</SingleInstance>
   <ShutdownMode>0</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>

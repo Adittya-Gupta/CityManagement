@@ -44,11 +44,11 @@ Partial Class User_Login
         ' 
         PasswordLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         PasswordLabel.AutoSize = True
-        PasswordLabel.Font = New Font("Microsoft Sans Serif", 12F)
+        PasswordLabel.Font = New Font("Exo 2", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         PasswordLabel.ForeColor = Color.White
         PasswordLabel.Location = New Point(756, 389)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New Size(98, 25)
+        PasswordLabel.Size = New Size(80, 19)
         PasswordLabel.TabIndex = 2
         PasswordLabel.Text = "Password"
         ' 
@@ -56,11 +56,11 @@ Partial Class User_Login
         ' 
         EmailLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailLabel.AutoSize = True
-        EmailLabel.Font = New Font("Microsoft Sans Serif", 12F)
+        EmailLabel.Font = New Font("Exo 2", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         EmailLabel.ForeColor = Color.White
         EmailLabel.Location = New Point(756, 304)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New Size(60, 25)
+        EmailLabel.Size = New Size(50, 19)
         EmailLabel.TabIndex = 3
         EmailLabel.Text = "Email"
         ' 
@@ -68,20 +68,20 @@ Partial Class User_Login
         ' 
         EmailTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailTextBox.BackColor = Color.LightGray
-        EmailTextBox.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        EmailTextBox.Font = New Font("Exo 2", 15F)
         EmailTextBox.Location = New Point(756, 334)
         EmailTextBox.Name = "EmailTextBox"
-        EmailTextBox.Size = New Size(350, 36)
+        EmailTextBox.Size = New Size(350, 31)
         EmailTextBox.TabIndex = 2
         ' 
         ' PasswordTextBox
         ' 
         PasswordTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         PasswordTextBox.BackColor = Color.LightGray
-        PasswordTextBox.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PasswordTextBox.Font = New Font("Exo 2", 15F)
         PasswordTextBox.Location = New Point(756, 417)
         PasswordTextBox.Name = "PasswordTextBox"
-        PasswordTextBox.Size = New Size(350, 36)
+        PasswordTextBox.Size = New Size(350, 31)
         PasswordTextBox.TabIndex = 3
         ' 
         ' Timer1
@@ -99,7 +99,7 @@ Partial Class User_Login
         TogglePasswordButton.Cursor = Cursors.Hand
         TogglePasswordButton.Location = New Point(1072, 418)
         TogglePasswordButton.Name = "TogglePasswordButton"
-        TogglePasswordButton.Size = New Size(30, 35)
+        TogglePasswordButton.Size = New Size(34, 30)
         TogglePasswordButton.TabIndex = 5
         TogglePasswordButton.TabStop = False
         ' 
@@ -128,7 +128,7 @@ Partial Class User_Login
         Label2.ForeColor = Color.White
         Label2.Location = New Point(756, 590)
         Label2.Name = "Label2"
-        Label2.Size = New Size(131, 18)
+        Label2.Size = New Size(106, 15)
         Label2.TabIndex = 7
         Label2.Text = "Forgot Password?"
         ' 
@@ -141,7 +141,7 @@ Partial Class User_Login
         SignUpLabel.ForeColor = Color.White
         SignUpLabel.Location = New Point(974, 590)
         SignUpLabel.Name = "SignUpLabel"
-        SignUpLabel.Size = New Size(131, 18)
+        SignUpLabel.Size = New Size(110, 15)
         SignUpLabel.TabIndex = 8
         SignUpLabel.Text = "New User? Signup"
         ' 
@@ -161,20 +161,20 @@ Partial Class User_Login
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Centauri", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(781, 192)
         Label1.Name = "Label1"
-        Label1.Size = New Size(181, 58)
+        Label1.Size = New Size(287, 50)
         Label1.TabIndex = 1
         Label1.Text = "LOGIN"
         ' 
         ' User_Login
         ' 
-        AutoScaleDimensions = New SizeF(9F, 18F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaptionText
-        ClientSize = New Size(1254, 896)
+        ClientSize = New Size(1254, 881)
         Controls.Add(LoginPic)
         Controls.Add(SignUpLabel)
         Controls.Add(Label2)

@@ -36,7 +36,7 @@ Partial Class FestivalEvents_Approval
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 30F)
-        Label3.Location = New Point(30, 41)
+        Label3.Location = New Point(34, 43)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(364, 58)
@@ -49,9 +49,9 @@ Partial Class FestivalEvents_Approval
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 15F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(51, 337)
+        Button1.Location = New Point(57, 354)
         Button1.Name = "Button1"
-        Button1.Size = New Size(146, 50)
+        Button1.Size = New Size(164, 52)
         Button1.TabIndex = 33
         Button1.Text = "Approve"
         Button1.UseVisualStyleBackColor = False
@@ -61,7 +61,7 @@ Partial Class FestivalEvents_Approval
         Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label6.Location = New Point(22, 139)
+        Label6.Location = New Point(25, 146)
         Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(210, 31)
@@ -73,7 +73,7 @@ Partial Class FestivalEvents_Approval
         Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label5.Location = New Point(22, 107)
+        Label5.Location = New Point(25, 112)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(239, 31)
@@ -85,7 +85,7 @@ Partial Class FestivalEvents_Approval
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label4.Location = New Point(22, 75)
+        Label4.Location = New Point(25, 79)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(217, 31)
@@ -97,7 +97,7 @@ Partial Class FestivalEvents_Approval
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(1, 15)
+        Label1.Location = New Point(1, 16)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(193, 46)
@@ -111,20 +111,21 @@ Partial Class FestivalEvents_Approval
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(Label4)
-        Panel1.Location = New Point(30, 111)
+        Panel1.Location = New Point(34, 117)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(609, 209)
+        Panel1.Size = New Size(685, 219)
         Panel1.TabIndex = 38
         ' 
         ' FestivalEvents_Approval
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(711, 429)
+        ClientSize = New Size(800, 450)
         Controls.Add(Panel1)
         Controls.Add(Button1)
         Controls.Add(Label3)
+        FormBorderStyle = FormBorderStyle.None
         Name = "FestivalEvents_Approval"
         Text = "FestivalEvents_Approval"
         Panel1.ResumeLayout(False)

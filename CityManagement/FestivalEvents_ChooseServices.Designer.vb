@@ -48,10 +48,10 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(23, 31)
+        Label3.Location = New Point(20, 23)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(297, 31)
+        Label3.Size = New Size(239, 26)
         Label3.TabIndex = 33
         Label3.Text = "Choose Event Services"
         ' 
@@ -59,9 +59,10 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         CheckBox1.AutoSize = True
         CheckBox1.BackColor = SystemColors.Control
-        CheckBox1.Location = New Point(28, 27)
+        CheckBox1.Location = New Point(10, 20)
+        CheckBox1.Margin = New Padding(3, 2, 3, 2)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(90, 24)
+        CheckBox1.Size = New Size(72, 19)
         CheckBox1.TabIndex = 34
         CheckBox1.Text = "Service 1"
         CheckBox1.UseVisualStyleBackColor = False
@@ -70,9 +71,10 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         CheckBox2.AutoSize = True
         CheckBox2.BackColor = SystemColors.Control
-        CheckBox2.Location = New Point(358, 27)
+        CheckBox2.Location = New Point(313, 20)
+        CheckBox2.Margin = New Padding(3, 2, 3, 2)
         CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(90, 24)
+        CheckBox2.Size = New Size(72, 19)
         CheckBox2.TabIndex = 35
         CheckBox2.Text = "Service 2"
         CheckBox2.UseVisualStyleBackColor = False
@@ -81,9 +83,10 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         CheckBox3.AutoSize = True
         CheckBox3.BackColor = SystemColors.Control
-        CheckBox3.Location = New Point(28, 150)
+        CheckBox3.Location = New Point(10, 123)
+        CheckBox3.Margin = New Padding(3, 2, 3, 2)
         CheckBox3.Name = "CheckBox3"
-        CheckBox3.Size = New Size(90, 24)
+        CheckBox3.Size = New Size(72, 19)
         CheckBox3.TabIndex = 36
         CheckBox3.Text = "Service 3"
         CheckBox3.UseVisualStyleBackColor = False
@@ -92,9 +95,10 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         CheckBox4.AutoSize = True
         CheckBox4.BackColor = SystemColors.Control
-        CheckBox4.Location = New Point(358, 147)
+        CheckBox4.Location = New Point(313, 123)
+        CheckBox4.Margin = New Padding(3, 2, 3, 2)
         CheckBox4.Name = "CheckBox4"
-        CheckBox4.Size = New Size(90, 24)
+        CheckBox4.Size = New Size(72, 19)
         CheckBox4.TabIndex = 37
         CheckBox4.Text = "Service 4"
         CheckBox4.UseVisualStyleBackColor = False
@@ -104,9 +108,10 @@ Partial Class FestivalEvents_ChooseServices
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(143, 23)
+        Button1.Location = New Point(121, 11)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(130, 30)
+        Button1.Size = New Size(118, 40)
         Button1.TabIndex = 38
         Button1.Text = "Choose Vendor"
         Button1.UseVisualStyleBackColor = False
@@ -116,9 +121,10 @@ Partial Class FestivalEvents_ChooseServices
         Button2.BackColor = Color.Black
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(470, 23)
+        Button2.Location = New Point(411, 11)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(130, 30)
+        Button2.Size = New Size(118, 40)
         Button2.TabIndex = 39
         Button2.Text = "Choose Vendor"
         Button2.UseVisualStyleBackColor = False
@@ -128,9 +134,10 @@ Partial Class FestivalEvents_ChooseServices
         Button3.BackColor = Color.Black
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(143, 147)
+        Button3.Location = New Point(125, 110)
+        Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
-        Button3.Size = New Size(130, 30)
+        Button3.Size = New Size(118, 40)
         Button3.TabIndex = 40
         Button3.Text = "Choose Vendor"
         Button3.UseVisualStyleBackColor = False
@@ -140,9 +147,10 @@ Partial Class FestivalEvents_ChooseServices
         Button4.BackColor = Color.Black
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(470, 141)
+        Button4.Location = New Point(411, 111)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Size = New Size(130, 30)
+        Button4.Size = New Size(118, 40)
         Button4.TabIndex = 41
         Button4.Text = "Choose Vendor"
         Button4.UseVisualStyleBackColor = False
@@ -151,9 +159,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label1.AutoSize = True
         Label1.BackColor = SystemColors.Control
-        Label1.Location = New Point(28, 76)
+        Label1.Location = New Point(20, 72)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 20)
+        Label1.Size = New Size(54, 15)
         Label1.TabIndex = 42
         Label1.Text = "Selected:"
         ' 
@@ -161,9 +169,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label2.AutoSize = True
         Label2.BackColor = SystemColors.Control
-        Label2.Location = New Point(358, 76)
+        Label2.Location = New Point(313, 72)
         Label2.Name = "Label2"
-        Label2.Size = New Size(69, 20)
+        Label2.Size = New Size(54, 15)
         Label2.TabIndex = 43
         Label2.Text = "Selected:"
         ' 
@@ -171,9 +179,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label4.AutoSize = True
         Label4.BackColor = SystemColors.Control
-        Label4.Location = New Point(358, 205)
+        Label4.Location = New Point(313, 167)
         Label4.Name = "Label4"
-        Label4.Size = New Size(69, 20)
+        Label4.Size = New Size(54, 15)
         Label4.TabIndex = 44
         Label4.Text = "Selected:"
         ' 
@@ -181,9 +189,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label5.AutoSize = True
         Label5.BackColor = SystemColors.Control
-        Label5.Location = New Point(28, 205)
+        Label5.Location = New Point(20, 167)
         Label5.Name = "Label5"
-        Label5.Size = New Size(69, 20)
+        Label5.Size = New Size(54, 15)
         Label5.TabIndex = 45
         Label5.Text = "Selected:"
         ' 
@@ -191,9 +199,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label6.AutoSize = True
         Label6.BackColor = SystemColors.Control
-        Label6.Location = New Point(147, 77)
+        Label6.Location = New Point(125, 73)
         Label6.Name = "Label6"
-        Label6.Size = New Size(69, 20)
+        Label6.Size = New Size(54, 15)
         Label6.TabIndex = 46
         Label6.Text = "Vendor X"
         ' 
@@ -201,9 +209,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label8.AutoSize = True
         Label8.BackColor = SystemColors.Control
-        Label8.Location = New Point(470, 205)
+        Label8.Location = New Point(411, 167)
         Label8.Name = "Label8"
-        Label8.Size = New Size(69, 20)
+        Label8.Size = New Size(54, 15)
         Label8.TabIndex = 48
         Label8.Text = "Vendor X"
         ' 
@@ -211,9 +219,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label9.AutoSize = True
         Label9.BackColor = SystemColors.Control
-        Label9.Location = New Point(470, 76)
+        Label9.Location = New Point(411, 72)
         Label9.Name = "Label9"
-        Label9.Size = New Size(69, 20)
+        Label9.Size = New Size(54, 15)
         Label9.TabIndex = 49
         Label9.Text = "Vendor X"
         ' 
@@ -221,9 +229,9 @@ Partial Class FestivalEvents_ChooseServices
         ' 
         Label10.AutoSize = True
         Label10.BackColor = SystemColors.Control
-        Label10.Location = New Point(147, 205)
+        Label10.Location = New Point(129, 167)
         Label10.Name = "Label10"
-        Label10.Size = New Size(69, 20)
+        Label10.Size = New Size(54, 15)
         Label10.TabIndex = 50
         Label10.Text = "Vendor X"
         ' 
@@ -246,9 +254,10 @@ Partial Class FestivalEvents_ChooseServices
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Button3)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(23, 93)
+        Panel1.Location = New Point(20, 70)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(652, 256)
+        Panel1.Size = New Size(652, 262)
         Panel1.TabIndex = 51
         ' 
         ' Button5
@@ -256,22 +265,24 @@ Partial Class FestivalEvents_ChooseServices
         Button5.BackColor = Color.Black
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(26, 367)
+        Button5.Location = New Point(20, 336)
+        Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
-        Button5.Size = New Size(94, 35)
+        Button5.Size = New Size(82, 26)
         Button5.TabIndex = 52
         Button5.Text = "Save"
         Button5.UseVisualStyleBackColor = False
         ' 
         ' FestivalEvents_ChooseServices
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(711, 429)
+        ClientSize = New Size(828, 506)
         Controls.Add(Button5)
         Controls.Add(Panel1)
         Controls.Add(Label3)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "FestivalEvents_ChooseServices"
         Text = "FestivalEvents_ChooseServices"
         Panel1.ResumeLayout(False)

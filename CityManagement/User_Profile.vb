@@ -14,7 +14,8 @@ Public Class User_Profile
     Private Sub User_Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ListBox1.Visible = False
-
+        'Make this form full screen
+        Me.WindowState = FormWindowState.Maximized
         ' Check if loggedInUserID is valid
         If User_Login.GlobalSID <> -1 Then
             ' If loggedInUserID is valid, fetch user details and display them
@@ -33,7 +34,10 @@ Public Class User_Profile
                 Dim profilePicData As Byte() = TryCast(userDetails("ProfilePic"), Byte())
                 If profilePicData IsNot Nothing Then
                     Dim ms As New System.IO.MemoryStream(profilePicData)
-                    PictureBox2.Image = Image.FromStream(ms)
+                    Dim originalImage As Image = Image.FromStream(ms)
+                    ' Stretch the image within PictureBox
+                    PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+                    PictureBox2.Image = originalImage
                 End If
 
             Else
@@ -300,6 +304,30 @@ Public Class User_Profile
     End Sub
 
     Private Sub NameLabel_Click(sender As Object, e As EventArgs) Handles NameLabel.Click
+
+    End Sub
+
+    Private Sub EditProfileButton_Click(sender As Object, e As EventArgs) Handles EditProfileButton.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_EditProfile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+        'form.Show()
+        'form.StartPosition = FormStartPosition.Manual
+        'form.Location = Location ' Set the location of the new form to the current form's location
+        'form.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_ChangePassword
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
     End Sub
 End Class

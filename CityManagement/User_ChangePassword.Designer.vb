@@ -42,38 +42,36 @@ Partial Class User_ChangePassword
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(9, 110)
+        Label1.Location = New Point(8, 82)
         Label1.Name = "Label1"
-        Label1.Size = New Size(128, 23)
+        Label1.Size = New Size(106, 20)
         Label1.TabIndex = 0
         Label1.Text = "New Password"
         ' 
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(205, 110)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Location = New Point(179, 82)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(183, 30)
+        TextBox1.Size = New Size(161, 25)
         TextBox1.TabIndex = 1
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(9, 155)
+        Label2.Location = New Point(8, 116)
         Label2.Name = "Label2"
-        Label2.Size = New Size(148, 23)
+        Label2.Size = New Size(122, 20)
         Label2.TabIndex = 0
         Label2.Text = "Retype Password"
         ' 
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(205, 155)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Location = New Point(179, 116)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(183, 30)
+        TextBox2.Size = New Size(161, 25)
         TextBox2.TabIndex = 1
         ' 
         ' Button1
@@ -83,10 +81,9 @@ Partial Class User_ChangePassword
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(96, 245)
-        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Location = New Point(84, 184)
         Button1.Name = "Button1"
-        Button1.Size = New Size(117, 42)
+        Button1.Size = New Size(102, 32)
         Button1.TabIndex = 2
         Button1.Text = "RESET"
         Button1.UseVisualStyleBackColor = False
@@ -99,10 +96,9 @@ Partial Class User_ChangePassword
         CheckBox1.CheckState = CheckState.Checked
         CheckBox1.Cursor = Cursors.Hand
         CheckBox1.Font = New Font("Microsoft YaHei", 7F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CheckBox1.Location = New Point(9, 197)
-        CheckBox1.Margin = New Padding(3, 4, 3, 4)
+        CheckBox1.Location = New Point(8, 148)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(117, 21)
+        CheckBox1.Size = New Size(98, 20)
         CheckBox1.TabIndex = 11
         CheckBox1.Text = "Hide Password"
         CheckBox1.UseVisualStyleBackColor = False
@@ -118,27 +114,28 @@ Partial Class User_ChangePassword
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(TextBox1)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(3, 9)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(3, 7)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(798, 509)
+        Panel1.Size = New Size(698, 382)
         Panel1.TabIndex = 13
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(455, 131)
+        PictureBox2.Location = New Point(398, 98)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(65, 71)
+        PictureBox2.Size = New Size(57, 53)
         PictureBox2.TabIndex = 48
         PictureBox2.TabStop = False
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(537, 29)
+        PictureBox1.Location = New Point(470, 22)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(261, 306)
+        PictureBox1.Size = New Size(228, 230)
         PictureBox1.TabIndex = 25
         PictureBox1.TabStop = False
         ' 
@@ -148,20 +145,19 @@ Partial Class User_ChangePassword
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(9, 34)
+        Label3.Location = New Point(8, 26)
         Label3.Name = "Label3"
-        Label3.Size = New Size(305, 42)
+        Label3.Size = New Size(246, 36)
         Label3.TabIndex = 24
         Label3.Text = "Reset Password"
         ' 
         ' User_ChangePassword
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(800, 556)
+        ClientSize = New Size(700, 417)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "User_ChangePassword"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

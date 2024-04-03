@@ -53,10 +53,10 @@ Partial Class Event_Edit
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(62, 55)
+        Label1.Location = New Point(57, 46)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(293, 37)
+        Label1.Size = New Size(364, 46)
         Label1.TabIndex = 22
         Label1.Text = "Events & Festivals  >"
         ' 
@@ -65,10 +65,10 @@ Partial Class Event_Edit
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 24F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(347, 55)
+        Label2.Location = New Point(441, 46)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(161, 37)
+        Label2.Size = New Size(201, 46)
         Label2.TabIndex = 23
         Label2.Text = "Edit Event"
         ' 
@@ -76,9 +76,9 @@ Partial Class Event_Edit
         ' 
         Button1.BackColor = Color.Black
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(191, 521)
+        Button1.Location = New Point(172, 438)
         Button1.Name = "Button1"
-        Button1.Size = New Size(193, 54)
+        Button1.Size = New Size(174, 45)
         Button1.TabIndex = 25
         Button1.Text = "Upload an Image"
         Button1.UseVisualStyleBackColor = False
@@ -87,9 +87,9 @@ Partial Class Event_Edit
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), Image)
-        PictureBox1.Location = New Point(62, 170)
+        PictureBox1.Location = New Point(57, 143)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(458, 317)
+        PictureBox1.Size = New Size(411, 266)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 26
         PictureBox1.TabStop = False
@@ -98,26 +98,26 @@ Partial Class Event_Edit
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F)
-        Label3.Location = New Point(571, 187)
+        Label3.Location = New Point(514, 157)
         Label3.Name = "Label3"
-        Label3.Size = New Size(112, 21)
+        Label3.Size = New Size(140, 28)
         Label3.TabIndex = 27
         Label3.Text = "Name of event"
         ' 
         ' NameTextBox
         ' 
-        NameTextBox.Location = New Point(571, 225)
+        NameTextBox.Location = New Point(514, 189)
         NameTextBox.Name = "NameTextBox"
-        NameTextBox.Size = New Size(226, 31)
+        NameTextBox.Size = New Size(205, 29)
         NameTextBox.TabIndex = 28
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 12F)
-        Label4.Location = New Point(906, 187)
+        Label4.Location = New Point(815, 157)
         Label4.Name = "Label4"
-        Label4.Size = New Size(102, 21)
+        Label4.Size = New Size(129, 28)
         Label4.TabIndex = 29
         Label4.Text = "Date of event"
         ' 
@@ -125,60 +125,60 @@ Partial Class Event_Edit
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F)
-        Label5.Location = New Point(906, 289)
+        Label5.Location = New Point(815, 244)
         Label5.Name = "Label5"
-        Label5.Size = New Size(180, 21)
+        Label5.Size = New Size(229, 28)
         Label5.TabIndex = 33
         Label5.Text = "Expected timing of event"
         ' 
         ' SpaceTextBox
         ' 
-        SpaceTextBox.Location = New Point(571, 327)
+        SpaceTextBox.Location = New Point(514, 274)
         SpaceTextBox.Name = "SpaceTextBox"
-        SpaceTextBox.Size = New Size(226, 31)
+        SpaceTextBox.Size = New Size(205, 29)
         SpaceTextBox.TabIndex = 32
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F)
-        Label6.Location = New Point(571, 289)
+        Label6.Location = New Point(514, 244)
         Label6.Name = "Label6"
-        Label6.Size = New Size(53, 21)
+        Label6.Size = New Size(65, 28)
         Label6.TabIndex = 31
         Label6.Text = "Venue"
         ' 
         ' FeatureTextBox
         ' 
-        FeatureTextBox.Location = New Point(571, 413)
+        FeatureTextBox.Location = New Point(514, 347)
         FeatureTextBox.Name = "FeatureTextBox"
-        FeatureTextBox.Size = New Size(359, 31)
+        FeatureTextBox.Size = New Size(324, 29)
         FeatureTextBox.TabIndex = 36
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 12F)
-        Label8.Location = New Point(571, 375)
+        Label8.Location = New Point(514, 315)
         Label8.Name = "Label8"
-        Label8.Size = New Size(394, 21)
+        Label8.Size = New Size(493, 28)
         Label8.TabIndex = 35
         Label8.Text = "Special features (like only for Docs, only 500 seats, etc.) "
         ' 
         ' DescTextBox
         ' 
-        DescTextBox.Location = New Point(571, 521)
+        DescTextBox.Location = New Point(514, 438)
         DescTextBox.Multiline = True
         DescTextBox.Name = "DescTextBox"
-        DescTextBox.Size = New Size(561, 124)
+        DescTextBox.Size = New Size(505, 105)
         DescTextBox.TabIndex = 40
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(571, 479)
+        Label9.Location = New Point(514, 402)
         Label9.Name = "Label9"
-        Label9.Size = New Size(102, 25)
+        Label9.Size = New Size(89, 21)
         Label9.TabIndex = 39
         Label9.Text = "Description"
         ' 
@@ -186,9 +186,9 @@ Partial Class Event_Edit
         ' 
         Button2.BackColor = Color.Black
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(802, 674)
+        Button2.Location = New Point(723, 566)
         Button2.Name = "Button2"
-        Button2.Size = New Size(194, 63)
+        Button2.Size = New Size(175, 53)
         Button2.TabIndex = 41
         Button2.Text = "Save Changes"
         Button2.UseVisualStyleBackColor = False
@@ -196,9 +196,9 @@ Partial Class Event_Edit
         ' DateTimePicker1
         ' 
         DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(906, 225)
+        DateTimePicker1.Location = New Point(815, 189)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(226, 31)
+        DateTimePicker1.Size = New Size(205, 29)
         DateTimePicker1.TabIndex = 44
         ' 
         ' OpenFileDialog1
@@ -208,27 +208,27 @@ Partial Class Event_Edit
         ' DateTimePicker2
         ' 
         DateTimePicker2.Format = DateTimePickerFormat.Time
-        DateTimePicker2.Location = New Point(908, 325)
+        DateTimePicker2.Location = New Point(816, 273)
         DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(224, 31)
+        DateTimePicker2.Size = New Size(202, 29)
         DateTimePicker2.TabIndex = 45
         ' 
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Festival", "Concert"})
-        ComboBox1.Location = New Point(984, 411)
+        ComboBox1.Location = New Point(886, 344)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(148, 33)
+        ComboBox1.Size = New Size(134, 29)
         ComboBox1.TabIndex = 46
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 12F)
-        Label7.Location = New Point(984, 375)
+        Label7.Location = New Point(886, 315)
         Label7.Name = "Label7"
-        Label7.Size = New Size(73, 21)
+        Label7.Size = New Size(92, 28)
         Label7.TabIndex = 47
         Label7.Text = "Category"
         ' 
@@ -253,17 +253,18 @@ Partial Class Event_Edit
         Panel1.Controls.Add(SpaceTextBox)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label5)
-        Panel1.Location = New Point(100, 20)
+        Panel1.Location = New Point(90, 17)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1254, 896)
+        Panel1.Size = New Size(1129, 753)
         Panel1.TabIndex = 48
         ' 
         ' Event_Edit
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1444, 900)
+        ClientSize = New Size(1300, 756)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Event_Edit"
         Text = "Edit_Event"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

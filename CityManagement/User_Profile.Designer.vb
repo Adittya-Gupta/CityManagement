@@ -44,6 +44,7 @@ Partial Class User_Profile
         SIDLabel = New Label()
         ListBox1 = New ListBox()
         EditProfileButton = New Button()
+        Button1 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -51,24 +52,22 @@ Partial Class User_Profile
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label1.Font = New Font("Microsoft Sans Serif", 12F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(49, 64)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Location = New Point(34, 39)
         Label1.Name = "Label1"
-        Label1.Size = New Size(104, 29)
+        Label1.Size = New Size(69, 20)
         Label1.TabIndex = 0
         Label1.Text = "Home  >"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label2.Font = New Font("Microsoft Sans Serif", 12F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(156, 64)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Location = New Point(109, 39)
         Label2.Name = "Label2"
-        Label2.Size = New Size(131, 29)
+        Label2.Size = New Size(88, 20)
         Label2.TabIndex = 1
         Label2.Text = "Dashboard"
         ' 
@@ -76,10 +75,10 @@ Partial Class User_Profile
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.notification
         PictureBox1.Image = My.Resources.Resources.notification
-        PictureBox1.Location = New Point(61, 608)
-        PictureBox1.Margin = New Padding(4, 6, 4, 6)
+        PictureBox1.Location = New Point(43, 365)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(30, 40)
+        PictureBox1.Size = New Size(21, 24)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
@@ -88,22 +87,21 @@ Partial Class User_Profile
         ' 
         NotificationPanel.AutoScroll = True
         NotificationPanel.BackColor = Color.WhiteSmoke
-        NotificationPanel.Location = New Point(49, 661)
-        NotificationPanel.Margin = New Padding(4, 6, 4, 6)
+        NotificationPanel.Location = New Point(34, 396)
+        NotificationPanel.Margin = New Padding(3, 4, 3, 4)
         NotificationPanel.Name = "NotificationPanel"
-        NotificationPanel.Size = New Size(306, 357)
+        NotificationPanel.Size = New Size(214, 214)
         NotificationPanel.TabIndex = 1
         ' 
         ' NameLabel
         ' 
         NameLabel.AutoSize = True
         NameLabel.BackColor = Color.Transparent
-        NameLabel.Font = New Font("Microsoft Sans Serif", 28.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        NameLabel.Font = New Font("Microsoft Sans Serif", 28F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         NameLabel.ForeColor = Color.Black
-        NameLabel.Location = New Point(498, 383)
-        NameLabel.Margin = New Padding(4, 0, 4, 0)
+        NameLabel.Location = New Point(348, 230)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New Size(266, 64)
+        NameLabel.Size = New Size(182, 44)
         NameLabel.TabIndex = 4
         NameLabel.Text = "My Name"
         ' 
@@ -112,10 +110,10 @@ Partial Class User_Profile
         PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), Image)
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), Image)
-        PictureBox2.Location = New Point(61, 285)
-        PictureBox2.Margin = New Padding(4, 6, 4, 6)
+        PictureBox2.Location = New Point(43, 171)
+        PictureBox2.Margin = New Padding(3, 4, 3, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(272, 292)
+        PictureBox2.Size = New Size(191, 175)
         PictureBox2.TabIndex = 5
         PictureBox2.TabStop = False
         ' 
@@ -125,22 +123,21 @@ Partial Class User_Profile
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label3.ForeColor = Color.Black
-        Label3.Location = New Point(510, 535)
-        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Location = New Point(357, 321)
         Label3.Name = "Label3"
-        Label3.Size = New Size(71, 25)
+        Label3.Size = New Size(47, 16)
         Label3.TabIndex = 6
         Label3.Text = "Email :"
         ' 
         ' SearchTextBox
         ' 
         SearchTextBox.BackColor = Color.WhiteSmoke
-        SearchTextBox.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        SearchTextBox.Location = New Point(61, 167)
-        SearchTextBox.Margin = New Padding(4, 6, 4, 6)
+        SearchTextBox.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        SearchTextBox.Location = New Point(43, 100)
+        SearchTextBox.Margin = New Padding(3, 4, 3, 4)
         SearchTextBox.Name = "SearchTextBox"
         SearchTextBox.PlaceholderText = "Search"
-        SearchTextBox.Size = New Size(834, 35)
+        SearchTextBox.Size = New Size(585, 26)
         SearchTextBox.TabIndex = 7
         SearchTextBox.TabStop = False
         ' 
@@ -150,10 +147,9 @@ Partial Class User_Profile
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(510, 606)
-        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Location = New Point(357, 364)
         Label4.Name = "Label4"
-        Label4.Size = New Size(66, 25)
+        Label4.Size = New Size(42, 16)
         Label4.TabIndex = 8
         Label4.Text = "DOB :"
         ' 
@@ -163,10 +159,9 @@ Partial Class User_Profile
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label5.ForeColor = Color.Black
-        Label5.Location = New Point(510, 642)
-        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Location = New Point(357, 385)
         Label5.Name = "Label5"
-        Label5.Size = New Size(126, 25)
+        Label5.Size = New Size(85, 16)
         Label5.TabIndex = 9
         Label5.Text = "Designation :"
         ' 
@@ -176,10 +171,9 @@ Partial Class User_Profile
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(510, 677)
-        Label6.Margin = New Padding(4, 0, 4, 0)
+        Label6.Location = New Point(357, 406)
         Label6.Name = "Label6"
-        Label6.Size = New Size(91, 25)
+        Label6.Size = New Size(58, 16)
         Label6.TabIndex = 10
         Label6.Text = "Contact :"
         ' 
@@ -189,10 +183,9 @@ Partial Class User_Profile
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(510, 570)
-        Label7.Margin = New Padding(4, 0, 4, 0)
+        Label7.Location = New Point(357, 342)
         Label7.Name = "Label7"
-        Label7.Size = New Size(88, 25)
+        Label7.Size = New Size(58, 16)
         Label7.TabIndex = 11
         Label7.Text = "Gender :"
         ' 
@@ -202,10 +195,9 @@ Partial Class User_Profile
         EmailLabel.BackColor = Color.Transparent
         EmailLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         EmailLabel.ForeColor = Color.Black
-        EmailLabel.Location = New Point(580, 535)
-        EmailLabel.Margin = New Padding(4, 0, 4, 0)
+        EmailLabel.Location = New Point(406, 321)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New Size(134, 25)
+        EmailLabel.Size = New Size(91, 16)
         EmailLabel.TabIndex = 12
         EmailLabel.Text = "Not Logged In"
         ' 
@@ -215,10 +207,9 @@ Partial Class User_Profile
         DesignationLabel.BackColor = Color.Transparent
         DesignationLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         DesignationLabel.ForeColor = Color.Black
-        DesignationLabel.Location = New Point(630, 642)
-        DesignationLabel.Margin = New Padding(4, 0, 4, 0)
+        DesignationLabel.Location = New Point(441, 385)
         DesignationLabel.Name = "DesignationLabel"
-        DesignationLabel.Size = New Size(134, 25)
+        DesignationLabel.Size = New Size(91, 16)
         DesignationLabel.TabIndex = 13
         DesignationLabel.Text = "Not Logged In"
         ' 
@@ -228,10 +219,9 @@ Partial Class User_Profile
         ContactLabel.BackColor = Color.Transparent
         ContactLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         ContactLabel.ForeColor = Color.Black
-        ContactLabel.Location = New Point(597, 677)
-        ContactLabel.Margin = New Padding(4, 0, 4, 0)
+        ContactLabel.Location = New Point(418, 406)
         ContactLabel.Name = "ContactLabel"
-        ContactLabel.Size = New Size(134, 25)
+        ContactLabel.Size = New Size(91, 16)
         ContactLabel.TabIndex = 14
         ContactLabel.Text = "Not Logged In"
         ' 
@@ -241,10 +231,9 @@ Partial Class User_Profile
         GenderLabel.BackColor = Color.Transparent
         GenderLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         GenderLabel.ForeColor = Color.Black
-        GenderLabel.Location = New Point(594, 570)
-        GenderLabel.Margin = New Padding(4, 0, 4, 0)
+        GenderLabel.Location = New Point(416, 342)
         GenderLabel.Name = "GenderLabel"
-        GenderLabel.Size = New Size(134, 25)
+        GenderLabel.Size = New Size(91, 16)
         GenderLabel.TabIndex = 15
         GenderLabel.Text = "Not Logged In"
         ' 
@@ -254,10 +243,9 @@ Partial Class User_Profile
         DOBLabel.BackColor = Color.Transparent
         DOBLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         DOBLabel.ForeColor = Color.Black
-        DOBLabel.Location = New Point(580, 606)
-        DOBLabel.Margin = New Padding(4, 0, 4, 0)
+        DOBLabel.Location = New Point(406, 364)
         DOBLabel.Name = "DOBLabel"
-        DOBLabel.Size = New Size(134, 25)
+        DOBLabel.Size = New Size(91, 16)
         DOBLabel.TabIndex = 16
         DOBLabel.Text = "Not Logged In"
         ' 
@@ -267,10 +255,9 @@ Partial Class User_Profile
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Microsoft Sans Serif", 9.6F)
         Label9.ForeColor = Color.Black
-        Label9.Location = New Point(510, 495)
-        Label9.Margin = New Padding(4, 0, 4, 0)
+        Label9.Location = New Point(357, 297)
         Label9.Name = "Label9"
-        Label9.Size = New Size(56, 25)
+        Label9.Size = New Size(35, 16)
         Label9.TabIndex = 17
         Label9.Text = "SID :"
         ' 
@@ -280,22 +267,21 @@ Partial Class User_Profile
         SIDLabel.BackColor = Color.Transparent
         SIDLabel.Font = New Font("Microsoft Sans Serif", 9.6F)
         SIDLabel.ForeColor = Color.Black
-        SIDLabel.Location = New Point(580, 495)
-        SIDLabel.Margin = New Padding(4, 0, 4, 0)
+        SIDLabel.Location = New Point(406, 297)
         SIDLabel.Name = "SIDLabel"
-        SIDLabel.Size = New Size(134, 25)
+        SIDLabel.Size = New Size(91, 16)
         SIDLabel.TabIndex = 18
         SIDLabel.Text = "Not Logged In"
         ' 
         ' ListBox1
         ' 
-        ListBox1.Font = New Font("Segoe UI", 12.0F)
+        ListBox1.Font = New Font("Segoe UI", 12F)
         ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 32
-        ListBox1.Location = New Point(61, 204)
-        ListBox1.Margin = New Padding(3, 4, 3, 4)
+        ListBox1.ItemHeight = 21
+        ListBox1.Location = New Point(43, 122)
+        ListBox1.Margin = New Padding(2)
         ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(834, 100)
+        ListBox1.Size = New Size(585, 25)
         ListBox1.TabIndex = 20
         ' 
         ' EditProfileButton
@@ -305,19 +291,31 @@ Partial Class User_Profile
         EditProfileButton.BackgroundImageLayout = ImageLayout.Stretch
         EditProfileButton.Cursor = Cursors.Hand
         EditProfileButton.ForeColor = Color.White
-        EditProfileButton.Location = New Point(851, 46)
-        EditProfileButton.Margin = New Padding(3, 4, 3, 4)
+        EditProfileButton.Location = New Point(596, 28)
+        EditProfileButton.Margin = New Padding(2)
         EditProfileButton.Name = "EditProfileButton"
-        EditProfileButton.Size = New Size(140, 65)
+        EditProfileButton.Size = New Size(98, 39)
         EditProfileButton.TabIndex = 21
         EditProfileButton.UseVisualStyleBackColor = False
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(441, 28)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(141, 39)
+        Button1.TabIndex = 22
+        Button1.Text = "Change Password"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' User_Profile
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1063, 1067)
+        ClientSize = New Size(744, 640)
+        Controls.Add(Button1)
         Controls.Add(ListBox1)
         Controls.Add(EditProfileButton)
         Controls.Add(SIDLabel)
@@ -341,7 +339,7 @@ Partial Class User_Profile
         Controls.Add(PictureBox2)
         ForeColor = Color.White
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(4, 6, 4, 6)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "User_Profile"
         Text = "Profile"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -372,4 +370,5 @@ Partial Class User_Profile
     Friend WithEvents SIDLabel As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents EditProfileButton As Button
+    Friend WithEvents Button1 As Button
 End Class

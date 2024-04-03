@@ -7,11 +7,13 @@ Public Class FestivalEvents_RegRestrictions
     Dim conn As New MySqlConnection(connString)
     Private Sub FestivalEvents_RegRestrictions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the initial state of CheckBox1 and adjust controls accordingly
+        Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = FormBorderStyle.None
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM festivals WHERE name = @CurrEvent "
+            Dim query As String = "SELECT * FROM festivals WHERE id = @CurrEvent "
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEvent)
+                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEventID)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 reader.Read()
                 Dim restrictions As String = If(Not IsDBNull(reader("restrictions")), reader("restrictions").ToString(), "{}")

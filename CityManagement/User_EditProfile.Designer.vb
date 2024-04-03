@@ -46,11 +46,10 @@ Partial Class User_EditProfile
         EmailTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         EmailTextBox.Cursor = Cursors.No
         EmailTextBox.Font = New Font("Exo 2", 12F)
-        EmailTextBox.Location = New Point(996, 181)
-        EmailTextBox.Margin = New Padding(2)
+        EmailTextBox.Location = New Point(1081, 253)
         EmailTextBox.Name = "EmailTextBox"
         EmailTextBox.ReadOnly = True
-        EmailTextBox.Size = New Size(202, 27)
+        EmailTextBox.Size = New Size(259, 31)
         EmailTextBox.TabIndex = 2
         ' 
         ' EmailLabel
@@ -59,10 +58,9 @@ Partial Class User_EditProfile
         EmailLabel.AutoSize = True
         EmailLabel.Font = New Font("Exo 2", 12F)
         EmailLabel.ForeColor = Color.White
-        EmailLabel.Location = New Point(997, 156)
-        EmailLabel.Margin = New Padding(2, 0, 2, 0)
+        EmailLabel.Location = New Point(1082, 218)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New Size(50, 19)
+        EmailLabel.Size = New Size(61, 24)
         EmailLabel.TabIndex = 15
         EmailLabel.Text = "Email"
         ' 
@@ -72,10 +70,9 @@ Partial Class User_EditProfile
         Label1.AutoSize = True
         Label1.Font = New Font("Centauri", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(758, 51)
-        Label1.Margin = New Padding(2, 0, 2, 0)
+        Label1.Location = New Point(775, 71)
         Label1.Name = "Label1"
-        Label1.Size = New Size(458, 37)
+        Label1.Size = New Size(577, 46)
         Label1.TabIndex = 10
         Label1.Text = "Edit Profile"
         ' 
@@ -84,10 +81,9 @@ Partial Class User_EditProfile
         SignUpButton.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         SignUpButton.Cursor = Cursors.Hand
         SignUpButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        SignUpButton.Location = New Point(882, 522)
-        SignUpButton.Margin = New Padding(2)
+        SignUpButton.Location = New Point(934, 731)
         SignUpButton.Name = "SignUpButton"
-        SignUpButton.Size = New Size(183, 54)
+        SignUpButton.Size = New Size(235, 76)
         SignUpButton.TabIndex = 11
         SignUpButton.Text = "Submit"
         SignUpButton.UseVisualStyleBackColor = True
@@ -96,10 +92,9 @@ Partial Class User_EditProfile
         ' 
         NameTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         NameTextBox.Font = New Font("Exo 2", 12F)
-        NameTextBox.Location = New Point(758, 181)
-        NameTextBox.Margin = New Padding(2)
+        NameTextBox.Location = New Point(775, 253)
         NameTextBox.Name = "NameTextBox"
-        NameTextBox.Size = New Size(202, 27)
+        NameTextBox.Size = New Size(259, 31)
         NameTextBox.TabIndex = 1
         ' 
         ' Label3
@@ -108,10 +103,9 @@ Partial Class User_EditProfile
         Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 12F)
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(758, 156)
-        Label3.Margin = New Padding(2, 0, 2, 0)
+        Label3.Location = New Point(775, 218)
         Label3.Name = "Label3"
-        Label3.Size = New Size(52, 19)
+        Label3.Size = New Size(64, 24)
         Label3.TabIndex = 20
         Label3.Text = "Name"
         ' 
@@ -119,10 +113,9 @@ Partial Class User_EditProfile
         ' 
         ContactTextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         ContactTextBox.Font = New Font("Exo 2", 12F)
-        ContactTextBox.Location = New Point(758, 269)
-        ContactTextBox.Margin = New Padding(2)
+        ContactTextBox.Location = New Point(775, 377)
         ContactTextBox.Name = "ContactTextBox"
-        ContactTextBox.Size = New Size(202, 27)
+        ContactTextBox.Size = New Size(259, 31)
         ContactTextBox.TabIndex = 3
         ' 
         ' Label4
@@ -131,10 +124,9 @@ Partial Class User_EditProfile
         Label4.AutoSize = True
         Label4.Font = New Font("Exo 2", 12F)
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(758, 244)
-        Label4.Margin = New Padding(2, 0, 2, 0)
+        Label4.Location = New Point(775, 342)
         Label4.Name = "Label4"
-        Label4.Size = New Size(65, 19)
+        Label4.Size = New Size(81, 24)
         Label4.TabIndex = 24
         Label4.Text = "Contact"
         ' 
@@ -144,10 +136,9 @@ Partial Class User_EditProfile
         Label6.AutoSize = True
         Label6.Font = New Font("Exo 2", 12F)
         Label6.ForeColor = Color.White
-        Label6.Location = New Point(997, 334)
-        Label6.Margin = New Padding(2, 0, 2, 0)
+        Label6.Location = New Point(1082, 468)
         Label6.Name = "Label6"
-        Label6.Size = New Size(41, 19)
+        Label6.Size = New Size(48, 24)
         Label6.TabIndex = 30
         Label6.Text = "DOB"
         ' 
@@ -157,10 +148,9 @@ Partial Class User_EditProfile
         Label8.AutoSize = True
         Label8.Font = New Font("Exo 2", 12F)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(758, 334)
-        Label8.Margin = New Padding(2, 0, 2, 0)
+        Label8.Location = New Point(775, 468)
         Label8.Name = "Label8"
-        Label8.Size = New Size(61, 19)
+        Label8.Size = New Size(76, 24)
         Label8.TabIndex = 26
         Label8.Text = "Gender"
         ' 
@@ -169,11 +159,10 @@ Partial Class User_EditProfile
         GenderComboBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         GenderComboBox.Font = New Font("Exo 2", 11F)
         GenderComboBox.FormattingEnabled = True
-        GenderComboBox.ItemHeight = 18
-        GenderComboBox.Location = New Point(758, 366)
-        GenderComboBox.Margin = New Padding(2)
+        GenderComboBox.ItemHeight = 22
+        GenderComboBox.Location = New Point(775, 512)
         GenderComboBox.Name = "GenderComboBox"
-        GenderComboBox.Size = New Size(128, 26)
+        GenderComboBox.Size = New Size(163, 30)
         GenderComboBox.TabIndex = 7
         ' 
         ' DateOfBirthDateTimePicker
@@ -181,10 +170,9 @@ Partial Class User_EditProfile
         DateOfBirthDateTimePicker.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         DateOfBirthDateTimePicker.Font = New Font("Exo 2", 11F)
         DateOfBirthDateTimePicker.Format = DateTimePickerFormat.Short
-        DateOfBirthDateTimePicker.Location = New Point(997, 367)
-        DateOfBirthDateTimePicker.Margin = New Padding(2)
+        DateOfBirthDateTimePicker.Location = New Point(1082, 514)
         DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker"
-        DateOfBirthDateTimePicker.Size = New Size(128, 25)
+        DateOfBirthDateTimePicker.Size = New Size(163, 29)
         DateOfBirthDateTimePicker.TabIndex = 8
         ' 
         ' LoginPic
@@ -192,10 +180,9 @@ Partial Class User_EditProfile
         LoginPic.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         LoginPic.BackgroundImage = My.Resources.Resources.loginImage
         LoginPic.BackgroundImageLayout = ImageLayout.Stretch
-        LoginPic.Location = New Point(-2, -1)
-        LoginPic.Margin = New Padding(2)
+        LoginPic.Location = New Point(0, -1)
         LoginPic.Name = "LoginPic"
-        LoginPic.Size = New Size(730, 895)
+        LoginPic.Size = New Size(736, 1174)
         LoginPic.TabIndex = 9
         LoginPic.TabStop = False
         ' 
@@ -212,30 +199,28 @@ Partial Class User_EditProfile
         Label5.AutoSize = True
         Label5.Font = New Font("Exo 2", 12F)
         Label5.ForeColor = Color.White
-        Label5.Location = New Point(996, 244)
-        Label5.Margin = New Padding(2, 0, 2, 0)
+        Label5.Location = New Point(1081, 342)
         Label5.Name = "Label5"
-        Label5.Size = New Size(106, 19)
+        Label5.Size = New Size(131, 24)
         Label5.TabIndex = 37
         Label5.Text = "Profile Image"
         ' 
         ' Button1
         ' 
         Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button1.Location = New Point(997, 272)
-        Button1.Margin = New Padding(2)
+        Button1.Location = New Point(1082, 381)
         Button1.Name = "Button1"
-        Button1.Size = New Size(201, 23)
+        Button1.Size = New Size(258, 32)
         Button1.TabIndex = 4
         Button1.Text = "Upload Picture"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' User_EditProfile
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
-        ClientSize = New Size(1238, 881)
+        ClientSize = New Size(1392, 1175)
         Controls.Add(Button1)
         Controls.Add(Label5)
         Controls.Add(DateOfBirthDateTimePicker)
@@ -251,9 +236,9 @@ Partial Class User_EditProfile
         Controls.Add(Label1)
         Controls.Add(SignUpButton)
         Controls.Add(LoginPic)
-        Margin = New Padding(2)
+        FormBorderStyle = FormBorderStyle.None
         Name = "User_EditProfile"
-        Text = "SignUpForm"
+        Text = "EditProfileForm"
         CType(LoginPic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

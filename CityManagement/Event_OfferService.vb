@@ -8,11 +8,11 @@ Public Class Event_OfferService
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    Dim EventId As Integer = CurrEventID
-    Dim UserSID As Integer = CurrUserSID
+    'Dim EventId As Integer = CurrEventID
+    'Dim UserSID As Integer = CurrUserSID
 
-    'Dim EventId As Integer = 4
-    'Dim UserSID As Integer = 1
+    Dim EventId As Integer = 4
+    Dim UserSID As Integer = 1
 
     Dim vendorServiceTags As List(Of VendorServiceTag)
 
@@ -28,15 +28,15 @@ Public Class Event_OfferService
     Private Sub Event_OfferService_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load font from file
         Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
-        Dim customFont As New PrivateFontCollection()
-        customFont.AddFontFile(fontFilePath)
+        'Dim customFont As New PrivateFontCollection()
+        'customFont.AddFontFile(fontFilePath)
 
         ' Apply font to all controls on the form
-        ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
-        Label1.Font = New Font(customFont.Families(0), 24)
-        Label2.Font = New Font(customFont.Families(0), 24)
-        Label10.Font = New Font(customFont.Families(0), 24)
-        EventName.Font = New Font(customFont.Families(0), 24)
+        'ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
+        'Label1.Font = New Font(customFont.Families(0), 24)
+        'Label2.Font = New Font(customFont.Families(0), 24)
+        'Label10.Font = New Font(customFont.Families(0), 24)
+        'EventName.Font = New Font(customFont.Families(0), 24)
 
         If UserSID <> -1 Then
             ' Assume EventID is somehow determined or passed to this form
@@ -186,4 +186,7 @@ Public Class Event_OfferService
         Next
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
 End Class

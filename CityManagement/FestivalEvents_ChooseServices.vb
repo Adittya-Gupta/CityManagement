@@ -39,7 +39,8 @@ Public Class FestivalEvents_ChooseServices
     Private Sub FestivalEvents_ChooseServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Hide all controls initially
         Panel1.AutoScroll = True
-
+        Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = FormBorderStyle.None
         Try
             conn.Open()
             Dim query As String = "SELECT * FROM festivals WHERE name = @CurrEvent "

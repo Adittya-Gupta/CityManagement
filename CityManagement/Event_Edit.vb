@@ -11,27 +11,27 @@ Public Class Event_Edit
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    Dim EventId As Integer = CurrEventID
-    Dim UserSID As Integer = CurrUserSID
+    'Dim EventId As Integer = CurrEventID
+    'Dim UserSID As Integer = CurrUserSID
 
-    'Dim EventId As Integer = 4
-    'Dim UserSID As Integer = 1
+    Dim EventId As Integer = 4
+    Dim UserSID As Integer = 1
 
 
 
     ' This method is called when the Edit_Event form loads
     Private Sub Edit_Event_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load font from file
-        Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
-        Dim customFont As New PrivateFontCollection()
-        customFont.AddFontFile(fontFilePath)
+        'Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
+        'Dim customFont As New PrivateFontCollection()
+        'customFont.AddFontFile(fontFilePath)
 
         ' Apply font to all controls on the form
-        ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
-        Label1.Font = New Font(customFont.Families(0), 24)
-        Label2.Font = New Font(customFont.Families(0), 24)
+        'ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
+        'Label1.Font = New Font(customFont.Families(0), 24)
+        'Label2.Font = New Font(customFont.Families(0), 24)
         ' Dispose the font collection
-        customFont.Dispose()
+        'customFont.Dispose()
 
         ' Check if the global user ID from the login form is valid (not -1)
         If UserSID <> -1 Then
@@ -179,5 +179,8 @@ Public Class Event_Edit
         Next
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
 

@@ -171,7 +171,7 @@ Public Class User_Login
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 GlobalSID = database_sid
                 ' Add code to navigate to the next form or perform other actions upon successful login
-                Dim profile As New User_Profile()
+                Dim profile As New MainPanel()
                 profile.StartPosition = FormStartPosition.Manual
                 profile.Location = Me.Location ' Set the location of the new form to the current form's location
                 profile.Show()
@@ -203,6 +203,4 @@ Public Class User_Login
         ForgotPAsswordForm.Show()
         Me.Hide()
     End Sub
-
-
 End Class

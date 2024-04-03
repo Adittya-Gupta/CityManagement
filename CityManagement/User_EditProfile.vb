@@ -11,8 +11,10 @@ Public Class User_EditProfile
     Dim selectedImagePath As String = ""
     Private Sub SignUpForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.WindowState = FormWindowState.Maximized
-
+        Me.Width = Screen.PrimaryScreen.Bounds.Width - 200
+        Me.Height = Screen.PrimaryScreen.Bounds.Height
+        'Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = FormBorderStyle.None
         ' Populate the gender ComboBox
         GenderComboBox.Items.AddRange({"Select", "Male", "Female", "Non Binary", "Prefer not to say"})
         ' Select the first item by default
@@ -161,7 +163,7 @@ Public Class User_EditProfile
             DateOfBirthDateTimePicker.Value = Date.Now
             Button1.Text = "Upload Picture"
 
-            LoginLabel_Click()
+            Submit_Click()
 
 
         Catch ex As Exception
@@ -175,13 +177,13 @@ Public Class User_EditProfile
         'MessageBox.Show("Signup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub LoginLabel_Click()
+    Private Sub Submit_Click()
         ' Open the signup form when the label is clicked
-        Dim LoginForm As New User_Login
-        LoginForm.StartPosition = FormStartPosition.Manual
-        LoginForm.Location = Location ' Set the location of the new form to the current form's location
-        LoginForm.Show()
-        Hide()
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Profile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

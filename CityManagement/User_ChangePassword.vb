@@ -121,7 +121,7 @@ Public Class User_ChangePassword
 
     End Function
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
         Dim Email = Environment.GetEnvironmentVariable("Email")
 
         If TextBox1.Text <> TextBox2.Text Then
@@ -129,14 +129,14 @@ Public Class User_ChangePassword
             Return
         End If
 
-        Dim inputString As String = TextBox1.Text
+        Dim inputString = TextBox1.Text
 
         If inputString.Length < 1 Then
             MessageBox.Show("Please enter a non empty password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 
-        Dim StrengthCheck As Integer = PasswordStrengthCheck(inputString)
+        Dim StrengthCheck = PasswordStrengthCheck(inputString)
 
         If StrengthCheck < 5 Then
             Return
@@ -144,26 +144,26 @@ Public Class User_ChangePassword
 
 
         ' Hash the password
-        Dim newpassword As String = inputString
-        Dim newhashedPassword As String = HashPassword(newpassword)
+        Dim newpassword = inputString
+        Dim newhashedPassword = HashPassword(newpassword)
 
         Using connection As New MySqlConnection(connString)
             Try
                 connection.Open()
 
-                Dim query As String = "SELECT PasswordHash FROM User WHERE EmailAddress = @Email"
+                Dim query = "SELECT PasswordHash FROM User WHERE EmailAddress = @Email"
                 Dim cmd As New MySqlCommand(query, connection)
                 cmd.Parameters.AddWithValue("@Email", Email)
-                Dim existingHash As String = Convert.ToString(cmd.ExecuteScalar())
+                Dim existingHash = Convert.ToString(cmd.ExecuteScalar)
 
                 If newhashedPassword = existingHash Then
                     MessageBox.Show("Congratulations!! You have remembered your old password.... No need to change it now.", "Password Unchanged", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    Dim LoginForm As New User_Login()
+                    Dim LoginForm As New User_Login
                     LoginForm.StartPosition = FormStartPosition.Manual
-                    LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+                    LoginForm.Location = Location ' Set the location of the new form to the current form's location
                     LoginForm.Show()
-                    Me.Close()
+                    Close()
                     Return
                 End If
 
@@ -174,17 +174,17 @@ Public Class User_ChangePassword
                 command.Parameters.AddWithValue("@Email", Email)
                 command.Parameters.AddWithValue("@PasswordHash", newhashedPassword)
 
-                Dim result As Integer = command.ExecuteNonQuery()
+                Dim result = command.ExecuteNonQuery
 
                 ' Check if the update was successful based on affected rows.
                 If result > 0 Then
                     MessageBox.Show("Password updated successfully!! , You will now be redirected back to Login Page")
 
-                    Dim LoginForm As New User_Login()
+                    Dim LoginForm As New User_Login
                     LoginForm.StartPosition = FormStartPosition.Manual
-                    LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+                    LoginForm.Location = Location ' Set the location of the new form to the current form's location
                     LoginForm.Show()
-                    Me.Close()
+                    Close()
 
                 Else
                     MessageBox.Show("Password update failed!!")
@@ -200,7 +200,8 @@ Public Class User_ChangePassword
     End Sub
 
     Private Sub ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
@@ -224,4 +225,11 @@ Public Class User_ChangePassword
 
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Profile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class

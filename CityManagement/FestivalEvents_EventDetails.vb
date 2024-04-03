@@ -8,8 +8,12 @@ Public Class FestivalEvents_EventDetails
         'Make this form full screen
         'Me.WindowState = FormWindowState.Maximized
         'Hide the title bar
+        Me.Width = Screen.PrimaryScreen.Bounds.Width - 200
+        Me.Height = Screen.PrimaryScreen.Bounds.Height
         Me.Text = String.Empty
         Me.ControlBox = False
+        Label7.MaximumSize = New Size(Panel1.Size.Width - 100, 0) ' Adjust the width as needed
+        Label7.AutoSize = True
         Try
             conn.Open()
             Dim query As String = "SELECT * FROM festivals WHERE name = @CurrEvent "
@@ -50,10 +54,34 @@ Public Class FestivalEvents_EventDetails
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        mypanel.Panel1.Controls.Clear
+        Dim form As New FestivalEvents_ChooseServices
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_MainMenu
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_RegRestrictions
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

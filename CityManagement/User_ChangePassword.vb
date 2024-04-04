@@ -163,7 +163,7 @@ Public Class User_ChangePassword
                     LoginForm.StartPosition = FormStartPosition.Manual
                     LoginForm.Location = Location ' Set the location of the new form to the current form's location
                     LoginForm.Show()
-                    Close()
+                    Me.Hide()
                     Return
                 End If
 
@@ -184,7 +184,7 @@ Public Class User_ChangePassword
                     LoginForm.StartPosition = FormStartPosition.Manual
                     LoginForm.Location = Location ' Set the location of the new form to the current form's location
                     LoginForm.Show()
-                    Close()
+                    Me.Hide()
 
                 Else
                     MessageBox.Show("Password update failed!!")
@@ -200,8 +200,8 @@ Public Class User_ChangePassword
     End Sub
 
     Private Sub ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
@@ -225,11 +225,11 @@ Public Class User_ChangePassword
 
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        mypanel.Panel1.Controls.Clear()
-        Dim form As New User_Profile
-        form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
-        form.Show()
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
 End Class

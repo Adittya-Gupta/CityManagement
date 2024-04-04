@@ -1,0 +1,230 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class UserProfile_ChangePassword
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserProfile_ChangePassword))
+        PictureBox1 = New PictureBox()
+        TextBox3 = New TextBox()
+        CheckBox1 = New CheckBox()
+        Button1 = New Button()
+        TextBox2 = New TextBox()
+        TextBox1 = New TextBox()
+        TextBox4 = New TextBox()
+        Panel2 = New Panel()
+        Label11 = New Label()
+        Label3 = New Label()
+        Button3 = New Button()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox1.Location = New Point(330, 95)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(314, 251)
+        PictureBox1.TabIndex = 55
+        PictureBox1.TabStop = False
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox3.Location = New Point(327, 497)
+        TextBox3.Margin = New Padding(3, 4, 3, 4)
+        TextBox3.Name = "TextBox3"
+        TextBox3.PlaceholderText = "Old Password"
+        TextBox3.Size = New Size(317, 30)
+        TextBox3.TabIndex = 205
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.BackgroundImageLayout = ImageLayout.None
+        CheckBox1.Checked = True
+        CheckBox1.CheckState = CheckState.Checked
+        CheckBox1.Cursor = Cursors.Hand
+        CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Location = New Point(333, 654)
+        CheckBox1.Margin = New Padding(3, 4, 3, 4)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(117, 21)
+        CheckBox1.TabIndex = 64
+        CheckBox1.Text = "Hide Password"
+        CheckBox1.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(403, 693)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(117, 43)
+        Button1.TabIndex = 63
+        Button1.Text = "Change"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(327, 595)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.PlaceholderText = "Confirm New Password"
+        TextBox2.Size = New Size(314, 30)
+        TextBox2.TabIndex = 400
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(327, 547)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "New Password"
+        TextBox1.Size = New Size(317, 30)
+        TextBox1.TabIndex = 300
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox4.Location = New Point(327, 448)
+        TextBox4.Margin = New Padding(3, 4, 3, 4)
+        TextBox4.Name = "TextBox4"
+        TextBox4.PlaceholderText = "Email"
+        TextBox4.Size = New Size(317, 30)
+        TextBox4.TabIndex = 168
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = SystemColors.ButtonShadow
+        Panel2.Controls.Add(Button3)
+        Panel2.Controls.Add(Label11)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(917, 67)
+        Panel2.TabIndex = 1
+        ' 
+        ' Label11
+        ' 
+        Label11.Anchor = AnchorStyles.None
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(310, 9)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(337, 53)
+        Label11.TabIndex = 40
+        Label11.Text = "Change Password"
+        Label11.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label3
+        ' 
+        Label3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(310, 370)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(350, 67)
+        Label3.TabIndex = 71
+        Label3.Text = "Want to change your password ?" & vbCrLf & "Just enter your Email and Your old password and " & vbCrLf & "Select a password you want to keep now"
+        Label3.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.Black
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(12, 12)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(157, 41)
+        Button3.TabIndex = 43
+        Button3.Text = " Back To Profile"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' UserProfile_ChangePassword
+        ' 
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        AutoScroll = True
+        AutoScrollMinSize = New Size(0, 750)
+        BackColor = Color.LightGray
+        ClientSize = New Size(938, 700)
+        Controls.Add(Label3)
+        Controls.Add(Panel2)
+        Controls.Add(TextBox4)
+        Controls.Add(TextBox3)
+        Controls.Add(CheckBox1)
+        Controls.Add(Button1)
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox1)
+        Controls.Add(PictureBox1)
+        Name = "UserProfile_ChangePassword"
+        Text = "UserProfile_ChangePassword"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
+    End Sub
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+
+    End Sub
+
+    Private Sub UserProfile_ChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button3 As Button
+End Class

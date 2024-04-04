@@ -69,7 +69,7 @@ Public Class ForgotPassword
         Label2.Text = "Sending code....."
         Label2.ForeColor = Color.Black
 
-        Dim EmailAddress As String = TextBox2.Text
+        Dim EmailAddress As String = Email_tb.Text
 
         If String.IsNullOrEmpty(EmailAddress) Then
             MessageBox.Show("Please enter your Email to send code")

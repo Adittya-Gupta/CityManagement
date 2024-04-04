@@ -12,8 +12,9 @@ Public Class Banking_Card_Management
         childform.Show()
     End Sub
 
-    Public bank_username As String = "admin"
+    Public bank_username As String = "samuel"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim has_credit_card As Boolean = False
 

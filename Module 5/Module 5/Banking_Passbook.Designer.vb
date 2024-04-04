@@ -54,9 +54,9 @@ Partial Class Banking_Passbook
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(986, 136)
+        Me.Label22.Location = New System.Drawing.Point(837, 158)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(355, 147)
+        Me.Label22.Size = New System.Drawing.Size(258, 116)
         Me.Label22.TabIndex = 50
         Me.Label22.Text = "Description: "
         '
@@ -64,7 +64,7 @@ Partial Class Banking_Passbook
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(642, 234)
+        Me.Label21.Location = New System.Drawing.Point(618, 222)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(95, 23)
         Me.Label21.TabIndex = 49
@@ -74,7 +74,7 @@ Partial Class Banking_Passbook
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(642, 183)
+        Me.Label20.Location = New System.Drawing.Point(618, 171)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(187, 23)
         Me.Label20.TabIndex = 48
@@ -84,7 +84,7 @@ Partial Class Banking_Passbook
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(206, 234)
+        Me.Label19.Location = New System.Drawing.Point(192, 222)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(161, 23)
         Me.Label19.TabIndex = 47
@@ -94,7 +94,7 @@ Partial Class Banking_Passbook
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(206, 183)
+        Me.Label18.Location = New System.Drawing.Point(192, 171)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(185, 23)
         Me.Label18.TabIndex = 46
@@ -104,7 +104,7 @@ Partial Class Banking_Passbook
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(642, 136)
+        Me.Label17.Location = New System.Drawing.Point(618, 124)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(154, 23)
         Me.Label17.TabIndex = 45
@@ -114,7 +114,7 @@ Partial Class Banking_Passbook
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(206, 136)
+        Me.Label16.Location = New System.Drawing.Point(192, 124)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(147, 23)
         Me.Label16.TabIndex = 44
@@ -124,7 +124,7 @@ Partial Class Banking_Passbook
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(19, 136)
+        Me.Label15.Location = New System.Drawing.Point(5, 124)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(147, 23)
         Me.Label15.TabIndex = 43
@@ -134,7 +134,7 @@ Partial Class Banking_Passbook
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(865, 136)
+        Me.Label14.Location = New System.Drawing.Point(837, 124)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(115, 23)
         Me.Label14.TabIndex = 42
@@ -144,7 +144,7 @@ Partial Class Banking_Passbook
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(457, 234)
+        Me.Label13.Location = New System.Drawing.Point(417, 222)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(95, 23)
         Me.Label13.TabIndex = 41
@@ -154,7 +154,7 @@ Partial Class Banking_Passbook
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(456, 136)
+        Me.Label12.Location = New System.Drawing.Point(416, 124)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(154, 23)
         Me.Label12.TabIndex = 40
@@ -164,7 +164,7 @@ Partial Class Banking_Passbook
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(456, 183)
+        Me.Label11.Location = New System.Drawing.Point(416, 171)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(187, 23)
         Me.Label11.TabIndex = 39
@@ -174,7 +174,7 @@ Partial Class Banking_Passbook
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(20, 234)
+        Me.Label10.Location = New System.Drawing.Point(6, 222)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(161, 23)
         Me.Label10.TabIndex = 38
@@ -184,7 +184,7 @@ Partial Class Banking_Passbook
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(20, 183)
+        Me.Label9.Location = New System.Drawing.Point(6, 171)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(185, 23)
         Me.Label9.TabIndex = 37
@@ -198,7 +198,7 @@ Partial Class Banking_Passbook
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Location = New System.Drawing.Point(311, 596)
+        Me.Panel4.Location = New System.Drawing.Point(196, 594)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(659, 35)
         Me.Panel4.TabIndex = 36
@@ -220,7 +220,7 @@ Partial Class Banking_Passbook
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(318, 5)
+        Me.Label7.Location = New System.Drawing.Point(327, 5)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 23)
         Me.Label7.TabIndex = 16
@@ -254,17 +254,17 @@ Partial Class Banking_Passbook
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 331)
+        Me.DataGridView1.Location = New System.Drawing.Point(20, 290)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1330, 241)
+        Me.DataGridView1.Size = New System.Drawing.Size(1075, 282)
         Me.DataGridView1.TabIndex = 35
         '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.profile_pic
-        Me.PictureBox12.Location = New System.Drawing.Point(165, 5)
+        Me.PictureBox12.Location = New System.Drawing.Point(78, 12)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(101, 97)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -276,7 +276,7 @@ Partial Class Banking_Passbook
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1280, 27)
+        Me.TextBox1.Location = New System.Drawing.Point(1038, 2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(70, 16)
         Me.TextBox1.TabIndex = 33
@@ -287,7 +287,7 @@ Partial Class Banking_Passbook
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(1109, 26)
+        Me.Label4.Location = New System.Drawing.Point(867, 1)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(165, 17)
         Me.Label4.TabIndex = 32
@@ -299,7 +299,7 @@ Partial Class Banking_Passbook
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 31.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(338, 26)
+        Me.Label3.Location = New System.Drawing.Point(185, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(765, 64)
         Me.Label3.TabIndex = 31
@@ -308,10 +308,9 @@ Partial Class Banking_Passbook
         '
         'Banking_Passbook
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1355, 650)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)

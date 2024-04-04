@@ -12,15 +12,15 @@ Public Class Banking_Passbook
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    ' Public server As String = "localhost"
-    ' Public username As String = "root"
-    ' Public password As String = "Aasneh18"
-    ' Public database As String = "bankingdatabase"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
 
-    Public server As String = "172.16.114.244"
-    Public username As String = "admin"
-    Public password As String = "nimda"
-    Public database As String = "banking_database"
+    'Public server As String = "172.16.114.244"
+    'Public username As String = "admin"
+    'Public password As String = "nimda"
+    'Public database As String = "banking_database"
 
     Public bank_account_no As String = "1"
     Public bank_username As String = "admin"
@@ -34,19 +34,18 @@ Public Class Banking_Passbook
         Label21.Text = ""
         Label22.Text = ""
     End Sub
-    Private Sub CalcBankAccNo()
+    Private Sub CalculateBankAccNo()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
-        ' Open the connection
         Mysqlconn.Open()
-        Dim query As String = "SELECT Bank_Account_Number FROM banking_database.UserData WHERE Username = '" & bank_username & "';"
-
-        ' Create a MySqlCommand object
-        Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
-
-        ' Execute the query and get the result
-        bank_account_no = sqlCmd.ExecuteScalar().ToString
-        TextBox1.Text = bank_account_no
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = Mysqlconn
+        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
+            If reader.Read() Then
+                bank_account_no = reader.GetString("Bank_Account_Number")
+            End If
+        End Using
         Mysqlconn.Close()
         sqlCmd.Dispose()
     End Sub
@@ -58,7 +57,7 @@ Public Class Banking_Passbook
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from bankingdatabase.UserData where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "Select * from UserData where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
@@ -96,7 +95,7 @@ Public Class Banking_Passbook
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM banking_database.TransactionLog where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "SELECT * FROM TransactionLog where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
@@ -115,13 +114,12 @@ Public Class Banking_Passbook
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Me.WindowState = FormWindowState.Maximized
-        'MessageBox.Show(bank_username)
 
         'LoadFields()
-        CalcBankAccNo()
+        CalculateBankAccNo()
         RefreshDataGrid()
         ClearFields()
-        ' TextBox1.Text = bank_username
+        TextBox1.Text = bank_account_no
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)
@@ -234,9 +232,9 @@ Public Class Banking_Passbook
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from banking_database.TransactionLog where Transaction_ID = @ID;"
+        sqlCmd.CommandText = "Select * from bankingdatabase.TransactionLog where Transaction_ID = @ID;"
 
-        sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = Trans_ID
+        sqlCmd.Parameters.Add("@ID", MySqlDbType.VarChar).Value = Trans_ID
 
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)

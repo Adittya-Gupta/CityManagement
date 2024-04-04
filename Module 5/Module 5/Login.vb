@@ -17,14 +17,14 @@ Public Class Login
         childform.Show()
     End Sub
 
-    Public bank_username As String = "admin"
+    Public bank_username As String = "samuel"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
         Dim Username As String = TextBoxUsername.Text.Trim()
         Dim Password As String = TextBoxpassword.Text.Trim()
 
         ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        ' Dim connString As String = "server=" & server & ";user id=" & Username & ";password=" & Password & ";database=" & database & ";"
+        ' Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try

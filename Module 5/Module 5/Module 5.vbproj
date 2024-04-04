@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CA9E3DAD-747C-4765-886C-9442AF54A8DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Module_5.Email_Register</StartupObject>
+    <StartupObject>Module_5.Banking_Main</StartupObject>
     <RootNamespace>Module_5</RootNamespace>
     <AssemblyName>Module 5</AssemblyName>
     <FileAlignment>512</FileAlignment>

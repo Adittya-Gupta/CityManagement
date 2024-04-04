@@ -6,7 +6,8 @@ Public Class Profile
     Public username As String = "root"
     Public password As String = "Aasneh18"
     Public database As String = "bankingdatabase"
-    Public bank_username As String = "admin"
+
+    Public bank_username As String = "samuel"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -16,8 +17,9 @@ Public Class Profile
         ' connection to database
         MessageBox.Show(bank_username)
 
-        Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        'Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'im connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        'im connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
         Dim conn = New MySqlConnection(connString)
 
         Try
@@ -32,15 +34,15 @@ Public Class Profile
             Dim rowCount = sqlDt.Rows.Count
             Dim columnCount = sqlDt.Columns.Count
 
-            Dim imageBytes = DirectCast(sqlDt.Rows(0)(11), Byte())
-            Dim ms As New MemoryStream(imageBytes)
-            Dim image As Image = image.FromStream(ms)
-            PictureBox1.Image = image
+            'Dim imageBytes = DirectCast(sqlDt.Rows(0)(10), Byte())
+            'Dim ms As New MemoryStream(imageBytes)
+            'Dim image As Image = image.FromStream(ms)
+            'PictureBox1.Image = image
             'DataGridView1.DataSource = sqlDt
 
-            TextBoxBalence.Text = sqlDt.Rows(0)(9).ToString()
+            TextBoxBalence.Text = sqlDt.Rows(0)(8).ToString()
             TextBoxAccountNumber.Text = sqlDt.Rows(0)(0).ToString()
-            TextBoxCIBILScore.Text = sqlDt.Rows(0)(10).ToString()
+            TextBoxCIBILScore.Text = sqlDt.Rows(0)(9).ToString()
             TextBoxUsername.Text = sqlDt.Rows(0)(5).ToString()
 
             LabelName.Text = sqlDt.Rows(0)(2).ToString()

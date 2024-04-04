@@ -37,10 +37,10 @@ Partial Class Banking_Queries_User
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,7 +48,7 @@ Partial Class Banking_Queries_User
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(1020, 219)
+        Me.Label22.Location = New System.Drawing.Point(705, 215)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(323, 86)
         Me.Label22.TabIndex = 63
@@ -57,7 +57,7 @@ Partial Class Banking_Queries_User
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(1018, 123)
+        Me.Label21.Location = New System.Drawing.Point(703, 119)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(325, 91)
         Me.Label21.TabIndex = 62
@@ -67,7 +67,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(697, 232)
+        Me.Label20.Location = New System.Drawing.Point(290, 304)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(138, 23)
         Me.Label20.TabIndex = 61
@@ -77,7 +77,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(287, 260)
+        Me.Label19.Location = New System.Drawing.Point(290, 217)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(54, 23)
         Me.Label19.TabIndex = 60
@@ -87,7 +87,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(285, 209)
+        Me.Label18.Location = New System.Drawing.Point(288, 166)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(212, 23)
         Me.Label18.TabIndex = 59
@@ -97,7 +97,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(697, 185)
+        Me.Label17.Location = New System.Drawing.Point(288, 262)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(76, 23)
         Me.Label17.TabIndex = 58
@@ -107,7 +107,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(287, 162)
+        Me.Label16.Location = New System.Drawing.Point(290, 119)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(98, 23)
         Me.Label16.TabIndex = 57
@@ -117,7 +117,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(72, 162)
+        Me.Label15.Location = New System.Drawing.Point(16, 119)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(98, 23)
         Me.Label15.TabIndex = 56
@@ -127,7 +127,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(911, 219)
+        Me.Label14.Location = New System.Drawing.Point(596, 215)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(68, 23)
         Me.Label14.TabIndex = 55
@@ -137,7 +137,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(911, 126)
+        Me.Label13.Location = New System.Drawing.Point(593, 137)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(71, 23)
         Me.Label13.TabIndex = 54
@@ -147,7 +147,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(511, 185)
+        Me.Label12.Location = New System.Drawing.Point(16, 262)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(76, 23)
         Me.Label12.TabIndex = 53
@@ -157,7 +157,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(511, 232)
+        Me.Label11.Location = New System.Drawing.Point(18, 304)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(138, 23)
         Me.Label11.TabIndex = 52
@@ -167,7 +167,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(73, 260)
+        Me.Label10.Location = New System.Drawing.Point(17, 217)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(54, 23)
         Me.Label10.TabIndex = 51
@@ -177,7 +177,7 @@ Partial Class Banking_Queries_User
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(73, 209)
+        Me.Label9.Location = New System.Drawing.Point(17, 166)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(212, 23)
         Me.Label9.TabIndex = 50
@@ -186,29 +186,19 @@ Partial Class Banking_Queries_User
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 308)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 346)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1330, 330)
+        Me.DataGridView1.Size = New System.Drawing.Size(1082, 283)
         Me.DataGridView1.TabIndex = 49
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.profile_pic
-        Me.PictureBox12.Location = New System.Drawing.Point(176, 6)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(101, 97)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox12.TabIndex = 48
-        Me.PictureBox12.TabStop = False
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1272, 14)
+        Me.TextBox1.Location = New System.Drawing.Point(1034, 3)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(70, 16)
         Me.TextBox1.TabIndex = 47
@@ -219,7 +209,7 @@ Partial Class Banking_Queries_User
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(1101, 13)
+        Me.Label4.Location = New System.Drawing.Point(863, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(165, 17)
         Me.Label4.TabIndex = 46
@@ -231,19 +221,29 @@ Partial Class Banking_Queries_User
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 31.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(474, 24)
+        Me.Label3.Location = New System.Drawing.Point(299, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(474, 64)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "My Personal Queries"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.profile_pic
+        Me.PictureBox12.Location = New System.Drawing.Point(149, 3)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(101, 97)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox12.TabIndex = 48
+        Me.PictureBox12.TabStop = False
+        '
         'Banking_Queries_User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1355, 650)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)

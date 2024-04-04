@@ -38,17 +38,17 @@ Partial Class Banking_Homepage
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(784, 566)
+        Me.Panel4.Size = New System.Drawing.Size(809, 641)
         Me.Panel4.TabIndex = 41
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.GhostWhite
-        Me.Label3.Location = New System.Drawing.Point(140, 0)
+        Me.Label3.Location = New System.Drawing.Point(52, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(507, 544)
+        Me.Label3.Size = New System.Drawing.Size(701, 641)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = resources.GetString("Label3.Text")
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -103,10 +103,9 @@ Partial Class Banking_Homepage
         '
         'Banking_Homepage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1176, 570)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Button18)

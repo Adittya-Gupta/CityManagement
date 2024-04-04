@@ -25,7 +25,6 @@ Public Class Registration
     End Sub
 
     Private Sub Registration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles ButtonPhoto.Click
@@ -117,7 +116,9 @@ Public Class Registration
 
 
         ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        'im connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try

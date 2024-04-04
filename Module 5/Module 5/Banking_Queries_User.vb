@@ -12,33 +12,18 @@ Public Class Banking_Queries_User
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    'Public server As String = "localhost"
-    'Public username As String = "root"
-    ' Public password As String = "Aasneh18"
-    'Public database As String = "bankingdatabase"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
 
 
-    Public server As String = "172.16.114.244"
-    Public username As String = "admin"
-    Public password As String = "nimda"
-    Public database As String = "banking_database"
+    'Public server As String = "172.16.114.244"
+    ' Public username As String = "admin"
+    'Public password As String = "nimda"
+    'Public database As String = "banking_database"
 
-    Private Sub CalcBankAccNo()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-        sqlDt.Clear()
-        ' Open the connection
-        Mysqlconn.Open()
-        Dim query As String = "SELECT Bank_Account_Number FROM banking_database.UserData WHERE Username = '" & bank_username & "';"
 
-        ' Create a MySqlCommand object
-        Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
-
-        ' Execute the query and get the result
-        bank_account_no = sqlCmd.ExecuteScalar().ToString
-        TextBox1.Text = bank_account_no
-        Mysqlconn.Close()
-        sqlCmd.Dispose()
-    End Sub
     Private Sub ClearFields()
         Label16.Text = ""
         Label17.Text = ""
@@ -47,6 +32,21 @@ Public Class Banking_Queries_User
         Label20.Text = ""
         Label21.Text = ""
         Label22.Text = ""
+    End Sub
+    Private Sub CalculateBankAccNo()
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        Mysqlconn.Open()
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = Mysqlconn
+        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
+            If reader.Read() Then
+                bank_account_no = reader.GetString("Bank_Account_Number")
+            End If
+        End Using
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
     End Sub
     Private Sub ClearDataGrid()
         For Each row As DataGridViewRow In DataGridView1.Rows
@@ -59,6 +59,7 @@ Public Class Banking_Queries_User
         Next
         ' Set the connection string property
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        ' Mysqlconn.ConnectionString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
 
         ' Open the connection
         Mysqlconn.Open()
@@ -66,7 +67,9 @@ Public Class Banking_Queries_User
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM banking_database.QueryLog where Bank_Account_Number = '" & bank_account_no & "';"
+        sqlCmd.CommandText = "SELECT * FROM QueryLog where Bank_Account_Number = @BAC;"
+
+        sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)
@@ -79,12 +82,12 @@ Public Class Banking_Queries_User
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView1.DataSource = sqlDt
     End Sub
-    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Bank_Queries_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
-        ' MessageBox.Show(bank_username)
-        ClearFields()
-        CalcBankAccNo()
+        CalculateBankAccNo()
         RefreshDataGrid()
+        ClearFields()
+        TextBox1.Text = bank_account_no
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)
 
@@ -172,9 +175,9 @@ Public Class Banking_Queries_User
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from banking_database.QueryLog where Query_ID = @ID;"
+        sqlCmd.CommandText = "Select * from QueryLog where Query_ID = @ID;"
 
-        sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = Query_ID
+        sqlCmd.Parameters.Add("@ID", MySqlDbType.VarChar).Value = Query_ID
 
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
@@ -217,6 +220,14 @@ Public Class Banking_Queries_User
     End Sub
 
     Private Sub Label21_Click_1(sender As Object, e As EventArgs) Handles Label21.Click
+
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 End Class

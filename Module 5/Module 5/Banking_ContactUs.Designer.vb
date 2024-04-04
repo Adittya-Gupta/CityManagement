@@ -74,9 +74,9 @@ Partial Class Banking_ContactUs
         Me.Panel6.Controls.Add(Me.Label5)
         Me.Panel6.Controls.Add(Me.Label4)
         Me.Panel6.Controls.Add(Me.TextBox1)
-        Me.Panel6.Location = New System.Drawing.Point(586, 0)
+        Me.Panel6.Location = New System.Drawing.Point(491, -2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(791, 662)
+        Me.Panel6.Size = New System.Drawing.Size(620, 644)
         Me.Panel6.TabIndex = 13
         '
         'ComboBox1
@@ -97,7 +97,7 @@ Partial Class Banking_ContactUs
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.ForeColor = System.Drawing.Color.White
-        Me.Button17.Location = New System.Drawing.Point(534, 520)
+        Me.Button17.Location = New System.Drawing.Point(348, 562)
         Me.Button17.Margin = New System.Windows.Forms.Padding(0)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(187, 62)
@@ -113,7 +113,7 @@ Partial Class Banking_ContactUs
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.Color.White
-        Me.Button16.Location = New System.Drawing.Point(325, 525)
+        Me.Button16.Location = New System.Drawing.Point(373, 493)
         Me.Button16.Margin = New System.Windows.Forms.Padding(0)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(145, 53)
@@ -125,13 +125,13 @@ Partial Class Banking_ContactUs
         '
         Me.TextBox2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Sans Serif Collection", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(305, 218)
+        Me.TextBox2.Font = New System.Drawing.Font("Sans Serif Collection", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(283, 218)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(450, 266)
+        Me.TextBox2.Size = New System.Drawing.Size(318, 266)
         Me.TextBox2.TabIndex = 21
-        Me.TextBox2.Text = "hello"
+        Me.TextBox2.Text = "Write your query here"
         '
         'RadioButton6
         '
@@ -217,7 +217,7 @@ Partial Class Banking_ContactUs
         Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label13.Font = New System.Drawing.Font("Bodoni MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(382, 153)
+        Me.Label13.Location = New System.Drawing.Point(320, 153)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(240, 50)
         Me.Label13.TabIndex = 13
@@ -240,7 +240,7 @@ Partial Class Banking_ContactUs
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.Module_5.My.Resources.Resources.doubt
-        Me.PictureBox13.Location = New System.Drawing.Point(99, 32)
+        Me.PictureBox13.Location = New System.Drawing.Point(45, 18)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(81, 79)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -252,7 +252,7 @@ Partial Class Banking_ContactUs
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bodoni MT", 31.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(259, 46)
+        Me.Label5.Location = New System.Drawing.Point(132, 33)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(442, 64)
         Me.Label5.TabIndex = 10
@@ -264,7 +264,7 @@ Partial Class Banking_ContactUs
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(504, 3)
+        Me.Label4.Location = New System.Drawing.Point(329, 5)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(165, 17)
         Me.Label4.TabIndex = 8
@@ -276,7 +276,7 @@ Partial Class Banking_ContactUs
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(708, 3)
+        Me.TextBox1.Location = New System.Drawing.Point(533, 5)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(70, 16)
         Me.TextBox1.TabIndex = 9
@@ -293,9 +293,9 @@ Partial Class Banking_ContactUs
         Me.Panel5.Controls.Add(Me.Label6)
         Me.Panel5.Controls.Add(Me.PictureBox12)
         Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel5.Location = New System.Drawing.Point(0, -2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(589, 662)
+        Me.Panel5.Size = New System.Drawing.Size(493, 644)
         Me.Panel5.TabIndex = 12
         '
         'Label10
@@ -382,7 +382,7 @@ Partial Class Banking_ContactUs
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.Faq_symbol
-        Me.PictureBox12.Location = New System.Drawing.Point(104, 5)
+        Me.PictureBox12.Location = New System.Drawing.Point(103, 19)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(81, 79)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -394,7 +394,7 @@ Partial Class Banking_ContactUs
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 31.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(227, 19)
+        Me.Label3.Location = New System.Drawing.Point(226, 33)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(129, 64)
         Me.Label3.TabIndex = 8
@@ -406,7 +406,7 @@ Partial Class Banking_ContactUs
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1377, 662)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)

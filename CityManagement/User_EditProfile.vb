@@ -153,7 +153,7 @@ Public Class User_EditProfile
                 cmd.Parameters.AddWithValue("@DOB", dob)
                 cmd.ExecuteNonQuery()
             End Using
-            MessageBox.Show("Edit successful successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Information updated successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' Clear the text boxes after successful signup
             NameTextBox.Text = ""
@@ -237,4 +237,12 @@ Public Class User_EditProfile
         End Try
         Return userDetails
     End Function
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Profile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class

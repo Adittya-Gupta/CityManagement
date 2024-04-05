@@ -15,43 +15,44 @@
 
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
+        Me.Location = New Point(100, 0)
         Panel1.BackColor = Color.FromArgb(246, 246, 233)
         Panel2.BackColor = Color.FromArgb(246, 246, 233)
         ChildForm(Panel1, Newsletter_Homepage)
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -92,7 +93,11 @@
 
     End Sub
 
-    Private Sub Button10_Click_1(sender As Object, e As EventArgs) Handles Button10.Click
+    Private Sub Button10_Click_1(sender As Object, e As EventArgs)
         ChildForm(Panel1, Newsletter_Editor)
+    End Sub
+
+    Private Sub Button15_Click_1(sender As Object, e As EventArgs)
+
     End Sub
 End Class

@@ -262,11 +262,6 @@
     <Compile Include="Newsletter_AddNews.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Newsletter_ApplyForm.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Newsletter_ApplyForm.resx</DependentUpon>
-    </Compile>
     <Compile Include="Newsletter_Editor.Designer.vb">
       <DependentUpon>Newsletter_Editor.vb</DependentUpon>
     </Compile>
@@ -366,10 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_AddNews.resx">
       <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Newsletter_ApplyForm.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Newsletter_ApplyForm.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_Editor.resx">
       <DependentUpon>Newsletter_Editor.vb</DependentUpon>

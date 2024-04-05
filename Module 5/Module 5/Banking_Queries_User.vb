@@ -12,16 +12,18 @@ Public Class Banking_Queries_User
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "bankingdatabase"
+    ' Just change these to access local or online db
+
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
 
 
-    'Public server As String = "172.16.114.244"
-    ' Public username As String = "admin"
-    'Public password As String = "nimda"
-    'Public database As String = "banking_database"
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
 
 
     Private Sub ClearFields()
@@ -82,7 +84,7 @@ Public Class Banking_Queries_User
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView1.DataSource = sqlDt
     End Sub
-    Private Sub Bank_Queries_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
         CalculateBankAccNo()
         RefreshDataGrid()

@@ -12,15 +12,16 @@ Public Class Banking_Passbook
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "bankingdatabase"
+    ' Just change these to access local or online db
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
 
-    'Public server As String = "172.16.114.244"
-    'Public username As String = "admin"
-    'Public password As String = "nimda"
-    'Public database As String = "banking_database"
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
 
     Public bank_account_no As String = "1"
     Public bank_username As String = "admin"
@@ -49,6 +50,7 @@ Public Class Banking_Passbook
         Mysqlconn.Close()
         sqlCmd.Dispose()
     End Sub
+
     Private Sub LoadFields()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
@@ -113,12 +115,10 @@ Public Class Banking_Passbook
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'Me.WindowState = FormWindowState.Maximized
-
-        'LoadFields()
         CalculateBankAccNo()
         RefreshDataGrid()
         ClearFields()
+        LoadFields()
         TextBox1.Text = bank_account_no
 
     End Sub
@@ -273,6 +273,14 @@ Public Class Banking_Passbook
     End Sub
 
     Private Sub Label22_Click_1(sender As Object, e As EventArgs) Handles Label22.Click
+
+    End Sub
+
+    Private Sub Label7_Click_1(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
 
     End Sub
 End Class

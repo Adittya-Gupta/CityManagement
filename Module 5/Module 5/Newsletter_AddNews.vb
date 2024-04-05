@@ -11,15 +11,22 @@ Public Class Newsletter_AddNews
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "newsdatabase"
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
+
+
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
+
     'Make this form full screen
     Private Sub Newsletter_AddNews_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.WindowState = FormWindowState.Maximized
-        Panel1.BackColor = Color.FromArgb(246, 246, 233)
+        'Me.WindowState = FormWindowState.Maximized
+        'Panel1.BackColor = Color.FromArgb(246, 246, 233)
 
         ComboBox1.Items.Add("Festivals and Election")
         ComboBox1.Items.Add("Education and Health")
@@ -33,39 +40,39 @@ Public Class Newsletter_AddNews
 
 
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -81,6 +88,15 @@ Public Class Newsletter_AddNews
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        If PictureBox15.Image Is Nothing Then
+            MessageBox.Show("Upload an image!")
+            Return
+        End If
+
+        If ComboBox1.SelectedIndex = -1 Then
+            MessageBox.Show("Type cannot be empty!")
+            Return
+        End If
 
         Dim pic As New MemoryStream
         PictureBox15.Image.Save(pic, PictureBox15.Image.RawFormat)
@@ -89,6 +105,23 @@ Public Class Newsletter_AddNews
         Dim published_by As String = TextBox2.Text
         Dim type As String = ComboBox1.SelectedItem.ToString()
         Dim content As String = TextBox5.Text
+
+        If headline = "" Then
+            MessageBox.Show("Headline cannot be empty!")
+            Return
+        End If
+        If published_by = "" Then
+            MessageBox.Show("Published by cannot be empty!")
+            Return
+        End If
+        If type = "" Then
+            MessageBox.Show("Type cannot be empty!")
+            Return
+        End If
+        If content = "" Then
+            MessageBox.Show("Content cannot be empty!")
+            Return
+        End If
 
 
 
@@ -116,23 +149,27 @@ Public Class Newsletter_AddNews
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub PictureBox15_Click(sender As Object, e As EventArgs) Handles PictureBox15.Click
+    Private Sub PictureBox15_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
 
     End Sub
 End Class

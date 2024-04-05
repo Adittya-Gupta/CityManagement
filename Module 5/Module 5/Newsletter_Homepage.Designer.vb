@@ -25,8 +25,11 @@ Partial Class Newsletter_Homepage
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -36,7 +39,7 @@ Partial Class Newsletter_Homepage
         Me.Button10.BackColor = System.Drawing.Color.Black
         Me.Button10.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(777, 418)
+        Me.Button10.Location = New System.Drawing.Point(809, 418)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(268, 128)
         Me.Button10.TabIndex = 40
@@ -48,7 +51,7 @@ Partial Class Newsletter_Homepage
         Me.Button15.BackColor = System.Drawing.Color.Black
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
-        Me.Button15.Location = New System.Drawing.Point(215, 414)
+        Me.Button15.Location = New System.Drawing.Point(31, 414)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(268, 128)
         Me.Button15.TabIndex = 39
@@ -59,16 +62,38 @@ Partial Class Newsletter_Homepage
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(185, 9)
+        Me.Label3.Location = New System.Drawing.Point(1, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(1105, 71)
         Me.Label3.TabIndex = 38
         Me.Label3.Text = "Welcome to CITY TIMES NOW Homepage."
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(421, 418)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(268, 128)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "PUBLISH SOME NEWS ARICLE/ PROMOTION"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Module_5.My.Resources.Resources.newspaper
+        Me.PictureBox1.Location = New System.Drawing.Point(424, 144)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(265, 267)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 44
+        Me.PictureBox1.TabStop = False
+        '
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.Module_5.My.Resources.Resources.editor
-        Me.PictureBox13.Location = New System.Drawing.Point(780, 144)
+        Me.PictureBox13.Location = New System.Drawing.Point(812, 144)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(265, 267)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -77,8 +102,8 @@ Partial Class Newsletter_Homepage
         '
         'PictureBox11
         '
-        Me.PictureBox11.Image = Global.Module_5.My.Resources.Resources.newspaper
-        Me.PictureBox11.Location = New System.Drawing.Point(218, 144)
+        Me.PictureBox11.Image = Global.Module_5.My.Resources.Resources.Newspaper_logo
+        Me.PictureBox11.Location = New System.Drawing.Point(34, 144)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(265, 267)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -90,8 +115,10 @@ Partial Class Newsletter_Homepage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(1337, 603)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox13)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.Button10)
@@ -102,6 +129,7 @@ Partial Class Newsletter_Homepage
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Newsletter_Homepage"
         Me.Text = "MainPanel"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -114,4 +142,6 @@ Partial Class Newsletter_Homepage
     Friend WithEvents Button10 As Button
     Friend WithEvents Button15 As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

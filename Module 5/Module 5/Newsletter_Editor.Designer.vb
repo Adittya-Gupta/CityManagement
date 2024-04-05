@@ -61,7 +61,7 @@ Partial Class Newsletter_Editor
         Me.TextBox3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(593, 106)
+        Me.TextBox3.Location = New System.Drawing.Point(536, 113)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(89, 23)
@@ -73,7 +73,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(485, 106)
+        Me.Label10.Location = New System.Drawing.Point(428, 113)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(102, 23)
         Me.Label10.TabIndex = 63
@@ -84,7 +84,7 @@ Partial Class Newsletter_Editor
         Me.Button19.BackColor = System.Drawing.Color.Black
         Me.Button19.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.Color.White
-        Me.Button19.Location = New System.Drawing.Point(7, 343)
+        Me.Button19.Location = New System.Drawing.Point(5, 351)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(118, 47)
         Me.Button19.TabIndex = 62
@@ -96,7 +96,6 @@ Partial Class Newsletter_Editor
         Me.Button18.BackColor = System.Drawing.Color.Bisque
         Me.Button18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button18.FlatAppearance.BorderSize = 0
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button18.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.Color.Black
         Me.Button18.Location = New System.Drawing.Point(5, 75)
@@ -112,7 +111,6 @@ Partial Class Newsletter_Editor
         Me.Button17.BackColor = System.Drawing.Color.DarkOrange
         Me.Button17.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button17.FlatAppearance.BorderSize = 0
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.ForeColor = System.Drawing.Color.Black
         Me.Button17.Location = New System.Drawing.Point(5, 6)
@@ -138,7 +136,7 @@ Partial Class Newsletter_Editor
         Me.ComboBox2.BackColor = System.Drawing.Color.Silver
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(932, 182)
+        Me.ComboBox2.Location = New System.Drawing.Point(642, 196)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(181, 24)
         Me.ComboBox2.TabIndex = 58
@@ -148,7 +146,7 @@ Partial Class Newsletter_Editor
         Me.ComboBox1.BackColor = System.Drawing.Color.Silver
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(492, 181)
+        Me.ComboBox1.Location = New System.Drawing.Point(710, 110)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(208, 28)
         Me.ComboBox1.TabIndex = 57
@@ -156,12 +154,12 @@ Partial Class Newsletter_Editor
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 419)
+        Me.DataGridView1.Location = New System.Drawing.Point(5, 426)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1123, 212)
+        Me.DataGridView1.Size = New System.Drawing.Size(883, 212)
         Me.DataGridView1.TabIndex = 56
         '
         'Button16
@@ -169,7 +167,7 @@ Partial Class Newsletter_Editor
         Me.Button16.BackColor = System.Drawing.Color.Black
         Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.Color.White
-        Me.Button16.Location = New System.Drawing.Point(1165, 551)
+        Me.Button16.Location = New System.Drawing.Point(924, 374)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(160, 47)
         Me.Button16.TabIndex = 55
@@ -181,7 +179,7 @@ Partial Class Newsletter_Editor
         Me.Button15.BackColor = System.Drawing.Color.Black
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
-        Me.Button15.Location = New System.Drawing.Point(1165, 289)
+        Me.Button15.Location = New System.Drawing.Point(924, 162)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(160, 47)
         Me.Button15.TabIndex = 54
@@ -193,7 +191,7 @@ Partial Class Newsletter_Editor
         Me.Button14.BackColor = System.Drawing.Color.Black
         Me.Button14.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.Color.White
-        Me.Button14.Location = New System.Drawing.Point(1165, 485)
+        Me.Button14.Location = New System.Drawing.Point(924, 321)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(160, 47)
         Me.Button14.TabIndex = 53
@@ -205,7 +203,7 @@ Partial Class Newsletter_Editor
         Me.Button13.BackColor = System.Drawing.Color.Black
         Me.Button13.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.Color.White
-        Me.Button13.Location = New System.Drawing.Point(1165, 419)
+        Me.Button13.Location = New System.Drawing.Point(924, 268)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(160, 47)
         Me.Button13.TabIndex = 52
@@ -217,7 +215,7 @@ Partial Class Newsletter_Editor
         Me.Button12.BackColor = System.Drawing.Color.Black
         Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1165, 354)
+        Me.Button12.Location = New System.Drawing.Point(924, 215)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(160, 47)
         Me.Button12.TabIndex = 51
@@ -228,7 +226,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(707, 183)
+        Me.Label12.Location = New System.Drawing.Point(417, 197)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(219, 23)
         Me.Label12.TabIndex = 50
@@ -252,10 +250,10 @@ Partial Class Newsletter_Editor
         Me.TextBox5.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(131, 215)
+        Me.TextBox5.Location = New System.Drawing.Point(131, 227)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(653, 189)
+        Me.TextBox5.Size = New System.Drawing.Size(787, 189)
         Me.TextBox5.TabIndex = 48
         Me.TextBox5.Text = resources.GetString("TextBox5.Text")
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -264,7 +262,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(18, 234)
+        Me.Label9.Location = New System.Drawing.Point(3, 245)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 23)
         Me.Label9.TabIndex = 47
@@ -275,7 +273,7 @@ Partial Class Newsletter_Editor
         Me.TextBox4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(806, 145)
+        Me.TextBox4.Location = New System.Drawing.Point(794, 153)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(110, 23)
@@ -287,7 +285,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(727, 145)
+        Me.Label8.Location = New System.Drawing.Point(715, 153)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(73, 23)
         Me.Label8.TabIndex = 45
@@ -297,7 +295,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(425, 184)
+        Me.Label7.Location = New System.Drawing.Point(643, 113)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 23)
         Me.Label7.TabIndex = 44
@@ -306,9 +304,9 @@ Partial Class Newsletter_Editor
         'PictureBox15
         '
         Me.PictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox15.Location = New System.Drawing.Point(857, 219)
+        Me.PictureBox15.Location = New System.Drawing.Point(901, 426)
         Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(185, 185)
+        Me.PictureBox15.Size = New System.Drawing.Size(194, 212)
         Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox15.TabIndex = 43
         Me.PictureBox15.TabStop = False
@@ -318,7 +316,7 @@ Partial Class Newsletter_Editor
         Me.TextBox2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(181, 184)
+        Me.TextBox2.Location = New System.Drawing.Point(171, 196)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(229, 25)
@@ -330,7 +328,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 186)
+        Me.Label6.Location = New System.Drawing.Point(3, 198)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(162, 23)
         Me.Label6.TabIndex = 41
@@ -341,7 +339,7 @@ Partial Class Newsletter_Editor
         Me.TextBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(161, 141)
+        Me.TextBox1.Location = New System.Drawing.Point(161, 153)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(539, 36)
@@ -353,7 +351,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bodoni MT", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(16, 145)
+        Me.Label5.Location = New System.Drawing.Point(3, 153)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(122, 23)
         Me.Label5.TabIndex = 39
@@ -362,9 +360,9 @@ Partial Class Newsletter_Editor
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.Module_5.My.Resources.Resources.editor
-        Me.PictureBox13.Location = New System.Drawing.Point(1153, 15)
+        Me.PictureBox13.Location = New System.Drawing.Point(924, 4)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(190, 194)
+        Me.PictureBox13.Size = New System.Drawing.Size(160, 158)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox13.TabIndex = 38
         Me.PictureBox13.TabStop = False
@@ -373,7 +371,7 @@ Partial Class Newsletter_Editor
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(580, 12)
+        Me.Label3.Location = New System.Drawing.Point(482, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(278, 78)
         Me.Label3.TabIndex = 37
@@ -384,7 +382,7 @@ Partial Class Newsletter_Editor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(1355, 650)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label10)

@@ -58,4 +58,8 @@
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
 
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        ChildForm(Newsletter_Main.Panel1, Newsletter_AddNews)
+    End Sub
 End Class

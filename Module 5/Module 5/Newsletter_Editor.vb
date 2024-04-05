@@ -7,16 +7,23 @@ Imports Org.BouncyCastle
 Public Class Newsletter_Editor
 
     Public Mysqlconn As New MySqlConnection
-    'Public sqlCmd As New MySqlCommand
     Public sqlRd As MySqlDataReader
     Public sqlDt As New DataTable
     Public Dta As New MySqlDataAdapter
     Public SqlQuery As String
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "newsdatabase"
+    ' Just change these to access local or online db
+
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "Aasneh18"
+    'Public database As String = "bankingdatabase"
+
+
+    Public server As String = "172.16.114.244"
+    Public username As String = "admin"
+    Public password As String = "nimda"
+    Public database As String = "banking_database"
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
@@ -27,6 +34,39 @@ Public Class Newsletter_Editor
         parentpanel.Controls.Add(childform)
         childform.Show()
     End Sub
+
+    Private Function ErrorHandling() As Boolean
+        If PictureBox15.Image Is Nothing Then
+            MessageBox.Show("Upload an image!")
+            Return True
+        End If
+
+        If ComboBox1.SelectedIndex = -1 Then
+            MessageBox.Show("Type cannot be empty!")
+            Return True
+        End If
+
+        If ComboBox2.SelectedIndex = -1 Then
+            MessageBox.Show("Published on which page cannot be empty!")
+            Return True
+        End If
+
+        If TextBox1.Text = "" Then
+            MessageBox.Show("Headline cannot be empty!")
+            Return True
+        End If
+
+        If TextBox2.Text = "" Then
+            MessageBox.Show("Published By cannot be empty!")
+            Return True
+        End If
+
+        If TextBox5.Text = "" Then
+            MessageBox.Show("Content cannot be empty!")
+            Return True
+        End If
+        Return False
+    End Function
     Private Sub ClearFields()
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -121,7 +161,7 @@ Public Class Newsletter_Editor
         sqlCmd.CommandText = query
 
         If sqlCmd.ExecuteNonQuery() = 1 Then
-            'MessageBox.Show("Sent to Publish!")
+            MessageBox.Show("Added new News!")
         Else
             MessageBox.Show("Some Error has occured!")
         End If
@@ -254,9 +294,9 @@ Public Class Newsletter_Editor
 
         ' Execute the query and get the result
         Dim entryCount As Integer = Convert.ToInt32(sqlCmd.ExecuteScalar())
-
+        'MessageBox.Show(entryCount)
         ' Display or use the entry count as needed
-        If entryCount > 3 Then
+        If entryCount > 2 Then
             MessageBox.Show("Too many entries for this page, either delete some entries or choose some other page")
             Mysqlconn.Close()
             sqlCmd.Dispose()
@@ -510,6 +550,10 @@ Public Class Newsletter_Editor
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        If (ErrorHandling()) Then
+            Return
+        End If
+
         If (SendToPublish()) Then
             UpdateData()
         Else
@@ -523,22 +567,28 @@ Public Class Newsletter_Editor
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        If (ErrorHandling()) Then
+            Return
+        End If
         UpdateData()
 
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        If (ErrorHandling()) Then
+            Return
+        End If
         InsertData()
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+
         DeleteData()
 
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
         RefreshDataGrid()
-
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs)
@@ -604,6 +654,26 @@ Public Class Newsletter_Editor
     End Sub
 
     Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub TextBox5_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
 
     End Sub
 End Class

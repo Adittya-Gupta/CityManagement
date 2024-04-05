@@ -302,7 +302,7 @@ Partial Class MainPanel
         ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 18.0F)
+        AutoScaleDimensions = New SizeF(11F, 22F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
         ClientSize = New Size(1444, 881)

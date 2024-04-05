@@ -31,9 +31,9 @@ Partial Class UserProfile_ChangePassword
         TextBox1 = New TextBox()
         TextBox4 = New TextBox()
         Panel2 = New Panel()
+        Button3 = New Button()
         Label11 = New Label()
         Label3 = New Label()
-        Button3 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -57,21 +57,20 @@ Partial Class UserProfile_ChangePassword
         TextBox3.PlaceholderText = "Old Password"
         TextBox3.Size = New Size(317, 30)
         TextBox3.TabIndex = 205
+        TextBox3.UseSystemPasswordChar = True
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
         CheckBox1.BackgroundImageLayout = ImageLayout.None
-        CheckBox1.Checked = True
-        CheckBox1.CheckState = CheckState.Checked
         CheckBox1.Cursor = Cursors.Hand
         CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CheckBox1.Location = New Point(333, 654)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(117, 21)
+        CheckBox1.Size = New Size(121, 21)
         CheckBox1.TabIndex = 64
-        CheckBox1.Text = "Hide Password"
+        CheckBox1.Text = "Show Password"
         CheckBox1.UseVisualStyleBackColor = False
         ' 
         ' Button1
@@ -98,6 +97,7 @@ Partial Class UserProfile_ChangePassword
         TextBox2.PlaceholderText = "Confirm New Password"
         TextBox2.Size = New Size(314, 30)
         TextBox2.TabIndex = 400
+        TextBox2.UseSystemPasswordChar = True
         ' 
         ' TextBox1
         ' 
@@ -108,6 +108,7 @@ Partial Class UserProfile_ChangePassword
         TextBox1.PlaceholderText = "New Password"
         TextBox1.Size = New Size(317, 30)
         TextBox1.TabIndex = 300
+        TextBox1.UseSystemPasswordChar = True
         ' 
         ' TextBox4
         ' 
@@ -129,6 +130,20 @@ Partial Class UserProfile_ChangePassword
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(917, 67)
         Panel2.TabIndex = 1
+        ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.Black
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(12, 12)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(157, 41)
+        Button3.TabIndex = 43
+        Button3.Text = " Back To Profile"
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' Label11
         ' 
@@ -152,26 +167,12 @@ Partial Class UserProfile_ChangePassword
         Label3.Text = "Want to change your password ?" & vbCrLf & "Just enter your Email and Your old password and " & vbCrLf & "Select a password you want to keep now"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Button3
-        ' 
-        Button3.AutoSize = True
-        Button3.BackColor = Color.Black
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(12, 12)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(157, 41)
-        Button3.TabIndex = 43
-        Button3.Text = " Back To Profile"
-        Button3.UseVisualStyleBackColor = False
-        ' 
         ' UserProfile_ChangePassword
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
-        AutoScrollMinSize = New Size(0, 750)
+        AutoScrollMinSize = New Size(0, 600)
         BackColor = Color.LightGray
         ClientSize = New Size(938, 700)
         Controls.Add(Label3)

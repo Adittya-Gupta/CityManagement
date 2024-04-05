@@ -60,11 +60,13 @@ Public Class ForgotPassword
         TimeLeftLabel.Text = "Time Left: " & timeLeft.ToString() & " seconds"
         If elapsedTime >= 60 Then ' Check if 60 seconds have elapsed
             timer.Stop() ' Stop the timer
-            MessageBox.Show("Verification code has expired. Please request a new one.")
+            MessageBox.Show("Verification code has expired. Please request a new one by clicking Send Code again.")
+
         End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
         Label2.Visible = True
         Label2.Text = "Sending code....."
         Label2.ForeColor = Color.Black
@@ -74,11 +76,13 @@ Public Class ForgotPassword
         If String.IsNullOrEmpty(EmailAddress) Then
             MessageBox.Show("Please enter your Email to send code")
             Label2.Hide()
+
             Return
         End If
 
         If Not IsEmailPresent(EmailAddress) Then
             Label2.Hide()
+
             Return
         End If
 
@@ -109,6 +113,7 @@ Public Class ForgotPassword
                 Label2.Text = "Unexpected Error occured!! Please click on send code again!"
                 Label2.ForeColor = Color.Red
                 MessageBox.Show("Error occured sending code :", ex.Message)
+
             End Try
 
             'Label2.Visible = True
@@ -143,9 +148,9 @@ Public Class ForgotPassword
                 MessageBox.Show("Incorrect code.")
             End If
         Else
-            Label2.Text = "Verification code has expired. Please request a new one."
+            Label2.Text = "Verification code has expired. Please request a new one by clicking on Send Code again."
             Label2.ForeColor = Color.Red
-            MessageBox.Show("Verification code has expired. Please request a new one.")
+            MessageBox.Show("Verification code has expired. Please request a new one by clicking on send code again.")
         End If
     End Sub
 
@@ -159,7 +164,7 @@ Public Class ForgotPassword
         LoginForm.StartPosition = FormStartPosition.Manual
         LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
         LoginForm.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
 End Class

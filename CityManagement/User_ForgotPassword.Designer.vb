@@ -24,12 +24,16 @@ Partial Class ForgotPassword
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ForgotPassword))
         Panel1 = New Panel()
+        Label9 = New Label()
+        Label8 = New Label()
+        Label7 = New Label()
+        Panel2 = New Panel()
+        Button3 = New Button()
+        Label11 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox1 = New PictureBox()
         Label5 = New Label()
         Label4 = New Label()
-        Button3 = New Button()
-        Label11 = New Label()
         Label1 = New Label()
         Label2 = New Label()
         TimeLeftLabel = New Label()
@@ -37,14 +41,10 @@ Partial Class ForgotPassword
         TextBox1 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
-        Panel2 = New Panel()
-        Label7 = New Label()
-        Label8 = New Label()
-        Label9 = New Label()
         Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -70,6 +70,78 @@ Partial Class ForgotPassword
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(917, 1100)
         Panel1.TabIndex = 7
+        ' 
+        ' Label9
+        ' 
+        Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(298, 884)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(350, 31)
+        Label9.TabIndex = 53
+        Label9.Text = "We just emailed you an OTP to reset the password."
+        Label9.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label8
+        ' 
+        Label8.Anchor = AnchorStyles.None
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = SystemColors.ControlText
+        Label8.Location = New Point(324, 846)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(282, 39)
+        Label8.TabIndex = 52
+        Label8.Text = "Check in your mail ! "
+        Label8.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label7
+        ' 
+        Label7.Anchor = AnchorStyles.None
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = SystemColors.ControlText
+        Label7.Location = New Point(324, 315)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(282, 39)
+        Label7.TabIndex = 51
+        Label7.Text = "Forgot Password ?"
+        Label7.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = SystemColors.ButtonShadow
+        Panel2.Controls.Add(Button3)
+        Panel2.Controls.Add(Label11)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(917, 67)
+        Panel2.TabIndex = 50
+        ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.Black
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(746, 14)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(151, 41)
+        Button3.TabIndex = 42
+        Button3.Text = " Back To Login"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Label11
+        ' 
+        Label11.Anchor = AnchorStyles.None
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(315, 14)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(291, 39)
+        Label11.TabIndex = 40
+        Label11.Text = "Forgot Password"
         ' 
         ' PictureBox3
         ' 
@@ -110,31 +182,6 @@ Partial Class ForgotPassword
         Label4.Text = "Enter your e-mail address and we will send " & vbCrLf & "you an OTP to reset your password"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Button3
-        ' 
-        Button3.AutoSize = True
-        Button3.BackColor = Color.Black
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(746, 14)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(151, 41)
-        Button3.TabIndex = 42
-        Button3.Text = " Back To Login"
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Label11
-        ' 
-        Label11.Anchor = AnchorStyles.None
-        Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(315, 14)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(291, 39)
-        Label11.TabIndex = 40
-        Label11.Text = "Forgot Password"
-        ' 
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.None
@@ -151,7 +198,7 @@ Partial Class ForgotPassword
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(108, 447)
+        Label2.Location = New Point(300, 500)
         Label2.Name = "Label2"
         Label2.Size = New Size(0, 22)
         Label2.TabIndex = 13
@@ -208,60 +255,13 @@ Partial Class ForgotPassword
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(387, 459)
+        Button1.Location = New Point(384, 459)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(138, 40)
         Button1.TabIndex = 7
         Button1.Text = "SEND CODE"
         Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = SystemColors.ButtonShadow
-        Panel2.Controls.Add(Button3)
-        Panel2.Controls.Add(Label11)
-        Panel2.Dock = DockStyle.Top
-        Panel2.Location = New Point(0, 0)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(917, 67)
-        Panel2.TabIndex = 50
-        ' 
-        ' Label7
-        ' 
-        Label7.Anchor = AnchorStyles.None
-        Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = SystemColors.ControlText
-        Label7.Location = New Point(324, 315)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(282, 39)
-        Label7.TabIndex = 51
-        Label7.Text = "Forgot Password ?"
-        Label7.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label8
-        ' 
-        Label8.Anchor = AnchorStyles.None
-        Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = SystemColors.ControlText
-        Label8.Location = New Point(324, 846)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(282, 39)
-        Label8.TabIndex = 52
-        Label8.Text = "Check in your mail ! "
-        Label8.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label9
-        ' 
-        Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(298, 884)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(350, 31)
-        Label9.TabIndex = 53
-        Label9.Text = "We just emailed you an OTP to reset the password."
-        Label9.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' ForgotPassword
         ' 
@@ -275,10 +275,10 @@ Partial Class ForgotPassword
         Name = "ForgotPassword"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
 
     End Sub

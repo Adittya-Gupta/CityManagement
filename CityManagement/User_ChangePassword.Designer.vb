@@ -47,6 +47,7 @@ Partial Class User_ChangePassword
         TextBox1.PlaceholderText = "Password"
         TextBox1.Size = New Size(352, 30)
         TextBox1.TabIndex = 24
+        TextBox1.UseSystemPasswordChar = True
         ' 
         ' TextBox2
         ' 
@@ -57,13 +58,14 @@ Partial Class User_ChangePassword
         TextBox2.PlaceholderText = "Confirm Password"
         TextBox2.Size = New Size(352, 30)
         TextBox2.TabIndex = 30
+        TextBox2.UseSystemPasswordChar = True
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(401, 582)
         Button1.Margin = New Padding(3, 4, 3, 4)
@@ -77,16 +79,14 @@ Partial Class User_ChangePassword
         ' 
         CheckBox1.AutoSize = True
         CheckBox1.BackgroundImageLayout = ImageLayout.None
-        CheckBox1.Checked = True
-        CheckBox1.CheckState = CheckState.Checked
         CheckBox1.Cursor = Cursors.Hand
         CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CheckBox1.Location = New Point(298, 538)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(117, 21)
+        CheckBox1.Size = New Size(121, 21)
         CheckBox1.TabIndex = 4
-        CheckBox1.Text = "Hide Password"
+        CheckBox1.Text = "Show Password"
         CheckBox1.UseVisualStyleBackColor = False
         ' 
         ' Panel1

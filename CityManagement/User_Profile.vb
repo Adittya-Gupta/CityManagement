@@ -320,11 +320,10 @@ Public Class User_Profile
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        mypanel.Panel1.Controls.Clear()
-        Dim form As New User_ChangePassword
-        form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+
+        Dim form As New UserProfile_ChangePassword
         form.Show()
+
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

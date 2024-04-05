@@ -48,7 +48,7 @@ Partial Class FestivalEvents_EventDetails
         Label2.Location = New Point(292, 76)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(138, 36)
+        Label2.Size = New Size(163, 40)
         Label2.TabIndex = 28
         Label2.Text = "DJ Night"
         ' 
@@ -61,7 +61,7 @@ Partial Class FestivalEvents_EventDetails
         Label1.Location = New Point(32, 76)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(310, 36)
+        Label1.Size = New Size(372, 40)
         Label1.TabIndex = 27
         Label1.Text = "Events & Festivals    >"
         ' 
@@ -92,7 +92,7 @@ Partial Class FestivalEvents_EventDetails
         Label3.Location = New Point(556, 39)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(193, 46)
+        Label3.Size = New Size(230, 55)
         Label3.TabIndex = 30
         Label3.Text = " DJ Night"
         ' 
@@ -104,7 +104,7 @@ Partial Class FestivalEvents_EventDetails
         Label4.Location = New Point(556, 126)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(217, 31)
+        Label4.Size = New Size(254, 37)
         Label4.TabIndex = 31
         Label4.Text = "Venue : Central"
         ' 
@@ -116,7 +116,7 @@ Partial Class FestivalEvents_EventDetails
         Label5.Location = New Point(556, 158)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(239, 31)
+        Label5.Size = New Size(276, 37)
         Label5.TabIndex = 32
         Label5.Text = "Date: 11/06/2003"
         ' 
@@ -128,7 +128,7 @@ Partial Class FestivalEvents_EventDetails
         Label6.Location = New Point(556, 190)
         Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(210, 31)
+        Label6.Size = New Size(249, 37)
         Label6.TabIndex = 33
         Label6.Text = "Time : 8:00 Pm"
         ' 
@@ -167,7 +167,7 @@ Partial Class FestivalEvents_EventDetails
         Label7.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(25, 359)
         Label7.Name = "Label7"
-        Label7.Size = New Size(95, 31)
+        Label7.Size = New Size(113, 37)
         Label7.TabIndex = 38
         Label7.Text = "Label7"
         ' 
@@ -205,7 +205,7 @@ Partial Class FestivalEvents_EventDetails
         ' 
         ' FestivalEvents_EventDetails
         ' 
-        AutoScaleDimensions = New SizeF(10F, 18F)
+        AutoScaleDimensions = New SizeF(11F, 22F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1224, 815)
         Controls.Add(Button1)

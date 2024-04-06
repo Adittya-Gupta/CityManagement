@@ -26,17 +26,6 @@ Public Class Event_OfferService
 
 
     Private Sub Event_OfferService_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Load font from file
-        Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
-        'Dim customFont As New PrivateFontCollection()
-        'customFont.AddFontFile(fontFilePath)
-
-        ' Apply font to all controls on the form
-        'ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
-        'Label1.Font = New Font(customFont.Families(0), 24)
-        'Label2.Font = New Font(customFont.Families(0), 24)
-        'Label10.Font = New Font(customFont.Families(0), 24)
-        'EventName.Font = New Font(customFont.Families(0), 24)
 
         If UserSID <> -1 Then
             ' Assume EventID is somehow determined or passed to this form
@@ -45,6 +34,7 @@ Public Class Event_OfferService
                 ' Populate the labels with these details
                 EventName.Text = eventDetails("EventName").ToString()
                 EventVenue.Text = eventDetails("Venue").ToString()
+                Description.Text = eventDetails("EventDescription").ToString()
 
                 ' Parse and format the DateTime to separate date and time
                 Dim eventDateTime As DateTime
@@ -75,17 +65,17 @@ Public Class Event_OfferService
     End Sub
 
     Private Sub PopulateVendorServices(jsonString As String, userId As Integer)
-        vendorServiceTags = Newtonsoft.Json.JsonConvert.DeserializeObject(Of List(Of VendorServiceTag))(jsonString)
+        vendorServiceTags = JsonConvert.DeserializeObject(Of List(Of VendorServiceTag))(jsonString)
 
 
         FlowLayoutPanelVendorServices.Controls.Clear()
 
         For Each ServiceTag In vendorServiceTags
-            Dim panel As New Panel With {.Width = 500, .Height = 50}
-            Dim label As New Label With {.Text = ServiceTag.TagServiceName, .Width = 200, .Dock = DockStyle.Left}
+            Dim panel As New Panel With {.Width = 400, .Height = 50, .Margin = New Padding(0, 0, 80, 0)}
+            Dim label As New Label With {.Text = ServiceTag.TagServiceName, .Width = 210, .Dock = DockStyle.Left, .Font = New Font("Abhaya Libre Medium", 20)}
             panel.Controls.Add(label)
 
-            Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right, .Width = 100, .Height = 30, .BackColor = Color.Black, .ForeColor = Color.White}
+            Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right, .Width = 210, .Height = 50, .BackColor = Color.Black, .ForeColor = Color.White, .Font = New Font("Abhaya Libre Medium", 20)}
             AddHandler button.Click, AddressOf VendorServiceButton_Click
             panel.Controls.Add(button)
 

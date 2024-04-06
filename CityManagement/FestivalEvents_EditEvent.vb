@@ -4,7 +4,7 @@ Imports System.Xml
 Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Asn1.IsisMtt.X509
 
-Public Class Event_Edit
+Public Class FestivalEvents_EditEvent
 
     ' Database connection string
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
@@ -21,17 +21,6 @@ Public Class Event_Edit
 
     ' This method is called when the Edit_Event form loads
     Private Sub Edit_Event_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Load font from file
-        'Dim fontFilePath As String = System.IO.Path.Combine(Application.StartupPath, "D:\Dell\Documents\GIT\CityManagement\CityManagement\Fonts\AbhayaLibre-Medium.ttf") ' Replace "YourFontFile.ttf" with the name of your font file
-        'Dim customFont As New PrivateFontCollection()
-        'customFont.AddFontFile(fontFilePath)
-
-        ' Apply font to all controls on the form
-        'ApplyFontToControl(Me, New Font(customFont.Families(0), 16)) ' Change the font size as needed
-        'Label1.Font = New Font(customFont.Families(0), 24)
-        'Label2.Font = New Font(customFont.Families(0), 24)
-        ' Dispose the font collection
-        'customFont.Dispose()
 
         ' Check if the global user ID from the login form is valid (not -1)
         If UserSID <> -1 Then
@@ -41,7 +30,6 @@ Public Class Event_Edit
                 ' If event details are found, populate the form fields with these details
                 NameTextBox.Text = eventDetails("EventName").ToString()
                 SpaceTextBox.Text = eventDetails("Venue").ToString()
-                FeatureTextBox.Text = eventDetails("Restrictions").ToString()
                 DescTextBox.Text = eventDetails("EventDescription").ToString()
 
                 ' Attempt to parse the DateTime from the event details
@@ -82,7 +70,6 @@ Public Class Event_Edit
                     festivalDetails.Add("DateTime", reader("dateTime").ToString())
                     festivalDetails.Add("Venue", reader("venue"))
                     festivalDetails.Add("EventDescription", reader("description"))
-                    festivalDetails.Add("Restrictions", reader("restrictions"))
                     ' Assuming CoverImage is also being retrieved here based on your initial setup
                     festivalDetails.Add("CoverImage", If(Not IsDBNull(reader("image")), DirectCast(reader("image"), Byte()), Nothing))
                     ' Additional fields can be added as needed
@@ -122,7 +109,7 @@ Public Class Event_Edit
         Try
             conn.Open() ' Open the database connection
             ' SQL query to update event details in the database
-            Dim sql As String = "UPDATE festivals SET name = @EventName, venue = @Venue, restrictions = @Restrictions, description = @EventDescription, dateTime = @DateTime, event_type = @Category, image = @CoverImage WHERE id = @EventID"
+            Dim sql As String = "UPDATE festivals SET name = @EventName, venue = @Venue, description = @EventDescription, dateTime = @DateTime, image = @CoverImage WHERE id = @EventID"
 
             ' Combine Date and Time from the two DateTimePicker controls
             Dim combinedDateTime As DateTime = DateTimePicker1.Value.Date + DateTimePicker2.Value.TimeOfDay
@@ -132,14 +119,13 @@ Public Class Event_Edit
                 ' Bind the form field values to the SQL query parameters
                 cmd.Parameters.AddWithValue("@EventName", NameTextBox.Text)
                 cmd.Parameters.AddWithValue("@Venue", SpaceTextBox.Text)
-                cmd.Parameters.AddWithValue("@Restrictions", FeatureTextBox.Text)
                 cmd.Parameters.AddWithValue("@EventDescription", DescTextBox.Text)
                 cmd.Parameters.AddWithValue("@DateTime", combinedDateTime)
 
                 ' Determine the category based on the radio button selection
-                Dim category As String = ComboBox1.SelectedItem
+                'Dim category As String = ComboBox1.SelectedItem
 
-                cmd.Parameters.AddWithValue("@Category", category)
+                'cmd.Parameters.AddWithValue("@Category", category)
 
                 ' Convert the image in PictureBox to a byte array and bind it to the query parameter
                 If PictureBox1.Image IsNot Nothing Then
@@ -179,8 +165,5 @@ Public Class Event_Edit
         Next
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class
 

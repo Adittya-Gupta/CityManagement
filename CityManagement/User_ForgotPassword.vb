@@ -78,7 +78,7 @@ Public Class ForgotPassword
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
-
+        incorrectAttempts = 0
 
         Button1.Visible = False ' Hide the Send Code button
         Label2.Text = "Sending code....."

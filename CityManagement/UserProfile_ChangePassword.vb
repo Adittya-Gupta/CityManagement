@@ -158,27 +158,6 @@ Public Class UserProfile_ChangePassword
 
     End Function
 
-    Private Function IsEmailRegistered(email As String) As Boolean
-        Dim isRegistered As Boolean = False
-        Try
-            conn.Open()
-
-            Dim query As String = "SELECT COUNT(*) FROM User WHERE EmailAddress = @Email"
-            Dim cmd As New MySqlCommand(query, conn)
-            cmd.Parameters.AddWithValue("@Email", email)
-            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-            ' If count is greater than 0, email is registered
-            If count > 0 Then
-                isRegistered = True
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error checking email registration: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            conn.Close()
-        End Try
-        Return isRegistered
-    End Function
 
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
         Dim Email = TextBox4.Text ' Assuming TextBox4 is for entering the email address
@@ -191,12 +170,6 @@ Public Class UserProfile_ChangePassword
        String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
        String.IsNullOrWhiteSpace(TextBox2.Text) Then
             MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-
-        If Not IsEmailRegistered(Email) Then
-            MessageBox.Show("Email is not registered", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 

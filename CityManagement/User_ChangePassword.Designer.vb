@@ -33,6 +33,7 @@ Partial Class User_ChangePassword
         Panel2 = New Panel()
         Label11 = New Label()
         PictureBox1 = New PictureBox()
+        Button3 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -63,9 +64,10 @@ Partial Class User_ChangePassword
         ' Button1
         ' 
         Button1.BackColor = Color.Black
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(401, 582)
         Button1.Margin = New Padding(3, 4, 3, 4)
@@ -80,7 +82,7 @@ Partial Class User_ChangePassword
         CheckBox1.AutoSize = True
         CheckBox1.BackgroundImageLayout = ImageLayout.None
         CheckBox1.Cursor = Cursors.Hand
-        CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Font = New Font("Microsoft YaHei", 7F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CheckBox1.Location = New Point(298, 538)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
@@ -131,6 +133,7 @@ Partial Class User_ChangePassword
         ' Panel2
         ' 
         Panel2.BackColor = SystemColors.ButtonShadow
+        Panel2.Controls.Add(Button3)
         Panel2.Controls.Add(Label11)
         Panel2.Dock = DockStyle.Top
         Panel2.Location = New Point(0, 0)
@@ -160,6 +163,21 @@ Partial Class User_ChangePassword
         PictureBox1.TabIndex = 25
         PictureBox1.TabStop = False
         ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.Black
+        Button3.Cursor = Cursors.Hand
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(761, 13)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(151, 41)
+        Button3.TabIndex = 54
+        Button3.Text = " Back To Login"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' User_ChangePassword
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -172,6 +190,7 @@ Partial Class User_ChangePassword
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
 
@@ -186,4 +205,5 @@ Partial Class User_ChangePassword
     Friend WithEvents Label11 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button3 As Button
 End Class

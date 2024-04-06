@@ -77,6 +77,7 @@ Partial Class ForgotPassword
         ' 
         ResendLabel.Anchor = AnchorStyles.None
         ResendLabel.AutoSize = True
+        ResendLabel.Cursor = Cursors.Hand
         ResendLabel.Location = New Point(542, 469)
         ResendLabel.Name = "ResendLabel"
         ResendLabel.Size = New Size(196, 20)
@@ -86,7 +87,7 @@ Partial Class ForgotPassword
         ' Label9
         ' 
         Label9.Anchor = AnchorStyles.None
-        Label9.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(298, 884)
         Label9.Name = "Label9"
         Label9.Size = New Size(350, 31)
@@ -137,6 +138,7 @@ Partial Class ForgotPassword
         ' 
         Button3.AutoSize = True
         Button3.BackColor = Color.Black
+        Button3.Cursor = Cursors.Hand
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
@@ -184,7 +186,7 @@ Partial Class ForgotPassword
         ' Label5
         ' 
         Label5.Anchor = AnchorStyles.None
-        Label5.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(319, 557)
         Label5.Name = "Label5"
         Label5.Size = New Size(256, 23)
@@ -195,7 +197,7 @@ Partial Class ForgotPassword
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.None
-        Label4.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(298, 358)
         Label4.Name = "Label4"
         Label4.Size = New Size(350, 48)
@@ -228,7 +230,7 @@ Partial Class ForgotPassword
         ' 
         Label6.Anchor = AnchorStyles.None
         Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(319, 590)
         Label6.Name = "Label6"
         Label6.Size = New Size(121, 25)
@@ -239,7 +241,7 @@ Partial Class ForgotPassword
         ' Email_tb
         ' 
         Email_tb.Anchor = AnchorStyles.None
-        Email_tb.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Email_tb.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Email_tb.Location = New Point(315, 425)
         Email_tb.Margin = New Padding(3, 4, 3, 4)
         Email_tb.Name = "Email_tb"
@@ -250,7 +252,7 @@ Partial Class ForgotPassword
         ' TextBox1
         ' 
         TextBox1.Anchor = AnchorStyles.None
-        TextBox1.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(315, 936)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
@@ -263,9 +265,10 @@ Partial Class ForgotPassword
         ' 
         Button2.Anchor = AnchorStyles.None
         Button2.BackColor = Color.Black
+        Button2.Cursor = Cursors.Hand
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
         Button2.Location = New Point(387, 970)
         Button2.Margin = New Padding(3, 4, 3, 4)
@@ -280,9 +283,10 @@ Partial Class ForgotPassword
         ' 
         Button1.Anchor = AnchorStyles.None
         Button1.BackColor = Color.Black
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(384, 459)
         Button1.Margin = New Padding(3, 4, 3, 4)

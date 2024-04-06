@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports MySql.Data.MySqlClient
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserProfile_ChangePassword
     Inherits System.Windows.Forms.Form
 
@@ -64,7 +66,7 @@ Partial Class UserProfile_ChangePassword
         CheckBox1.AutoSize = True
         CheckBox1.BackgroundImageLayout = ImageLayout.None
         CheckBox1.Cursor = Cursors.Hand
-        CheckBox1.Font = New Font("Microsoft YaHei", 7.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Font = New Font("Microsoft YaHei", 7F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CheckBox1.Location = New Point(333, 654)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
@@ -76,9 +78,10 @@ Partial Class UserProfile_ChangePassword
         ' Button1
         ' 
         Button1.BackColor = Color.Black
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft YaHei", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(403, 693)
         Button1.Margin = New Padding(3, 4, 3, 4)
@@ -112,11 +115,14 @@ Partial Class UserProfile_ChangePassword
         ' 
         ' TextBox4
         ' 
+        TextBox4.BackColor = SystemColors.ControlLight
+        TextBox4.Cursor = Cursors.No
         TextBox4.Font = New Font("Microsoft YaHei", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox4.Location = New Point(327, 448)
         TextBox4.Margin = New Padding(3, 4, 3, 4)
         TextBox4.Name = "TextBox4"
         TextBox4.PlaceholderText = "Email"
+        TextBox4.ReadOnly = True
         TextBox4.Size = New Size(317, 30)
         TextBox4.TabIndex = 168
         ' 
@@ -135,6 +141,7 @@ Partial Class UserProfile_ChangePassword
         ' 
         Button3.AutoSize = True
         Button3.BackColor = Color.Black
+        Button3.Cursor = Cursors.Hand
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
@@ -159,7 +166,7 @@ Partial Class UserProfile_ChangePassword
         ' 
         ' Label3
         ' 
-        Label3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(310, 370)
         Label3.Name = "Label3"
         Label3.Size = New Size(350, 67)
@@ -169,7 +176,7 @@ Partial Class UserProfile_ChangePassword
         ' 
         ' UserProfile_ChangePassword
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         AutoScrollMinSize = New Size(0, 600)
@@ -185,7 +192,6 @@ Partial Class UserProfile_ChangePassword
         Controls.Add(TextBox1)
         Controls.Add(PictureBox1)
         Name = "UserProfile_ChangePassword"
-        Text = "UserProfile_ChangePassword"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
@@ -199,31 +205,6 @@ Partial Class UserProfile_ChangePassword
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox4 As TextBox
-
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
-
-    End Sub
-
-    Private Sub UserProfile_ChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
-
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label3 As Label

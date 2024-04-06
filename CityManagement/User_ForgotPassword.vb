@@ -12,6 +12,8 @@ Public Class ForgotPassword
     Dim elapsedTime As Integer = 0 ' Track elapsed time in seconds
     Dim incorrectAttempts As Integer = 0 ' Track incorrect attempts
     Dim WithEvents timer As New Timer()
+    Dim resendTimer As New Timer()
+
 
     Private Sub ForgotPassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Label2.Hide()
@@ -66,16 +68,6 @@ Public Class ForgotPassword
         ' Update the TimeLeftLabel with the remaining time
         Label6.Text = "Time Left: " & timeLeft.ToString() & " seconds"
 
-        ' Check if 30 seconds have elapsed without entering the code
-        If elapsedTime >= 30 AndAlso TextBox1.Text = "" Then
-            ShowResendLabel()
-        End If
-
-        ' Check if the user has entered an incorrect code three times
-        If incorrectAttempts >= 3 Then
-            ShowResendLabel()
-        End If
-
         ' Check if 180 seconds have elapsed
         If elapsedTime >= 180 Then
             timer.Stop() ' Stop the timer
@@ -85,11 +77,22 @@ Public Class ForgotPassword
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+
+
         Button1.Visible = False ' Hide the Send Code button
-        Button1.FlatStyle = FlatStyle.Flat
-        Label2.Visible = True
         Label2.Text = "Sending code....."
+        Label2.Visible = True
         Label2.ForeColor = Color.Black
+
+        ResendLabel.Text = "Resend code (30)"
+        ResendLabel.Enabled = False ' Make sure it's not clickable yet
+        ResendLabel.Visible = True
+
+        ' Initialize the resend timer
+        resendTimer.Interval = 1000 ' Update every second
+        AddHandler resendTimer.Tick, AddressOf ResendTimer_Tick
+
 
         Dim EmailAddress As String = Email_tb.Text
 
@@ -117,7 +120,8 @@ Public Class ForgotPassword
             mail.From = New MailAddress("SmartCityManagement123@gmail.com")
             mail.To.Add(EmailAddress)
             mail.Subject = "VERIFICATION CODE - FORGOT PASSWORD"
-            mail.Body = "Verification Code is: " + randomCode
+            mail.Body = "Verification Code is: " & randomCode & ". It is valid for 3 minutes."
+
 
             SmtpServer.Port = 587
             SmtpServer.Credentials = New NetworkCredential("smartcitymanagement123@gmail.com", "yycerewjfqyirppg ")
@@ -125,8 +129,10 @@ Public Class ForgotPassword
 
             Try
                 SmtpServer.Send(mail)
-                MessageBox.Show("Please check your Email for the verification code and enter it below!")
+                MessageBox.Show("Code has been sent to your Email, Please check your Email and enter the recieved code below!")
+                Label2.Text = ""
                 timer.Start() ' Start the timer
+                resendTimer.Start()
                 Label5.Visible = True
                 Label6.Visible = True
                 Label8.Visible = True
@@ -136,18 +142,31 @@ Public Class ForgotPassword
                 Button2.Visible = True
             Catch ex As Exception
                 ' Label2.Visible = True
-                Label2.Text = "Unexpected Error occurred!! Please click on send code again!"
-                Label2.ForeColor = Color.Red
+
                 MessageBox.Show("Error occurred sending code: " & ex.Message)
                 Button1.Visible = True ' Show the Send Code button again
             End Try
 
-            Label2.Text = "Code sent!" & Environment.NewLine & "Please check your Email for the code and enter it below!"
-            Label2.ForeColor = Color.Green
+
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+
+    Private resendCountdown As Integer = 30 ' Start the countdown from 30 seconds
+    Private hasResentCode As Boolean = False
+
+    Private Sub ResendTimer_Tick(sender As Object, e As EventArgs)
+        resendCountdown -= 1 ' Decrement the countdown
+        ResendLabel.Text = $"Resend code ({resendCountdown})" ' Update the label text
+
+        If resendCountdown <= 0 Then
+            resendTimer.Stop() ' Stop the timer
+            ResendLabel.Text = "Click here to resend code (Allowed only once) "
+            ResendLabel.Enabled = True ' Make it clickable
+        End If
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -165,33 +184,39 @@ Public Class ForgotPassword
                 Return
             Else
                 incorrectAttempts += 1
-                Label2.Text = "Incorrect code, make sure that you are entering the latest code you have received."
-                Label2.ForeColor = Color.Red
-                MessageBox.Show("Incorrect code, make sure that you are entering the latest code you have received.")
+                Dim attemptsLeft As Integer = 3 - incorrectAttempts
+                If attemptsLeft > 0 Then
+                    MessageBox.Show($"Incorrect code. You have {attemptsLeft} attempt(s) left.")
+                Else
+                    MessageBox.Show("You have entered an incorrect code multiple times. Please try again later.")
+                    ' Simulate a click on the "Back to Login" button
+                    Button3.PerformClick()
+                    Return
+                End If
             End If
         Else
-            Label2.Text = "Verification code has expired. Please request a new one by clicking on Send Code again."
-            Label2.ForeColor = Color.Red
             MessageBox.Show("Verification code has expired. Please request a new one by clicking on send code again.")
         End If
     End Sub
 
-    ' Method to show the resend label
-    Private Sub ShowResendLabel()
-        ResendLabel.Visible = True
-        Label2.Text = ""
 
-    End Sub
 
     ' Method to resend the code when the resend label is clicked
     Private Sub ResendLabel_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ResendLabel.Click
-        ResendLabel.Visible = False ' Hide the resend label
-        ' Label2.Visible = True
-        ' Reset necessary variables and resend the code
-        incorrectAttempts = 0
-        elapsedTime = 0
+
+        If hasResentCode Then
+            ' If the code has already been resent, do nothing (or show a message)
+            MessageBox.Show("Re-sending the code is allowed only once.")
+            Return
+        End If
+
+        ' Continue with resend logic if the code has not been resent yet
+        hasResentCode = True ' Update flag to indicate code has been resent
+        ResendLabel.Visible = True
+        ResendLabel.Enabled = True
         Button1.Visible = True
         Button1.PerformClick() ' Simulate a click on the "Send Code" button to resend the code
+        incorrectAttempts = 0
         ' Label2.Visible = True
     End Sub
 
@@ -204,7 +229,4 @@ Public Class ForgotPassword
         Me.Close()
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
 End Class

@@ -48,7 +48,7 @@ Partial Class User_Login
         PasswordLabel.ForeColor = Color.White
         PasswordLabel.Location = New Point(756, 389)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New Size(80, 19)
+        PasswordLabel.Size = New Size(99, 24)
         PasswordLabel.TabIndex = 2
         PasswordLabel.Text = "Password"
         ' 
@@ -60,7 +60,7 @@ Partial Class User_Login
         EmailLabel.ForeColor = Color.White
         EmailLabel.Location = New Point(756, 304)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New Size(50, 19)
+        EmailLabel.Size = New Size(61, 24)
         EmailLabel.TabIndex = 3
         EmailLabel.Text = "Email"
         ' 
@@ -71,7 +71,7 @@ Partial Class User_Login
         EmailTextBox.Font = New Font("Exo 2", 15F)
         EmailTextBox.Location = New Point(756, 334)
         EmailTextBox.Name = "EmailTextBox"
-        EmailTextBox.Size = New Size(350, 31)
+        EmailTextBox.Size = New Size(350, 37)
         EmailTextBox.TabIndex = 2
         ' 
         ' PasswordTextBox
@@ -81,7 +81,7 @@ Partial Class User_Login
         PasswordTextBox.Font = New Font("Exo 2", 15F)
         PasswordTextBox.Location = New Point(756, 417)
         PasswordTextBox.Name = "PasswordTextBox"
-        PasswordTextBox.Size = New Size(350, 31)
+        PasswordTextBox.Size = New Size(350, 37)
         PasswordTextBox.TabIndex = 3
         ' 
         ' Timer1
@@ -128,7 +128,7 @@ Partial Class User_Login
         Label2.ForeColor = Color.White
         Label2.Location = New Point(756, 590)
         Label2.Name = "Label2"
-        Label2.Size = New Size(106, 15)
+        Label2.Size = New Size(131, 18)
         Label2.TabIndex = 7
         Label2.Text = "Forgot Password?"
         ' 
@@ -141,7 +141,7 @@ Partial Class User_Login
         SignUpLabel.ForeColor = Color.White
         SignUpLabel.Location = New Point(974, 590)
         SignUpLabel.Name = "SignUpLabel"
-        SignUpLabel.Size = New Size(110, 15)
+        SignUpLabel.Size = New Size(131, 18)
         SignUpLabel.TabIndex = 8
         SignUpLabel.Text = "New User? Signup"
         ' 
@@ -153,7 +153,7 @@ Partial Class User_Login
         LoginPic.Location = New Point(-1, -3)
         LoginPic.Margin = New Padding(2)
         LoginPic.Name = "LoginPic"
-        LoginPic.Size = New Size(623, 901)
+        LoginPic.Size = New Size(623, 756)
         LoginPic.TabIndex = 10
         LoginPic.TabStop = False
         ' 
@@ -163,18 +163,18 @@ Partial Class User_Login
         Label1.AutoSize = True
         Label1.Font = New Font("Centauri", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(781, 192)
+        Label1.Location = New Point(756, 187)
         Label1.Name = "Label1"
-        Label1.Size = New Size(287, 50)
+        Label1.Size = New Size(359, 62)
         Label1.TabIndex = 1
         Label1.Text = "LOGIN"
         ' 
         ' User_Login
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(9F, 18F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaptionText
-        ClientSize = New Size(1254, 881)
+        ClientSize = New Size(1206, 753)
         Controls.Add(LoginPic)
         Controls.Add(SignUpLabel)
         Controls.Add(Label2)

@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class User_Profile
-
+    'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim userDetailsTable As New DataTable()
@@ -13,24 +13,64 @@ Public Class User_Profile
 
     Private Sub User_Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        ' The search box results should be hidden
         ListBox1.Visible = False
-        'Make this form full screen
-        Me.WindowState = FormWindowState.Maximized
+        AdminButton.Visible = False
+
+        If User_Login.GlobalSID = 984697 Then
+            AdminButton.Visible = True
+        End If
+
         ' Check if loggedInUserID is valid
         If User_Login.GlobalSID <> -1 Then
             ' If loggedInUserID is valid, fetch user details and display them
             Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(User_Login.GlobalSID)
-            If userDetails IsNot Nothing Then
-                ' Display user details
-                SIDLabel.Text = User_Login.GlobalSID
-                NameLabel.Text = userDetails("Name")
-                EmailLabel.Text = userDetails("Email")
-                GenderLabel.Text = userDetails("Gender")
-                ContactLabel.Text = userDetails("ContactNo")
-                DesignationLabel.Text = userDetails("Designation")
-                DOBLabel.Text = userDetails("DOB")
+            SIDLabel.Text = User_Login.GlobalSID
 
-                ' Load profile picture
+            ' Check if 'Name' field exists
+            If userDetails.ContainsKey("Name") AndAlso Not IsDBNull(userDetails("Name")) Then
+                NameLabel.Text = userDetails("Name")
+            Else
+                NameLabel.Text = "N/A"
+            End If
+
+            ' Check if 'Email' field exists
+            If userDetails.ContainsKey("Email") AndAlso Not IsDBNull(userDetails("Email")) Then
+                EmailLabel.Text = userDetails("Email")
+            Else
+                EmailLabel.Text = "N/A"
+            End If
+
+            ' Check if 'Gender' field exists
+            If userDetails.ContainsKey("Gender") AndAlso Not IsDBNull(userDetails("Gender")) Then
+                GenderLabel.Text = userDetails("Gender")
+            Else
+                GenderLabel.Text = "N/A"
+            End If
+
+            ' Check if 'ContactNo' field exists
+            If userDetails.ContainsKey("ContactNo") AndAlso Not IsDBNull(userDetails("ContactNo")) Then
+                ContactLabel.Text = userDetails("ContactNo")
+            Else
+                ContactLabel.Text = "N/A"
+            End If
+
+            ' Check if 'Designation' field exists
+            If userDetails.ContainsKey("Designation") AndAlso Not IsDBNull(userDetails("Designation")) Then
+                DesignationLabel.Text = userDetails("Designation")
+            Else
+                DesignationLabel.Text = "N/A"
+            End If
+
+            ' Check if 'DOB' field exists
+            If userDetails.ContainsKey("DOB") AndAlso Not IsDBNull(userDetails("DOB")) Then
+                DOBLabel.Text = userDetails("DOB")
+            Else
+                DOBLabel.Text = "N/A"
+            End If
+
+            ' Load profile picture
+            If userDetails.ContainsKey("ProfilePic") Then
                 Dim profilePicData As Byte() = TryCast(userDetails("ProfilePic"), Byte())
                 If profilePicData IsNot Nothing Then
                     Dim ms As New System.IO.MemoryStream(profilePicData)
@@ -39,13 +79,21 @@ Public Class User_Profile
                     PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
                     PictureBox2.Image = originalImage
                 End If
-
             Else
                 MessageBox.Show("User details not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("User not logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub User_Profile_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
+        ' Drawing lines
+        Dim g As Graphics = e.Graphics
+        Dim pen As New Pen(Color.Gainsboro, 2)
+        'g.DrawLine(pen, New Point(270, 100), New Point(270, 600))
+        g.DrawLine(pen, New Point(40, 310), New Point(230, 310))
+        g.DrawLine(pen, New Point(310, 255), New Point(820, 255))
     End Sub
 
     Private Sub User_Profile_Click(sender As Object, e As EventArgs) Handles MyBase.Click
@@ -303,10 +351,6 @@ Public Class User_Profile
         LoadNotifications()
     End Sub
 
-    Private Sub NameLabel_Click(sender As Object, e As EventArgs) Handles NameLabel.Click
-
-    End Sub
-
     Private Sub EditProfileButton_Click(sender As Object, e As EventArgs) Handles EditProfileButton.Click
         mypanel.Panel1.Controls.Clear()
         Dim form As New User_EditProfile
@@ -319,14 +363,31 @@ Public Class User_Profile
         'form.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub ChangePasswordButton_Click(sender As Object, e As EventArgs) Handles ChangePasswordButton.Click
         Dim form As New UserProfile_ChangePassword
         form.Show()
-
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
+        ' Open the signup form when the label is clicked
+        Dim LoginForm As New User_Login()
+        Dim mainpanel As New MainPanel()
+        LoginForm.StartPosition = FormStartPosition.Manual
+        LoginForm.Location = mainpanel.Location ' Set the location of the new form to the current form's location
+        LoginForm.Show()
+        mainpanel.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles AdminButton.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Admin
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
 End Class

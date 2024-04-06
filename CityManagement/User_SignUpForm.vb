@@ -6,11 +6,12 @@ Imports System.Security.Cryptography
 Public Class User_SignUpForm
 
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim conn As New MySqlConnection(connString)
     Dim selectedImagePath As String = ""
     Private Sub SignUpForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
 
         ' Populate the gender ComboBox
         GenderComboBox.Items.AddRange({"Select", "Male", "Female", "Non Binary", "Prefer not to say"})
@@ -346,4 +347,5 @@ Public Class User_SignUpForm
             'PictureBox1.Image = Image.FromFile(selectedImagePath)
         End If
     End Sub
+
 End Class

@@ -1,4 +1,5 @@
-﻿Imports CityManagement.SerReq_worker_accepted
+﻿Imports System.IO
+Imports CityManagement.SerReq_worker_accepted
 Imports CityManagement.SerReq_worker_completed
 Imports CityManagement.SerReq_worker_pending
 Imports MySql.Data.MySqlClient
@@ -7,6 +8,7 @@ Public Class Services_WorkSect
     'Dim connString As String = "server=localhost;userid=root;password=<password_here>;database=smart_city_management"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
+    Dim workerID As Integer = 1 ' Worker ID of the current user
 
     Public Sub New()
         InitializeComponent()
@@ -31,8 +33,15 @@ Public Class Services_WorkSect
 
         conn.Open()
         Try
-            Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = 1"
+            'Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = @workerID"
+
+            Dim query As String = "SELECT sb.serviceBookingId, sb.clientName, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
+                      "FROM serviceBooking sb " &
+                      "INNER JOIN User u ON sb.clientID = u.SID " &
+                      "WHERE sb.workerID = @workerID"
+
             Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@workerID", workerID) ' Add workerID as a parameter
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
                         Dim reqId As Integer = reader.GetInt32("serviceBookingId")
@@ -41,14 +50,18 @@ Public Class Services_WorkSect
                         Dim billAmount As Object = reader("billAmount")
                         Dim billAmountString As String = If(IsDBNull(billAmount), "N/A", billAmount.ToString()) ' If billAmount is null, set it to "N/A"
                         Dim status As String = reader.GetString("status")
+                        ' Retrieve the ProfilePic column value from the database
+                        Dim profpic As Byte() = If(reader("ProfilePic") IsNot DBNull.Value, DirectCast(reader("ProfilePic"), Byte()), Nothing)
+
+
                         If status = "EnquirySent" Then
-                            pendingRequests.Add(New SerReq_worker_pending(reqId, name, time, billAmountString))
+                            pendingRequests.Add(New SerReq_worker_pending(reqId, name, time, billAmountString, profpic))
                         ElseIf status = "Upcoming" Then
-                            acceptedRequests.Add(New SerReq_worker_accepted(reqId, name, time, billAmountString))
+                            acceptedRequests.Add(New SerReq_worker_accepted(reqId, name, time, billAmountString, profpic))
                         ElseIf status = "Completed" Then
-                            completedRequests.Add(New SerReq_worker_completed(name, time, billAmountString))
+                            completedRequests.Add(New SerReq_worker_completed(name, time, billAmountString, profpic))
                         ElseIf status = "InProgress" Then
-                            paymentDueRequests.Add(New SerReq_worker_paymentDue(name, time, billAmountString))
+                            paymentDueRequests.Add(New SerReq_worker_paymentDue(name, time, billAmountString, profpic))
                         End If
 
                     End While
@@ -83,7 +96,7 @@ Public Class Services_WorkSect
         For Each request As Control In filteredRequests
             request.Top = topOffset
             Panel2.Controls.Add(request)
-            topOffset += request.Height + 10 ' Adjust top offset for the next control
+            topOffset += request.Height + 20 ' Adjust top offset for the next control
         Next
     End Sub
 

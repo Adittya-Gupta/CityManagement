@@ -26,19 +26,24 @@ Partial Class EmployApplication
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        Label4 = New Label()
         Label5 = New Label()
-        Button1 = New Button()
-        PictureBox1 = New PictureBox()
-        RichTextBox1 = New RichTextBox()
-        RichTextBox2 = New RichTextBox()
-        RichTextBox3 = New RichTextBox()
-        RichTextBox4 = New RichTextBox()
-        Label6 = New Label()
-        Label7 = New Label()
+        applyBtn = New Button()
+        profPic = New PictureBox()
+        Details = New RichTextBox()
+        contactInfo = New RichTextBox()
+        personName = New RichTextBox()
+        Document = New Label()
+        upload = New Label()
         Label8 = New Label()
-        Label9 = New Label()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        docName = New Label()
+        orgName = New Label()
+        address = New RichTextBox()
+        Label6 = New Label()
+        emailAddr = New RichTextBox()
+        Label7 = New Label()
+        bankAcc = New RichTextBox()
+        Label4 = New Label()
+        CType(profPic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' backButton
@@ -50,26 +55,26 @@ Partial Class EmployApplication
         backButton.FlatStyle = FlatStyle.Flat
         backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
-        backButton.Location = New Point(1131, 12)
+        backButton.Location = New Point(1106, 20)
         backButton.Name = "backButton"
-        backButton.Size = New Size(111, 43)
+        backButton.Size = New Size(121, 59)
         backButton.TabIndex = 30
         backButton.Text = "Back"
         backButton.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Segoe UI", 15F)
-        Label1.Location = New Point(91, 136)
+        Label1.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label1.Location = New Point(91, 145)
         Label1.Name = "Label1"
-        Label1.Size = New Size(86, 35)
+        Label1.Size = New Size(98, 35)
         Label1.TabIndex = 31
-        Label1.Text = "Name"
+        Label1.Text = "Name*"
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Segoe UI", 15F)
-        Label2.Location = New Point(91, 306)
+        Label2.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label2.Location = New Point(91, 465)
         Label2.Name = "Label2"
         Label2.Size = New Size(399, 44)
         Label2.TabIndex = 32
@@ -77,146 +82,206 @@ Partial Class EmployApplication
         ' 
         ' Label3
         ' 
-        Label3.Font = New Font("Segoe UI", 15F)
-        Label3.Location = New Point(477, 136)
+        Label3.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label3.Location = New Point(477, 145)
         Label3.Name = "Label3"
-        Label3.Size = New Size(195, 35)
+        Label3.Size = New Size(224, 35)
         Label3.TabIndex = 33
-        Label3.Text = "Contact Details"
-        ' 
-        ' Label4
-        ' 
-        Label4.Font = New Font("Segoe UI", 15F)
-        Label4.Location = New Point(868, 440)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(276, 36)
-        Label4.TabIndex = 34
-        Label4.Text = "Bank Account Details"
+        Label3.Text = "Contact Number*"
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Segoe UI", 15F)
-        Label5.Location = New Point(906, 220)
+        Label5.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label5.Location = New Point(895, 145)
         Label5.Name = "Label5"
         Label5.Size = New Size(179, 35)
         Label5.TabIndex = 35
         Label5.Text = "Profile Picture"
         ' 
-        ' Button1
+        ' applyBtn
         ' 
-        Button1.BackColor = SystemColors.ActiveCaption
-        Button1.Cursor = Cursors.Hand
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 15F)
-        Button1.Location = New Point(563, 845)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(157, 55)
-        Button1.TabIndex = 36
-        Button1.Text = "Apply"
-        Button1.UseVisualStyleBackColor = False
+        applyBtn.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        applyBtn.BackgroundImage = My.Resources.Resources.Employ_button
+        applyBtn.Cursor = Cursors.Hand
+        applyBtn.FlatAppearance.BorderColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        applyBtn.FlatStyle = FlatStyle.Flat
+        applyBtn.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        applyBtn.ForeColor = Color.White
+        applyBtn.Location = New Point(577, 846)
+        applyBtn.Name = "applyBtn"
+        applyBtn.Size = New Size(161, 60)
+        applyBtn.TabIndex = 36
+        applyBtn.Text = "Apply"
+        applyBtn.UseVisualStyleBackColor = False
         ' 
-        ' PictureBox1
+        ' profPic
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
-        PictureBox1.Location = New Point(949, 272)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(92, 87)
-        PictureBox1.TabIndex = 37
-        PictureBox1.TabStop = False
+        profPic.Image = My.Resources.Resources.Employ_prof_pic
+        profPic.InitialImage = My.Resources.Resources.Employ_prof_pic
+        profPic.Location = New Point(897, 194)
+        profPic.Name = "profPic"
+        profPic.Size = New Size(231, 227)
+        profPic.TabIndex = 37
+        profPic.TabStop = False
         ' 
-        ' RichTextBox1
+        ' Details
         ' 
-        RichTextBox1.Font = New Font("Segoe UI", 12F)
-        RichTextBox1.Location = New Point(91, 368)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(711, 346)
-        RichTextBox1.TabIndex = 41
-        RichTextBox1.Text = ""
+        Details.Font = New Font("Exo 2", 12F)
+        Details.Location = New Point(91, 507)
+        Details.Name = "Details"
+        Details.Size = New Size(711, 174)
+        Details.TabIndex = 41
+        Details.Text = ""
         ' 
-        ' RichTextBox2
+        ' contactInfo
         ' 
-        RichTextBox2.Font = New Font("Segoe UI", 12F)
-        RichTextBox2.Location = New Point(477, 194)
-        RichTextBox2.Name = "RichTextBox2"
-        RichTextBox2.Size = New Size(330, 41)
-        RichTextBox2.TabIndex = 42
-        RichTextBox2.Text = ""
+        contactInfo.Font = New Font("Exo 2", 12F)
+        contactInfo.Location = New Point(477, 194)
+        contactInfo.Name = "contactInfo"
+        contactInfo.Size = New Size(330, 41)
+        contactInfo.TabIndex = 42
+        contactInfo.Text = ""
         ' 
-        ' RichTextBox3
+        ' personName
         ' 
-        RichTextBox3.Font = New Font("Segoe UI", 12F)
-        RichTextBox3.Location = New Point(848, 506)
-        RichTextBox3.Name = "RichTextBox3"
-        RichTextBox3.Size = New Size(330, 144)
-        RichTextBox3.TabIndex = 43
-        RichTextBox3.Text = ""
+        personName.Font = New Font("Exo 2", 12F)
+        personName.Location = New Point(91, 194)
+        personName.Name = "personName"
+        personName.Size = New Size(330, 41)
+        personName.TabIndex = 44
+        personName.Text = ""
         ' 
-        ' RichTextBox4
+        ' Document
         ' 
-        RichTextBox4.Font = New Font("Segoe UI", 12F)
-        RichTextBox4.Location = New Point(91, 194)
-        RichTextBox4.Name = "RichTextBox4"
-        RichTextBox4.Size = New Size(330, 41)
-        RichTextBox4.TabIndex = 44
-        RichTextBox4.Text = ""
+        Document.AllowDrop = True
+        Document.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        Document.Cursor = Cursors.Hand
+        Document.Font = New Font("Exo 2", 17F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Document.Image = My.Resources.Resources.Employ_rect
+        Document.Location = New Point(265, 719)
+        Document.Name = "Document"
+        Document.Size = New Size(766, 87)
+        Document.TabIndex = 45
+        Document.Text = "Upload Resume or any other Important Document"
+        Document.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label6
+        ' upload
         ' 
-        Label6.AllowDrop = True
-        Label6.BackColor = SystemColors.ControlDark
-        Label6.Cursor = Cursors.Hand
-        Label6.Font = New Font("Segoe UI", 15F)
-        Label6.Location = New Point(412, 756)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(445, 45)
-        Label6.TabIndex = 45
-        Label6.Text = "Browse or Drag n Drop any Document"
-        ' 
-        ' Label7
-        ' 
-        Label7.Cursor = Cursors.Hand
-        Label7.Image = My.Resources.Resources.Vector
-        Label7.Location = New Point(1021, 337)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(30, 30)
-        Label7.TabIndex = 46
+        upload.Cursor = Cursors.Hand
+        upload.Image = My.Resources.Resources.Employ_Upload
+        upload.Location = New Point(1099, 381)
+        upload.Name = "upload"
+        upload.Size = New Size(58, 52)
+        upload.TabIndex = 46
         ' 
         ' Label8
         ' 
-        Label8.Font = New Font("Abhaya Libre Medium", 25F)
-        Label8.Location = New Point(473, 37)
+        Label8.Font = New Font("Abhaya Libre Medium", 30F)
+        Label8.Location = New Point(357, 33)
         Label8.Name = "Label8"
-        Label8.Size = New Size(329, 58)
+        Label8.Size = New Size(264, 58)
         Label8.TabIndex = 47
-        Label8.Text = "Application Form"
+        Label8.Text = "APPLY FOR"
         ' 
-        ' Label9
+        ' docName
         ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(595, 813)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(12, 20)
-        Label9.TabIndex = 48
-        Label9.Text = "."
+        docName.Anchor = AnchorStyles.None
+        docName.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        docName.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        docName.Location = New Point(449, 804)
+        docName.Name = "docName"
+        docName.Size = New Size(415, 28)
+        docName.TabIndex = 48
+        docName.Text = "fileName"
+        docName.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' orgName
+        ' 
+        orgName.AutoSize = True
+        orgName.Font = New Font("Abhaya Libre Medium", 30F)
+        orgName.Location = New Point(606, 33)
+        orgName.Name = "orgName"
+        orgName.Size = New Size(95, 59)
+        orgName.TabIndex = 49
+        orgName.Text = "Job"
+        ' 
+        ' address
+        ' 
+        address.Font = New Font("Exo 2", 12F)
+        address.Location = New Point(91, 320)
+        address.Name = "address"
+        address.Size = New Size(711, 112)
+        address.TabIndex = 51
+        address.Text = ""
+        ' 
+        ' Label6
+        ' 
+        Label6.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label6.Location = New Point(91, 278)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(132, 44)
+        Label6.TabIndex = 50
+        Label6.Text = "Address*"
+        ' 
+        ' emailAddr
+        ' 
+        emailAddr.Font = New Font("Exo 2", 12F)
+        emailAddr.Location = New Point(872, 518)
+        emailAddr.Name = "emailAddr"
+        emailAddr.Size = New Size(301, 43)
+        emailAddr.TabIndex = 53
+        emailAddr.Text = ""
+        ' 
+        ' Label7
+        ' 
+        Label7.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label7.Location = New Point(870, 473)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(287, 36)
+        Label7.TabIndex = 52
+        Label7.Text = "Email Address*"
+        ' 
+        ' bankAcc
+        ' 
+        bankAcc.Font = New Font("Exo 2", 12F)
+        bankAcc.Location = New Point(872, 639)
+        bankAcc.Name = "bankAcc"
+        bankAcc.Size = New Size(301, 43)
+        bankAcc.TabIndex = 55
+        bankAcc.Text = ""
+        ' 
+        ' Label4
+        ' 
+        Label4.Font = New Font("Exo 2", 15F, FontStyle.Bold)
+        Label4.Location = New Point(870, 594)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(287, 36)
+        Label4.TabIndex = 54
+        Label4.Text = "Bank Account Number*"
         ' 
         ' EmployApplication
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(1254, 953)
-        Controls.Add(Label9)
-        Controls.Add(Label8)
-        Controls.Add(Label7)
-        Controls.Add(Label6)
-        Controls.Add(RichTextBox4)
-        Controls.Add(RichTextBox3)
-        Controls.Add(RichTextBox2)
-        Controls.Add(RichTextBox1)
-        Controls.Add(PictureBox1)
-        Controls.Add(Button1)
-        Controls.Add(Label5)
+        Controls.Add(bankAcc)
         Controls.Add(Label4)
+        Controls.Add(emailAddr)
+        Controls.Add(Label7)
+        Controls.Add(address)
+        Controls.Add(Label6)
+        Controls.Add(orgName)
+        Controls.Add(docName)
+        Controls.Add(Label8)
+        Controls.Add(upload)
+        Controls.Add(Document)
+        Controls.Add(personName)
+        Controls.Add(contactInfo)
+        Controls.Add(Details)
+        Controls.Add(profPic)
+        Controls.Add(applyBtn)
+        Controls.Add(Label5)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -224,7 +289,7 @@ Partial Class EmployApplication
         FormBorderStyle = FormBorderStyle.None
         Name = "EmployApplication"
         Text = "EmployApplication"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(profPic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -233,16 +298,21 @@ Partial Class EmployApplication
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox4 As RichTextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents applyBtn As Button
+    Friend WithEvents profPic As PictureBox
+    Friend WithEvents Details As RichTextBox
+    Friend WithEvents contactInfo As RichTextBox
+    Friend WithEvents personName As RichTextBox
+    Friend WithEvents Document As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents docName As Label
+    Friend WithEvents orgName As Label
+    Friend WithEvents upload As Label
+    Friend WithEvents address As RichTextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents emailAddr As RichTextBox
+    Friend WithEvents bankAcc As RichTextBox
+    Friend WithEvents Label4 As Label
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Globalization
+Imports System.IO
 Imports MySql.Data.MySqlClient
 
 Public Class SerReq_worker_pending
@@ -11,7 +12,8 @@ Public Class SerReq_worker_pending
     Public Sub New(ByVal id As Integer,
                   Optional ByVal name As String = "Name",
                    Optional ByVal serviceTime As String = "Will be updated",
-                   Optional ByVal billAmount As String = "To be Decided")
+                   Optional ByVal billAmount As String = "To be Decided",
+                   Optional ByVal profpic As Byte() = Nothing)
 
         InitializeComponent()
 
@@ -20,7 +22,18 @@ Public Class SerReq_worker_pending
         TextBox1.Text = serviceTime
         TextBox2.Text = billAmount
         requestId = id
-        TextBox1.Enabled = False
+
+        If profpic IsNot Nothing AndAlso profpic.Length > 0 Then
+            ' Convert byte array to image
+            Using ms As New MemoryStream(profpic)
+                Dim img As Image = Image.FromStream(ms)
+                PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+                PictureBox1.Image = img
+            End Using
+        Else
+            ' If profpic is null or empty, set PictureBox image to a default image
+        End If
+
         TextBox2.Enabled = False
     End Sub
 

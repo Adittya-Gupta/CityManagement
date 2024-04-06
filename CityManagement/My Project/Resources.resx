@@ -121,6 +121,9 @@
   <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Group 1931" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 1931.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image 53" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,20 +166,23 @@
   <data name="image 36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Employ_prof_pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employ_prof_pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow icons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow icons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 1014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 1014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star 12 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star 12 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star 12 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star 12 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Employ_Upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employ_Upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Employ_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employ_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 1015" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 1015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +190,8 @@
   <data name="Group 189" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 1931" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 1931.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Star 12 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star 12 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +220,14 @@
   <data name="Frame 10491" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 10491.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 52" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="665939" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\665939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 39" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Frame 1060" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 1060.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,14 +274,14 @@
   <data name="Mask group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mask group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="665939" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\665939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 39 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 39 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 1051" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 1051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 39 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 39 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Star 12 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star 12 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 1013" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 1013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,10 +289,13 @@
   <data name="image 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 39 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 39 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Frame 1060" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Frame 1060.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 39 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 39 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Employ_rect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employ_rect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

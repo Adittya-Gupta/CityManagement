@@ -48,20 +48,20 @@ Partial Class SerReq_worker_accepted
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
+        Label1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(142, 22)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 28)
+        Label1.Size = New Size(79, 27)
         Label1.TabIndex = 1
         Label1.Text = "Label1"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Exo 2", 10F)
+        Label2.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
         Label2.Location = New Point(142, 57)
         Label2.Name = "Label2"
-        Label2.Size = New Size(115, 20)
+        Label2.Size = New Size(122, 20)
         Label2.TabIndex = 2
         Label2.Text = "Service Time: "
         ' 
@@ -71,6 +71,8 @@ Partial Class SerReq_worker_accepted
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Exo 2", 10.2F)
+        Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.Group_1891
         Button1.Location = New Point(794, 67)
         Button1.Name = "Button1"
@@ -85,6 +87,8 @@ Partial Class SerReq_worker_accepted
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Exo 2", 10.2F)
+        Button2.ForeColor = Color.White
         Button2.Image = My.Resources.Resources.Group_190
         Button2.Location = New Point(794, 20)
         Button2.Name = "Button2"
@@ -104,10 +108,10 @@ Partial Class SerReq_worker_accepted
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Exo 2", 10F)
+        Label3.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
         Label3.Location = New Point(142, 86)
         Label3.Name = "Label3"
-        Label3.Size = New Size(136, 20)
+        Label3.Size = New Size(140, 20)
         Label3.TabIndex = 10
         Label3.Text = "Bill Amount: Rs. "
         ' 
@@ -115,21 +119,22 @@ Partial Class SerReq_worker_accepted
         ' 
         Label8.Cursor = Cursors.Hand
         Label8.Image = My.Resources.Resources.Vector
-        Label8.Location = New Point(466, 87)
+        Label8.Location = New Point(472, 87)
         Label8.Name = "Label8"
         Label8.Size = New Size(33, 22)
         Label8.TabIndex = 13
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(263, 53)
+        TextBox1.Location = New Point(269, 53)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(177, 27)
         TextBox1.TabIndex = 14
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(274, 84)
+        TextBox2.Location = New Point(280, 84)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(166, 27)
         TextBox2.TabIndex = 15

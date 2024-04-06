@@ -137,12 +137,10 @@ Public Class User_ChangePassword
         End If
 
         Dim StrengthCheck = PasswordStrengthCheck(inputString)
-
-        If StrengthCheck < 5 Then
-            MessageBox.Show("Your password does not meet the recommended strength criteria. It is weak.", "Weak Password", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Dim message = MessageBox.Show("The password you have entered is weak. Do you still want to proceed?", "Weak Password", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If message = DialogResult.No Then
+            Return ' Do nothing, return back
         End If
-
-
 
         ' Hash the password
         Dim newpassword = inputString
@@ -159,8 +157,7 @@ Public Class User_ChangePassword
 
                 If newhashedPassword = existingHash Then
                     MessageBox.Show("Congratulations!! You have remembered your old password.... No need to change it now.", "Password Unchanged", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    User_Login.Show()
-                    Me.Close()
+                    Button3.PerformClick()
                     Return
                 End If
 
@@ -176,8 +173,7 @@ Public Class User_ChangePassword
                 ' Check if the update was successful based on affected rows.
                 If result > 0 Then
                     MessageBox.Show("Password updated successfully!! , You will now be redirected back to Login Page")
-                    User_Login.Show()
-                    Me.Close()
+                    Button3.PerformClick()
                 Else
                     MessageBox.Show("Password update failed!!")
                 End If
@@ -191,29 +187,21 @@ Public Class User_ChangePassword
 
     End Sub
 
-    Private Sub ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
-    End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
         TextBox1.UseSystemPasswordChar = Not CheckBox1.Checked
         TextBox2.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Open the login form when the button is clicked
+        Dim LoginForm As New User_Login()
+        LoginForm.StartPosition = FormStartPosition.Manual
+        LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+        LoginForm.Show()
+        Me.Hide()
+        Me.Close()
+        Me.Dispose()
 
     End Sub
-
-    Private Sub Button5_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
 End Class

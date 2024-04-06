@@ -7,7 +7,43 @@ Public Class UserProfile_ChangePassword
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
+    Private Function GetUserDetails(userID As Integer) As Dictionary(Of String, Object)
+        Dim userDetails As New Dictionary(Of String, Object)()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT EmailAddress FROM User WHERE SID = @SID"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@SID", userID)
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                If reader.Read() Then
+                    userDetails.Add("Email", reader("EmailAddress"))
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error fetching user Email: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+        Return userDetails
+    End Function
+    Private Sub UserProfile_ChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If User_Login.GlobalSID <> -1 Then
+            ' If loggedInUserID is valid, fetch user details and display them
+            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(User_Login.GlobalSID)
+            If userDetails IsNot Nothing Then
+                ' Display user Email
 
+                TextBox4.Text = userDetails("Email")
+
+
+            Else
+                MessageBox.Show("User details not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("User not logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
 
     ' Function to hash the password using SHA256
     Private Function HashPassword(password As String) As String
@@ -122,27 +158,6 @@ Public Class UserProfile_ChangePassword
 
     End Function
 
-    Private Function IsEmailRegistered(email As String) As Boolean
-        Dim isRegistered As Boolean = False
-        Try
-            conn.Open()
-
-            Dim query As String = "SELECT COUNT(*) FROM User WHERE EmailAddress = @Email"
-            Dim cmd As New MySqlCommand(query, conn)
-            cmd.Parameters.AddWithValue("@Email", email)
-            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-            ' If count is greater than 0, email is registered
-            If count > 0 Then
-                isRegistered = True
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error checking email registration: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            conn.Close()
-        End Try
-        Return isRegistered
-    End Function
 
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
         Dim Email = TextBox4.Text ' Assuming TextBox4 is for entering the email address
@@ -158,12 +173,6 @@ Public Class UserProfile_ChangePassword
             Return
         End If
 
-
-        If Not IsEmailRegistered(Email) Then
-            MessageBox.Show("Email is not registered", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
         If TextBox3.Text = TextBox1.Text Then
             MessageBox.Show("Old password and new password cannot be the same", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
@@ -173,12 +182,6 @@ Public Class UserProfile_ChangePassword
         If NewPassword <> ConfirmPassword Then
             MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
-        End If
-
-        Dim StrengthCheck = PasswordStrengthCheck(NewPassword)
-
-        If StrengthCheck < 5 Then
-            MessageBox.Show("Your password does not meet the recommended strength criteria. It is weak.", "Weak Password", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
 
@@ -199,6 +202,14 @@ Public Class UserProfile_ChangePassword
             If oldHashedPassword <> existingHash Then
                 MessageBox.Show("Old password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
+            End If
+
+
+            Dim StrengthCheck = PasswordStrengthCheck(NewPassword)
+
+            Dim result = MessageBox.Show("The password you have entered is weak. Do you still want to proceed?", "Weak Password", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If result = DialogResult.No Then
+                Return ' Do nothing, return back
             End If
 
             ' Update the password in the database
@@ -238,9 +249,6 @@ Public Class UserProfile_ChangePassword
         TextBox3.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
-    Private Sub User_ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ' Any additional initialization code can be placed here
-    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ' Open the login form when the button is clicked

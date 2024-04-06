@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ForgotPassword
     Inherits System.Windows.Forms.Form
 
@@ -24,6 +24,7 @@ Partial Class ForgotPassword
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ForgotPassword))
         Panel1 = New Panel()
+        ResendLabel = New Label()
         Label9 = New Label()
         Label8 = New Label()
         Label7 = New Label()
@@ -36,7 +37,7 @@ Partial Class ForgotPassword
         Label4 = New Label()
         Label1 = New Label()
         Label2 = New Label()
-        TimeLeftLabel = New Label()
+        Label6 = New Label()
         Email_tb = New TextBox()
         TextBox1 = New TextBox()
         Button2 = New Button()
@@ -49,6 +50,7 @@ Partial Class ForgotPassword
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(ResendLabel)
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label7)
@@ -59,7 +61,7 @@ Partial Class ForgotPassword
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(TimeLeftLabel)
+        Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Email_tb)
         Panel1.Controls.Add(TextBox1)
         Panel1.Controls.Add(Button2)
@@ -71,8 +73,20 @@ Partial Class ForgotPassword
         Panel1.Size = New Size(917, 1100)
         Panel1.TabIndex = 7
         ' 
+        ' ResendLabel
+        ' 
+        ResendLabel.Anchor = AnchorStyles.None
+        ResendLabel.AutoSize = True
+        ResendLabel.Cursor = Cursors.Hand
+        ResendLabel.Location = New Point(542, 469)
+        ResendLabel.Name = "ResendLabel"
+        ResendLabel.Size = New Size(196, 20)
+        ResendLabel.TabIndex = 54
+        ResendLabel.Text = "Having Issues? Resend Code"
+        ' 
         ' Label9
         ' 
+        Label9.Anchor = AnchorStyles.None
         Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(298, 884)
         Label9.Name = "Label9"
@@ -80,6 +94,7 @@ Partial Class ForgotPassword
         Label9.TabIndex = 53
         Label9.Text = "We just emailed you an OTP to reset the password."
         Label9.TextAlign = ContentAlignment.MiddleCenter
+        Label9.Visible = False
         ' 
         ' Label8
         ' 
@@ -93,6 +108,7 @@ Partial Class ForgotPassword
         Label8.TabIndex = 52
         Label8.Text = "Check in your mail ! "
         Label8.TextAlign = ContentAlignment.MiddleCenter
+        Label8.Visible = False
         ' 
         ' Label7
         ' 
@@ -122,6 +138,7 @@ Partial Class ForgotPassword
         ' 
         Button3.AutoSize = True
         Button3.BackColor = Color.Black
+        Button3.Cursor = Cursors.Hand
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
@@ -145,6 +162,7 @@ Partial Class ForgotPassword
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.Anchor = AnchorStyles.None
         PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox3.Location = New Point(276, 91)
@@ -155,6 +173,7 @@ Partial Class ForgotPassword
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Anchor = AnchorStyles.None
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(276, 640)
@@ -162,18 +181,22 @@ Partial Class ForgotPassword
         PictureBox1.Size = New Size(389, 194)
         PictureBox1.TabIndex = 46
         PictureBox1.TabStop = False
+        PictureBox1.Visible = False
         ' 
         ' Label5
         ' 
+        Label5.Anchor = AnchorStyles.None
         Label5.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(319, 557)
         Label5.Name = "Label5"
         Label5.Size = New Size(256, 23)
         Label5.TabIndex = 44
         Label5.Text = "Time left before code expires :"
+        Label5.Visible = False
         ' 
         ' Label4
         ' 
+        Label4.Anchor = AnchorStyles.None
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(298, 358)
         Label4.Name = "Label4"
@@ -203,18 +226,21 @@ Partial Class ForgotPassword
         Label2.Size = New Size(0, 22)
         Label2.TabIndex = 13
         ' 
-        ' TimeLeftLabel
+        ' Label6
         ' 
-        TimeLeftLabel.AutoSize = True
-        TimeLeftLabel.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TimeLeftLabel.Location = New Point(319, 590)
-        TimeLeftLabel.Name = "TimeLeftLabel"
-        TimeLeftLabel.Size = New Size(121, 25)
-        TimeLeftLabel.TabIndex = 12
-        TimeLeftLabel.Text = "Time Left : "
+        Label6.Anchor = AnchorStyles.None
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(319, 590)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(121, 25)
+        Label6.TabIndex = 12
+        Label6.Text = "Time Left : "
+        Label6.Visible = False
         ' 
         ' Email_tb
         ' 
+        Email_tb.Anchor = AnchorStyles.None
         Email_tb.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Email_tb.Location = New Point(315, 425)
         Email_tb.Margin = New Padding(3, 4, 3, 4)
@@ -225,6 +251,7 @@ Partial Class ForgotPassword
         ' 
         ' TextBox1
         ' 
+        TextBox1.Anchor = AnchorStyles.None
         TextBox1.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(315, 936)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
@@ -232,10 +259,13 @@ Partial Class ForgotPassword
         TextBox1.PlaceholderText = "OTP"
         TextBox1.Size = New Size(309, 26)
         TextBox1.TabIndex = 9
+        TextBox1.Visible = False
         ' 
         ' Button2
         ' 
+        Button2.Anchor = AnchorStyles.None
         Button2.BackColor = Color.Black
+        Button2.Cursor = Cursors.Hand
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -247,10 +277,13 @@ Partial Class ForgotPassword
         Button2.TabIndex = 8
         Button2.Text = "VALIDATE"
         Button2.UseVisualStyleBackColor = False
+        Button2.Visible = False
         ' 
         ' Button1
         ' 
+        Button1.Anchor = AnchorStyles.None
         Button1.BackColor = Color.Black
+        Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -284,7 +317,7 @@ Partial Class ForgotPassword
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TimeLeftLabel As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Email_tb As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -300,4 +333,5 @@ Partial Class ForgotPassword
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents ResendLabel As Label
 End Class

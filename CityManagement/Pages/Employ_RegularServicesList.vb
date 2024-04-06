@@ -26,7 +26,7 @@
 
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         ' Navigate back to ListOfOrgForm when Back button is clicked
-        EmploymentPortalForm.LoadListOfOrgForm()
+        EmploymentPortalForm.LoadListOfOrgForm
     End Sub
 
 

@@ -71,6 +71,7 @@ Partial Class Services_WorkSect
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(1254, 953)
         Controls.Add(Label8)
         Controls.Add(Guna2ComboBox1)

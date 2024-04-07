@@ -71,8 +71,8 @@ Public Class Banking_Passbook
         adapter.Fill(table)
 
         If table.Rows.Count = 1 Then
-            Label7.Text = table.Rows(0)(8).ToString()
-            Label8.Text = table.Rows(0)(9).ToString()
+            Label7.Text = table.Rows(0)(9).ToString()
+            Label8.Text = table.Rows(0)(10).ToString()
         Else
             MessageBox.Show("Error has occured")
         End If
@@ -232,7 +232,7 @@ Public Class Banking_Passbook
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from bankingdatabase.TransactionLog where Transaction_ID = @ID;"
+        sqlCmd.CommandText = "Select * from TransactionLog where Transaction_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.VarChar).Value = Trans_ID
 

@@ -165,7 +165,7 @@ Public Class Banking_ContactUs
     End Sub
 
     Private Sub Button17_Click_1(sender As Object, e As EventArgs) Handles Button17.Click
-        Banking_Homepage.bank_username = bank_username
+        Banking_Queries_User.bank_username = bank_username
         ChildForm(Banking_Main.Panel1, Banking_Queries_User)
     End Sub
 

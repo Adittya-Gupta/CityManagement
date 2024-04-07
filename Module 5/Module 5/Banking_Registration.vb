@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 
-Public Class Registration
+Public Class Banking_Registration
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
@@ -116,8 +116,8 @@ Public Class Registration
 
 
         ' connection to database
-        'im connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
 
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
@@ -141,7 +141,7 @@ Public Class Registration
             cmd.Parameters.Add("?sign", MySqlDbType.MediumBlob).Value = SignBytes
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("you have sucessfully registered.")
+            MessageBox.Show("You have sucessfully registered.")
             'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob).Value = PhotoBytes
             'cmd.Parameters.Add("?sign", MySqlDbType.LongBlob).Value = SignBytes
             'cmd.ExecuteNonQuery()
@@ -150,6 +150,7 @@ Public Class Registration
             MessageBox.Show("Error: {0}", ex.Message)
         Finally
             conn.Close()
+            ChildForm(Banking_Main.Panel1, Banking_Homepage)
             'MessageBox.Show("Connection closed.")
         End Try
 
@@ -218,7 +219,7 @@ Public Class Registration
     End Sub
 
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-        ChildForm(Banking_Main.Panel1, Login)
+        ChildForm(Banking_Main.Panel1, Banking_Login)
     End Sub
 
     Private Sub TextBoxDOB_TextChanged(sender As Object, e As EventArgs)

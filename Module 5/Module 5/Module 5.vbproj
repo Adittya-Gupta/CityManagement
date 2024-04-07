@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -250,10 +250,10 @@
     <Compile Include="Money_Management_Net_Banking.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
+    <Compile Include="Banking_Login.Designer.vb">
+      <DependentUpon>Banking_Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="Banking_Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Newsletter_AddNews.Designer.vb">
@@ -280,16 +280,16 @@
     <Compile Include="Newsletter_Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.vb">
-      <DependentUpon>Registration.vb</DependentUpon>
+    <Compile Include="Banking_Registration.Designer.vb">
+      <DependentUpon>Banking_Registration.vb</DependentUpon>
     </Compile>
-    <Compile Include="Registration.vb">
+    <Compile Include="Banking_Registration.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Profile.Designer.vb">
-      <DependentUpon>Profile.vb</DependentUpon>
+    <Compile Include="Banking_Profile.Designer.vb">
+      <DependentUpon>Banking_Profile.vb</DependentUpon>
     </Compile>
-    <Compile Include="Profile.vb">
+    <Compile Include="Banking_Profile.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_ContactUs.Designer.vb">
@@ -371,14 +371,14 @@
     <EmbeddedResource Include="Newsletter_Main.resx">
       <DependentUpon>Newsletter_Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registration.resx">
-      <DependentUpon>Registration.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Registration.resx">
+      <DependentUpon>Banking_Registration.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Login.resx">
+      <DependentUpon>Banking_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
-      <DependentUpon>Profile.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Profile.resx">
+      <DependentUpon>Banking_Profile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_ContactUs.resx">
       <DependentUpon>Banking_ContactUs.vb</DependentUpon>

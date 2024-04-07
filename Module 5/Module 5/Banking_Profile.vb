@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
 
-Public Class Profile
+Public Class Banking_Profile
     Public server As String = "localhost"
     Public username As String = "root"
     Public password As String = "Aasneh18"
@@ -17,9 +17,9 @@ Public Class Profile
         ' connection to database
         MessageBox.Show(bank_username)
 
-        'im connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
         'im connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+        ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
         Dim conn = New MySqlConnection(connString)
 
         Try
@@ -34,15 +34,15 @@ Public Class Profile
             Dim rowCount = sqlDt.Rows.Count
             Dim columnCount = sqlDt.Columns.Count
 
-            'Dim imageBytes = DirectCast(sqlDt.Rows(0)(10), Byte())
-            'Dim ms As New MemoryStream(imageBytes)
-            'Dim image As Image = image.FromStream(ms)
-            'PictureBox1.Image = image
-            'DataGridView1.DataSource = sqlDt
+            Dim imageBytes = DirectCast(sqlDt.Rows(0)(11), Byte())
+            Dim ms As New MemoryStream(imageBytes)
+            Dim image As Image = Image.FromStream(ms)
+            PictureBox1.Image = image
+            DataGridView1.DataSource = sqlDt
 
-            TextBoxBalence.Text = sqlDt.Rows(0)(8).ToString()
+            TextBoxBalence.Text = sqlDt.Rows(0)(9).ToString()
             TextBoxAccountNumber.Text = sqlDt.Rows(0)(0).ToString()
-            TextBoxCIBILScore.Text = sqlDt.Rows(0)(9).ToString()
+            TextBoxCIBILScore.Text = sqlDt.Rows(0)(10).ToString()
             TextBoxUsername.Text = sqlDt.Rows(0)(5).ToString()
 
             LabelName.Text = sqlDt.Rows(0)(2).ToString()

@@ -122,7 +122,11 @@
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-
+        If NavBarCheck() Then
+            Return
+        End If
+        Banking_Profile.bank_username = bank_username
+        ChildForm(Panel1, Banking_Profile)
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint

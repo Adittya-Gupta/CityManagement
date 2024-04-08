@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
 
-Public Class Login
+Public Class Banking_Login
 
     Public server As String = "localhost"
     Public username As String = "root"
@@ -23,8 +23,8 @@ Public Class Login
         Dim Password As String = TextBoxpassword.Text.Trim()
 
         ' connection to database
-        ' Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
@@ -59,12 +59,12 @@ Public Class Login
             Else
                 If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
                     'Form51.ReceivedEmail = enteredEmail
-                    Profile.bank_username = Username
+                    Banking_Profile.bank_username = Username
                     Banking_Main.bank_username = Username
                     MessageBox.Show(Username)
                     'Me.Hide()
                     'Profile.Show()
-                    ChildForm(Banking_Main.Panel1, Profile)
+                    ChildForm(Banking_Main.Panel1, Banking_Profile)
 
 
                     'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())
@@ -91,7 +91,7 @@ Public Class Login
         TextBoxpassword.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-        ChildForm(Banking_Main.Panel1, Registration)
+        ChildForm(Banking_Main.Panel1, Banking_Registration)
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -45,7 +45,7 @@ Partial Class FestivalEvents_EventDetails
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(292, 76)
+        Label2.Location = New Point(486, 76)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(163, 40)
@@ -56,14 +56,14 @@ Partial Class FestivalEvents_EventDetails
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
         Label1.Location = New Point(32, 76)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(372, 40)
+        Label1.Size = New Size(424, 40)
         Label1.TabIndex = 27
-        Label1.Text = "Events & Festivals    >"
+        Label1.Text = "Events and Festivals   >"
         ' 
         ' PictureBox1
         ' 

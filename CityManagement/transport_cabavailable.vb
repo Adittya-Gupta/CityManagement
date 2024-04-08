@@ -18,6 +18,8 @@ Public Class transport_cabavailable
     Public Shared selected_cab As Integer
     Public Shared extended As Integer = 0
     Public Shared newcab As Integer = 0
+    Public Shared cab_arrival As DateTime
+    Public Shared cost As Decimal
     'Dim arrivalTimes As New List(Of Integer)
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
@@ -50,7 +52,7 @@ Public Class transport_cabavailable
             ' Retrieve the node IDs for the from and to locations
             fromNodeId = GetNodeId(transport_cabbooking.FromLocation)
             toNodeId = GetNodeId(transport_cabbooking.ToLocation)
-
+            ' MessageBox.Show(fromNodeId & toNodeId)
             ' Display the node IDs on the cards
             'Dim card As New transport_cabCards
             'card.Label6.Text = fromNodeId.ToString() & transport_cabbooking.FromLocation
@@ -85,14 +87,70 @@ Public Class transport_cabavailable
                     If pathNodesMap.ContainsKey(cabId) Then
                         ' Retrieve nodes list for the cabId
                         Dim nodesList As List(Of Integer) = pathNodesMap(cabId)
+                        Dim pricequery As String = "SELECT price FROM all_cabs WHERE cab_id = @CabId"
+                        Dim price As Decimal = 0.0
+                        Using command As New MySqlCommand(pricequery, conn2)
+                            command.Parameters.AddWithValue("@CabId", cabId)
+                            Dim result As Object = command.ExecuteScalar()
 
+                            If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                                price = Convert.ToDecimal(result)
+                                ' Do something with the price (e.g., display it, use it in calculations, etc.)
+                                'MessageBox.Show($"The price for cab ID {cabId} is {price}")
+                            Else
+                                ' MessageBox.Show("No price found for the specified cab ID.")
+                            End If
+                        End Using
+                        'MessageBox.Show(fromNodeId & " " & toNodeId)
+                        Dim nodequery As String = "SELECT nodes_list FROM cab_path WHERE from_node = @fromNodeId AND to_node = @toNodeId"
+                        Dim cabPathNodesList As New List(Of Integer)
+                        Using command As New MySqlCommand(nodequery, conn2)
+                            command.Parameters.AddWithValue("@fromNodeId", fromNodeId)
+                            command.Parameters.AddWithValue("@toNodeId", toNodeId)
+                            ' MessageBox.Show(fromNodeId & " " & toNodeId & transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
+                            ' Execute the command and get the result (nodes list)
+                            Dim result As Object = command.ExecuteScalar()
+                            If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                                'MessageBox.Show("Inside ectend 3")
+
+                                Dim nodesListString As String = result.ToString()
+                                ' MessageBox.Show(nodesListString)
+                                nodesListString = nodesListString.Trim({"{"c, "}"c})
+                                'MessageBox.Show("nodes list str trimmed")
+                                Dim nodesArray As String() = nodesListString.Split(","c)
+                                ' MessageBox.Show("nodes list str split")
+                                For Each nodeStr As String In nodesArray
+                                    'MessageBox.Show(Integer.Parse(nodeStr.Trim()))
+                                    cabPathNodesList.Add(Integer.Parse(nodeStr.Trim()))
+                                    'MessageBox.Show("done")
+                                Next
+                            End If
+                        End Using
+                        'MessageBox.Show("out")
+                        Dim totalMinutes As Integer = 0
+                        For i As Integer = 0 To cabPathNodesList.Count - 2
+                            'MessageBox.Show("just")
+                            Dim sourceNodeId As Integer = cabPathNodesList(i)
+                            'MessageBox.Show("inside")
+                            Dim targetNodeId As Integer = cabPathNodesList(i + 1)
+                            ' MessageBox.Show("Inside for")
+                            ' Find the edge weight (minutes) from sourceNodeId to targetNodeId
+                            Dim edgeWeight As Integer = GetEdgeWeight(sourceNodeId, targetNodeId)
+
+                            ' Add edge weight to total time
+                            totalMinutes += edgeWeight
+
+                        Next
+                        'MessageBox.Show(totalMinutes)
+                        price = price * totalMinutes
+                        'MessageBox.Show(price)
                         ' Check if fromNodeId and toNodeId are in the nodes list
                         Dim fromNodeIndex As Integer = nodesList.IndexOf(fromNodeId)
                         Dim toNodeIndex As Integer = nodesList.IndexOf(toNodeId)
                         'MessageBox.Show("from: " & fromNodeIndex & " to: " & toNodeIndex)
                         ' Check if both fromNodeId and toNodeId are present and toNodeId occurs after fromNodeId
                         If fromNodeIndex <> -1 AndAlso toNodeIndex <> -1 AndAlso toNodeIndex > fromNodeIndex Then
-                            'MessageBox.Show("Cab ID: " & cabId & " contains the required route as subpath of current cab route.")
+                            MessageBox.Show("Cab ID: " & cabId & " contains the required route as subpath of current cab route.")
 
                             Dim vacancyquery As String = "SELECT vacancies FROM running_cabs WHERE cab_id=@cabId"
                             Dim vacancies = -1
@@ -111,11 +169,13 @@ Public Class transport_cabavailable
                                 card.Label7.Text = transport_cabbooking.ToLocation
                                 card.Label5.Text = arrivalTime.ToString
                                 card.Label8.Text = driverName
+                                card.Label3.Text = "Rs. " & price
                                 AddHandler card.Button1.Click, Sub()
                                                                    ' Open the page here
                                                                    ' For example, you can open a new form
-
+                                                                   cost = price
                                                                    selected_cab = cabId
+                                                                   cab_arrival = arrivalTime
                                                                    Dim newForm As New transport_cabconfirm()
 
                                                                    newForm.ShowDialog()
@@ -170,11 +230,14 @@ Public Class transport_cabavailable
                                     card.Label7.Text = transport_cabbooking.ToLocation
                                     card.Label5.Text = arrivalTime.ToString
                                     card.Label8.Text = driverName
+                                    card.Label3.Text = "Rs. " & price
                                     AddHandler card.Button1.Click, Sub()
                                                                        ' Open the page here
                                                                        ' For example, you can open a new form
+                                                                       cost = price
                                                                        extended = newPathId
                                                                        selected_cab = cabId
+                                                                       cab_arrival = arrivalTime
                                                                        Dim newForm As New transport_cabconfirm()
 
                                                                        newForm.ShowDialog()
@@ -194,6 +257,7 @@ Public Class transport_cabavailable
                 End If
             Next
             If gotCab = False Then
+
                 'MessageBox.Show("gaya kyaaaa")
                 Dim availableCabId As Integer = -1
 
@@ -209,7 +273,57 @@ Public Class transport_cabavailable
                 End Using
 
                 If availableCabId <> -1 Then
-                    'MessageBox.Show("arey bc nahi mili? " & availableCabId)
+                    ' MessageBox.Show("arey bc nahi mili? " & availableCabId)
+                    'MessageBox.Show(fromNodeId & " " & toNodeId & transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
+                    'Dim nodesList As List(Of Integer) = pathNodesMap(availableCabId)
+                    Dim pricequery As String = "SELECT price FROM all_cabs WHERE cab_id = @CabId"
+                    Dim price As Decimal = 0.0
+                    Using command As New MySqlCommand(pricequery, conn2)
+                        command.Parameters.AddWithValue("@CabId", availableCabId)
+                        Dim result As Object = command.ExecuteScalar()
+
+                        If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                            price = Convert.ToDecimal(result)
+                            ' Do something with the price (e.g., display it, use it in calculations, etc.)
+                            MessageBox.Show($"The price for cab ID {availableCabId} is {price}")
+                        Else
+                            MessageBox.Show("No price found for the specified cab ID.")
+                        End If
+                    End Using
+
+                    Dim nodequery As String = "SELECT nodes_list FROM cab_path WHERE from_node = @fromNodeId AND to_node = @toNodeId"
+                    Dim cabPathNodesList As New List(Of Integer)
+                    Using command As New MySqlCommand(nodequery, conn2)
+                        command.Parameters.AddWithValue("@fromNodeId", fromNodeId)
+                        command.Parameters.AddWithValue("@toNodeId", toNodeId)
+                        'MessageBox.Show(fromNodeId & " " & toNodeId & transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
+                        ' Execute the command and get the result (nodes list)
+                        Dim result As Object = command.ExecuteScalar()
+                        If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                            'MessageBox.Show("Inside ectend 3")
+
+                            Dim nodesListString As String = result.ToString()
+                            nodesListString = nodesListString.Trim({"{"c, "}"c})
+                            Dim nodesArray As String() = nodesListString.Split(","c)
+                            For Each nodeStr As String In nodesArray
+                                cabPathNodesList.Add(Integer.Parse(nodeStr.Trim()))
+                                'MessageBox.Show(Integer.Parse(nodeStr.Trim()) + " ")
+                            Next
+                        End If
+                    End Using
+                    Dim totalMinutes As Integer = 0
+                    For i As Integer = 0 To cabPathNodesList.Count - 2
+                        Dim sourceNodeId As Integer = cabPathNodesList(i)
+                        Dim targetNodeId As Integer = cabPathNodesList(i + 1)
+
+                        ' Find the edge weight (minutes) from sourceNodeId to targetNodeId
+                        Dim edgeWeight As Integer = GetEdgeWeight(sourceNodeId, targetNodeId)
+
+                        ' Add edge weight to total time
+                        totalMinutes += edgeWeight
+
+                    Next
+                    price = price * totalMinutes
                     Dim driverName As String = ""
                     Dim driverquery As String = "SELECT driver_name FROM all_cabs WHERE cab_id=@cabId"
 
@@ -222,11 +336,14 @@ Public Class transport_cabavailable
                     End Using
                     selected_cab = availableCabId
                     newcab = 1
+                    cost = price
+                    cab_arrival = transport_cabbooking.sqlFormattedDateTime
                     Dim card As New transport_cabCards
                     card.Label6.Text = transport_cabbooking.FromLocation
                     card.Label7.Text = transport_cabbooking.ToLocation
                     card.Label5.Text = transport_cabbooking.sqlFormattedDateTime.ToString
                     card.Label8.Text = driverName
+                    card.Label3.Text = "Rs. " & price
                     AddHandler card.Button1.Click, AddressOf CardButton_Click
                     FlowLayoutPanel1.Controls.Add(card)
                 Else
@@ -270,23 +387,25 @@ Public Class transport_cabavailable
                 ' Add parameters to the command
                 command.Parameters.AddWithValue("@fromNodeId", fromNodeId)
                 command.Parameters.AddWithValue("@toNodeId", toNodeId)
-
+                'MessageBox.Show(fromNodeId & " " & toNodeId & transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
                 ' Execute the command and get the result (nodes list)
                 Dim result As Object = command.ExecuteScalar()
                 If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                    'MessageBox.Show("Inside ectend 3")
                     Dim cabPathNodesList As New List(Of Integer)
                     Dim nodesListString As String = result.ToString()
                     nodesListString = nodesListString.Trim({"{"c, "}"c})
                     Dim nodesArray As String() = nodesListString.Split(","c)
                     For Each nodeStr As String In nodesArray
                         cabPathNodesList.Add(Integer.Parse(nodeStr.Trim()))
+                        'MessageBox.Show(Integer.Parse(nodeStr.Trim()) + " ")
                     Next
 
 
                     ' Compare the path starting from fromNodeId to the end node of the path in nodesList
                     ' with the path found between fromNodeId and toNodeId from the cab_paths table
                     If cabPathNodesList.Count >= toNodeIndex - fromNodeIndex + 1 Then
-
+                        'MessageBox.Show("this one 2")
                         For i As Integer = 0 To toNodeIndex - fromNodeIndex
                             'MessageBox.Show(cabPathNodesList(i) & " " & nodesList1(fromNodeIndex + i) & " " & cabId)
                             If cabPathNodesList(i) <> nodesList1(fromNodeIndex + i) Then
@@ -295,6 +414,7 @@ Public Class transport_cabavailable
                             End If
                         Next
                     Else
+                        'MessageBox.Show("this one 1")
                         isPrefixPath = False
 
                     End If

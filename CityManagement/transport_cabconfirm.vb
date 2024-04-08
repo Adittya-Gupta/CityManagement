@@ -16,10 +16,14 @@ Public Class transport_cabconfirm
             Dim userEmail As String = TextBox4.Text
             Dim selectedCabId As Integer = transport_cabavailable.selected_cab
             conn.Open()
-            Dim updateUserCabQuery As String = "UPDATE cab_user SET current_ride = @selectedCabId WHERE email = @userEmail"
+            Dim updateUserCabQuery As String = "UPDATE cab_user SET current_ride = @selectedCabId, current_from = @from, current_to=@to, current_arrival = @time,current_cost = @price WHERE email = @userEmail"
             Using updateUserCabCommand As New MySqlCommand(updateUserCabQuery, conn)
                 updateUserCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
                 updateUserCabCommand.Parameters.AddWithValue("@userEmail", userEmail)
+                updateUserCabCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                updateUserCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                updateUserCabCommand.Parameters.AddWithValue("@time", transport_cabavailable.cab_arrival)
+                updateUserCabCommand.Parameters.AddWithValue("@price", transport_cabavailable.cost)
                 updateUserCabCommand.ExecuteNonQuery()
             End Using
             If transport_cabavailable.extended <> 0 Then
@@ -35,6 +39,10 @@ Public Class transport_cabconfirm
                 MessageBox.Show("Cab booking confirmed. Enjoy the ride!")
             ElseIf transport_cabavailable.newcab = 1 Then
                 ' Insert a new entry in running_cabs table
+                MessageBox.Show("New cabbbbb")
+                MessageBox.Show(selectedCabId)
+                MessageBox.Show(transport_cabavailable.fromNodeId & transport_cabavailable.toNodeId)
+
                 Dim isSharable As Integer = 1
                 Dim vacancyquery As String = "SELECT max_limit FROM all_cabs WHERE cab_id=@cabId"
                 Dim vacancies = -1
@@ -45,12 +53,15 @@ Public Class transport_cabconfirm
                         vacancies = Convert.ToInt32(result)
                     End If
                 End Using
-                Dim updatecab As String = "UPDATE all_cabs SET is_available = 1 WHERE cab_id = @cabId"
-                Using cmd As New MySqlCommand(updateUserCabQuery, conn)
+                MessageBox.Show(vacancies)
+                Dim available As Integer = 0
+                Dim updatecab As String = "UPDATE all_cabs SET is_available = @avail WHERE cab_id = @cabId"
+                Using cmd As New MySqlCommand(updatecab, conn)
                     cmd.Parameters.AddWithValue("@cabId", selectedCabId)
-
+                    cmd.Parameters.AddWithValue("@avail", available)
                     cmd.ExecuteNonQuery()
                 End Using
+                MessageBox.Show("OOF")
                 Dim newPathId As Integer = -1
                 'MessageBox.Show(transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
                 Dim newPathIdQuery As String = "SELECT path_id FROM cab_path WHERE from_node = @fromLocation AND to_node = @toLocation"
@@ -62,7 +73,8 @@ Public Class transport_cabconfirm
                         newPathId = Convert.ToInt32(result)
                     End If
                 End Using
-                'MessageBox.Show(newPathId)
+                MessageBox.Show(newPathId)
+                MessageBox.Show(selectedCabId)
                 Dim insertRunningCabQuery As String = "INSERT INTO running_cabs (cab_id, path_id,from_location,to_location,depart_time,vacancies,is_sharable) VALUES (@selectedCabId, @newPathId,@from, @to, @depart,@vacancies, @shared)"
                 Using insertRunningCabCommand As New MySqlCommand(insertRunningCabQuery, conn)
                     insertRunningCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)

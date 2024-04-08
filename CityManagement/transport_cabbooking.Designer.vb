@@ -24,6 +24,8 @@ Partial Class transport_cabbooking
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_cabbooking))
         Panel3 = New Panel()
+        Label6 = New Label()
+        Label5 = New Label()
         ComboBox2 = New ComboBox()
         ComboBox1 = New ComboBox()
         RadioButton1 = New RadioButton()
@@ -41,8 +43,6 @@ Partial Class transport_cabbooking
         PictureBox3 = New PictureBox()
         Panel1 = New Panel()
         Button2 = New Button()
-        Label5 = New Label()
-        Label6 = New Label()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -67,24 +67,46 @@ Partial Class transport_cabbooking
         Panel3.Size = New Size(397, 349)
         Panel3.TabIndex = 2
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(65, 129)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(87, 20)
+        Label6.TabIndex = 9
+        Label6.Text = "Destination"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(65, 60)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(117, 20)
+        Label5.TabIndex = 8
+        Label5.Text = "Pickup Location"
+        ' 
         ' ComboBox2
         ' 
-        ComboBox2.BackColor = SystemColors.ScrollBar
+        ComboBox2.BackColor = SystemColors.HighlightText
+        ComboBox2.Font = New Font("Exo 2", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"Rajeev Chowk", "Martin School", "BT hospital", "Public park", "Main Market", "Gym", "RK Plaza", "Manipal University", "BHK Mall", "RH Chowraha", "Government Office", "Cricket Ground", "Mk Hospital", "General playground", "BH Bazar", "Football ground"})
+        ComboBox2.Items.AddRange(New Object() {"Rajeev Chowk", "Martin School", "BT hospital", "Public park", "Main Market", "Gym", "RK Plaza", "Manipal University", "BHK Mall", "RH Chowraha", "Government Office", "Cricket Ground", "Mk Hospital", "General playground", "BH Bazar", "Football ground"})
         ComboBox2.Location = New Point(65, 152)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(277, 28)
+        ComboBox2.Size = New Size(277, 30)
         ComboBox2.TabIndex = 7
         ' 
         ' ComboBox1
         ' 
-        ComboBox1.BackColor = SystemColors.ScrollBar
+        ComboBox1.BackColor = SystemColors.HighlightText
+        ComboBox1.Font = New Font("Exo 2", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Rajeev Chowk", "Martin School", "BT hospital", "Public park", "Main Market", "Gym", "RK Plaza", "Manipal University", "BHK Mall", "RH Chowraha", "Government Office", "Cricket Ground", "Mk Hospital", "General playground", "BH Bazar", "Football ground"})
+        ComboBox1.Items.AddRange(New Object() {"Rajeev Chowk", "Martin School", "BT hospital", "Public park", "Main Market", "Gym", "RK Plaza", "Manipal University", "BHK Mall", "RH Chowraha", "Government Office", "Cricket Ground", "Mk Hospital", "General playground", "BH Bazar", "Football ground"})
         ComboBox1.Location = New Point(65, 83)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(277, 28)
+        ComboBox1.Size = New Size(277, 30)
         ComboBox1.TabIndex = 6
         ' 
         ' RadioButton1
@@ -122,7 +144,7 @@ Partial Class transport_cabbooking
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Historic", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(83, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(230, 41)
@@ -255,26 +277,6 @@ Partial Class transport_cabbooking
         Button2.TabIndex = 20
         Button2.Text = "Are you a driver?"
         Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(65, 60)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(117, 20)
-        Label5.TabIndex = 8
-        Label5.Text = "Pickup Location"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(65, 129)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(87, 20)
-        Label6.TabIndex = 9
-        Label6.Text = "Destination"
         ' 
         ' transport_cabbooking
         ' 

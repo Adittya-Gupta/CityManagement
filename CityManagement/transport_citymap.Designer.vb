@@ -24,6 +24,7 @@ Partial Class transport_citymap
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_citymap))
         Panel1 = New Panel()
+        Button1 = New Button()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
@@ -34,12 +35,23 @@ Partial Class transport_citymap
         ' 
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.Black
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(1, 1)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1405, 84)
+        Panel1.Size = New Size(1080, 84)
         Panel1.TabIndex = 7
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Button1.Location = New Point(865, 28)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(143, 38)
+        Button1.TabIndex = 1
+        Button1.Text = "Main Page"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -47,20 +59,20 @@ Partial Class transport_citymap
         Label1.AutoSize = True
         Label1.Font = New Font("Exo 2", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(335, 19)
+        Label1.Location = New Point(358, 18)
         Label1.Name = "Label1"
-        Label1.Size = New Size(700, 48)
+        Label1.Size = New Size(320, 48)
         Label1.TabIndex = 0
-        Label1.Text = "Welcome to Transportation Module!"
+        Label1.Text = "View of The City"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(223, 92)
+        PictureBox1.Location = New Point(21, 92)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(922, 565)
+        PictureBox1.Size = New Size(961, 565)
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 
@@ -68,7 +80,7 @@ Partial Class transport_citymap
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1401, 669)
+        ClientSize = New Size(1076, 669)
         Controls.Add(PictureBox1)
         Controls.Add(Panel1)
         Name = "transport_citymap"
@@ -82,4 +94,5 @@ Partial Class transport_citymap
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

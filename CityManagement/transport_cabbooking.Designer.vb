@@ -186,7 +186,7 @@ Partial Class transport_cabbooking
         Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button3.BackColor = SystemColors.ActiveCaptionText
         Button3.ForeColor = SystemColors.ButtonHighlight
-        Button3.Location = New Point(1074, 13)
+        Button3.Location = New Point(831, 13)
         Button3.Name = "Button3"
         Button3.Size = New Size(110, 45)
         Button3.TabIndex = 4
@@ -198,11 +198,11 @@ Partial Class transport_cabbooking
         Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button4.BackColor = SystemColors.ActiveCaptionText
         Button4.ForeColor = SystemColors.ButtonHighlight
-        Button4.Location = New Point(1214, 13)
+        Button4.Location = New Point(969, 13)
         Button4.Name = "Button4"
-        Button4.Size = New Size(110, 45)
+        Button4.Size = New Size(101, 45)
         Button4.TabIndex = 5
-        Button4.Text = "Look for Bus" & vbCrLf
+        Button4.Text = "Main Page"
         Button4.UseVisualStyleBackColor = False
         ' 
         ' Label3
@@ -211,7 +211,7 @@ Partial Class transport_cabbooking
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Silver
-        Label3.Location = New Point(315, 19)
+        Label3.Location = New Point(293, 19)
         Label3.Name = "Label3"
         Label3.Size = New Size(60, 29)
         Label3.TabIndex = 16
@@ -223,7 +223,7 @@ Partial Class transport_cabbooking
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(437, 19)
+        Label4.Location = New Point(379, 19)
         Label4.Name = "Label4"
         Label4.Size = New Size(73, 29)
         Label4.TabIndex = 17
@@ -233,7 +233,7 @@ Partial Class transport_cabbooking
         ' 
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(272, 25)
+        PictureBox1.Location = New Point(263, 25)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(24, 23)
         PictureBox1.TabIndex = 18
@@ -243,7 +243,7 @@ Partial Class transport_cabbooking
         ' 
         PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(394, 25)
+        PictureBox3.Location = New Point(349, 25)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(24, 23)
         PictureBox3.TabIndex = 19
@@ -263,7 +263,7 @@ Partial Class transport_cabbooking
         Panel1.Controls.Add(Label3)
         Panel1.Location = New Point(0, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1377, 72)
+        Panel1.Size = New Size(1140, 72)
         Panel1.TabIndex = 2
         ' 
         ' Button2
@@ -271,9 +271,9 @@ Partial Class transport_cabbooking
         Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button2.BackColor = SystemColors.ActiveCaptionText
         Button2.ForeColor = SystemColors.ButtonHighlight
-        Button2.Location = New Point(888, 13)
+        Button2.Location = New Point(612, 13)
         Button2.Name = "Button2"
-        Button2.Size = New Size(153, 45)
+        Button2.Size = New Size(195, 45)
         Button2.TabIndex = 20
         Button2.Text = "Are you a driver?"
         Button2.UseVisualStyleBackColor = False
@@ -284,7 +284,7 @@ Partial Class transport_cabbooking
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1370, 689)
+        ClientSize = New Size(1133, 713)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)

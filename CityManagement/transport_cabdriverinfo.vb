@@ -13,12 +13,15 @@ Public Class transport_cabdriverinfo
 
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub transport_cabdriverinfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = FormBorderStyle.Sizable
+        Me.ControlBox = False
+        Me.Text = ""
         Dim x As String = transport_cabdriverlogin.name
         TextBox3.Text = x
         TextBox4.Text = transport_cabdriverlogin.email

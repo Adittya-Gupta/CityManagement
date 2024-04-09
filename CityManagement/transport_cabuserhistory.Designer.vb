@@ -34,6 +34,7 @@ Partial Class transport_cabuserhistory
         TextBox1 = New TextBox()
         Button4 = New Button()
         FlowLayoutPanel2 = New FlowLayoutPanel()
+        Button1 = New Button()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class transport_cabuserhistory
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 12F)
-        Label8.Location = New Point(200, 56)
+        Label8.Location = New Point(65, 56)
         Label8.Name = "Label8"
         Label8.Size = New Size(121, 28)
         Label8.TabIndex = 2
@@ -52,7 +53,7 @@ Partial Class transport_cabuserhistory
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 12F)
-        Label9.Location = New Point(201, 263)
+        Label9.Location = New Point(66, 263)
         Label9.Name = "Label9"
         Label9.Size = New Size(138, 28)
         Label9.TabIndex = 3
@@ -62,7 +63,7 @@ Partial Class transport_cabuserhistory
         ' 
         PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), Image)
         PictureBox7.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox7.Location = New Point(458, 15)
+        PictureBox7.Location = New Point(400, 15)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(24, 23)
         PictureBox7.TabIndex = 20
@@ -72,7 +73,7 @@ Partial Class transport_cabuserhistory
         ' 
         PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), Image)
         PictureBox8.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox8.Location = New Point(362, 15)
+        PictureBox8.Location = New Point(304, 15)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(24, 23)
         PictureBox8.TabIndex = 19
@@ -84,7 +85,7 @@ Partial Class transport_cabuserhistory
         Label46.BackColor = Color.Transparent
         Label46.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.Black
-        Label46.Location = New Point(488, 9)
+        Label46.Location = New Point(430, 9)
         Label46.Name = "Label46"
         Label46.Size = New Size(156, 29)
         Label46.TabIndex = 18
@@ -96,7 +97,7 @@ Partial Class transport_cabuserhistory
         Label47.BackColor = Color.Transparent
         Label47.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.Silver
-        Label47.Location = New Point(392, 9)
+        Label47.Location = New Point(334, 9)
         Label47.Name = "Label47"
         Label47.Size = New Size(60, 29)
         Label47.TabIndex = 17
@@ -108,7 +109,7 @@ Partial Class transport_cabuserhistory
         Label48.BackColor = Color.Transparent
         Label48.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.Silver
-        Label48.Location = New Point(122, 9)
+        Label48.Location = New Point(64, 9)
         Label48.Name = "Label48"
         Label48.Size = New Size(234, 29)
         Label48.TabIndex = 16
@@ -116,7 +117,7 @@ Partial Class transport_cabuserhistory
         ' 
         ' FlowLayoutPanel1
         ' 
-        FlowLayoutPanel1.Location = New Point(206, 96)
+        FlowLayoutPanel1.Location = New Point(71, 96)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Size = New Size(953, 164)
         FlowLayoutPanel1.TabIndex = 21
@@ -125,7 +126,7 @@ Partial Class transport_cabuserhistory
         ' 
         TextBox1.BackColor = Color.Silver
         TextBox1.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(345, 56)
+        TextBox1.Location = New Point(210, 56)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Enter your email"
         TextBox1.Size = New Size(277, 34)
@@ -137,7 +138,7 @@ Partial Class transport_cabuserhistory
         Button4.FlatStyle = FlatStyle.Popup
         Button4.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(647, 56)
+        Button4.Location = New Point(512, 56)
         Button4.Name = "Button4"
         Button4.Size = New Size(104, 34)
         Button4.TabIndex = 29
@@ -146,16 +147,30 @@ Partial Class transport_cabuserhistory
         ' 
         ' FlowLayoutPanel2
         ' 
-        FlowLayoutPanel2.Location = New Point(208, 310)
+        FlowLayoutPanel2.Location = New Point(73, 310)
         FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         FlowLayoutPanel2.Size = New Size(951, 342)
         FlowLayoutPanel2.TabIndex = 30
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.FlatStyle = FlatStyle.Popup
+        Button1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(911, 15)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(104, 34)
+        Button1.TabIndex = 31
+        Button1.Text = "Book"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' transport_cabuserhistory
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1370, 689)
+        ClientSize = New Size(1133, 713)
+        Controls.Add(Button1)
         Controls.Add(FlowLayoutPanel2)
         Controls.Add(Button4)
         Controls.Add(TextBox1)
@@ -185,4 +200,5 @@ Partial Class transport_cabuserhistory
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Friend WithEvents Button1 As Button
 End Class

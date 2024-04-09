@@ -42,6 +42,9 @@ Public Class transport_cabavailable
     End Sub
     Private Sub transport_cabavailable_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = FormBorderStyle.Sizable
+        Me.ControlBox = False
+        Me.Text = ""
         Try
             conn2.Open()
             Dim query As String = "Select * from running_cabs"
@@ -361,9 +364,13 @@ Public Class transport_cabavailable
     Private Sub CardButton_Click(sender As Object, e As EventArgs)
         ' Open the page here
         ' For example, you can open a new form
-        Dim newForm As New transport_cabconfirm()
-
-        newForm.ShowDialog()
+        ' Dim newForm As New transport_cabconfirm()
+        ' newForm.ShowDialog()
+        mypanel.panel1.Controls.Clear()
+        Dim form As New transport_cabconfirm
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
     Private Function extend_path(cabId As Integer) As Boolean
         Dim isPrefixPath As Boolean = True
@@ -650,5 +657,13 @@ Public Class transport_cabavailable
 
     Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
         Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New transport_cabbooking
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

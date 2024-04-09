@@ -160,4 +160,22 @@
         gg==
 </value>
   </data>
+  <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAIAAADpgdgBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAALlJREFUSEvtlE0NAyEQRpHAOsEBSEACjkACKEAKEnAADqDTMOHEX5u9bNN32OSb
+        w8vslwmk3sRDRaWU/p3xrF8LIXjvMexYiaSUhBBrbYvfd5RzZoyByzmHozmbjlJKzdX3mrEvu+1FKYXK
+        cDRiLwJijNd1KaUwjzgSAUIIzjmGEUciYwzUpLXGPGIvgprBAjVhnrARdQtUjqMJKxGcdbesrxFYieCy
+        T3ZpHJV9wl/05pee2o+4SVTrC/jsTiSJD+jPAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="PictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAIAAADpgdgBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAALlJREFUSEvtlE0NAyEQRpHAOsEBSEACjkACKEAKEnAADqDTMOHEX5u9bNN32OSb
+        w8vslwmk3sRDRaWU/p3xrF8LIXjvMexYiaSUhBBrbYvfd5RzZoyByzmHozmbjlJKzdX3mrEvu+1FKYXK
+        cDRiLwJijNd1KaUwjzgSAUIIzjmGEUciYwzUpLXGPGIvgprBAjVhnrARdQtUjqMJKxGcdbesrxFYieCy
+        T3ZpHJV9wl/05pee2o+4SVTrC/jsTiSJD+jPAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

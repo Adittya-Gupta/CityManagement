@@ -31,7 +31,6 @@ Partial Class transport_cabdriverinfo
         Button4 = New Button()
         Panel1 = New Panel()
         Panel2 = New Panel()
-        Label10 = New Label()
         Panel4 = New Panel()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         Label6 = New Label()
@@ -112,9 +111,9 @@ Partial Class transport_cabdriverinfo
         Button4.FlatStyle = FlatStyle.Popup
         Button4.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(1147, 13)
+        Button4.Location = New Point(893, 20)
         Button4.Name = "Button4"
-        Button4.Size = New Size(178, 53)
+        Button4.Size = New Size(165, 40)
         Button4.TabIndex = 27
         Button4.Text = "Find Cab"
         Button4.UseVisualStyleBackColor = False
@@ -124,15 +123,14 @@ Partial Class transport_cabdriverinfo
         Panel1.BackColor = Color.FromArgb(CByte(170), CByte(0), CByte(0), CByte(0))
         Panel1.Controls.Add(Panel2)
         Panel1.Controls.Add(Label4)
-        Panel1.Location = New Point(137, 84)
+        Panel1.Location = New Point(45, 92)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1034, 604)
+        Panel1.Size = New Size(1013, 514)
         Panel1.TabIndex = 28
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Panel4)
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(PictureBox3)
@@ -143,20 +141,8 @@ Partial Class transport_cabdriverinfo
         Panel2.Controls.Add(Label8)
         Panel2.Location = New Point(141, 59)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(745, 517)
+        Panel2.Size = New Size(745, 433)
         Panel2.TabIndex = 13
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.Black
-        Label10.Location = New Point(69, 451)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(81, 27)
-        Label10.TabIndex = 26
-        Label10.Text = "Rating"
         ' 
         ' Panel4
         ' 
@@ -265,7 +251,7 @@ Partial Class transport_cabdriverinfo
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1338, 709)
+        ClientSize = New Size(1133, 713)
         Controls.Add(Panel1)
         Controls.Add(Button4)
         Controls.Add(PictureBox2)
@@ -304,6 +290,5 @@ Partial Class transport_cabdriverinfo
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class

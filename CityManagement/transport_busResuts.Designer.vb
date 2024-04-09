@@ -36,9 +36,9 @@ Partial Class transport_busResuts
         ' 
         FlowLayoutPanel1.AutoScroll = True
         FlowLayoutPanel1.FlowDirection = FlowDirection.TopDown
-        FlowLayoutPanel1.Location = New Point(0, 97)
+        FlowLayoutPanel1.Location = New Point(4, 154)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(986, 491)
+        FlowLayoutPanel1.Size = New Size(991, 516)
         FlowLayoutPanel1.TabIndex = 0
         FlowLayoutPanel1.WrapContents = False
         ' 
@@ -47,7 +47,7 @@ Partial Class transport_busResuts
         Label1.AllowDrop = True
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(30, 73)
+        Label1.Location = New Point(44, 110)
         Label1.Name = "Label1"
         Label1.Size = New Size(117, 21)
         Label1.TabIndex = 1
@@ -56,7 +56,7 @@ Partial Class transport_busResuts
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(30, 58)
+        Label2.Location = New Point(44, 95)
         Label2.Name = "Label2"
         Label2.Size = New Size(41, 15)
         Label2.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class transport_busResuts
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(212, 58)
+        Label3.Location = New Point(274, 95)
         Label3.Name = "Label3"
         Label3.Size = New Size(25, 15)
         Label3.TabIndex = 3
@@ -74,7 +74,7 @@ Partial Class transport_busResuts
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(444, 58)
+        Label4.Location = New Point(479, 95)
         Label4.Name = "Label4"
         Label4.Size = New Size(37, 15)
         Label4.TabIndex = 4
@@ -85,7 +85,7 @@ Partial Class transport_busResuts
         Label5.AllowDrop = True
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(212, 73)
+        Label5.Location = New Point(274, 110)
         Label5.Name = "Label5"
         Label5.Size = New Size(117, 21)
         Label5.TabIndex = 5
@@ -96,7 +96,7 @@ Partial Class transport_busResuts
         Label6.AllowDrop = True
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(444, 73)
+        Label6.Location = New Point(479, 110)
         Label6.Name = "Label6"
         Label6.Size = New Size(67, 21)
         Label6.TabIndex = 6
@@ -107,7 +107,7 @@ Partial Class transport_busResuts
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.Transparent
-        Button1.Location = New Point(892, 12)
+        Button1.Location = New Point(908, 12)
         Button1.Name = "Button1"
         Button1.Size = New Size(82, 44)
         Button1.TabIndex = 15
@@ -119,7 +119,7 @@ Partial Class transport_busResuts
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(986, 587)
+        ClientSize = New Size(1007, 720)
         Controls.Add(Button1)
         Controls.Add(Label6)
         Controls.Add(Label5)
@@ -128,6 +128,7 @@ Partial Class transport_busResuts
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(FlowLayoutPanel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "transport_busResuts"
         Text = "transport_busResuts"
         ResumeLayout(False)

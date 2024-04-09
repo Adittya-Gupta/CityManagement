@@ -172,6 +172,10 @@ Public Class transport_busResuts
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+        Dim busResultsForm As New transport_busSearch
+        mypanel.panel1.Controls.Clear()
+        busResultsForm.TopLevel = False
+        mypanel.panel1.Controls.Add(busResultsForm)
+        busResultsForm.Show()
     End Sub
 End Class

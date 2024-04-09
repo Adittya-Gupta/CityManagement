@@ -151,7 +151,11 @@ Public Class searchComponent
         bookingForm.StartPoint = Label4.Text
         bookingForm.EndPoint = Label6.Text
         ' Show the transport_busbooking form
+        mypanel.panel1.Controls.Clear()
+        bookingForm.TopLevel = False
+        mypanel.panel1.Controls.Add(bookingForm)
         bookingForm.Show()
+ 
 
         ' Optionally, you can hide the current form if needed
         ' Me.ParentForm.Hide()

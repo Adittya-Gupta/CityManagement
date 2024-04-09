@@ -62,7 +62,7 @@ Partial Class MainPanel
         Panel1.Location = New Point(201, 1)
         Panel1.Margin = New Padding(4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(815, 638)
+        Panel1.Size = New Size(1007, 760)
         Panel1.TabIndex = 0
         ' 
         ' Button1
@@ -302,10 +302,10 @@ Partial Class MainPanel
         ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 18.0F)
+        AutoScaleDimensions = New SizeF(9F, 18F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
-        ClientSize = New Size(1016, 639)
+        ClientSize = New Size(1208, 761)
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)

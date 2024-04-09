@@ -24,6 +24,8 @@ Partial Class transport_busbooking
     Private Sub InitializeComponent()
         Label1 = New Label()
         Panel1 = New Panel()
+        Label25 = New Label()
+        Label2 = New Label()
         Button1 = New Button()
         Label21 = New Label()
         Label20 = New Label()
@@ -56,9 +58,12 @@ Partial Class transport_busbooking
         Button2 = New Button()
         PictureBox1 = New PictureBox()
         Panel4 = New Panel()
+        Label29 = New Label()
+        Label28 = New Label()
+        Label27 = New Label()
+        Label26 = New Label()
         Label15 = New Label()
-        Label2 = New Label()
-        Label25 = New Label()
+        Label30 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -98,17 +103,41 @@ Partial Class transport_busbooking
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(12, 12)
+        Panel1.Location = New Point(38, 53)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(815, 150)
+        Panel1.Size = New Size(940, 150)
         Panel1.TabIndex = 1
+        ' 
+        ' Label25
+        ' 
+        Label25.AutoSize = True
+        Label25.Font = New Font("Segoe UI", 12F)
+        Label25.Location = New Point(478, 11)
+        Label25.Name = "Label25"
+        Label25.Size = New Size(65, 21)
+        Label25.TabIndex = 21
+        Label25.Text = "Label25"
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.BorderStyle = BorderStyle.Fixed3D
+        Label2.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
+        Label2.ForeColor = Color.DimGray
+        Label2.Location = New Point(281, 10)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(184, 25)
+        Label2.TabIndex = 20
+        Label2.Text = "Journey Time(in mins)"
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.Transparent
-        Button1.Location = New Point(732, -1)
+        Button1.Location = New Point(843, 3)
         Button1.Name = "Button1"
         Button1.Size = New Size(82, 44)
         Button1.TabIndex = 14
@@ -119,7 +148,7 @@ Partial Class transport_busbooking
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Segoe UI", 12F)
-        Label21.Location = New Point(712, 111)
+        Label21.Location = New Point(797, 111)
         Label21.Name = "Label21"
         Label21.Size = New Size(65, 21)
         Label21.TabIndex = 18
@@ -129,7 +158,7 @@ Partial Class transport_busbooking
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Segoe UI", 12F)
-        Label20.Location = New Point(712, 60)
+        Label20.Location = New Point(797, 56)
         Label20.Name = "Label20"
         Label20.Size = New Size(65, 21)
         Label20.TabIndex = 17
@@ -183,7 +212,7 @@ Partial Class transport_busbooking
         Label9.BorderStyle = BorderStyle.Fixed3D
         Label9.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
         Label9.ForeColor = Color.DimGray
-        Label9.Location = New Point(573, 107)
+        Label9.Location = New Point(620, 107)
         Label9.Name = "Label9"
         Label9.Size = New Size(133, 25)
         Label9.TabIndex = 12
@@ -197,7 +226,7 @@ Partial Class transport_busbooking
         Label8.BorderStyle = BorderStyle.Fixed3D
         Label8.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
         Label8.ForeColor = Color.DimGray
-        Label8.Location = New Point(573, 56)
+        Label8.Location = New Point(620, 56)
         Label8.Name = "Label8"
         Label8.Size = New Size(133, 25)
         Label8.TabIndex = 11
@@ -215,7 +244,7 @@ Partial Class transport_busbooking
         Label7.Name = "Label7"
         Label7.Size = New Size(169, 25)
         Label7.TabIndex = 10
-        Label7.Text = "Boys Seat Available:"
+        Label7.Text = "Total Boys Capacity:"
         ' 
         ' Label6
         ' 
@@ -229,7 +258,7 @@ Partial Class transport_busbooking
         Label6.Name = "Label6"
         Label6.Size = New Size(169, 25)
         Label6.TabIndex = 9
-        Label6.Text = "Girls Seat Available:"
+        Label6.Text = "Total Girls Capacity:"
         ' 
         ' Label5
         ' 
@@ -271,9 +300,9 @@ Partial Class transport_busbooking
         Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label10)
-        Panel2.Location = New Point(5, 416)
+        Panel2.Location = New Point(94, 550)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(450, 156)
+        Panel2.Size = New Size(450, 167)
         Panel2.TabIndex = 2
         ' 
         ' TextBox8
@@ -318,9 +347,9 @@ Partial Class transport_busbooking
         Button3.BackColor = Color.Black
         Button3.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.Transparent
-        Button3.Location = New Point(337, 68)
+        Button3.Location = New Point(328, 68)
         Button3.Name = "Button3"
-        Button3.Size = New Size(73, 38)
+        Button3.Size = New Size(82, 49)
         Button3.TabIndex = 13
         Button3.Text = "Confirm"
         Button3.UseVisualStyleBackColor = False
@@ -420,9 +449,9 @@ Partial Class transport_busbooking
         Panel3.Controls.Add(Button2)
         Panel3.Controls.Add(Label12)
         Panel3.Controls.Add(Label13)
-        Panel3.Location = New Point(461, 416)
+        Panel3.Location = New Point(612, 550)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(366, 156)
+        Panel3.Size = New Size(366, 167)
         Panel3.TabIndex = 3
         ' 
         ' Label24
@@ -455,19 +484,19 @@ Partial Class transport_busbooking
         Button2.BackColor = Color.Black
         Button2.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.Transparent
-        Button2.Location = New Point(96, 112)
+        Button2.Location = New Point(96, 125)
         Button2.Name = "Button2"
-        Button2.Size = New Size(191, 38)
+        Button2.Size = New Size(191, 36)
         Button2.TabIndex = 12
         Button2.Text = "Pay"
         Button2.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.juan_encalada_6mcVaoGNz1w_unsplash
-        PictureBox1.Location = New Point(-6, -4)
+        PictureBox1.Image = juan_encalada_6mcVaoGNz1w_unsplash
+        PictureBox1.Location = New Point(2, -1)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(844, 581)
+        PictureBox1.Size = New Size(1007, 760)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
@@ -475,11 +504,63 @@ Partial Class transport_busbooking
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(Label29)
+        Panel4.Controls.Add(Label28)
+        Panel4.Controls.Add(Label27)
+        Panel4.Controls.Add(Label26)
         Panel4.Controls.Add(Label15)
-        Panel4.Location = New Point(586, 180)
+        Panel4.Location = New Point(723, 248)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(241, 223)
         Panel4.TabIndex = 13
+        ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Font = New Font("Segoe UI", 12F)
+        Label29.Location = New Point(80, 176)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(65, 21)
+        Label29.TabIndex = 15
+        Label29.Text = "Label29"
+        ' 
+        ' Label28
+        ' 
+        Label28.AutoSize = True
+        Label28.Font = New Font("Segoe UI", 12F)
+        Label28.Location = New Point(80, 104)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(65, 21)
+        Label28.TabIndex = 14
+        Label28.Text = "Label28"
+        ' 
+        ' Label27
+        ' 
+        Label27.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label27.AutoSize = True
+        Label27.BackColor = Color.Transparent
+        Label27.BorderStyle = BorderStyle.Fixed3D
+        Label27.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
+        Label27.ForeColor = Color.DimGray
+        Label27.Location = New Point(30, 138)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(131, 25)
+        Label27.TabIndex = 9
+        Label27.Text = "Driver Number:"
+        ' 
+        ' Label26
+        ' 
+        Label26.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label26.AutoSize = True
+        Label26.BackColor = Color.Transparent
+        Label26.BorderStyle = BorderStyle.Fixed3D
+        Label26.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
+        Label26.ForeColor = Color.DimGray
+        Label26.Location = New Point(30, 70)
+        Label26.Name = "Label26"
+        Label26.Size = New Size(115, 25)
+        Label26.TabIndex = 8
+        Label26.Text = "Driver Name:"
         ' 
         ' Label15
         ' 
@@ -487,42 +568,31 @@ Partial Class transport_busbooking
         Label15.AutoSize = True
         Label15.BackColor = Color.Transparent
         Label15.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(32, 18)
+        Label15.Location = New Point(49, 20)
         Label15.Name = "Label15"
-        Label15.Size = New Size(170, 32)
+        Label15.Size = New Size(137, 32)
         Label15.TabIndex = 1
-        Label15.Text = "Special Offers!"
+        Label15.Text = "Driver Info!"
         ' 
-        ' Label2
+        ' Label30
         ' 
-        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label2.AutoSize = True
-        Label2.BackColor = Color.Transparent
-        Label2.BorderStyle = BorderStyle.Fixed3D
-        Label2.Font = New Font("Segoe UI Semibold", 12.25F, FontStyle.Bold Or FontStyle.Italic)
-        Label2.ForeColor = Color.DimGray
-        Label2.Location = New Point(281, 10)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(184, 25)
-        Label2.TabIndex = 20
-        Label2.Text = "Journey Time(in mins)"
-        ' 
-        ' Label25
-        ' 
-        Label25.AutoSize = True
-        Label25.Font = New Font("Segoe UI", 12F)
-        Label25.Location = New Point(478, 11)
-        Label25.Name = "Label25"
-        Label25.Size = New Size(65, 21)
-        Label25.TabIndex = 21
-        Label25.Text = "Label25"
+        Label30.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label30.AutoSize = True
+        Label30.BackColor = Color.White
+        Label30.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label30.Location = New Point(403, 9)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(179, 32)
+        Label30.TabIndex = 14
+        Label30.Text = "Book Your Bus!"
         ' 
         ' transport_busbooking
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(840, 578)
+        ClientSize = New Size(1007, 760)
+        Controls.Add(Label30)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
@@ -541,6 +611,7 @@ Partial Class transport_busbooking
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
@@ -580,4 +651,9 @@ Partial Class transport_busbooking
     Friend WithEvents Label23 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label30 As Label
 End Class

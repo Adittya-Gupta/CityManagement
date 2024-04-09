@@ -2,15 +2,19 @@
 
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-
+        mypanel.panel1 = Panel1
+        mypanel.panel1.Controls.Clear()
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
+        mypanel.panel1.Controls.Clear()
+        Dim form As New transport_landingPage
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -37,12 +41,12 @@
 
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Dim form2 As New transport_landingPage()
-
-        ' Show Form2
-        Me.Hide()
-        form2.ShowDialog()
-        Me.Show()
-    End Sub
+    'Private Sub Button10_Click(sender As Object, e As EventArgs)
+    'Dim form2 As New transport_landingPage
+    '
+    ' Show Form2
+    'Hide()
+    'form2.ShowDialog()
+    'Show()
+    'End Sub
 End Class

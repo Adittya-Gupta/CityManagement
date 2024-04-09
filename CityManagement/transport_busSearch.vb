@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -25,12 +25,18 @@
         busResultsForm.EndPoint = endPoint
         busResultsForm.SelectedDate = selectedDate
 
-        ' Navigate to busResultsForm
+        mypanel.panel1.Controls.Clear()
+        busResultsForm.TopLevel = False
+        mypanel.panel1.Controls.Add(busResultsForm)
         busResultsForm.Show()
-        Me.Hide() ' Optional: Hide current form if needed
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Dim busResultsForm As New transport_landingPage
+        mypanel.panel1.Controls.Clear()
+        busResultsForm.TopLevel = False
+        mypanel.panel1.Controls.Add(busResultsForm)
+        busResultsForm.Show()
     End Sub
 End Class

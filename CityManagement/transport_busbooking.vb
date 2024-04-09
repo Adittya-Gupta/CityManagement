@@ -1,6 +1,7 @@
-﻿
-Imports MySql.Data.MySqlClient
-
+﻿Imports MySql.Data.MySqlClient
+Imports System.IO
+Imports GemBox.Pdf
+Imports GemBox.Pdf.Content
 Public Class transport_busbooking
     Private _busId As String
     Private _from As String
@@ -76,6 +77,8 @@ Public Class transport_busbooking
                 Dim girlsPrice As Double = reader.GetDouble("girls_price") * totTime
                 Dim boysPrice As Double = reader.GetDouble("boys_price") * totTime
                 Dim pathId As Integer = reader.GetInt32("path_id")
+                Label28.Text = driverName
+                Label29.Text = driverNumber
                 Label18.Text = girlsSeat
                 Label19.Text = boysSeat
                 Label20.Text = girlsPrice
@@ -120,6 +123,68 @@ Public Class transport_busbooking
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+        Dim busResultsForm As New transport_busSearch
+        mypanel.panel1.Controls.Clear()
+        busResultsForm.TopLevel = False
+        mypanel.panel1.Controls.Add(busResultsForm)
+        busResultsForm.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
+
+        Dim document = New PdfDocument()
+        Dim margin As Double = 10
+
+        ' Add a page.
+        Dim page = document.Pages.Add()
+
+        ' Generate the ticket name with the current time.
+        Dim ticketName As String = "Tickets" & DateTime.Now.ToString("yyyyMMddHHmmss")
+
+        Dim ticketContent As String = $"Bus Ticket
+-----------------------------------------
+From: {_from}
+To: {_endpoint}
+Date: {DateTime.Now.ToString("dd/MM/yyyy")}
+Time: {DateTime.Now.ToString("HH:mm")}
+-----------------------------------------
+Driver: {Label28.Text}
+Driver Number: {Label29.Text}
+-----------------------------------------
+Girls Seat Booked: {TextBox7.Text}
+Boys Seat Booked: {TextBox8.Text}
+-----------------------------------------
+Total Price: Rs. {Label22.Text}
+-----------------------------------------
+Your Phone Number: {TextBox9.Text}
+Your Email Address: {TextBox10.Text}
+-----------------------------------------
+Thank you for choosing our service!"
+        ' Write the ticket name on the PDF.
+        Using formattedText = New PdfFormattedText()
+            formattedText.TextAlignment = PdfTextAlignment.Center
+            formattedText.MaxTextWidth = 200
+            formattedText.Append(ticketContent)
+            page.Content.DrawText(formattedText,
+                    New PdfPoint((page.CropBox.Width - formattedText.MaxTextWidth) / 2,
+                        page.CropBox.Top - margin - formattedText.Height))
+
+            formattedText.Clear()
+
+        End Using
+
+        ' Specify the path where you want to save the PDF file.
+        Dim myDocumentsPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        Dim filePath As String = Path.Combine(myDocumentsPath, ticketName & ".pdf")
+
+        ' Save the PDF document to the specified path.
+        document.Save(filePath)
+
+        ' Close the PDF document.
+        document.Close()
+
+        MessageBox.Show("PDF file Downloaded! Check your MyDocuments for the Pdf file")
+
     End Sub
 End Class

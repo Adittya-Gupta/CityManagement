@@ -3,13 +3,12 @@
 
 
     'Make this form full screen
-    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        mypanel.Panel1 = Panel1
-        mypanel.Panel1.Controls.Clear()
-        User_Profile.TopLevel = False
-        mypanel.Panel1.Controls.Add(User_Profile)
-        User_Profile.Show()
+    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged, MyBase.Load
+        If Me.Visible Then
+            Me.WindowState = FormWindowState.Maximized
+            mypanel.Panel1 = Panel1
+            Button1_Click(sender, e)
+        End If
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 

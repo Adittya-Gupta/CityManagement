@@ -20,9 +20,9 @@ Public Class User_EditProfile
         ' Select the first item by default
         GenderComboBox.SelectedIndex = 0
 
-        If User_Login.GlobalSID <> -1 Then
+        If Module1.CurrUserSID <> -1 Then
             ' If loggedInUserID is valid, fetch user details and display them
-            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(User_Login.GlobalSID)
+            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(Module1.CurrUserSID)
             If userDetails IsNot Nothing Then
                 ' Display user details
                 NameTextBox.Text = userDetails("Name")
@@ -143,7 +143,7 @@ Public Class User_EditProfile
 
             ' Insert the new user into the database
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@SID", User_Login.GlobalSID)
+                cmd.Parameters.AddWithValue("@SID", Module1.CurrUserSID)
                 cmd.Parameters.AddWithValue("@Name", name)
                 cmd.Parameters.AddWithValue("@ContactNo", contactNo)
                 cmd.Parameters.AddWithValue("@Gender", gender)

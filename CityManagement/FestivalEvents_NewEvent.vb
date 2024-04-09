@@ -43,159 +43,74 @@ Public Class FestivalEvents_NewEvent
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim eventname As String = NameTextBox.Text
-        Dim eventdate As Date = EventDatePicker.Value
-        Dim spacereq As String = SpaceRequired.Text
-        Dim descr As String = EventDescription.Text
-        Dim venue As String = VenueTextBox.Text
-        Dim owner_id As Integer = Module1.CurrUserSID
-        Dim isopen As Integer
-        Dim etype As String
-        If (eventdate > DateAndTime.Now) Then
-            isopen = 1
-        Else
-            isopen = 0
-        End If
-
-        If Indoor.Checked Then
-                etype = "Indoor"
-            Else
-                etype = "Outdoor"
-        End If
-
-
-        ' Check for not null constraints
-        If String.IsNullOrEmpty(eventname) Then
-            MessageBox.Show("Please enter your name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-        'If String.IsNullOrEmpty(email) OrElse Not email.Contains("@") OrElse Not email.Contains(".") Then
-        '    MessageBox.Show("Please enter correct email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return
-        'End If
-
-        'If String.IsNullOrEmpty(contactNo) Then
-        '    MessageBox.Show("Please enter your contact number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return
-        'End If
-
-        If String.IsNullOrEmpty(descr) Then
-            MessageBox.Show("Please enter event description.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-        If String.IsNullOrEmpty(eventdate) Then
-            MessageBox.Show("Please enter event date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-        ' Check for integer constraint on contact number
-        'Dim contactNoInteger As Double
-        'If Not Double.TryParse(contactNo, contactNoInteger) Then
-        '    MessageBox.Show("Contact number must be a valid integer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return
-        'End If
-
-        ' Perform validation for other fields as necessary...
-
-        ' Perform validation for password and confirm password
-        'If password <> confirmPassword Then
-        '    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return
-        'End If
-
-
         Try
-            conn.Open()
+            Dim eventname As String = NameTextBox.Text
+            Dim eventdate As Date = EventDatePicker.Value
+            Dim descr As String = EventDescription.Text
+            Dim venue As String = VenueTextBox.Text
+            Dim owner_id As Integer = Module1.CurrUserSID
+            Dim isopen As Integer = If(eventdate > DateAndTime.Now, 1, 0)
+            Dim etype As String = If(Indoor.Checked, "Indoor", "Outdoor")
 
-            ' Check if the email already exists in the database
-            'Dim query As String = "SELECT COUNT(*) FROM User WHERE EmailAddress = @Email"
-            'Using cmd As New MySqlCommand(query, conn)
-            '    cmd.Parameters.AddWithValue("@Email", email)
-            '    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-            '    If count > 0 Then
-            '        MessageBox.Show("Email already exists. Please use a different email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            '        Return
-            '    End If
-            'End Using
-
-            ' Check if the contact number already exists in the database
-            'query = "SELECT COUNT(*) FROM User WHERE ContactNo = @ContactNo"
-            'Using cmd As New MySqlCommand(query, conn)
-            '    cmd.Parameters.AddWithValue("@ContactNo", contactNo)
-            '    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-            '    If count > 0 Then
-            '        MessageBox.Show("Contact number already exists. Please use a different contact number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            '        Return
-            '    End If
-            'End Using
-
-            'Convert profile picture to byte array
-            Dim profilePic As Byte() = Nothing
-            Try
-                If (selectedImagePath <> "") Then
-                    profilePic = File.ReadAllBytes(selectedImagePath)
-                End If
-            Catch ex As Exception
-                Debug.WriteLine("Error reading file: " & ex.Message)
-            End Try
-
-            If profilePic IsNot Nothing Then
-                Debug.WriteLine("Size of profilePic: " & profilePic.Length & " bytes")
-            Else
-                Debug.WriteLine("Profile picture is null or empty")
+            ' Check for not null constraints
+            If String.IsNullOrEmpty(eventname) Then
+                MessageBox.Show("Please enter the event name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
             End If
 
-            Debug.WriteLine(profilePic)
-            Debug.WriteLine(selectedImagePath)
+            If String.IsNullOrEmpty(descr) Then
+                MessageBox.Show("Please enter event description.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
 
-            ' Generate a unique SID
+            ' You may add more validation checks here...
+
+            conn.Open()
+
+            ' Convert profile picture to byte array
+            Dim profilePic As Byte() = Nothing
+            If Not String.IsNullOrEmpty(selectedImagePath) Then
+                profilePic = File.ReadAllBytes(selectedImagePath)
+            End If
+
+            ' Generate a unique event ID
             Dim eid As Integer = GenerateUniqueEventID()
+            Debug.WriteLine(owner_id)
 
-            ' Hash the password
-            'Dim hashedPassword As String = HashPassword(password)
-
-            ' Insert the new user into the database
-            Dim query As String = "INSERT INTO festivals (dateTime,description, event_type, id, image, isapproved, isopen, name, owner_sid,venue) VALUES (@datetime,@descr,@etype,@EID,@image,@isapproved,@isopen,@Name, @ownerid, @venue)"
+            ' Insert the new event into the database
+            Dim query As String = "INSERT INTO festivals (dateTime, description, event_type, id, image, isapproved, isopen, name, owner_sid, venue) VALUES (@datetime, @descr, @etype, @EID, @image, 0, @isopen, @Name, @ownerid, @venue)"
             Using cmd As New MySqlCommand(query, conn)
-
                 cmd.Parameters.AddWithValue("@EID", eid)
                 cmd.Parameters.AddWithValue("@Name", eventname)
                 cmd.Parameters.AddWithValue("@descr", descr)
                 cmd.Parameters.AddWithValue("@etype", etype)
-                cmd.Parameters.AddWithValue("@image", profilePic)
-                cmd.Parameters.AddWithValue("@isapproved", 0)
+                cmd.Parameters.AddWithValue("@image", If(profilePic, DBNull.Value))
                 cmd.Parameters.AddWithValue("@isopen", isopen)
                 cmd.Parameters.AddWithValue("@ownerid", owner_id)
                 cmd.Parameters.AddWithValue("@venue", venue)
+                cmd.Parameters.AddWithValue("@datetime", eventdate)
                 cmd.ExecuteNonQuery()
             End Using
+
             MessageBox.Show("Event Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Clear the text boxes after successful signup
+            ' Clear the text boxes after successful registration
             NameTextBox.Text = ""
             VenueTextBox.Text = ""
-            'ContactTextBox.Text = ""
-            'GenderComboBox.SelectedIndex = -1
-            'PasswordTextBox.Text = ""
-            'ConfirmPasswordTextBox.Text = ""
-            'DateOfBirthDateTimePicker.Value = Date.Now
-            'Button1.Text = "Upload Picture"
+            EventDescription.Text = ""
+            ' Clear other fields as needed...
 
-
-
+        Catch ex As MySqlException
+            MessageBox.Show("MySQL Error: " & ex.Message, "MySQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Finally
             conn.Close()
         End Try
-
-        ' Add your signup logic here
-        ' Once signup is successful, you can navigate to another form or perform other actions
-        'MessageBox.Show("Signup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim openFileDialog1 As New OpenFileDialog()
@@ -205,17 +120,22 @@ Public Class FestivalEvents_NewEvent
         openFileDialog1.Filter = "Image Files (*.bmp;*.jpg;*.jpeg;*.gif;*.png)|*.bmp;*.jpg;*.jpeg;*.gif;*.png"
         openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)
 
-
         ' Display the OpenFileDialog and check if the user selected a file
         If openFileDialog1.ShowDialog() = DialogResult.OK Then
-            ' Get the selected file path
-            selectedImagePath = openFileDialog1.FileName
+            Try
+                ' Get the selected file path
+                selectedImagePath = openFileDialog1.FileName
 
-            ' Set the button text to the name of the selected image file
-            Button1.Text = System.IO.Path.GetFileName(selectedImagePath)
+                ' Set the button text to the name of the selected image file
+                Button1.Text = System.IO.Path.GetFileName(selectedImagePath)
 
-            ' Load the image into an Image control or perform other operations
-            'PictureBox1.Image = Image.FromFile(selectedImagePath)
+                ' Load the image into an Image control or perform other operations
+                EventImage.Image = Image.FromFile(selectedImagePath)
+            Catch ex As Exception
+                MessageBox.Show("Error loading image: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         End If
     End Sub
+
+
 End Class

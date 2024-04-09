@@ -27,9 +27,9 @@ Public Class UserProfile_ChangePassword
         Return userDetails
     End Function
     Private Sub UserProfile_ChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If User_Login.GlobalSID <> -1 Then
+        If Module1.CurrUserSID <> -1 Then
             ' If loggedInUserID is valid, fetch user details and display them
-            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(User_Login.GlobalSID)
+            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(Module1.CurrUserSID)
             If userDetails IsNot Nothing Then
                 ' Display user Email
 

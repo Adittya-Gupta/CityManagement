@@ -17,15 +17,15 @@ Public Class User_Profile
         ListBox1.Visible = False
         AdminButton.Visible = False
 
-        If User_Login.GlobalSID = 984697 Then
+        If Module1.CurrUserSID = 984697 Then
             AdminButton.Visible = True
         End If
 
         ' Check if loggedInUserID is valid
-        If User_Login.GlobalSID <> -1 Then
+        If Module1.CurrUserSID <> -1 Then
             ' If loggedInUserID is valid, fetch user details and display them
-            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(User_Login.GlobalSID)
-            SIDLabel.Text = User_Login.GlobalSID
+            Dim userDetails As Dictionary(Of String, Object) = GetUserDetails(Module1.CurrUserSID)
+            SIDLabel.Text = Module1.CurrUserSID
 
             ' Check if 'Name' field exists
             If userDetails.ContainsKey("Name") AndAlso Not IsDBNull(userDetails("Name")) Then
@@ -114,7 +114,7 @@ Public Class User_Profile
             conn.Open()
             Dim query As String = "SELECT UserID, Type, Message FROM Notifications WHERE UserID = @UserID"
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@UserID", User_Login.GlobalSID)
+                cmd.Parameters.AddWithValue("@UserID", Module1.CurrUserSID)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
                         Dim userID As Integer = reader.GetInt32("UserID")
@@ -374,12 +374,14 @@ Public Class User_Profile
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
         ' Open the signup form when the label is clicked
+        Module1.CurrUserSID = -1
         Dim LoginForm As New User_Login()
-        Dim mainpanel As New MainPanel()
+        'Dim mainpanel As New MainPanel()
         LoginForm.StartPosition = FormStartPosition.Manual
-        LoginForm.Location = mainpanel.Location ' Set the location of the new form to the current form's location
+        LoginForm.Location = Module1.Global_Main_Panel.Location ' Set the location of the new form to the current form's location
         LoginForm.Show()
-        mainpanel.Hide()
+        Me.Hide()
+        Module1.Global_Main_Panel.Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles AdminButton.Click

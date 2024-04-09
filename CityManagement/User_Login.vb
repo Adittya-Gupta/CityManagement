@@ -6,7 +6,6 @@ Public Class User_Login
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
-    Public Shared GlobalSID As Integer = -1
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
@@ -168,12 +167,12 @@ Public Class User_Login
             If hashedPassword = hashedInputPassword Then
                 ' If the passwords match, login successful
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                GlobalSID = database_sid
+                Module1.CurrUserSID = database_sid
                 ' Add code to navigate to the next form or perform other actions upon successful login
-                Dim profile As New MainPanel()
-                profile.StartPosition = FormStartPosition.Manual
-                profile.Location = Me.Location ' Set the location of the new form to the current form's location
-                profile.Show()
+                'Dim profile As New MainPanel()
+                Module1.Global_Main_Panel.StartPosition = FormStartPosition.Manual
+                Module1.Global_Main_Panel.Location = Me.Location ' Set the location of the new form to the current form's location
+                Module1.Global_Main_Panel.Show()
                 Me.Hide()
 
             Else

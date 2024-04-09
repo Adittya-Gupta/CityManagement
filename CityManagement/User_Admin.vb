@@ -1,6 +1,7 @@
 ﻿Imports System.Text
 Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
+Imports System.Runtime.InteropServices.JavaScript.JSType
 
 Public Class User_Admin
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
@@ -90,7 +91,7 @@ Public Class User_Admin
 
     ' Function to hash the password using SHA256
     Private Function HashPassword(password As String) As String
-        Using sha256 As SHA256 = sha256.Create()
+        Using sha256 As SHA256 = SHA256.Create()
             Dim hashedBytes As Byte() = sha256.ComputeHash(Encoding.UTF8.GetBytes(password))
             Dim builder As New StringBuilder()
             For Each b As Byte In hashedBytes
@@ -241,11 +242,13 @@ Public Class User_Admin
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, Label1.Click
         ' Add code to navigate to the next form or perform other actions upon successful login
-        Dim profile As New MainPanel()
-        profile.StartPosition = FormStartPosition.Manual
-        profile.Location = Me.Location ' Set the location of the new form to the current form's location
-        profile.Show()
-        Me.Hide()
+
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Profile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+
     End Sub
 
 End Class

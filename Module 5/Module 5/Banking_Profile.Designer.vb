@@ -58,7 +58,7 @@ Partial Class Banking_Profile
         Me.Label9.Location = New System.Drawing.Point(0, 470)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(185, 16)
+        Me.Label9.Size = New System.Drawing.Size(150, 13)
         Me.Label9.TabIndex = 70
         Me.Label9.Text = "Your recent transaction history"
         '
@@ -90,7 +90,7 @@ Partial Class Banking_Profile
         Me.Label3.Location = New System.Drawing.Point(117, 16)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(126, 25)
+        Me.Label3.Size = New System.Drawing.Size(103, 20)
         Me.Label3.TabIndex = 54
         Me.Label3.Text = "Active Loan"
         '
@@ -112,7 +112,7 @@ Partial Class Banking_Profile
         Me.Label2.Location = New System.Drawing.Point(117, 14)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 25)
+        Me.Label2.Size = New System.Drawing.Size(101, 20)
         Me.Label2.TabIndex = 54
         Me.Label2.Text = "Active Card"
         '
@@ -129,10 +129,10 @@ Partial Class Banking_Profile
         'LabelAddress
         '
         Me.LabelAddress.AutoSize = True
-        Me.LabelAddress.Location = New System.Drawing.Point(36, 80)
+        Me.LabelAddress.Location = New System.Drawing.Point(36, 61)
         Me.LabelAddress.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAddress.Name = "LabelAddress"
-        Me.LabelAddress.Size = New System.Drawing.Size(58, 16)
+        Me.LabelAddress.Size = New System.Drawing.Size(45, 13)
         Me.LabelAddress.TabIndex = 53
         Me.LabelAddress.Text = "Address"
         '
@@ -143,7 +143,7 @@ Partial Class Banking_Profile
         Me.LabelName.Location = New System.Drawing.Point(17, 26)
         Me.LabelName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelName.Name = "LabelName"
-        Me.LabelName.Size = New System.Drawing.Size(121, 25)
+        Me.LabelName.Size = New System.Drawing.Size(99, 20)
         Me.LabelName.TabIndex = 44
         Me.LabelName.Text = "LabelName"
         '
@@ -173,7 +173,7 @@ Partial Class Banking_Profile
         Me.TextBoxCIBILScore.Location = New System.Drawing.Point(216, 137)
         Me.TextBoxCIBILScore.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxCIBILScore.Name = "TextBoxCIBILScore"
-        Me.TextBoxCIBILScore.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxCIBILScore.Size = New System.Drawing.Size(217, 13)
         Me.TextBoxCIBILScore.TabIndex = 57
         Me.TextBoxCIBILScore.Text = "TextBox3"
         '
@@ -184,7 +184,7 @@ Partial Class Banking_Profile
         Me.TextBoxBalence.Location = New System.Drawing.Point(216, 98)
         Me.TextBoxBalence.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxBalence.Name = "TextBoxBalence"
-        Me.TextBoxBalence.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxBalence.Size = New System.Drawing.Size(217, 13)
         Me.TextBoxBalence.TabIndex = 56
         Me.TextBoxBalence.Text = "TextBox2"
         '
@@ -195,7 +195,7 @@ Partial Class Banking_Profile
         Me.TextBoxAccountNumber.Location = New System.Drawing.Point(216, 52)
         Me.TextBoxAccountNumber.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxAccountNumber.Name = "TextBoxAccountNumber"
-        Me.TextBoxAccountNumber.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxAccountNumber.Size = New System.Drawing.Size(217, 13)
         Me.TextBoxAccountNumber.TabIndex = 55
         Me.TextBoxAccountNumber.Text = "TextBox1"
         '
@@ -206,7 +206,7 @@ Partial Class Banking_Profile
         Me.TextBoxUsername.Location = New System.Drawing.Point(216, 18)
         Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(217, 15)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(217, 13)
         Me.TextBoxUsername.TabIndex = 54
         Me.TextBoxUsername.Text = "TextBox0"
         '
@@ -217,7 +217,7 @@ Partial Class Banking_Profile
         Me.CheckBox1.Location = New System.Drawing.Point(368, 175)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(58, 20)
+        Me.CheckBox1.Size = New System.Drawing.Size(49, 17)
         Me.CheckBox1.TabIndex = 53
         Me.CheckBox1.Text = "HIde"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -229,7 +229,7 @@ Partial Class Banking_Profile
         Me.Label5.Location = New System.Drawing.Point(25, 58)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(117, 20)
+        Me.Label5.Size = New System.Drawing.Size(94, 16)
         Me.Label5.TabIndex = 51
         Me.Label5.Text = "Account No.:"
         '
@@ -240,7 +240,7 @@ Partial Class Banking_Profile
         Me.Label7.Location = New System.Drawing.Point(25, 98)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 20)
+        Me.Label7.Size = New System.Drawing.Size(72, 16)
         Me.Label7.TabIndex = 45
         Me.Label7.Text = "Balance :"
         '
@@ -251,7 +251,7 @@ Partial Class Banking_Profile
         Me.Label6.Location = New System.Drawing.Point(25, 22)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 20)
+        Me.Label6.Size = New System.Drawing.Size(86, 16)
         Me.Label6.TabIndex = 46
         Me.Label6.Text = "Username :"
         '
@@ -262,7 +262,7 @@ Partial Class Banking_Profile
         Me.Label8.Location = New System.Drawing.Point(25, 137)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(135, 20)
+        Me.Label8.Size = New System.Drawing.Size(104, 16)
         Me.Label8.TabIndex = 48
         Me.Label8.Text = "CIBIL Score :  "
         '
@@ -273,7 +273,7 @@ Partial Class Banking_Profile
         Me.Label1.Location = New System.Drawing.Point(169, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(412, 36)
+        Me.Label1.Size = New System.Drawing.Size(336, 29)
         Me.Label1.TabIndex = 64
         Me.Label1.Text = "WELCOME TO  CITY BANK"
         '
@@ -293,7 +293,7 @@ Partial Class Banking_Profile
         Me.Label14.Location = New System.Drawing.Point(397, 25)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(0, 16)
+        Me.Label14.Size = New System.Drawing.Size(0, 13)
         Me.Label14.TabIndex = 62
         '
         'Banking_Profile

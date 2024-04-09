@@ -7,7 +7,15 @@ Public Class Banking_Profile
     Public password As String = "Aasneh18"
     Public database As String = "bankingdatabase"
 
+
+
     Public bank_username As String = "samuel"
+
+
+    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    ' Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+    ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -17,9 +25,6 @@ Public Class Banking_Profile
         ' connection to database
         MessageBox.Show(bank_username)
 
-        Dim connString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        'im connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-        ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
         Dim conn = New MySqlConnection(connString)
 
         Try
@@ -34,19 +39,19 @@ Public Class Banking_Profile
             Dim rowCount = sqlDt.Rows.Count
             Dim columnCount = sqlDt.Columns.Count
 
-            Dim imageBytes = DirectCast(sqlDt.Rows(0)(11), Byte())
+            Dim imageBytes = DirectCast(sqlDt.Rows(0)("Profile_Image"), Byte())
             Dim ms As New MemoryStream(imageBytes)
             Dim image As Image = Image.FromStream(ms)
             PictureBox1.Image = image
             DataGridView1.DataSource = sqlDt
 
-            TextBoxBalence.Text = sqlDt.Rows(0)(9).ToString()
-            TextBoxAccountNumber.Text = sqlDt.Rows(0)(0).ToString()
-            TextBoxCIBILScore.Text = sqlDt.Rows(0)(10).ToString()
-            TextBoxUsername.Text = sqlDt.Rows(0)(5).ToString()
+            TextBoxBalence.Text = sqlDt.Rows(0)("Balance").ToString()
+            TextBoxAccountNumber.Text = sqlDt.Rows(0)("Bank_Account_Number").ToString()
+            TextBoxCIBILScore.Text = sqlDt.Rows(0)("CIBIL_Score").ToString()
+            TextBoxUsername.Text = sqlDt.Rows(0)("Username").ToString()
 
-            LabelName.Text = sqlDt.Rows(0)(2).ToString()
-            LabelAddress.Text = sqlDt.Rows(0)(3).ToString()
+            LabelName.Text = sqlDt.Rows(0)("Name").ToString()
+            LabelAddress.Text = sqlDt.Rows(0)("Address").ToString()
             sqlDt.Clear()
             reader.Close()
 
@@ -92,6 +97,5 @@ Public Class Banking_Profile
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
-
 
 End Class

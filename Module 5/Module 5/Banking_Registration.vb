@@ -4,6 +4,13 @@ Imports MySql.Data.MySqlClient
 
 Public Class Banking_Registration
 
+    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+
+    Dim PhotoPath As String
+    Dim SignPath As String
+
+
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
@@ -14,8 +21,7 @@ Public Class Banking_Registration
         childform.Show()
     End Sub
 
-    Dim PhotoPath As String
-    Dim SignPath As String
+
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
@@ -95,9 +101,9 @@ Public Class Banking_Registration
         ElseIf DOB = "" Then
             MessageBox.Show("Date of Birth Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
-            'ElseIf Password!= ConfermPassword Then
-            '   MessageBox.Show("Password mismatch Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            'Return
+        ElseIf Password <> ConfermPassword Then
+            MessageBox.Show("Password mismatch Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
         End If
 
         If PhotoPath IsNot Nothing Then
@@ -114,11 +120,6 @@ Public Class Banking_Registration
             Return
         End If
 
-
-        ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
-
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
@@ -126,25 +127,16 @@ Public Class Banking_Registration
             conn.Open()
             'MessageBox.Show("Connected to MySQL database!")
 
-            Dim query As String = "INSERT INTO `BankUsers` (`Name`, `Email`, `Phone`, `Identification_number`, `Username`, `Password`, `Date_of_Birth`, `Address`,`photo`, `Sign`,`Approved`) VALUES ('" & Name & "', '" & Email & "', '" & Phone & "', '" & IdentificationNumber & "', '" & Username & "', '" & Password & "', '" & DOB & "', '" & Address & "', ?photo, ?sign,0)"
-            'Dim query As String = "SELECT * FROM BankUsers"
-
             Dim query2 As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
             Dim cmd As MySqlCommand = New MySqlCommand(query2, conn)
             'Dim reader As MySqlDataReader = cmd.ExecuteReader()
             'reader.Close()
 
-            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob)
-            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob)
-            'cmd.Parameters.Add("?Sign", MySqlDbType.LongBlob)
             cmd.Parameters.Add("?photo", MySqlDbType.MediumBlob).Value = PhotoBytes
             cmd.Parameters.Add("?sign", MySqlDbType.MediumBlob).Value = SignBytes
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("You have sucessfully registered.")
-            'cmd.Parameters.Add("?photo", MySqlDbType.LongBlob).Value = PhotoBytes
-            'cmd.Parameters.Add("?sign", MySqlDbType.LongBlob).Value = SignBytes
-            'cmd.ExecuteNonQuery()
 
         Catch ex As Exception
             MessageBox.Show("Error: {0}", ex.Message)
@@ -318,5 +310,41 @@ Public Class Banking_Registration
     Private Sub Label12_Click_1(sender As Object, e As EventArgs)
     End Sub
 
+    Private Sub TextBoxUsername_TextChanged(sender As Object, e As EventArgs) Handles TextBoxUsername.TextChanged
+        ' connection to database
+        Dim Username As String = TextBoxUsername.Text.Trim()
+        Label15.Text = ""
 
+        Dim conn As MySqlConnection = New MySqlConnection(connString)
+
+        Try
+            ' Open connection
+            conn.Open()
+            ' MessageBox.Show("Connected to MySQL database!")
+
+            Dim query = "SELECT * FROM `UserData` WHERE username = '" & Username & "'"
+            Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            Dim sqlDt As New DataTable
+            sqlDt.Clear()
+            sqlDt.Load(reader)
+            reader.Close()
+            Dim rowCount = sqlDt.Rows.Count
+
+            If rowCount > 0 Then
+                Label15.ForeColor = Color.Red
+                Label15.Text = "Username Already exist"
+            Else
+                Label15.ForeColor = Color.Green
+                Label15.Text = "Username Available"
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error: {0}", ex.Message)
+        Finally
+            conn.Close()
+            'MessageBox.Show("Connection closed.")
+        End Try
+    End Sub
 End Class

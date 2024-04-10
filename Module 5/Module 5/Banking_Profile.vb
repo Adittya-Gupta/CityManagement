@@ -16,14 +16,22 @@ Public Class Banking_Profile
     ' Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
     ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
-    Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
     End Sub
 
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' connection to database
-        MessageBox.Show(bank_username)
+        ' MessageBox.Show(bank_username)
 
         Dim conn = New MySqlConnection(connString)
 
@@ -98,4 +106,11 @@ Public Class Banking_Profile
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ChildForm(Banking_Main.Panel1, Banking_Card_Management)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'ChildForm(Banking_Main.Panel1, Banking_Loan_Management)
+    End Sub
 End Class

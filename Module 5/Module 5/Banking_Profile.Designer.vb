@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Banking_Profile
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Banking_Profile
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -44,6 +44,8 @@ Partial Class Banking_Profile
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -55,7 +57,7 @@ Partial Class Banking_Profile
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(0, 470)
+        Me.Label9.Location = New System.Drawing.Point(16, 470)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(150, 13)
@@ -65,17 +67,18 @@ Partial Class Banking_Profile
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 490)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 490)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(771, 138)
+        Me.DataGridView1.Size = New System.Drawing.Size(1081, 138)
         Me.DataGridView1.TabIndex = 69
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.Button2)
         Me.Panel7.Controls.Add(Me.Label3)
         Me.Panel7.Location = New System.Drawing.Point(727, 284)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
@@ -98,6 +101,7 @@ Partial Class Banking_Profile
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.Button1)
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Location = New System.Drawing.Point(727, 32)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
@@ -270,7 +274,7 @@ Partial Class Banking_Profile
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 0)
+        Me.Label1.Location = New System.Drawing.Point(169, 12)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(336, 29)
@@ -295,6 +299,26 @@ Partial Class Banking_Profile
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(0, 13)
         Me.Label14.TabIndex = 62
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(121, 146)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(126, 34)
+        Me.Button1.TabIndex = 55
+        Me.Button1.Text = "View Cards"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.Location = New System.Drawing.Point(121, 144)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(126, 34)
+        Me.Button2.TabIndex = 56
+        Me.Button2.Text = "View Lonas"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Banking_Profile
         '
@@ -352,4 +376,6 @@ Partial Class Banking_Profile
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

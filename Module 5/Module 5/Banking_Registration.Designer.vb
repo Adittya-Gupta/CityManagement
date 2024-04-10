@@ -233,7 +233,6 @@ Partial Class Banking_Registration
         Me.TextBoxpassword.Size = New System.Drawing.Size(228, 21)
         Me.TextBoxpassword.TabIndex = 46
         Me.TextBoxpassword.UseSystemPasswordChar = True
-        Me.TextBoxpassword.UseWaitCursor = True
         '
         'Label7
         '

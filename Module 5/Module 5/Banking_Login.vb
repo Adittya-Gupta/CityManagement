@@ -45,9 +45,6 @@ Public Class Banking_Login
 
             'DataGridView1.DataSource = sqlDt
 
-
-
-
             If rowCount = 0 Then
                 MessageBox.Show("You have not registered yet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 reader.Close()
@@ -61,21 +58,26 @@ Public Class Banking_Login
                 conn.Close() ' Close the connection after using it
                 Return
             Else
-                If sqlDt.Rows(0)(6).ToString() = Password.ToString() Then
-                    'Form51.ReceivedEmail = enteredEmail
-                    Banking_Profile.bank_username = Username
-                    Banking_Main.bank_username = Username
-                    MessageBox.Show(Username)
-                    'Me.Hide()
-                    'Profile.Show()
-                    ChildForm(Banking_Main.Panel1, Banking_Profile)
+                If sqlDt.Rows(0)("Password").ToString() = Password.ToString() Then
+
+                    If sqlDt.Rows(0)("Approved").ToString() = "0" Then
+                        MessageBox.Show("Your Application is under review")
+                    Else
+                        'Form51.ReceivedEmail = enteredEmail
+                        Banking_Profile.bank_username = Username
+                        Banking_Main.bank_username = Username
+                        'MessageBox.Show(Username)
+                        'Me.Hide()
+                        'Profile.Show()
+                        ChildForm(Banking_Main.Panel1, Banking_Profile)
 
 
-                    'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())
-                    'Dim ms As New System.IO.MemoryStream(imageBytes)
-                    'Dim image As Image = Image.FromStream(ms)
-                    'PictureBox1.Image = image
-                    'DataGridView1.DataSource = sqlDt
+                        'Dim imageBytes As Byte() = DirectCast(sqlDt.Rows(0)(9), Byte())
+                        'Dim ms As New System.IO.MemoryStream(imageBytes)
+                        'Dim image As Image = Image.FromStream(ms)
+                        'PictureBox1.Image = image
+                        'DataGridView1.DataSource = sqlDt
+                    End If
                 Else
                     MessageBox.Show("Invalid Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If

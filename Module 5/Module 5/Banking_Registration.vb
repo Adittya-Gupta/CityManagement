@@ -1,11 +1,10 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
 
-
 Public Class Banking_Registration
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-    ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    ' Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
 
     Dim PhotoPath As String
     Dim SignPath As String
@@ -47,6 +46,8 @@ Public Class Banking_Registration
         End If
     End Sub
 
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonSign.Click
         ' Show the OpenFileDialog
         Dim openFileDialog As New OpenFileDialog()
@@ -66,11 +67,13 @@ Public Class Banking_Registration
         Dim Email As String = TextBoxEmail.Text.Trim()
         Dim Phone As String = TextBoxPhone.Text.Trim()
         Dim IdentificationNumber As String = TextBoxIndentificationNumber.Text.Trim()
-        Dim Gender As String = TextBoxGender.Text.Trim()
+        Dim Gender As String = ComboBox1.SelectedItem.ToString()
         Dim Username As String = TextBoxUsername.Text.Trim()
         Dim Password As String = TextBoxpassword.Text.Trim()
         Dim ConfermPassword As String = TextBoxConfermPassword.Text.Trim()
-        Dim DOB As String = TextBoxDOB.Text.Trim()
+        'Dim DOB As String = TextBoxDOB.Text.Trim()
+        Dim Datentime As Date = DateTimePicker1.Value
+        Dim DOB As String = Datentime.Date.ToString("yyyy-MM-dd")
         Dim Address As String = TextBoxAddress.Text.Trim()
 
 
@@ -98,9 +101,6 @@ Public Class Banking_Registration
         ElseIf Password = "" Then
             MessageBox.Show("Password Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
-        ElseIf DOB = "" Then
-            MessageBox.Show("Date of Birth Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
         ElseIf Password <> ConfermPassword Then
             MessageBox.Show("Password mismatch Can't be Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
@@ -120,6 +120,17 @@ Public Class Banking_Registration
             Return
         End If
 
+        If IsValidNumber(Phone) = False Then
+            MessageBox.Show("invalid Phone number ")
+            Return
+        End If
+
+        If IsValidNumber(IdentificationNumber) = False Then
+            MessageBox.Show("invalid Identification Number")
+            Return
+        End If
+
+
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try
@@ -137,12 +148,12 @@ Public Class Banking_Registration
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("You have sucessfully registered.")
+            ChildForm(Banking_Main.Panel1, Banking_Homepage)
 
         Catch ex As Exception
             MessageBox.Show("Error: {0}", ex.Message)
         Finally
             conn.Close()
-            ChildForm(Banking_Main.Panel1, Banking_Homepage)
             'MessageBox.Show("Connection closed.")
         End Try
 
@@ -193,6 +204,27 @@ Public Class Banking_Registration
             'Console.WriteLine("Weak")
         End If
     End Sub
+
+    Function IsValidNumber(phoneNumber As String) As Boolean
+        ' Check if the phone number has a length of 10
+        If Len(phoneNumber) <> 10 Then
+            IsValidNumber = False
+            Exit Function
+        End If
+
+        ' Check if all characters in the phone number are digits
+        Dim i As Integer
+        For i = 1 To Len(phoneNumber)
+            If Not IsNumeric(Mid(phoneNumber, i, 1)) Then
+                IsValidNumber = False
+                Exit Function
+            End If
+        Next i
+
+        ' If all conditions are met, the phone number is valid
+        IsValidNumber = True
+    End Function
+
 
     Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxConfermPassword.TextChanged
         If TextBoxConfermPassword.Text = TextBoxpassword.Text Then
@@ -347,4 +379,5 @@ Public Class Banking_Registration
             'MessageBox.Show("Connection closed.")
         End Try
     End Sub
+
 End Class

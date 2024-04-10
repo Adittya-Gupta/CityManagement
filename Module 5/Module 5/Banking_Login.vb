@@ -7,6 +7,12 @@ Public Class Banking_Login
     Public username As String = "root"
     Public password As String = "Aasneh18"
     Public database As String = "bankingdatabase"
+
+    ' connection to database
+    'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
+
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
@@ -22,9 +28,7 @@ Public Class Banking_Login
         Dim Username As String = TextBoxUsername.Text.Trim()
         Dim Password As String = TextBoxpassword.Text.Trim()
 
-        ' connection to database
-        Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-        'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+
         Dim conn As MySqlConnection = New MySqlConnection(connString)
 
         Try

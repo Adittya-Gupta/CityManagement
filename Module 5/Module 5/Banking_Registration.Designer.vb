@@ -39,11 +39,9 @@ Partial Class Banking_Registration
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBoxpassword = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBoxDOB = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxGender = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxIndentificationNumber = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -54,6 +52,7 @@ Partial Class Banking_Registration
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBoxSign, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,7 +62,7 @@ Partial Class Banking_Registration
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox1.Location = New System.Drawing.Point(609, 241)
+        Me.CheckBox1.Location = New System.Drawing.Point(605, 241)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
@@ -74,7 +73,7 @@ Partial Class Banking_Registration
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(812, 257)
+        Me.Label14.Location = New System.Drawing.Point(811, 245)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(0, 13)
@@ -83,7 +82,7 @@ Partial Class Banking_Registration
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(471, 235)
+        Me.Label13.Location = New System.Drawing.Point(467, 235)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(0, 13)
@@ -141,7 +140,7 @@ Partial Class Banking_Registration
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(928, 500)
+        Me.Label12.Location = New System.Drawing.Point(940, 500)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(37, 15)
@@ -151,7 +150,7 @@ Partial Class Banking_Registration
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(781, 500)
+        Me.Label11.Location = New System.Drawing.Point(738, 500)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(139, 13)
@@ -162,7 +161,7 @@ Partial Class Banking_Registration
         '
         Me.ButtonRegister.BackColor = System.Drawing.SystemColors.Highlight
         Me.ButtonRegister.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonRegister.Location = New System.Drawing.Point(777, 452)
+        Me.ButtonRegister.Location = New System.Drawing.Point(734, 452)
         Me.ButtonRegister.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonRegister.Name = "ButtonRegister"
         Me.ButtonRegister.Size = New System.Drawing.Size(227, 36)
@@ -174,7 +173,7 @@ Partial Class Banking_Registration
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(809, 190)
+        Me.Label10.Location = New System.Drawing.Point(808, 178)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(153, 20)
@@ -185,7 +184,7 @@ Partial Class Banking_Registration
         '
         Me.TextBoxConfermPassword.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxConfermPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxConfermPassword.Location = New System.Drawing.Point(809, 215)
+        Me.TextBoxConfermPassword.Location = New System.Drawing.Point(808, 203)
         Me.TextBoxConfermPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxConfermPassword.Name = "TextBoxConfermPassword"
         Me.TextBoxConfermPassword.Size = New System.Drawing.Size(228, 21)
@@ -196,7 +195,7 @@ Partial Class Banking_Registration
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(72, 177)
+        Me.Label9.Location = New System.Drawing.Point(72, 178)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(91, 20)
@@ -207,7 +206,7 @@ Partial Class Banking_Registration
         '
         Me.TextBoxUsername.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUsername.Location = New System.Drawing.Point(72, 201)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(72, 202)
         Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(228, 21)
@@ -217,7 +216,7 @@ Partial Class Banking_Registration
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(447, 174)
+        Me.Label8.Location = New System.Drawing.Point(443, 174)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 20)
@@ -228,7 +227,7 @@ Partial Class Banking_Registration
         '
         Me.TextBoxpassword.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpassword.Location = New System.Drawing.Point(451, 203)
+        Me.TextBoxpassword.Location = New System.Drawing.Point(447, 203)
         Me.TextBoxpassword.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxpassword.Name = "TextBoxpassword"
         Me.TextBoxpassword.Size = New System.Drawing.Size(228, 21)
@@ -246,16 +245,6 @@ Partial Class Banking_Registration
         Me.Label7.Size = New System.Drawing.Size(115, 20)
         Me.Label7.TabIndex = 45
         Me.Label7.Text = "Date Of Birth"
-        '
-        'TextBoxDOB
-        '
-        Me.TextBoxDOB.BackColor = System.Drawing.SystemColors.Info
-        Me.TextBoxDOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxDOB.Location = New System.Drawing.Point(72, 295)
-        Me.TextBoxDOB.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBoxDOB.Name = "TextBoxDOB"
-        Me.TextBoxDOB.Size = New System.Drawing.Size(228, 21)
-        Me.TextBoxDOB.TabIndex = 44
         '
         'Label6
         '
@@ -283,28 +272,18 @@ Partial Class Banking_Registration
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(809, 120)
+        Me.Label5.Location = New System.Drawing.Point(808, 108)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 20)
         Me.Label5.TabIndex = 41
         Me.Label5.Text = "Gender"
         '
-        'TextBoxGender
-        '
-        Me.TextBoxGender.BackColor = System.Drawing.SystemColors.Info
-        Me.TextBoxGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxGender.Location = New System.Drawing.Point(809, 145)
-        Me.TextBoxGender.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBoxGender.Name = "TextBoxGender"
-        Me.TextBoxGender.Size = New System.Drawing.Size(228, 21)
-        Me.TextBoxGender.TabIndex = 40
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(451, 108)
+        Me.Label4.Location = New System.Drawing.Point(447, 108)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(181, 20)
@@ -315,7 +294,7 @@ Partial Class Banking_Registration
         '
         Me.TextBoxIndentificationNumber.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxIndentificationNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxIndentificationNumber.Location = New System.Drawing.Point(451, 132)
+        Me.TextBoxIndentificationNumber.Location = New System.Drawing.Point(447, 132)
         Me.TextBoxIndentificationNumber.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxIndentificationNumber.Name = "TextBoxIndentificationNumber"
         Me.TextBoxIndentificationNumber.Size = New System.Drawing.Size(236, 21)
@@ -325,7 +304,7 @@ Partial Class Banking_Registration
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(72, 107)
+        Me.Label3.Location = New System.Drawing.Point(72, 108)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 20)
@@ -336,7 +315,7 @@ Partial Class Banking_Registration
         '
         Me.TextBoxPhone.BackColor = System.Drawing.SystemColors.Info
         Me.TextBoxPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxPhone.Location = New System.Drawing.Point(72, 131)
+        Me.TextBoxPhone.Location = New System.Drawing.Point(72, 132)
         Me.TextBoxPhone.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxPhone.Name = "TextBoxPhone"
         Me.TextBoxPhone.Size = New System.Drawing.Size(228, 21)
@@ -394,10 +373,21 @@ Partial Class Banking_Registration
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(72, 323)
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(72, 299)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(228, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(115, 20)
         Me.DateTimePicker1.TabIndex = 63
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.SystemColors.Info
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Others"})
+        Me.ComboBox1.Location = New System.Drawing.Point(808, 131)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(228, 21)
+        Me.ComboBox1.TabIndex = 64
         '
         'Banking_Registration
         '
@@ -405,6 +395,7 @@ Partial Class Banking_Registration
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.CheckBox1)
@@ -424,11 +415,9 @@ Partial Class Banking_Registration
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBoxpassword)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBoxDOB)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBoxAddress)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBoxGender)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBoxIndentificationNumber)
         Me.Controls.Add(Me.Label3)
@@ -465,11 +454,9 @@ Partial Class Banking_Registration
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBoxpassword As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBoxDOB As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBoxAddress As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBoxGender As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxIndentificationNumber As TextBox
     Friend WithEvents Label3 As Label
@@ -480,4 +467,5 @@ Partial Class Banking_Registration
     Friend WithEvents TextBoxName As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

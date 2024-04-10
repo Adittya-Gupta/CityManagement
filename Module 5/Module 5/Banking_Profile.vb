@@ -12,10 +12,10 @@ Public Class Banking_Profile
     Public bank_username As String = "samuel"
 
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
     ' Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
     ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
-
+    Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs)
 
     End Sub

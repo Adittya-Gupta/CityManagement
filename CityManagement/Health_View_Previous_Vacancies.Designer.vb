@@ -27,8 +27,6 @@ Partial Class Health_View_Previous_Vacancies
         Label7 = New Label()
         Label1 = New Label()
         Label2 = New Label()
-        Label3 = New Label()
-        PictureBox1 = New PictureBox()
         TableLayoutPanel2 = New TableLayoutPanel()
         TextBox13 = New TextBox()
         TextBox7 = New TextBox()
@@ -38,19 +36,18 @@ Partial Class Health_View_Previous_Vacancies
         TextBox2 = New TextBox()
         TextBox3 = New TextBox()
         TextBox4 = New TextBox()
-        Button1 = New Button()
         TextBox9 = New TextBox()
         TextBox5 = New TextBox()
         TextBox6 = New TextBox()
         TextBox11 = New TextBox()
         TextBox12 = New TextBox()
-        Button2 = New Button()
         TextBox14 = New TextBox()
         TextBox15 = New TextBox()
         TextBox16 = New TextBox()
+        Button1 = New Button()
+        Button2 = New Button()
         Button3 = New Button()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
         SuspendLayout()
         ' 
@@ -105,33 +102,14 @@ Partial Class Health_View_Previous_Vacancies
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ActiveCaptionText
+        Label2.Font = New Font("Segoe UI", 10F)
+        Label2.ForeColor = SystemColors.ControlLightLight
         Label2.Location = New Point(10, 69)
         Label2.Name = "Label2"
-        Label2.Size = New Size(77, 15)
+        Label2.Size = New Size(142, 19)
         Label2.TabIndex = 1
-        Label2.Text = "Work Section"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label3.Location = New Point(101, 69)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(142, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "View Previous Vacancies"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Image = My.Resources.Resources.arrow_icons
-        PictureBox1.Location = New Point(82, 73)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(13, 11)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 24
-        PictureBox1.TabStop = False
+        Label2.Text = "Health Record Tracker"
         ' 
         ' TableLayoutPanel2
         ' 
@@ -139,9 +117,9 @@ Partial Class Health_View_Previous_Vacancies
         TableLayoutPanel2.ColumnCount = 5
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 46.8531456F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 53.1468544F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 202F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 223F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 115F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 183F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 226F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 147F))
         TableLayoutPanel2.Controls.Add(TextBox13, 0, 3)
         TableLayoutPanel2.Controls.Add(TextBox7, 0, 0)
         TableLayoutPanel2.Controls.Add(TextBox8, 1, 0)
@@ -150,16 +128,16 @@ Partial Class Health_View_Previous_Vacancies
         TableLayoutPanel2.Controls.Add(TextBox2, 1, 1)
         TableLayoutPanel2.Controls.Add(TextBox3, 2, 1)
         TableLayoutPanel2.Controls.Add(TextBox4, 3, 1)
-        TableLayoutPanel2.Controls.Add(Button1, 4, 1)
         TableLayoutPanel2.Controls.Add(TextBox9, 2, 0)
         TableLayoutPanel2.Controls.Add(TextBox5, 0, 2)
         TableLayoutPanel2.Controls.Add(TextBox6, 1, 2)
         TableLayoutPanel2.Controls.Add(TextBox11, 2, 2)
         TableLayoutPanel2.Controls.Add(TextBox12, 3, 2)
-        TableLayoutPanel2.Controls.Add(Button2, 4, 2)
         TableLayoutPanel2.Controls.Add(TextBox14, 1, 3)
         TableLayoutPanel2.Controls.Add(TextBox15, 2, 3)
         TableLayoutPanel2.Controls.Add(TextBox16, 3, 3)
+        TableLayoutPanel2.Controls.Add(Button1, 4, 1)
+        TableLayoutPanel2.Controls.Add(Button2, 4, 2)
         TableLayoutPanel2.Controls.Add(Button3, 4, 3)
         TableLayoutPanel2.Location = New Point(12, 109)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -168,7 +146,7 @@ Partial Class Health_View_Previous_Vacancies
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 68F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 181F))
-        TableLayoutPanel2.Size = New Size(841, 365)
+        TableLayoutPanel2.Size = New Size(830, 365)
         TableLayoutPanel2.TabIndex = 11
         ' 
         ' TextBox13
@@ -180,7 +158,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox13.Margin = New Padding(3, 2, 3, 2)
         TextBox13.Multiline = True
         TextBox13.Name = "TextBox13"
-        TextBox13.Size = New Size(135, 64)
+        TextBox13.Size = New Size(122, 64)
         TextBox13.TabIndex = 28
         TextBox13.Text = "12021"
         TextBox13.TextAlign = HorizontalAlignment.Center
@@ -194,7 +172,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox7.Margin = New Padding(3, 2, 3, 2)
         TextBox7.Multiline = True
         TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(135, 42)
+        TextBox7.Size = New Size(122, 42)
         TextBox7.TabIndex = 6
         TextBox7.Text = "Hospital ID"
         TextBox7.TextAlign = HorizontalAlignment.Center
@@ -204,11 +182,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox8.BackColor = SystemColors.Control
         TextBox8.BorderStyle = BorderStyle.None
         TextBox8.Font = New Font("Segoe UI", 13.5F)
-        TextBox8.Location = New Point(144, 2)
+        TextBox8.Location = New Point(131, 2)
         TextBox8.Margin = New Padding(3, 2, 3, 2)
         TextBox8.Multiline = True
         TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(153, 42)
+        TextBox8.Size = New Size(139, 42)
         TextBox8.TabIndex = 7
         TextBox8.Text = "Department"
         TextBox8.TextAlign = HorizontalAlignment.Center
@@ -218,7 +196,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox10.BackColor = SystemColors.Control
         TextBox10.BorderStyle = BorderStyle.None
         TextBox10.Font = New Font("Segoe UI", 13.5F)
-        TextBox10.Location = New Point(505, 2)
+        TextBox10.Location = New Point(459, 2)
         TextBox10.Margin = New Padding(3, 2, 3, 2)
         TextBox10.Multiline = True
         TextBox10.Name = "TextBox10"
@@ -236,7 +214,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox1.Margin = New Padding(3, 2, 3, 2)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(135, 64)
+        TextBox1.Size = New Size(122, 64)
         TextBox1.TabIndex = 19
         TextBox1.Text = "12021"
         TextBox1.TextAlign = HorizontalAlignment.Center
@@ -246,11 +224,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox2.BackColor = SystemColors.Control
         TextBox2.BorderStyle = BorderStyle.None
         TextBox2.Font = New Font("Segoe UI", 13.5F)
-        TextBox2.Location = New Point(144, 48)
+        TextBox2.Location = New Point(131, 48)
         TextBox2.Margin = New Padding(3, 2, 3, 2)
         TextBox2.Multiline = True
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(153, 52)
+        TextBox2.Size = New Size(139, 52)
         TextBox2.TabIndex = 20
         TextBox2.Text = "Cardiology"
         TextBox2.TextAlign = HorizontalAlignment.Center
@@ -260,11 +238,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox3.BackColor = SystemColors.Control
         TextBox3.BorderStyle = BorderStyle.None
         TextBox3.Font = New Font("Segoe UI", 13.5F)
-        TextBox3.Location = New Point(303, 48)
+        TextBox3.Location = New Point(276, 48)
         TextBox3.Margin = New Padding(3, 2, 3, 2)
         TextBox3.Multiline = True
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(196, 52)
+        TextBox3.Size = New Size(177, 52)
         TextBox3.TabIndex = 21
         TextBox3.Text = "2"
         TextBox3.TextAlign = HorizontalAlignment.Center
@@ -274,7 +252,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox4.BackColor = SystemColors.Control
         TextBox4.BorderStyle = BorderStyle.None
         TextBox4.Font = New Font("Segoe UI", 13.5F)
-        TextBox4.Location = New Point(505, 48)
+        TextBox4.Location = New Point(459, 48)
         TextBox4.Margin = New Padding(3, 2, 3, 2)
         TextBox4.Multiline = True
         TextBox4.Name = "TextBox4"
@@ -283,31 +261,16 @@ Partial Class Health_View_Previous_Vacancies
         TextBox4.Text = "Doctor with atleast 3 years of experience"
         TextBox4.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Button1.ForeColor = SystemColors.ControlLightLight
-        Button1.Location = New Point(728, 48)
-        Button1.Margin = New Padding(3, 2, 3, 2)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(110, 33)
-        Button1.TabIndex = 18
-        Button1.Text = "Delete"
-        Button1.UseVisualStyleBackColor = False
-        ' 
         ' TextBox9
         ' 
         TextBox9.BackColor = SystemColors.Control
         TextBox9.BorderStyle = BorderStyle.None
         TextBox9.Font = New Font("Segoe UI", 13.5F)
-        TextBox9.Location = New Point(303, 2)
+        TextBox9.Location = New Point(276, 2)
         TextBox9.Margin = New Padding(3, 2, 3, 2)
         TextBox9.Multiline = True
         TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(196, 42)
+        TextBox9.Size = New Size(177, 42)
         TextBox9.TabIndex = 8
         TextBox9.Text = "No. of Vacacnies"
         TextBox9.TextAlign = HorizontalAlignment.Center
@@ -321,7 +284,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox5.Margin = New Padding(3, 2, 3, 2)
         TextBox5.Multiline = True
         TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(135, 64)
+        TextBox5.Size = New Size(122, 64)
         TextBox5.TabIndex = 23
         TextBox5.Text = "12021"
         TextBox5.TextAlign = HorizontalAlignment.Center
@@ -331,11 +294,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox6.BackColor = SystemColors.Control
         TextBox6.BorderStyle = BorderStyle.None
         TextBox6.Font = New Font("Segoe UI", 13.5F)
-        TextBox6.Location = New Point(144, 117)
+        TextBox6.Location = New Point(131, 117)
         TextBox6.Margin = New Padding(3, 2, 3, 2)
         TextBox6.Multiline = True
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(153, 52)
+        TextBox6.Size = New Size(139, 52)
         TextBox6.TabIndex = 24
         TextBox6.Text = "Orthology"
         TextBox6.TextAlign = HorizontalAlignment.Center
@@ -345,11 +308,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox11.BackColor = SystemColors.Control
         TextBox11.BorderStyle = BorderStyle.None
         TextBox11.Font = New Font("Segoe UI", 13.5F)
-        TextBox11.Location = New Point(303, 117)
+        TextBox11.Location = New Point(276, 117)
         TextBox11.Margin = New Padding(3, 2, 3, 2)
         TextBox11.Multiline = True
         TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(196, 52)
+        TextBox11.Size = New Size(177, 52)
         TextBox11.TabIndex = 25
         TextBox11.Text = "2"
         TextBox11.TextAlign = HorizontalAlignment.Center
@@ -359,7 +322,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox12.BackColor = SystemColors.Control
         TextBox12.BorderStyle = BorderStyle.None
         TextBox12.Font = New Font("Segoe UI", 13.5F)
-        TextBox12.Location = New Point(505, 117)
+        TextBox12.Location = New Point(459, 117)
         TextBox12.Margin = New Padding(3, 2, 3, 2)
         TextBox12.Multiline = True
         TextBox12.Name = "TextBox12"
@@ -368,31 +331,16 @@ Partial Class Health_View_Previous_Vacancies
         TextBox12.Text = "Surgeon with atleast 5 years of experience"
         TextBox12.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button2.FlatAppearance.BorderSize = 0
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(728, 117)
-        Button2.Margin = New Padding(3, 2, 3, 2)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(110, 33)
-        Button2.TabIndex = 27
-        Button2.Text = "Delete"
-        Button2.UseVisualStyleBackColor = False
-        ' 
         ' TextBox14
         ' 
         TextBox14.BackColor = SystemColors.Control
         TextBox14.BorderStyle = BorderStyle.None
         TextBox14.Font = New Font("Segoe UI", 13.5F)
-        TextBox14.Location = New Point(144, 185)
+        TextBox14.Location = New Point(131, 185)
         TextBox14.Margin = New Padding(3, 2, 3, 2)
         TextBox14.Multiline = True
         TextBox14.Name = "TextBox14"
-        TextBox14.Size = New Size(153, 52)
+        TextBox14.Size = New Size(139, 52)
         TextBox14.TabIndex = 29
         TextBox14.Text = "Opthamology"
         TextBox14.TextAlign = HorizontalAlignment.Center
@@ -402,11 +350,11 @@ Partial Class Health_View_Previous_Vacancies
         TextBox15.BackColor = SystemColors.Control
         TextBox15.BorderStyle = BorderStyle.None
         TextBox15.Font = New Font("Segoe UI", 13.5F)
-        TextBox15.Location = New Point(303, 185)
+        TextBox15.Location = New Point(276, 185)
         TextBox15.Margin = New Padding(3, 2, 3, 2)
         TextBox15.Multiline = True
         TextBox15.Name = "TextBox15"
-        TextBox15.Size = New Size(196, 52)
+        TextBox15.Size = New Size(177, 52)
         TextBox15.TabIndex = 30
         TextBox15.Text = "1"
         TextBox15.TextAlign = HorizontalAlignment.Center
@@ -416,7 +364,7 @@ Partial Class Health_View_Previous_Vacancies
         TextBox16.BackColor = SystemColors.Control
         TextBox16.BorderStyle = BorderStyle.None
         TextBox16.Font = New Font("Segoe UI", 13.5F)
-        TextBox16.Location = New Point(505, 185)
+        TextBox16.Location = New Point(459, 185)
         TextBox16.Margin = New Padding(3, 2, 3, 2)
         TextBox16.Multiline = True
         TextBox16.Name = "TextBox16"
@@ -425,6 +373,36 @@ Partial Class Health_View_Previous_Vacancies
         TextBox16.Text = "Surgeon with atleast 3 years of experience"
         TextBox16.TextAlign = HorizontalAlignment.Center
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button1.ForeColor = SystemColors.ControlLightLight
+        Button1.Location = New Point(685, 48)
+        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(110, 33)
+        Button1.TabIndex = 18
+        Button1.Text = "Delete"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button2.ForeColor = SystemColors.ControlLightLight
+        Button2.Location = New Point(685, 117)
+        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(110, 33)
+        Button2.TabIndex = 27
+        Button2.Text = "Delete"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' Button3
         ' 
         Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -432,7 +410,7 @@ Partial Class Health_View_Previous_Vacancies
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button3.ForeColor = SystemColors.ControlLightLight
-        Button3.Location = New Point(728, 185)
+        Button3.Location = New Point(685, 185)
         Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
         Button3.Size = New Size(110, 33)
@@ -446,8 +424,6 @@ Partial Class Health_View_Previous_Vacancies
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1097, 690)
-        Controls.Add(PictureBox1)
-        Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Panel1)
         Controls.Add(TableLayoutPanel2)
@@ -457,7 +433,6 @@ Partial Class Health_View_Previous_Vacancies
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         ResumeLayout(False)
@@ -467,8 +442,6 @@ Partial Class Health_View_Previous_Vacancies
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel

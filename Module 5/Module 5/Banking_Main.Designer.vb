@@ -47,7 +47,7 @@ Partial Class Banking_Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Location = New System.Drawing.Point(117, 158)
+        Me.Panel1.Location = New System.Drawing.Point(2, 118)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1107, 641)
@@ -56,11 +56,11 @@ Partial Class Banking_Main
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 25.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(107, 25)
+        Me.Label1.Location = New System.Drawing.Point(69, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(340, 71)
+        Me.Label1.Size = New System.Drawing.Size(237, 49)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "CITY BANK"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -70,7 +70,7 @@ Partial Class Banking_Main
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bodoni MT", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(726, 69)
+        Me.Label2.Location = New System.Drawing.Point(723, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(379, 27)
         Me.Label2.TabIndex = 9
@@ -84,9 +84,9 @@ Partial Class Banking_Main
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PictureBox11)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(117, 3)
+        Me.Panel2.Location = New System.Drawing.Point(1, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1107, 98)
+        Me.Panel2.Size = New System.Drawing.Size(1107, 59)
         Me.Panel2.TabIndex = 12
         '
         'PictureBox11
@@ -95,7 +95,7 @@ Partial Class Banking_Main
         Me.PictureBox11.Image = Global.Module_5.My.Resources.Resources.Bank_Logo
         Me.PictureBox11.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(101, 97)
+        Me.PictureBox11.Size = New System.Drawing.Size(63, 58)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 8
         Me.PictureBox11.TabStop = False
@@ -111,7 +111,7 @@ Partial Class Banking_Main
         Me.Button12.Location = New System.Drawing.Point(411, 0)
         Me.Button12.Margin = New System.Windows.Forms.Padding(0)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(182, 53)
+        Me.Button12.Size = New System.Drawing.Size(182, 40)
         Me.Button12.TabIndex = 3
         Me.Button12.Text = "MONEY TRANSFER"
         Me.Button12.UseVisualStyleBackColor = False
@@ -127,7 +127,7 @@ Partial Class Banking_Main
         Me.Button13.Location = New System.Drawing.Point(623, 0)
         Me.Button13.Margin = New System.Windows.Forms.Padding(0)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(183, 53)
+        Me.Button13.Size = New System.Drawing.Size(183, 40)
         Me.Button13.TabIndex = 4
         Me.Button13.Text = "CREDIT/DEBIT CARD"
         Me.Button13.UseVisualStyleBackColor = False
@@ -143,7 +143,7 @@ Partial Class Banking_Main
         Me.Button10.Location = New System.Drawing.Point(9, 0)
         Me.Button10.Margin = New System.Windows.Forms.Padding(0)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(113, 53)
+        Me.Button10.Size = New System.Drawing.Size(113, 40)
         Me.Button10.TabIndex = 1
         Me.Button10.Text = "HOME"
         Me.Button10.UseVisualStyleBackColor = False
@@ -159,7 +159,7 @@ Partial Class Banking_Main
         Me.Button14.Location = New System.Drawing.Point(835, 0)
         Me.Button14.Margin = New System.Windows.Forms.Padding(0)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(118, 53)
+        Me.Button14.Size = New System.Drawing.Size(118, 40)
         Me.Button14.TabIndex = 5
         Me.Button14.Text = "PASSBOOK"
         Me.Button14.UseVisualStyleBackColor = False
@@ -175,7 +175,7 @@ Partial Class Banking_Main
         Me.Button11.Location = New System.Drawing.Point(276, 0)
         Me.Button11.Margin = New System.Windows.Forms.Padding(0)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(112, 53)
+        Me.Button11.Size = New System.Drawing.Size(112, 40)
         Me.Button11.TabIndex = 2
         Me.Button11.Text = "LOANS"
         Me.Button11.UseVisualStyleBackColor = False
@@ -191,7 +191,7 @@ Partial Class Banking_Main
         Me.Button15.Location = New System.Drawing.Point(980, 0)
         Me.Button15.Margin = New System.Windows.Forms.Padding(0)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(117, 53)
+        Me.Button15.Size = New System.Drawing.Size(117, 40)
         Me.Button15.TabIndex = 6
         Me.Button15.Text = "CONTACT US"
         Me.Button15.UseVisualStyleBackColor = False
@@ -207,7 +207,7 @@ Partial Class Banking_Main
         Me.Button16.Location = New System.Drawing.Point(141, 0)
         Me.Button16.Margin = New System.Windows.Forms.Padding(0)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(104, 53)
+        Me.Button16.Size = New System.Drawing.Size(104, 40)
         Me.Button16.TabIndex = 10
         Me.Button16.Text = "PROFILE"
         Me.Button16.UseVisualStyleBackColor = False
@@ -223,9 +223,9 @@ Partial Class Banking_Main
         Me.Panel3.Controls.Add(Me.Button12)
         Me.Panel3.Controls.Add(Me.Button16)
         Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Location = New System.Drawing.Point(117, 103)
+        Me.Panel3.Location = New System.Drawing.Point(2, 73)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1107, 54)
+        Me.Panel3.Size = New System.Drawing.Size(1106, 42)
         Me.Panel3.TabIndex = 13
         '
         'Banking_Main
@@ -233,7 +233,7 @@ Partial Class Banking_Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1224, 800)
+        Me.ClientSize = New System.Drawing.Size(1107, 760)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)

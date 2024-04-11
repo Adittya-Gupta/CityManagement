@@ -3,7 +3,7 @@
 Public Class Banking_Queries_User
 
     Public bank_account_no As String = "1"
-    Public bank_username As String = "admin"
+    Public bank_username As String = Global_Attributes.banking_username
 
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand

@@ -17,9 +17,9 @@
         For Each ctrl As Control In Banking_Main.Panel1.Controls
             If TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Homepage" Then
                 Return True
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Login" Then
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Login" Then
                 Return True
-            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Registration" Then
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Registration" Then
                 Return True
             End If
         Next
@@ -29,7 +29,7 @@
 
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.Size = New Size(1224, 800)
-        Me.Location = New Point(100, 0)
+        'Me.Location = New Point(100, 0)
         'Me.WindowState = FormWindowState.Maximized
         Panel2.BackColor = Color.FromArgb(1, 12, 40)
         Panel3.BackColor = Color.FromArgb(1, 0, 70)
@@ -40,6 +40,7 @@
         Button14.BackColor = Color.FromArgb(1, 0, 70)
         Button15.BackColor = Color.FromArgb(1, 0, 70)
         Button16.BackColor = Color.FromArgb(1, 0, 70)
+        Global_Attributes.banking_username = "samuel"
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)
 
@@ -86,18 +87,18 @@
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        'If NavBarCheck() Then
-        ' Return
-        ' End If
-        Banking_ContactUs.bank_username = bank_username
+        If NavBarCheck() Then
+            Return
+        End If
+        Banking_ContactUs.bank_username = Global_Attributes.banking_username
         ChildForm(Panel1, Banking_ContactUs)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        ' If NavBarCheck() Then
-        ' Return
-        ' End If
-        Banking_Passbook.bank_username = bank_username
+        If NavBarCheck() Then
+            Return
+        End If
+        Banking_Passbook.bank_username = Global_Attributes.banking_username
         ChildForm(Panel1, Banking_Passbook)
     End Sub
 
@@ -106,7 +107,7 @@
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Money_Management_Homepage.Show()
+
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
@@ -114,10 +115,7 @@
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        If NavBarCheck() Then
-            Return
-        End If
-        Banking_Homepage.bank_username = bank_username
+        Global_Attributes.banking_username = "none"
         ChildForm(Panel1, Banking_Homepage)
     End Sub
 
@@ -125,11 +123,15 @@
         If NavBarCheck() Then
             Return
         End If
-        Banking_Profile.bank_username = bank_username
+        Banking_Profile.bank_username = Global_Attributes.banking_username
         ChildForm(Panel1, Banking_Profile)
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
 
     End Sub
 End Class

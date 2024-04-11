@@ -13,6 +13,8 @@ Public Class Banking_ContactUs
         childform.Show()
     End Sub
 
+
+
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand
     Public sqlRd As MySqlDataReader
@@ -21,10 +23,10 @@ Public Class Banking_ContactUs
     Public SqlQuery As String
 
     ' Just change these to access local or online db
-    ' Public server As String = "localhost"
+    'Public server As String = "localhost"
     'Public username As String = "root"
     'Public password As String = "Aasneh18"
-    ' Public database As String = "bankingdatabase"
+    'Public database As String = "bankingdatabase"
 
     Public server As String = "172.16.114.244"
     Public username As String = "admin"
@@ -32,7 +34,7 @@ Public Class Banking_ContactUs
     Public database As String = "banking_database"
 
     Public bank_account_no As String = "1"
-    Public bank_username As String = "admin"
+    Public bank_username As String = Global_Attributes.banking_username
 
     Private Sub CalculateBankAccNo()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
@@ -165,8 +167,9 @@ Public Class Banking_ContactUs
     End Sub
 
     Private Sub Button17_Click_1(sender As Object, e As EventArgs) Handles Button17.Click
-        Banking_Queries_User.bank_username = bank_username
+        'Banking_Homepage.bank_username = bank_username
         ChildForm(Banking_Main.Panel1, Banking_Queries_User)
+        'ChildForm(Banking_Queries_User)
     End Sub
 
     Private Sub Button16_Click_1(sender As Object, e As EventArgs)

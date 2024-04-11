@@ -24,7 +24,7 @@ Public Class Banking_Passbook
     Public database As String = "banking_database"
 
     Public bank_account_no As String = "1"
-    Public bank_username As String = "admin"
+    Public bank_username As String = Global_Attributes.banking_username
 
     Private Sub ClearFields()
         Label16.Text = ""

@@ -9,9 +9,9 @@ Public Class Banking_Login
     Public database As String = "bankingdatabase"
 
     ' connection to database
-    'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
     'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
-    Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
+    'Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
@@ -66,6 +66,7 @@ Public Class Banking_Login
                         'Form51.ReceivedEmail = enteredEmail
                         Banking_Profile.bank_username = Username
                         Banking_Main.bank_username = Username
+                        Global_Attributes.banking_username = Username
                         'MessageBox.Show(Username)
                         'Me.Hide()
                         'Profile.Show()

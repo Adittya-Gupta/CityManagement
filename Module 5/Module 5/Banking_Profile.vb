@@ -12,10 +12,10 @@ Public Class Banking_Profile
     Public bank_username As String = "samuel"
 
 
-    'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
     ' Dim connString As String = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
     ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
-    Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
+    'Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
 
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
@@ -32,7 +32,7 @@ Public Class Banking_Profile
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' connection to database
         ' MessageBox.Show(bank_username)
-
+        bank_username = Global_Attributes.banking_username
         Dim conn = New MySqlConnection(connString)
 
         Try

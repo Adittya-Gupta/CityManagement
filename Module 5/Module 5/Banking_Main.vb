@@ -41,6 +41,7 @@
         Button15.BackColor = Color.FromArgb(1, 0, 70)
         Button16.BackColor = Color.FromArgb(1, 0, 70)
         Global_Attributes.banking_username = "samuel"
+        ChildForm(Panel1, Banking_Homepage)
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs)
 

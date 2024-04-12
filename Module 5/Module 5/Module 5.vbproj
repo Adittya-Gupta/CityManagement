@@ -276,6 +276,12 @@
     <Compile Include="Newsletter_Editor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Newsletter_EditorLogin.Designer.vb">
+      <DependentUpon>Newsletter_EditorLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_EditorLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Newsletter_Homepage.Designer.vb">
       <DependentUpon>Newsletter_Homepage.vb</DependentUpon>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_Editor.resx">
       <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_EditorLogin.resx">
+      <DependentUpon>Newsletter_EditorLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_Homepage.resx">
       <DependentUpon>Newsletter_Homepage.vb</DependentUpon>

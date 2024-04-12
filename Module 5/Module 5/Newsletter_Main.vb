@@ -15,7 +15,7 @@
 
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(100, 0)
+        ' Me.Location = New Point(100, 0)
         Panel1.BackColor = Color.FromArgb(246, 246, 233)
         Panel2.BackColor = Color.FromArgb(246, 246, 233)
         ChildForm(Panel1, Newsletter_Homepage)

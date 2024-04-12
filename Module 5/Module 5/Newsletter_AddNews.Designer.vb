@@ -48,7 +48,7 @@ Partial Class Newsletter_AddNews
         Me.Button10.FlatAppearance.BorderSize = 0
         Me.Button10.Font = New System.Drawing.Font("Bodoni MT", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.Black
-        Me.Button10.Location = New System.Drawing.Point(861, 86)
+        Me.Button10.Location = New System.Drawing.Point(863, 96)
         Me.Button10.Margin = New System.Windows.Forms.Padding(0)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(226, 53)
@@ -60,7 +60,7 @@ Partial Class Newsletter_AddNews
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(346, 205)
+        Me.ComboBox1.Location = New System.Drawing.Point(348, 215)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(473, 32)
         Me.ComboBox1.TabIndex = 48
@@ -70,7 +70,7 @@ Partial Class Newsletter_AddNews
         Me.Button15.BackColor = System.Drawing.Color.Black
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
-        Me.Button15.Location = New System.Drawing.Point(880, 409)
+        Me.Button15.Location = New System.Drawing.Point(882, 419)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(160, 84)
         Me.Button15.TabIndex = 47
@@ -82,7 +82,7 @@ Partial Class Newsletter_AddNews
         Me.Button12.BackColor = System.Drawing.Color.Black
         Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(880, 499)
+        Me.Button12.Location = New System.Drawing.Point(882, 509)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(160, 47)
         Me.Button12.TabIndex = 46
@@ -92,7 +92,7 @@ Partial Class Newsletter_AddNews
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.Module_5.My.Resources.Resources.newspaper
-        Me.PictureBox11.Location = New System.Drawing.Point(10, 90)
+        Me.PictureBox11.Location = New System.Drawing.Point(12, 100)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(167, 155)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -104,7 +104,7 @@ Partial Class Newsletter_AddNews
         Me.TextBox5.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(111, 323)
+        Me.TextBox5.Location = New System.Drawing.Point(113, 333)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(737, 259)
@@ -116,7 +116,7 @@ Partial Class Newsletter_AddNews
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Bodoni MT", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 433)
+        Me.Label9.Location = New System.Drawing.Point(8, 443)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(99, 21)
         Me.Label9.TabIndex = 43
@@ -125,7 +125,7 @@ Partial Class Newsletter_AddNews
         'PictureBox15
         '
         Me.PictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox15.Location = New System.Drawing.Point(854, 142)
+        Me.PictureBox15.Location = New System.Drawing.Point(856, 152)
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.Size = New System.Drawing.Size(233, 220)
         Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -136,7 +136,7 @@ Partial Class Newsletter_AddNews
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Bodoni MT", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(200, 211)
+        Me.Label7.Location = New System.Drawing.Point(202, 221)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(134, 21)
         Me.Label7.TabIndex = 41
@@ -147,7 +147,7 @@ Partial Class Newsletter_AddNews
         Me.TextBox2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(348, 158)
+        Me.TextBox2.Location = New System.Drawing.Point(350, 168)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(471, 32)
@@ -159,7 +159,7 @@ Partial Class Newsletter_AddNews
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Bodoni MT", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(185, 159)
+        Me.Label6.Location = New System.Drawing.Point(187, 169)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(149, 21)
         Me.Label6.TabIndex = 39
@@ -170,7 +170,7 @@ Partial Class Newsletter_AddNews
         Me.TextBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(346, 90)
+        Me.TextBox1.Location = New System.Drawing.Point(348, 100)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(471, 56)
@@ -182,7 +182,7 @@ Partial Class Newsletter_AddNews
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bodoni MT", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(221, 110)
+        Me.Label5.Location = New System.Drawing.Point(223, 120)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(113, 21)
         Me.Label5.TabIndex = 37
@@ -192,7 +192,7 @@ Partial Class Newsletter_AddNews
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 35.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
+        Me.Label3.Location = New System.Drawing.Point(5, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(1084, 71)
         Me.Label3.TabIndex = 36
@@ -200,10 +200,9 @@ Partial Class Newsletter_AddNews
         '
         'Newsletter_AddNews
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(1089, 594)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.ComboBox1)

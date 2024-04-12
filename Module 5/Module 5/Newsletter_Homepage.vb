@@ -48,7 +48,7 @@
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        ChildForm(Newsletter_Main.Panel1, Newsletter_Editor)
+        ChildForm(Newsletter_Main.Panel1, Newsletter_EditorLogin)
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)

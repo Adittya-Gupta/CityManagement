@@ -14,16 +14,16 @@ Public Class Newsletter_Editor
 
     ' Just change these to access local or online db
 
-    'Public server As String = "localhost"
-    'Public username As String = "root"
-    'Public password As String = "Aasneh18"
-    'Public database As String = "bankingdatabase"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "newsdatabase"
 
 
-    Public server As String = "172.16.114.244"
-    Public username As String = "admin"
-    Public password As String = "nimda"
-    Public database As String = "banking_database"
+    'Public server As String = "172.16.114.244"
+    'Public username As String = "admin"
+    'Public password As String = "nimda"
+    'Public database As String = "banking_database"
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()

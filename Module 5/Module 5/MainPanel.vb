@@ -26,6 +26,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        mypanel.Panel1.Controls.Clear()
         ChildForm(Banking_Main)
     End Sub
 
@@ -42,6 +43,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        mypanel.Panel1.Controls.Clear()
+        ChildForm(Newsletter_Main)
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

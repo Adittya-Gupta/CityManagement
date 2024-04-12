@@ -23,11 +23,11 @@ Public Class admin_home
         ' mypanel.Panel1.Controls.Add(form)
         ' Form.Show()
 
-        mypanel.Panel1.Controls.Clear()
-        Dim form As New election_dashboard()
+        Panel1.Controls.Clear()
+        Dim form As New election_dashboard
 
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        Panel1.Controls.Add(form)
         form.Show()
 
 
@@ -142,5 +142,14 @@ Public Class admin_home
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
 
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        Panel1.Controls.Clear()
+        Dim form As New admin_Mayor()
+
+        form.TopLevel = False
+        Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

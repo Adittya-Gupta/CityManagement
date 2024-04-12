@@ -36,6 +36,7 @@ Partial Class admin_home
         PictureBox4 = New PictureBox()
         PictureBox5 = New PictureBox()
         PictureBox6 = New PictureBox()
+        Label8 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -47,11 +48,15 @@ Partial Class admin_home
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label1.BackColor = Color.Transparent
+        Label1.BackColor = Color.Black
+        Label1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = SystemColors.ButtonHighlight
         Label1.Location = New Point(870, 27)
         Label1.Name = "Label1"
         Label1.Size = New Size(212, 54)
         Label1.TabIndex = 0
+        Label1.Text = "Election Portal"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label2
         ' 
@@ -179,6 +184,19 @@ Partial Class admin_home
         PictureBox6.TabIndex = 12
         PictureBox6.TabStop = False
         ' 
+        ' Label8
+        ' 
+        Label8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label8.BackColor = Color.Black
+        Label8.Font = New Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = SystemColors.ButtonHighlight
+        Label8.Location = New Point(870, 118)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(212, 54)
+        Label8.TabIndex = 13
+        Label8.Text = "Minister"
+        Label8.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' admin_home
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -188,6 +206,7 @@ Partial Class admin_home
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
+        Controls.Add(Label8)
         Controls.Add(PictureBox6)
         Controls.Add(PictureBox5)
         Controls.Add(PictureBox4)
@@ -226,4 +245,5 @@ Partial Class admin_home
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label8 As Label
 End Class

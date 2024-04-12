@@ -43,7 +43,8 @@ Public Class AllResults
                     ' Populate UCnominees with data from the reader
                     ucNominee.Label1.Text = reader("Name").ToString()
                     ucNominee.Label3.Text = reader("Agenda").ToString()
-                    ucNominee.voteC = Convert.ToInt32("VoteCount")
+                    ucNominee.voteC = Convert.ToInt32(reader("VoteCount"))
+
                     ' Convert ProfilePic from byte array to Image and assign to PictureBox
                     Dim imageData As Byte() = DirectCast(reader("ProfilePic"), Byte())
                     If imageData IsNot Nothing Then

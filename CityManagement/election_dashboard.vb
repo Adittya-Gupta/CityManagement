@@ -246,6 +246,12 @@ Public Class election_dashboard
 
     Private Sub AllResults_Click(sender As Object, e As EventArgs) Handles AllResults.Click
         'Dim allResults As New AllResults()
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New AllResults()
+
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
         'allResults.Show()
         'Me.Hide()
     End Sub

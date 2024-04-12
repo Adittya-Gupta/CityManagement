@@ -30,7 +30,7 @@ Partial Class AllResults
         ' Label1
         ' 
         Label1.BackColor = SystemColors.ActiveCaptionText
-        Label1.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(206, 84)
         Label1.Name = "Label1"
         Label1.Size = New Size(220, 57)
@@ -42,7 +42,7 @@ Partial Class AllResults
         ' 
         ComboBox1.BackColor = Color.Black
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox1.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ComboBox1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.ForeColor = SystemColors.InactiveBorder
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Education", "Health", "Transport", "Finance", "Home"})
@@ -60,7 +60,7 @@ Partial Class AllResults
         ' 
         ' AllResults
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1236, 979)
@@ -69,6 +69,7 @@ Partial Class AllResults
         Controls.Add(Label1)
         DoubleBuffered = True
         ForeColor = SystemColors.ButtonHighlight
+        FormBorderStyle = FormBorderStyle.None
         Name = "AllResults"
         Text = "AllResults"
         ResumeLayout(False)

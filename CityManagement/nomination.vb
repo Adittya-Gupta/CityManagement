@@ -30,7 +30,8 @@ Public Class nomination
         'PayDeposit.FlatAppearance.BorderSize = 0
         'PayDeposit.BackColor = System.Drawing.ColorTranslator.FromHtml("#0cb43b")
         Agenda.BorderStyle = BorderStyle.None
-        Agenda.BackColor = System.Drawing.ColorTranslator.FromHtml("#474544")
+        Agenda.BackColor = System.Drawing.ColorTranslator.FromHtml("#111f44")
+        Agenda.ForeColor = System.Drawing.ColorTranslator.FromHtml("#d5bd6e")
         Minister.BackColor = System.Drawing.ColorTranslator.FromHtml("#ffffff")
         Minister.ForeColor = System.Drawing.ColorTranslator.FromHtml("#612828")
         'To find the designation and correspondingly assign the labels text to that minister
@@ -43,7 +44,7 @@ Public Class nomination
                 Dim reader = cmd.ExecuteReader
                 reader.Read()
                 Designation = mapping(Convert.ToString(reader("Designation")))
-                Minister.Text = Designation
+                Minister.Text = "You are nominating for " & Designation
             End Using
         Catch ex As Exception
         Finally
@@ -137,5 +138,11 @@ Public Class nomination
     Private Sub Agenda_TextChanged(sender As Object, e As EventArgs) Handles Agenda.TextChanged
         AgendaText = Agenda.Text
         'MessageBox.Show(AgendaText)
+    End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Dim electiondashboard As New election_dashboard()
+        electiondashboard.Show()
+        Me.Hide()
     End Sub
 End Class

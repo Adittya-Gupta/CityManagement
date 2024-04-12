@@ -20,19 +20,16 @@ Public Class votingPortal
         ComponentInfo.SetLicense("YOUR_LICENSE_KEY")
     End Sub
     Private Sub votingPortal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        NOTA.FlatStyle = FlatStyle.Flat
-        NOTA.FlatAppearance.BorderSize = 0
-        NOTA.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000")
-        Candidates.BackColor = System.Drawing.ColorTranslator.FromHtml("#010001")
+        Candidates.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF")
         Candidates.AutoScroll = False
         Candidates.HorizontalScroll.Enabled = False
         Candidates.HorizontalScroll.Visible = False
         Candidates.AutoScroll = True
-
-        Dim itemsList As New List(Of String) From {"Education Minister", "Transportation Minister", "Health Minister", "Finance Minister", "Home Minister"}
+        Dim itemsList As New List(Of String) From {"Education Minister", "Transport Minister", "Health Minister", "Finance Minister", "Home Minister"}
         selectMinister.Items.AddRange(itemsList.ToArray())
+        selectMinister.DropDownStyle = ComboBoxStyle.DropDownList
         userVotes("Education Minister") = -1
-        userVotes("Transportaion Minister") = -1
+        userVotes("Transport Minister") = -1
         userVotes("Health Minister") = -1
         userVotes("Finance Minister") = -1
         userVotes("Home Minister") = -1
@@ -92,7 +89,7 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
-                            If userVotes("Education Minister") Then
+                            If userVotes("Education Minister") = candidate.NomineeSID Then
                                 candidate.CheckBox.Checked = True
                             End If
                             previousControlBottom = candidate.Bottom
@@ -109,8 +106,8 @@ Public Class votingPortal
                     conn.Open()
                     Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
-                        cmd.Parameters.AddWithValue("@a", "Transportation Minister")
-                        currentDesignation = "Transportation Minister"
+                        cmd.Parameters.AddWithValue("@a", "Transport Minister")
+                        currentDesignation = "Transport Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
                             Dim candidate As New candidateDetails
@@ -121,7 +118,7 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
-                            If userVotes("Transportation Minister") Then
+                            If userVotes("Transport Minister") = candidate.NomineeSID Then
                                 candidate.CheckBox.Checked = True
                             End If
                             previousControlBottom = candidate.Bottom
@@ -150,7 +147,7 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
-                            If userVotes("Health Minister") Then
+                            If userVotes("Health Minister") = candidate.NomineeSID Then
                                 candidate.CheckBox.Checked = True
                             End If
                             previousControlBottom = candidate.Bottom
@@ -179,7 +176,7 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
-                            If userVotes("Finance Minister") Then
+                            If userVotes("Finance Minister") = candidate.NomineeSID Then
                                 candidate.CheckBox.Checked = True
                             End If
                             previousControlBottom = candidate.Bottom
@@ -208,7 +205,7 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
-                            If userVotes("Home Minister") Then
+                            If userVotes("Home Minister") = candidate.NomineeSID Then
                                 candidate.CheckBox.Checked = True
                             End If
                             previousControlBottom = candidate.Bottom
@@ -244,7 +241,7 @@ Public Class votingPortal
         End If
     End Sub
 
-    Private Sub NOTAButton_Click(sender As Object, e As EventArgs)
+    Private Sub NOTAButton_Click(sender As Object, e As EventArgs) Handles NOTA.Click
         ' Clear all checkboxes in the list
         For Each ctrl In candidateDetailsList
             ctrl.Checked = False
@@ -261,7 +258,7 @@ Public Class votingPortal
                 cmd.Parameters.AddWithValue("@b", userVotes("Education Minister"))
                 cmd.Parameters.AddWithValue("@c", userVotes("Home Minister"))
                 cmd.Parameters.AddWithValue("@d", userVotes("Finance Minister"))
-                cmd.Parameters.AddWithValue("@e", userVotes("Transportation Minister"))
+                cmd.Parameters.AddWithValue("@e", userVotes("Transport Minister"))
                 cmd.ExecuteNonQuery()
             End Using
             MessageBox.Show("Your Vote was successfully registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -296,7 +293,7 @@ Public Class votingPortal
             If userVotes("Transportation Minister") >= 0 Then
                 query = "update Nominees set VoteCount = VoteCount + 1 where SID=@a"
                 Using cmd As New MySqlCommand(query, conn)
-                    cmd.Parameters.AddWithValue("@a", userVotes("Transportation Minister"))
+                    cmd.Parameters.AddWithValue("@a", userVotes("Transport Minister"))
                     cmd.ExecuteNonQuery()
                 End Using
             End If

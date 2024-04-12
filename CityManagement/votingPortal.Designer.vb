@@ -27,13 +27,13 @@ Partial Class votingPortal
         Vote = New Label()
         Candidates = New Panel()
         selectMinister = New ComboBox()
-        NOTA = New Button()
+        NOTA = New Label()
         SuspendLayout()
         ' 
         ' back
         ' 
         back.BackColor = Color.Transparent
-        back.Location = New Point(873, 19)
+        back.Location = New Point(859, 9)
         back.Name = "back"
         back.Size = New Size(89, 34)
         back.TabIndex = 10
@@ -41,38 +41,34 @@ Partial Class votingPortal
         ' Vote
         ' 
         Vote.BackColor = Color.Transparent
-        Vote.Location = New Point(455, 552)
+        Vote.Location = New Point(436, 538)
         Vote.Name = "Vote"
-        Vote.Size = New Size(142, 34)
+        Vote.Size = New Size(163, 56)
         Vote.TabIndex = 11
         ' 
         ' Candidates
         ' 
-        Candidates.Location = New Point(167, 141)
+        Candidates.Location = New Point(156, 136)
         Candidates.Name = "Candidates"
-        Candidates.Size = New Size(752, 370)
+        Candidates.Size = New Size(762, 370)
         Candidates.TabIndex = 12
         ' 
         ' selectMinister
         ' 
         selectMinister.Font = New Font("Exo 2 Extra Bold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         selectMinister.FormattingEnabled = True
-        selectMinister.Location = New Point(345, 79)
+        selectMinister.Location = New Point(332, 75)
         selectMinister.Name = "selectMinister"
         selectMinister.Size = New Size(438, 32)
         selectMinister.TabIndex = 13
         ' 
         ' NOTA
         ' 
-        NOTA.BackColor = Color.Red
-        NOTA.Font = New Font("Exo 2", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        NOTA.ForeColor = Color.White
-        NOTA.Location = New Point(790, 544)
+        NOTA.BackColor = Color.Transparent
+        NOTA.Location = New Point(811, 538)
         NOTA.Name = "NOTA"
-        NOTA.Size = New Size(159, 42)
+        NOTA.Size = New Size(166, 56)
         NOTA.TabIndex = 14
-        NOTA.Text = "NOTA"
-        NOTA.UseVisualStyleBackColor = False
         ' 
         ' votingPortal
         ' 
@@ -98,5 +94,5 @@ Partial Class votingPortal
     Friend WithEvents Vote As Label
     Friend WithEvents Candidates As Panel
     Friend WithEvents selectMinister As ComboBox
-    Friend WithEvents NOTA As Button
+    Friend WithEvents NOTA As Label
 End Class

@@ -38,7 +38,6 @@ Public Class ministerDetails
             SID = value
         End Set
     End Property
-
     Public Property NomineevMargin As Integer
         Get
             Return vMargin
@@ -48,6 +47,7 @@ Public Class ministerDetails
         End Set
     End Property
     Private Sub OpenManifesto_Click(sender As Object, e As EventArgs) Handles OpenManifesto.Click
+        Dim foundManifesto As Boolean = False
         Try
             conn.Open()
             Dim query As String = "select Manifesto from Nominees where SID=@a"
@@ -59,6 +59,7 @@ Public Class ministerDetails
                     ' Specify the custom temporary file path
                     Dim folderPath As String = Application.StartupPath ' Specify an existing directory
                     Dim tempFilePath As String = Path.Combine(folderPath, "manifesto.pdf")
+                    foundManifesto = True
                     MessageBox.Show("The requested Manifesto is saved at " & tempFilePath, "information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     ' Create directory if it doesn't exist
                     If Not Directory.Exists(folderPath) Then
@@ -97,26 +98,28 @@ Public Class ministerDetails
         Finally
             conn.Close()
         End Try
+
+        If foundManifesto = False Then
+            MessageBox.Show("No Manifesto found for the requested candidate", "information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub ministerDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Ministry.BackColor = System.Drawing.ColorTranslator.FromHtml("#fbfbfb")
+        VictoryMargin.Text = vMargin.ToString()
         Try
             conn.Open()
-            Dim query = "select VoteCount from Nominees where SID=@a"
+            Dim query As String = "select VoteCount from Nominees where SID=@a"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", SID)
                 Dim reader = cmd.ExecuteReader
                 reader.Read()
                 VoteCount.Text = Convert.ToString(reader("VoteCount"))
             End Using
-
-
         Catch ex As Exception
         Finally
             conn.Close()
         End Try
-        VictoryMargin.Text = vMargin.ToString()
-
         Try
             conn.Open()
             Dim query As String = "select ProfilePic from User where SID=@a"
@@ -130,12 +133,6 @@ Public Class ministerDetails
                     Dim profileImage As Bitmap = Bitmap.FromStream(imageStream)
                     profilePhoto.Image = profileImage
                     profilePhoto.SizeMode = PictureBoxSizeMode.StretchImage
-                    'Dim circularRegion As New Region(New Rectangle(0, 0, profilePhoto.Width, profilePhoto.Height))
-                    'Dim graphicsPath As New GraphicsPath()
-                    'graphicsPath.AddEllipse(0, 0, profilePhoto.Width, profilePhoto.Height)
-                    'circularRegion.Exclude(graphicsPath)
-                    '' Apply circular region to the PictureBox
-                    'profilePhoto.Region = circularRegion
                 Else
                 End If
             End Using

@@ -56,7 +56,7 @@ Partial Class nomination
         ' 
         ' Agenda
         ' 
-        Agenda.Font = New Font("Exo 2", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Agenda.Font = New Font("Exo 2", 10.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Agenda.Location = New Point(186, 234)
         Agenda.Name = "Agenda"
         Agenda.Size = New Size(739, 167)
@@ -66,9 +66,10 @@ Partial Class nomination
         ' Minister
         ' 
         Minister.BackColor = Color.White
-        Minister.Location = New Point(594, 66)
+        Minister.Font = New Font("Exo 2", 22.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Minister.Location = New Point(174, 66)
         Minister.Name = "Minister"
-        Minister.Size = New Size(355, 40)
+        Minister.Size = New Size(775, 47)
         Minister.TabIndex = 14
         ' 
         ' nomination

@@ -34,38 +34,38 @@ Partial Class candidateDetails
         ' Name2
         ' 
         Name2.BackColor = Color.Black
-        Name2.Font = New Font("Exo 2", 11F, FontStyle.Bold)
+        Name2.Font = New Font("Exo 2", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Name2.ForeColor = Color.White
-        Name2.Location = New Point(135, 50)
+        Name2.Location = New Point(135, 49)
         Name2.Name = "Name2"
-        Name2.Size = New Size(142, 25)
+        Name2.Size = New Size(105, 26)
         Name2.TabIndex = 0
         ' 
         ' CheckBox
         ' 
         CheckBox.BackColor = Color.Black
-        CheckBox.Location = New Point(259, 20)
+        CheckBox.Location = New Point(210, 29)
         CheckBox.Name = "CheckBox"
-        CheckBox.Size = New Size(37, 30)
+        CheckBox.Size = New Size(30, 28)
         CheckBox.TabIndex = 1
         CheckBox.UseVisualStyleBackColor = False
         ' 
         ' Agenda
         ' 
         Agenda.BackColor = Color.White
-        Agenda.Font = New Font("Exo 2", 11F, FontStyle.Bold)
+        Agenda.Font = New Font("Exo 2", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Agenda.ForeColor = Color.Black
-        Agenda.Location = New Point(366, 53)
+        Agenda.Location = New Point(293, 64)
         Agenda.Name = "Agenda"
-        Agenda.Size = New Size(499, 78)
+        Agenda.Size = New Size(453, 58)
         Agenda.TabIndex = 2
         ' 
         ' OpenManifesto
         ' 
         OpenManifesto.BackColor = Color.Transparent
-        OpenManifesto.Location = New Point(154, 75)
+        OpenManifesto.Location = New Point(135, 75)
         OpenManifesto.Name = "OpenManifesto"
-        OpenManifesto.Size = New Size(142, 37)
+        OpenManifesto.Size = New Size(115, 37)
         OpenManifesto.TabIndex = 3
         ' 
         ' profilePhoto
@@ -82,8 +82,9 @@ Partial Class candidateDetails
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoValidate = AutoValidate.EnableAllowFocusChange
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        BackgroundImageLayout = ImageLayout.None
+        BackgroundImageLayout = ImageLayout.Zoom
         Controls.Add(profilePhoto)
         Controls.Add(OpenManifesto)
         Controls.Add(Agenda)
@@ -92,7 +93,7 @@ Partial Class candidateDetails
         DoubleBuffered = True
         ForeColor = Color.White
         Name = "candidateDetails"
-        Size = New Size(933, 152)
+        Size = New Size(755, 152)
         CType(profilePhoto, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub

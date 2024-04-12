@@ -34,6 +34,7 @@ Public Class election_dashboard
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("?", idOfCurrentUser)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                'MessageBox.Show("Reached")
                 If reader.Read() Then
                     alreadyVoter = True
                 Else
@@ -44,7 +45,7 @@ Public Class election_dashboard
         Finally
             conn.Close()
         End Try
-
+        'MessageBox.Show(alreadyVoter)
         Try
             conn.Open()
             'To check if the person is eligible to nominate based on his designation
@@ -110,7 +111,8 @@ Public Class election_dashboard
             conn.Close()
         End Try
 
-        MessageBox.Show(isVotingPeriod)
+        resultsReleased = (Not isNominationPeriod) And (Not isVotingPeriod)
+        'MessageBox.Show(isVotingPeriod)
     End Sub
     Private Sub apply_to_become_voter_Click(sender As Object, e As EventArgs) Handles apply_to_become_voter.Click
         'First check if the current user is already voter
@@ -206,5 +208,9 @@ Public Class election_dashboard
         'show the administration form here
     End Sub
 
-
+    Private Sub AllResults_Click(sender As Object, e As EventArgs) Handles AllResults.Click
+        'Dim allResults As New AllResults()
+        'allResults.Show()
+        'Me.Hide()
+    End Sub
 End Class

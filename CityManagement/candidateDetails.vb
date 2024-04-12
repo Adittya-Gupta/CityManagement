@@ -106,6 +106,7 @@ Public Class candidateDetails
     Private Sub candidateDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             conn.Open()
+            Agenda.BackColor = System.Drawing.ColorTranslator.FromHtml("#fbfbfb")
             Dim query As String = "select ProfilePic from User where SID=@a"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", SID)

@@ -31,6 +31,7 @@ Partial Class election_dashboard
         nominees_details = New Label()
         results_portal = New Label()
         back = New Label()
+        AllResults = New Label()
         SuspendLayout()
         ' 
         ' apply_to_become_voter
@@ -86,16 +87,24 @@ Partial Class election_dashboard
         results_portal.BackColor = Color.Transparent
         results_portal.Location = New Point(563, 391)
         results_portal.Name = "results_portal"
-        results_portal.Size = New Size(410, 64)
+        results_portal.Size = New Size(201, 64)
         results_portal.TabIndex = 6
         ' 
         ' back
         ' 
         back.BackColor = Color.Transparent
-        back.Location = New Point(827, 9)
+        back.Location = New Point(819, 9)
         back.Name = "back"
         back.Size = New Size(98, 40)
         back.TabIndex = 7
+        ' 
+        ' AllResults
+        ' 
+        AllResults.BackColor = Color.Transparent
+        AllResults.Location = New Point(772, 391)
+        AllResults.Name = "AllResults"
+        AllResults.Size = New Size(201, 64)
+        AllResults.TabIndex = 8
         ' 
         ' election_dashboard
         ' 
@@ -105,6 +114,7 @@ Partial Class election_dashboard
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1089, 713)
+        Controls.Add(AllResults)
         Controls.Add(back)
         Controls.Add(results_portal)
         Controls.Add(nominees_details)
@@ -126,4 +136,5 @@ Partial Class election_dashboard
     Friend WithEvents nominees_details As Label
     Friend WithEvents results_portal As Label
     Friend WithEvents back As Label
+    Friend WithEvents AllResults As Label
 End Class

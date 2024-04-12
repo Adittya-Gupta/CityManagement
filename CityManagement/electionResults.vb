@@ -5,7 +5,7 @@ Public Class electionResults
     Dim conn As New MySqlConnection(connString)
     Private ministerDetailsList As New List(Of ministerDetails)
     Private Sub electionResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Candidates.BackColor = System.Drawing.ColorTranslator.FromHtml("#010001")
+        Candidates.BackColor = System.Drawing.ColorTranslator.FromHtml("#ffffff")
         Candidates.AutoScroll = False
         Candidates.HorizontalScroll.Enabled = False
         Candidates.HorizontalScroll.Visible = False

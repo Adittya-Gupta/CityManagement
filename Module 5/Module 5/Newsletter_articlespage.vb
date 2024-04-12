@@ -7,6 +7,7 @@ Imports System.Windows
 Imports System.Windows.Forms.DataVisualization.Charting
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports Chart = System.Windows.Forms.DataVisualization.Charting.Chart
 Public Class Newsletter_articlespage
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand
@@ -20,9 +21,14 @@ Public Class Newsletter_articlespage
     'Public password As String = "nimda"
     'Public database As String = "banking_database"
 
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    ' Public password As String = "vacuum#28C"
+    ' Public database As String = "newsdatabase"
+
     Public server As String = "localhost"
     Public username As String = "root"
-    Public password As String = "vacuum#28C"
+    Public password As String = "Aasneh18"
     Public database As String = "newsdatabase"
 
     'loads home page of newsletter
@@ -34,7 +40,7 @@ Public Class Newsletter_articlespage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the top 3 latest headlines
-        sqlCmd.CommandText = "SELECT * FROM newsdatabase.newsdata ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM newsdata ORDER BY Date DESC;"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
@@ -91,7 +97,7 @@ Public Class Newsletter_articlespage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select records of desired type only
-        sqlCmd.CommandText = "SELECT * FROM newsdatabase.newsdata WHERE Type = '" & s & "' ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM newsdata WHERE Type = '" & s & "' ORDER BY Date DESC;"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
@@ -142,11 +148,12 @@ Public Class Newsletter_articlespage
 
     Private Sub LoadStats()
         '------------------------Chart for transport----------------------------
-        Dim chart1 As New Chart()
-        chart1.Width = 250
-        chart1.Height = 200
-        chart1.Location = New Point(5, 5)
-        chart1.Visible = True
+        Dim chart1 As New Chart With {
+            .Width = 250,
+            .Height = 200,
+            .Location = New Point(5, 5),
+            .Visible = True
+        }
 
         'add chart title
         Dim chartTitle As New Title("Number of Requests")
@@ -316,5 +323,9 @@ Public Class Newsletter_articlespage
 
         LoadStats()
         LoadFields()
+    End Sub
+
+    Private Sub Display_panel_Paint(sender As Object, e As PaintEventArgs) Handles Display_panel.Paint
+
     End Sub
 End Class

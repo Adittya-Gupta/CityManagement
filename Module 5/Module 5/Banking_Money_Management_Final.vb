@@ -18,6 +18,7 @@
     End Sub
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
         Global_Attributes.banking_recv_username = ""
+        Global_Attributes.banking_payment_amount = 0
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

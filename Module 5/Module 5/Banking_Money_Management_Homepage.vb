@@ -100,6 +100,9 @@ Public Class Banking_Money_Management_Homepage
         If Global_Attributes.banking_recv_username <> "" Then
             CalculateBankAccNo()
         End If
+        If Global_Attributes.banking_payment_amount <> 0 Then
+            RichTextBox_Amount.Text = Global_Attributes.banking_payment_amount.ToString()
+        End If
         If Global_Attributes.Go_Back = 0 Then
             Go_Back_Form = Me
         End If

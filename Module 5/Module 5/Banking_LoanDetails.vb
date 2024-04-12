@@ -32,20 +32,38 @@ Public Class Banking_LoanDetails
     'Public password As String = "nimda"
     'Public database As String = "banking_database"
 
+    ' Public server As String = "localhost"
+    ' Public username As String = "root"
+    ' Public password As String = "vacuum#28C"
+    'Public database As String = "banking_database"
+
     Public server As String = "localhost"
     Public username As String = "root"
-    Public password As String = "vacuum#28C"
-    Public database As String = "banking_database"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+
 
     Private Sub Banking_LoanDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '--------------obtain user info----------------
+        bank_username = Global_Attributes.banking_username
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the user info
-        sqlCmd.CommandText = "SELECT * FROM banking_database.userdata WHERE Username='" & bank_username & "';"
+        sqlCmd.CommandText = "SELECT * FROM userdata WHERE Username='" & bank_username & "';"
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -145,7 +163,7 @@ Public Class Banking_LoanDetails
             Dim sqlCmd As New MySqlCommand
             sqlCmd.Connection = Mysqlconn
             'select the user info
-            sqlCmd.CommandText = "INSERT INTO banking_database.querylog " &
+            sqlCmd.CommandText = "INSERT INTO querylog " &
                                 "(Query_ID, Bank_Account_Number, Type_of_Query, Day, Query, Status, Reply) " &
                                 "VALUES (@Value1, @Value2, 'Loan request', @Value3, @Value4, 'pending', 'pending');"
 
@@ -185,10 +203,10 @@ Public Class Banking_LoanDetails
 
     End Sub
 
-    Private Sub Loans_btn_Click(sender As Object, e As EventArgs) 
-        Me.Hide()
-        Banking_LoanHomepage.Show()
-    End Sub
+    'Private Sub Loans_btn_Click(sender As Object, e As EventArgs) 
+    '  Me.Hide()
+    '     Banking_LoanHomepage.Show()
+    '  End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         'TODO: make interest tb as readonly

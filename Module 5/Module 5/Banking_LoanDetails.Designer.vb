@@ -180,10 +180,10 @@ Partial Class Banking_LoanDetails
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(39, 17)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(321, 28)
+        Me.Label8.Size = New System.Drawing.Size(332, 29)
         Me.Label8.TabIndex = 49
         Me.Label8.Text = "Please enter personal details:"
         '
@@ -191,11 +191,11 @@ Partial Class Banking_LoanDetails
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Label9.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(583, 74)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(258, 28)
+        Me.Label9.Size = New System.Drawing.Size(266, 29)
         Me.Label9.TabIndex = 50
         Me.Label9.Text = "Enter Loan Plan details:"
         '
@@ -314,8 +314,7 @@ Partial Class Banking_LoanDetails
         '
         'Banking_LoanDetails
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False

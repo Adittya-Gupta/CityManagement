@@ -36,12 +36,29 @@ Public Class Banking_LoansPayNow
     'Public password As String = "nimda"
     'Public database As String = "banking_database"
 
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "vacuum#28C"
+    ' Public database As String = "banking_database"
+
     Public server As String = "localhost"
     Public username As String = "root"
-    Public password As String = "vacuum#28C"
-    Public database As String = "banking_database"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
     Private Sub Banking_LoansPayNow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        bank_username = Global_Attributes.banking_username
+
         ' Print debug output of LoanID
         System.Diagnostics.Debug.WriteLine("LoanID, paynow page: " & LoanID)
 
@@ -57,7 +74,7 @@ Public Class Banking_LoansPayNow
         '"WHERE Loan_Plan_ID=" & LoanID.ToString() & ";"
 
         sqlCmd.CommandText = "SELECT Loan_Type, Amount, Interest_Rate, Period, Start_Date " &
-                     "FROM banking_database.loanplans JOIN banking_database.loanmanagement " &
+                     "FROM loanplans JOIN loanmanagement " &
                      "ON loanplans.Loan_Plan_ID = loanmanagement.LoanPlanID " &
                      "WHERE Loan_Plan_ID = @LoanID AND Bank_Account_Number = @AC_no;"
 
@@ -147,9 +164,11 @@ Public Class Banking_LoansPayNow
             'Money_Management_Homepage.bank_username = bank_username 'bank's account number
 
             'redirect to money transfer page
-            'ChildForm(Banking_Main.Panel1, Money_Management_Homepage)
-            Me.Hide()
-            Money_Management_Homepage.Show()
+            Global_Attributes.banking_payment_amount = Double.Parse(RichTextBox3.Text)
+            Global_Attributes.banking_recv_username = "bank"
+            ChildForm(Banking_Main.Panel1, Banking_Money_Management_Homepage)
+            ' Me.Hide()
+            'Money_Management_Homepage.Show()
         End If
     End Sub
 

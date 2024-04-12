@@ -31,12 +31,43 @@ Public Class Banking_LoanHomepage
     'Public password As String = "nimda"
     'Public database As String = "banking_database"
 
+    'Public server As String = "localhost"
+    'Public username As String = "root"
+    'Public password As String = "vacuum#28C"
+    'Public database As String = "banking_database"
+
     Public server As String = "localhost"
     Public username As String = "root"
-    Public password As String = "vacuum#28C"
-    Public database As String = "banking_database"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
+
+    Private Sub CalculateBankAccNo()
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        sqlDt.Clear()
+        Mysqlconn.Open()
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = Mysqlconn
+        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
+            If reader.Read() Then
+                AC_no = reader.GetString("Bank_Account_Number")
+            End If
+        End Using
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+    End Sub
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
     Private Sub LoadFields()
+        MessageBox.Show(AC_no)
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
@@ -45,10 +76,10 @@ Public Class Banking_LoanHomepage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'Take join of 2 tables according to a/c no. Displaying all loans of current user.
-        sqlCmd.CommandText = "SELECT * FROM banking_database.loanplans " &
-                      "JOIN banking_database.loanmanagement " &
+        sqlCmd.CommandText = "SELECT * FROM loanplans " &
+                      "JOIN loanmanagement " &
                       "ON loanplans.Loan_Plan_ID = loanmanagement.LoanPlanID " &
-                      "WHERE loanmanagement.Bank_Account_Number = " & AC_no & ";"
+                      "WHERE loanmanagement.Bank_Account_Number = '" & AC_no & "';"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
@@ -61,18 +92,24 @@ Public Class Banking_LoanHomepage
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         '--------------obtain user info----------------
+        bank_username = Global_Attributes.banking_username
+
+
+        'CalculateBankAccNo()
+
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the user info
-        sqlCmd.CommandText = "SELECT Bank_Account_Number,Balance,CIBIL_score FROM banking_database.userdata WHERE Username='" & bank_username & "';"
+        sqlCmd.CommandText = "SELECT Bank_Account_Number,Balance,CIBIL_score FROM userdata WHERE Username='" & bank_username & "';"
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
         adapter.Fill(table)
         ' Check if the DataTable contains any rows
         If table.Rows.Count > 0 Then
+            'MessageBox.Show("Loaded!")
             ' Retrieve the value from the first row and first column
             AC_no = table.Rows(0)("Bank_Account_Number").ToString()
             Balance = Double.Parse(table.Rows(0)("Balance").ToString())
@@ -86,6 +123,7 @@ Public Class Banking_LoanHomepage
         Balance_tb.Text = Balance.ToString()
         CIBILScore_tb.Text = CIBIL_score.ToString()
         ' Call the load_fields function here
+        ' MessageBox.Show(banking_username)
         LoadFields()
     End Sub
 
@@ -104,7 +142,7 @@ Public Class Banking_LoanHomepage
 
             sqlCmd.Connection = Mysqlconn
             'Displaying all pending Loan Requests for current user.
-            sqlCmd.CommandText = "SELECT * FROM banking_database.querylog " &
+            sqlCmd.CommandText = "SELECT * FROM querylog " &
                                 "WHERE Bank_Account_Number='" & AC_no &
                                 "' AND Type_of_Query='Loan request';"
 
@@ -137,9 +175,9 @@ Public Class Banking_LoanHomepage
         Banking_LoansApplication.Personal_Otherwise_IR = Personal_Otherwise_IR
 
         'Open loans application page
-        'ChildForm(Banking_Main.Panel1, Banking_LoansApplication)
-        Me.Hide()
-        Banking_LoansApplication.Show()
+        ChildForm(Banking_Main.Panel1, Banking_LoansApplication)
+        'Me.Hide()
+        ' Banking_LoansApplication.Show()
     End Sub
 
     Private Sub PayNow_btn_Click(sender As Object, e As EventArgs) Handles PayNow_btn.Click
@@ -155,10 +193,10 @@ Public Class Banking_LoanHomepage
         Banking_LoansPayNow.Transport_IR = Transport_IR
         Banking_LoansPayNow.Personal_Medical_IR = Personal_Medical_IR
         Banking_LoansPayNow.Personal_Otherwise_IR = Personal_Otherwise_IR
-        'ChildForm(Banking_Main.Panel1, Banking_LoansPayNow)
+        ChildForm(Banking_Main.Panel1, Banking_LoansPayNow)
         'Open loans payment page
-        Me.Hide()
-        Banking_LoansPayNow.Show()
+        'Me.Hide()
+        'Banking_LoansPayNow.Show()
     End Sub
 
     Private Sub CurrentLoans_table_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CurrentLoans_table.CellContentClick
@@ -170,5 +208,9 @@ Public Class Banking_LoanHomepage
             ' Print debug output of LoanID
             System.Diagnostics.Debug.WriteLine("LoanID, home page: " & LoanID)
         End If
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        LoadFields()
     End Sub
 End Class

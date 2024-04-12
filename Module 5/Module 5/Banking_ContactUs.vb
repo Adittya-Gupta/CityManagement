@@ -15,6 +15,8 @@ Public Class Banking_ContactUs
 
 
 
+
+
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand
     Public sqlRd As MySqlDataReader
@@ -89,7 +91,7 @@ Public Class Banking_ContactUs
 
         ComboBox1.Items.Add("Bank Account Balance")
         ComboBox1.Items.Add("Check credit card outstanding amount")
-        ComboBox1.Items.Add("Loan Related")
+        ComboBox1.Items.Add("Loan request")
         ComboBox1.Items.Add("Block Credit/Debit Card")
         ComboBox1.Items.Add("Report Unauthorised Transaction")
         ComboBox1.Items.Add("Others")
@@ -181,6 +183,14 @@ Public Class Banking_ContactUs
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
 End Class

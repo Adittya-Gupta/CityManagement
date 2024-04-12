@@ -1,10 +1,30 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
+Imports Mysqlx
 
 Public Class Banking_Money_Management_Credit_Card
+
+    Public bank_account_no As String = "1"
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim conn As New MySqlConnection(connString)
+
+    Private Sub CalculateBankAccNo()
+        Dim sqlDt As New DataTable
+        sqlDt.Clear()
+        conn.Open()
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = conn
+        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & Global_Attributes.banking_username & "';"
+        Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
+            If reader.Read() Then
+                bank_account_no = reader.GetString("Bank_Account_Number")
+            End If
+        End Using
+        conn.Close()
+        sqlCmd.Dispose()
+    End Sub
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
@@ -22,7 +42,9 @@ Public Class Banking_Money_Management_Credit_Card
     Dim remark As String
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        RichTextBox_Card.Text = RichTextBox_Card.Text.Trim()
+        'RichTextBox_Card.Text = RichTextBox_Card.Text.Trim()
+        'RichTextBox_Card.Text = RichTextBox_Card.Text
+        CalculateBankAccNo()
         RichTextBox_Expiry.Text = RichTextBox_Expiry.Text.Trim()
         RichTextBox_Cvv.Text = RichTextBox_Cvv.Text.Trim()
         RichTextBox_Remark.Text = RichTextBox_Remark.Text.Trim()
@@ -43,7 +65,7 @@ Public Class Banking_Money_Management_Credit_Card
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM CreditDebitCard Where CardNumber = ' " & card & "' AND Cvv = " & cvv & " AND Type = 'CREDIT' ;"
+                Dim query = "SELECT * FROM CreditDebitCard Where CardNumber = '" & card & "' AND Cvv = " & cvv & " AND Type = 'CREDIT' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 Dim sqlDt As New DataTable
@@ -55,7 +77,7 @@ Public Class Banking_Money_Management_Credit_Card
                     MessageBox.Show("Wrong Card Details.")
                 Else
                     conn.Open()
-                    query = "SELECT * FROM UserData Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                    query = "SELECT * FROM UserData Where Bank_Account_Number = '" & bank_account_no & "' ;"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader
                     Dim sqlDt2 As New DataTable
@@ -65,11 +87,11 @@ Public Class Banking_Money_Management_Credit_Card
 
                     Dim balance As Single = CType(sqlDt2.Rows(0)("Balance"), Single)
                     If Banking_Money_Management_Homepage.amount > balance Then
-                        MessageBox.Show("Insufficient Balane.")
+                        MessageBox.Show("Insufficient Balance.")
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & bank_account_no & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
@@ -81,7 +103,7 @@ Public Class Banking_Money_Management_Credit_Card
                         reader.Close()
 
                         ' log
-                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
+                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & bank_account_no & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()

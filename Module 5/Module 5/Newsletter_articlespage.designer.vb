@@ -23,12 +23,12 @@ Partial Class Newsletter_articlespage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Home_btn = New System.Windows.Forms.Button()
         Me.Promotions_btn = New System.Windows.Forms.Button()
         Me.Festivals_btn = New System.Windows.Forms.Button()
         Me.EduHealth_btn = New System.Windows.Forms.Button()
         Me.Employment_btn = New System.Windows.Forms.Button()
         Me.Transport_btn = New System.Windows.Forms.Button()
-        Me.Home_btn = New System.Windows.Forms.Button()
         Me.Display_panel = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -46,6 +46,18 @@ Partial Class Newsletter_articlespage
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1081, 54)
         Me.Panel2.TabIndex = 5
+        '
+        'Home_btn
+        '
+        Me.Home_btn.BackColor = System.Drawing.Color.DarkKhaki
+        Me.Home_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Home_btn.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Home_btn.Location = New System.Drawing.Point(-2, -2)
+        Me.Home_btn.Name = "Home_btn"
+        Me.Home_btn.Size = New System.Drawing.Size(132, 54)
+        Me.Home_btn.TabIndex = 0
+        Me.Home_btn.Text = "Home"
+        Me.Home_btn.UseVisualStyleBackColor = False
         '
         'Promotions_btn
         '
@@ -102,18 +114,6 @@ Partial Class Newsletter_articlespage
         Me.Transport_btn.Text = "Transport, Communication"
         Me.Transport_btn.UseVisualStyleBackColor = False
         '
-        'Home_btn
-        '
-        Me.Home_btn.BackColor = System.Drawing.Color.DarkKhaki
-        Me.Home_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Home_btn.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Home_btn.Location = New System.Drawing.Point(-2, -2)
-        Me.Home_btn.Name = "Home_btn"
-        Me.Home_btn.Size = New System.Drawing.Size(132, 54)
-        Me.Home_btn.TabIndex = 0
-        Me.Home_btn.Text = "Home"
-        Me.Home_btn.UseVisualStyleBackColor = False
-        '
         'Display_panel
         '
         Me.Display_panel.AutoScroll = True
@@ -124,8 +124,7 @@ Partial Class Newsletter_articlespage
         '
         'Newsletter_articlespage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False

@@ -328,8 +328,7 @@ Partial Class Banking_LoansPayNow
         '
         'Banking_LoansPayNow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label13)

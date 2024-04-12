@@ -64,7 +64,7 @@ Public Class Banking_Apply_Credit_Card
 
 
                 Dim query = "INSERT INTO CreditDebitCard (CardNumber, bank_username, Type, CIBIL_Score, Cvv)
-                        VALUES (' " & randomString & "','" & bank_username & "', 
+                        VALUES ('" & randomString & "','" & bank_username & "', 
                             'CREDIT', 0, 500);"
 
                 Dim cmd = New MySqlCommand(query, conn)

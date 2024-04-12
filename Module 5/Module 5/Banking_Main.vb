@@ -120,7 +120,12 @@
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        If NavBarCheck() Then
+            Return
+        End If
+        'Banking_Money_Management_Homepage.bank_username = Global_Attributes.banking_username
 
+        ChildForm(Panel1, Banking_LoanHomepage)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click

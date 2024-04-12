@@ -49,6 +49,7 @@ Partial Class Banking_LoanHomepage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PendingRequests_btn = New System.Windows.Forms.Button()
         Me.ApplyNow_btn = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
         CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -348,12 +349,28 @@ Partial Class Banking_LoanHomepage
         Me.ApplyNow_btn.Text = "Apply Now"
         Me.ApplyNow_btn.UseVisualStyleBackColor = False
         '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.Black
+        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.Color.White
+        Me.Button16.Location = New System.Drawing.Point(29, 19)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(145, 53)
+        Me.Button16.TabIndex = 52
+        Me.Button16.Text = "REFRESH"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
         'Banking_LoanHomepage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.PayNow_btn)
         Me.Controls.Add(Me.ApplyNow_btn)
         Me.Controls.Add(Me.PendingRequests_btn)
@@ -414,4 +431,5 @@ Partial Class Banking_LoanHomepage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PendingRequests_btn As Button
     Friend WithEvents ApplyNow_btn As Button
+    Friend WithEvents Button16 As Button
 End Class

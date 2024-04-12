@@ -32,7 +32,7 @@ Public Class Banking_Debit_Card_Page
             sqlDt.Load(reader)
             reader.Close()
             If sqlDt.Rows.Count = 0 Then
-                MessageBox.Show("No user found with current details.")
+                'MessageBox.Show("No user found with current details.")
                 Dim rand As New Random()
                 Dim randomNumber1 As Integer = rand.Next(1000, 9000)
                 Dim randomNumber2 As Integer = rand.Next(1000, 9000)
@@ -45,7 +45,7 @@ Public Class Banking_Debit_Card_Page
 
 
                 Dim query3 = "INSERT INTO CreditDebitCard (CardNumber, bank_username, Type, CIBIL_Score, Cvv)
-                        VALUES (' " & randomString & "','" & bank_username & "', 
+                        VALUES ('" & randomString & "','" & bank_username & "', 
                             'DEBIT', 0, 500);"
 
                 Dim cmd3 = New MySqlCommand(query3, conn)

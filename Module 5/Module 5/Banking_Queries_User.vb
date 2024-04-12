@@ -14,16 +14,16 @@ Public Class Banking_Queries_User
 
     ' Just change these to access local or online db
 
-    'Public server As String = "localhost"
-    'Public username As String = "root"
-    'Public password As String = "Aasneh18"
-    'Public database As String = "bankingdatabase"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
 
 
-    Public server As String = "172.16.114.244"
-    Public username As String = "admin"
-    Public password As String = "nimda"
-    Public database As String = "banking_database"
+    'Public server As String = "172.16.114.244"
+    'Public username As String = "admin"
+    ' Public password As String = "nimda"
+    'Public database As String = "banking_database"
 
 
     Private Sub ClearFields()

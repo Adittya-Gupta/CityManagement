@@ -15,10 +15,12 @@ Public Class Banking_Apply_Credit_Card
     Public bank_username As String = "admin"
 
     'Dim can_apply As Boolean = True
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim conn As New MySqlConnection(connString)
     Dim bank_account_number As Integer = 123
     Private Sub Apply_btn_Click(sender As Object, e As EventArgs) Handles Apply_btn.Click
+        banking_username = Global_Attributes.banking_username
         Dim can_apply As Boolean = True
         If CheckBox.Checked Then
             can_apply = False
@@ -108,5 +110,9 @@ Public Class Banking_Apply_Credit_Card
             ' Do something with the selected file path
             'MessageBox.Show("Selected file: " & selectedFilePath)
         End If
+    End Sub
+
+    Private Sub Banking_Apply_Credit_Card_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        banking_username = Global_Attributes.banking_username
     End Sub
 End Class

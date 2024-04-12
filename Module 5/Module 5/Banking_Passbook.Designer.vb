@@ -46,6 +46,7 @@ Partial Class Banking_Passbook
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.Panel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -304,12 +305,29 @@ Partial Class Banking_Passbook
         Me.Label3.Text = "ONLINE PERSONAL PASSBOOK"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.Black
+        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.Color.White
+        Me.Button16.Location = New System.Drawing.Point(22, 579)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(145, 53)
+        Me.Button16.TabIndex = 51
+        Me.Button16.Text = "REFRESH"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
         'Banking_Passbook
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
@@ -368,4 +386,5 @@ Partial Class Banking_Passbook
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button16 As Button
 End Class

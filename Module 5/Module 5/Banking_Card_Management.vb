@@ -13,8 +13,9 @@ Public Class Banking_Card_Management
     End Sub
 
     Public bank_username As String = "samuel"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim conn As New MySqlConnection(connString)
     Dim has_credit_card As Boolean = False
 
@@ -48,6 +49,7 @@ Public Class Banking_Card_Management
     Private Sub Banking_Card_Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim bank_account_number As Integer = 123
         'MessageBox.Show(bank_username)
+        banking_username = Global_Attributes.banking_username
         Try
             conn.Open()
 

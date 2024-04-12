@@ -36,9 +36,10 @@ Partial Class Banking_Card_Management
         Me.TextBox5.BackColor = System.Drawing.Color.White
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox5.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(1648, 176)
+        Me.TextBox5.Location = New System.Drawing.Point(1465, 141)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(70, 19)
+        Me.TextBox5.Size = New System.Drawing.Size(62, 16)
         Me.TextBox5.TabIndex = 103
         Me.TextBox5.Text = "123456789"
         '
@@ -47,9 +48,9 @@ Partial Class Banking_Card_Management
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bodoni MT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(1439, 175)
+        Me.Label4.Location = New System.Drawing.Point(1279, 140)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(203, 20)
+        Me.Label4.Size = New System.Drawing.Size(165, 17)
         Me.Label4.TabIndex = 102
         Me.Label4.Text = "BANK ACCOUNT NUMBER :"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -59,10 +60,9 @@ Partial Class Banking_Card_Management
         Me.Logout_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Logout_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Logout_btn.ForeColor = System.Drawing.Color.White
-        Me.Logout_btn.Location = New System.Drawing.Point(1600, 102)
-        Me.Logout_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Logout_btn.Location = New System.Drawing.Point(1422, 82)
         Me.Logout_btn.Name = "Logout_btn"
-        Me.Logout_btn.Size = New System.Drawing.Size(126, 49)
+        Me.Logout_btn.Size = New System.Drawing.Size(112, 39)
         Me.Logout_btn.TabIndex = 98
         Me.Logout_btn.Text = "Logout"
         Me.Logout_btn.UseVisualStyleBackColor = False
@@ -72,9 +72,10 @@ Partial Class Banking_Card_Management
         Me.Debit_Card_btn.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Debit_Card_btn.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Debit_Card_btn.ForeColor = System.Drawing.Color.White
-        Me.Debit_Card_btn.Location = New System.Drawing.Point(715, 162)
+        Me.Debit_Card_btn.Location = New System.Drawing.Point(717, 198)
+        Me.Debit_Card_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Debit_Card_btn.Name = "Debit_Card_btn"
-        Me.Debit_Card_btn.Size = New System.Drawing.Size(279, 76)
+        Me.Debit_Card_btn.Size = New System.Drawing.Size(248, 61)
         Me.Debit_Card_btn.TabIndex = 132
         Me.Debit_Card_btn.Text = "My Debit Card"
         Me.Debit_Card_btn.UseVisualStyleBackColor = False
@@ -84,9 +85,10 @@ Partial Class Banking_Card_Management
         Me.Credit_Card_btn.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Credit_Card_btn.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Credit_Card_btn.ForeColor = System.Drawing.Color.White
-        Me.Credit_Card_btn.Location = New System.Drawing.Point(715, 290)
+        Me.Credit_Card_btn.Location = New System.Drawing.Point(717, 300)
+        Me.Credit_Card_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Credit_Card_btn.Name = "Credit_Card_btn"
-        Me.Credit_Card_btn.Size = New System.Drawing.Size(279, 74)
+        Me.Credit_Card_btn.Size = New System.Drawing.Size(248, 59)
         Me.Credit_Card_btn.TabIndex = 133
         Me.Credit_Card_btn.Text = "My Credit Card"
         Me.Credit_Card_btn.UseVisualStyleBackColor = False
@@ -94,25 +96,28 @@ Partial Class Banking_Card_Management
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Module_5.My.Resources.Resources.Card_Page
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 3)
+        Me.PictureBox3.Location = New System.Drawing.Point(81, 70)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(630, 555)
+        Me.PictureBox3.Size = New System.Drawing.Size(560, 444)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 101
         Me.PictureBox3.TabStop = False
         '
         'Banking_Card_Management
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1333, 594)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Credit_Card_btn)
         Me.Controls.Add(Me.Debit_Card_btn)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Logout_btn)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Banking_Card_Management"
         Me.Text = "CardManagement"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

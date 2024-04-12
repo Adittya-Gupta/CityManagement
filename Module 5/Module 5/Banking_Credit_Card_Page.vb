@@ -3,11 +3,12 @@ Public Class Banking_Credit_Card_Page
 
     Public bank_username As String = "admin"
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim conn As New MySqlConnection(connString)
     Dim bank_account_number As Integer = 123
     Private Sub Banking_Credit_Card_Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        banking_username = Global_Attributes.banking_username
 
         Try
             conn.Open()

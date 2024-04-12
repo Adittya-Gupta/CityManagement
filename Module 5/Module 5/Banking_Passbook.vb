@@ -13,15 +13,15 @@ Public Class Banking_Passbook
     Public SqlQuery As String
 
     ' Just change these to access local or online db
-    'Public server As String = "localhost"
-    'Public username As String = "root"
-    'Public password As String = "Aasneh18"
-    'Public database As String = "bankingdatabase"
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "Aasneh18"
+    Public database As String = "bankingdatabase"
 
-    Public server As String = "172.16.114.244"
-    Public username As String = "admin"
-    Public password As String = "nimda"
-    Public database As String = "banking_database"
+    ' Public server As String = "172.16.114.244"
+    ' Public username As String = "admin"
+    ' Public password As String = "nimda"
+    ' Public database As String = "banking_database"
 
     Public bank_account_no As String = "1"
     Public bank_username As String = Global_Attributes.banking_username
@@ -71,8 +71,8 @@ Public Class Banking_Passbook
         adapter.Fill(table)
 
         If table.Rows.Count = 1 Then
-            Label7.Text = table.Rows(0)(9).ToString()
-            Label8.Text = table.Rows(0)(10).ToString()
+            Label7.Text = table.Rows(0)("Balance").ToString()
+            Label8.Text = table.Rows(0)("CIBIL_Score").ToString()
         Else
             MessageBox.Show("Error has occured")
         End If
@@ -282,5 +282,13 @@ Public Class Banking_Passbook
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
 
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        RefreshDataGrid()
     End Sub
 End Class

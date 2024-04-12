@@ -104,7 +104,11 @@
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-
+        If NavBarCheck() Then
+            Return
+        End If
+        Banking_Card_Management.bank_username = Global_Attributes.banking_username
+        ChildForm(Panel1, Banking_Card_Management)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click

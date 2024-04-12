@@ -3,8 +3,28 @@
 Public Class Health_ViewAppointment
 
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim userID = 2
+    Private doctorID As Integer = 0 ' Global variable to store doctor ID
 
     Dim listView1 As New ListView()
+
+    Private Sub GetDoctorID()
+        Try
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+                Dim query As String = "SELECT doctor_id FROM Doctors WHERE user_id = @userID"
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@userID", userID)
+                    Dim result = command.ExecuteScalar()
+                    If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                        doctorID = Convert.ToInt32(result)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Error getting doctor ID: {ex.Message}")
+        End Try
+    End Sub
     Private Sub Health_ViewAppointment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listView1.Name = "listView1"
         listView1.Width = 1000 ' Set width to 1150
@@ -12,16 +32,17 @@ Public Class Health_ViewAppointment
         listView1.FullRowSelect = True ' Select entire row when clicked
         'listView1.BorderStyle = BorderStyle.None
         listView1.Font = New Font("Arial", 14)
-        listView1.Columns.Add("Appointment ID", 175)
-        listView1.Columns.Add("Patient Name", 330)
-        listView1.Columns.Add("Gender", 120)
-        listView1.Columns.Add("Date", 200)
-        listView1.Columns.Add("Time", 170)
+        listView1.Columns.Add("Appointment ID", 150)
+        listView1.Columns.Add("Patient Name", 250)
+        listView1.Columns.Add("Gender", 150)
+        listView1.Columns.Add("Date", 160)
+        listView1.Columns.Add("Time", 120)
+        listView1.Columns.Add("Status", 170)
         listView1.BackColor = ColorTranslator.FromHtml("#F5F1F1")
         listView1.HeaderStyle = ColumnHeaderStyle.Nonclickable ' Make column headers non-clickable
         listView1.HideSelection = True ' Remove highlighting effect after clicking
 
-        Dim queryString As String = "SELECT appointment_id, user_id, DATE(date) as date, time FROM hospitalAppointment"
+        Dim queryString As String = "SELECT appointment_id, user_id, DATE(date) as date, time , status FROM hospitalAppointment WHERE doctor_id = @doctorID"
 
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
@@ -32,18 +53,34 @@ Public Class Health_ViewAppointment
                 While reader.Read()
                     Dim userId As String = reader("user_id").ToString()
                     Dim userDetails As String() = GetUserDetails(userId, connectionString).Split(",")
-                    Dim row As New ListViewItem(New String() {reader("appointment_id").ToString(), userDetails(0), userDetails(1), Convert.ToDateTime(reader("date")).ToString("yyyy-MM-dd"), reader("time").ToString()})
+                    Dim status As String
+                    Select Case reader("status")
+                        Case 0
+                            status = "Booked"
+                        Case 1
+                            status = "Payment Pending"
+                        Case 2
+                            status = "Completed"
+                        Case Else
+                            status = "Unknown"
+                    End Select
+                    Dim row As New ListViewItem(New String() {reader("appointment_id").ToString(), userDetails(0), userDetails(1), Convert.ToDateTime(reader("date")).ToString("yyyy-MM-dd"), reader("time").ToString(), status})
                     listView1.Items.Add(row)
                 End While
             Finally
                 reader.Close()
             End Try
+
         End Using
 
+        'Dim row1 As New ListViewItem(New String() {"12021", "John Doe", "Male", "2024-02-15", "13:15"})
+        'Dim row2 As New ListViewItem(New String() {"22012", "Jane Smith", "Female", "2024-02-16", "14:20"})
+        'Dim row3 As New ListViewItem(New String() {"32321", "Emily Johnson", "Female", "2024-02-17", "09:45"})
+        'Dim row4 As New ListViewItem(New String() {"41234", "Michael Brown", "Male", "2024-02-18", "10:20"})
+        'listView1.Items.AddRange(New ListViewItem() {row1, row2, row3, row4})
+
         ' Set the location of the ListView
-        listView1.Location = New Point(44, 130) ' Set location to (30, 200)
-
-
+        listView1.Location = New Point(55, 130) ' Set location to (30, 200)
 
         ' Set the ListView's height to fit its content
         listView1.Height = (500) ' Add some extra space for aesthetics
@@ -51,8 +88,12 @@ Public Class Health_ViewAppointment
         ' Add the ListView to the form
         Me.Controls.Add(listView1)
 
+        ' Attach the event handler to the ListView's ItemActivate event
+        AddHandler listView1.ItemActivate, AddressOf ListView1_ItemActivate
+
         ' Bring the ListView to the front
         listView1.BringToFront()
+
     End Sub
 
     Private Function GetUserDetails(userId As String, connectionString As String) As String
@@ -70,6 +111,73 @@ Public Class Health_ViewAppointment
                 Return "User details not found"
             End If
         End Using
+    End Function
+
+    ' ListView ItemActivate event handler
+    Private Sub ListView1_ItemActivate(sender As Object, e As EventArgs)
+        If listView1.SelectedItems.Count > 0 Then
+            Dim selectedItem As ListViewItem = listView1.SelectedItems(0)
+            Dim statusColumnIndex As Integer = selectedItem.SubItems.Count - 1 ' Assuming status column is the last column
+            Dim currentStatus As Integer = GetStatusValue(selectedItem.SubItems(statusColumnIndex).Text)
+
+            If currentStatus < 2 Then ' Check if status is less than 2
+                If currentStatus = 1 Then ' Check if status is 1
+                    ' Call the payment function
+                    'Dim paymentResult As String = Payment()
+
+                    ' If payment is successful, update the status to 2; otherwise, keep it at 1
+                    'If paymentResult = "success" Then
+                    ' Update the status text
+                    'selectedItem.SubItems(statusColumnIndex).Text = GetStatusText(2)
+
+                    ' Update the status in the database
+                    'Dim appointmentId As String = selectedItem.SubItems(0).Text ' Assuming appointment ID is in the first column
+                    'UpdateStatusInDatabase(appointmentId, 2)
+                    'End If
+                End If
+                If currentStatus = 0 Then
+                    ' Increment the status value
+                    Dim newStatus As Integer = currentStatus + 1
+
+                    ' Update the status text
+                    selectedItem.SubItems(statusColumnIndex).Text = GetStatusText(newStatus)
+
+                    ' Update the status in the database
+                    Dim appointmentId As String = selectedItem.SubItems(0).Text ' Assuming appointment ID is in the first column
+                    UpdateStatusInDatabase(appointmentId, newStatus)
+                End If
+            End If
+        End If
+    End Sub
+
+
+
+    ' Function to get the status value from status text
+    Private Function GetStatusValue(statusText As String) As Integer
+        Select Case statusText
+            Case "Booked"
+                Return 0
+            Case "Payment Pending"
+                Return 1
+            Case "Completed"
+                Return 2
+            Case Else
+                Return -1 ' Unknown status
+        End Select
+    End Function
+
+    ' Function to get the status text from status value
+    Private Function GetStatusText(statusValue As Integer) As String
+        Select Case statusValue
+            Case 0
+                Return "Booked"
+            Case 1
+                Return "Payment Pending"
+            Case 2
+                Return "Completed"
+            Case Else
+                Return "Unknown"
+        End Select
     End Function
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
@@ -97,4 +205,18 @@ Public Class Health_ViewAppointment
             Temp2.ShowChildFormInPanel(listHospitals)
         End If
     End Sub
+
+    Private Sub UpdateStatusInDatabase(appointmentId As String, newStatus As Integer)
+        Dim queryString As String = "UPDATE hospitalAppointment SET status = @newStatus WHERE appointment_id = @appointmentId"
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            command.Parameters.AddWithValue("@newStatus", newStatus)
+            command.Parameters.AddWithValue("@appointmentId", appointmentId)
+            connection.Open()
+            command.ExecuteNonQuery()
+        End Using
+    End Sub
+
+
 End Class

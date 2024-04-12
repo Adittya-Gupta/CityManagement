@@ -31,7 +31,7 @@ Partial Class AllResults
         ' 
         Label1.BackColor = SystemColors.ActiveCaptionText
         Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(206, 84)
+        Label1.Location = New Point(163, 60)
         Label1.Name = "Label1"
         Label1.Size = New Size(220, 57)
         Label1.TabIndex = 0
@@ -46,14 +46,14 @@ Partial Class AllResults
         ComboBox1.ForeColor = SystemColors.InactiveBorder
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Education", "Health", "Transport", "Finance", "Home"})
-        ComboBox1.Location = New Point(458, 89)
+        ComboBox1.Location = New Point(423, 65)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(548, 49)
         ComboBox1.TabIndex = 1
         ' 
         ' Panel1
         ' 
-        Panel1.Location = New Point(111, 185)
+        Panel1.Location = New Point(42, 145)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(975, 574)
         Panel1.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class AllResults
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)
         Controls.Add(ComboBox1)
         Controls.Add(Label1)

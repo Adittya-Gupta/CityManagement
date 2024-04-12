@@ -10,6 +10,7 @@ Public Class viewNominees
     Private Sub LoadNominees()
         ' Clear existing controls
         Panel1.Controls.Clear()
+        Panel1.AutoScroll = True
 
         ' Establish connection to the database
         Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
@@ -45,7 +46,7 @@ Public Class viewNominees
                     ucNominee.Label3.Text = reader("Agenda").ToString()
 
                     ' Convert ProfilePic from byte array to Image and assign to PictureBox
-                    Dim imageData As Byte() = DirectCast(reader("ProfilePic"), Byte())
+                    Dim imageData As Byte() = If(reader("ProfilePic") Is DBNull.Value, Nothing, DirectCast(reader("ProfilePic"), Byte()))
                     If imageData IsNot Nothing Then
                         Using ms As New MemoryStream(imageData)
                             ucNominee.PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage

@@ -31,9 +31,9 @@ Partial Class EducationMinister
         ' 
         Panel1.AutoScroll = True
         Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Location = New Point(140, 223)
+        Panel1.Location = New Point(72, 142)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(931, 530)
+        Panel1.Size = New Size(931, 401)
         Panel1.TabIndex = 0
         ' 
         ' Label1
@@ -41,7 +41,7 @@ Partial Class EducationMinister
         Label1.BackColor = Color.Black
         Label1.Font = New Font("Segoe UI", 14F)
         Label1.ForeColor = SystemColors.ButtonHighlight
-        Label1.Location = New Point(893, 67)
+        Label1.Location = New Point(774, 40)
         Label1.Name = "Label1"
         Label1.Size = New Size(284, 63)
         Label1.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class EducationMinister
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1089, 713)
         Controls.Add(Label1)
         Controls.Add(Panel1)
         DoubleBuffered = True

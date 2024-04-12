@@ -157,6 +157,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking_Admin_Home.Designer.vb">
+      <DependentUpon>Banking_Admin_Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Admin_Login.Designer.vb">
+      <DependentUpon>Banking_Admin_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Admin_NewAccRegistration.Designer.vb">
+      <DependentUpon>Banking_Admin_NewAccRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_NewAccRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_Apply_Credit_Card.Designer.vb">
       <DependentUpon>Banking_Apply_Credit_Card.vb</DependentUpon>
     </Compile>
@@ -191,6 +209,12 @@
       <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
     </Compile>
     <Compile Include="Banking_LoanDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoanManagement.Designer.vb">
+      <DependentUpon>Banking_LoanManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoanManagement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_LoansApplication.designer.vb">
@@ -229,6 +253,18 @@
     <Compile Include="Banking_Queries_User.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Banking_QueryLog.Designer.vb">
+      <DependentUpon>Banking_QueryLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_QueryLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Draft.Designer.vb">
+      <DependentUpon>Email_Draft.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Draft.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Email_Landing.Designer.vb">
       <DependentUpon>Email_Landing.vb</DependentUpon>
     </Compile>
@@ -245,6 +281,12 @@
       <DependentUpon>Email_Register.vb</DependentUpon>
     </Compile>
     <Compile Include="Email_Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Panel.Designer.vb">
+      <DependentUpon>Banking_Panel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Panel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_Attributes.vb" />
@@ -358,6 +400,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Banking_Admin_Home.resx">
+      <DependentUpon>Banking_Admin_Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Admin_Login.resx">
+      <DependentUpon>Banking_Admin_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Admin_NewAccRegistration.resx">
+      <DependentUpon>Banking_Admin_NewAccRegistration.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_Apply_Credit_Card.resx">
       <DependentUpon>Banking_Apply_Credit_Card.vb</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_LoanDetails.resx">
       <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoanManagement.resx">
+      <DependentUpon>Banking_LoanManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_LoansApplication.resx">
       <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
@@ -394,6 +448,12 @@
     <EmbeddedResource Include="Banking_Queries_User.resx">
       <DependentUpon>Banking_Queries_User.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Banking_QueryLog.resx">
+      <DependentUpon>Banking_QueryLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Draft.resx">
+      <DependentUpon>Email_Draft.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Email_Landing.resx">
       <DependentUpon>Email_Landing.vb</DependentUpon>
     </EmbeddedResource>
@@ -402,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Email_Register.resx">
       <DependentUpon>Email_Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Panel.resx">
+      <DependentUpon>Banking_Panel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPanel.resx">
       <DependentUpon>MainPanel.vb</DependentUpon>

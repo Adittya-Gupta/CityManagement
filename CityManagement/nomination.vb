@@ -26,12 +26,12 @@ Public Class nomination
         mapping("Transportation Minister") = "Transportation Minister"
         mapping("Finance Minister") = "Finance Minister"
         mapping("Home Minister") = "Home Minister"
-        PayDeposit.FlatStyle = FlatStyle.Flat
-        PayDeposit.FlatAppearance.BorderSize = 0
-        PayDeposit.BackColor = System.Drawing.ColorTranslator.FromHtml("#0cb43b")
+        'PayDeposit.FlatStyle = FlatStyle.Flat
+        'PayDeposit.FlatAppearance.BorderSize = 0
+        'PayDeposit.BackColor = System.Drawing.ColorTranslator.FromHtml("#0cb43b")
         Agenda.BorderStyle = BorderStyle.None
         Agenda.BackColor = System.Drawing.ColorTranslator.FromHtml("#474544")
-        Minister.BackColor = System.Drawing.ColorTranslator.FromHtml("#f8f9fa")
+        Minister.BackColor = System.Drawing.ColorTranslator.FromHtml("#ffffff")
         Minister.ForeColor = System.Drawing.ColorTranslator.FromHtml("#612828")
         'To find the designation and correspondingly assign the labels text to that minister
         'For this we need mapping to what a person can contest to
@@ -43,9 +43,9 @@ Public Class nomination
                 Dim reader = cmd.ExecuteReader
                 reader.Read()
                 Designation = mapping(Convert.ToString(reader("Designation")))
+                Minister.Text = Designation
             End Using
         Catch ex As Exception
-
         Finally
             conn.Close()
         End Try
@@ -54,19 +54,19 @@ Public Class nomination
 
     Private Sub PayDeposit_Click(sender As Object, e As EventArgs) Handles PayDeposit.Click
         'Link banking database and banking forms for further process here
-        Dim paidDeposit As Boolean = True
+        Dim paidDeposit = True
 
 
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
-        If uploaded And Agenda.Text.Length() > 0 And paidDeposit Then
+        If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
             Try
                 conn.Open()
                 'To check if the nominee already present in the table
-                Dim query As String = "select SID from Nominees where SID=?"
+                Dim query = "select SID from Nominees where SID=?"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("?", idOfCurrentUser)
-                    Dim reader As MySqlDataReader = cmd.ExecuteReader()
-                    If reader.Read() Then
+                    Dim reader = cmd.ExecuteReader
+                    If reader.Read Then
                         MessageBox.Show("You have already entered your agenda and manifesto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     Else
@@ -82,7 +82,7 @@ Public Class nomination
             Try
                 conn.Open()
                 'To enter into the Nominees table
-                Dim query As String = "INSERT INTO Nominees (SID,Designation,Manifesto,VoteCount,Agenda) VALUES (@a,@b,@c,0,@d)"
+                Dim query = "INSERT INTO Nominees (SID,Designation,Manifesto,VoteCount,Agenda) VALUES (@a,@b,@c,0,@d)"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
                     cmd.Parameters.AddWithValue("@b", Designation)
@@ -91,22 +91,27 @@ Public Class nomination
                     cmd.ExecuteNonQuery()
                 End Using
                 MessageBox.Show("You have successfully nominated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim electiondashboard As New election_dashboard()
+                electiondashboard.Show()
+                Me.Hide()
             Catch ex As Exception
 
             Finally
                 conn.Close()
             End Try
+        Else
+            MessageBox.Show("Please recheck all the entered details!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
+        'Me.Hide()
     End Sub
 
     Private Sub UploadManifesto_Click(sender As Object, e As EventArgs) Handles UploadManifesto.Click
-        Dim openFileDialog As New OpenFileDialog()
+        Dim openFileDialog As New OpenFileDialog
         openFileDialog.Filter = "PDF files (*.pdf)|*.pdf"
         openFileDialog.Title = "Select a PDF File"
         ' Show the dialog and check if the user selected a file
-        If openFileDialog.ShowDialog() = DialogResult.OK Then
-            Dim selectedFileName As String = openFileDialog.FileName
+        If openFileDialog.ShowDialog = DialogResult.OK Then
+            Dim selectedFileName = openFileDialog.FileName
             ' Check if the selected file exists
             If File.Exists(selectedFileName) Then
                 fileContent = File.ReadAllBytes(selectedFileName)

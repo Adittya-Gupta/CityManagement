@@ -23,89 +23,80 @@ Partial Class votingPortal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(votingPortal))
-        Vote = New Button()
-        selectMinister = New ComboBox()
+        back = New Label()
+        Vote = New Label()
         Candidates = New Panel()
-        Label1 = New Label()
+        selectMinister = New ComboBox()
         NOTA = New Button()
         SuspendLayout()
         ' 
+        ' back
+        ' 
+        back.BackColor = Color.Transparent
+        back.Location = New Point(873, 19)
+        back.Name = "back"
+        back.Size = New Size(89, 34)
+        back.TabIndex = 10
+        ' 
         ' Vote
         ' 
-        Vote.BackColor = Color.FromArgb(CByte(0), CByte(2), CByte(135), CByte(64))
-        Vote.Font = New Font("Exo 2", 16F, FontStyle.Bold)
-        Vote.ForeColor = SystemColors.Control
-        Vote.Location = New Point(517, 668)
+        Vote.BackColor = Color.Transparent
+        Vote.Location = New Point(455, 552)
         Vote.Name = "Vote"
-        Vote.Size = New Size(204, 56)
-        Vote.TabIndex = 2
-        Vote.Text = "Vote"
-        Vote.UseVisualStyleBackColor = False
-        ' 
-        ' selectMinister
-        ' 
-        selectMinister.BackColor = Color.Black
-        selectMinister.DropDownStyle = ComboBoxStyle.DropDownList
-        selectMinister.Font = New Font("Exo 2", 27F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        selectMinister.ForeColor = Color.White
-        selectMinister.FormattingEnabled = True
-        selectMinister.Location = New Point(357, 65)
-        selectMinister.Name = "selectMinister"
-        selectMinister.Size = New Size(552, 62)
-        selectMinister.TabIndex = 3
+        Vote.Size = New Size(142, 34)
+        Vote.TabIndex = 11
         ' 
         ' Candidates
         ' 
-        Candidates.AutoScroll = True
-        Candidates.Location = New Point(42, 152)
+        Candidates.Location = New Point(167, 141)
         Candidates.Name = "Candidates"
-        Candidates.Size = New Size(1130, 499)
-        Candidates.TabIndex = 4
+        Candidates.Size = New Size(752, 370)
+        Candidates.TabIndex = 12
         ' 
-        ' Label1
+        ' selectMinister
         ' 
-        Label1.BackColor = Color.Black
-        Label1.Font = New Font("Exo 2", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.Transparent
-        Label1.Location = New Point(79, 77)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(254, 50)
-        Label1.TabIndex = 5
-        Label1.Text = "Select Ministry"
+        selectMinister.Font = New Font("Exo 2 Extra Bold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        selectMinister.FormattingEnabled = True
+        selectMinister.Location = New Point(345, 79)
+        selectMinister.Name = "selectMinister"
+        selectMinister.Size = New Size(438, 32)
+        selectMinister.TabIndex = 13
         ' 
         ' NOTA
         ' 
-        NOTA.BackColor = Color.FromArgb(CByte(0), CByte(2), CByte(135), CByte(64))
-        NOTA.Font = New Font("Exo 2", 16F, FontStyle.Bold)
-        NOTA.ForeColor = SystemColors.Control
-        NOTA.Location = New Point(968, 668)
+        NOTA.BackColor = Color.Red
+        NOTA.Font = New Font("Exo 2", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        NOTA.ForeColor = Color.White
+        NOTA.Location = New Point(790, 544)
         NOTA.Name = "NOTA"
-        NOTA.Size = New Size(204, 56)
-        NOTA.TabIndex = 6
+        NOTA.Size = New Size(159, 42)
+        NOTA.TabIndex = 14
         NOTA.Text = "NOTA"
         NOTA.UseVisualStyleBackColor = False
         ' 
         ' votingPortal
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1236, 873)
-        Controls.Add(selectMinister)
-        Controls.Add(Label1)
+        BackgroundImageLayout = ImageLayout.Zoom
+        ClientSize = New Size(1089, 713)
         Controls.Add(NOTA)
-        Controls.Add(Vote)
+        Controls.Add(selectMinister)
         Controls.Add(Candidates)
+        Controls.Add(Vote)
+        Controls.Add(back)
         DoubleBuffered = True
+        Font = New Font("Microsoft Sans Serif", 8.25F)
         Name = "votingPortal"
         Text = "votingPortal"
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents Vote As Button
-    Friend WithEvents selectMinister As ComboBox
+    Friend WithEvents back As Label
+    Friend WithEvents Vote As Label
     Friend WithEvents Candidates As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents selectMinister As ComboBox
     Friend WithEvents NOTA As Button
 End Class

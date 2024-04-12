@@ -23,68 +23,67 @@ Partial Class nomination
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nomination))
-        PayDeposit = New Button()
+        back = New Label()
+        UploadManifesto = New Label()
+        PayDeposit = New Label()
         Agenda = New RichTextBox()
         Minister = New Label()
-        UploadManifesto = New Button()
         SuspendLayout()
         ' 
-        ' PayDeposit
+        ' back
         ' 
-        PayDeposit.BackColor = Color.FromArgb(CByte(0), CByte(2), CByte(135), CByte(64))
-        PayDeposit.Font = New Font("Exo 2", 10F, FontStyle.Bold)
-        PayDeposit.ForeColor = SystemColors.Control
-        PayDeposit.Location = New Point(506, 638)
-        PayDeposit.Name = "PayDeposit"
-        PayDeposit.Size = New Size(249, 52)
-        PayDeposit.TabIndex = 1
-        PayDeposit.Text = "Pay Deposit"
-        PayDeposit.UseVisualStyleBackColor = False
-        ' 
-        ' Agenda
-        ' 
-        Agenda.Font = New Font("Exo 2", 10F)
-        Agenda.ForeColor = Color.White
-        Agenda.Location = New Point(304, 261)
-        Agenda.Name = "Agenda"
-        Agenda.Size = New Size(790, 177)
-        Agenda.TabIndex = 3
-        Agenda.Text = ""
-        ' 
-        ' Minister
-        ' 
-        Minister.BackColor = Color.WhiteSmoke
-        Minister.Font = New Font("Exo 2", 14F, FontStyle.Bold)
-        Minister.Location = New Point(696, 152)
-        Minister.Name = "Minister"
-        Minister.Size = New Size(345, 37)
-        Minister.TabIndex = 4
-        Minister.Text = "Label1"
+        back.BackColor = Color.Transparent
+        back.Location = New Point(860, 9)
+        back.Name = "back"
+        back.Size = New Size(89, 40)
+        back.TabIndex = 10
         ' 
         ' UploadManifesto
         ' 
         UploadManifesto.BackColor = Color.Transparent
-        UploadManifesto.BackgroundImage = CType(resources.GetObject("UploadManifesto.BackgroundImage"), Image)
-        UploadManifesto.BackgroundImageLayout = ImageLayout.None
-        UploadManifesto.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        UploadManifesto.ForeColor = Color.Transparent
-        UploadManifesto.Location = New Point(431, 521)
+        UploadManifesto.Location = New Point(183, 441)
         UploadManifesto.Name = "UploadManifesto"
-        UploadManifesto.Size = New Size(351, 73)
-        UploadManifesto.TabIndex = 5
-        UploadManifesto.UseVisualStyleBackColor = False
+        UploadManifesto.Size = New Size(271, 53)
+        UploadManifesto.TabIndex = 11
+        ' 
+        ' PayDeposit
+        ' 
+        PayDeposit.BackColor = Color.Transparent
+        PayDeposit.Location = New Point(732, 441)
+        PayDeposit.Name = "PayDeposit"
+        PayDeposit.Size = New Size(193, 53)
+        PayDeposit.TabIndex = 12
+        ' 
+        ' Agenda
+        ' 
+        Agenda.Font = New Font("Exo 2", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Agenda.Location = New Point(186, 234)
+        Agenda.Name = "Agenda"
+        Agenda.Size = New Size(739, 167)
+        Agenda.TabIndex = 13
+        Agenda.Text = ""
+        ' 
+        ' Minister
+        ' 
+        Minister.BackColor = Color.White
+        Minister.Location = New Point(594, 66)
+        Minister.Name = "Minister"
+        Minister.Size = New Size(355, 40)
+        Minister.TabIndex = 14
         ' 
         ' nomination
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1236, 873)
-        Controls.Add(UploadManifesto)
+        BackgroundImageLayout = ImageLayout.Zoom
+        ClientSize = New Size(1089, 713)
         Controls.Add(Minister)
         Controls.Add(Agenda)
         Controls.Add(PayDeposit)
+        Controls.Add(UploadManifesto)
+        Controls.Add(back)
         DoubleBuffered = True
         ForeColor = Color.Transparent
         Name = "nomination"
@@ -92,8 +91,9 @@ Partial Class nomination
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents PayDeposit As Button
+    Friend WithEvents back As Label
+    Friend WithEvents UploadManifesto As Label
+    Friend WithEvents PayDeposit As Label
     Friend WithEvents Agenda As RichTextBox
     Friend WithEvents Minister As Label
-    Friend WithEvents UploadManifesto As Button
 End Class

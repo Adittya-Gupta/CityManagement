@@ -23,29 +23,52 @@ Partial Class electionResults
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(electionResults))
+        back = New Label()
+        Label1 = New Label()
         Candidates = New Panel()
         SuspendLayout()
         ' 
+        ' back
+        ' 
+        back.BackColor = Color.Transparent
+        back.Location = New Point(500, 336)
+        back.Name = "back"
+        back.Size = New Size(89, 40)
+        back.TabIndex = 10
+        ' 
+        ' Label1
+        ' 
+        Label1.BackColor = Color.Transparent
+        Label1.Location = New Point(863, -1)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(89, 40)
+        Label1.TabIndex = 11
+        ' 
         ' Candidates
         ' 
-        Candidates.Location = New Point(12, 161)
+        Candidates.Location = New Point(153, 130)
         Candidates.Name = "Candidates"
-        Candidates.Size = New Size(1133, 494)
-        Candidates.TabIndex = 0
+        Candidates.Size = New Size(765, 375)
+        Candidates.TabIndex = 12
         ' 
         ' electionResults
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1236, 873)
+        BackgroundImageLayout = ImageLayout.Zoom
+        ClientSize = New Size(1089, 713)
         Controls.Add(Candidates)
+        Controls.Add(Label1)
+        Controls.Add(back)
         DoubleBuffered = True
         Name = "electionResults"
         Text = "electionResults"
         ResumeLayout(False)
     End Sub
 
+    Friend WithEvents back As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Candidates As Panel
 End Class

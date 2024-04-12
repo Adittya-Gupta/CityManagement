@@ -7,6 +7,11 @@ Public Class votingPortal
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim idOfCurrentUser As Integer = 984571
+    'Input to the form is SID
+    'Public Sub New(ByVal userInput As Integer)
+    '   InitializeComponent()
+    '   Me.idOfCurrentUser = userInput
+    'End Sub
     Private candidateDetailsList As New List(Of candidateDetails)
     Private userVotes As New Dictionary(Of String, Integer)()
     Dim currentDesignation As String
@@ -14,11 +19,7 @@ Public Class votingPortal
         InitializeComponent()
         ComponentInfo.SetLicense("YOUR_LICENSE_KEY")
     End Sub
-
     Private Sub votingPortal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Vote.FlatStyle = FlatStyle.Flat
-        Vote.FlatAppearance.BorderSize = 0
-        Vote.BackColor = System.Drawing.ColorTranslator.FromHtml("#5e8ab7")
         NOTA.FlatStyle = FlatStyle.Flat
         NOTA.FlatAppearance.BorderSize = 0
         NOTA.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000")
@@ -72,18 +73,18 @@ Public Class votingPortal
     Private Sub selectMinister_SelectedIndexChanged(sender As Object, e As EventArgs) Handles selectMinister.SelectedIndexChanged
         Candidates.Controls.Clear()
         candidateDetailsList.Clear()
-        Dim previousControlBottom As Integer = 0
+        Dim previousControlBottom = 0
         Select Case selectMinister.SelectedIndex
             Case 0
                 Try
                     conn.Open()
-                    Dim query As String = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
+                    Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@a", "Education Minister")
                         currentDesignation = "Education Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
-                            Dim candidate As New candidateDetails()
+                            Dim candidate As New candidateDetails
                             candidateDetailsList.Add(candidate)
                             candidate.Dock = DockStyle.None
                             candidate.Width = Candidates.Width
@@ -91,6 +92,9 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
+                            If userVotes("Education Minister") Then
+                                candidate.CheckBox.Checked = True
+                            End If
                             previousControlBottom = candidate.Bottom
                             Candidates.Controls.Add(candidate)
                         End While
@@ -103,13 +107,13 @@ Public Class votingPortal
             Case 1
                 Try
                     conn.Open()
-                    Dim query As String = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
+                    Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@a", "Transportation Minister")
                         currentDesignation = "Transportation Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
-                            Dim candidate As New candidateDetails()
+                            Dim candidate As New candidateDetails
                             candidateDetailsList.Add(candidate)
                             candidate.Dock = DockStyle.None
                             candidate.Width = Candidates.Width
@@ -117,6 +121,9 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
+                            If userVotes("Transportation Minister") Then
+                                candidate.CheckBox.Checked = True
+                            End If
                             previousControlBottom = candidate.Bottom
                             Candidates.Controls.Add(candidate)
                         End While
@@ -129,13 +136,13 @@ Public Class votingPortal
             Case 2
                 Try
                     conn.Open()
-                    Dim query As String = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
+                    Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@a", "Health Minister")
                         currentDesignation = "Health Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
-                            Dim candidate As New candidateDetails()
+                            Dim candidate As New candidateDetails
                             candidateDetailsList.Add(candidate)
                             candidate.Dock = DockStyle.None
                             candidate.Width = Candidates.Width
@@ -143,6 +150,9 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
+                            If userVotes("Health Minister") Then
+                                candidate.CheckBox.Checked = True
+                            End If
                             previousControlBottom = candidate.Bottom
                             Candidates.Controls.Add(candidate)
                         End While
@@ -155,13 +165,13 @@ Public Class votingPortal
             Case 3
                 Try
                     conn.Open()
-                    Dim query As String = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
+                    Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@a", "Finance Minister")
                         currentDesignation = "Finance Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
-                            Dim candidate As New candidateDetails()
+                            Dim candidate As New candidateDetails
                             candidateDetailsList.Add(candidate)
                             candidate.Dock = DockStyle.None
                             candidate.Width = Candidates.Width
@@ -169,6 +179,9 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
+                            If userVotes("Finance Minister") Then
+                                candidate.CheckBox.Checked = True
+                            End If
                             previousControlBottom = candidate.Bottom
                             Candidates.Controls.Add(candidate)
                         End While
@@ -181,13 +194,13 @@ Public Class votingPortal
             Case 4
                 Try
                     conn.Open()
-                    Dim query As String = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
+                    Dim query = "select Name,Agenda,Nominees.SID as SID from Nominees INNER JOIN User on Nominees.SID=User.SID where Nominees.Designation=@a"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@a", "Home Minister")
                         currentDesignation = "Home Minister"
                         Dim reader = cmd.ExecuteReader
                         While reader.Read
-                            Dim candidate As New candidateDetails()
+                            Dim candidate As New candidateDetails
                             candidateDetailsList.Add(candidate)
                             candidate.Dock = DockStyle.None
                             candidate.Width = Candidates.Width
@@ -195,18 +208,19 @@ Public Class votingPortal
                             candidate.AgendaContent = Convert.ToString(reader("Agenda"))
                             candidate.NomineeName = Convert.ToString(reader("Name"))
                             candidate.NomineeSID = Convert.ToInt32(reader("SID"))
+                            If userVotes("Home Minister") Then
+                                candidate.CheckBox.Checked = True
+                            End If
                             previousControlBottom = candidate.Bottom
                             Candidates.Controls.Add(candidate)
                         End While
                     End Using
                 Catch ex As Exception
-
                 Finally
                     conn.Close()
                 End Try
         End Select
-
-        For Each candidateDetail As candidateDetails In candidateDetailsList
+        For Each candidateDetail In candidateDetailsList
             AddHandler candidateDetail.CheckBoxCheckedChanged, AddressOf CheckBoxUserControl_CheckedChanged
         Next
     End Sub
@@ -214,7 +228,6 @@ Public Class votingPortal
     Private Sub CheckBoxUserControl_CheckedChanged(sender As Object, e As EventArgs)
         ' Cast the sender to candidateDetails
         Dim clickedControl As candidateDetails = DirectCast(sender, candidateDetails)
-
         ' If the clicked control is checked, uncheck all other controls
         If clickedControl.Checked Then
             ' Iterate through the candidateDetailsList
@@ -228,13 +241,12 @@ Public Class votingPortal
             userVotes(currentDesignation) = clickedControl.NomineeSID
             'MessageBox.Show(userVotes(currentDesignation), currentDesignation)
         Else
-
         End If
     End Sub
 
-    Private Sub NOTAButton_Click(sender As Object, e As EventArgs) Handles NOTA.Click
+    Private Sub NOTAButton_Click(sender As Object, e As EventArgs)
         ' Clear all checkboxes in the list
-        For Each ctrl As candidateDetails In candidateDetailsList
+        For Each ctrl In candidateDetailsList
             ctrl.Checked = False
         Next
         userVotes(currentDesignation) = -1
@@ -242,7 +254,7 @@ Public Class votingPortal
     Private Sub Vote_Click(sender As Object, e As EventArgs) Handles Vote.Click
         Try
             conn.Open()
-            Dim query As String = "update Voters set Health=@a,Education=@b,Muncipal=@c,Commerce=@d,Transportation=@e where SID=@f"
+            Dim query = "update Voters set Health=@a,Education=@b,Muncipal=@c,Commerce=@d,Transportation=@e where SID=@f"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@f", idOfCurrentUser)
                 cmd.Parameters.AddWithValue("@a", userVotes("Health Minister"))
@@ -252,7 +264,7 @@ Public Class votingPortal
                 cmd.Parameters.AddWithValue("@e", userVotes("Transportation Minister"))
                 cmd.ExecuteNonQuery()
             End Using
-            MessageBox.Show("Your Vote was successfully registered(No Vote then NOTA).Thanks for Voting.Every Vote Counts!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Your Vote was successfully registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             If userVotes("Health Minister") >= 0 Then
                 query = "update Nominees set VoteCount = VoteCount + 1 where SID=@a"
                 Using cmd As New MySqlCommand(query, conn)
@@ -293,6 +305,11 @@ Public Class votingPortal
         Finally
             conn.Close()
         End Try
+        Hide()
+    End Sub
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Dim electiondashboard As New election_dashboard()
+        electiondashboard.show()
         Me.Hide()
     End Sub
 End Class

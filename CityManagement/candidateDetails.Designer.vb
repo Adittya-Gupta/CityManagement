@@ -36,15 +36,15 @@ Partial Class candidateDetails
         Name2.BackColor = Color.Black
         Name2.Font = New Font("Exo 2", 11F, FontStyle.Bold)
         Name2.ForeColor = Color.White
-        Name2.Location = New Point(178, 53)
+        Name2.Location = New Point(135, 50)
         Name2.Name = "Name2"
-        Name2.Size = New Size(151, 25)
+        Name2.Size = New Size(142, 25)
         Name2.TabIndex = 0
         ' 
         ' CheckBox
         ' 
         CheckBox.BackColor = Color.Black
-        CheckBox.Location = New Point(292, 20)
+        CheckBox.Location = New Point(259, 20)
         CheckBox.Name = "CheckBox"
         CheckBox.Size = New Size(37, 30)
         CheckBox.TabIndex = 1
@@ -52,28 +52,29 @@ Partial Class candidateDetails
         ' 
         ' Agenda
         ' 
-        Agenda.BackColor = Color.Black
+        Agenda.BackColor = Color.White
         Agenda.Font = New Font("Exo 2", 11F, FontStyle.Bold)
-        Agenda.Location = New Point(529, 24)
+        Agenda.ForeColor = Color.Black
+        Agenda.Location = New Point(366, 53)
         Agenda.Name = "Agenda"
-        Agenda.Size = New Size(470, 119)
+        Agenda.Size = New Size(499, 78)
         Agenda.TabIndex = 2
         ' 
         ' OpenManifesto
         ' 
         OpenManifesto.BackColor = Color.Transparent
-        OpenManifesto.Location = New Point(166, 94)
+        OpenManifesto.Location = New Point(154, 75)
         OpenManifesto.Name = "OpenManifesto"
-        OpenManifesto.Size = New Size(163, 37)
+        OpenManifesto.Size = New Size(142, 37)
         OpenManifesto.TabIndex = 3
         ' 
         ' profilePhoto
         ' 
         profilePhoto.BackgroundImage = CType(resources.GetObject("profilePhoto.BackgroundImage"), Image)
         profilePhoto.BackgroundImageLayout = ImageLayout.Stretch
-        profilePhoto.Location = New Point(40, 39)
+        profilePhoto.Location = New Point(20, 20)
         profilePhoto.Name = "profilePhoto"
-        profilePhoto.Size = New Size(108, 92)
+        profilePhoto.Size = New Size(109, 111)
         profilePhoto.TabIndex = 4
         profilePhoto.TabStop = False
         ' 
@@ -91,7 +92,7 @@ Partial Class candidateDetails
         DoubleBuffered = True
         ForeColor = Color.White
         Name = "candidateDetails"
-        Size = New Size(1128, 180)
+        Size = New Size(933, 152)
         CType(profilePhoto, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub

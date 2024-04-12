@@ -39,54 +39,54 @@ Partial Class ministerDetails
         Name2.ForeColor = Color.White
         Name2.Location = New Point(160, 43)
         Name2.Name = "Name2"
-        Name2.Size = New Size(173, 25)
+        Name2.Size = New Size(146, 25)
         Name2.TabIndex = 1
         ' 
         ' OpenManifesto
         ' 
         OpenManifesto.BackColor = Color.Transparent
-        OpenManifesto.Location = New Point(170, 78)
+        OpenManifesto.Location = New Point(137, 84)
         OpenManifesto.Name = "OpenManifesto"
         OpenManifesto.Size = New Size(163, 37)
         OpenManifesto.TabIndex = 4
         ' 
         ' Ministry
         ' 
-        Ministry.BackColor = Color.Black
+        Ministry.BackColor = Color.White
         Ministry.Font = New Font("Exo 2", 11F, FontStyle.Bold)
-        Ministry.ForeColor = Color.White
-        Ministry.Location = New Point(539, 29)
+        Ministry.ForeColor = Color.Black
+        Ministry.Location = New Point(501, 14)
         Ministry.Name = "Ministry"
         Ministry.Size = New Size(366, 39)
         Ministry.TabIndex = 5
         ' 
         ' VoteCount
         ' 
-        VoteCount.BackColor = Color.Black
+        VoteCount.BackColor = Color.White
         VoteCount.Font = New Font("Exo 2", 11F, FontStyle.Bold)
-        VoteCount.ForeColor = Color.White
-        VoteCount.Location = New Point(607, 78)
+        VoteCount.ForeColor = Color.Black
+        VoteCount.Location = New Point(623, 90)
         VoteCount.Name = "VoteCount"
-        VoteCount.Size = New Size(47, 25)
+        VoteCount.Size = New Size(47, 31)
         VoteCount.TabIndex = 6
         ' 
         ' VictoryMargin
         ' 
-        VictoryMargin.BackColor = Color.Black
+        VictoryMargin.BackColor = Color.White
         VictoryMargin.Font = New Font("Exo 2", 11F, FontStyle.Bold)
-        VictoryMargin.ForeColor = Color.White
-        VictoryMargin.Location = New Point(827, 78)
+        VictoryMargin.ForeColor = Color.Black
+        VictoryMargin.Location = New Point(727, 53)
         VictoryMargin.Name = "VictoryMargin"
-        VictoryMargin.Size = New Size(56, 25)
+        VictoryMargin.Size = New Size(56, 31)
         VictoryMargin.TabIndex = 7
         ' 
         ' profilePhoto
         ' 
         profilePhoto.BackgroundImage = CType(resources.GetObject("profilePhoto.BackgroundImage"), Image)
         profilePhoto.BackgroundImageLayout = ImageLayout.Stretch
-        profilePhoto.Location = New Point(33, 23)
+        profilePhoto.Location = New Point(23, 29)
         profilePhoto.Name = "profilePhoto"
-        profilePhoto.Size = New Size(108, 92)
+        profilePhoto.Size = New Size(108, 104)
         profilePhoto.TabIndex = 8
         profilePhoto.TabStop = False
         ' 
@@ -103,7 +103,7 @@ Partial Class ministerDetails
         Controls.Add(OpenManifesto)
         Controls.Add(Name2)
         Name = "ministerDetails"
-        Size = New Size(1128, 158)
+        Size = New Size(947, 150)
         CType(profilePhoto, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub

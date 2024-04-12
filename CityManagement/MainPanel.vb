@@ -1,8 +1,14 @@
 ﻿Public Class MainPanel
 
+
+
     'Make this form full screen
-    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+    Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged, MyBase.Load
+        If Me.Visible Then
+            Me.WindowState = FormWindowState.Maximized
+            mypanel.Panel1 = Panel1
+            Button1_Click(sender, e)
+        End If
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
@@ -33,6 +39,22 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New User_Profile
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_MainMenu
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

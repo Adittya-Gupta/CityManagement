@@ -25,6 +25,7 @@ Public Class FestivalEvents_MainMenu
         ' Hide the title bar
         Me.Text = String.Empty
         Me.ControlBox = False
+        Me.WindowState = FormWindowState.Maximized
 
         ' Clear existing controls
         FlowLayoutPanel1.Controls.Clear()

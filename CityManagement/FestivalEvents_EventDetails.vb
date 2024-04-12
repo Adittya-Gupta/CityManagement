@@ -19,6 +19,7 @@ Public Class FestivalEvents_EventDetails
         'Button2.Visible = False
         'Button3.Visible = False
         'Button4.Visible = False
+        'Button5.Visible = False
 
 
         Dim designation As String = ""

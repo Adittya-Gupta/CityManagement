@@ -5,7 +5,7 @@
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged, MyBase.Load
         If Me.Visible Then
-            Me.WindowState = FormWindowState.Maximized
+            'Me.WindowState = FormWindowState.Maximized
             mypanel.Panel1 = Panel1
             Button1_Click(sender, e)
         End If

@@ -63,6 +63,7 @@ Partial Class electionResults
         Controls.Add(Label1)
         Controls.Add(back)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "electionResults"
         Text = "electionResults"
         ResumeLayout(False)

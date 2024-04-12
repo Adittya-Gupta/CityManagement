@@ -17,8 +17,15 @@ Public Class admin_home
 
         ' Create an instance of admin_Mayor form
         'Dim adminMayorForm As New admin_Mayor()
+        ' mypanel.Panel1.Controls.Clear()
+        ' Dim form As New admin_Mayor
+        ' Form.TopLevel = False
+        ' mypanel.Panel1.Controls.Add(form)
+        ' Form.Show()
+
         mypanel.Panel1.Controls.Clear()
-        Dim form As New admin_Mayor
+        Dim form As New election_dashboard()
+
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
         form.Show()
@@ -73,7 +80,8 @@ Public Class admin_home
                     While reader.Read()
                         Dim nameValue As String = reader("Name").ToString()
                         Dim designationValue As String = reader("Designation").ToString()
-                        Dim profilePicValue As Byte() = DirectCast(reader("ProfilePic"), Byte())
+                        Dim profilePicValue As Byte() = If(reader("ProfilePic") Is DBNull.Value, Nothing, DirectCast(reader("ProfilePic"), Byte()))
+
 
                         ' Display the profile picture in the corresponding PictureBox control based on designation
                         Select Case designationValue

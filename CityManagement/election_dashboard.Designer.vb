@@ -123,6 +123,7 @@ Partial Class election_dashboard
         Controls.Add(nomination_rules)
         Controls.Add(voting_portal)
         Controls.Add(apply_to_become_voter)
+        FormBorderStyle = FormBorderStyle.None
         Name = "election_dashboard"
         Text = "election_dashboard"
         ResumeLayout(False)

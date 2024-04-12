@@ -71,6 +71,7 @@ Partial Class viewNominees
         Controls.Add(Label1)
         DoubleBuffered = True
         ForeColor = SystemColors.ButtonHighlight
+        FormBorderStyle = FormBorderStyle.None
         Name = "viewNominees"
         Text = "viewNominees"
         ResumeLayout(False)

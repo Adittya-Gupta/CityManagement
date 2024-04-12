@@ -54,6 +54,7 @@ Partial Class electionPortal
         Controls.Add(back)
         Controls.Add(apply)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "electionPortal"
         Text = "electionPortal"
         ResumeLayout(False)

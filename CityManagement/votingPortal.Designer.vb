@@ -55,11 +55,11 @@ Partial Class votingPortal
         ' 
         ' selectMinister
         ' 
-        selectMinister.Font = New Font("Exo 2 Extra Bold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        selectMinister.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         selectMinister.FormattingEnabled = True
         selectMinister.Location = New Point(332, 75)
         selectMinister.Name = "selectMinister"
-        selectMinister.Size = New Size(438, 32)
+        selectMinister.Size = New Size(438, 33)
         selectMinister.TabIndex = 13
         ' 
         ' NOTA
@@ -85,6 +85,7 @@ Partial Class votingPortal
         Controls.Add(back)
         DoubleBuffered = True
         Font = New Font("Microsoft Sans Serif", 8.25F)
+        FormBorderStyle = FormBorderStyle.None
         Name = "votingPortal"
         Text = "votingPortal"
         ResumeLayout(False)

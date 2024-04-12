@@ -43,6 +43,7 @@ Partial Class voting_rules
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1089, 713)
         Controls.Add(back)
+        FormBorderStyle = FormBorderStyle.None
         Name = "voting_rules"
         Text = "voting_rules"
         ResumeLayout(False)

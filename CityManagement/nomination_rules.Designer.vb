@@ -43,6 +43,7 @@ Partial Class nomination_rules
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1089, 713)
         Controls.Add(back)
+        FormBorderStyle = FormBorderStyle.None
         Name = "nomination_rules"
         Text = "nomination_rules"
         ResumeLayout(False)

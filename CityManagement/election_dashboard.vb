@@ -155,9 +155,15 @@ Public Class election_dashboard
 
     Private Sub voting_portal_Click(sender As Object, e As EventArgs) Handles voting_portal.Click
         If alreadyVoter And isVotingPeriod And Not hasVoted Then
-            Dim voting_portal As New votingPortal()
-            voting_portal.Show()
-            Me.Hide()
+            'Dim voting_portal As New votingPortal()
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New votingPortal()
+
+            form.TopLevel = False
+            mypanel.Panel1.Controls.Add(form)
+            form.Show()
+
+
         ElseIf Not isVotingPeriod Then
             MessageBox.Show("This is not voting period.Please try when its voting period", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf Not alreadyVoter Then
@@ -168,15 +174,27 @@ Public Class election_dashboard
     End Sub
 
     Private Sub nomination_rules_Click(sender As Object, e As EventArgs) Handles nomination_rules.Click
-        Dim nominationrules As New nomination_rules()
-        nominationrules.Show()
-        Me.Hide()
+        ' Dim nominationrules As New nomination_rules()
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New nomination_rules()
+
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+
+
     End Sub
 
     Private Sub voting_rules_Click(sender As Object, e As EventArgs) Handles voting_rules.Click
-        Dim votingrules As New voting_rules()
-        votingrules.Show()
-        Me.Hide()
+        ' Dim votingrules As New voting_rules()
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New voting_rules()
+
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+        ' votingrules.Show()
+
     End Sub
 
     Private Sub nomination_portal_Click(sender As Object, e As EventArgs) Handles nomination_portal.Click
@@ -193,19 +211,37 @@ Public Class election_dashboard
 
     Private Sub nominees_details_Click(sender As Object, e As EventArgs) Handles nominees_details.Click
         'Nominee details form to be shown here
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New viewNominees()
+
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub results_portal_Click(sender As Object, e As EventArgs) Handles results_portal.Click
         If resultsReleased Then
-            Dim electionresults As New electionResults()
-            electionresults.Show()
-            Me.Hide()
+            ' Dim electionresults As New electionResults()
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New electionResults()
+
+            form.TopLevel = False
+            mypanel.Panel1.Controls.Add(form)
+            form.Show()
+            ' electionresults.Show()
+            ' Me.Hide()
         Else
             MessageBox.Show("The election results are not yet released", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         'show the administration form here
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New admin_home()
+
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub AllResults_Click(sender As Object, e As EventArgs) Handles AllResults.Click

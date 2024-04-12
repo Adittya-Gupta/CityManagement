@@ -184,6 +184,30 @@
     <Compile Include="Banking_Homepage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Banking_LoanDetails.designer.vb">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoanDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansApplication.designer.vb">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.designer.vb">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.designer.vb">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Banking_Main.Designer.vb">
       <DependentUpon>Banking_Main.vb</DependentUpon>
     </Compile>
@@ -270,6 +294,12 @@
     <Compile Include="Newsletter_AddNews.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Newsletter_articlespage.designer.vb">
+      <DependentUpon>Newsletter_articlespage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_articlespage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Newsletter_Editor.Designer.vb">
       <DependentUpon>Newsletter_Editor.vb</DependentUpon>
     </Compile>
@@ -340,6 +370,18 @@
     <EmbeddedResource Include="Banking_Homepage.resx">
       <DependentUpon>Banking_Homepage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoanDetails.resx">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansApplication.resx">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansHomepage.resx">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansPayNow.resx">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Banking_Main.resx">
       <DependentUpon>Banking_Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_AddNews.resx">
       <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_articlespage.resx">
+      <DependentUpon>Newsletter_articlespage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_Editor.resx">
       <DependentUpon>Newsletter_Editor.vb</DependentUpon>

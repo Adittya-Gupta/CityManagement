@@ -49,120 +49,12 @@ Partial Class Banking_LoanDetails
         Me.Submit_btn = New System.Windows.Forms.Button()
         Me.RichTextBox10 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
-
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(1163, 17)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(371, 36)
-        Me.TextBox2.TabIndex = 19
-        Me.TextBox2.Text = "Welcome to Personal Internet Banking."
         '
-        'TextBox1
+        'Label1
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(93, 11)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(319, 38)
-        Me.TextBox1.TabIndex = 18
-        Me.TextBox1.Text = "CITY BANK"
-        '
-        'Logout_btn
-        '
-        Me.Logout_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Logout_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logout_btn.ForeColor = System.Drawing.Color.White
-        Me.Logout_btn.Location = New System.Drawing.Point(1422, 78)
-        Me.Logout_btn.Name = "Logout_btn"
-        Me.Logout_btn.Size = New System.Drawing.Size(112, 39)
-        Me.Logout_btn.TabIndex = 34
-        Me.Logout_btn.Text = "Logout"
-        Me.Logout_btn.UseVisualStyleBackColor = False
-        '
-        'Passbook_btn
-        '
-        Me.Passbook_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Passbook_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Passbook_btn.ForeColor = System.Drawing.Color.White
-        Me.Passbook_btn.Location = New System.Drawing.Point(667, 78)
-        Me.Passbook_btn.Name = "Passbook_btn"
-        Me.Passbook_btn.Size = New System.Drawing.Size(119, 39)
-        Me.Passbook_btn.TabIndex = 33
-        Me.Passbook_btn.Text = "Passbook"
-        Me.Passbook_btn.UseVisualStyleBackColor = False
-        '
-        'ContactUs_btn
-        '
-        Me.ContactUs_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ContactUs_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactUs_btn.ForeColor = System.Drawing.Color.White
-        Me.ContactUs_btn.Location = New System.Drawing.Point(805, 78)
-        Me.ContactUs_btn.Name = "ContactUs_btn"
-        Me.ContactUs_btn.Size = New System.Drawing.Size(122, 39)
-        Me.ContactUs_btn.TabIndex = 32
-        Me.ContactUs_btn.Text = "Contact Us"
-        Me.ContactUs_btn.UseVisualStyleBackColor = False
-        '
-        'MoneyTransfer_btn
-        '
-        Me.MoneyTransfer_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.MoneyTransfer_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MoneyTransfer_btn.ForeColor = System.Drawing.Color.White
-        Me.MoneyTransfer_btn.Location = New System.Drawing.Point(266, 78)
-        Me.MoneyTransfer_btn.Name = "MoneyTransfer_btn"
-        Me.MoneyTransfer_btn.Size = New System.Drawing.Size(171, 39)
-        Me.MoneyTransfer_btn.TabIndex = 31
-        Me.MoneyTransfer_btn.Text = "Money Transfer"
-        Me.MoneyTransfer_btn.UseVisualStyleBackColor = False
-        '
-        'CreditCard_btn
-        '
-        Me.CreditCard_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.CreditCard_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CreditCard_btn.ForeColor = System.Drawing.Color.White
-        Me.CreditCard_btn.Location = New System.Drawing.Point(458, 78)
-        Me.CreditCard_btn.Name = "CreditCard_btn"
-        Me.CreditCard_btn.Size = New System.Drawing.Size(186, 39)
-        Me.CreditCard_btn.TabIndex = 30
-        Me.CreditCard_btn.Text = "Credit/Debit Card"
-        Me.CreditCard_btn.UseVisualStyleBackColor = False
-        '
-        'Loans_btn
-        '
-        Me.Loans_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Loans_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Loans_btn.ForeColor = System.Drawing.Color.White
-        Me.Loans_btn.Location = New System.Drawing.Point(148, 78)
-        Me.Loans_btn.Name = "Loans_btn"
-        Me.Loans_btn.Size = New System.Drawing.Size(98, 39)
-        Me.Loans_btn.TabIndex = 29
-        Me.Loans_btn.Text = "Loans"
-        Me.Loans_btn.UseVisualStyleBackColor = False
-        '
-        'Home_btn
-        '
-        Me.Home_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Home_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Home_btn.ForeColor = System.Drawing.Color.White
-        Me.Home_btn.Location = New System.Drawing.Point(25, 78)
-        Me.Home_btn.Name = "Home_btn"
-        Me.Home_btn.Size = New System.Drawing.Size(98, 39)
-        Me.Home_btn.TabIndex = 28
-        Me.Home_btn.Text = "Home"
-        Me.Home_btn.UseVisualStyleBackColor = False
-
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(45, 71)
+        Me.Label1.Location = New System.Drawing.Point(49, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(64, 25)
         Me.Label1.TabIndex = 35
@@ -171,7 +63,7 @@ Partial Class Banking_LoanDetails
         'Name_tb
         '
         Me.Name_tb.BackColor = System.Drawing.Color.White
-        Me.Name_tb.Location = New System.Drawing.Point(126, 71)
+        Me.Name_tb.Location = New System.Drawing.Point(130, 79)
         Me.Name_tb.Name = "Name_tb"
         Me.Name_tb.Size = New System.Drawing.Size(294, 41)
         Me.Name_tb.TabIndex = 36
@@ -180,7 +72,7 @@ Partial Class Banking_LoanDetails
         'ACno_tb
         '
         Me.ACno_tb.BackColor = System.Drawing.Color.White
-        Me.ACno_tb.Location = New System.Drawing.Point(126, 137)
+        Me.ACno_tb.Location = New System.Drawing.Point(130, 145)
         Me.ACno_tb.Name = "ACno_tb"
         Me.ACno_tb.Size = New System.Drawing.Size(294, 41)
         Me.ACno_tb.TabIndex = 38
@@ -190,7 +82,7 @@ Partial Class Banking_LoanDetails
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(45, 137)
+        Me.Label2.Location = New System.Drawing.Point(49, 145)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 25)
         Me.Label2.TabIndex = 37
@@ -202,7 +94,7 @@ Partial Class Banking_LoanDetails
         Me.Label3.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(774, 185)
+        Me.Label3.Location = New System.Drawing.Point(684, 192)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 25)
         Me.Label3.TabIndex = 39
@@ -211,9 +103,9 @@ Partial Class Banking_LoanDetails
         'Purpose_tb
         '
         Me.Purpose_tb.BackColor = System.Drawing.Color.White
-        Me.Purpose_tb.Location = New System.Drawing.Point(122, 201)
+        Me.Purpose_tb.Location = New System.Drawing.Point(126, 209)
         Me.Purpose_tb.Name = "Purpose_tb"
-        Me.Purpose_tb.Size = New System.Drawing.Size(424, 140)
+        Me.Purpose_tb.Size = New System.Drawing.Size(424, 163)
         Me.Purpose_tb.TabIndex = 42
         Me.Purpose_tb.Text = ""
         '
@@ -221,7 +113,7 @@ Partial Class Banking_LoanDetails
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(24, 201)
+        Me.Label4.Location = New System.Drawing.Point(28, 209)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 25)
         Me.Label4.TabIndex = 41
@@ -232,16 +124,16 @@ Partial Class Banking_LoanDetails
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Items.AddRange(New Object() {"Home", "Education", "Personal (Medical)", "Personal (Otherwise)", "Business (Low Risk)", "Business (High Risk)", "Transport"})
-        Me.ListBox1.Location = New System.Drawing.Point(878, 174)
+        Me.ListBox1.Location = New System.Drawing.Point(788, 181)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(294, 36)
+        Me.ListBox1.Size = New System.Drawing.Size(254, 36)
         Me.ListBox1.TabIndex = 43
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(24, 435)
+        Me.Label5.Location = New System.Drawing.Point(25, 467)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(88, 25)
         Me.Label5.TabIndex = 44
@@ -251,7 +143,7 @@ Partial Class Banking_LoanDetails
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(70, 485)
+        Me.Label6.Location = New System.Drawing.Point(71, 517)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(60, 25)
         Me.Label6.TabIndex = 45
@@ -261,7 +153,7 @@ Partial Class Banking_LoanDetails
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(38, 535)
+        Me.Label7.Location = New System.Drawing.Point(39, 567)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(111, 25)
         Me.Label7.TabIndex = 46
@@ -270,7 +162,7 @@ Partial Class Banking_LoanDetails
         'Email_tb
         '
         Me.Email_tb.BackColor = System.Drawing.Color.White
-        Me.Email_tb.Location = New System.Drawing.Point(165, 469)
+        Me.Email_tb.Location = New System.Drawing.Point(166, 501)
         Me.Email_tb.Name = "Email_tb"
         Me.Email_tb.Size = New System.Drawing.Size(294, 41)
         Me.Email_tb.TabIndex = 47
@@ -279,7 +171,7 @@ Partial Class Banking_LoanDetails
         'Aadhar_tb
         '
         Me.Aadhar_tb.BackColor = System.Drawing.Color.White
-        Me.Aadhar_tb.Location = New System.Drawing.Point(165, 535)
+        Me.Aadhar_tb.Location = New System.Drawing.Point(166, 567)
         Me.Aadhar_tb.Name = "Aadhar_tb"
         Me.Aadhar_tb.Size = New System.Drawing.Size(294, 41)
         Me.Aadhar_tb.TabIndex = 48
@@ -288,12 +180,10 @@ Partial Class Banking_LoanDetails
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(42, 156)
         Me.Label8.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(35, 9)
+        Me.Label8.Location = New System.Drawing.Point(39, 17)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(332, 29)
+        Me.Label8.Size = New System.Drawing.Size(321, 28)
         Me.Label8.TabIndex = 49
         Me.Label8.Text = "Please enter personal details:"
         '
@@ -301,11 +191,11 @@ Partial Class Banking_LoanDetails
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Exo 2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(673, 67)
+        Me.Label9.Location = New System.Drawing.Point(583, 74)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(266, 29)
+        Me.Label9.Size = New System.Drawing.Size(258, 28)
         Me.Label9.TabIndex = 50
         Me.Label9.Text = "Enter Loan Plan details:"
         '
@@ -315,7 +205,7 @@ Partial Class Banking_LoanDetails
         Me.Label10.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(683, 125)
+        Me.Label10.Location = New System.Drawing.Point(593, 132)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(165, 25)
         Me.Label10.TabIndex = 51
@@ -324,25 +214,25 @@ Partial Class Banking_LoanDetails
         'Principal_tb
         '
         Me.Principal_tb.BackColor = System.Drawing.Color.White
-        Me.Principal_tb.Location = New System.Drawing.Point(878, 113)
+        Me.Principal_tb.Location = New System.Drawing.Point(788, 120)
         Me.Principal_tb.Name = "Principal_tb"
-        Me.Principal_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Principal_tb.Size = New System.Drawing.Size(254, 41)
         Me.Principal_tb.TabIndex = 52
         Me.Principal_tb.Text = ""
         '
         'InterestRate_tb
         '
         Me.InterestRate_tb.BackColor = System.Drawing.Color.White
-        Me.InterestRate_tb.Location = New System.Drawing.Point(878, 232)
+        Me.InterestRate_tb.Location = New System.Drawing.Point(788, 239)
         Me.InterestRate_tb.Name = "InterestRate_tb"
-        Me.InterestRate_tb.Size = New System.Drawing.Size(294, 41)
+        Me.InterestRate_tb.Size = New System.Drawing.Size(254, 41)
         Me.InterestRate_tb.TabIndex = 54
         Me.InterestRate_tb.Text = ""
         '
         'CIBILscore_tb
         '
         Me.CIBILscore_tb.BackColor = System.Drawing.Color.White
-        Me.CIBILscore_tb.Location = New System.Drawing.Point(165, 374)
+        Me.CIBILscore_tb.Location = New System.Drawing.Point(166, 406)
         Me.CIBILscore_tb.Name = "CIBILscore_tb"
         Me.CIBILscore_tb.Size = New System.Drawing.Size(294, 41)
         Me.CIBILscore_tb.TabIndex = 55
@@ -352,7 +242,7 @@ Partial Class Banking_LoanDetails
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(31, 374)
+        Me.Label12.Location = New System.Drawing.Point(32, 406)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(118, 25)
         Me.Label12.TabIndex = 56
@@ -364,7 +254,7 @@ Partial Class Banking_LoanDetails
         Me.Label11.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(713, 244)
+        Me.Label11.Location = New System.Drawing.Point(623, 251)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(127, 25)
         Me.Label11.TabIndex = 53
@@ -373,9 +263,9 @@ Partial Class Banking_LoanDetails
         'Duration_tb
         '
         Me.Duration_tb.BackColor = System.Drawing.Color.White
-        Me.Duration_tb.Location = New System.Drawing.Point(878, 296)
+        Me.Duration_tb.Location = New System.Drawing.Point(788, 303)
         Me.Duration_tb.Name = "Duration_tb"
-        Me.Duration_tb.Size = New System.Drawing.Size(294, 41)
+        Me.Duration_tb.Size = New System.Drawing.Size(254, 41)
         Me.Duration_tb.TabIndex = 58
         Me.Duration_tb.Text = ""
         '
@@ -385,7 +275,7 @@ Partial Class Banking_LoanDetails
         Me.Label13.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(746, 296)
+        Me.Label13.Location = New System.Drawing.Point(656, 303)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(91, 25)
         Me.Label13.TabIndex = 57
@@ -394,7 +284,7 @@ Partial Class Banking_LoanDetails
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(724, 471)
+        Me.CheckBox1.Location = New System.Drawing.Point(637, 427)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(365, 20)
         Me.CheckBox1.TabIndex = 59
@@ -406,7 +296,7 @@ Partial Class Banking_LoanDetails
         Me.Submit_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Submit_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Submit_btn.ForeColor = System.Drawing.Color.White
-        Me.Submit_btn.Location = New System.Drawing.Point(724, 521)
+        Me.Submit_btn.Location = New System.Drawing.Point(637, 477)
         Me.Submit_btn.Name = "Submit_btn"
         Me.Submit_btn.Size = New System.Drawing.Size(119, 39)
         Me.Submit_btn.TabIndex = 60
@@ -416,9 +306,9 @@ Partial Class Banking_LoanDetails
         'RichTextBox10
         '
         Me.RichTextBox10.BackColor = System.Drawing.SystemColors.Highlight
-        Me.RichTextBox10.Location = New System.Drawing.Point(638, 32)
+        Me.RichTextBox10.Location = New System.Drawing.Point(569, 40)
         Me.RichTextBox10.Name = "RichTextBox10"
-        Me.RichTextBox10.Size = New System.Drawing.Size(606, 367)
+        Me.RichTextBox10.Size = New System.Drawing.Size(506, 344)
         Me.RichTextBox10.TabIndex = 61
         Me.RichTextBox10.Text = ""
         '
@@ -427,7 +317,7 @@ Partial Class Banking_LoanDetails
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1337, 603)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Submit_btn)
         Me.Controls.Add(Me.CheckBox1)

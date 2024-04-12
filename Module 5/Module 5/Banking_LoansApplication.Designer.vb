@@ -46,8 +46,9 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox1.BackColor = System.Drawing.Color.White
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(33, 12)
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(482, 39)
         Me.RichTextBox1.TabIndex = 27
         Me.RichTextBox1.Text = "Click on the loan type you wish to apply for:"
@@ -57,7 +58,7 @@ Partial Class Banking_LoansApplication
         Me.HomeLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.HomeLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HomeLoan_btn.ForeColor = System.Drawing.Color.White
-        Me.HomeLoan_btn.Location = New System.Drawing.Point(74, 47)
+        Me.HomeLoan_btn.Location = New System.Drawing.Point(52, 47)
         Me.HomeLoan_btn.Name = "HomeLoan_btn"
         Me.HomeLoan_btn.Size = New System.Drawing.Size(120, 47)
         Me.HomeLoan_btn.TabIndex = 28
@@ -70,9 +71,10 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox2.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox2.Location = New System.Drawing.Point(35, 129)
+        Me.RichTextBox2.Location = New System.Drawing.Point(29, 120)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(207, 422)
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.Size = New System.Drawing.Size(176, 468)
         Me.RichTextBox2.TabIndex = 29
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
@@ -80,9 +82,9 @@ Partial Class Banking_LoansApplication
         '
         Me.RichTextBox3.BackColor = System.Drawing.SystemColors.Highlight
         Me.RichTextBox3.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.RichTextBox3.Location = New System.Drawing.Point(18, 109)
+        Me.RichTextBox3.Location = New System.Drawing.Point(12, 100)
         Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(240, 467)
+        Me.RichTextBox3.Size = New System.Drawing.Size(209, 513)
         Me.RichTextBox3.TabIndex = 30
         Me.RichTextBox3.Text = ""
         '
@@ -92,9 +94,10 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox4.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox4.Location = New System.Drawing.Point(291, 129)
+        Me.RichTextBox4.Location = New System.Drawing.Point(252, 120)
         Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.Size = New System.Drawing.Size(224, 422)
+        Me.RichTextBox4.ReadOnly = True
+        Me.RichTextBox4.Size = New System.Drawing.Size(170, 468)
         Me.RichTextBox4.TabIndex = 32
         Me.RichTextBox4.Text = resources.GetString("RichTextBox4.Text")
         '
@@ -102,9 +105,9 @@ Partial Class Banking_LoansApplication
         '
         Me.RichTextBox5.BackColor = System.Drawing.SystemColors.Highlight
         Me.RichTextBox5.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.RichTextBox5.Location = New System.Drawing.Point(274, 109)
+        Me.RichTextBox5.Location = New System.Drawing.Point(235, 100)
         Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(257, 467)
+        Me.RichTextBox5.Size = New System.Drawing.Size(203, 513)
         Me.RichTextBox5.TabIndex = 33
         Me.RichTextBox5.Text = ""
         '
@@ -113,7 +116,7 @@ Partial Class Banking_LoansApplication
         Me.EduLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.EduLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EduLoan_btn.ForeColor = System.Drawing.Color.White
-        Me.EduLoan_btn.Location = New System.Drawing.Point(314, 47)
+        Me.EduLoan_btn.Location = New System.Drawing.Point(272, 47)
         Me.EduLoan_btn.Name = "EduLoan_btn"
         Me.EduLoan_btn.Size = New System.Drawing.Size(120, 47)
         Me.EduLoan_btn.TabIndex = 31
@@ -126,9 +129,10 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox6.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox6.Location = New System.Drawing.Point(569, 129)
+        Me.RichTextBox6.Location = New System.Drawing.Point(469, 120)
         Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(223, 422)
+        Me.RichTextBox6.ReadOnly = True
+        Me.RichTextBox6.Size = New System.Drawing.Size(181, 468)
         Me.RichTextBox6.TabIndex = 35
         Me.RichTextBox6.Text = resources.GetString("RichTextBox6.Text")
         '
@@ -136,9 +140,9 @@ Partial Class Banking_LoansApplication
         '
         Me.RichTextBox7.BackColor = System.Drawing.SystemColors.Highlight
         Me.RichTextBox7.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.RichTextBox7.Location = New System.Drawing.Point(552, 109)
+        Me.RichTextBox7.Location = New System.Drawing.Point(452, 100)
         Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.Size = New System.Drawing.Size(256, 467)
+        Me.RichTextBox7.Size = New System.Drawing.Size(214, 513)
         Me.RichTextBox7.TabIndex = 36
         Me.RichTextBox7.Text = ""
         '
@@ -147,7 +151,7 @@ Partial Class Banking_LoansApplication
         Me.PersLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.PersLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PersLoan_btn.ForeColor = System.Drawing.Color.White
-        Me.PersLoan_btn.Location = New System.Drawing.Point(613, 47)
+        Me.PersLoan_btn.Location = New System.Drawing.Point(500, 47)
         Me.PersLoan_btn.Name = "PersLoan_btn"
         Me.PersLoan_btn.Size = New System.Drawing.Size(120, 47)
         Me.PersLoan_btn.TabIndex = 34
@@ -160,9 +164,10 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox8.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox8.Location = New System.Drawing.Point(843, 129)
+        Me.RichTextBox8.Location = New System.Drawing.Point(695, 120)
         Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.Size = New System.Drawing.Size(205, 422)
+        Me.RichTextBox8.ReadOnly = True
+        Me.RichTextBox8.Size = New System.Drawing.Size(173, 468)
         Me.RichTextBox8.TabIndex = 38
         Me.RichTextBox8.Text = resources.GetString("RichTextBox8.Text")
         '
@@ -170,9 +175,9 @@ Partial Class Banking_LoansApplication
         '
         Me.RichTextBox9.BackColor = System.Drawing.SystemColors.Highlight
         Me.RichTextBox9.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.RichTextBox9.Location = New System.Drawing.Point(826, 109)
+        Me.RichTextBox9.Location = New System.Drawing.Point(678, 100)
         Me.RichTextBox9.Name = "RichTextBox9"
-        Me.RichTextBox9.Size = New System.Drawing.Size(238, 467)
+        Me.RichTextBox9.Size = New System.Drawing.Size(206, 513)
         Me.RichTextBox9.TabIndex = 39
         Me.RichTextBox9.Text = ""
         '
@@ -181,7 +186,7 @@ Partial Class Banking_LoansApplication
         Me.TranspLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TranspLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TranspLoan_btn.ForeColor = System.Drawing.Color.White
-        Me.TranspLoan_btn.Location = New System.Drawing.Point(880, 47)
+        Me.TranspLoan_btn.Location = New System.Drawing.Point(719, 47)
         Me.TranspLoan_btn.Name = "TranspLoan_btn"
         Me.TranspLoan_btn.Size = New System.Drawing.Size(120, 47)
         Me.TranspLoan_btn.TabIndex = 37
@@ -194,9 +199,10 @@ Partial Class Banking_LoansApplication
         Me.RichTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox10.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox10.Location = New System.Drawing.Point(1099, 129)
+        Me.RichTextBox10.Location = New System.Drawing.Point(914, 120)
         Me.RichTextBox10.Name = "RichTextBox10"
-        Me.RichTextBox10.Size = New System.Drawing.Size(202, 422)
+        Me.RichTextBox10.ReadOnly = True
+        Me.RichTextBox10.Size = New System.Drawing.Size(149, 468)
         Me.RichTextBox10.TabIndex = 41
         Me.RichTextBox10.Text = resources.GetString("RichTextBox10.Text")
         '
@@ -204,9 +210,9 @@ Partial Class Banking_LoansApplication
         '
         Me.RichTextBox11.BackColor = System.Drawing.SystemColors.Highlight
         Me.RichTextBox11.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.RichTextBox11.Location = New System.Drawing.Point(1082, 109)
+        Me.RichTextBox11.Location = New System.Drawing.Point(897, 100)
         Me.RichTextBox11.Name = "RichTextBox11"
-        Me.RichTextBox11.Size = New System.Drawing.Size(235, 467)
+        Me.RichTextBox11.Size = New System.Drawing.Size(182, 513)
         Me.RichTextBox11.TabIndex = 42
         Me.RichTextBox11.Text = ""
         '
@@ -215,7 +221,7 @@ Partial Class Banking_LoansApplication
         Me.BusnLoan_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.BusnLoan_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BusnLoan_btn.ForeColor = System.Drawing.Color.White
-        Me.BusnLoan_btn.Location = New System.Drawing.Point(1139, 47)
+        Me.BusnLoan_btn.Location = New System.Drawing.Point(926, 47)
         Me.BusnLoan_btn.Name = "BusnLoan_btn"
         Me.BusnLoan_btn.Size = New System.Drawing.Size(120, 47)
         Me.BusnLoan_btn.TabIndex = 40
@@ -227,7 +233,7 @@ Partial Class Banking_LoansApplication
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1337, 603)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.RichTextBox10)
         Me.Controls.Add(Me.RichTextBox11)

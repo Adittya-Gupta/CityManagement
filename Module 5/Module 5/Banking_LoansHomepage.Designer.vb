@@ -48,11 +48,9 @@ Partial Class Banking_LoanHomepage
         Me.CurrentLoans_table = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PendingRequests_btn = New System.Windows.Forms.Button()
-        Me.PayNow_panel = New System.Windows.Forms.Panel()
         Me.ApplyNow_btn = New System.Windows.Forms.Button()
         CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.PayNow_panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox3
@@ -61,22 +59,22 @@ Partial Class Banking_LoanHomepage
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(1022, 12)
+        Me.TextBox3.Location = New System.Drawing.Point(878, 12)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(235, 41)
+        Me.TextBox3.Size = New System.Drawing.Size(220, 35)
         Me.TextBox3.TabIndex = 23
         Me.TextBox3.Text = "Interest rates today:"
         '
         'HomeLoan_tb
         '
         Me.HomeLoan_tb.BackColor = System.Drawing.Color.White
-        Me.HomeLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HomeLoan_tb.Location = New System.Drawing.Point(996, 110)
+        Me.HomeLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.HomeLoan_tb.Location = New System.Drawing.Point(887, 86)
         Me.HomeLoan_tb.Name = "HomeLoan_tb"
         Me.HomeLoan_tb.ReadOnly = True
-        Me.HomeLoan_tb.Size = New System.Drawing.Size(144, 35)
+        Me.HomeLoan_tb.Size = New System.Drawing.Size(198, 44)
         Me.HomeLoan_tb.TabIndex = 24
         Me.HomeLoan_tb.Text = "6.75% p.a."
         '
@@ -84,7 +82,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(992, 83)
+        Me.Label3.Location = New System.Drawing.Point(883, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(123, 25)
         Me.Label3.TabIndex = 25
@@ -94,7 +92,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(991, 177)
+        Me.Label4.Location = New System.Drawing.Point(885, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(158, 25)
         Me.Label4.TabIndex = 27
@@ -103,11 +101,11 @@ Partial Class Banking_LoanHomepage
         'EduLoan_tb
         '
         Me.EduLoan_tb.BackColor = System.Drawing.Color.White
-        Me.EduLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EduLoan_tb.Location = New System.Drawing.Point(993, 204)
+        Me.EduLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.EduLoan_tb.Location = New System.Drawing.Point(887, 165)
         Me.EduLoan_tb.Name = "EduLoan_tb"
         Me.EduLoan_tb.ReadOnly = True
-        Me.EduLoan_tb.Size = New System.Drawing.Size(144, 35)
+        Me.EduLoan_tb.Size = New System.Drawing.Size(198, 44)
         Me.EduLoan_tb.TabIndex = 26
         Me.EduLoan_tb.Text = "10% p.a."
         '
@@ -115,7 +113,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(1155, 83)
+        Me.Label5.Location = New System.Drawing.Point(883, 222)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(151, 25)
         Me.Label5.TabIndex = 29
@@ -124,11 +122,11 @@ Partial Class Banking_LoanHomepage
         'BusinessLowRisk_tb
         '
         Me.BusinessLowRisk_tb.BackColor = System.Drawing.Color.White
-        Me.BusinessLowRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BusinessLowRisk_tb.Location = New System.Drawing.Point(1159, 132)
+        Me.BusinessLowRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.BusinessLowRisk_tb.Location = New System.Drawing.Point(887, 271)
         Me.BusinessLowRisk_tb.Name = "BusinessLowRisk_tb"
         Me.BusinessLowRisk_tb.ReadOnly = True
-        Me.BusinessLowRisk_tb.Size = New System.Drawing.Size(144, 35)
+        Me.BusinessLowRisk_tb.Size = New System.Drawing.Size(198, 44)
         Me.BusinessLowRisk_tb.TabIndex = 28
         Me.BusinessLowRisk_tb.Text = "11% p.a."
         '
@@ -136,7 +134,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(1159, 289)
+        Me.Label6.Location = New System.Drawing.Point(883, 391)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(155, 25)
         Me.Label6.TabIndex = 31
@@ -145,11 +143,11 @@ Partial Class Banking_LoanHomepage
         'TransportLoan_tb
         '
         Me.TransportLoan_tb.BackColor = System.Drawing.Color.White
-        Me.TransportLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TransportLoan_tb.Location = New System.Drawing.Point(1163, 317)
+        Me.TransportLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.TransportLoan_tb.Location = New System.Drawing.Point(887, 418)
         Me.TransportLoan_tb.Name = "TransportLoan_tb"
         Me.TransportLoan_tb.ReadOnly = True
-        Me.TransportLoan_tb.Size = New System.Drawing.Size(144, 35)
+        Me.TransportLoan_tb.Size = New System.Drawing.Size(198, 44)
         Me.TransportLoan_tb.TabIndex = 30
         Me.TransportLoan_tb.Text = "7% p.a."
         '
@@ -157,7 +155,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(992, 269)
+        Me.Label7.Location = New System.Drawing.Point(883, 465)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(148, 25)
         Me.Label7.TabIndex = 33
@@ -166,40 +164,40 @@ Partial Class Banking_LoanHomepage
         'PersonalMedical_tb
         '
         Me.PersonalMedical_tb.BackColor = System.Drawing.Color.White
-        Me.PersonalMedical_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PersonalMedical_tb.Location = New System.Drawing.Point(996, 317)
+        Me.PersonalMedical_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.PersonalMedical_tb.Location = New System.Drawing.Point(887, 513)
         Me.PersonalMedical_tb.Name = "PersonalMedical_tb"
         Me.PersonalMedical_tb.ReadOnly = True
-        Me.PersonalMedical_tb.Size = New System.Drawing.Size(144, 35)
+        Me.PersonalMedical_tb.Size = New System.Drawing.Size(198, 44)
         Me.PersonalMedical_tb.TabIndex = 32
         Me.PersonalMedical_tb.Text = "10% p.a."
         '
         'BusinessHighRisk_tb
         '
         Me.BusinessHighRisk_tb.BackColor = System.Drawing.Color.White
-        Me.BusinessHighRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BusinessHighRisk_tb.Location = New System.Drawing.Point(1159, 188)
+        Me.BusinessHighRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.BusinessHighRisk_tb.Location = New System.Drawing.Point(887, 341)
         Me.BusinessHighRisk_tb.Name = "BusinessHighRisk_tb"
         Me.BusinessHighRisk_tb.ReadOnly = True
-        Me.BusinessHighRisk_tb.Size = New System.Drawing.Size(144, 35)
+        Me.BusinessHighRisk_tb.Size = New System.Drawing.Size(198, 44)
         Me.BusinessHighRisk_tb.TabIndex = 34
         Me.BusinessHighRisk_tb.Text = "19.8% p.a."
         '
         'PersonalOtherwise_tb
         '
         Me.PersonalOtherwise_tb.BackColor = System.Drawing.Color.White
-        Me.PersonalOtherwise_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PersonalOtherwise_tb.Location = New System.Drawing.Point(997, 374)
+        Me.PersonalOtherwise_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
+        Me.PersonalOtherwise_tb.Location = New System.Drawing.Point(887, 579)
         Me.PersonalOtherwise_tb.Name = "PersonalOtherwise_tb"
         Me.PersonalOtherwise_tb.ReadOnly = True
-        Me.PersonalOtherwise_tb.Size = New System.Drawing.Size(144, 35)
+        Me.PersonalOtherwise_tb.Size = New System.Drawing.Size(198, 44)
         Me.PersonalOtherwise_tb.TabIndex = 35
         Me.PersonalOtherwise_tb.Text = "17% p.a."
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(1159, 113)
+        Me.Label8.Location = New System.Drawing.Point(887, 252)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 16)
         Me.Label8.TabIndex = 36
@@ -208,7 +206,7 @@ Partial Class Banking_LoanHomepage
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(1161, 172)
+        Me.Label9.Location = New System.Drawing.Point(889, 325)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 16)
         Me.Label9.TabIndex = 37
@@ -217,7 +215,7 @@ Partial Class Banking_LoanHomepage
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(996, 298)
+        Me.Label10.Location = New System.Drawing.Point(887, 494)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 16)
         Me.Label10.TabIndex = 38
@@ -226,7 +224,7 @@ Partial Class Banking_LoanHomepage
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(997, 355)
+        Me.Label11.Location = New System.Drawing.Point(887, 560)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(66, 16)
         Me.Label11.TabIndex = 39
@@ -257,7 +255,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(270, 20)
+        Me.Label2.Location = New System.Drawing.Point(297, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 25)
         Me.Label2.TabIndex = 21
@@ -267,7 +265,7 @@ Partial Class Banking_LoanHomepage
         '
         Me.CIBILScore_tb.BackColor = System.Drawing.Color.White
         Me.CIBILScore_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CIBILScore_tb.Location = New System.Drawing.Point(383, 17)
+        Me.CIBILScore_tb.Location = New System.Drawing.Point(430, 17)
         Me.CIBILScore_tb.Name = "CIBILScore_tb"
         Me.CIBILScore_tb.ReadOnly = True
         Me.CIBILScore_tb.Size = New System.Drawing.Size(158, 35)
@@ -280,11 +278,11 @@ Partial Class Banking_LoanHomepage
         Me.TableTitle.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TableTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableTitle.ForeColor = System.Drawing.Color.White
-        Me.TableTitle.Location = New System.Drawing.Point(29, 83)
+        Me.TableTitle.Location = New System.Drawing.Point(22, 90)
         Me.TableTitle.Multiline = True
         Me.TableTitle.Name = "TableTitle"
         Me.TableTitle.ReadOnly = True
-        Me.TableTitle.Size = New System.Drawing.Size(226, 35)
+        Me.TableTitle.Size = New System.Drawing.Size(209, 35)
         Me.TableTitle.TabIndex = 41
         Me.TableTitle.Text = "Current Loans:"
         '
@@ -293,7 +291,7 @@ Partial Class Banking_LoanHomepage
         Me.PayNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.PayNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PayNow_btn.ForeColor = System.Drawing.Color.White
-        Me.PayNow_btn.Location = New System.Drawing.Point(1, 0)
+        Me.PayNow_btn.Location = New System.Drawing.Point(577, 590)
         Me.PayNow_btn.Name = "PayNow_btn"
         Me.PayNow_btn.Size = New System.Drawing.Size(119, 39)
         Me.PayNow_btn.TabIndex = 42
@@ -302,13 +300,16 @@ Partial Class Banking_LoanHomepage
         '
         'CurrentLoans_table
         '
+        Me.CurrentLoans_table.AllowUserToAddRows = False
+        Me.CurrentLoans_table.AllowUserToDeleteRows = False
         Me.CurrentLoans_table.BackgroundColor = System.Drawing.Color.LightGray
         Me.CurrentLoans_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CurrentLoans_table.Location = New System.Drawing.Point(30, 124)
+        Me.CurrentLoans_table.Location = New System.Drawing.Point(22, 142)
         Me.CurrentLoans_table.Name = "CurrentLoans_table"
+        Me.CurrentLoans_table.ReadOnly = True
         Me.CurrentLoans_table.RowHeadersWidth = 51
         Me.CurrentLoans_table.RowTemplate.Height = 24
-        Me.CurrentLoans_table.Size = New System.Drawing.Size(803, 413)
+        Me.CurrentLoans_table.Size = New System.Drawing.Size(803, 430)
         Me.CurrentLoans_table.TabIndex = 43
         '
         'Panel1
@@ -318,9 +319,9 @@ Partial Class Banking_LoanHomepage
         Me.Panel1.Controls.Add(Me.CIBILScore_tb)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Balance_tb)
-        Me.Panel1.Location = New System.Drawing.Point(292, 12)
+        Me.Panel1.Location = New System.Drawing.Point(241, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(566, 71)
+        Me.Panel1.Size = New System.Drawing.Size(612, 71)
         Me.Panel1.TabIndex = 44
         '
         'PendingRequests_btn
@@ -328,27 +329,19 @@ Partial Class Banking_LoanHomepage
         Me.PendingRequests_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.PendingRequests_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PendingRequests_btn.ForeColor = System.Drawing.Color.White
-        Me.PendingRequests_btn.Location = New System.Drawing.Point(292, 552)
+        Me.PendingRequests_btn.Location = New System.Drawing.Point(29, 590)
         Me.PendingRequests_btn.Name = "PendingRequests_btn"
         Me.PendingRequests_btn.Size = New System.Drawing.Size(267, 39)
         Me.PendingRequests_btn.TabIndex = 45
         Me.PendingRequests_btn.Text = "View Pending Requests"
         Me.PendingRequests_btn.UseVisualStyleBackColor = False
         '
-        'PayNow_panel
-        '
-        Me.PayNow_panel.Controls.Add(Me.PayNow_btn)
-        Me.PayNow_panel.Location = New System.Drawing.Point(848, 184)
-        Me.PayNow_panel.Name = "PayNow_panel"
-        Me.PayNow_panel.Size = New System.Drawing.Size(123, 353)
-        Me.PayNow_panel.TabIndex = 46
-        '
         'ApplyNow_btn
         '
         Me.ApplyNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ApplyNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ApplyNow_btn.ForeColor = System.Drawing.Color.White
-        Me.ApplyNow_btn.Location = New System.Drawing.Point(1108, 450)
+        Me.ApplyNow_btn.Location = New System.Drawing.Point(378, 590)
         Me.ApplyNow_btn.Name = "ApplyNow_btn"
         Me.ApplyNow_btn.Size = New System.Drawing.Size(137, 39)
         Me.ApplyNow_btn.TabIndex = 47
@@ -359,10 +352,10 @@ Partial Class Banking_LoanHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1337, 603)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PayNow_btn)
         Me.Controls.Add(Me.ApplyNow_btn)
-        Me.Controls.Add(Me.PayNow_panel)
         Me.Controls.Add(Me.PendingRequests_btn)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.CurrentLoans_table)
@@ -390,7 +383,6 @@ Partial Class Banking_LoanHomepage
         CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.PayNow_panel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,6 +413,5 @@ Partial Class Banking_LoanHomepage
     Friend WithEvents CurrentLoans_table As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PendingRequests_btn As Button
-    Friend WithEvents PayNow_panel As Panel
     Friend WithEvents ApplyNow_btn As Button
 End Class

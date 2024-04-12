@@ -4,21 +4,23 @@ Imports Google.Protobuf.WellKnownTypes
 Imports MySql.Data.MySqlClient
 
 Public Class Banking_LoanHomepage
-    'On loading this form, obtain interest rates, table, balance, CIBIL score from DB
-
-    'Interest Rates
-    Dim Home_IR As Double = 6.75
-    Dim Edu_IR As Double = 10
-    Dim Busn_LowRisk_IR As Double = 11
-    Dim Busn_HighRisk_IR As Double = 19.8
-    Dim Transport_IR As Double = 7
-    Dim Personal_Medical_IR As Double = 10
-    Dim Personal_Otherwise_IR As Double = 17
-    Public CIBIL_score As Double = 402.6
-    Public Balance As Double = 12090.5
+    'Interest Rates- will be passed on every loans page
+    Public Home_IR As Double = 6.75
+    Public Edu_IR As Double = 10
+    Public Busn_LowRisk_IR As Double = 11
+    Public Busn_HighRisk_IR As Double = 19.8
+    Public Transport_IR As Double = 7
+    Public Personal_Medical_IR As Double = 10
+    Public Personal_Otherwise_IR As Double = 17
+    'user info
+    Dim CIBIL_score As Double
+    Public Balance As Double
+    Public AC_no As String
+    Public bank_username As String = "Robert" 'Will be passed on every banking page. Change to admin if reqd.
+    'loan info for payment
+    Public LoanID As Integer
 
     Public Mysqlconn As New MySqlConnection
-    'Public sqlCmd As New MySqlCommand
     Public sqlRd As MySqlDataReader
     Public sqlDt As New DataTable
     Public Dta As New MySqlDataAdapter
@@ -29,31 +31,10 @@ Public Class Banking_LoanHomepage
     'Public password As String = "nimda"
     'Public database As String = "banking_database"
 
-    'Public server As String = "localhost"
-    'Public username As String = "root"
-    'Public password As String = "vacuum#28C"
-    'Public database As String = "banking_database"
-
-
-    Public bank_account_no As Integer = 1
-    Public bank_username As String = "admin"
-
-    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
-        parentpanel.Controls.Clear()
-        childform.TopLevel = False
-        childform.FormBorderStyle = FormBorderStyle.None
-        childform.Dock = DockStyle.Fill
-        childform.BringToFront()
-        parentpanel.Controls.Add(childform)
-        childform.Show()
-    End Sub
-
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        ' Call the load_table function here
-        LoadFields()
-        Balance_tb.Text = Balance.ToString()
-        CIBILScore_tb.Text = CIBIL_score.ToString()
-    End Sub
+    Public server As String = "localhost"
+    Public username As String = "root"
+    Public password As String = "vacuum#28C"
+    Public database As String = "banking_database"
 
     Private Sub LoadFields()
         Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
@@ -63,39 +44,49 @@ Public Class Banking_LoanHomepage
 
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
-        'for now, displaying all rows, later take join of 2 tables acc to a/c no
-        sqlCmd.CommandText = "Select * from banking_database.loanplans;"
-        'sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
+        'Take join of 2 tables according to a/c no. Displaying all loans of current user.
+        sqlCmd.CommandText = "SELECT * FROM banking_database.loanplans " &
+                      "JOIN banking_database.loanmanagement " &
+                      "ON loanplans.Loan_Plan_ID = loanmanagement.LoanPlanID " &
+                      "WHERE loanmanagement.Bank_Account_Number = " & AC_no & ";"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
         adapter.Fill(table)
-        ' Set the DataSource property of the DataGridView
-        CurrentLoans_table.DataSource = table
-
-        'get user data
-        'Dim sqlCmd1 As New MySqlCommand
-        'sqlCmd1.Connection = Mysqlconn
-        'for now, displaying all rows, later take join of 2 tables acc to a/c no
-        'sqlCmd1.CommandText = "Select * from banking_database.loanplans;"
-        'sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
-
-        'Dim adapter1 As New MySqlDataAdapter(sqlCmd)
-        'Dim table1 As New DataTable()
-        'sqlCmd1.CommandText = "Select * from banking_database.userdata;"
-        'adapter1.Fill(table1)
-
-        'get balance and cibil score, not authenticated user yet- to do later
-        'If table1.Rows.Count = 1 Then
-        'Balance_tb.Text = table1.Rows(0)(8).ToString()
-        'LScore_tb.Text = table1.Rows(0)(9).ToString()
-        'Else
-        'MessageBox.Show("Error has occured")
-        'End If
+        CurrentLoans_table.DataSource = table  'Set DataSource property of the DataGridView
 
         Mysqlconn.Close()
         sqlCmd.Dispose()
-        'sqlCmd1.Dispose()
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        '--------------obtain user info----------------
+        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.Open()   'Open the connection
+
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = Mysqlconn
+        'select the user info
+        sqlCmd.CommandText = "SELECT Bank_Account_Number,Balance,CIBIL_score FROM banking_database.userdata WHERE Username='" & bank_username & "';"
+        Dim adapter As New MySqlDataAdapter(sqlCmd)
+        Dim table As New DataTable()
+        adapter.Fill(table)
+        ' Check if the DataTable contains any rows
+        If table.Rows.Count > 0 Then
+            ' Retrieve the value from the first row and first column
+            AC_no = table.Rows(0)("Bank_Account_Number").ToString()
+            Balance = Double.Parse(table.Rows(0)("Balance").ToString())
+            CIBIL_score = Double.Parse(table.Rows(0)("CIBIL_score").ToString())
+        End If
+
+        Mysqlconn.Close()
+        sqlCmd.Dispose()
+
+        'display balance and cibil score
+        Balance_tb.Text = Balance.ToString()
+        CIBILScore_tb.Text = CIBIL_score.ToString()
+        ' Call the load_fields function here
+        LoadFields()
     End Sub
 
     Private Sub PendingRequests_btn_Click(sender As Object, e As EventArgs) Handles PendingRequests_btn.Click
@@ -112,17 +103,16 @@ Public Class Banking_LoanHomepage
             Dim sqlCmd As New MySqlCommand
 
             sqlCmd.Connection = Mysqlconn
-            'for now, displaying all rows, later take join of 2 tables acc to acc no
-            sqlCmd.CommandText = "Select * from banking_database.querylog;"
-
-            'sqlCmd.Parameters.Add("@BAC", MySqlDbType.Int64).Value = bank_account_no
+            'Displaying all pending Loan Requests for current user.
+            sqlCmd.CommandText = "SELECT * FROM banking_database.querylog " &
+                                "WHERE Bank_Account_Number='" & AC_no &
+                                "' AND Type_of_Query='Loan request';"
 
             Dim adapter As New MySqlDataAdapter(sqlCmd)
             Dim table As New DataTable()
 
             adapter.Fill(table)
-            ' Set the DataSource property of the DataGridView
-            CurrentLoans_table.DataSource = table
+            CurrentLoans_table.DataSource = table  'Set DataSource property of the DataGridView
 
             Mysqlconn.Close()
             sqlCmd.Dispose()
@@ -136,18 +126,49 @@ Public Class Banking_LoanHomepage
     End Sub
 
     Private Sub ApplyNow_btn_Click(sender As Object, e As EventArgs) Handles ApplyNow_btn.Click
-        'Open loans application page
-        'Me.Hide()
-        'Banking_LoansApplication.Show()
+        'pass all common variables
+        Banking_LoansApplication.bank_username = bank_username
+        Banking_LoansApplication.Home_IR = Home_IR
+        Banking_LoansApplication.Edu_IR = Edu_IR
+        Banking_LoansApplication.Busn_LowRisk_IR = Busn_LowRisk_IR
+        Banking_LoansApplication.Busn_HighRisk_IR = Busn_HighRisk_IR
+        Banking_LoansApplication.Transport_IR = Transport_IR
+        Banking_LoansApplication.Personal_Medical_IR = Personal_Medical_IR
+        Banking_LoansApplication.Personal_Otherwise_IR = Personal_Otherwise_IR
 
-        ChildForm(Banking_Main.Panel1, Banking_LoansApplication)
+        'Open loans application page
+        'ChildForm(Banking_Main.Panel1, Banking_LoansApplication)
+        Me.Hide()
+        Banking_LoansApplication.Show()
     End Sub
 
     Private Sub PayNow_btn_Click(sender As Object, e As EventArgs) Handles PayNow_btn.Click
-        'Open loans payment page
-        'Me.Hide()
-        'Banking_LoansPayNow.Show()
+        Banking_LoansPayNow.bank_username = bank_username
+        Banking_LoansPayNow.AC_no = AC_no
+        Banking_LoansPayNow.LoanID = LoanID
+        Banking_LoansPayNow.Balance = Balance
 
-        ChildForm(Banking_Main.Panel1, Banking_LoansPayNow)
+        Banking_LoansPayNow.Home_IR = Home_IR
+        Banking_LoansPayNow.Edu_IR = Edu_IR
+        Banking_LoansPayNow.Busn_LowRisk_IR = Busn_LowRisk_IR
+        Banking_LoansPayNow.Busn_HighRisk_IR = Busn_HighRisk_IR
+        Banking_LoansPayNow.Transport_IR = Transport_IR
+        Banking_LoansPayNow.Personal_Medical_IR = Personal_Medical_IR
+        Banking_LoansPayNow.Personal_Otherwise_IR = Personal_Otherwise_IR
+        'ChildForm(Banking_Main.Panel1, Banking_LoansPayNow)
+        'Open loans payment page
+        Me.Hide()
+        Banking_LoansPayNow.Show()
+    End Sub
+
+    Private Sub CurrentLoans_table_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CurrentLoans_table.CellContentClick
+        ' Check if the clicked cell is valid and not the header cell
+        If TableTitle.Text = "Current Loans:" And e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            ' Get the loan ID from the selected row
+            Dim temp As String = CurrentLoans_table.Rows(e.RowIndex).Cells("Loan_Plan_ID").Value.ToString()
+            LoanID = Integer.Parse(temp)
+            ' Print debug output of LoanID
+            System.Diagnostics.Debug.WriteLine("LoanID, home page: " & LoanID)
+        End If
     End Sub
 End Class

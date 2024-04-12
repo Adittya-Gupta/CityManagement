@@ -55,7 +55,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(40, 18)
+        Me.Label1.Location = New System.Drawing.Point(12, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(279, 29)
         Me.Label1.TabIndex = 47
@@ -63,8 +63,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(257, 80)
+        Me.RichTextBox1.Location = New System.Drawing.Point(229, 84)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox1.TabIndex = 48
         Me.RichTextBox1.Text = ""
@@ -73,7 +74,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 92)
+        Me.Label2.Location = New System.Drawing.Point(30, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(189, 22)
         Me.Label2.TabIndex = 49
@@ -83,7 +84,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(58, 505)
+        Me.Label3.Location = New System.Drawing.Point(30, 509)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(147, 22)
         Me.Label3.TabIndex = 51
@@ -91,7 +92,7 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(257, 493)
+        Me.RichTextBox2.Location = New System.Drawing.Point(229, 497)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox2.TabIndex = 50
@@ -101,7 +102,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(58, 436)
+        Me.Label4.Location = New System.Drawing.Point(30, 440)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 22)
         Me.Label4.TabIndex = 53
@@ -109,7 +110,7 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox3
         '
-        Me.RichTextBox3.Location = New System.Drawing.Point(257, 423)
+        Me.RichTextBox3.Location = New System.Drawing.Point(229, 427)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox3.TabIndex = 52
@@ -119,7 +120,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(124, 155)
+        Me.Label5.Location = New System.Drawing.Point(96, 159)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(117, 22)
         Me.Label5.TabIndex = 55
@@ -127,8 +128,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox4
         '
-        Me.RichTextBox4.Location = New System.Drawing.Point(257, 143)
+        Me.RichTextBox4.Location = New System.Drawing.Point(229, 147)
         Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ReadOnly = True
         Me.RichTextBox4.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox4.TabIndex = 54
         Me.RichTextBox4.Text = ""
@@ -137,7 +139,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(257, 332)
+        Me.RadioButton1.Location = New System.Drawing.Point(229, 336)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(145, 24)
         Me.RadioButton1.TabIndex = 56
@@ -149,7 +151,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(257, 371)
+        Me.RadioButton2.Location = New System.Drawing.Point(229, 375)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(169, 24)
         Me.RadioButton2.TabIndex = 57
@@ -161,7 +163,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(69, 293)
+        Me.Label6.Location = New System.Drawing.Point(41, 297)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(143, 22)
         Me.Label6.TabIndex = 58
@@ -171,7 +173,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(58, 236)
+        Me.Label7.Location = New System.Drawing.Point(30, 240)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(179, 22)
         Me.Label7.TabIndex = 60
@@ -179,8 +181,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox5
         '
-        Me.RichTextBox5.Location = New System.Drawing.Point(257, 224)
+        Me.RichTextBox5.Location = New System.Drawing.Point(229, 228)
         Me.RichTextBox5.Name = "RichTextBox5"
+        Me.RichTextBox5.ReadOnly = True
         Me.RichTextBox5.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox5.TabIndex = 59
         Me.RichTextBox5.Text = ""
@@ -190,7 +193,7 @@ Partial Class Banking_LoansPayNow
         Me.PayNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.PayNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PayNow_btn.ForeColor = System.Drawing.Color.White
-        Me.PayNow_btn.Location = New System.Drawing.Point(841, 526)
+        Me.PayNow_btn.Location = New System.Drawing.Point(453, 574)
         Me.PayNow_btn.Name = "PayNow_btn"
         Me.PayNow_btn.Size = New System.Drawing.Size(186, 39)
         Me.PayNow_btn.TabIndex = 61
@@ -203,7 +206,7 @@ Partial Class Banking_LoansPayNow
         Me.Label8.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(672, 62)
+        Me.Label8.Location = New System.Drawing.Point(595, 46)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(152, 29)
         Me.Label8.TabIndex = 62
@@ -215,7 +218,7 @@ Partial Class Banking_LoansPayNow
         Me.Label9.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(796, 122)
+        Me.Label9.Location = New System.Drawing.Point(641, 110)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 22)
         Me.Label9.TabIndex = 64
@@ -223,8 +226,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox6
         '
-        Me.RichTextBox6.Location = New System.Drawing.Point(926, 114)
+        Me.RichTextBox6.Location = New System.Drawing.Point(771, 102)
         Me.RichTextBox6.Name = "RichTextBox6"
+        Me.RichTextBox6.ReadOnly = True
         Me.RichTextBox6.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox6.TabIndex = 63
         Me.RichTextBox6.Text = ""
@@ -235,7 +239,7 @@ Partial Class Banking_LoansPayNow
         Me.Label10.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(772, 187)
+        Me.Label10.Location = New System.Drawing.Point(617, 175)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(101, 22)
         Me.Label10.TabIndex = 66
@@ -243,8 +247,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox7
         '
-        Me.RichTextBox7.Location = New System.Drawing.Point(926, 177)
+        Me.RichTextBox7.Location = New System.Drawing.Point(771, 165)
         Me.RichTextBox7.Name = "RichTextBox7"
+        Me.RichTextBox7.ReadOnly = True
         Me.RichTextBox7.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox7.TabIndex = 65
         Me.RichTextBox7.Text = ""
@@ -255,7 +260,7 @@ Partial Class Banking_LoansPayNow
         Me.Label11.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(727, 259)
+        Me.Label11.Location = New System.Drawing.Point(572, 247)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(156, 22)
         Me.Label11.TabIndex = 68
@@ -263,8 +268,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox8
         '
-        Me.RichTextBox8.Location = New System.Drawing.Point(926, 247)
+        Me.RichTextBox8.Location = New System.Drawing.Point(771, 235)
         Me.RichTextBox8.Name = "RichTextBox8"
+        Me.RichTextBox8.ReadOnly = True
         Me.RichTextBox8.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox8.TabIndex = 67
         Me.RichTextBox8.Text = ""
@@ -275,7 +281,7 @@ Partial Class Banking_LoansPayNow
         Me.Label12.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(787, 407)
+        Me.Label12.Location = New System.Drawing.Point(632, 395)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(90, 22)
         Me.Label12.TabIndex = 70
@@ -283,8 +289,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox9
         '
-        Me.RichTextBox9.Location = New System.Drawing.Point(926, 395)
+        Me.RichTextBox9.Location = New System.Drawing.Point(771, 383)
         Me.RichTextBox9.Name = "RichTextBox9"
+        Me.RichTextBox9.ReadOnly = True
         Me.RichTextBox9.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox9.TabIndex = 69
         Me.RichTextBox9.Text = ""
@@ -295,7 +302,7 @@ Partial Class Banking_LoansPayNow
         Me.Label13.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(781, 337)
+        Me.Label13.Location = New System.Drawing.Point(626, 325)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(96, 22)
         Me.Label13.TabIndex = 72
@@ -303,8 +310,9 @@ Partial Class Banking_LoansPayNow
         '
         'RichTextBox10
         '
-        Me.RichTextBox10.Location = New System.Drawing.Point(926, 320)
+        Me.RichTextBox10.Location = New System.Drawing.Point(771, 308)
         Me.RichTextBox10.Name = "RichTextBox10"
+        Me.RichTextBox10.ReadOnly = True
         Me.RichTextBox10.Size = New System.Drawing.Size(277, 44)
         Me.RichTextBox10.TabIndex = 71
         Me.RichTextBox10.Text = ""
@@ -312,9 +320,9 @@ Partial Class Banking_LoansPayNow
         'RichTextBox11
         '
         Me.RichTextBox11.BackColor = System.Drawing.SystemColors.Highlight
-        Me.RichTextBox11.Location = New System.Drawing.Point(644, 25)
+        Me.RichTextBox11.Location = New System.Drawing.Point(548, 29)
         Me.RichTextBox11.Name = "RichTextBox11"
-        Me.RichTextBox11.Size = New System.Drawing.Size(649, 471)
+        Me.RichTextBox11.Size = New System.Drawing.Size(535, 439)
         Me.RichTextBox11.TabIndex = 73
         Me.RichTextBox11.Text = ""
         '
@@ -322,7 +330,7 @@ Partial Class Banking_LoansPayNow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1337, 603)
+        Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.RichTextBox10)

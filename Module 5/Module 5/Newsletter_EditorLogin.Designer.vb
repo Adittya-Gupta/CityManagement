@@ -47,7 +47,7 @@ Partial Class Newsletter_EditorLogin
         Me.Label9.Font = New System.Drawing.Font("Bodoni MT", 19.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(130, 289)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(282, 40)
+        Me.Label9.Size = New System.Drawing.Size(271, 40)
         Me.Label9.TabIndex = 48
         Me.Label9.Text = "Editor Username : "
         '
@@ -57,7 +57,7 @@ Partial Class Newsletter_EditorLogin
         Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 19.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(130, 367)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(281, 40)
+        Me.Label1.Size = New System.Drawing.Size(270, 40)
         Me.Label1.TabIndex = 49
         Me.Label1.Text = "Editor Password  : "
         '
@@ -88,6 +88,7 @@ Partial Class Newsletter_EditorLogin
         'Button15
         '
         Me.Button15.BackColor = System.Drawing.Color.Black
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
         Me.Button15.Location = New System.Drawing.Point(480, 456)

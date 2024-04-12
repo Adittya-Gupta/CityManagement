@@ -227,34 +227,34 @@
     <Compile Include="MainPanel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Money_Management_Credit_Card.Designer.vb">
-      <DependentUpon>Money_Management_Credit_Card.vb</DependentUpon>
+    <Compile Include="Banking_Money_Management_Credit_Card.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Credit_Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Money_Management_Credit_Card.vb">
+    <Compile Include="Banking_Money_Management_Credit_Card.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Money_Management_Debit_Card.Designer.vb">
-      <DependentUpon>Money_Management_Debit_Card.vb</DependentUpon>
+    <Compile Include="Banking_Money_Management_Debit_Card.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Debit_Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Money_Management_Debit_Card.vb">
+    <Compile Include="Banking_Money_Management_Debit_Card.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Money_Management_Final.Designer.vb">
-      <DependentUpon>Money_Management_Final.vb</DependentUpon>
+    <Compile Include="Banking_Money_Management_Final.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Final.vb</DependentUpon>
     </Compile>
-    <Compile Include="Money_Management_Final.vb">
+    <Compile Include="Banking_Money_Management_Final.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Money_Management_Homepage.Designer.vb">
-      <DependentUpon>Money_Management_Homepage.vb</DependentUpon>
+    <Compile Include="Banking_Money_Management_Homepage.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Homepage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Money_Management_Homepage.vb">
+    <Compile Include="Banking_Money_Management_Homepage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Money_Management_Net_Banking.Designer.vb">
-      <DependentUpon>Money_Management_Net_Banking.vb</DependentUpon>
+    <Compile Include="Banking_Money_Management_Net_Banking.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Net_Banking.vb</DependentUpon>
     </Compile>
-    <Compile Include="Money_Management_Net_Banking.vb">
+    <Compile Include="Banking_Money_Management_Net_Banking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_Login.Designer.vb">
@@ -361,20 +361,20 @@
     <EmbeddedResource Include="MainPanel.resx">
       <DependentUpon>MainPanel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Money_Management_Credit_Card.resx">
-      <DependentUpon>Money_Management_Credit_Card.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Money_Management_Credit_Card.resx">
+      <DependentUpon>Banking_Money_Management_Credit_Card.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Money_Management_Debit_Card.resx">
-      <DependentUpon>Money_Management_Debit_Card.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Money_Management_Debit_Card.resx">
+      <DependentUpon>Banking_Money_Management_Debit_Card.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Money_Management_Final.resx">
-      <DependentUpon>Money_Management_Final.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Money_Management_Final.resx">
+      <DependentUpon>Banking_Money_Management_Final.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Money_Management_Homepage.resx">
-      <DependentUpon>Money_Management_Homepage.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Money_Management_Homepage.resx">
+      <DependentUpon>Banking_Money_Management_Homepage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Money_Management_Net_Banking.resx">
-      <DependentUpon>Money_Management_Net_Banking.vb</DependentUpon>
+    <EmbeddedResource Include="Banking_Money_Management_Net_Banking.resx">
+      <DependentUpon>Banking_Money_Management_Net_Banking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Newsletter_AddNews.resx">
       <DependentUpon>Newsletter_AddNews.vb</DependentUpon>

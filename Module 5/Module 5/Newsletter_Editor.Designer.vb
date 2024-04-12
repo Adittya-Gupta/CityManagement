@@ -82,6 +82,7 @@ Partial Class Newsletter_Editor
         'Button19
         '
         Me.Button19.BackColor = System.Drawing.Color.Black
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button19.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.Color.White
         Me.Button19.Location = New System.Drawing.Point(5, 351)
@@ -165,6 +166,7 @@ Partial Class Newsletter_Editor
         'Button16
         '
         Me.Button16.BackColor = System.Drawing.Color.Black
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.Color.White
         Me.Button16.Location = New System.Drawing.Point(924, 374)
@@ -177,6 +179,7 @@ Partial Class Newsletter_Editor
         'Button15
         '
         Me.Button15.BackColor = System.Drawing.Color.Black
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
         Me.Button15.Location = New System.Drawing.Point(924, 162)
@@ -189,6 +192,7 @@ Partial Class Newsletter_Editor
         'Button14
         '
         Me.Button14.BackColor = System.Drawing.Color.Black
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button14.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.Color.White
         Me.Button14.Location = New System.Drawing.Point(924, 321)
@@ -201,6 +205,7 @@ Partial Class Newsletter_Editor
         'Button13
         '
         Me.Button13.BackColor = System.Drawing.Color.Black
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button13.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.Color.White
         Me.Button13.Location = New System.Drawing.Point(924, 268)
@@ -213,6 +218,7 @@ Partial Class Newsletter_Editor
         'Button12
         '
         Me.Button12.BackColor = System.Drawing.Color.Black
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
         Me.Button12.Location = New System.Drawing.Point(924, 215)

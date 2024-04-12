@@ -2,9 +2,20 @@
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
 
-Public Class Money_Management_Net_Banking
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+Public Class Banking_Money_Management_Net_Banking
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
+    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     Dim conn As New MySqlConnection(connString)
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
     Dim username As String
     Dim password As String
@@ -40,29 +51,30 @@ Public Class Money_Management_Net_Banking
                     MessageBox.Show("Wrong Username or Password.")
                 Else
                     Dim balance As Single = CType(sqlDt.Rows(0)("Balance"), Single)
-                    If Money_Management_Homepage.amount > balance Then
+                    If Banking_Money_Management_Homepage.amount > balance Then
                         MessageBox.Show("Insufficient Balane.")
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE UserData SET Balance = Balance - " & Money_Management_Homepage.amount & " Where Username = '" & username & "' AND Password = '" & password & "' ;"
+                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Username = '" & username & "' AND Password = '" & password & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' deposit
-                        query = "UPDATE UserData SET Balance = Balance + " & Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Money_Management_Homepage.account_number & "' ;"
+                        query = "UPDATE UserData SET Balance = Balance + " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Banking_Money_Management_Homepage.account_number & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' log
-                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Money_Management_Homepage.amount & ",'0000-00-00','" & remark & "');"
+                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
                         conn.Close()
-                        Money_Management_Final.Show()
+                        'Money_Management_Final.Show()
+                        ChildForm(Banking_Main.Panel1, Banking_Money_Management_Final)
                     End If
 
                 End If
@@ -70,5 +82,9 @@ Public Class Money_Management_Net_Banking
                 MessageBox.Show("Error: {0}", ex.Message)
             End Try
         End If
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
     End Sub
 End Class

@@ -68,6 +68,7 @@ Partial Class Newsletter_AddNews
         'Button15
         '
         Me.Button15.BackColor = System.Drawing.Color.Black
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button15.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.Color.White
         Me.Button15.Location = New System.Drawing.Point(882, 419)
@@ -80,6 +81,7 @@ Partial Class Newsletter_AddNews
         'Button12
         '
         Me.Button12.BackColor = System.Drawing.Color.Black
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button12.Font = New System.Drawing.Font("Bodoni MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
         Me.Button12.Location = New System.Drawing.Point(882, 509)

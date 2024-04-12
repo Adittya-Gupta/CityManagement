@@ -6,7 +6,7 @@ Imports Org.BouncyCastle.Asn1.IsisMtt.X509
 
 Public Class Event_Participation
     ' Database connection string
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 

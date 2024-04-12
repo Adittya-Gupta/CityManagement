@@ -48,10 +48,10 @@ Partial Class Event_OfferService
         Label1.AutoSize = True
         Label1.Font = New Font("Abhaya Libre Medium", 28F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(36, 23)
+        Label1.Location = New Point(32, 12)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(296, 45)
+        Label1.Size = New Size(367, 55)
         Label1.TabIndex = 24
         Label1.Text = "Events Festivals  >"
         ' 
@@ -60,10 +60,10 @@ Partial Class Event_OfferService
         Label2.AutoSize = True
         Label2.Font = New Font("Abhaya Libre Medium", 28F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(340, 23)
+        Label2.Location = New Point(397, 12)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(237, 45)
+        Label2.Size = New Size(290, 55)
         Label2.TabIndex = 25
         Label2.Text = "Offer Services"
         ' 
@@ -81,17 +81,17 @@ Partial Class Event_OfferService
         Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(FlowLayoutPanelVendorServices)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(36, 83)
+        Panel1.Location = New Point(32, 70)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1183, 782)
+        Panel1.Size = New Size(1034, 657)
         Panel1.TabIndex = 26
         ' 
         ' Description
         ' 
         Description.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
-        Description.Location = New Point(816, 257)
+        Description.Location = New Point(678, 216)
         Description.Name = "Description"
-        Description.Size = New Size(315, 153)
+        Description.Size = New Size(284, 129)
         Description.TabIndex = 18
         Description.Text = "Label3"
         ' 
@@ -99,9 +99,9 @@ Partial Class Event_OfferService
         ' 
         EventTime.AutoSize = True
         EventTime.Font = New Font("Abhaya Libre Medium", 18F)
-        EventTime.Location = New Point(905, 206)
+        EventTime.Location = New Point(794, 173)
         EventTime.Name = "EventTime"
-        EventTime.Size = New Size(89, 28)
+        EventTime.Size = New Size(112, 35)
         EventTime.TabIndex = 16
         EventTime.Text = "7:00 PM"
         ' 
@@ -109,9 +109,9 @@ Partial Class Event_OfferService
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
-        Label8.Location = New Point(812, 206)
+        Label8.Location = New Point(675, 173)
         Label8.Name = "Label8"
-        Label8.Size = New Size(78, 28)
+        Label8.Size = New Size(96, 35)
         Label8.TabIndex = 15
         Label8.Text = "Time :"
         ' 
@@ -119,9 +119,9 @@ Partial Class Event_OfferService
         ' 
         EventDate.AutoSize = True
         EventDate.Font = New Font("Abhaya Libre Medium", 18F)
-        EventDate.Location = New Point(905, 166)
+        EventDate.Location = New Point(794, 141)
         EventDate.Name = "EventDate"
-        EventDate.Size = New Size(100, 28)
+        EventDate.Size = New Size(125, 35)
         EventDate.TabIndex = 14
         EventDate.Text = "12/04/24"
         ' 
@@ -129,9 +129,9 @@ Partial Class Event_OfferService
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
-        Label6.Location = New Point(812, 166)
+        Label6.Location = New Point(675, 139)
         Label6.Name = "Label6"
-        Label6.Size = New Size(74, 28)
+        Label6.Size = New Size(91, 35)
         Label6.TabIndex = 13
         Label6.Text = "Date :"
         ' 
@@ -139,9 +139,9 @@ Partial Class Event_OfferService
         ' 
         EventVenue.AutoSize = True
         EventVenue.Font = New Font("Abhaya Libre Medium", 18F)
-        EventVenue.Location = New Point(905, 126)
+        EventVenue.Location = New Point(786, 106)
         EventVenue.Name = "EventVenue"
-        EventVenue.Size = New Size(175, 28)
+        EventVenue.Size = New Size(220, 35)
         EventVenue.TabIndex = 12
         EventVenue.Text = "Central Stadium"
         ' 
@@ -149,9 +149,9 @@ Partial Class Event_OfferService
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
-        Label4.Location = New Point(812, 126)
+        Label4.Location = New Point(675, 106)
         Label4.Name = "Label4"
-        Label4.Size = New Size(91, 28)
+        Label4.Size = New Size(113, 35)
         Label4.TabIndex = 11
         Label4.Text = "Venue :"
         ' 
@@ -159,9 +159,9 @@ Partial Class Event_OfferService
         ' 
         EventName.AutoSize = True
         EventName.Font = New Font("Abhaya Libre Medium", 28F)
-        EventName.Location = New Point(812, 70)
+        EventName.Location = New Point(675, 51)
         EventName.Name = "EventName"
-        EventName.Size = New Size(153, 45)
+        EventName.Size = New Size(188, 55)
         EventName.TabIndex = 10
         EventName.Text = "DJ Night"
         ' 
@@ -169,26 +169,26 @@ Partial Class Event_OfferService
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Abhaya Libre Medium", 28F)
-        Label10.Location = New Point(54, 463)
+        Label10.Location = New Point(49, 389)
         Label10.Name = "Label10"
-        Label10.Size = New Size(334, 45)
+        Label10.Size = New Size(411, 55)
         Label10.TabIndex = 8
         Label10.Text = "Vendor Service Tags"
         ' 
         ' FlowLayoutPanelVendorServices
         ' 
-        FlowLayoutPanelVendorServices.Location = New Point(54, 537)
+        FlowLayoutPanelVendorServices.Location = New Point(49, 451)
         FlowLayoutPanelVendorServices.Name = "FlowLayoutPanelVendorServices"
-        FlowLayoutPanelVendorServices.Padding = New Padding(20)
-        FlowLayoutPanelVendorServices.Size = New Size(1077, 210)
+        FlowLayoutPanelVendorServices.Padding = New Padding(18, 17, 18, 17)
+        FlowLayoutPanelVendorServices.Size = New Size(969, 176)
         FlowLayoutPanelVendorServices.TabIndex = 9
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(54, 48)
+        PictureBox1.Location = New Point(49, 40)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(673, 378)
+        PictureBox1.Size = New Size(606, 318)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -198,16 +198,16 @@ Partial Class Event_OfferService
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Panel1)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(86, 23)
+        Panel2.Location = New Point(12, 12)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1254, 897)
+        Panel2.Size = New Size(1090, 749)
         Panel2.TabIndex = 27
         ' 
         ' Event_OfferService
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1444, 900)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None
         Name = "Event_OfferService"

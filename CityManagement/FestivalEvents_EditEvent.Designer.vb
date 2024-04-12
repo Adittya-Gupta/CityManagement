@@ -51,34 +51,33 @@ Partial Class FestivalEvents_EditEvent
         Label1.AutoSize = True
         Label1.Font = New Font("Abhaya Libre Medium", 28F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(63, 55)
+        Label1.Location = New Point(57, 46)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(296, 45)
+        Label1.Size = New Size(449, 55)
         Label1.TabIndex = 22
-        Label1.Text = "Events Festivals  >"
+        Label1.Text = "Events and Festivals  >"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Abhaya Libre Medium", 28F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(354, 55)
+        Label2.Location = New Point(514, 46)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(180, 45)
+        Label2.Size = New Size(221, 55)
         Label2.TabIndex = 23
         Label2.Text = "Edit Event"
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.Black
-        Button1.Font = New Font("Abhaya Libre Medium", 20F)
+        Button1.Font = New Font("Abhaya Libre Medium", 12F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(170, 521)
-        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Location = New Point(127, 438)
         Button1.Name = "Button1"
-        Button1.Size = New Size(249, 61)
+        Button1.Size = New Size(198, 54)
         Button1.TabIndex = 25
         Button1.Text = "Upload an Image"
         Button1.UseVisualStyleBackColor = False
@@ -87,10 +86,9 @@ Partial Class FestivalEvents_EditEvent
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), Image)
-        PictureBox1.Location = New Point(63, 170)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Location = New Point(57, 143)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(457, 317)
+        PictureBox1.Size = New Size(350, 266)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 26
         PictureBox1.TabStop = False
@@ -99,27 +97,26 @@ Partial Class FestivalEvents_EditEvent
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Abhaya Libre Medium", 16F)
-        Label3.Location = New Point(571, 187)
+        Label3.Location = New Point(457, 157)
         Label3.Name = "Label3"
-        Label3.Size = New Size(138, 25)
+        Label3.Size = New Size(170, 32)
         Label3.TabIndex = 27
         Label3.Text = "Name of event"
         ' 
         ' NameTextBox
         ' 
-        NameTextBox.Location = New Point(571, 225)
-        NameTextBox.Margin = New Padding(3, 4, 3, 4)
+        NameTextBox.Location = New Point(457, 189)
         NameTextBox.Name = "NameTextBox"
-        NameTextBox.Size = New Size(227, 31)
+        NameTextBox.Size = New Size(205, 29)
         NameTextBox.TabIndex = 28
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Abhaya Libre Medium", 16F)
-        Label4.Location = New Point(906, 187)
+        Label4.Location = New Point(734, 157)
         Label4.Name = "Label4"
-        Label4.Size = New Size(129, 25)
+        Label4.Size = New Size(158, 32)
         Label4.TabIndex = 29
         Label4.Text = "Date of event"
         ' 
@@ -127,46 +124,44 @@ Partial Class FestivalEvents_EditEvent
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Abhaya Libre Medium", 16F)
-        Label5.Location = New Point(906, 290)
+        Label5.Location = New Point(730, 244)
         Label5.Name = "Label5"
-        Label5.Size = New Size(231, 25)
+        Label5.Size = New Size(287, 32)
         Label5.TabIndex = 33
         Label5.Text = "Expected timing of event"
         ' 
         ' SpaceTextBox
         ' 
-        SpaceTextBox.Location = New Point(571, 326)
-        SpaceTextBox.Margin = New Padding(3, 4, 3, 4)
+        SpaceTextBox.Location = New Point(457, 274)
         SpaceTextBox.Name = "SpaceTextBox"
-        SpaceTextBox.Size = New Size(227, 31)
+        SpaceTextBox.Size = New Size(205, 29)
         SpaceTextBox.TabIndex = 32
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Abhaya Libre Medium", 16F)
-        Label6.Location = New Point(571, 290)
+        Label6.Location = New Point(457, 244)
         Label6.Name = "Label6"
-        Label6.Size = New Size(68, 25)
+        Label6.Size = New Size(83, 32)
         Label6.TabIndex = 31
         Label6.Text = "Venue"
         ' 
         ' DescTextBox
         ' 
-        DescTextBox.Location = New Point(571, 521)
-        DescTextBox.Margin = New Padding(3, 4, 3, 4)
+        DescTextBox.Location = New Point(454, 438)
         DescTextBox.Multiline = True
         DescTextBox.Name = "DescTextBox"
-        DescTextBox.Size = New Size(561, 124)
+        DescTextBox.Size = New Size(563, 105)
         DescTextBox.TabIndex = 40
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Abhaya Libre Medium", 16F)
-        Label9.Location = New Point(571, 479)
+        Label9.Location = New Point(454, 402)
         Label9.Name = "Label9"
-        Label9.Size = New Size(118, 25)
+        Label9.Size = New Size(147, 32)
         Label9.TabIndex = 39
         Label9.Text = "Description"
         ' 
@@ -175,10 +170,9 @@ Partial Class FestivalEvents_EditEvent
         Button2.BackColor = Color.Black
         Button2.Font = New Font("Abhaya Libre Medium", 20F)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(803, 674)
-        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Location = New Point(635, 582)
         Button2.Name = "Button2"
-        Button2.Size = New Size(194, 63)
+        Button2.Size = New Size(175, 53)
         Button2.TabIndex = 41
         Button2.Text = "Save Changes"
         Button2.UseVisualStyleBackColor = False
@@ -186,10 +180,9 @@ Partial Class FestivalEvents_EditEvent
         ' DateTimePicker1
         ' 
         DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(906, 225)
-        DateTimePicker1.Margin = New Padding(3, 4, 3, 4)
+        DateTimePicker1.Location = New Point(734, 189)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(227, 31)
+        DateTimePicker1.Size = New Size(205, 29)
         DateTimePicker1.TabIndex = 44
         ' 
         ' OpenFileDialog1
@@ -199,10 +192,9 @@ Partial Class FestivalEvents_EditEvent
         ' DateTimePicker2
         ' 
         DateTimePicker2.Format = DateTimePickerFormat.Time
-        DateTimePicker2.Location = New Point(907, 325)
-        DateTimePicker2.Margin = New Padding(3, 4, 3, 4)
+        DateTimePicker2.Location = New Point(735, 276)
         DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(224, 31)
+        DateTimePicker2.Size = New Size(202, 29)
         DateTimePicker2.TabIndex = 45
         ' 
         ' Panel1
@@ -224,19 +216,18 @@ Partial Class FestivalEvents_EditEvent
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(SpaceTextBox)
         Panel1.Controls.Add(Label5)
-        Panel1.Location = New Point(100, 20)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1254, 896)
+        Panel1.Size = New Size(1083, 746)
         Panel1.TabIndex = 48
         ' 
         ' RadioButton2
         ' 
         RadioButton2.AutoSize = True
         RadioButton2.Font = New Font("Abhaya Libre Medium", 16F)
-        RadioButton2.Location = New Point(676, 405)
+        RadioButton2.Location = New Point(599, 340)
         RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(107, 29)
+        RadioButton2.Size = New Size(132, 36)
         RadioButton2.TabIndex = 47
         RadioButton2.TabStop = True
         RadioButton2.Text = "Outdoor"
@@ -246,9 +237,9 @@ Partial Class FestivalEvents_EditEvent
         ' 
         RadioButton1.AutoSize = True
         RadioButton1.Font = New Font("Abhaya Libre Medium", 16F)
-        RadioButton1.Location = New Point(586, 405)
+        RadioButton1.Location = New Point(470, 340)
         RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(92, 29)
+        RadioButton1.Size = New Size(113, 36)
         RadioButton1.TabIndex = 46
         RadioButton1.TabStop = True
         RadioButton1.Text = "Indoor"
@@ -256,13 +247,12 @@ Partial Class FestivalEvents_EditEvent
         ' 
         ' FestivalEvents_EditEvent
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1444, 900)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 4, 3, 4)
         Name = "FestivalEvents_EditEvent"
         Text = "Edit_Event"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

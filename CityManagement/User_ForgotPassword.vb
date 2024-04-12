@@ -6,7 +6,7 @@ Imports System.Net.Mail
 Imports System.Windows.Forms
 
 Public Class ForgotPassword
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Dim randomCode As String
     Dim elapsedTime As Integer = 0 ' Track elapsed time in seconds

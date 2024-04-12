@@ -4,7 +4,7 @@ Imports System.Security.Cryptography
 Imports System.Runtime.InteropServices.JavaScript.JSType
 
 Public Class User_Admin
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim connection As New MySqlConnection(connString)
 

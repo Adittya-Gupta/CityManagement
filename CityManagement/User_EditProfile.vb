@@ -6,7 +6,7 @@ Imports System.Xml
 
 Public Class User_EditProfile
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Dim selectedImagePath As String = ""
     Private Sub SignUpForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

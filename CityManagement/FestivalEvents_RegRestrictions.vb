@@ -2,11 +2,12 @@
 Imports Newtonsoft.Json.Linq
 
 Public Class FestivalEvents_RegRestrictions
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
 
     Private Sub FestivalEvents_RegRestrictions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
+
         Me.FormBorderStyle = FormBorderStyle.None
         Try
             conn.Open()

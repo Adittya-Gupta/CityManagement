@@ -3,7 +3,7 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 
 Public Class FestivalEvents_MainMenu
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         mypanel.Panel1.Controls.Clear()
@@ -36,6 +36,7 @@ Public Class FestivalEvents_MainMenu
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
                 While reader.Read()
+                    Debug.WriteLine(reader("name"))
                     Dim isApproved As Boolean = reader("isapproved")
                     Dim isOpen As Boolean = reader("isopen")
 

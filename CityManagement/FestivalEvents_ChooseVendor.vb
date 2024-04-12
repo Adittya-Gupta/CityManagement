@@ -6,7 +6,7 @@ Public Class FestivalEvents_ChooseVendor
     Private selectedVendorButton As Button ' Tracks the currently selected vendor button
     Public vendorServiceTags As List(Of VendorServiceTag)
     Private currentIndex As Integer
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
 
     ' Constructor to initialize the form with the list of VendorServiceTag objects and the current index

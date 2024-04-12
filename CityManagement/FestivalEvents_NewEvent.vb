@@ -3,7 +3,7 @@ Imports System.IO
 Imports MySql.Data.MySqlClient
 
 Public Class FestivalEvents_NewEvent
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim conn As New MySqlConnection(connString)
     Dim selectedImagePath As String = ""
@@ -43,13 +43,14 @@ Public Class FestivalEvents_NewEvent
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim Success As Integer = 0
         Try
             Dim eventname As String = NameTextBox.Text
             Dim eventdate As Date = EventDatePicker.Value
             Dim descr As String = EventDescription.Text
             Dim venue As String = VenueTextBox.Text
             Dim owner_id As Integer = Module1.CurrUserSID
-            Dim isopen As Integer = If(eventdate > DateAndTime.Now, 1, 0)
+            Dim isopen As Integer = 1 'If(eventdate > DateAndTime.Now, 1, 0)
             Dim etype As String = If(Indoor.Checked, "Indoor", "Outdoor")
 
             ' Check for not null constraints
@@ -99,6 +100,7 @@ Public Class FestivalEvents_NewEvent
             VenueTextBox.Text = ""
             EventDescription.Text = ""
             ' Clear other fields as needed...
+            Success = 1
 
         Catch ex As MySqlException
             MessageBox.Show("MySQL Error: " & ex.Message, "MySQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -109,6 +111,14 @@ Public Class FestivalEvents_NewEvent
         Finally
             conn.Close()
         End Try
+
+        If Success = 1 Then
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New FestivalEvents_MainMenu
+            form.TopLevel = False
+            mypanel.Panel1.Controls.Add(form)
+            form.Show()
+        End If
     End Sub
 
 

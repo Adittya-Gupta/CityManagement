@@ -7,15 +7,12 @@ Imports Org.BouncyCastle.Asn1.IsisMtt.X509
 Public Class FestivalEvents_EditEvent
 
     ' Database connection string
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    'Dim EventId As Integer = CurrEventID
-    'Dim UserSID As Integer = CurrUserSID
-
-    Dim EventId As Integer = 4
-    Dim UserSID As Integer = 1
+    Dim EventId As Integer = Module1.CurrEventID
+    Dim UserSID As Integer = Module1.CurrUserSID
 
 
 
@@ -47,6 +44,14 @@ Public Class FestivalEvents_EditEvent
                     Dim ms As New System.IO.MemoryStream(CoverImageData)
                     PictureBox1.Image = Image.FromStream(ms)
                 End If
+
+                Dim eventType As String = eventDetails("EventType").ToString()
+                If eventType = "Indoor" Then
+                    RadioButton1.Checked = True
+                ElseIf eventType = "Outdoor" Then
+                    RadioButton2.Checked = True
+                End If
+
             Else
                 MessageBox.Show("Event details not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -70,6 +75,7 @@ Public Class FestivalEvents_EditEvent
                     festivalDetails.Add("DateTime", reader("dateTime").ToString())
                     festivalDetails.Add("Venue", reader("venue"))
                     festivalDetails.Add("EventDescription", reader("description"))
+                    festivalDetails.Add("EventType", reader("event_type"))
                     ' Assuming CoverImage is also being retrieved here based on your initial setup
                     festivalDetails.Add("CoverImage", If(Not IsDBNull(reader("image")), DirectCast(reader("image"), Byte()), Nothing))
                     ' Additional fields can be added as needed
@@ -109,11 +115,10 @@ Public Class FestivalEvents_EditEvent
         Try
             conn.Open() ' Open the database connection
             ' SQL query to update event details in the database
-            Dim sql As String = "UPDATE festivals SET name = @EventName, venue = @Venue, description = @EventDescription, dateTime = @DateTime, image = @CoverImage WHERE id = @EventID"
+            Dim sql As String = "UPDATE festivals SET name = @EventName, venue = @Venue, description = @EventDescription, dateTime = @DateTime, image = @CoverImage, event_type = @EventType WHERE id = @EventID"
 
             ' Combine Date and Time from the two DateTimePicker controls
             Dim combinedDateTime As DateTime = DateTimePicker1.Value.Date + DateTimePicker2.Value.TimeOfDay
-
 
             Using cmd As New MySqlCommand(sql, conn)
                 ' Bind the form field values to the SQL query parameters
@@ -122,10 +127,17 @@ Public Class FestivalEvents_EditEvent
                 cmd.Parameters.AddWithValue("@EventDescription", DescTextBox.Text)
                 cmd.Parameters.AddWithValue("@DateTime", combinedDateTime)
 
-                ' Determine the category based on the radio button selection
-                'Dim category As String = ComboBox1.SelectedItem
-
-                'cmd.Parameters.AddWithValue("@Category", category)
+                ' Determine the event type based on the checked radio button
+                Dim eventType As String
+                If RadioButton1.Checked Then
+                    eventType = "Indoor"
+                ElseIf RadioButton2.Checked Then
+                    eventType = "Outdoor"
+                Else
+                    ' Handle the case where neither radio button is checked
+                    eventType = "Unknown"
+                End If
+                cmd.Parameters.AddWithValue("@EventType", eventType)
 
                 ' Convert the image in PictureBox to a byte array and bind it to the query parameter
                 If PictureBox1.Image IsNot Nothing Then

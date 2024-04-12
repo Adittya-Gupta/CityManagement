@@ -39,7 +39,7 @@ Partial Class FestivalEvents_Cards
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(455, 105)
+        Label1.Location = New Point(522, 105)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(184, 18)
@@ -51,7 +51,7 @@ Partial Class FestivalEvents_Cards
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ImageAlign = ContentAlignment.MiddleLeft
-        Label2.Location = New Point(444, 29)
+        Label2.Location = New Point(514, 29)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(198, 52)
@@ -62,7 +62,7 @@ Partial Class FestivalEvents_Cards
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(455, 151)
+        Label3.Location = New Point(522, 151)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(140, 18)
@@ -73,7 +73,7 @@ Partial Class FestivalEvents_Cards
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(455, 196)
+        Label4.Location = New Point(522, 196)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(191, 18)
@@ -83,10 +83,10 @@ Partial Class FestivalEvents_Cards
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(0, 0)
-        PictureBox1.Margin = New Padding(4, 4, 4, 4)
+        PictureBox1.Location = New Point(34, 21)
+        PictureBox1.Margin = New Padding(4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(447, 277)
+        PictureBox1.Size = New Size(395, 240)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
@@ -98,8 +98,8 @@ Partial Class FestivalEvents_Cards
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1200, 225)
-        Button1.Margin = New Padding(4, 4, 4, 4)
+        Button1.Location = New Point(852, 213)
+        Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
         Button1.Size = New Size(90, 48)
         Button1.TabIndex = 5
@@ -112,8 +112,8 @@ Partial Class FestivalEvents_Cards
         PictureBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         PictureBox2.BackColor = Color.Black
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(1214, 237)
-        PictureBox2.Margin = New Padding(4, 4, 4, 4)
+        PictureBox2.Location = New Point(866, 225)
+        PictureBox2.Margin = New Padding(4)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(24, 24)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -144,9 +144,9 @@ Partial Class FestivalEvents_Cards
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Margin = New Padding(4, 4, 4, 4)
+        Margin = New Padding(4)
         Name = "FestivalEvents_Cards"
-        Size = New Size(1293, 277)
+        Size = New Size(958, 277)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

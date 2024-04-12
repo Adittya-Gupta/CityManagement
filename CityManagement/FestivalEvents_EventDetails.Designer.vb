@@ -32,23 +32,25 @@ Partial Class FestivalEvents_EventDetails
         Label5 = New Label()
         Label6 = New Label()
         Button2 = New Button()
-        PictureBox2 = New PictureBox()
         Label7 = New Label()
         Panel1 = New Panel()
         Button1 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
+        Button5 = New Button()
+        Button6 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(486, 76)
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
+        Label2.Location = New Point(283, 58)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(163, 40)
+        Label2.Size = New Size(95, 25)
         Label2.TabIndex = 28
         Label2.Text = "DJ Night"
         ' 
@@ -56,12 +58,12 @@ Partial Class FestivalEvents_EventDetails
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(32, 76)
+        Label1.Location = New Point(32, 58)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(424, 40)
+        Label1.Size = New Size(243, 25)
         Label1.TabIndex = 27
         Label1.Text = "Events and Festivals   >"
         ' 
@@ -71,7 +73,7 @@ Partial Class FestivalEvents_EventDetails
         PictureBox1.Location = New Point(16, 8)
         PictureBox1.Margin = New Padding(4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(516, 328)
+        PictureBox1.Size = New Size(623, 401)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 29
         PictureBox1.TabStop = False
@@ -89,10 +91,10 @@ Partial Class FestivalEvents_EventDetails
         Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(556, 39)
+        Label3.Location = New Point(647, 96)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(230, 55)
+        Label3.Size = New Size(193, 46)
         Label3.TabIndex = 30
         Label3.Text = " DJ Night"
         ' 
@@ -101,10 +103,10 @@ Partial Class FestivalEvents_EventDetails
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label4.Location = New Point(556, 126)
+        Label4.Location = New Point(647, 183)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(254, 37)
+        Label4.Size = New Size(217, 31)
         Label4.TabIndex = 31
         Label4.Text = "Venue : Central"
         ' 
@@ -113,10 +115,10 @@ Partial Class FestivalEvents_EventDetails
         Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label5.Location = New Point(556, 158)
+        Label5.Location = New Point(647, 215)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(276, 37)
+        Label5.Size = New Size(239, 31)
         Label5.TabIndex = 32
         Label5.Text = "Date: 11/06/2003"
         ' 
@@ -125,10 +127,10 @@ Partial Class FestivalEvents_EventDetails
         Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Bold)
-        Label6.Location = New Point(556, 190)
+        Label6.Location = New Point(647, 247)
         Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(249, 37)
+        Label6.Size = New Size(210, 31)
         Label6.TabIndex = 33
         Label6.Text = "Time : 8:00 Pm"
         ' 
@@ -137,37 +139,25 @@ Partial Class FestivalEvents_EventDetails
         Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button2.BackColor = Color.Black
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(892, 41)
+        Button2.Location = New Point(612, 38)
         Button2.Margin = New Padding(4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(264, 70)
+        Button2.Size = New Size(135, 70)
         Button2.TabIndex = 35
-        Button2.Text = "Request to Service"
+        Button2.Text = "Choose Service"
         Button2.TextAlign = ContentAlignment.MiddleRight
         Button2.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        PictureBox2.BackColor = Color.Black
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(902, 56)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(56, 37)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 36
-        PictureBox2.TabStop = False
         ' 
         ' Label7
         ' 
         Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(25, 359)
+        Label7.Location = New Point(16, 433)
         Label7.Name = "Label7"
-        Label7.Size = New Size(113, 37)
+        Label7.Size = New Size(95, 31)
         Label7.TabIndex = 38
         Label7.Text = "Label7"
         ' 
@@ -184,7 +174,7 @@ Partial Class FestivalEvents_EventDetails
         Panel1.Location = New Point(32, 134)
         Panel1.Name = "Panel1"
         Panel1.Padding = New Padding(22, 17, 2200, 17)
-        Panel1.Size = New Size(1122, 652)
+        Panel1.Size = New Size(1022, 599)
         Panel1.TabIndex = 39
         ' 
         ' Button1
@@ -192,25 +182,92 @@ Partial Class FestivalEvents_EventDetails
         Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(705, 41)
+        Button1.Location = New Point(842, 38)
         Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(156, 70)
+        Button1.Size = New Size(110, 70)
         Button1.TabIndex = 40
         Button1.Text = "Restrictions"
         Button1.TextAlign = ContentAlignment.MiddleRight
         Button1.UseVisualStyleBackColor = False
         ' 
+        ' Button3
+        ' 
+        Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button3.BackColor = Color.Black
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(958, 38)
+        Button3.Margin = New Padding(4)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(96, 70)
+        Button3.TabIndex = 41
+        Button3.Text = "Edit Event"
+        Button3.TextAlign = ContentAlignment.MiddleRight
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button4
+        ' 
+        Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button4.BackColor = Color.Black
+        Button4.FlatStyle = FlatStyle.Flat
+        Button4.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Button4.ForeColor = Color.White
+        Button4.Location = New Point(752, 38)
+        Button4.Margin = New Padding(4)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(85, 70)
+        Button4.TabIndex = 42
+        Button4.Text = "Approve"
+        Button4.TextAlign = ContentAlignment.MiddleRight
+        Button4.UseVisualStyleBackColor = False
+        ' 
+        ' Button5
+        ' 
+        Button5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button5.BackColor = Color.Black
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Button5.ForeColor = Color.White
+        Button5.Location = New Point(519, 38)
+        Button5.Margin = New Padding(4)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(85, 70)
+        Button5.TabIndex = 43
+        Button5.Text = "Request"
+        Button5.TextAlign = ContentAlignment.MiddleRight
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' Button6
+        ' 
+        Button6.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Button6.BackColor = Color.Black
+        Button6.FlatStyle = FlatStyle.Flat
+        Button6.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Button6.ForeColor = Color.White
+        Button6.Location = New Point(426, 38)
+        Button6.Margin = New Padding(4)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(85, 70)
+        Button6.TabIndex = 44
+        Button6.Text = "Register"
+        Button6.TextAlign = ContentAlignment.MiddleRight
+        Button6.UseVisualStyleBackColor = False
+        ' 
         ' FestivalEvents_EventDetails
         ' 
-        AutoScaleDimensions = New SizeF(11F, 22F)
+        AutoScaleDimensions = New SizeF(10F, 18F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1224, 815)
+        ClientSize = New Size(1107, 760)
+        Controls.Add(Button6)
+        Controls.Add(Button5)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
         Controls.Add(Button1)
         Controls.Add(Panel1)
-        Controls.Add(PictureBox2)
         Controls.Add(Button2)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -219,7 +276,6 @@ Partial Class FestivalEvents_EventDetails
         Name = "FestivalEvents_EventDetails"
         Text = "mu"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
@@ -235,8 +291,11 @@ Partial Class FestivalEvents_EventDetails
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

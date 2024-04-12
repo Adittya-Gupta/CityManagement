@@ -78,7 +78,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(334, 76)
+        Label2.Location = New Point(280, 68)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(188, 25)
@@ -90,7 +90,7 @@ Partial Class FestivalEvents_NewEvent
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(40, 76)
+        Label1.Location = New Point(23, 68)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(249, 25)
@@ -105,8 +105,9 @@ Partial Class FestivalEvents_NewEvent
         ' 
         ' Button2
         ' 
-        Button2.BackColor = Color.SteelBlue
-        Button2.Location = New Point(660, 496)
+        Button2.BackColor = Color.Black
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(618, 492)
         Button2.Name = "Button2"
         Button2.Size = New Size(189, 57)
         Button2.TabIndex = 42
@@ -136,7 +137,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Exo 2", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(812, 35)
+        Label5.Location = New Point(738, 35)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(112, 20)
@@ -166,7 +167,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Exo 2", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(812, 129)
+        Label7.Location = New Point(738, 129)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(228, 20)
@@ -176,7 +177,7 @@ Partial Class FestivalEvents_NewEvent
         ' Button1
         ' 
         Button1.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(120, 312)
+        Button1.Location = New Point(92, 313)
         Button1.Name = "Button1"
         Button1.Size = New Size(189, 57)
         Button1.TabIndex = 38
@@ -200,16 +201,16 @@ Partial Class FestivalEvents_NewEvent
         EventDescription.Location = New Point(435, 336)
         EventDescription.Multiline = True
         EventDescription.Name = "EventDescription"
-        EventDescription.Size = New Size(635, 127)
+        EventDescription.Size = New Size(562, 127)
         EventDescription.TabIndex = 40
         ' 
         ' EventImage
         ' 
         EventImage.Image = CType(resources.GetObject("EventImage.Image"), Image)
         EventImage.Location = New Point(28, 35)
-        EventImage.Margin = New Padding(4, 4, 4, 4)
+        EventImage.Margin = New Padding(4)
         EventImage.Name = "EventImage"
-        EventImage.Size = New Size(346, 258)
+        EventImage.Size = New Size(330, 258)
         EventImage.SizeMode = PictureBoxSizeMode.StretchImage
         EventImage.TabIndex = 43
         EventImage.TabStop = False
@@ -218,7 +219,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         EventDatePicker.CalendarFont = New Font("Abhaya Libre Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         EventDatePicker.Format = DateTimePickerFormat.Short
-        EventDatePicker.Location = New Point(812, 67)
+        EventDatePicker.Location = New Point(738, 67)
         EventDatePicker.Name = "EventDatePicker"
         EventDatePicker.Size = New Size(259, 29)
         EventDatePicker.TabIndex = 45
@@ -228,7 +229,7 @@ Partial Class FestivalEvents_NewEvent
         EventTimePicker.CalendarFont = New Font("Abhaya Libre Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         EventTimePicker.DropDownAlign = LeftRightAlignment.Right
         EventTimePicker.Format = DateTimePickerFormat.Time
-        EventTimePicker.Location = New Point(812, 165)
+        EventTimePicker.Location = New Point(738, 165)
         EventTimePicker.Name = "EventTimePicker"
         EventTimePicker.Size = New Size(259, 29)
         EventTimePicker.TabIndex = 46
@@ -290,15 +291,15 @@ Partial Class FestivalEvents_NewEvent
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(NameTextBox)
-        Panel1.Location = New Point(31, 146)
+        Panel1.Location = New Point(31, 111)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1149, 612)
+        Panel1.Size = New Size(1043, 616)
         Panel1.TabIndex = 50
         ' 
         ' VenueTextBox
         ' 
         VenueTextBox.Font = New Font("Microsoft Sans Serif", 12F)
-        VenueTextBox.Location = New Point(812, 252)
+        VenueTextBox.Location = New Point(738, 252)
         VenueTextBox.Name = "VenueTextBox"
         VenueTextBox.Size = New Size(259, 30)
         VenueTextBox.TabIndex = 51
@@ -307,7 +308,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Exo 2", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(810, 223)
+        Label9.Location = New Point(736, 223)
         Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(105, 20)
@@ -319,7 +320,7 @@ Partial Class FestivalEvents_NewEvent
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1248, 815)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)
         Controls.Add(Label2)
         Controls.Add(Label1)

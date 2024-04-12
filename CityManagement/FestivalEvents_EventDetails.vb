@@ -1,24 +1,84 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports MySql.Data.MySqlClient
 
 Public Class FestivalEvents_EventDetails
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Private Sub FestivalEvents_EventDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Make this form full screen
         'Me.WindowState = FormWindowState.Maximized
         'Hide the title bar
-        Me.Width = Screen.PrimaryScreen.Bounds.Width - 200
-        Me.Height = Screen.PrimaryScreen.Bounds.Height
+        'Me.Width = Screen.PrimaryScreen.Bounds.Width - 200
+        'Me.Height = Screen.PrimaryScreen.Bounds.Height
         Me.Text = String.Empty
         Me.ControlBox = False
         Label7.MaximumSize = New Size(Panel1.Size.Width - 100, 0) ' Adjust the width as needed
         Label7.AutoSize = True
+        'Button1.Visible = False
+        'Button2.Visible = False
+        'Button3.Visible = False
+        'Button4.Visible = False
+
+
+        Dim designation As String = ""
+        Dim Owner_id As Integer = -1
+
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM festivals WHERE name = @CurrEvent "
+            ' Query to fetch user's designation and ownership status from the database based on SID
+            Dim query As String = "SELECT designation FROM User WHERE SID = @UserID"
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEvent)
+                cmd.Parameters.AddWithValue("@UserID", Module1.CurrUserSID)
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        designation = Convert.ToString(reader("designation"))
+                    End If
+                End Using
+            End Using
+
+            query = "SELECT owner_sid FROM festivals WHERE id = @CurrEventID "
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@CurrEventID", Module1.CurrEventID)
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        Owner_id = Convert.ToInt32(reader("owner_sid"))
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error fetching details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+
+        Debug.WriteLine(Module1.CurrUserSID)
+        Debug.WriteLine(Owner_id)
+
+        ' Display buttons based on user's designation and ownership
+        Select Case designation
+            Case "Vendor"
+                Button2.Visible = True
+            Case "Minister"
+                Button4.Visible = True
+        End Select
+
+        If Module1.CurrUserSID = Owner_id Then
+            Button3.Visible = True
+            Button1.Visible = True
+        End If
+
+
+
+
+
+
+
+        Try
+            conn.Open()
+            Dim query As String = "SELECT * FROM festivals WHERE id = @CurrEventID "
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@CurrEventID", Module1.CurrEventID)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 reader.Read()
                 Dim isApproved As Boolean = reader("isapproved")
@@ -78,10 +138,42 @@ Public Class FestivalEvents_EventDetails
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        mypanel.Panel1.Controls.Clear()
+        mypanel.Panel1.Controls.Clear
         Dim form As New FestivalEvents_RegRestrictions
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
+        form.Show
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_Approval
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_EditEvent
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        mypanel.Panel1.Controls.Clear()
+        'Dim form As New FestivalEvents_OfferService
+        'Form.TopLevel = False
+        'mypanel.Panel1.Controls.Add(form)
+        'Form.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'mypanel.Panel1.Controls.Clear()
+        'Dim form As New FestivalEvents_Participation
+        'Form.TopLevel = False
+        'mypanel.Panel1.Controls.Add(form)
+        'Form.Show()
     End Sub
 End Class

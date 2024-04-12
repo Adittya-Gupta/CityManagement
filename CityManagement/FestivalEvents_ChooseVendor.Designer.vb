@@ -29,7 +29,7 @@ Partial Class FestivalEvents_ChooseVendor
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(12, 9)
+        Label3.Location = New Point(14, 9)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(198, 31)
@@ -38,11 +38,12 @@ Partial Class FestivalEvents_ChooseVendor
         ' 
         ' FestivalEvents_ChooseVendor
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(711, 429)
+        ClientSize = New Size(800, 450)
         Controls.Add(Label3)
+        FormBorderStyle = FormBorderStyle.None
         Name = "FestivalEvents_ChooseVendor"
         Text = "FestivalEvents_ChooseVendor"
         ResumeLayout(False)

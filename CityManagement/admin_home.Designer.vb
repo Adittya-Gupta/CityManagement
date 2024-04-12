@@ -202,6 +202,7 @@ Partial Class admin_home
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "admin_home"
         Text = "admin_home"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

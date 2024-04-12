@@ -115,6 +115,7 @@ Partial Class admin_Mayor
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "admin_Mayor"
         Text = "admin_Mayor"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

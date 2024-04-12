@@ -3,6 +3,10 @@
     'Make this form full screen
 
 
+    Public Shared Sub CLearPanels()
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+    End Sub
     Public Shared Sub ChildForm(ByVal childform As Form)
         mypanel.Panel1.Controls.Clear()
         childform.TopLevel = False
@@ -36,8 +40,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Banking_Main.Panel1.Controls.Clear()
-        Newsletter_Main.Panel1.Controls.Clear()
+        CLearPanels()
         ChildForm2(Banking_Main.Panel1, Banking_Homepage)
         mypanel.Panel1.Controls.Clear()
         ChildForm(Banking_Main)
@@ -60,8 +63,7 @@
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Banking_Main.Panel1.Controls.Clear()
-        Newsletter_Main.Panel1.Controls.Clear()
+        CLearPanels()
         ChildForm2(Newsletter_Main.Panel1, Newsletter_Homepage)
         mypanel.Panel1.Controls.Clear()
         ChildForm(Newsletter_Main)
@@ -69,5 +71,12 @@
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+        mypanel.Panel1.Controls.Clear()
+        ChildForm(Email_Landing)
     End Sub
 End Class

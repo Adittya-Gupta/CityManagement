@@ -170,7 +170,7 @@ Public Class Newsletter_AddNews
         End If
         ' Close the connection after use
         Mysqlconn.Close()
-
+        ChildForm(Newsletter_Main.Panel1, Newsletter_Main)
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)

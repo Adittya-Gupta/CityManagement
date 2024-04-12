@@ -94,7 +94,12 @@ Public Class Redressal
             ' Set the complaint ID as an environment variable
             Environment.SetEnvironmentVariable("ComplaintID", complaintID)
             Dim Quer1 As New Quer1()
-            MainPanel.switchPanel(Quer1)
+            ' MainPanel.switchPanel(Quer1)
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New Quer1()
+            form.TopLevel = False
+            mypanel.Panel1.Controls.Add(form)
+            form.Show()
 
         End If
     End Sub

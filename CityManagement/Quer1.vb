@@ -65,8 +65,13 @@ Public Class Quer1
                 conn.Close()
             End If
         End Try
-        Dim Redressal As New Redressal()
-        MainPanel.switchPanel(Redressal)
+        ' Dim Redressal As New Redressal()
+        'MainPanel.switchPanel(Redressal)
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New Redressal()
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Submit_Click(sender As Object, e As EventArgs) Handles Submit.Click
@@ -99,7 +104,12 @@ Public Class Quer1
             End If
         End Try
         Dim Redressal As New Redressal()
-        MainPanel.switchPanel(Redressal)
+        ' MainPanel.switchPanel(Redressal)
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New Redressal()
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
 End Class

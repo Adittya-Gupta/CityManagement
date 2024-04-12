@@ -58,7 +58,6 @@ Partial Class MainPanel
         ' Panel1
         ' 
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel1.AutoSize = True
         Panel1.BackColor = Color.White
         Panel1.Location = New Point(201, 1)
         Panel1.Margin = New Padding(4)
@@ -329,7 +328,6 @@ Partial Class MainPanel
         Controls.Add(Panel1)
         Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
-        MaximizeBox = False
         Name = "MainPanel"
         Text = "MainPanel"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -343,7 +341,6 @@ Partial Class MainPanel
         CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel

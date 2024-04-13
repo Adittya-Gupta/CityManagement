@@ -55,7 +55,6 @@ Public Class IncomingEmploymentReq
 
                     Dim listItem As New Incoming_Emp_Req(Me, date_, name_, i, contactDetails_, bank_account_no_, detailsPrevWork_, userID_, orgID_)
                     Panel1.Controls.Add(listItem)
-                    listItem.Left = 80
 
                     ' Set margin top for ListItem2 to ListItem4
                     If i > 1 Then

@@ -27,9 +27,9 @@ Partial Class IncomingEmploymentReq
         ' 
         ' Panel1
         ' 
-        Panel1.Location = New Point(38, 12)
+        Panel1.Location = New Point(2, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1157, 910)
+        Panel1.Size = New Size(1083, 689)
         Panel1.TabIndex = 1
         ' 
         ' IncomingEmploymentReq
@@ -37,7 +37,7 @@ Partial Class IncomingEmploymentReq
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1089, 713)
         Controls.Add(Panel1)
         Name = "IncomingEmploymentReq"
         Text = "IncomingEmploymentReq"

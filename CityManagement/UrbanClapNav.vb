@@ -1,4 +1,13 @@
-﻿Public Class UrbanClapNav
+﻿Imports MySql.Data.MySqlClient
+
+Public Class UrbanClapNav
+    'Dim userID As Integer = 112546 ' User ID of the applicant
+    'Dim userID As Integer = 112547 ' User ID of the applicant
+    Dim userID As Integer = 124918 ' User ID of the applicant
+    'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
+    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim conn As New MySqlConnection(connString)
+    Dim designation As String
 
     Private Sub UrbanClapNav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the UrbanClapNav form with Panel1 initially empty
@@ -36,13 +45,38 @@
         If Button3.Text = "Work Section" Then
             Button1.Text = "Service Request"
             Button3.Text = "Back"
-            ShowFormInPanel1(Globals.WorkPage)
-            ShowCurvedLabels_history()
+
+            Try
+                conn.Open()
+                Dim query As String = "SELECT Designation FROM User WHERE SID = @userID"
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@userID", userID)
+                    Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        Dim designation As String = reader.GetString("Designation")
+                        If designation = "Electrician" OrElse designation = "Plumber" OrElse designation = "Househelp" OrElse designation = "Merchant" Then
+                            ShowFormInPanel1(Globals.WorkPage)
+                            ShowCurvedLabels_history()
+                        ElseIf designation = "Head Electrician" OrElse designation = "Head Plumber" OrElse designation = "Head Househelp" OrElse designation = "Head Merchant" Then
+                            ShowFormInPanel1(Globals.OrgHeadWorkSection)
+                            ShowCurvedLabels_history()
+                        Else
+                            MessageBox.Show("You are not employed as a Service Worker")
+                            Return
+                        End If
+                    End If
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error accessing page: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                ' Close the database connection
+                conn.Close()
+            End Try
         Else
-            Button1.Text = "Service History"
-            Button3.Text = "Work Section"
-            ShowFormInPanel1(Globals.listofServicesForm)
-            HideCurvedLabels()
+                Button1.Text = "Service History"
+                Button3.Text = "Work Section"
+                ShowFormInPanel1(Globals.listofServicesForm)
+                HideCurvedLabels()
         End If
         'Me.Hide()
     End Sub

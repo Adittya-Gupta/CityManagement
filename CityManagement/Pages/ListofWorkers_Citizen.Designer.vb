@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LIstofWorkers_Citizen
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class LIstofWorkers_Citizen
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Label1 = New Label()
@@ -28,66 +28,56 @@ Partial Class LIstofWorkers_Citizen
         TextBox1 = New TextBox()
         Label3 = New Label()
         Panel1 = New Panel()
-        Label4 = New Label()
         Timer1 = New Timer(components)
         Button1 = New Button()
+        Label4 = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Frame_1054__2_
-        Label1.Location = New Point(1029, 75)
+        Label1.Location = New Point(709, 57)
         Label1.Name = "Label1"
-        Label1.Size = New Size(163, 73)
+        Label1.Size = New Size(163, 67)
         Label1.TabIndex = 0
         ' 
         ' Label2
         ' 
         Label2.Image = My.Resources.Resources.Group_183
-        Label2.Location = New Point(569, 75)
+        Label2.Location = New Point(64, 74)
         Label2.Name = "Label2"
-        Label2.Size = New Size(382, 73)
+        Label2.Size = New Size(340, 50)
         Label2.TabIndex = 1
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = Color.Black
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Exo 2 Medium", 12F)
+        TextBox1.Font = New Font("Exo 2 Medium", 12.0F)
         TextBox1.ForeColor = Color.Gray
-        TextBox1.Location = New Point(592, 97)
+        TextBox1.Location = New Point(80, 82)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(285, 34)
+        TextBox1.Size = New Size(256, 34)
         TextBox1.TabIndex = 2
-        TextBox1.Text = "Search for Service Provider"
+        TextBox1.Text = "Search for Vendors"
         ' 
         ' Label3
         ' 
         Label3.BackColor = Color.Black
         Label3.Image = My.Resources.Resources.Search_icon
-        Label3.Location = New Point(874, 84)
+        Label3.Location = New Point(342, 77)
         Label3.Name = "Label3"
-        Label3.Size = New Size(66, 51)
+        Label3.Size = New Size(51, 47)
         Label3.TabIndex = 3
         ' 
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.Location = New Point(42, 177)
+        Panel1.Location = New Point(65, 145)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1102, 719)
+        Panel1.Size = New Size(964, 511)
         Panel1.TabIndex = 4
-        ' 
-        ' Label4
-        ' 
-        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label4.Location = New Point(102, 75)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(406, 61)
-        Label4.TabIndex = 5
-        Label4.Text = "List of Service Providers"
         ' 
         ' Timer1
         ' 
@@ -96,29 +86,39 @@ Partial Class LIstofWorkers_Citizen
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1091, 9)
+        Button1.Location = New Point(944, 12)
         Button1.Name = "Button1"
         Button1.Size = New Size(151, 51)
         Button1.TabIndex = 14
         Button1.Text = "Back"
         Button1.UseVisualStyleBackColor = False
         ' 
+        ' Label4
+        ' 
+        Label4.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
+        Label4.Location = New Point(65, 12)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(311, 61)
+        Label4.TabIndex = 15
+        Label4.Text = "List of Workers"
+        ' 
         ' ListofWorkers_Citizen
         ' 
-        AutoScaleDimensions = New SizeF(8F, 22F)
+        AutoScaleDimensions = New SizeF(8.0F, 22.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1254, 953)
-        Controls.Add(Button1)
+        ClientSize = New Size(1107, 685)
         Controls.Add(Label4)
+        Controls.Add(Button1)
         Controls.Add(Panel1)
         Controls.Add(Label3)
         Controls.Add(TextBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Exo 2", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.ControlLightLight
         FormBorderStyle = FormBorderStyle.None
         Name = "ListofWorkers_Citizen"
@@ -133,7 +133,7 @@ Partial Class LIstofWorkers_Citizen
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label4 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
 End Class

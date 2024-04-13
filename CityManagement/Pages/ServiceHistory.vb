@@ -349,5 +349,4 @@ Public Class ServiceHistory
         Return filteredBookings
     End Function
 
-
 End Class

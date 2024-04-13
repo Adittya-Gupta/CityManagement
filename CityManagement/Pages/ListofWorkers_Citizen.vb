@@ -172,7 +172,7 @@ Public Class ListofWorkers_Citizen
             Panel1.Controls.Add(listItem)
 
             ' Increment top position for the next ListItem
-            topPosition += 200
+            topPosition += 120
         Next
         Panel1.ResumeLayout()
     End Sub
@@ -214,7 +214,7 @@ Public Class ListofWorkers_Citizen
     End Sub
 
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
-        If TextBox1.Text = "Search for Service Provider" Then
+        If TextBox1.Text = "Search for Vendors" Then
             TextBox1.Text = ""
             TextBox1.ForeColor = Color.White ' Change text color to normal
         End If
@@ -222,7 +222,7 @@ Public Class ListofWorkers_Citizen
 
     Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles TextBox1.LostFocus
         If String.IsNullOrWhiteSpace(TextBox1.Text) Then
-            TextBox1.Text = "Search for Service Provider"
+            TextBox1.Text = "Search for  Vendors"
             TextBox1.ForeColor = Color.Gray ' Change text color to placeholder color
         End If
     End Sub

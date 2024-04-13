@@ -44,4 +44,8 @@ Public Class Chatlistitem
         Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
         Globals.chatsForm.Label2.Text = Label1.Text
     End Sub
+
+    Private Sub Chatlistitem_Load(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

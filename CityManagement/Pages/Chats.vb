@@ -12,7 +12,6 @@ Public Class Chats
         Me.username = Username
     End Sub
 
-
     Private Sub MakePictureBoxRound(ByVal pictureBox As PictureBox)
         ' Create a GraphicsPath to define a circle
         Dim path As New GraphicsPath()
@@ -378,4 +377,7 @@ Public Class Chats
         e.Graphics.FillRectangle(brush, rect)
     End Sub
 
+    Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click
+
+    End Sub
 End Class

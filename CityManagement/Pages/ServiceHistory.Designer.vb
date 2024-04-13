@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ServiceHistory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class ServiceHistory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Label4 = New Label()
         Label3 = New Label()
         TextBox1 = New TextBox()
         Label2 = New Label()
@@ -33,54 +32,44 @@ Partial Class ServiceHistory
         Label6 = New Label()
         Label7 = New Label()
         Button1 = New Button()
-        CurvedLabel1 = New CurvedLabel()
         Timer1 = New Timer(components)
+        Label8 = New Label()
         SuspendLayout()
-        ' 
-        ' Label4
-        ' 
-        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        Label4.ForeColor = Color.FromArgb(96, 85, 85)
-        Label4.Location = New Point(146, 75)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(406, 61)
-        Label4.TabIndex = 10
-        Label4.Text = "Service History"
         ' 
         ' Label3
         ' 
         Label3.BackColor = Color.Black
         Label3.Image = My.Resources.Resources.Search_icon
-        Label3.Location = New Point(863, 84)
+        Label3.Location = New Point(332, 74)
         Label3.Name = "Label3"
-        Label3.Size = New Size(66, 45)
+        Label3.Size = New Size(60, 49)
         Label3.TabIndex = 9
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = Color.Black
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Exo 2 Medium", 12F)
+        TextBox1.Font = New Font("Exo 2 Medium", 12.0F)
         TextBox1.ForeColor = Color.Gray
-        TextBox1.Location = New Point(581, 97)
+        TextBox1.Location = New Point(73, 84)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(285, 28)
+        TextBox1.Size = New Size(256, 34)
         TextBox1.TabIndex = 8
         TextBox1.Text = "Search History"
         ' 
         ' Label2
         ' 
         Label2.Image = My.Resources.Resources.Group_183
-        Label2.Location = New Point(558, 75)
+        Label2.Location = New Point(52, 74)
         Label2.Name = "Label2"
-        Label2.Size = New Size(382, 67)
+        Label2.Size = New Size(340, 50)
         Label2.TabIndex = 7
         ' 
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Frame_1054__2_
-        Label1.Location = New Point(1018, 75)
+        Label1.Location = New Point(726, 56)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 67)
         Label1.TabIndex = 6
@@ -88,27 +77,27 @@ Partial Class ServiceHistory
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.Location = New Point(42, 218)
+        Panel1.Location = New Point(56, 187)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1102, 678)
+        Panel1.Size = New Size(1017, 486)
         Panel1.TabIndex = 11
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label5.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
-        Label5.Location = New Point(173, 154)
+        Label5.Location = New Point(192, 124)
         Label5.Name = "Label5"
-        Label5.Size = New Size(211, 61)
+        Label5.Size = New Size(188, 61)
         Label5.TabIndex = 12
         Label5.Text = "Service History"
         Label5.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label6.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(590, 154)
+        Label6.Location = New Point(572, 124)
         Label6.Name = "Label6"
         Label6.Size = New Size(211, 61)
         Label6.TabIndex = 13
@@ -117,9 +106,9 @@ Partial Class ServiceHistory
         ' 
         ' Label7
         ' 
-        Label7.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label7.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(890, 154)
+        Label7.Location = New Point(797, 124)
         Label7.Name = "Label7"
         Label7.Size = New Size(211, 61)
         Label7.TabIndex = 14
@@ -130,42 +119,41 @@ Partial Class ServiceHistory
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1091, 9)
+        Button1.Location = New Point(944, 12)
         Button1.Name = "Button1"
         Button1.Size = New Size(151, 51)
         Button1.TabIndex = 32
         Button1.Text = "Back"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' CurvedLabel1
-        ' 
-        CurvedLabel1.BackColor = Color.Black
-        CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Location = New Point(23, 885)
-        CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Size = New Size(1131, 55)
-        CurvedLabel1.TabIndex = 31
-        CurvedLabel1.Text = "CurvedLabel1"
-        ' 
         ' Timer1
         ' 
         Timer1.Interval = 1000
         ' 
+        ' Label8
+        ' 
+        Label8.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
+        Label8.Location = New Point(56, 9)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(311, 61)
+        Label8.TabIndex = 33
+        Label8.Text = "Service History"
+        ' 
         ' ServiceHistory
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(248, 249, 250)
-        ClientSize = New Size(1254, 953)
+        BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
+        ClientSize = New Size(1107, 685)
+        Controls.Add(Label8)
         Controls.Add(Button1)
-        Controls.Add(CurvedLabel1)
         Controls.Add(Label7)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Panel1)
-        Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(TextBox1)
         Controls.Add(Label2)
@@ -176,8 +164,6 @@ Partial Class ServiceHistory
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
@@ -187,6 +173,6 @@ Partial Class ServiceHistory
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents CurvedLabel1 As CurvedLabel
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label8 As Label
 End Class

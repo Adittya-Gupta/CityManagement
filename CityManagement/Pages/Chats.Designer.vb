@@ -38,18 +38,18 @@ Partial Class Chats
         ' 
         CurvedLabel1.BackColor = Color.Black
         CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Location = New Point(34, 882)
+        CurvedLabel1.Location = New Point(27, 600)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Size = New Size(1131, 55)
+        CurvedLabel1.Size = New Size(984, 55)
         CurvedLabel1.TabIndex = 25
         CurvedLabel1.Text = "CurvedLabel1"
         ' 
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Ellipse_25
-        Label1.Location = New Point(1171, 882)
+        Label1.Location = New Point(1017, 600)
         Label1.Name = "Label1"
-        Label1.Size = New Size(65, 63)
+        Label1.Size = New Size(70, 63)
         Label1.TabIndex = 26
         ' 
         ' Panel1
@@ -58,20 +58,20 @@ Partial Class Chats
         Panel1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         Panel1.Location = New Point(27, 76)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1202, 780)
+        Panel1.Size = New Size(1040, 507)
         Panel1.TabIndex = 28
         ' 
         ' RichTextBox1
         ' 
         RichTextBox1.BackColor = Color.Black
         RichTextBox1.BorderStyle = BorderStyle.None
-        RichTextBox1.Font = New Font("Exo 2 Medium", 12F)
+        RichTextBox1.Font = New Font("Exo 2 Medium", 12.0F)
         RichTextBox1.ForeColor = Color.Gray
-        RichTextBox1.Location = New Point(46, 891)
+        RichTextBox1.Location = New Point(36, 609)
         RichTextBox1.MaxLength = 1000
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.ScrollBars = RichTextBoxScrollBars.Vertical
-        RichTextBox1.Size = New Size(1098, 39)
+        RichTextBox1.Size = New Size(944, 39)
         RichTextBox1.TabIndex = 0
         RichTextBox1.Text = "Type a message"
         ' 
@@ -80,10 +80,10 @@ Partial Class Chats
         Label2.BackColor = Color.White
         Label2.FlatStyle = FlatStyle.Flat
         Label2.Font = New Font("Exo 2", 19.8000011F)
-        Label2.Location = New Point(471, 9)
+        Label2.Location = New Point(27, 11)
         Label2.Name = "Label2"
         Label2.Padding = New Padding(60, 0, 0, 0)
-        Label2.Size = New Size(579, 50)
+        Label2.Size = New Size(555, 50)
         Label2.TabIndex = 29
         Label2.Text = "Label2"
         ' 
@@ -91,7 +91,7 @@ Partial Class Chats
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(483, 10)
+        PictureBox1.Location = New Point(36, 13)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(46, 46)
         PictureBox1.TabIndex = 2
@@ -105,9 +105,9 @@ Partial Class Chats
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1091, 9)
+        Button1.Location = New Point(944, 8)
         Button1.Name = "Button1"
         Button1.Size = New Size(151, 51)
         Button1.TabIndex = 30
@@ -116,10 +116,10 @@ Partial Class Chats
         ' 
         ' Chats
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1254, 953)
+        ClientSize = New Size(1107, 685)
         Controls.Add(Button1)
         Controls.Add(PictureBox1)
         Controls.Add(Label2)
@@ -144,4 +144,3 @@ Partial Class Chats
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Button1 As Button
 End Class
-

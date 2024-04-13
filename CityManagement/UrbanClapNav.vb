@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class UrbanClapNav
-    'Dim userID As Integer = 112546 ' User ID of the applicant
-    'Dim userID As Integer = 112547 ' User ID of the applicant
-    Dim userID As Integer = 124918 ' User ID of the applicant
+    Dim userID As Integer = 112546 ' User ID of the applicant (Electrician)
+    'Dim userID As Integer = 112547 ' User ID of the applicant (Head Electrician)
+    'Dim userID As Integer = 124918 ' User ID of the applicant (unemployed)
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
@@ -61,6 +61,8 @@ Public Class UrbanClapNav
                             ShowFormInPanel1(Globals.OrgHeadWorkSection)
                             ShowCurvedLabels_history()
                         Else
+                            Button1.Text = "Service History"
+                            Button3.Text = "Work Section"
                             MessageBox.Show("You are not employed as a Service Worker")
                             Return
                         End If

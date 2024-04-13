@@ -4,6 +4,7 @@ Imports Newtonsoft.Json.Linq
 Public Class FestivalEvents_RegRestrictions
     Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
+    Private isAcceptingReg As Boolean = False
 
     Private Sub FestivalEvents_RegRestrictions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
@@ -18,6 +19,7 @@ Public Class FestivalEvents_RegRestrictions
                 reader.Read()
                 Dim restrictions As String = If(Not IsDBNull(reader("restrictions")), reader("restrictions").ToString(), "{}")
                 Dim restrictionsObject As JObject = JObject.Parse(restrictions)
+                isAcceptingReg = reader("isOpen")
 
                 ' Extract fields from JSON object
                 Dim minAge As Integer? = If(restrictionsObject("minAge") IsNot Nothing, restrictionsObject("minAge").ToObject(Of Integer?)(), Nothing)
@@ -46,12 +48,37 @@ Public Class FestivalEvents_RegRestrictions
                 CheckBox2_CheckedChanged(CheckBox2, EventArgs.Empty)
                 CheckBoxApplyMaxParticipants_CheckedChanged(CheckBoxApplyMaxParticipants, EventArgs.Empty)
             End Using
+
         Catch ex As Exception
             MessageBox.Show("Error fetching festival details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             conn.Close()
         End Try
+
+        ' Update button appearance based on the state
+        If isAcceptingReg Then
+            Button1.Text = "Form Open"
+            Button1.BackColor = Color.Black
+        Else
+            Button1.Text = "Form Closed"
+            Button1.BackColor = Color.Gray
+        End If
     End Sub
+
+    Private Sub ToggleButton_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Toggle the state
+        isAcceptingReg = Not isAcceptingReg
+
+        ' Update button appearance based on the state
+        If isAcceptingReg Then
+            Button1.Text = "Form Open"
+            Button1.BackColor = Color.Black
+        Else
+            Button1.Text = "Form Closed"
+            Button1.BackColor = Color.Gray
+        End If
+    End Sub
+
 
     Private Sub TextBoxMaxParticipants_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxMaxParticipants.KeyPress
         ' Check if the pressed key is a digit or a control key (e.g., Backspace)
@@ -94,6 +121,7 @@ Public Class FestivalEvents_RegRestrictions
         End If
 
         Try
+            conn.Open()
             ' Check if minAge is less than maxAge
             If updatedRestrictions("minAge") IsNot Nothing AndAlso updatedRestrictions("maxAge") IsNot Nothing Then
                 Dim minAge As Integer? = updatedRestrictions.Value(Of Integer?)("minAge")
@@ -113,7 +141,13 @@ Public Class FestivalEvents_RegRestrictions
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@RestrictionsJson", updatedRestrictionsJson)
                 cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEventID)
-                conn.Open()
+                cmd.ExecuteNonQuery()
+            End Using
+
+            query = "UPDATE festivals SET isopen = @isAcceptingReg WHERE id = @CurrEvent"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@isAcceptingReg", isAcceptingReg)
+                cmd.Parameters.AddWithValue("@CurrEvent", Module1.CurrEventID)
                 cmd.ExecuteNonQuery()
             End Using
 

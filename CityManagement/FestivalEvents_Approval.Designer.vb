@@ -23,7 +23,7 @@ Partial Class FestivalEvents_Approval
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Label3 = New Label()
-        Button1 = New Button()
+        ToggleButton = New Button()
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
@@ -43,18 +43,18 @@ Partial Class FestivalEvents_Approval
         Label3.TabIndex = 32
         Label3.Text = "Event Approval"
         ' 
-        ' Button1
+        ' ToggleButton
         ' 
-        Button1.BackColor = Color.Black
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 15F)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(57, 354)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(164, 52)
-        Button1.TabIndex = 33
-        Button1.Text = "Approve"
-        Button1.UseVisualStyleBackColor = False
+        ToggleButton.BackColor = Color.Black
+        ToggleButton.FlatStyle = FlatStyle.Flat
+        ToggleButton.Font = New Font("Segoe UI", 10F)
+        ToggleButton.ForeColor = Color.White
+        ToggleButton.Location = New Point(35, 356)
+        ToggleButton.Name = "ToggleButton"
+        ToggleButton.Size = New Size(198, 52)
+        ToggleButton.TabIndex = 33
+        ToggleButton.Text = "Approve"
+        ToggleButton.UseVisualStyleBackColor = False
         ' 
         ' Label6
         ' 
@@ -123,7 +123,7 @@ Partial Class FestivalEvents_Approval
         BackColor = Color.White
         ClientSize = New Size(800, 450)
         Controls.Add(Panel1)
-        Controls.Add(Button1)
+        Controls.Add(ToggleButton)
         Controls.Add(Label3)
         FormBorderStyle = FormBorderStyle.None
         Name = "FestivalEvents_Approval"
@@ -135,7 +135,7 @@ Partial Class FestivalEvents_Approval
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ToggleButton As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label

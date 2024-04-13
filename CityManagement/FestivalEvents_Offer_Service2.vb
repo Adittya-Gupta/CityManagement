@@ -1,18 +1,18 @@
 ﻿Imports System.Drawing.Text
 Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json
-Public Class Event_OfferService
+Public Class FestivalEvents_Offer_Service2
 
     ' Database connection string
     Dim connString As String = Module1.connString
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    'Dim EventId As Integer = CurrEventID
-    'Dim UserSID As Integer = CurrUserSID
+    Dim EventId As Integer = CurrEventID
+    Dim UserSID As Integer = CurrUserSID
 
-    Dim EventId As Integer = 4
-    Dim UserSID As Integer = 1
+    'Dim EventId As Integer = 4
+    'Dim UserSID As Integer = 1
 
     Dim vendorServiceTags As List(Of VendorServiceTag)
 
@@ -71,15 +71,17 @@ Public Class Event_OfferService
         FlowLayoutPanelVendorServices.Controls.Clear()
 
         For Each ServiceTag In vendorServiceTags
-            Dim panel As New Panel With {.Width = 400, .Height = 50, .Margin = New Padding(0, 0, 80, 0)}
-            Dim label As New Label With {.Text = ServiceTag.TagServiceName, .Width = 210, .Dock = DockStyle.Left, .Font = New Font("Abhaya Libre Medium", 20)}
-            panel.Controls.Add(label)
+            If ServiceTag.IsRequired Then
+                Dim panel As New Panel With {.Width = 400, .Height = 50, .Margin = New Padding(0, 0, 80, 0)}
+                Dim label As New Label With {.Text = ServiceTag.TagServiceName, .Width = 210, .Dock = DockStyle.Left, .Font = New Font("Abhaya Libre Medium", 20)}
+                panel.Controls.Add(label)
 
-            Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right, .Width = 210, .Height = 50, .BackColor = Color.Black, .ForeColor = Color.White, .Font = New Font("Abhaya Libre Medium", 20)}
-            AddHandler button.Click, AddressOf VendorServiceButton_Click
-            panel.Controls.Add(button)
+                Dim button As New Button With {.Text = If(ServiceTag.ListofVendorSIDs.Contains(userId), "Cancel", "Request"), .Tag = ServiceTag, .Dock = DockStyle.Right, .Width = 210, .Height = 50, .BackColor = Color.Black, .ForeColor = Color.White, .Font = New Font("Abhaya Libre Medium", 20)}
+                AddHandler button.Click, AddressOf VendorServiceButton_Click
+                panel.Controls.Add(button)
 
-            FlowLayoutPanelVendorServices.Controls.Add(panel)
+                FlowLayoutPanelVendorServices.Controls.Add(panel)
+            End If
         Next
 
     End Sub

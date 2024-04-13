@@ -164,17 +164,17 @@ Public Class FestivalEvents_EventDetails
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         mypanel.Panel1.Controls.Clear()
-        'Dim form As New FestivalEvents_OfferService
-        'Form.TopLevel = False
-        'mypanel.Panel1.Controls.Add(form)
-        'Form.Show()
+        Dim form As New FestivalEvents_Offer_Service2
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'mypanel.Panel1.Controls.Clear()
-        'Dim form As New FestivalEvents_Participation
-        'Form.TopLevel = False
-        'mypanel.Panel1.Controls.Add(form)
-        'Form.Show()
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New FestivalEvents_Participation2
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

@@ -1,4 +1,4 @@
-﻿Imports CityManagement.Event_OfferService
+﻿Imports CityManagement.FestivalEvents_Offer_Service2
 Imports MySql.Data.MySqlClient
 
 

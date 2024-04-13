@@ -26,13 +26,29 @@ Public Class FestivalEvents_MainMenu
         Me.Text = String.Empty
         Me.ControlBox = False
         Me.WindowState = FormWindowState.Maximized
+        Dim Designation As String = ""
 
         ' Clear existing controls
         FlowLayoutPanel1.Controls.Clear()
 
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM festivals "
+            ' Query to check if the current user has designation as "minister"
+            Dim query As String = "SELECT designation FROM user WHERE SID = @SID"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@SID", Module1.CurrUserSID)
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+                ' Check if any rows are returned (i.e., if the current user is a minister)
+                If reader.Read() Then
+                    Designation = Convert.ToString(reader("designation"))
+                    Designation = "Minister"        'Comment this
+                End If
+                reader.Close()
+            End Using
+
+
+            query = "SELECT * FROM festivals "
             Using cmd As New MySqlCommand(query, conn)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -41,8 +57,10 @@ Public Class FestivalEvents_MainMenu
                     Dim isApproved As Boolean = reader("isapproved")
                     Dim isOpen As Boolean = reader("isopen")
 
-                    If Not isApproved Or Not isOpen Then
-                        Continue While
+                    If Not isApproved Then
+                        If Designation <> "Minister" Then
+                            Continue While
+                        End If
                     End If
 
                     Dim eventCard As New FestivalEvents_Cards()

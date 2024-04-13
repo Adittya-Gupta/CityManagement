@@ -1,5 +1,4 @@
 ﻿Public Class EmploymentPortal
-    'Public hosProposalForm As New HosProposal(Me)
     Private Sub EmploymentPortal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load ListOfOrganizationsForm into the innerPanel
         Panel1.Controls.Clear()
@@ -42,14 +41,13 @@
         ShowFormInPanel(New Health_DoctorsEmployment(Me))
     End Sub
 
-    Public Sub LoadApplicationForm()
+    Public Sub LoadApplicationForm(org As String)
         ' Load ApplicationForm into Panel1
         CurvedLabel1.Visible = False
-        ShowFormInPanel(New EmployApplication(Me))
+        ShowFormInPanel(New EmployApplication(Me, org))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'ShowFormInPanel(hosProposalForm)
         ShowFormInPanel(New Health_HospitalListing(Me))
         CurvedLabel1.Visible = True
     End Sub

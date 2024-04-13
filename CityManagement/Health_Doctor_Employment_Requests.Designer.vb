@@ -22,16 +22,15 @@ Partial Class Health_Doctor_Employment_Requests
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Panel1 = New Panel()
         Label8 = New Label()
         Label7 = New Label()
         Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        PictureBox1 = New PictureBox()
-        ComboBox2 = New ComboBox()
+        Label4 = New Label()
+        Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -82,52 +81,36 @@ Partial Class Health_Doctor_Employment_Requests
         Label1.TabIndex = 0
         Label1.Text = "Doctor Employment Request"
         ' 
-        ' Label2
+        ' Label4
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(10, 69)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(77, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Work Section"
+        Label4.AutoSize = True
+        Label4.BackColor = SystemColors.ActiveCaptionText
+        Label4.Font = New Font("Segoe UI", 10.0F)
+        Label4.ForeColor = SystemColors.ControlLightLight
+        Label4.Location = New Point(0, 62)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(142, 19)
+        Label4.TabIndex = 33
+        Label4.Text = "Health Record Tracker"
         ' 
-        ' Label3
+        ' Guna2ComboBox1
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
-        Label3.Location = New Point(101, 69)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(173, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Doctor Employment Requests"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Image = My.Resources.Resources.arrow_icons
-        PictureBox1.Location = New Point(82, 73)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(13, 11)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 24
-        PictureBox1.TabStop = False
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ComboBox2.DrawMode = DrawMode.OwnerDrawVariable
-        ComboBox2.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ComboBox2.ForeColor = Color.Black
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.IntegralHeight = False
-        ComboBox2.ItemHeight = 24
-        ComboBox2.Location = New Point(274, 107)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(215, 30)
-        ComboBox2.TabIndex = 32
-        ComboBox2.Text = "    Select  Specialisation"
+        Guna2ComboBox1.BackColor = Color.Transparent
+        Guna2ComboBox1.CustomizableEdges = CustomizableEdges1
+        Guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed
+        Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2ComboBox1.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+        Guna2ComboBox1.ForeColor = Color.Black
+        Guna2ComboBox1.ItemHeight = 30
+        Guna2ComboBox1.Items.AddRange(New Object() {"Select Specialisation", "Cardiology", "Pulmonology", "Orthopedics", "Neurology", "Homeopathy", "General Physician"})
+        Guna2ComboBox1.Location = New Point(396, 100)
+        Guna2ComboBox1.Name = "Guna2ComboBox1"
+        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2ComboBox1.Size = New Size(215, 36)
+        Guna2ComboBox1.StartIndex = 0
+        Guna2ComboBox1.TabIndex = 34
         ' 
         ' Health_Doctor_Employment_Requests
         ' 
@@ -135,10 +118,8 @@ Partial Class Health_Doctor_Employment_Requests
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1097, 690)
-        Controls.Add(ComboBox2)
-        Controls.Add(PictureBox1)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
+        Controls.Add(Guna2ComboBox1)
+        Controls.Add(Label4)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
@@ -146,17 +127,14 @@ Partial Class Health_Doctor_Employment_Requests
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
 End Class

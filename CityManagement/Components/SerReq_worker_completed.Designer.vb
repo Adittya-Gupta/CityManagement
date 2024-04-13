@@ -25,10 +25,10 @@ Partial Class SerReq_worker_completed
         PictureBox1 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
-        Label4 = New Label()
         Label6 = New Label()
         Label3 = New Label()
-        Label5 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -45,32 +45,22 @@ Partial Class SerReq_worker_completed
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
+        Label1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(142, 22)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 28)
+        Label1.Size = New Size(79, 27)
         Label1.TabIndex = 1
         Label1.Text = "Label1"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Exo 2", 10F)
-        Label2.Location = New Point(142, 62)
+        Label2.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
+        Label2.Location = New Point(142, 57)
         Label2.Name = "Label2"
-        Label2.Size = New Size(115, 20)
+        Label2.Size = New Size(122, 20)
         Label2.TabIndex = 2
         Label2.Text = "Service Time: "
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10F)
-        Label4.Location = New Point(260, 63)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(59, 23)
-        Label4.TabIndex = 4
-        Label4.Text = "Label4"
         ' 
         ' Label6
         ' 
@@ -83,32 +73,38 @@ Partial Class SerReq_worker_completed
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Exo 2", 10F)
+        Label3.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
         Label3.Location = New Point(142, 86)
         Label3.Name = "Label3"
-        Label3.Size = New Size(136, 20)
+        Label3.Size = New Size(140, 20)
         Label3.TabIndex = 10
         Label3.Text = "Bill Amount: Rs. "
         ' 
-        ' Label5
+        ' TextBox1
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10F)
-        Label5.Location = New Point(274, 86)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(59, 23)
-        Label5.TabIndex = 11
-        Label5.Text = "Label5"
+        TextBox1.Location = New Point(267, 55)
+        TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
+        TextBox1.Size = New Size(177, 27)
+        TextBox1.TabIndex = 15
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(279, 86)
+        TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
+        TextBox2.Size = New Size(177, 27)
+        TextBox2.TabIndex = 16
         ' 
         ' SerReq_worker_completed
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        Controls.Add(Label5)
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox1)
         Controls.Add(Label3)
         Controls.Add(Label6)
-        Controls.Add(Label4)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
@@ -122,9 +118,9 @@ Partial Class SerReq_worker_completed
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 
 End Class

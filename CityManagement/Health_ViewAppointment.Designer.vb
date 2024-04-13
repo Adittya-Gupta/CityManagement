@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Health_ViewAppointment
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Health_ViewAppointment
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
         Label4 = New Label()
@@ -52,7 +52,7 @@ Partial Class Health_ViewAppointment
         Label4.AutoSize = True
         Label4.BackColor = Color.Black
         Label4.Cursor = Cursors.Hand
-        Label4.Font = New Font("Segoe UI", 18F)
+        Label4.Font = New Font("Segoe UI", 18.0F)
         Label4.ForeColor = SystemColors.GrayText
         Label4.Location = New Point(65, 15)
         Label4.Name = "Label4"
@@ -65,7 +65,7 @@ Partial Class Health_ViewAppointment
         Label3.AutoSize = True
         Label3.BackColor = Color.Black
         Label3.Cursor = Cursors.Hand
-        Label3.Font = New Font("Segoe UI", 18F)
+        Label3.Font = New Font("Segoe UI", 18.0F)
         Label3.ForeColor = SystemColors.GrayText
         Label3.Location = New Point(629, 14)
         Label3.Name = "Label3"
@@ -78,7 +78,7 @@ Partial Class Health_ViewAppointment
         Label2.AutoSize = True
         Label2.BackColor = Color.Black
         Label2.Cursor = Cursors.Hand
-        Label2.Font = New Font("Segoe UI", 18F)
+        Label2.Font = New Font("Segoe UI", 18.0F)
         Label2.ForeColor = SystemColors.GrayText
         Label2.Location = New Point(371, 14)
         Label2.Name = "Label2"
@@ -91,7 +91,7 @@ Partial Class Health_ViewAppointment
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
         Label1.Cursor = Cursors.Hand
-        Label1.Font = New Font("Segoe UI", 18F)
+        Label1.Font = New Font("Segoe UI", 18.0F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(921, 14)
         Label1.Name = "Label1"
@@ -114,7 +114,7 @@ Partial Class Health_ViewAppointment
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label5.Location = New Point(74, 74)
         Label5.Name = "Label5"
         Label5.Size = New Size(86, 15)
@@ -132,7 +132,7 @@ Partial Class Health_ViewAppointment
         ' 
         ' Health_ViewAppointment
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1097, 676)

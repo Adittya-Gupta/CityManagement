@@ -78,7 +78,7 @@ Partial Class Health_Record_Tracker
         Label3.BackColor = Color.Black
         Label3.Cursor = Cursors.Hand
         Label3.Font = New Font("Segoe UI", 18.0F)
-        Label3.ForeColor = SystemColors.GrayText
+        Label3.ForeColor = SystemColors.ControlLightLight
         Label3.Location = New Point(629, 14)
         Label3.Name = "Label3"
         Label3.Size = New Size(164, 32)
@@ -104,7 +104,7 @@ Partial Class Health_Record_Tracker
         Label1.BackColor = Color.Black
         Label1.Cursor = Cursors.Hand
         Label1.Font = New Font("Segoe UI", 18.0F)
-        Label1.ForeColor = Color.White
+        Label1.ForeColor = Color.DarkGray
         Label1.Location = New Point(921, 14)
         Label1.Name = "Label1"
         Label1.Size = New Size(69, 32)

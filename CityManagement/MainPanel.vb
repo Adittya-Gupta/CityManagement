@@ -1,6 +1,25 @@
 ﻿Public Class MainPanel
 
+    Public Shared Sub CLearPanels()
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+    End Sub
+    Public Shared Sub ChildForm(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
+    Public Shared Sub ChildForm2(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged, MyBase.Load
@@ -35,7 +54,9 @@
 
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        CLearPanels()
+        ChildForm2(Banking_Main.Panel1, Banking_Homepage)
+        ChildForm(Banking_Main)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -115,6 +136,13 @@
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         ShowFormInPanel(New EmploymentPortal())
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        CLearPanels()
+        ChildForm2(Newsletter_Main.Panel1, Newsletter_Homepage)
+        mypanel.panel1.Controls.Clear()
+        ChildForm(Newsletter_Main)
     End Sub
 
     'Private Sub Button10_Click(sender As Object, e As EventArgs)

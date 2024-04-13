@@ -22,7 +22,7 @@ Partial Class Chatlistitem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label2 = New Label()
         PictureBox1 = New PictureBox()
         CurvedLabel1 = New CurvedLabel()
@@ -37,18 +37,18 @@ Partial Class Chatlistitem
         Label2.BackColor = Color.White
         Label2.Font = New Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(124, 65)
+        Label2.Location = New Point(111, 56)
         Label2.Name = "Label2"
-        Label2.Size = New Size(365, 39)
+        Label2.Size = New Size(248, 39)
         Label2.TabIndex = 36
         Label2.Text = "Label2"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.download
-        PictureBox1.Location = New Point(25, 11)
+        PictureBox1.Location = New Point(21, 21)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(93, 93)
+        PictureBox1.Size = New Size(71, 65)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 34
         PictureBox1.TabStop = False
@@ -59,7 +59,7 @@ Partial Class Chatlistitem
         CurvedLabel1.CornerRadius = 20
         CurvedLabel1.Location = New Point(0, 0)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Size = New Size(510, 124)
+        CurvedLabel1.Size = New Size(466, 104)
         CurvedLabel1.TabIndex = 33
         ' 
         ' CurvedLabel2
@@ -68,7 +68,7 @@ Partial Class Chatlistitem
         CurvedLabel2.CornerRadius = 25
         CurvedLabel2.Location = New Point(0, 0)
         CurvedLabel2.Name = "CurvedLabel2"
-        CurvedLabel2.Size = New Size(516, 129)
+        CurvedLabel2.Size = New Size(463, 111)
         CurvedLabel2.TabIndex = 40
         CurvedLabel2.Text = "CurvedLabel2"
         ' 
@@ -77,9 +77,9 @@ Partial Class Chatlistitem
         Label1.BackColor = Color.White
         Label1.Font = New Font("Abhaya Libre Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(133, 20)
+        Label1.Location = New Point(111, 21)
         Label1.Name = "Label1"
-        Label1.Size = New Size(304, 35)
+        Label1.Size = New Size(261, 35)
         Label1.TabIndex = 35
         Label1.Text = "Label1"
         ' 
@@ -94,9 +94,9 @@ Partial Class Chatlistitem
         Label3.FillColor = Color.Chartreuse
         Label3.Font = New Font("Century", 10.2F, FontStyle.Bold)
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(443, 11)
+        Label3.Location = New Point(404, 11)
         Label3.Name = "Label3"
-        Label3.ShadowDecoration.CustomizableEdges = CustomizableEdges1
+        Label3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Label3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Label3.Size = New Size(45, 45)
         Label3.TabIndex = 43
@@ -113,7 +113,7 @@ Partial Class Chatlistitem
         Controls.Add(CurvedLabel2)
         Cursor = Cursors.Hand
         Name = "Chatlistitem"
-        Size = New Size(521, 138)
+        Size = New Size(477, 119)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub

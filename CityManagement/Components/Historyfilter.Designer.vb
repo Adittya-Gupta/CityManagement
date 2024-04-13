@@ -54,7 +54,7 @@ Partial Class Historyfilter
         ' Label5
         ' 
         Label5.Font = New Font("Abhaya Libre Medium", 10F)
-        Label5.Location = New Point(122, 25)
+        Label5.Location = New Point(122, 9)
         Label5.Name = "Label5"
         Label5.Size = New Size(130, 25)
         Label5.TabIndex = 8

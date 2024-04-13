@@ -35,9 +35,9 @@ Partial Class Rate
         CurvedLabel1.CornerRadius = 10
         CurvedLabel1.Font = New Font("Segoe UI", 24F)
         CurvedLabel1.ForeColor = Color.White
-        CurvedLabel1.Location = New Point(36, 271)
+        CurvedLabel1.Location = New Point(36, 256)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Size = New Size(320, 69)
+        CurvedLabel1.Size = New Size(260, 64)
         CurvedLabel1.TabIndex = 0
         CurvedLabel1.Text = "Submit"
         CurvedLabel1.TextAlign = ContentAlignment.MiddleCenter
@@ -47,7 +47,7 @@ Partial Class Rate
         Label1.Font = New Font("Segoe UI", 12F)
         Label1.Location = New Point(36, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(317, 79)
+        Label1.Size = New Size(253, 61)
         Label1.TabIndex = 1
         Label1.Text = "How was the service of " & vbCrLf & "John Miller ?"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -56,7 +56,7 @@ Partial Class Rate
         ' 
         PictureBox1.BackColor = Color.White
         PictureBox1.Image = My.Resources.Resources.image_2
-        PictureBox1.Location = New Point(94, 91)
+        PictureBox1.Location = New Point(60, 82)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(212, 89)
         PictureBox1.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class Rate
         ' Star_Rating1
         ' 
         Star_Rating1.HighlightedStars = 0
-        Star_Rating1.Location = New Point(60, 205)
+        Star_Rating1.Location = New Point(36, 190)
         Star_Rating1.Name = "Star_Rating1"
         Star_Rating1.Size = New Size(276, 63)
         Star_Rating1.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class Rate
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(247), CByte(247), CByte(247))
-        ClientSize = New Size(388, 385)
+        ClientSize = New Size(329, 336)
         Controls.Add(Star_Rating1)
         Controls.Add(PictureBox1)
         Controls.Add(Label1)

@@ -32,7 +32,7 @@ Partial Class ChatElement
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(15, 6)
+        PictureBox1.Location = New Point(3, 3)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(46, 46)
         PictureBox1.TabIndex = 1
@@ -44,13 +44,13 @@ Partial Class ChatElement
         CurvedLabel1.BackColor = Color.Transparent
         CurvedLabel1.CornerRadius = 10
         CurvedLabel1.Dock = DockStyle.Left
-        CurvedLabel1.Font = New Font("Segoe UI", 18F)
+        CurvedLabel1.Font = New Font("Segoe UI", 14F)
         CurvedLabel1.Location = New Point(0, 0)
         CurvedLabel1.Margin = New Padding(0)
         CurvedLabel1.MinimumSize = New Size(100, 60)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Padding = New Padding(60, 5, 10, 10)
-        CurvedLabel1.Size = New Size(112, 60)
+        CurvedLabel1.Padding = New Padding(50, 10, 10, 10)
+        CurvedLabel1.Size = New Size(100, 60)
         CurvedLabel1.TabIndex = 3
         CurvedLabel1.Text = "hi"
         ' 
@@ -61,7 +61,7 @@ Partial Class ChatElement
         Label1.Dock = DockStyle.Left
         Label1.Font = New Font("Exo 2", 8.25F)
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(112, 0)
+        Label1.Location = New Point(100, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(50, 20)
         Label1.TabIndex = 4
@@ -77,7 +77,7 @@ Partial Class ChatElement
         Controls.Add(CurvedLabel1)
         ForeColor = SystemColors.ActiveCaptionText
         Name = "ChatElement"
-        Size = New Size(288, 61)
+        Size = New Size(181, 61)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

@@ -34,7 +34,7 @@ Partial Class ListofChats
         ' 
         Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label4.Location = New Point(242, 105)
+        Label4.Location = New Point(196, 53)
         Label4.Name = "Label4"
         Label4.Size = New Size(198, 61)
         Label4.TabIndex = 6
@@ -44,7 +44,7 @@ Partial Class ListofChats
         ' 
         Label1.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label1.Location = New Point(846, 105)
+        Label1.Location = New Point(753, 53)
         Label1.Name = "Label1"
         Label1.Size = New Size(176, 61)
         Label1.TabIndex = 7
@@ -52,7 +52,7 @@ Partial Class ListofChats
         ' 
         ' SplitContainer1
         ' 
-        SplitContainer1.Location = New Point(30, 181)
+        SplitContainer1.Location = New Point(32, 117)
         SplitContainer1.Name = "SplitContainer1"
         ' 
         ' SplitContainer1.Panel1
@@ -62,8 +62,8 @@ Partial Class ListofChats
         ' SplitContainer1.Panel2
         ' 
         SplitContainer1.Panel2.AutoScroll = True
-        SplitContainer1.Size = New Size(1188, 729)
-        SplitContainer1.SplitterDistance = 594
+        SplitContainer1.Size = New Size(1041, 537)
+        SplitContainer1.SplitterDistance = 520
         SplitContainer1.TabIndex = 8
         ' 
         ' Button1
@@ -72,7 +72,7 @@ Partial Class ListofChats
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Abhaya Libre Medium", 14F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1078, 12)
+        Button1.Location = New Point(935, 12)
         Button1.Name = "Button1"
         Button1.Size = New Size(151, 51)
         Button1.TabIndex = 13
@@ -84,7 +84,7 @@ Partial Class ListofChats
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1254, 953)
+        ClientSize = New Size(1107, 685)
         Controls.Add(Button1)
         Controls.Add(SplitContainer1)
         Controls.Add(Label1)

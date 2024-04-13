@@ -82,7 +82,7 @@ Public Class HistoryItem
         End Select
 
         ' Assign colors based on status and action
-        CurvedLabel3.BackColor = stateColors(currentAppointmentState)
+        CurvedLabel3.ForeColor = stateColors(currentAppointmentState)
         CurvedLabel4.BackColor = actionColors(CurvedLabel4.Text)
     End Sub
     Private Sub HandleAction(action As CustomerAction)
@@ -131,7 +131,7 @@ Public Class HistoryItem
     ' Constructor with optional parameters
     Public Sub New(
                 Optional ByVal bookingid As String = "1",
-                Optional ByVal name As String = "Default Name", 
+                Optional ByVal name As String = "Default Name",
                Optional ByVal serviceTime As String = "Will be updated",
                Optional ByVal billAmount As String = "To be Decided",
                Optional ByVal ratingValue As Double = 3.5,

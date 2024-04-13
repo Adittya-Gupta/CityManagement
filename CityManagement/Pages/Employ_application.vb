@@ -6,8 +6,8 @@ Public Class EmployApplication
     Private Organization As String
     Private initialImage As Image
 
-    Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
+    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
     Dim userID As Integer = 984584 ' User ID of the applicant

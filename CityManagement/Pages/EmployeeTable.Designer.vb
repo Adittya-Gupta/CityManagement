@@ -41,16 +41,17 @@ Partial Class EmployeeTable
         ' 
         Panel1.Location = New Point(31, 103)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1170, 318)
+        Panel1.Size = New Size(1047, 318)
         Panel1.TabIndex = 1
         ' 
         ' EmployeeTable
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1236, 979)
+        ClientSize = New Size(1107, 687)
         Controls.Add(Panel1)
         Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "EmployeeTable"
         Text = "EmployeeTable"
         ResumeLayout(False)

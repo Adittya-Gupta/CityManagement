@@ -57,7 +57,7 @@
     Public Shared WithEvents listofChatsForm As New ListOfChats()
     Public Shared WithEvents listofWorkersForm As New ListofWorkers_Citizen()
     Public Shared WithEvents WorkPage As New Services_WorkSect()
-    Public OrgHeadWorkSection As New OrgHeadWorkSection()
+    Public Shared WithEvents OrgHeadWorkSection As New OrgHeadWorkSection()
 
     'Used for Back reference
     Public Shared HomePage As Object = listofServicesForm

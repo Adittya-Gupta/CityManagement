@@ -97,7 +97,7 @@ Partial Class OrgHeadWorkSection
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1107, 760)
+        ClientSize = New Size(1107, 687)
         ControlBox = False
         Controls.Add(Label1)
         Controls.Add(Panel1)

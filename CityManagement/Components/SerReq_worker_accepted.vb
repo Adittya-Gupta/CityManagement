@@ -2,8 +2,8 @@
 Imports MySql.Data.MySqlClient
 
 Public Class SerReq_worker_accepted
-    Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
+    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim requestId As Integer
     ' Constructor with optional parameters

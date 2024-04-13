@@ -32,6 +32,7 @@ Partial Class SerReq_worker_pending
         TextBox2 = New TextBox()
         Label8 = New Label()
         Label3 = New Label()
+        DateTimePicker1 = New DateTimePicker()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -139,11 +140,19 @@ Partial Class SerReq_worker_pending
         Label3.TabIndex = 17
         Label3.Text = "Bill Amount: Rs. "
         ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Location = New Point(447, 54)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(18, 27)
+        DateTimePicker1.TabIndex = 20
+        ' 
         ' SerReq_worker_pending
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        Controls.Add(DateTimePicker1)
         Controls.Add(TextBox2)
         Controls.Add(Label8)
         Controls.Add(Label3)
@@ -171,5 +180,6 @@ Partial Class SerReq_worker_pending
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 
 End Class

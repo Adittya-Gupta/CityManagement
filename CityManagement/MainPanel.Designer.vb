@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainPanel
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainPanel
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPanel))
         Panel1 = New Panel()
@@ -62,7 +62,7 @@ Partial Class MainPanel
         Panel1.Location = New Point(201, 1)
         Panel1.Margin = New Padding(4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1007, 760)
+        Panel1.Size = New Size(1107, 760)
         Panel1.TabIndex = 0
         ' 
         ' Button1
@@ -302,10 +302,10 @@ Partial Class MainPanel
         ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(9F, 18F)
+        AutoScaleDimensions = New SizeF(9.0F, 18.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
-        ClientSize = New Size(1208, 761)
+        ClientSize = New Size(1308, 761)
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)
@@ -326,7 +326,7 @@ Partial Class MainPanel
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Panel1)
-        Font = New Font("Abhaya Libre Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
         Name = "MainPanel"
         Text = "MainPanel"

@@ -34,9 +34,9 @@ Partial Class WelcomeScreen
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Centauri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(12, 36)
+        Label1.Location = New Point(14, 48)
         Label1.Name = "Label1"
-        Label1.Size = New Size(576, 28)
+        Label1.Size = New Size(719, 34)
         Label1.TabIndex = 0
         Label1.Text = "City Management System"
         Label1.UseCompatibleTextRendering = True
@@ -48,9 +48,10 @@ Partial Class WelcomeScreen
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = SystemColors.ControlLightLight
-        Button1.Location = New Point(12, 78)
+        Button1.Location = New Point(14, 104)
+        Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(149, 30)
+        Button1.Size = New Size(170, 40)
         Button1.TabIndex = 1
         Button1.Text = "Get Started >"
         Button1.UseVisualStyleBackColor = False
@@ -61,23 +62,24 @@ Partial Class WelcomeScreen
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Exo 2", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ControlLightLight
-        Label2.Location = New Point(421, 64)
+        Label2.Location = New Point(481, 85)
         Label2.Name = "Label2"
-        Label2.Size = New Size(303, 16)
+        Label2.Size = New Size(397, 25)
         Label2.TabIndex = 2
         Label2.Text = "- The best way to predict the future is to invent it. "
         ' 
         ' WelcomeScreen
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(975, 640)
+        ClientSize = New Size(1114, 853)
         Controls.Add(Label2)
         Controls.Add(Button1)
         Controls.Add(Label1)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "WelcomeScreen"
         Text = "Welcome"
         TransparencyKey = Color.FromArgb(CByte(128), CByte(64), CByte(64))

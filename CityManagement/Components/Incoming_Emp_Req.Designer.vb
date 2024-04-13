@@ -36,7 +36,7 @@ Partial Class Incoming_Emp_Req
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Exo 2", 14.0F, FontStyle.Bold)
+        Label3.Font = New Font("Exo 2", 14F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(122), CByte(121), CByte(121))
         Label3.Location = New Point(148, 77)
         Label3.Name = "Label3"
@@ -49,7 +49,7 @@ Partial Class Incoming_Emp_Req
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Image = My.Resources.Resources.Group_190
         Button2.Location = New Point(681, 81)
@@ -64,20 +64,20 @@ Partial Class Incoming_Emp_Req
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.Group_1891
         Button1.Location = New Point(826, 81)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 45)
         Button1.TabIndex = 19
-        Button1.Text = "Cancel"
+        Button1.Text = "Reject"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Exo 2", 14.0F, FontStyle.Bold)
+        Label2.Font = New Font("Exo 2", 14F, FontStyle.Bold)
         Label2.Location = New Point(148, 45)
         Label2.Name = "Label2"
         Label2.Size = New Size(94, 29)
@@ -123,7 +123,7 @@ Partial Class Incoming_Emp_Req
         ' 
         ' Incoming_Emp_Req
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(Label1)

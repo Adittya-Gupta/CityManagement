@@ -6,11 +6,11 @@ Public Class EmployApplication
     Private Organization As String
     Private initialImage As Image
 
-    'Dim connString As String = "server=localhost;userid=root;password=<password_here>;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
-    Dim userID As Integer = 17 ' User ID of the applicant
+    Dim userID As Integer = 984584 ' User ID of the applicant
     Dim orgID As Integer ' Organization ID where the applicant is applying
 
     Dim tempProfilePictureBytes As Byte() ' Temporary storage for profile picture bytes
@@ -145,6 +145,20 @@ Public Class EmployApplication
 
                 cmd.ExecuteNonQuery()
             End Using
+
+            If orgID = 103 Then
+                Dim query2 As String = "UPDATE User SET Designation = 'Teacher' WHERE SID = @userID"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@userID", userID)
+                    cmd2.ExecuteNonQuery()
+                End Using
+            ElseIf orgID = 107 Then
+                Dim query2 As String = "UPDATE User SET Designation = 'Driver' WHERE SID = @userID"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@userID", userID)
+                    cmd2.ExecuteNonQuery()
+                End Using
+            End If
 
             MessageBox.Show("Application submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception

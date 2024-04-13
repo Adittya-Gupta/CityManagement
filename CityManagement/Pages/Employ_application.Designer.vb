@@ -55,9 +55,9 @@ Partial Class EmployApplication
         backButton.FlatStyle = FlatStyle.Flat
         backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
-        backButton.Location = New Point(1106, 20)
+        backButton.Location = New Point(995, 12)
         backButton.Name = "backButton"
-        backButton.Size = New Size(121, 59)
+        backButton.Size = New Size(100, 50)
         backButton.TabIndex = 30
         backButton.Text = "Back"
         backButton.UseVisualStyleBackColor = False
@@ -65,7 +65,7 @@ Partial Class EmployApplication
         ' Label1
         ' 
         Label1.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label1.Location = New Point(91, 145)
+        Label1.Location = New Point(43, 120)
         Label1.Name = "Label1"
         Label1.Size = New Size(98, 35)
         Label1.TabIndex = 31
@@ -74,16 +74,16 @@ Partial Class EmployApplication
         ' Label2
         ' 
         Label2.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label2.Location = New Point(91, 465)
+        Label2.Location = New Point(43, 329)
         Label2.Name = "Label2"
-        Label2.Size = New Size(399, 44)
+        Label2.Size = New Size(399, 36)
         Label2.TabIndex = 32
         Label2.Text = "Details of any previous work done"
         ' 
         ' Label3
         ' 
         Label3.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label3.Location = New Point(477, 145)
+        Label3.Location = New Point(397, 120)
         Label3.Name = "Label3"
         Label3.Size = New Size(224, 35)
         Label3.TabIndex = 33
@@ -107,7 +107,7 @@ Partial Class EmployApplication
         applyBtn.FlatStyle = FlatStyle.Flat
         applyBtn.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         applyBtn.ForeColor = Color.White
-        applyBtn.Location = New Point(577, 846)
+        applyBtn.Location = New Point(483, 626)
         applyBtn.Name = "applyBtn"
         applyBtn.Size = New Size(161, 60)
         applyBtn.TabIndex = 36
@@ -118,7 +118,7 @@ Partial Class EmployApplication
         ' 
         profPic.Image = My.Resources.Resources.Employ_prof_pic
         profPic.InitialImage = My.Resources.Resources.Employ_prof_pic
-        profPic.Location = New Point(897, 194)
+        profPic.Location = New Point(761, 84)
         profPic.Name = "profPic"
         profPic.Size = New Size(231, 227)
         profPic.TabIndex = 37
@@ -127,27 +127,27 @@ Partial Class EmployApplication
         ' Details
         ' 
         Details.Font = New Font("Exo 2", 12F)
-        Details.Location = New Point(91, 507)
+        Details.Location = New Point(43, 368)
         Details.Name = "Details"
-        Details.Size = New Size(711, 174)
+        Details.Size = New Size(654, 123)
         Details.TabIndex = 41
         Details.Text = ""
         ' 
         ' contactInfo
         ' 
         contactInfo.Font = New Font("Exo 2", 12F)
-        contactInfo.Location = New Point(477, 194)
+        contactInfo.Location = New Point(397, 158)
         contactInfo.Name = "contactInfo"
-        contactInfo.Size = New Size(330, 41)
+        contactInfo.Size = New Size(300, 35)
         contactInfo.TabIndex = 42
         contactInfo.Text = ""
         ' 
         ' personName
         ' 
         personName.Font = New Font("Exo 2", 12F)
-        personName.Location = New Point(91, 194)
+        personName.Location = New Point(43, 158)
         personName.Name = "personName"
-        personName.Size = New Size(330, 41)
+        personName.Size = New Size(300, 35)
         personName.TabIndex = 44
         personName.Text = ""
         ' 
@@ -158,9 +158,9 @@ Partial Class EmployApplication
         Document.Cursor = Cursors.Hand
         Document.Font = New Font("Exo 2", 17F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Document.Image = My.Resources.Resources.Employ_rect
-        Document.Location = New Point(265, 719)
+        Document.Location = New Point(181, 513)
         Document.Name = "Document"
-        Document.Size = New Size(766, 87)
+        Document.Size = New Size(766, 76)
         Document.TabIndex = 45
         Document.Text = "Upload Resume or any other Important Document"
         Document.TextAlign = ContentAlignment.MiddleCenter
@@ -169,7 +169,7 @@ Partial Class EmployApplication
         ' 
         upload.Cursor = Cursors.Hand
         upload.Image = My.Resources.Resources.Employ_Upload
-        upload.Location = New Point(1099, 381)
+        upload.Location = New Point(974, 271)
         upload.Name = "upload"
         upload.Size = New Size(58, 52)
         upload.TabIndex = 46
@@ -177,9 +177,9 @@ Partial Class EmployApplication
         ' Label8
         ' 
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
-        Label8.Location = New Point(357, 33)
+        Label8.Location = New Point(168, 25)
         Label8.Name = "Label8"
-        Label8.Size = New Size(264, 58)
+        Label8.Size = New Size(264, 50)
         Label8.TabIndex = 47
         Label8.Text = "APPLY FOR"
         ' 
@@ -188,7 +188,7 @@ Partial Class EmployApplication
         docName.Anchor = AnchorStyles.None
         docName.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         docName.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        docName.Location = New Point(449, 804)
+        docName.Location = New Point(355, 589)
         docName.Name = "docName"
         docName.Size = New Size(415, 28)
         docName.TabIndex = 48
@@ -199,7 +199,7 @@ Partial Class EmployApplication
         ' 
         orgName.AutoSize = True
         orgName.Font = New Font("Abhaya Libre Medium", 30F)
-        orgName.Location = New Point(606, 33)
+        orgName.Location = New Point(417, 25)
         orgName.Name = "orgName"
         orgName.Size = New Size(95, 59)
         orgName.TabIndex = 49
@@ -208,34 +208,34 @@ Partial Class EmployApplication
         ' address
         ' 
         address.Font = New Font("Exo 2", 12F)
-        address.Location = New Point(91, 320)
+        address.Location = New Point(43, 239)
         address.Name = "address"
-        address.Size = New Size(711, 112)
+        address.Size = New Size(654, 81)
         address.TabIndex = 51
         address.Text = ""
         ' 
         ' Label6
         ' 
         Label6.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label6.Location = New Point(91, 278)
+        Label6.Location = New Point(43, 200)
         Label6.Name = "Label6"
-        Label6.Size = New Size(132, 44)
+        Label6.Size = New Size(132, 36)
         Label6.TabIndex = 50
         Label6.Text = "Address*"
         ' 
         ' emailAddr
         ' 
         emailAddr.Font = New Font("Exo 2", 12F)
-        emailAddr.Location = New Point(872, 518)
+        emailAddr.Location = New Point(745, 369)
         emailAddr.Name = "emailAddr"
-        emailAddr.Size = New Size(301, 43)
+        emailAddr.Size = New Size(301, 35)
         emailAddr.TabIndex = 53
         emailAddr.Text = ""
         ' 
         ' Label7
         ' 
         Label7.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label7.Location = New Point(870, 473)
+        Label7.Location = New Point(745, 330)
         Label7.Name = "Label7"
         Label7.Size = New Size(287, 36)
         Label7.TabIndex = 52
@@ -244,16 +244,16 @@ Partial Class EmployApplication
         ' bankAcc
         ' 
         bankAcc.Font = New Font("Exo 2", 12F)
-        bankAcc.Location = New Point(872, 639)
+        bankAcc.Location = New Point(745, 456)
         bankAcc.Name = "bankAcc"
-        bankAcc.Size = New Size(301, 43)
+        bankAcc.Size = New Size(301, 35)
         bankAcc.TabIndex = 55
         bankAcc.Text = ""
         ' 
         ' Label4
         ' 
         Label4.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label4.Location = New Point(870, 594)
+        Label4.Location = New Point(745, 417)
         Label4.Name = "Label4"
         Label4.Size = New Size(287, 36)
         Label4.TabIndex = 54
@@ -264,7 +264,7 @@ Partial Class EmployApplication
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(1254, 953)
+        ClientSize = New Size(1107, 705)
         Controls.Add(bankAcc)
         Controls.Add(Label4)
         Controls.Add(emailAddr)

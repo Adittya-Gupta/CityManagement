@@ -37,10 +37,11 @@ Partial Class RegularServicesList
         ' CurvedLabel8
         ' 
         CurvedLabel8.CornerRadius = 10
+        CurvedLabel8.Cursor = Cursors.Hand
         CurvedLabel8.Image = My.Resources.Resources.Employ_househelp
-        CurvedLabel8.Location = New Point(652, 498)
+        CurvedLabel8.Location = New Point(567, 411)
         CurvedLabel8.Name = "CurvedLabel8"
-        CurvedLabel8.Size = New Size(537, 245)
+        CurvedLabel8.Size = New Size(497, 220)
         CurvedLabel8.TabIndex = 28
         ' 
         ' CurvedLabel4
@@ -50,10 +51,10 @@ Partial Class RegularServicesList
         CurvedLabel4.Cursor = Cursors.Hand
         CurvedLabel4.Font = New Font("Exo 2", 24F)
         CurvedLabel4.ForeColor = Color.White
-        CurvedLabel4.Location = New Point(650, 496)
+        CurvedLabel4.Location = New Point(565, 409)
         CurvedLabel4.Name = "CurvedLabel4"
         CurvedLabel4.Padding = New Padding(0, 0, 10, 10)
-        CurvedLabel4.Size = New Size(541, 310)
+        CurvedLabel4.Size = New Size(500, 270)
         CurvedLabel4.TabIndex = 27
         CurvedLabel4.Text = "Househelp"
         CurvedLabel4.TextAlign = ContentAlignment.BottomCenter
@@ -61,10 +62,11 @@ Partial Class RegularServicesList
         ' CurvedLabel7
         ' 
         CurvedLabel7.CornerRadius = 10
+        CurvedLabel7.Cursor = Cursors.Hand
         CurvedLabel7.Image = My.Resources.Resources.Employ_merchant
-        CurvedLabel7.Location = New Point(69, 498)
+        CurvedLabel7.Location = New Point(44, 410)
         CurvedLabel7.Name = "CurvedLabel7"
-        CurvedLabel7.Size = New Size(537, 245)
+        CurvedLabel7.Size = New Size(497, 220)
         CurvedLabel7.TabIndex = 26
         ' 
         ' CurvedLabel3
@@ -74,10 +76,10 @@ Partial Class RegularServicesList
         CurvedLabel3.Cursor = Cursors.Hand
         CurvedLabel3.Font = New Font("Exo 2", 24F)
         CurvedLabel3.ForeColor = Color.White
-        CurvedLabel3.Location = New Point(67, 496)
+        CurvedLabel3.Location = New Point(42, 408)
         CurvedLabel3.Name = "CurvedLabel3"
         CurvedLabel3.Padding = New Padding(0, 0, 10, 10)
-        CurvedLabel3.Size = New Size(541, 310)
+        CurvedLabel3.Size = New Size(500, 270)
         CurvedLabel3.TabIndex = 25
         CurvedLabel3.Text = "Merchant"
         CurvedLabel3.TextAlign = ContentAlignment.BottomCenter
@@ -85,10 +87,11 @@ Partial Class RegularServicesList
         ' CurvedLabel6
         ' 
         CurvedLabel6.CornerRadius = 10
+        CurvedLabel6.Cursor = Cursors.Hand
         CurvedLabel6.Image = My.Resources.Resources.Employ_plumber
-        CurvedLabel6.Location = New Point(652, 158)
+        CurvedLabel6.Location = New Point(568, 123)
         CurvedLabel6.Name = "CurvedLabel6"
-        CurvedLabel6.Size = New Size(537, 245)
+        CurvedLabel6.Size = New Size(497, 220)
         CurvedLabel6.TabIndex = 24
         ' 
         ' CurvedLabel2
@@ -98,10 +101,10 @@ Partial Class RegularServicesList
         CurvedLabel2.Cursor = Cursors.Hand
         CurvedLabel2.Font = New Font("Exo 2", 24F)
         CurvedLabel2.ForeColor = Color.White
-        CurvedLabel2.Location = New Point(650, 156)
+        CurvedLabel2.Location = New Point(566, 121)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Padding = New Padding(0, 0, 10, 10)
-        CurvedLabel2.Size = New Size(541, 310)
+        CurvedLabel2.Size = New Size(500, 270)
         CurvedLabel2.TabIndex = 23
         CurvedLabel2.Text = "Plumber"
         CurvedLabel2.TextAlign = ContentAlignment.BottomCenter
@@ -109,10 +112,11 @@ Partial Class RegularServicesList
         ' CurvedLabel5
         ' 
         CurvedLabel5.CornerRadius = 10
+        CurvedLabel5.Cursor = Cursors.Hand
         CurvedLabel5.Image = My.Resources.Resources.Employ_Electrician
-        CurvedLabel5.Location = New Point(69, 159)
+        CurvedLabel5.Location = New Point(45, 123)
         CurvedLabel5.Name = "CurvedLabel5"
-        CurvedLabel5.Size = New Size(537, 245)
+        CurvedLabel5.Size = New Size(497, 220)
         CurvedLabel5.TabIndex = 22
         ' 
         ' CurvedLabel1
@@ -122,10 +126,10 @@ Partial Class RegularServicesList
         CurvedLabel1.Cursor = Cursors.Hand
         CurvedLabel1.Font = New Font("Exo 2", 24F)
         CurvedLabel1.ForeColor = Color.White
-        CurvedLabel1.Location = New Point(67, 157)
+        CurvedLabel1.Location = New Point(43, 121)
         CurvedLabel1.Name = "CurvedLabel1"
         CurvedLabel1.Padding = New Padding(0, 0, 10, 10)
-        CurvedLabel1.Size = New Size(541, 310)
+        CurvedLabel1.Size = New Size(500, 270)
         CurvedLabel1.TabIndex = 21
         CurvedLabel1.Text = "Electrician"
         CurvedLabel1.TextAlign = ContentAlignment.BottomCenter
@@ -139,9 +143,9 @@ Partial Class RegularServicesList
         backButton.FlatStyle = FlatStyle.Flat
         backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
-        backButton.Location = New Point(1124, 21)
+        backButton.Location = New Point(995, 12)
         backButton.Name = "backButton"
-        backButton.Size = New Size(109, 57)
+        backButton.Size = New Size(100, 50)
         backButton.TabIndex = 29
         backButton.Text = "Back"
         backButton.UseVisualStyleBackColor = False
@@ -149,7 +153,7 @@ Partial Class RegularServicesList
         ' Label8
         ' 
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
-        Label8.Location = New Point(379, 43)
+        Label8.Location = New Point(290, 28)
         Label8.Name = "Label8"
         Label8.Size = New Size(503, 58)
         Label8.TabIndex = 50
@@ -160,7 +164,7 @@ Partial Class RegularServicesList
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(1254, 953)
+        ClientSize = New Size(1107, 705)
         Controls.Add(Label8)
         Controls.Add(backButton)
         Controls.Add(CurvedLabel8)

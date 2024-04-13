@@ -29,5 +29,19 @@
         EmploymentPortalForm.LoadListOfOrgForm
     End Sub
 
+    Private Sub CurvedLabel5_Click(sender As Object, e As EventArgs) Handles CurvedLabel5.Click
+        EmploymentPortalForm.LoadApplicationForm("Electrician")
+    End Sub
 
+    Private Sub CurvedLabel6_Click(sender As Object, e As EventArgs) Handles CurvedLabel6.Click
+        EmploymentPortalForm.LoadApplicationForm("Plumber")
+    End Sub
+
+    Private Sub CurvedLabel7_Click(sender As Object, e As EventArgs) Handles CurvedLabel7.Click
+        EmploymentPortalForm.LoadApplicationForm("Merchant")
+    End Sub
+
+    Private Sub CurvedLabel8_Click(sender As Object, e As EventArgs) Handles CurvedLabel8.Click
+        EmploymentPortalForm.LoadApplicationForm("Househelp")
+    End Sub
 End Class

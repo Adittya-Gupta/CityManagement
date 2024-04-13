@@ -35,4 +35,5 @@
     Private Sub CurvedLabel3_Click(sender As Object, e As EventArgs) Handles CurvedLabel3.Click
         EmploymentPortalForm.LoadApplicationForm("Education")
     End Sub
+
 End Class

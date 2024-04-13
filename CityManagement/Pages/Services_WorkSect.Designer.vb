@@ -32,9 +32,9 @@ Partial Class Services_WorkSect
         ' Panel2
         ' 
         Panel2.AutoScroll = True
-        Panel2.Location = New Point(133, 163)
+        Panel2.Location = New Point(59, 107)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(994, 727)
+        Panel2.Size = New Size(994, 550)
         Panel2.TabIndex = 5
         ' 
         ' Guna2ComboBox1
@@ -52,7 +52,7 @@ Partial Class Services_WorkSect
         Guna2ComboBox1.ForeColor = SystemColors.Control
         Guna2ComboBox1.IntegralHeight = False
         Guna2ComboBox1.ItemHeight = 30
-        Guna2ComboBox1.Location = New Point(1001, 68)
+        Guna2ComboBox1.Location = New Point(872, 33)
         Guna2ComboBox1.Name = "Guna2ComboBox1"
         Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2ComboBox1.Size = New Size(181, 36)
@@ -61,7 +61,7 @@ Partial Class Services_WorkSect
         ' Label8
         ' 
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
-        Label8.Location = New Point(357, 60)
+        Label8.Location = New Point(224, 23)
         Label8.Name = "Label8"
         Label8.Size = New Size(519, 58)
         Label8.TabIndex = 48
@@ -72,7 +72,7 @@ Partial Class Services_WorkSect
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(1254, 953)
+        ClientSize = New Size(1107, 705)
         Controls.Add(Label8)
         Controls.Add(Guna2ComboBox1)
         Controls.Add(Panel2)

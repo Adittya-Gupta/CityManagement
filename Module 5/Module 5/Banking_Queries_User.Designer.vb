@@ -41,6 +41,7 @@ Partial Class Banking_Queries_User
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Button16 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -231,12 +232,28 @@ Partial Class Banking_Queries_User
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.profile_pic
-        Me.PictureBox12.Location = New System.Drawing.Point(149, 3)
+        Me.PictureBox12.Location = New System.Drawing.Point(192, 3)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(101, 97)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 48
         Me.PictureBox12.TabStop = False
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.Black
+        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.Color.White
+        Me.Button16.Location = New System.Drawing.Point(9, 47)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(145, 53)
+        Me.Button16.TabIndex = 64
+        Me.Button16.Text = "REFRESH"
+        Me.Button16.UseVisualStyleBackColor = False
         '
         'Banking_Queries_User
         '
@@ -245,6 +262,7 @@ Partial Class Banking_Queries_User
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1107, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
@@ -295,4 +313,5 @@ Partial Class Banking_Queries_User
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button16 As Button
 End Class

@@ -63,7 +63,9 @@ Public Class Banking_LoansPayNow
         System.Diagnostics.Debug.WriteLine("LoanID, paynow page: " & LoanID)
 
         '--------------obtain loan payment info----------------
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand

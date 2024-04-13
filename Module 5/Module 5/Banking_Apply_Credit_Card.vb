@@ -16,7 +16,9 @@ Public Class Banking_Apply_Credit_Card
 
     'Dim can_apply As Boolean = True
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
-    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Dim connString As String = Global_Attributes.slqConnection_banking
+
     Dim conn As New MySqlConnection(connString)
     Dim bank_account_number As Integer = 123
     Private Sub Apply_btn_Click(sender As Object, e As EventArgs) Handles Apply_btn.Click

@@ -117,8 +117,8 @@ Public Class Banking_Admin_NewAccRegistration
             Next
 
             ' Set the connection string property
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-
+            'sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = Global_Attributes.slqConnection_banking
             ' Open the connection
             sqlConn.Open()
 
@@ -198,7 +198,10 @@ Public Class Banking_Admin_NewAccRegistration
 
     Private Sub Register_Button_Click(sender As Object, e As EventArgs) Handles Register_Button.Click
         Try
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+
+            sqlConn.ConnectionString = Global_Attributes.slqConnection_banking
+
+            'sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn

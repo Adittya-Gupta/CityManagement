@@ -57,7 +57,9 @@ Public Class Banking_LoanDetails
     Private Sub Banking_LoanDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '--------------obtain user info----------------
         bank_username = Global_Attributes.banking_username
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand

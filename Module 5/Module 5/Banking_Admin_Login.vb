@@ -15,7 +15,8 @@ Public Class Banking_Admin_Login
 
     Private sqlConn As New MySqlConnection
     'Private connectionString As String = "server=localhost;user id=root;password=12345678;database=bankingdatabase;"
-    Private connectionString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    'Private connectionString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Private connectionString As String = Global_Attributes.slqConnection_banking
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
         Dim username As String = Username_TextBox.Text.Trim()

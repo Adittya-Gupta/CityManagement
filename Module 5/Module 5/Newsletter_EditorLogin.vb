@@ -43,7 +43,9 @@ Public Class Newsletter_EditorLogin
             MessageBox.Show("Enter approriate password")
             Return
         End If
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
+
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()

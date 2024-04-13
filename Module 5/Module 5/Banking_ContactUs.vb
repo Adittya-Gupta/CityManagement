@@ -39,7 +39,9 @@ Public Class Banking_ContactUs
     Public bank_username As String = Global_Attributes.banking_username
 
     Private Sub CalculateBankAccNo()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        ' Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         sqlDt.Clear()
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -59,7 +61,8 @@ Public Class Banking_ContactUs
     Private Sub InsertData()
         Dim query_type As String = ComboBox1.SelectedItem.ToString()
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = slqConnection_banking
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()

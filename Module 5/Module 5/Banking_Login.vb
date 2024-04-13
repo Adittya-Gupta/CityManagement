@@ -10,8 +10,9 @@ Public Class Banking_Login
 
     ' connection to database
     'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
-    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     'Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
+    Dim connString As String = Global_Attributes.slqConnection_banking
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()

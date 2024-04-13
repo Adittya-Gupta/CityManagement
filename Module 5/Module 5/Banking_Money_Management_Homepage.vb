@@ -5,7 +5,9 @@ Imports MySql.Data.MySqlClient
 
 Public Class Banking_Money_Management_Homepage
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
-    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    'Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Dim connString As String = Global_Attributes.slqConnection_banking
+
     Dim conn As New MySqlConnection(connString)
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
@@ -99,10 +101,10 @@ Public Class Banking_Money_Management_Homepage
         RichTextBox_Name.Text = receiver_name
         RichTextBox_Amount.Text = amount.ToString
         RichTextBox_Account_Number.Text = account_number
-        If Global_Attributes.banking_recv_username <> "" Then
+        If banking_recv_username <> "" Then
             CalculateBankAccNo()
         End If
-        If Global_Attributes.banking_payment_amount <> 0 Then
+        If banking_payment_amount <> 0 Then
             RichTextBox_Amount.Text = Global_Attributes.banking_payment_amount.ToString()
         End If
         If Global_Attributes.Go_Back = 0 Then

@@ -36,7 +36,9 @@ Public Class Banking_Passbook
         Label22.Text = ""
     End Sub
     Private Sub CalculateBankAccNo()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         sqlDt.Clear()
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -114,7 +116,7 @@ Public Class Banking_Passbook
     End Sub
     'Make this form full screen
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        banking_username = Global_Attributes.banking_username
         CalculateBankAccNo()
         RefreshDataGrid()
         ClearFields()

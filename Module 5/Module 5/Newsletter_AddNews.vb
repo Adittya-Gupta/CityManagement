@@ -150,7 +150,9 @@ Public Class Newsletter_AddNews
 
 
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
+
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -170,7 +172,7 @@ Public Class Newsletter_AddNews
         End If
         ' Close the connection after use
         Mysqlconn.Close()
-        ChildForm(Newsletter_Main.Panel1, Newsletter_Main)
+        ChildForm(Newsletter_Main.Panel1, Newsletter_Homepage)
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
@@ -194,10 +196,10 @@ Public Class Newsletter_AddNews
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Global_Attributes.banking_recv_username = "news"
-        Global_Attributes.Go_Back = 1
-        Global_Attributes.Go_Back_Form = Me
-        Global_Attributes.banking_payment_amount = 100
+        banking_recv_username = "news"
+        Go_Back = 1
+        Go_Back_Form = Me
+        banking_payment_amount = 100
 
         Banking_Main.Panel1.Controls.Clear()
         Newsletter_Main.Panel1.Controls.Clear()

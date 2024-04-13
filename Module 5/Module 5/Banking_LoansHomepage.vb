@@ -42,7 +42,9 @@ Public Class Banking_LoanHomepage
     Public database As String = "bankingdatabase"
 
     Private Sub CalculateBankAccNo()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         sqlDt.Clear()
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -68,7 +70,9 @@ Public Class Banking_LoanHomepage
 
     Private Sub LoadFields()
         MessageBox.Show(AC_no)
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -97,7 +101,9 @@ Public Class Banking_LoanHomepage
 
         'CalculateBankAccNo()
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand

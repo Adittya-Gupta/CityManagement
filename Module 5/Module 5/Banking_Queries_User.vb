@@ -36,7 +36,10 @@ Public Class Banking_Queries_User
         Label22.Text = ""
     End Sub
     Private Sub CalculateBankAccNo()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
+
         sqlDt.Clear()
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -60,8 +63,9 @@ Public Class Banking_Queries_User
             DataGridView1.Rows.Remove(row)
         Next
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         ' Mysqlconn.ConnectionString = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
 
         ' Open the connection
         Mysqlconn.Open()
@@ -74,6 +78,7 @@ Public Class Banking_Queries_User
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
         sqlRd = sqlCmd.ExecuteReader
+
         sqlDt.Load(sqlRd)
         sqlRd.Close()
 
@@ -86,6 +91,7 @@ Public Class Banking_Queries_User
     End Sub
     Private Sub MainPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
+        banking_username = Global_Attributes.banking_username
         CalculateBankAccNo()
         RefreshDataGrid()
         ClearFields()
@@ -168,8 +174,9 @@ Public Class Banking_Queries_User
 
         Dim Query_ID As String = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
 
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -231,5 +238,9 @@ Public Class Banking_Queries_User
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        RefreshDataGrid()
     End Sub
 End Class

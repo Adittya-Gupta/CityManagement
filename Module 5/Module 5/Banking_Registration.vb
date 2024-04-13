@@ -3,8 +3,9 @@ Imports MySql.Data.MySqlClient
 
 Public Class Banking_Registration
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=banking_database"
     'Dim connString As String = "server=localhost;userid=root;password=abinash;database=banking_database;"
+    Dim connString As String = Global_Attributes.slqConnection_banking
 
     Dim PhotoPath As String
     Dim SignPath As String

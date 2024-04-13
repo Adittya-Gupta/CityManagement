@@ -33,14 +33,18 @@ Public Class Newsletter_articlespage
 
     'loads home page of newsletter
     Private Sub LoadFields()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
+
         sqlDt.Clear()
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the top 3 latest headlines
-        sqlCmd.CommandText = "SELECT * FROM newsdata ORDER BY Date DESC;"
+        'sqlCmd.CommandText = "SELECT * FROM newsdata ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM newsdata where Published_On != 'None' ORDER BY Date DESC;"
+
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
@@ -90,14 +94,16 @@ Public Class Newsletter_articlespage
     End Sub
 
     Private Sub LoadTopic(ByVal s As String)
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
+
         sqlDt.Clear()
         Mysqlconn.Open()   'Open the connection
 
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select records of desired type only
-        sqlCmd.CommandText = "SELECT * FROM newsdata WHERE Type = '" & s & "' ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM newsdata WHERE Published_On = '" & s & "' ORDER BY Date DESC;"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()

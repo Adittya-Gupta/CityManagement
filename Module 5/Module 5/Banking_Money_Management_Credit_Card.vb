@@ -7,7 +7,9 @@ Public Class Banking_Money_Management_Credit_Card
 
     Public bank_account_no As String = "1"
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none"
-    Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    ' Dim connString As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Dim connString As String = Global_Attributes.slqConnection_banking
+
     Dim conn As New MySqlConnection(connString)
 
 

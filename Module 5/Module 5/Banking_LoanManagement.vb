@@ -45,8 +45,8 @@ Public Class Banking_LoanManagement
             Next
 
             ' Set the connection string property
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-
+            'sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = Global_Attributes.slqConnection_banking
             ' Open the connection
             sqlConn.Open()
 
@@ -105,7 +105,9 @@ Public Class Banking_LoanManagement
 
     Private Sub Approve_Button_Click(sender As Object, e As EventArgs) Handles Approve_Button.Click
         Try
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            'sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = Global_Attributes.slqConnection_banking
+
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn

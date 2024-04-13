@@ -107,7 +107,8 @@ Public Class Newsletter_Editor
             DataGridView1.Rows.Remove(row)
         Next
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
         ' Open the connection
         Mysqlconn.Open()
@@ -146,7 +147,9 @@ Public Class Newsletter_Editor
 
 
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
+
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -189,8 +192,9 @@ Public Class Newsletter_Editor
         published_on = ComboBox2.SelectedItem.ToString()
 
         'Dim newsID As Integer = Integer.Parse(ID)
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -228,8 +232,9 @@ Public Class Newsletter_Editor
     Private Sub DeleteData()
         'Dim ID As String = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
         Dim ID As String = TextBox3.Text
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         ' Open the connection
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -278,9 +283,10 @@ Public Class Newsletter_Editor
             'Return
         End If
 
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        ' Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -495,8 +501,9 @@ Public Class Newsletter_Editor
 
         ID = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
 
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -603,7 +610,8 @@ Public Class Newsletter_Editor
             DataGridView1.Rows.Remove(row)
         Next
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
         ' Open the connection
         Mysqlconn.Open()
@@ -632,7 +640,8 @@ Public Class Newsletter_Editor
             DataGridView1.Rows.Remove(row)
         Next
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_newsletter
 
         ' Open the connection
         Mysqlconn.Open()

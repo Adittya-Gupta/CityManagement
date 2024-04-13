@@ -18,7 +18,6 @@ Public Class Banking_Money_Management_Homepage
         childform.Show()
     End Sub
 
-
     Public amount As Single
     Public account_number As String
     Public receiver_name As String
@@ -97,6 +96,9 @@ Public Class Banking_Money_Management_Homepage
     End Sub
 
     Private Sub Banking_Money_Management_Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RichTextBox_Name.Text = receiver_name
+        RichTextBox_Amount.Text = amount.ToString
+        RichTextBox_Account_Number.Text = account_number
         If Global_Attributes.banking_recv_username <> "" Then
             CalculateBankAccNo()
         End If

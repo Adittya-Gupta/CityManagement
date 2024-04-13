@@ -7,6 +7,22 @@ Public Class Banking_Money_Management_Debit_Card
     Dim conn As New MySqlConnection(connString)
     Public bank_account_no As String = "1"
 
+    Function Add_space(inputString As String) As String
+        Dim outputString As String = " "
+        Dim spacesToAdd As Integer = 18 - inputString.Length
+        For i As Integer = 1 To spacesToAdd
+            outputString &= " "
+        Next
+        For i As Integer = 0 To inputString.Length - 1
+            outputString &= inputString(i)
+            If (i + 1) Mod 4 = 0 AndAlso (i + 1) <> inputString.Length Then
+                outputString &= " "
+            End If
+        Next
+        Return outputString
+    End Function
+
+
     Private Sub CalculateBankAccNo()
         Dim sqlDt As New DataTable
         sqlDt.Clear()
@@ -47,6 +63,7 @@ Public Class Banking_Money_Management_Debit_Card
         card = RichTextBox_Card.Text
         expiry = RichTextBox_Expiry.Text
         cvv = RichTextBox_Cvv.Text
+        Dim spaced_card As String = Add_space(card)
         remark = RichTextBox_Remark.Text
 
         If Not card <> "" Then
@@ -60,7 +77,7 @@ Public Class Banking_Money_Management_Debit_Card
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM CreditDebitCard Where CardNumber = '" & card & "' AND Cvv = " & cvv & " AND Type = 'DEBIT' ;"
+                Dim query = "SELECT * FROM CreditDebitCard Where CardNumber = '" & spaced_card & "' AND Cvv = " & cvv & " AND Type = 'DEBIT' AND Expiry_Date = '" & expiry & "' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 Dim sqlDt As New DataTable
@@ -72,7 +89,7 @@ Public Class Banking_Money_Management_Debit_Card
                     MessageBox.Show("Wrong Card Details.")
                 Else
                     conn.Open()
-                    query = "SELECT * FROM UserData Where Bank_Account_Number = '" & bank_account_no & "' ;"
+                    query = "SELECT * FROM UserData Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader
                     Dim sqlDt2 As New DataTable
@@ -86,7 +103,7 @@ Public Class Banking_Money_Management_Debit_Card
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & bank_account_no & "' ;"
+                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
@@ -98,7 +115,7 @@ Public Class Banking_Money_Management_Debit_Card
                         reader.Close()
 
                         ' log
-                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & bank_account_no & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
+                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()

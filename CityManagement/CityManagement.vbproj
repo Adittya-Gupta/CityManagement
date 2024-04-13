@@ -11,12 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Import Include="CityManagement.My.Resources" />
+    <Import Include="MySql.Data.MySqlClient" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="IronPdf" Version="2024.4.2" />
+    <PackageReference Include="Syncfusion.Pdf.Net.Core" Version="25.1.38" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
     <PackageReference Include="Bunifu.UI.WinForms" Version="6.3.0" />
     <PackageReference Include="GemBox.Pdf" Version="17.0.1508" />

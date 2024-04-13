@@ -305,9 +305,7 @@ Partial Class MainPanel
         AutoScaleDimensions = New SizeF(9.0F, 18.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
-
         ClientSize = New Size(1308, 761)
-
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)

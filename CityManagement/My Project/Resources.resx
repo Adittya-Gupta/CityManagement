@@ -118,6 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bus-homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bus-homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hobi-industri-C-zgN_LEKb8-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hobi-industri-C-zgN_LEKb8-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1162834592-1024x1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1162834592-1024x1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jorgen_hendriksen_GWDvSFpjkB0_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jorgen-hendriksen-GWDvSFpjkB0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="juan-encalada-6mcVaoGNz1w-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\juan-encalada-6mcVaoGNz1w-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oliver_cole_n8a06dCP_fQ_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oliver-cole-n8a06dCP-fQ-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="world-map-homepage-e1619301116606 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world-map-homepage-e1619301116606 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="9986671" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9986671.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

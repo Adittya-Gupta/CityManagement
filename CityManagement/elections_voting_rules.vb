@@ -1,4 +1,4 @@
-﻿Public Class voting_rules
+﻿Public Class elections_voting_rules
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Dim form As New election_dashboard()
         mypanel.Panel1.Controls.Clear()

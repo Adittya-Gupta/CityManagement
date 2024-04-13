@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports GemBox.Pdf
-Public Class electionResults
+Public Class elections_final_results
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
-    Private ministerDetailsList As New List(Of ministerDetails)
+    Private ministerDetailsList As New List(Of elections_ministerDetails)
     Private Sub electionResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Candidates.BackColor = System.Drawing.ColorTranslator.FromHtml("#ffffff")
         Candidates.AutoScroll = False
@@ -19,7 +19,7 @@ Public Class electionResults
             Using cmd As New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 While reader.Read()
-                    Dim minister As New ministerDetails()
+                    Dim minister As New elections_ministerDetails()
                     ministerDetailsList.Add(minister)
                     minister.Dock = DockStyle.None
                     minister.Width = Candidates.Width

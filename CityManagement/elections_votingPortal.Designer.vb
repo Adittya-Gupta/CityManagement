@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class electionResults
+Partial Class elections_votingPortal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,54 +22,78 @@ Partial Class electionResults
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(electionResults))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(elections_votingPortal))
         back = New Label()
-        Label1 = New Label()
+        Vote = New Label()
         Candidates = New Panel()
+        selectMinister = New ComboBox()
+        NOTA = New Label()
         SuspendLayout()
         ' 
         ' back
         ' 
         back.BackColor = Color.Transparent
-        back.Location = New Point(500, 336)
+        back.Location = New Point(859, 9)
         back.Name = "back"
-        back.Size = New Size(89, 40)
+        back.Size = New Size(89, 34)
         back.TabIndex = 10
         ' 
-        ' Label1
+        ' Vote
         ' 
-        Label1.BackColor = Color.Transparent
-        Label1.Location = New Point(863, -1)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(89, 40)
-        Label1.TabIndex = 11
+        Vote.BackColor = Color.Transparent
+        Vote.Location = New Point(436, 538)
+        Vote.Name = "Vote"
+        Vote.Size = New Size(163, 56)
+        Vote.TabIndex = 11
         ' 
         ' Candidates
         ' 
-        Candidates.Location = New Point(153, 130)
+        Candidates.Location = New Point(156, 136)
         Candidates.Name = "Candidates"
-        Candidates.Size = New Size(765, 375)
+        Candidates.Size = New Size(762, 370)
         Candidates.TabIndex = 12
         ' 
-        ' electionResults
+        ' selectMinister
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        selectMinister.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        selectMinister.FormattingEnabled = True
+        selectMinister.Location = New Point(332, 75)
+        selectMinister.Name = "selectMinister"
+        selectMinister.Size = New Size(438, 33)
+        selectMinister.TabIndex = 13
+        ' 
+        ' NOTA
+        ' 
+        NOTA.BackColor = Color.Transparent
+        NOTA.Location = New Point(811, 538)
+        NOTA.Name = "NOTA"
+        NOTA.Size = New Size(166, 56)
+        NOTA.TabIndex = 14
+        ' 
+        ' votingPortal
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1089, 713)
+        Controls.Add(NOTA)
+        Controls.Add(selectMinister)
         Controls.Add(Candidates)
-        Controls.Add(Label1)
+        Controls.Add(Vote)
         Controls.Add(back)
         DoubleBuffered = True
+        Font = New Font("Microsoft Sans Serif", 8.25F)
         FormBorderStyle = FormBorderStyle.None
-        Name = "electionResults"
-        Text = "electionResults"
+        Name = "votingPortal"
+        Text = "votingPortal"
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents back As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Vote As Label
     Friend WithEvents Candidates As Panel
+    Friend WithEvents selectMinister As ComboBox
+    Friend WithEvents NOTA As Label
 End Class

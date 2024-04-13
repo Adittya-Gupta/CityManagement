@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AllResults
+Partial Class elections_AllResults
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,6 +25,7 @@ Partial Class AllResults
         Label1 = New Label()
         ComboBox1 = New ComboBox()
         Panel1 = New Panel()
+        back = New Label()
         SuspendLayout()
         ' 
         ' Label1
@@ -58,12 +59,24 @@ Partial Class AllResults
         Panel1.Size = New Size(975, 574)
         Panel1.TabIndex = 2
         ' 
+        ' back
+        ' 
+        back.BackColor = SystemColors.ActiveCaptionText
+        back.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        back.Location = New Point(931, 9)
+        back.Name = "back"
+        back.Size = New Size(86, 42)
+        back.TabIndex = 4
+        back.Text = "Back"
+        back.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' AllResults
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
+        Controls.Add(back)
         Controls.Add(Panel1)
         Controls.Add(ComboBox1)
         Controls.Add(Label1)
@@ -78,4 +91,5 @@ Partial Class AllResults
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents back As Label
 End Class

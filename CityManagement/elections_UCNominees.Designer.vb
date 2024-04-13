@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AllResultsUserControl
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class elections_UCNominees
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,13 @@ Partial Class AllResultsUserControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AllResultsUserControl))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(elections_UCNominees))
         PictureBox1 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        VoteCount = New Label()
-        votes_secured = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -61,48 +59,24 @@ Partial Class AllResultsUserControl
         ' Label3
         ' 
         Label3.BackColor = SystemColors.ActiveCaptionText
-        Label3.Location = New Point(360, 15)
+        Label3.Location = New Point(363, 28)
         Label3.Name = "Label3"
-        Label3.Size = New Size(570, 102)
+        Label3.Size = New Size(570, 111)
         Label3.TabIndex = 3
         Label3.Text = "Label3"
         ' 
-        ' VoteCount
-        ' 
-        VoteCount.BackColor = SystemColors.ActiveCaptionText
-        VoteCount.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        VoteCount.ForeColor = Color.White
-        VoteCount.Location = New Point(360, 117)
-        VoteCount.Name = "VoteCount"
-        VoteCount.Size = New Size(253, 31)
-        VoteCount.TabIndex = 4
-        VoteCount.Text = "Number Of Votes Secured : "
-        ' 
-        ' votes_secured
-        ' 
-        votes_secured.BackColor = SystemColors.ActiveCaptionText
-        votes_secured.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        votes_secured.ForeColor = Color.White
-        votes_secured.Location = New Point(619, 117)
-        votes_secured.Name = "votes_secured"
-        votes_secured.Size = New Size(72, 31)
-        votes_secured.TabIndex = 5
-        votes_secured.Text = " "
-        ' 
-        ' AllResultsUserControl
+        ' UCnominees
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        Controls.Add(votes_secured)
-        Controls.Add(VoteCount)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
         DoubleBuffered = True
-        Name = "AllResultsUserControl"
+        Name = "UCnominees"
         Size = New Size(949, 161)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -112,7 +86,5 @@ Partial Class AllResultsUserControl
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents VoteCount As Label
-    Friend WithEvents votes_secured As Label
 
 End Class

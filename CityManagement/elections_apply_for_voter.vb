@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class electionPortal
+Public Class elections_apply_for_voter
     Dim idOfCurrentUser As Integer = 984571
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)

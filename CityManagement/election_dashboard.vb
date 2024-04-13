@@ -138,7 +138,7 @@ Public Class election_dashboard
                 End If
 
                 If age >= 18 Then
-                    Dim votingApplication As New electionPortal()
+                    Dim votingApplication As New elections_apply_for_voter()
                     votingApplication.Show()
                     Me.Hide()
                 Else
@@ -157,7 +157,7 @@ Public Class election_dashboard
         If alreadyVoter And isVotingPeriod And Not hasVoted Then
             'Dim voting_portal As New votingPortal()
             mypanel.Panel1.Controls.Clear()
-            Dim form As New votingPortal()
+            Dim form As New elections_votingPortal()
 
             form.TopLevel = False
             mypanel.Panel1.Controls.Add(form)
@@ -176,7 +176,7 @@ Public Class election_dashboard
     Private Sub nomination_rules_Click(sender As Object, e As EventArgs) Handles nomination_rules.Click
         ' Dim nominationrules As New nomination_rules()
         mypanel.Panel1.Controls.Clear()
-        Dim form As New nomination_rules()
+        Dim form As New elections_nomination_rules()
 
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
@@ -188,7 +188,7 @@ Public Class election_dashboard
     Private Sub voting_rules_Click(sender As Object, e As EventArgs) Handles voting_rules.Click
         ' Dim votingrules As New voting_rules()
         mypanel.Panel1.Controls.Clear()
-        Dim form As New voting_rules()
+        Dim form As New elections_voting_rules()
 
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
@@ -199,7 +199,7 @@ Public Class election_dashboard
 
     Private Sub nomination_portal_Click(sender As Object, e As EventArgs) Handles nomination_portal.Click
         If isNominationPeriod And eligibleToNominate Then
-            Dim nominationPortal As New nomination()
+            Dim nominationPortal As New elections_nomination()
             nominationPortal.Show()
             Me.Hide()
         ElseIf Not isNominationPeriod Then
@@ -212,7 +212,7 @@ Public Class election_dashboard
     Private Sub nominees_details_Click(sender As Object, e As EventArgs) Handles nominees_details.Click
         'Nominee details form to be shown here
         mypanel.Panel1.Controls.Clear()
-        Dim form As New viewNominees()
+        Dim form As New elections_viewNominees()
 
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
@@ -223,7 +223,7 @@ Public Class election_dashboard
         If resultsReleased Then
             ' Dim electionresults As New electionResults()
             mypanel.Panel1.Controls.Clear()
-            Dim form As New electionResults()
+            Dim form As New elections_final_results()
 
             form.TopLevel = False
             mypanel.Panel1.Controls.Add(form)
@@ -247,7 +247,7 @@ Public Class election_dashboard
     Private Sub AllResults_Click(sender As Object, e As EventArgs) Handles AllResults.Click
         'Dim allResults As New AllResults()
         mypanel.Panel1.Controls.Clear()
-        Dim form As New AllResults()
+        Dim form As New elections_AllResults()
 
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)

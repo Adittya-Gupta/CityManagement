@@ -1,4 +1,4 @@
-﻿Public Class AllResultsUserControl
+﻿Public Class elections_AllResultsUserControl
     Private Votes As Integer
 
     Private Sub AllResultsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load

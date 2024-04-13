@@ -121,7 +121,7 @@ Public Class admin_Mayor
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         ' Create an instance of the viewNominees form
-        Dim viewNomineesForm As New viewNominees
+        Dim viewNomineesForm As New elections_viewNominees
 
         ' Show the viewNominees form
         viewNomineesForm.Show()

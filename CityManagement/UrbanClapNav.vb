@@ -49,9 +49,9 @@
 
     Private Sub Button1_TextChanged(sender As Object, e As EventArgs) Handles Button1.TextChanged
         If Button1.Text = "Service Request" Then
-            Globals.listofChatsForm.CurvedLabel9.Visible = False ' Hide the back button
+            Globals.listofChatsForm.Button1.Visible = False ' Hide the back button
         Else
-            Globals.listofChatsForm.CurvedLabel9.Visible = True ' Show the back button
+            Globals.listofChatsForm.Button1.Visible = True ' Show the back button
         End If
     End Sub
 

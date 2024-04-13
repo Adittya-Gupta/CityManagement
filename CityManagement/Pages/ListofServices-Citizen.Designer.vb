@@ -48,7 +48,8 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel1.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Font = New Font("Exo 2", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel1.Cursor = Cursors.Hand
+        CurvedLabel1.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel1.Location = New Point(58, 188)
         CurvedLabel1.Name = "CurvedLabel1"
         CurvedLabel1.Padding = New Padding(0, 0, 10, 10)
@@ -79,7 +80,8 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel2.CornerRadius = 10
-        CurvedLabel2.Font = New Font("Exo 2", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel2.Cursor = Cursors.Hand
+        CurvedLabel2.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel2.Location = New Point(681, 349)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Padding = New Padding(0, 0, 10, 10)
@@ -101,7 +103,8 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel3.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel3.CornerRadius = 10
-        CurvedLabel3.Font = New Font("Exo 2", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel3.Cursor = Cursors.Hand
+        CurvedLabel3.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel3.Location = New Point(58, 527)
         CurvedLabel3.Name = "CurvedLabel3"
         CurvedLabel3.Padding = New Padding(0, 0, 10, 10)
@@ -123,7 +126,8 @@ Partial Class ListofServices_Citizen
         ' 
         CurvedLabel4.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel4.CornerRadius = 10
-        CurvedLabel4.Font = New Font("Exo 2", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel4.Cursor = Cursors.Hand
+        CurvedLabel4.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel4.Location = New Point(681, 695)
         CurvedLabel4.Name = "CurvedLabel4"
         CurvedLabel4.Padding = New Padding(0, 0, 10, 10)
@@ -134,7 +138,7 @@ Partial Class ListofServices_Citizen
         ' 
         ' ListofServices_Citizen
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1254, 953)

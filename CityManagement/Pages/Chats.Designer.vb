@@ -23,7 +23,6 @@ Partial Class Chats
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        CurvedLabel9 = New CurvedLabel()
         CurvedLabel1 = New CurvedLabel()
         Label1 = New Label()
         Panel1 = New Panel()
@@ -31,20 +30,9 @@ Partial Class Chats
         Label2 = New Label()
         PictureBox1 = New PictureBox()
         Timer1 = New Timer(components)
+        Button1 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' CurvedLabel9
-        ' 
-        CurvedLabel9.CornerRadius = 10
-        CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
-        CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1107, 0)
-        CurvedLabel9.Name = "CurvedLabel9"
-        CurvedLabel9.Size = New Size(148, 52)
-        CurvedLabel9.TabIndex = 23
-        CurvedLabel9.Text = "< Back"
-        CurvedLabel9.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' CurvedLabel1
         ' 
@@ -113,19 +101,32 @@ Partial Class Chats
         ' 
         Timer1.Interval = 2000
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(1091, 9)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(151, 51)
+        Button1.TabIndex = 30
+        Button1.Text = "Back"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Chats
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1254, 953)
+        Controls.Add(Button1)
         Controls.Add(PictureBox1)
         Controls.Add(Label2)
         Controls.Add(RichTextBox1)
         Controls.Add(Panel1)
         Controls.Add(Label1)
         Controls.Add(CurvedLabel1)
-        Controls.Add(CurvedLabel9)
         FormBorderStyle = FormBorderStyle.None
         Name = "Chats"
         Text = "Chats"
@@ -141,5 +142,6 @@ Partial Class Chats
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button1 As Button
 End Class
 

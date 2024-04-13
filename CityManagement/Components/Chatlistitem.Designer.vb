@@ -22,20 +22,22 @@ Partial Class Chatlistitem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label2 = New Label()
         PictureBox1 = New PictureBox()
         CurvedLabel1 = New CurvedLabel()
         CurvedLabel2 = New CurvedLabel()
         Label1 = New Label()
+        Label3 = New Guna.UI2.WinForms.Guna2CircleButton()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Segoe UI", 10F)
+        Label2.Font = New Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(133, 65)
+        Label2.Location = New Point(124, 65)
         Label2.Name = "Label2"
         Label2.Size = New Size(365, 39)
         Label2.TabIndex = 36
@@ -73,7 +75,7 @@ Partial Class Chatlistitem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Exo 2 Semi Bold", 12F, FontStyle.Bold)
+        Label1.Font = New Font("Abhaya Libre Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(133, 20)
         Label1.Name = "Label1"
@@ -81,15 +83,35 @@ Partial Class Chatlistitem
         Label1.TabIndex = 35
         Label1.Text = "Label1"
         ' 
+        ' Label3
+        ' 
+        Label3.BackColor = Color.White
+        Label3.BorderColor = Color.LawnGreen
+        Label3.DisabledState.BorderColor = Color.DarkGray
+        Label3.DisabledState.CustomBorderColor = Color.DarkGray
+        Label3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Label3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Label3.FillColor = Color.Chartreuse
+        Label3.Font = New Font("Century", 10.2F, FontStyle.Bold)
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(443, 11)
+        Label3.Name = "Label3"
+        Label3.ShadowDecoration.CustomizableEdges = CustomizableEdges1
+        Label3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Label3.Size = New Size(45, 45)
+        Label3.TabIndex = 43
+        ' 
         ' Chatlistitem
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
         Controls.Add(CurvedLabel1)
         Controls.Add(CurvedLabel2)
+        Cursor = Cursors.Hand
         Name = "Chatlistitem"
         Size = New Size(521, 138)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -101,5 +123,6 @@ Partial Class Chatlistitem
     Friend WithEvents CurvedLabel1 As CurvedLabel
     Friend WithEvents CurvedLabel2 As CurvedLabel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Guna.UI2.WinForms.Guna2CircleButton
 
 End Class

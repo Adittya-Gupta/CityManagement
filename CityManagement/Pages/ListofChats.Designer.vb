@@ -25,7 +25,7 @@ Partial Class ListofChats
         Label4 = New Label()
         Label1 = New Label()
         SplitContainer1 = New SplitContainer()
-        CurvedLabel9 = New CurvedLabel()
+        Button1 = New Button()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.SuspendLayout()
         SuspendLayout()
@@ -66,17 +66,18 @@ Partial Class ListofChats
         SplitContainer1.SplitterDistance = 594
         SplitContainer1.TabIndex = 8
         ' 
-        ' CurvedLabel9
+        ' Button1
         ' 
-        CurvedLabel9.CornerRadius = 10
-        CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
-        CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1108, 0)
-        CurvedLabel9.Name = "CurvedLabel9"
-        CurvedLabel9.Size = New Size(148, 52)
-        CurvedLabel9.TabIndex = 24
-        CurvedLabel9.Text = "< Back"
-        CurvedLabel9.TextAlign = ContentAlignment.MiddleCenter
+        Button1.BackColor = Color.Black
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(1078, 12)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(151, 51)
+        Button1.TabIndex = 13
+        Button1.Text = "Back"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' ListOfChats
         ' 
@@ -84,7 +85,7 @@ Partial Class ListofChats
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1254, 953)
-        Controls.Add(CurvedLabel9)
+        Controls.Add(Button1)
         Controls.Add(SplitContainer1)
         Controls.Add(Label1)
         Controls.Add(Label4)
@@ -99,5 +100,5 @@ Partial Class ListofChats
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents CurvedLabel9 As CurvedLabel
+    Friend WithEvents Button1 As Button
 End Class

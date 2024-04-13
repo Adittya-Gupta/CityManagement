@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports MySql.Data.MySqlClient
 
 Public Class HistoryItem
     ' Enumeration for different states of the appointment
@@ -22,24 +23,26 @@ Public Class HistoryItem
         None
     End Enum
 
+    Public BookingId As String
+
     ' Dictionary to store the colors for each appointment state
     Private stateColors As New Dictionary(Of AppointmentState, Color) From {
-        {AppointmentState.EnquirySent, ColorTranslator.FromHtml("#00F0FF")},
+        {AppointmentState.EnquirySent, ColorTranslator.FromHtml("#001D64")},
         {AppointmentState.Rejected, ColorTranslator.FromHtml("#8E00FE")},
         {AppointmentState.Withdrawn, ColorTranslator.FromHtml("#8E00FE")},
         {AppointmentState.Upcoming, ColorTranslator.FromHtml("#FEBA31")},
         {AppointmentState.Cancelled, ColorTranslator.FromHtml("#8E00FE")},
-        {AppointmentState.InProgress, ColorTranslator.FromHtml("#0500FF")},
-        {AppointmentState.Completed, ColorTranslator.FromHtml("#00FF38")},
-        {AppointmentState.Finished, ColorTranslator.FromHtml("#00FF38")}
+        {AppointmentState.InProgress, ColorTranslator.FromHtml("#454BDE")},
+        {AppointmentState.Completed, ColorTranslator.FromHtml("#22D249")},
+        {AppointmentState.Finished, ColorTranslator.FromHtml("#22D249")}
     }
 
     ' Dictionary to store the colors for each customer action
     Private actionColors As New Dictionary(Of String, Color) From {
         {"None", ColorTranslator.FromHtml("#929292")},
-        {"Withdraw", ColorTranslator.FromHtml("#FF0000")},
-        {"Cancel", ColorTranslator.FromHtml("#FF0000")},
-        {"Pay", ColorTranslator.FromHtml("#05FF00")},
+        {"Withdraw", ColorTranslator.FromHtml("#FFBC2929")},
+        {"Cancel", ColorTranslator.FromHtml("#FFBC2929")},
+        {"Pay", ColorTranslator.FromHtml("#22D249")},
         {"Rate", ColorTranslator.FromHtml("#FF7F23")}
     }
 
@@ -49,6 +52,7 @@ Public Class HistoryItem
     ' Function to update the appointment state and corresponding actions
     Private Sub UpdateAppointmentState(newState As AppointmentState)
         currentAppointmentState = newState
+
         ' Update CurvedLabel3 based on the new state
         Select Case currentAppointmentState
             Case AppointmentState.EnquirySent
@@ -80,40 +84,54 @@ Public Class HistoryItem
         ' Assign colors based on status and action
         CurvedLabel3.BackColor = stateColors(currentAppointmentState)
         CurvedLabel4.BackColor = actionColors(CurvedLabel4.Text)
-
-
     End Sub
     Private Sub HandleAction(action As CustomerAction)
+        Dim newState As AppointmentState
+        Dim previousState As AppointmentState = currentAppointmentState
+
         Select Case action
             Case CustomerAction.Withdraw
                 If currentAppointmentState = AppointmentState.EnquirySent Then
                     ' Perform action to withdraw the enquiry
                     ' Update the state
                     UpdateAppointmentState(AppointmentState.Withdrawn)
+                    newState = AppointmentState.Withdrawn
                 End If
             Case CustomerAction.Cancel
                 If currentAppointmentState = AppointmentState.Upcoming Then
                     ' Perform action to cancel the appointment
                     ' Update the state
                     UpdateAppointmentState(AppointmentState.Cancelled)
+                    newState = AppointmentState.Cancelled
                 End If
             Case CustomerAction.Pay
                 If currentAppointmentState = AppointmentState.InProgress Then
                     ' Perform action to pay
                     ' Update the state
                     UpdateAppointmentState(AppointmentState.Completed)
+                    newState = AppointmentState.Completed
                 End If
             Case CustomerAction.Rate
                 If currentAppointmentState = AppointmentState.Completed Then
                     ' Perform action to rate
                     ' Update the state
                     UpdateAppointmentState(AppointmentState.Finished)
+                    newState = AppointmentState.Finished
                 End If
         End Select
+
+        ' Update Globals.ServiceHistory.OriginalStatusList by subtracting one from the previous state and adding one to the new state
+        Globals.ServiceHistoryForm.OriginalStatusCount(previousState) -= 1
+        Globals.ServiceHistoryForm.OriginalStatusCount(newState) += 1
+
+        ' Update status in the database
+        UpdateStatusInDatabase(newState)
     End Sub
 
     ' Constructor with optional parameters
-    Public Sub New(Optional ByVal name As String = "Default Name",
+    Public Sub New(
+                Optional ByVal bookingid As String = "1",
+                Optional ByVal name As String = "Default Name", 
                Optional ByVal serviceTime As String = "Will be updated",
                Optional ByVal billAmount As String = "To be Decided",
                Optional ByVal ratingValue As Double = 3.5,
@@ -122,6 +140,7 @@ Public Class HistoryItem
         InitializeComponent()
 
         ' Set the values of the components based on the parameters
+        Me.BookingId = bookingid
         Label1.Text = name
         Label2.Text = serviceTime
         Label3.Text = billAmount
@@ -145,6 +164,7 @@ Public Class HistoryItem
 
     Private Sub CurvedLabel4_Click(sender As Object, e As EventArgs) Handles CurvedLabel4.Click
         ' Handle the action based on the current state
+        Globals.ServiceHistoryForm.semaphore.WaitOne()
         Select Case currentAppointmentState
             Case AppointmentState.EnquirySent
                 HandleAction(CustomerAction.Withdraw)
@@ -163,5 +183,29 @@ Public Class HistoryItem
                     End If
                 End Using
         End Select
+        Globals.ServiceHistoryForm.semaphore.Release()
     End Sub
+
+    Private Sub UpdateStatusInDatabase(newState As AppointmentState)
+        ' Define the SQL query to update the status in the serviceBooking table
+        Dim query As String = "UPDATE serviceBooking SET status = @status WHERE serviceBookingId = @bookingId"
+        ' Create MySQL connection
+        Using connection As New MySqlConnection(Globals.connectionstring)
+            ' Open the connection
+            connection.Open()
+
+            ' Create MySqlCommand
+            Using command As New MySqlCommand(query, connection)
+                ' Add parameters
+                command.Parameters.AddWithValue("@status", newState.ToString())
+
+                ' Add bookingId parameter (you need to define bookingId variable)
+                command.Parameters.AddWithValue("@bookingId", Me.BookingId)
+
+                ' Execute the command
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
 End Class

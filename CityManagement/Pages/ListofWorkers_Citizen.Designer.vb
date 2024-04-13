@@ -22,19 +22,21 @@ Partial Class LIstofWorkers_Citizen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label1 = New Label()
         Label2 = New Label()
         TextBox1 = New TextBox()
         Label3 = New Label()
         Panel1 = New Panel()
         Label4 = New Label()
-        CurvedLabel9 = New CurvedLabel()
+        Timer1 = New Timer(components)
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Frame_1054__2_
-        Label1.Location = New Point(1079, 66)
+        Label1.Location = New Point(1029, 75)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 73)
         Label1.TabIndex = 0
@@ -42,7 +44,7 @@ Partial Class LIstofWorkers_Citizen
         ' Label2
         ' 
         Label2.Image = My.Resources.Resources.Group_183
-        Label2.Location = New Point(619, 66)
+        Label2.Location = New Point(569, 75)
         Label2.Name = "Label2"
         Label2.Size = New Size(382, 73)
         Label2.TabIndex = 1
@@ -53,7 +55,7 @@ Partial Class LIstofWorkers_Citizen
         TextBox1.BorderStyle = BorderStyle.None
         TextBox1.Font = New Font("Exo 2 Medium", 12F)
         TextBox1.ForeColor = Color.Gray
-        TextBox1.Location = New Point(642, 88)
+        TextBox1.Location = New Point(592, 97)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(285, 34)
@@ -64,7 +66,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         Label3.BackColor = Color.Black
         Label3.Image = My.Resources.Resources.Search_icon
-        Label3.Location = New Point(924, 75)
+        Label3.Location = New Point(874, 84)
         Label3.Name = "Label3"
         Label3.Size = New Size(66, 51)
         Label3.TabIndex = 3
@@ -87,17 +89,21 @@ Partial Class LIstofWorkers_Citizen
         Label4.TabIndex = 5
         Label4.Text = "List of Service Providers"
         ' 
-        ' CurvedLabel9
+        ' Timer1
         ' 
-        CurvedLabel9.CornerRadius = 10
-        CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
-        CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1107, 0)
-        CurvedLabel9.Name = "CurvedLabel9"
-        CurvedLabel9.Size = New Size(148, 52)
-        CurvedLabel9.TabIndex = 21
-        CurvedLabel9.Text = "< Back"
-        CurvedLabel9.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(1091, 9)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(151, 51)
+        Button1.TabIndex = 14
+        Button1.Text = "Back"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' ListofWorkers_Citizen
         ' 
@@ -105,7 +111,7 @@ Partial Class LIstofWorkers_Citizen
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1254, 953)
-        Controls.Add(CurvedLabel9)
+        Controls.Add(Button1)
         Controls.Add(Label4)
         Controls.Add(Panel1)
         Controls.Add(Label3)
@@ -128,5 +134,6 @@ Partial Class LIstofWorkers_Citizen
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents CurvedLabel9 As CurvedLabel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button1 As Button
 End Class

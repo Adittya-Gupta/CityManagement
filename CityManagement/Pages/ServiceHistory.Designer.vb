@@ -22,6 +22,7 @@ Partial Class ServiceHistory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label4 = New Label()
         Label3 = New Label()
         TextBox1 = New TextBox()
@@ -31,13 +32,15 @@ Partial Class ServiceHistory
         Label5 = New Label()
         Label6 = New Label()
         Label7 = New Label()
-        CurvedLabel9 = New CurvedLabel()
+        Button1 = New Button()
+        CurvedLabel1 = New CurvedLabel()
+        Timer1 = New Timer(components)
         SuspendLayout()
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
+        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label4.ForeColor = Color.FromArgb(96, 85, 85)
         Label4.Location = New Point(146, 75)
         Label4.Name = "Label4"
         Label4.Size = New Size(406, 61)
@@ -48,9 +51,9 @@ Partial Class ServiceHistory
         ' 
         Label3.BackColor = Color.Black
         Label3.Image = My.Resources.Resources.Search_icon
-        Label3.Location = New Point(924, 75)
+        Label3.Location = New Point(863, 84)
         Label3.Name = "Label3"
-        Label3.Size = New Size(66, 51)
+        Label3.Size = New Size(66, 45)
         Label3.TabIndex = 9
         ' 
         ' TextBox1
@@ -59,27 +62,27 @@ Partial Class ServiceHistory
         TextBox1.BorderStyle = BorderStyle.None
         TextBox1.Font = New Font("Exo 2 Medium", 12F)
         TextBox1.ForeColor = Color.Gray
-        TextBox1.Location = New Point(642, 88)
+        TextBox1.Location = New Point(581, 97)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(285, 34)
+        TextBox1.Size = New Size(285, 28)
         TextBox1.TabIndex = 8
         TextBox1.Text = "Search History"
         ' 
         ' Label2
         ' 
         Label2.Image = My.Resources.Resources.Group_183
-        Label2.Location = New Point(619, 66)
+        Label2.Location = New Point(558, 75)
         Label2.Name = "Label2"
-        Label2.Size = New Size(382, 73)
+        Label2.Size = New Size(382, 67)
         Label2.TabIndex = 7
         ' 
         ' Label1
         ' 
         Label1.Image = My.Resources.Resources.Frame_1054__2_
-        Label1.Location = New Point(1079, 66)
+        Label1.Location = New Point(1018, 75)
         Label1.Name = "Label1"
-        Label1.Size = New Size(163, 73)
+        Label1.Size = New Size(163, 67)
         Label1.TabIndex = 6
         ' 
         ' Panel1
@@ -92,7 +95,7 @@ Partial Class ServiceHistory
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(173, 154)
         Label5.Name = "Label5"
@@ -103,7 +106,7 @@ Partial Class ServiceHistory
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(590, 154)
         Label6.Name = "Label6"
@@ -114,7 +117,7 @@ Partial Class ServiceHistory
         ' 
         ' Label7
         ' 
-        Label7.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label7.ForeColor = Color.Black
         Label7.Location = New Point(890, 154)
         Label7.Name = "Label7"
@@ -123,25 +126,41 @@ Partial Class ServiceHistory
         Label7.Text = "Action"
         Label7.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' CurvedLabel9
+        ' Button1
         ' 
-        CurvedLabel9.CornerRadius = 10
-        CurvedLabel9.Font = New Font("Exo 2 Medium", 24F)
-        CurvedLabel9.ForeColor = Color.MediumBlue
-        CurvedLabel9.Location = New Point(1107, 0)
-        CurvedLabel9.Name = "CurvedLabel9"
-        CurvedLabel9.Size = New Size(148, 52)
-        CurvedLabel9.TabIndex = 22
-        CurvedLabel9.Text = "< Back"
-        CurvedLabel9.TextAlign = ContentAlignment.MiddleCenter
+        Button1.BackColor = Color.Black
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(1091, 9)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(151, 51)
+        Button1.TabIndex = 32
+        Button1.Text = "Back"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' CurvedLabel1
+        ' 
+        CurvedLabel1.BackColor = Color.Black
+        CurvedLabel1.CornerRadius = 10
+        CurvedLabel1.Location = New Point(23, 885)
+        CurvedLabel1.Name = "CurvedLabel1"
+        CurvedLabel1.Size = New Size(1131, 55)
+        CurvedLabel1.TabIndex = 31
+        CurvedLabel1.Text = "CurvedLabel1"
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Interval = 1000
         ' 
         ' ServiceHistory
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
+        BackColor = Color.FromArgb(248, 249, 250)
         ClientSize = New Size(1254, 953)
-        Controls.Add(CurvedLabel9)
+        Controls.Add(Button1)
+        Controls.Add(CurvedLabel1)
         Controls.Add(Label7)
         Controls.Add(Label6)
         Controls.Add(Label5)
@@ -167,5 +186,7 @@ Partial Class ServiceHistory
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents CurvedLabel9 As CurvedLabel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents CurvedLabel1 As CurvedLabel
+    Friend WithEvents Timer1 As Timer
 End Class

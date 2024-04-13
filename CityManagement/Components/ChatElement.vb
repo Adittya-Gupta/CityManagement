@@ -17,7 +17,7 @@ Public Class ChatElement
         Dim color1 As Color = Color.FromArgb(128, 196, 0, 255)  ' Start color
         Dim color2 As Color = Color.FromArgb(128, 255, 0, 244) ' End color
 
-        ' Create a radial gradient brush
+        ' Create a  gradient brush
         Dim brush As New LinearGradientBrush(rect, color1, color2, LinearGradientMode.Horizontal)
 
         ' Create a blend for the gradient brush to achieve the radial effect
@@ -55,7 +55,7 @@ Public Class ChatElement
 
     Private Sub AdjustLabelSize(ByVal label As Label, ByVal text As String)
         ' Calculate the width of the label based on the text
-        label.MaximumSize = New Size(600, 1000)
+        label.MaximumSize = New Size(600, 2000)
         Dim maxWidth As Integer = 600 ' Maximum width threshold
         Dim textSize As SizeF = TextRenderer.MeasureText(text, label.Font)
         Dim width As Integer = CInt(textSize.Width)
@@ -68,7 +68,7 @@ Public Class ChatElement
         If textSize.Width > maxWidth Then
             ' Calculate the required height based on the wrapped text
             Dim height As Integer = CInt(Math.Ceiling(textSize.Width / maxWidth) * textSize.Height)
-            label.Height = height
+            label.Height = height ' Add padding to the label
         End If
         Me.Height = label.Height
     End Sub
@@ -76,4 +76,5 @@ Public Class ChatElement
     Private Sub ChatElement_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         MakePictureBoxRound(PictureBox1)
     End Sub
+
 End Class

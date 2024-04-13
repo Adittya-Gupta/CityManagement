@@ -121,6 +121,7 @@ Partial Class ListItem
         ' Label5
         ' 
         Label5.BackColor = Color.White
+        Label5.Cursor = Cursors.Hand
         Label5.Image = My.Resources.Resources.Frame_1051
         Label5.Location = New Point(721, 70)
         Label5.Name = "Label5"
@@ -130,6 +131,7 @@ Partial Class ListItem
         ' Label6
         ' 
         Label6.BackColor = Color.White
+        Label6.Cursor = Cursors.Hand
         Label6.Image = My.Resources.Resources.Frame_1050
         Label6.Location = New Point(803, 70)
         Label6.Name = "Label6"

@@ -109,7 +109,7 @@ Partial Class HistoryItem
         CurvedLabel3.BackColor = Color.FromArgb(CByte(254), CByte(186), CByte(49))
         CurvedLabel3.CornerRadius = 20
         CurvedLabel3.Font = New Font("Exo 2", 18F)
-        CurvedLabel3.ForeColor = Color.White
+        CurvedLabel3.ForeColor = Color.Gainsboro
         CurvedLabel3.Location = New Point(553, 25)
         CurvedLabel3.Name = "CurvedLabel3"
         CurvedLabel3.Padding = New Padding(0, 5, 0, 0)
@@ -123,7 +123,7 @@ Partial Class HistoryItem
         CurvedLabel4.BackColor = Color.FromArgb(CByte(254), CByte(0), CByte(0))
         CurvedLabel4.CornerRadius = 20
         CurvedLabel4.Font = New Font("Exo 2", 20F)
-        CurvedLabel4.ForeColor = Color.White
+        CurvedLabel4.ForeColor = Color.Gainsboro
         CurvedLabel4.Location = New Point(853, 25)
         CurvedLabel4.Name = "CurvedLabel4"
         CurvedLabel4.Padding = New Padding(0, 2, 0, 0)

@@ -49,7 +49,7 @@ Partial Class ChatElement
         CurvedLabel1.Margin = New Padding(0)
         CurvedLabel1.MinimumSize = New Size(100, 60)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Padding = New Padding(60, 5, 10, 0)
+        CurvedLabel1.Padding = New Padding(60, 5, 10, 10)
         CurvedLabel1.Size = New Size(112, 60)
         CurvedLabel1.TabIndex = 3
         CurvedLabel1.Text = "hi"

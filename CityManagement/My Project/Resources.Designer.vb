@@ -69,6 +69,12 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        Friend ReadOnly Property eyeVisible() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("eyeVisible", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
@@ -79,6 +85,12 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        Friend ReadOnly Property loginImage() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("loginImage", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
@@ -86,6 +98,12 @@ Namespace My.Resources
         Friend ReadOnly Property _9434531() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("9434531", resourceCulture)
+                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        Friend ReadOnly Property notification() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("notification", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -826,6 +844,12 @@ Namespace My.Resources
         Friend ReadOnly Property Vector() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Vector", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        Friend ReadOnly Property passwordVisible() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("passwordVisible", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

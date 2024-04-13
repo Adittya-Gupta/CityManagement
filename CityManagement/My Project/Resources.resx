@@ -348,5 +348,19 @@
   </data>
   <data name="Employ_service2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Employ_service.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="passwordVisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\passwordVisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eyeVisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eyeVisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PasswordVisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PasswordVisible1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

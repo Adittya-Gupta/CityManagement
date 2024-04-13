@@ -1,4 +1,7 @@
-﻿Public Class listHospitals
+﻿Imports MySql.Data.MySqlClient
+
+Public Class listHospitals
+    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
         Dim specialisation As New specialisation()
@@ -50,29 +53,36 @@
         End If
     End Sub
     Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Hos1 As New cListHospitals("RamKrishna", "near Lohit Hostle", "+91 2929--0987772")
-        Dim Hos2 As New cListHospitals("ArjunKrishna", "near Disang Hostle", "+91 292987772")
-        Dim Hos3 As New cListHospitals("AgYa", "near Brahma Hostle", "+91 29299787772")
 
+        ' Query the Hospital table to fetch all rows
+        Dim queryString As String = "SELECT name, location, contact,hos_id FROM hospitals"
 
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            connection.Open()
 
-        Panel1.Controls.Add(Hos1)
-        Panel1.Controls.Add(Hos2)
-        Panel1.Controls.Add(Hos3)
+            Dim reader As MySqlDataReader = command.ExecuteReader()
+            Dim yPos As Integer = 0 ' Initial Y position for the first row
 
+            Try
+                While reader.Read()
+                    ' Create an instance of cListHospitals with data from the database
+                    Dim hospitalName As String = reader("name").ToString()
+                    Dim location As String = reader("location").ToString()
+                    Dim contact As String = reader("contact").ToString()
+                    Dim id As String = reader("hos_id").ToString()
 
-        If Panel1.Controls.Count > 1 Then
-            Dim prevMessageLabel As Control = Panel1.Controls(Panel1.Controls.Count - 2)
+                    Dim newHospital As New cListHospitals(hospitalName, location, contact, id)
+                    newHospital.Location = New Point(0, yPos) ' Set the location of the newHospital control
+                    Panel1.Controls.Add(newHospital) ' Add the newHospital control to Panel1
 
+                    yPos += newHospital.Height + 20 ' Update the Y position for the next row
+                End While
+            Finally
+                reader.Close()
+            End Try
+        End Using
 
-            Hos1.Top = 0
-            Hos1.Left = 20
-            Hos2.Left = 20
-            Hos3.Left = 20
-            Hos2.Top = Hos1.Height + 20
-            Hos3.Top = Hos1.Height + 20 + Hos2.Height + 20
-
-        End If
     End Sub
 
     Private Sub Guna2TextBox2_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox2.TextChanged

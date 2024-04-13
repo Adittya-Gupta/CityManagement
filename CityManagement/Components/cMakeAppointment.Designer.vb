@@ -47,7 +47,7 @@ Partial Class cMakeAppointment
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(48, 3)
+        Guna2PictureBox1.Location = New Point(58, 3)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2PictureBox1.Size = New Size(109, 130)
@@ -137,7 +137,7 @@ Partial Class cMakeAppointment
         CurvedLabel2.AutoSize = True
         CurvedLabel2.CornerRadius = 10
         CurvedLabel2.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel2.Location = New Point(111, 278)
+        CurvedLabel2.Location = New Point(109, 278)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Size = New Size(16, 18)
         CurvedLabel2.TabIndex = 9
@@ -148,7 +148,7 @@ Partial Class cMakeAppointment
         CurvedLabel8.AutoSize = True
         CurvedLabel8.CornerRadius = 10
         CurvedLabel8.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel8.Location = New Point(53, 278)
+        CurvedLabel8.Location = New Point(44, 278)
         CurvedLabel8.Name = "CurvedLabel8"
         CurvedLabel8.Size = New Size(51, 18)
         CurvedLabel8.TabIndex = 8
@@ -159,7 +159,7 @@ Partial Class cMakeAppointment
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(133, 279)
+        Guna2PictureBox2.Location = New Point(135, 279)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2PictureBox2.Size = New Size(16, 16)
@@ -169,7 +169,7 @@ Partial Class cMakeAppointment
         ' 
         ' cMakeAppointment
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BorderStyle = BorderStyle.FixedSingle
         Controls.Add(Guna2PictureBox2)
@@ -184,7 +184,7 @@ Partial Class cMakeAppointment
         Controls.Add(CurvedLabel5)
         Controls.Add(Guna2PictureBox1)
         Name = "cMakeAppointment"
-        Size = New Size(210, 311)
+        Size = New Size(213, 308)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

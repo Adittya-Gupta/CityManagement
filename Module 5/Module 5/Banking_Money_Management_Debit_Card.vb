@@ -7,10 +7,10 @@ Public Class Banking_Money_Management_Debit_Card
     Dim conn As New MySqlConnection(connString)
     Public bank_account_no As String = "1"
 
-    Function Add_space(inputString As String) As String
-        Dim outputString As String = " "
-        Dim spacesToAdd As Integer = 18 - inputString.Length
-        For i As Integer = 1 To spacesToAdd
+    Function add_space(inputString As String) As String
+        Dim outputString As String = ""
+        Dim spacesToAdd As Integer = 19 - inputString.Length
+        For i As Integer = 0 To spacesToAdd - 1
             outputString &= " "
         Next
         For i As Integer = 0 To inputString.Length - 1
@@ -21,6 +21,7 @@ Public Class Banking_Money_Management_Debit_Card
         Next
         Return outputString
     End Function
+
 
 
     Private Sub CalculateBankAccNo()

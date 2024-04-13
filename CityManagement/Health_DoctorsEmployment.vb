@@ -2,12 +2,13 @@
 Imports System.IO
 Public Class Health_DoctorsEmployment
     Private EmploymentPortalForm As EmploymentPortal
-    Dim connectionString As String = "server=127.0.0.1;userid=root;database=new;sslmode=none"
+    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Private previouslySelectedButton As Button = Nothing
     Dim pdfBytes As Byte() = Nothing
     Dim hosName As String = ""
+    Dim userNames As String = ""
     Dim selectedDept As String = ""
-    Dim userID = 2
+    Dim userID As Integer = 984580
 
     'Constructor
     Public Sub New(ParentForm As EmploymentPortal)
@@ -15,7 +16,25 @@ Public Class Health_DoctorsEmployment
         Me.EmploymentPortalForm = ParentForm ' Initialize EmploymentPortalForm
     End Sub
 
+    Private Function GetUserName()
+        Dim queryString As String = "SELECT Name FROM User WHERE SID = @userID"
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            command.Parameters.AddWithValue("@userID", userID)
+            connection.Open()
+            Dim reader As MySqlDataReader = command.ExecuteReader()
+            If reader.Read() Then
+                userNames = reader("Name").ToString()
+                'MessageBox.Show(Name)
+            End If
+        End Using
+    End Function
+
     Private Sub Health_DoctorsEmployment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        GetUserName()
+
         FlowLayoutPanel1.AutoScroll = True
         ComboBox1.Height = 50 ' Set height to 50
 
@@ -98,7 +117,7 @@ Public Class Health_DoctorsEmployment
         End If
 
         ' Extract hospital information
-        Dim infoParts As String() = selectedButton.Text.Split(New String() {"            "}, StringSplitOptions.RemoveEmptyEntries)
+        Dim infoParts As String() = selectedButton.Text.Split(New String() {"                        "}, StringSplitOptions.RemoveEmptyEntries)
         hosName = infoParts(0)
         Dim hosLocation As String = infoParts(1)
         Dim vacancyCount As Integer = Integer.Parse(infoParts(2))
@@ -124,7 +143,7 @@ Public Class Health_DoctorsEmployment
             ' Fetch data from the vacancy table based on the selected department
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
-                Dim query As String = "SELECT `hos_id`, `vacancyCount` FROM `vacancy` WHERE `dept` = @dept"
+                Dim query As String = "SELECT `hos_id`, `vacancyCount` FROM `hospitalVacancy` WHERE `department` = @dept"
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@dept", selectedDept)
                     Using reader As MySqlDataReader = command.ExecuteReader()
@@ -140,10 +159,10 @@ Public Class Health_DoctorsEmployment
                             ' Create and configure a Button to display hospital information
                             Dim button As New Button()
                             button.Name = "HospitalButton" & hosID
-                            button.Width = 850
-                            button.Height = 100
+                            button.Width = 800
+                            button.Height = 50
                             button.BackColor = Color.FromArgb(235, 231, 231)
-                            button.Text = $"{hosName}            {hosLocation}            {vacancyCount}"
+                            button.Text = $"{hosName}                        {hosLocation}                        {vacancyCount}"
                             button.Font = New Font(button.Font.FontFamily, 14)
                             button.Margin = New Padding(10)
 
@@ -193,9 +212,10 @@ Public Class Health_DoctorsEmployment
         Try
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
-                Dim query As String = "INSERT INTO employmentreq (user_id, hos_id, dept, resume) VALUES (@userID, @hosID, @dept, @resume)"
+                Dim query As String = "INSERT INTO DoctorEmploymentRequest (user_id, Name, hospital_id, dept, resume, Date) VALUES (@userID, @userName, @hosID, @dept, @resume, CURDATE())"
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@userID", userID)
+                    command.Parameters.AddWithValue("@userName", userNames)
                     command.Parameters.AddWithValue("@hosID", hosID)
                     command.Parameters.AddWithValue("@dept", selectedDept)
                     command.Parameters.AddWithValue("@resume", pdfBytes)
@@ -210,6 +230,7 @@ Public Class Health_DoctorsEmployment
             MessageBox.Show($"Error inserting employment request: {ex.Message}")
         End Try
     End Sub
+
 
 
 

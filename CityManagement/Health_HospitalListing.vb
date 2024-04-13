@@ -4,7 +4,7 @@ Public Class Health_HospitalListing
     Private EmploymentPortalForm As EmploymentPortal
 
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim user_id = 98458
+    Dim user_id = 984681
 
     'Constructor
     Public Sub New(ParentForm As EmploymentPortal)

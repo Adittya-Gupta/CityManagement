@@ -4,7 +4,7 @@ Public Class Health_ViewAppointment
 
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim userID = 2
-    Private doctorID As Integer = 0 ' Global variable to store doctor ID
+    Dim doctorID As Integer = 0 ' Global variable to store doctor ID
 
     Dim listView1 As New ListView()
 
@@ -26,18 +26,21 @@ Public Class Health_ViewAppointment
         End Try
     End Sub
     Private Sub Health_ViewAppointment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        GetDoctorID()
+
         listView1.Name = "listView1"
-        listView1.Width = 1000 ' Set width to 1150
+        listView1.Width = 880 ' Set width to 1150
         listView1.View = View.Details ' Set view to Details mode
         listView1.FullRowSelect = True ' Select entire row when clicked
         'listView1.BorderStyle = BorderStyle.None
         listView1.Font = New Font("Arial", 14)
         listView1.Columns.Add("Appointment ID", 150)
-        listView1.Columns.Add("Patient Name", 250)
-        listView1.Columns.Add("Gender", 150)
+        listView1.Columns.Add("Patient Name", 150)
+        listView1.Columns.Add("Gender", 100)
         listView1.Columns.Add("Date", 160)
         listView1.Columns.Add("Time", 120)
-        listView1.Columns.Add("Status", 170)
+        listView1.Columns.Add("Status", 180)
         listView1.BackColor = ColorTranslator.FromHtml("#F5F1F1")
         listView1.HeaderStyle = ColumnHeaderStyle.Nonclickable ' Make column headers non-clickable
         listView1.HideSelection = True ' Remove highlighting effect after clicking
@@ -46,6 +49,7 @@ Public Class Health_ViewAppointment
 
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
+            command.Parameters.AddWithValue("@doctorID", doctorID)
             connection.Open()
 
             Dim reader As MySqlDataReader = command.ExecuteReader()
@@ -80,10 +84,10 @@ Public Class Health_ViewAppointment
         'listView1.Items.AddRange(New ListViewItem() {row1, row2, row3, row4})
 
         ' Set the location of the ListView
-        listView1.Location = New Point(55, 130) ' Set location to (30, 200)
+        listView1.Location = New Point(45, 100) ' Set location to (30, 200)
 
         ' Set the ListView's height to fit its content
-        listView1.Height = (500) ' Add some extra space for aesthetics
+        listView1.Height = (450) ' Add some extra space for aesthetics
 
         ' Add the ListView to the form
         Me.Controls.Add(listView1)

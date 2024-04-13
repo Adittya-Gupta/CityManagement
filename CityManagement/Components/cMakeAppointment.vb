@@ -24,8 +24,7 @@
     Public Sub Form_Click(sender As Object, e As EventArgs) Handles Me.Click
         ' Set the clicked form as the active form
         Me.BackColor = Color.LightGray
-        MessageBox.Show(did)
-        MessageBox.Show(stime)
+
         Dim send As New makeAppointment()
         send.senddata(hos_id, did, stime, uid)
 

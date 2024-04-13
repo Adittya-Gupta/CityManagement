@@ -150,7 +150,7 @@ Public Class specialisation
             'command.Parameters.AddWithValue("@gin", gin)
             command.Parameters.AddWithValue("@spec", spec)
             If (rate <> "") Then command.Parameters.AddWithValue("@rate", Convert.ToInt32(rate))
-            MessageBox.Show(queryString)
+
             connection.Open()
 
             Dim reader As MySqlDataReader = command.ExecuteReader()

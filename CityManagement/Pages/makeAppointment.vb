@@ -106,7 +106,8 @@ Public Class makeAppointment
     End Sub
     Shared Sub makeappointment(id As String)
         hos_id = id
-        MessageBox.Show(id)
+
+
     End Sub
 
     Shared hid As String, did As String
@@ -175,6 +176,7 @@ Public Class makeAppointment
             Dim command As New MySqlCommand(queryString, connection)
 
             command.Parameters.AddWithValue("@doctor_id", did)
+            command.Parameters.AddWithValue("@hos_id", hos_id)
             command.Parameters.AddWithValue("@user_id", uid)
             command.Parameters.AddWithValue("@appointmentNo", 9)
             command.Parameters.AddWithValue("@status", 0)
@@ -184,6 +186,7 @@ Public Class makeAppointment
             Dim affectedRows As Integer = command.ExecuteNonQuery()
             If affectedRows > 0 Then
                 ' Insert successful
+                MessageBox.Show("Appointment is made")
             Else
                 ' Insert failed
             End If
@@ -249,7 +252,7 @@ Public Class makeAppointment
                     TimeSpan.TryParseExact(timeString, "hh\:mm\:ss", CultureInfo.InvariantCulture, TimeSpanStyles.None, parsedTime)
                     Dim hour1 As Int32 = parsedTime.Hours
                     Dim min1 As Int32 = parsedTime.Minutes
-                    MessageBox.Show("hello")
+
 
                     hour = (hour * 60 + (count) * 20) / 60
                     min = (hour * 60 + (count) * 20) Mod 60

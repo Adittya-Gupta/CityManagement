@@ -24,20 +24,20 @@ Partial Class makeAppointment
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(makeAppointment))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         ComboBox2 = New ComboBox()
         Button1 = New Button()
@@ -67,7 +67,7 @@ Partial Class makeAppointment
         ComboBox2.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
-        ComboBox2.IntegralHeight = False
+        ComboBox2.ImeMode = ImeMode.NoControl
         ComboBox2.ItemHeight = 24
         ComboBox2.Items.AddRange(New Object() {"Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
         ComboBox2.Location = New Point(744, 82)
@@ -126,7 +126,7 @@ Partial Class makeAppointment
         ' 
         ' Guna2GradientTileButton1
         ' 
-        Guna2GradientTileButton1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientTileButton1.CustomizableEdges = CustomizableEdges15
         Guna2GradientTileButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientTileButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -138,14 +138,14 @@ Partial Class makeAppointment
         Guna2GradientTileButton1.ForeColor = Color.White
         Guna2GradientTileButton1.Location = New Point(46, 7)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
-        Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2GradientTileButton1.Size = New Size(165, 33)
         Guna2GradientTileButton1.TabIndex = 19
         Guna2GradientTileButton1.Text = "Specialisations"
         ' 
         ' Guna2GradientTileButton2
         ' 
-        Guna2GradientTileButton2.CustomizableEdges = CustomizableEdges3
+        Guna2GradientTileButton2.CustomizableEdges = CustomizableEdges17
         Guna2GradientTileButton2.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientTileButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -157,14 +157,14 @@ Partial Class makeAppointment
         Guna2GradientTileButton2.ForeColor = Color.White
         Guna2GradientTileButton2.Location = New Point(274, 7)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
-        Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2GradientTileButton2.Size = New Size(166, 33)
         Guna2GradientTileButton2.TabIndex = 20
         Guna2GradientTileButton2.Text = "Hospitals"
         ' 
         ' Guna2GradientTileButton3
         ' 
-        Guna2GradientTileButton3.CustomizableEdges = CustomizableEdges5
+        Guna2GradientTileButton3.CustomizableEdges = CustomizableEdges19
         Guna2GradientTileButton3.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientTileButton3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -176,14 +176,14 @@ Partial Class makeAppointment
         Guna2GradientTileButton3.ForeColor = Color.White
         Guna2GradientTileButton3.Location = New Point(512, 7)
         Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
-        Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2GradientTileButton3.Size = New Size(167, 35)
         Guna2GradientTileButton3.TabIndex = 21
         Guna2GradientTileButton3.Text = "Health Record"
         ' 
         ' Guna2GradientTileButton4
         ' 
-        Guna2GradientTileButton4.CustomizableEdges = CustomizableEdges7
+        Guna2GradientTileButton4.CustomizableEdges = CustomizableEdges21
         Guna2GradientTileButton4.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientTileButton4.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientTileButton4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -195,7 +195,7 @@ Partial Class makeAppointment
         Guna2GradientTileButton4.ForeColor = Color.White
         Guna2GradientTileButton4.Location = New Point(714, 7)
         Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
-        Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2GradientTileButton4.Size = New Size(180, 35)
         Guna2GradientTileButton4.TabIndex = 22
         Guna2GradientTileButton4.Text = "Work"
@@ -203,7 +203,7 @@ Partial Class makeAppointment
         ' Guna2DateTimePicker1
         ' 
         Guna2DateTimePicker1.Checked = True
-        Guna2DateTimePicker1.CustomizableEdges = CustomizableEdges9
+        Guna2DateTimePicker1.CustomizableEdges = CustomizableEdges23
         Guna2DateTimePicker1.FillColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Guna2DateTimePicker1.Font = New Font("Segoe UI", 14F)
         Guna2DateTimePicker1.ForeColor = Color.Black
@@ -213,14 +213,14 @@ Partial Class makeAppointment
         Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-        Guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2DateTimePicker1.Size = New Size(181, 30)
         Guna2DateTimePicker1.TabIndex = 24
         Guna2DateTimePicker1.Value = New Date(2024, 3, 29, 0, 0, 0, 0)
         ' 
         ' Guna2Button4
         ' 
-        Guna2Button4.CustomizableEdges = CustomizableEdges11
+        Guna2Button4.CustomizableEdges = CustomizableEdges25
         Guna2Button4.DisabledState.BorderColor = Color.DarkGray
         Guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -232,7 +232,7 @@ Partial Class makeAppointment
         Guna2Button4.Location = New Point(447, 145)
         Guna2Button4.Name = "Guna2Button4"
         Guna2Button4.PressedColor = Color.Lime
-        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Button4.Size = New Size(85, 38)
         Guna2Button4.TabIndex = 25
         Guna2Button4.Text = "Apply"
@@ -273,7 +273,7 @@ Partial Class makeAppointment
         ' 
         ' Guna2TileButton1
         ' 
-        Guna2TileButton1.CustomizableEdges = CustomizableEdges13
+        Guna2TileButton1.CustomizableEdges = CustomizableEdges27
         Guna2TileButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2TileButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2TileButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -283,7 +283,7 @@ Partial Class makeAppointment
         Guna2TileButton1.ForeColor = Color.Black
         Guna2TileButton1.Location = New Point(418, 521)
         Guna2TileButton1.Name = "Guna2TileButton1"
-        Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2TileButton1.Size = New Size(164, 37)
         Guna2TileButton1.TabIndex = 31
         Guna2TileButton1.Text = "Make Appointment"

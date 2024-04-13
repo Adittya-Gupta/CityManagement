@@ -56,7 +56,11 @@ Public Class elections_nomination
     Private Sub PayDeposit_Click(sender As Object, e As EventArgs) Handles PayDeposit.Click
         'Link banking database and banking forms for further process here
         Dim paidDeposit = True
-
+        'Dim form As New Banking_Money_Management_Homepage()
+        'mypanel.Panel1.Controls.Clear()
+        'form.TopLevel = False
+        'mypanel.Panel1.Controls.Add(form)
+        'form.Show()
 
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
@@ -92,9 +96,11 @@ Public Class elections_nomination
                     cmd.ExecuteNonQuery()
                 End Using
                 MessageBox.Show("You have successfully nominated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Dim electiondashboard As New election_dashboard()
-                electiondashboard.Show()
-                Me.Hide()
+                Dim form As New election_dashboard()
+                mypanel.Panel1.Controls.Clear()
+                form.TopLevel = False
+                mypanel.Panel1.Controls.Add(form)
+                form.Show()
             Catch ex As Exception
 
             Finally

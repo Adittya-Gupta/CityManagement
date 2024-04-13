@@ -363,10 +363,7 @@ Public Class User_Profile
     End Sub
 
     Private Sub ChangePasswordButton_Click(sender As Object, e As EventArgs) Handles ChangePasswordButton.Click
-        mypanel.Panel1.Controls.Clear()
         Dim form As New UserProfile_ChangePassword
-        form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
         form.Show()
     End Sub
 

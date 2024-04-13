@@ -76,7 +76,7 @@
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         mypanel.panel1.Controls.Clear()
-        Dim form As New Redressal()
+        Dim form As New Redressal
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
@@ -111,6 +111,10 @@
 
         ' Show the form
         formToShow.Show()
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        ShowFormInPanel(New EmploymentPortal())
     End Sub
 
     'Private Sub Button10_Click(sender As Object, e As EventArgs)

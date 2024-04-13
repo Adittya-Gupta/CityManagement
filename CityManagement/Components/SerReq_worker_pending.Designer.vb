@@ -29,7 +29,9 @@ Partial Class SerReq_worker_pending
         Button2 = New Button()
         Label6 = New Label()
         TextBox1 = New TextBox()
-        Label7 = New Label()
+        TextBox2 = New TextBox()
+        Label8 = New Label()
+        Label3 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -46,20 +48,20 @@ Partial Class SerReq_worker_pending
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
+        Label1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(142, 22)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 28)
+        Label1.Size = New Size(79, 27)
         Label1.TabIndex = 1
         Label1.Text = "Label1"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Exo 2", 10F)
-        Label2.Location = New Point(142, 62)
+        Label2.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
+        Label2.Location = New Point(142, 56)
         Label2.Name = "Label2"
-        Label2.Size = New Size(115, 20)
+        Label2.Size = New Size(122, 20)
         Label2.TabIndex = 2
         Label2.Text = "Service Time: "
         ' 
@@ -69,6 +71,8 @@ Partial Class SerReq_worker_pending
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Exo 2", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.Group_1891
         Button1.Location = New Point(794, 67)
         Button1.Name = "Button1"
@@ -83,6 +87,8 @@ Partial Class SerReq_worker_pending
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Exo 2", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
         Button2.Image = My.Resources.Resources.Group_190
         Button2.Location = New Point(794, 20)
         Button2.Name = "Button2"
@@ -101,26 +107,46 @@ Partial Class SerReq_worker_pending
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(254, 60)
+        TextBox1.Location = New Point(264, 54)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(177, 27)
         TextBox1.TabIndex = 15
         ' 
-        ' Label7
+        ' TextBox2
         ' 
-        Label7.Cursor = Cursors.Hand
-        Label7.Image = My.Resources.Resources.Vector
-        Label7.Location = New Point(467, 62)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(33, 22)
-        Label7.TabIndex = 16
+        TextBox2.Location = New Point(284, 86)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(166, 27)
+        TextBox2.TabIndex = 19
+        ' 
+        ' Label8
+        ' 
+        Label8.Cursor = Cursors.Hand
+        Label8.Image = My.Resources.Resources.Vector
+        Label8.Location = New Point(481, 89)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(33, 22)
+        Label8.TabIndex = 18
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Exo 2", 10.2F, FontStyle.Bold)
+        Label3.Location = New Point(142, 88)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(140, 20)
+        Label3.TabIndex = 17
+        Label3.Text = "Bill Amount: Rs. "
         ' 
         ' SerReq_worker_pending
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        Controls.Add(Label7)
+        Controls.Add(TextBox2)
+        Controls.Add(Label8)
+        Controls.Add(Label3)
         Controls.Add(TextBox1)
         Controls.Add(Label6)
         Controls.Add(Button2)
@@ -142,6 +168,8 @@ Partial Class SerReq_worker_pending
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label3 As Label
 
 End Class

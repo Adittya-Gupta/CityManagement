@@ -28,12 +28,13 @@ Partial Class Health_DoctorsEmployment
         Button1 = New Button()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         backButton = New Button()
+        Label1 = New Label()
         SuspendLayout()
         ' 
         ' Label2
         ' 
         Label2.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label2.Font = New Font("Segoe UI", 18F)
+        Label2.Font = New Font("Segoe UI", 18.0F)
         Label2.Location = New Point(117, 79)
         Label2.Name = "Label2"
         Label2.Size = New Size(333, 57)
@@ -43,7 +44,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         ' ComboBox1
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 18F)
+        ComboBox1.Font = New Font("Segoe UI", 18.0F)
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(750, 87)
         ComboBox1.Name = "ComboBox1"
@@ -53,12 +54,12 @@ Partial Class Health_DoctorsEmployment
         ' Label3
         ' 
         Label3.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label3.Font = New Font("Segoe UI", 18F)
-        Label3.Location = New Point(277, 798)
+        Label3.Font = New Font("Segoe UI", 18.0F)
+        Label3.Location = New Point(117, 787)
         Label3.Name = "Label3"
-        Label3.Size = New Size(700, 52)
+        Label3.Size = New Size(459, 52)
         Label3.TabIndex = 34
-        Label3.Text = "Browse or Drag n Drop Your Resume"
+        Label3.Text = "Browse Your Resume"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Button1
@@ -68,7 +69,7 @@ Partial Class Health_DoctorsEmployment
         Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 18F)
+        Button1.Font = New Font("Segoe UI", 18.0F)
         Button1.Location = New Point(532, 871)
         Button1.Name = "Button1"
         Button1.Size = New Size(190, 63)
@@ -90,7 +91,7 @@ Partial Class Health_DoctorsEmployment
         backButton.Cursor = Cursors.Hand
         backButton.FlatAppearance.BorderSize = 0
         backButton.FlatStyle = FlatStyle.Flat
-        backButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        backButton.Font = New Font("Microsoft Sans Serif", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
         backButton.Location = New Point(1131, 12)
         backButton.Name = "backButton"
@@ -99,12 +100,23 @@ Partial Class Health_DoctorsEmployment
         backButton.Text = "Back"
         backButton.UseVisualStyleBackColor = False
         ' 
+        ' Label1
+        ' 
+        Label1.BackColor = Color.White
+        Label1.Font = New Font("Segoe UI", 18.0F)
+        Label1.Location = New Point(676, 787)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(459, 52)
+        Label1.TabIndex = 38
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' Health_DoctorsEmployment
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1254, 953)
+        Controls.Add(Label1)
         Controls.Add(backButton)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(Button1)
@@ -124,4 +136,5 @@ Partial Class Health_DoctorsEmployment
     Friend WithEvents Button1 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents backButton As Button
+    Friend WithEvents Label1 As Label
 End Class

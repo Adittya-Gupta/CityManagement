@@ -25,27 +25,17 @@ Partial Class Services_WorkSect
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Panel2 = New Panel()
-        Label4 = New Label()
         Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Label8 = New Label()
         SuspendLayout()
         ' 
         ' Panel2
         ' 
         Panel2.AutoScroll = True
-        Panel2.Location = New Point(72, 176)
+        Panel2.Location = New Point(59, 107)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1110, 727)
+        Panel2.Size = New Size(994, 550)
         Panel2.TabIndex = 5
-        ' 
-        ' Label4
-        ' 
-        Label4.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
-        Label4.Location = New Point(437, 64)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(253, 49)
-        Label4.TabIndex = 6
-        Label4.Text = "List of Service Requests"
         ' 
         ' Guna2ComboBox1
         ' 
@@ -62,19 +52,29 @@ Partial Class Services_WorkSect
         Guna2ComboBox1.ForeColor = SystemColors.Control
         Guna2ComboBox1.IntegralHeight = False
         Guna2ComboBox1.ItemHeight = 30
-        Guna2ComboBox1.Location = New Point(1001, 68)
+        Guna2ComboBox1.Location = New Point(872, 33)
         Guna2ComboBox1.Name = "Guna2ComboBox1"
         Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2ComboBox1.Size = New Size(181, 36)
         Guna2ComboBox1.TabIndex = 7
         ' 
+        ' Label8
+        ' 
+        Label8.Font = New Font("Abhaya Libre Medium", 30F)
+        Label8.Location = New Point(224, 23)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(519, 58)
+        Label8.TabIndex = 48
+        Label8.Text = "List of Service Requests"
+        ' 
         ' Services_WorkSect
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1254, 953)
+        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        ClientSize = New Size(1107, 705)
+        Controls.Add(Label8)
         Controls.Add(Guna2ComboBox1)
-        Controls.Add(Label4)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None
         Name = "Services_WorkSect"
@@ -83,6 +83,6 @@ Partial Class Services_WorkSect
     End Sub
 
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label4 As Label
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Label8 As Label
 End Class

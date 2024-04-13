@@ -58,9 +58,9 @@ Partial Class Temp2
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
-        Panel1.Location = New Point(209, 1)
+        Panel1.Location = New Point(199, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1254, 1026)
+        Panel1.Size = New Size(1107, 760)
         Panel1.TabIndex = 1
         ' 
         ' PictureBox10
@@ -126,7 +126,7 @@ Partial Class Temp2
         ' PictureBox4
         ' 
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(19, 310)
+        PictureBox4.Location = New Point(16, 310)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(22, 22)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -207,7 +207,7 @@ Partial Class Temp2
         Button7.Location = New Point(40, 463)
         Button7.Margin = New Padding(0)
         Button7.Name = "Button7"
-        Button7.Size = New Size(166, 41)
+        Button7.Size = New Size(156, 41)
         Button7.TabIndex = 13
         Button7.Text = "Administration"
         Button7.UseVisualStyleBackColor = False
@@ -252,10 +252,10 @@ Partial Class Temp2
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Abhaya Libre Medium", 11.25F, FontStyle.Bold)
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(43, 308)
+        Button4.Location = New Point(35, 308)
         Button4.Margin = New Padding(0)
         Button4.Name = "Button4"
-        Button4.Size = New Size(163, 29)
+        Button4.Size = New Size(160, 29)
         Button4.TabIndex = 16
         Button4.Text = "Urban Company"
         Button4.TextAlign = ContentAlignment.MiddleLeft
@@ -314,7 +314,7 @@ Partial Class Temp2
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
-        ClientSize = New Size(1462, 1026)
+        ClientSize = New Size(1306, 753)
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)

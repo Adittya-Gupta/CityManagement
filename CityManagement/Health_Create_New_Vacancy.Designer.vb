@@ -26,8 +26,6 @@ Partial Class Health_Create_New_Vacancy
         Label8 = New Label()
         Label7 = New Label()
         Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
         Label4 = New Label()
         TextBox1 = New TextBox()
         Label5 = New Label()
@@ -42,9 +40,8 @@ Partial Class Health_Create_New_Vacancy
         Label11 = New Label()
         Label12 = New Label()
         Label15 = New Label()
-        PictureBox1 = New PictureBox()
+        Label2 = New Label()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -94,25 +91,6 @@ Partial Class Health_Create_New_Vacancy
         Label1.Size = New Size(209, 21)
         Label1.TabIndex = 0
         Label1.Text = "Doctor Employment Request"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(10, 69)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(77, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Work Section"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
-        Label3.Location = New Point(101, 69)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(120, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Create New Vacancy"
         ' 
         ' Label4
         ' 
@@ -256,24 +234,24 @@ Partial Class Health_Create_New_Vacancy
         Label15.TabIndex = 23
         Label15.Text = "No. of vacancies"
         ' 
-        ' PictureBox1
+        ' Label2
         ' 
-        PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Image = My.Resources.Resources.arrow_icons
-        PictureBox1.Location = New Point(89, 71)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(13, 11)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 24
-        PictureBox1.TabStop = False
+        Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ActiveCaptionText
+        Label2.Font = New Font("Segoe UI", 10.0F)
+        Label2.ForeColor = SystemColors.ControlLightLight
+        Label2.Location = New Point(0, 62)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(142, 19)
+        Label2.TabIndex = 24
+        Label2.Text = "Health Record Tracker"
         ' 
         ' Health_Create_New_Vacancy
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1097, 690)
-        Controls.Add(PictureBox1)
+        Controls.Add(Label2)
         Controls.Add(Label15)
         Controls.Add(Label12)
         Controls.Add(Label11)
@@ -288,8 +266,6 @@ Partial Class Health_Create_New_Vacancy
         Controls.Add(Label5)
         Controls.Add(TextBox1)
         Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
@@ -297,15 +273,12 @@ Partial Class Health_Create_New_Vacancy
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
@@ -320,7 +293,7 @@ Partial Class Health_Create_New_Vacancy
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label2 As Label
 End Class

@@ -3,13 +3,28 @@ Imports MySql.Data.MySqlClient
 Imports Windows.ApplicationModel.Chat
 
 Public Class Chats
+    Public Class ChatInfo
+        Public Property ChatID As Integer
+        Public Property SentBy As Integer
+        Public Property Seen As Integer
+    End Class
+
     Public username As String
     ' Declare a variable to store the last chat ID
     Private lastMessageID As Integer = -1
+    ' Declare a list to store chat information
+    Private chatList As New List(Of ChatInfo)()
+
 
     Public Sub New(Optional ByVal Username As String = "John Doe")
         InitializeComponent()
         Me.username = Username
+        AddHandler Globals.ChatIdAsCitizenChanged, AddressOf LoadChatMessages
+        'MessageBox.Show("List of Workers Citizen")
+        ' Start the timer
+        Timer1.Interval = 5000 ' Set the interval to 1 second
+        Timer1.Start()
+        MakePictureBoxRound(PictureBox1)
     End Sub
 
     Private Sub MakePictureBoxRound(ByVal pictureBox As PictureBox)
@@ -24,19 +39,9 @@ Public Class Chats
 
         Panel1.AutoScrollPosition = New Point(0, Panel1.VerticalScroll.Maximum)
     End Sub
-    Private Sub Chats_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-        MakePictureBoxRound(PictureBox1)
-        ' Create a new ChatElement with the message text
-        Dim newChatElement As New ChatElement("Hi there")
-        newChatElement.Top = 10 ' Set the initial position
-        ' Add the new ChatElement to the panel
-        Panel1.Controls.Add(newChatElement)
-        LoadChatMessages()
-        AddHandler Globals.ChatIdAsCitizenChanged, AddressOf LoadChatMessages
-    End Sub
 
     Private Sub LoadChatMessages()
-        MessageBox.Show("Loading chat messages")
+        'MessageBox.Show("Loading chat messages")
         Label2.Text = Globals.ChatIdAsCitizen
         Panel1.Controls.Clear()
         ' Define the SQL query to retrieve chat messages
@@ -72,7 +77,12 @@ Public Class Chats
 
                         ' Create a new ChatElement with the message content and sent time
                         Dim newChatElement As New ChatElement(content, sentTime)
-
+                        ' Add chat information to the chatList
+                        Dim chatInfo As New ChatInfo()
+                        chatInfo.ChatID = Convert.ToInt32(reader("chatID"))
+                        chatInfo.SentBy = sentBy
+                        chatInfo.Seen = seen
+                        chatList.Add(chatInfo)
                         ' Set the position of the chat element based on who sent it
                         ' position them one below the other
                         Dim lastControl As Control = Panel1.Controls.Cast(Of Control)().LastOrDefault()
@@ -104,6 +114,12 @@ Public Class Chats
 
 
     Private Sub UpdateReceiveTime(ByVal unseenChatIDs As List(Of Integer))
+        For Each chatInfo In chatList
+            If unseenChatIDs.Contains(chatInfo.ChatID) AndAlso chatInfo.SentBy = 1 AndAlso chatInfo.Seen = 0 Then
+                ' Update the receive time for the chat message
+                ' Other code...
+            End If
+        Next
 
         ' Create a new MySQL connection
         Using connection As New MySqlConnection(Globals.connectionstring)
@@ -119,11 +135,11 @@ Public Class Chats
                 'command.Parameters.AddWithValue("@receiveTime", DateTime.Now)
 
                 For Each chatID In unseenChatIDs
-                    MessageBox.Show(chatID.ToString())
+                   ' MessageBox.Show(chatID.ToString())
                     ' Clear previous parameters
                     command.Parameters.Clear()
                     command.Parameters.AddWithValue("@receiveTime", DateTime.Now)
-                    MessageBox.Show(DateTime.Now.ToString())
+                    'MessageBox.Show(DateTime.Now.ToString())
                     ' Add chatID parameter
                     command.Parameters.AddWithValue("@chatID", chatID)
 
@@ -140,6 +156,7 @@ Public Class Chats
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'MessageBox.Show("Hello")
         ' Call a method to check for new messages
         ' Disable the timer to prevent re-triggering while CheckForNewMessages is still executing
         Timer1.Enabled = False
@@ -337,7 +354,7 @@ Public Class Chats
                 transaction.Commit()
 
                 ' Do something with the last inserted ID if needed
-                Console.WriteLine("Last inserted ID: " & lastInsertedID)
+                'Console.WriteLine("Last inserted ID: " & lastInsertedID)
             Catch ex As Exception
                 ' Rollback the transaction if an exception occurred
                 transaction.Rollback()

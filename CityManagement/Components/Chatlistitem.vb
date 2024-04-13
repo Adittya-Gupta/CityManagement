@@ -40,12 +40,9 @@ Public Class Chatlistitem
 
     Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click, Label1.Click, Label2.Click, PictureBox1.Click, Label3.Click
         Globals.ChatIdAsCitizen = Worker_id
+        Globals.chatsForm.Label2.Text = Label1.Text
         Globals.Chatspage = Globals.chatsForm
         Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
-        Globals.chatsForm.Label2.Text = Label1.Text
     End Sub
 
-    Private Sub Chatlistitem_Load(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

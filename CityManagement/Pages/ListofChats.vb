@@ -5,7 +5,6 @@ Public Class ListOfChats
     'Constructor
     Public Sub New()
         InitializeComponent()
-
     End Sub
 
     ' Function to execute the query and populate the panels
@@ -63,9 +62,8 @@ Public Class ListOfChats
                 End Using
             End Using
         End Using
-        MessageBox.Show("Done")
+        ' MessageBox.Show("Done")
     End Sub
-
 
     'Load the form
     Private Sub ListOfChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load

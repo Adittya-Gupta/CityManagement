@@ -42,7 +42,7 @@ Public Class ServiceHistory
         InitializeComponent()
         InitializeStatusCount()
         HistoryCount = 0
-        MessageBox.Show("Service History")
+        'MessageBox.Show("Service History")
         ' Start the timer
         Timer1.Interval = 5000 ' Set the interval to 1 second
         Timer1.Start()
@@ -56,7 +56,7 @@ Public Class ServiceHistory
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Enabled = False
-        MessageBox.Show("HI")
+        'MessageBox.Show("HI")
         ' Define the SQL query to fetch count of each status for a user
         Dim countQuery As String = "SELECT status, COUNT(*) FROM serviceBooking SB WHERE SB.clientID = @UserID GROUP BY status"
 
@@ -125,7 +125,7 @@ Public Class ServiceHistory
         OriginalBookingsList.Clear()
         HistoryCount = 0
         Historyfilterform = New Historyfilter()
-        MessageBox.Show("Service")
+        'MessageBox.Show("Service")
 
         Try
             ' SQL query to retrieve service history information

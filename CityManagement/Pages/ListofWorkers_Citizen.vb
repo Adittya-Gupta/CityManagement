@@ -32,7 +32,7 @@ Public Class ListofWorkers_Citizen
         AddHandler Globals.Job_SelectedChanged, AddressOf Job_SelectedChanged_Handler
         ' Initialize WorkerCount
         WorkerCount = 0
-        MessageBox.Show("List of Workers Citizen")
+        'MessageBox.Show("List of Workers Citizen")
         ' Start the timer
         Timer1.Interval = 5000 ' Set the interval to 1 second
         Timer1.Start()
@@ -90,7 +90,7 @@ Public Class ListofWorkers_Citizen
 
     Private Sub Job_SelectedChanged_Handler(sender As Object, e As EventArgs)
         Timer1.Enabled = False
-        MessageBox.Show("Job_SelectedChanged_Handler")
+        'MessageBox.Show("Job_SelectedChanged_Handler")
         WorkerCount = 0
         ' Clear existing controls from Panel1
         Panel1.Controls.Clear()

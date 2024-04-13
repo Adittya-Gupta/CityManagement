@@ -7,6 +7,7 @@
     Public listofChatsForm As New ListOfChats()
     Public listofWorkersForm As New ListofWorkers_Citizen()
     Public WorkPage As New Services_WorkSect()
+    Public OrgHeadWorkSection As New OrgHeadWorkSection()
     'Used for Back reference
     Public HomePage As Object = listofServicesForm
     Public Chatspage As Object = listofChatsForm
@@ -21,5 +22,6 @@
     Public connectionstring As String
     Public ChatId As Integer
     Public Job_Selected As String = "Electrician"
+
 
 End Module

@@ -3,7 +3,7 @@
     Private Sub EmploymentPortal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load ListOfOrganizationsForm into the innerPanel
         Panel1.Controls.Clear()
-        ShowFormInPanel(New EmployOrgList(Me))
+        LoadListOfOrgForm()
         CurvedLabel1.Visible = False
     End Sub
 
@@ -42,6 +42,10 @@
     Public Sub LoadApplicationForm()
         ' Load ApplicationForm into Panel1
         ShowFormInPanel(New EmployApplication(Me))
+    End Sub
+
+    Public Sub LoadOrgHeadWorkSection()
+        ShowFormInPanel(New OrgHeadWorkSection())
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -17,25 +17,40 @@ Public Class transport_cabuserhistory
         Me.FormBorderStyle = FormBorderStyle.Sizable
         Me.ControlBox = False
         Me.Text = ""
-    End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
-            Dim email = TextBox1.Text
-            conn.Open
+            conn.Open()
+
+            Dim sidValue As Integer = transport_landingPage.SID
+            Dim emailAddress As String = ""
+
+            Dim sqlQuery As String = "SELECT EmailAddress FROM User WHERE SID = @SID"
+            Using command As New MySqlCommand(sqlQuery, conn)
+                command.Parameters.AddWithValue("@SID", sidValue)
+
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        emailAddress = reader("EmailAddress").ToString()
+                        Console.WriteLine("EmailAddress: " & emailAddress)
+                    Else
+                        Console.WriteLine("No user found with SID: " & sidValue)
+                    End If
+                End Using
+            End Using
+
 
             ' Query cab_user table to get current ride
             Dim userId = -1
             Dim currentRide = -1
             Dim currentRideQuery = "SELECT user_id, current_ride FROM cab_user WHERE email = @Email"
             Using command As New MySqlCommand(currentRideQuery, conn)
-                command.Parameters.AddWithValue("@Email", email)
+                command.Parameters.AddWithValue("@Email", emailAddress)
                 Dim reader = command.ExecuteReader
                 If reader.Read Then
                     userId = reader.GetInt32(0)
                     currentRide = reader.GetInt32(1)
                 End If
-                reader.Close
+                reader.Close()
             End Using
 
             If currentRide = 0 Then
@@ -71,7 +86,7 @@ Public Class transport_cabuserhistory
                         card.Label8.Text = departureTime.ToString
                         card.Label3.Text = "Rs. " & cost.ToString
                         AddHandler card.Button4.Click, Sub()
-                                                           conn2.Open
+                                                           conn2.Open()
                                                            ' Insert the ride details into cab_history
                                                            Dim insertQuery = "INSERT INTO cab_history (user_id, from_location, to_location, cab_arrival,cost) " &
                                                                                              "VALUES (@UserId, @FromLocation, @ToLocation, @CabArrival,@cost)"
@@ -82,12 +97,12 @@ Public Class transport_cabuserhistory
 
                                                                insertCommand.Parameters.AddWithValue("@CabArrival", departureTime) ' Assuming cab_arrival is current time
                                                                insertCommand.Parameters.AddWithValue("@cost", cost)
-                                                               insertCommand.ExecuteNonQuery
+                                                               insertCommand.ExecuteNonQuery()
                                                            End Using
                                                            Dim updateUserQuery = "UPDATE cab_user SET current_ride = 0, current_from = '', current_to = '', current_arrival = NULL,current_cost = 0 WHERE user_id = @UserId"
                                                            Using updateCommand As New MySqlCommand(updateUserQuery, conn2)
                                                                updateCommand.Parameters.AddWithValue("@UserId", userId)
-                                                               updateCommand.ExecuteNonQuery
+                                                               updateCommand.ExecuteNonQuery()
                                                            End Using
 
                                                            ' Get max_limit from all_cabs
@@ -105,7 +120,7 @@ Public Class transport_cabuserhistory
                                                            Dim vacanciesQuery = "UPDATE running_cabs SET vacancies = vacancies + 1 WHERE cab_id = @CabId"
                                                            Using vacanciesCommand As New MySqlCommand(vacanciesQuery, conn2)
                                                                vacanciesCommand.Parameters.AddWithValue("@CabId", currentRide)
-                                                               vacanciesCommand.ExecuteNonQuery
+                                                               vacanciesCommand.ExecuteNonQuery()
                                                            End Using
 
                                                            ' Check if vacancies equal to max_limit, then delete entry from running_cabs
@@ -118,12 +133,12 @@ Public Class transport_cabuserhistory
                                                                        Dim deleteQuery = "DELETE FROM running_cabs WHERE cab_id = @CabId"
                                                                        Using deleteCommand As New MySqlCommand(deleteQuery, conn2)
                                                                            deleteCommand.Parameters.AddWithValue("@CabId", currentRide)
-                                                                           deleteCommand.ExecuteNonQuery
+                                                                           deleteCommand.ExecuteNonQuery()
                                                                        End Using
                                                                        Dim update = "UPDATE all_cabs SET is_available = 1 WHERE cab_id = @CabId"
                                                                        Using cmd As New MySqlCommand(update, conn2)
                                                                            cmd.Parameters.AddWithValue("@CabId", currentRide)
-                                                                           cmd.ExecuteNonQuery
+                                                                           cmd.ExecuteNonQuery()
                                                                        End Using
                                                                    End If
                                                                End Using
@@ -136,7 +151,7 @@ Public Class transport_cabuserhistory
                         MessageBox.Show("No details found for the current ride.")
                     End If
 
-                    reader.Close
+                    reader.Close()
                 End Using
             End If
             Dim historyQuery = "SELECT from_location, to_location, cab_arrival,cost " &
@@ -162,14 +177,18 @@ Public Class transport_cabuserhistory
                     FlowLayoutPanel2.Controls.Add(card)
                 End While
 
-                reader.Close
+                reader.Close()
             End Using
 
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message)
         Finally
-            conn.Close
+            conn.Close()
         End Try
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

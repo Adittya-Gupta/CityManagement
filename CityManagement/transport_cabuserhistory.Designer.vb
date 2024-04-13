@@ -31,8 +31,6 @@ Partial Class transport_cabuserhistory
         Label47 = New Label()
         Label48 = New Label()
         FlowLayoutPanel1 = New FlowLayoutPanel()
-        TextBox1 = New TextBox()
-        Button4 = New Button()
         FlowLayoutPanel2 = New FlowLayoutPanel()
         Button1 = New Button()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
@@ -122,29 +120,6 @@ Partial Class transport_cabuserhistory
         FlowLayoutPanel1.Size = New Size(953, 164)
         FlowLayoutPanel1.TabIndex = 21
         ' 
-        ' TextBox1
-        ' 
-        TextBox1.BackColor = Color.Silver
-        TextBox1.Font = New Font("Exo 2", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(210, 56)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Enter your email"
-        TextBox1.Size = New Size(277, 34)
-        TextBox1.TabIndex = 2
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.Black
-        Button4.FlatStyle = FlatStyle.Popup
-        Button4.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(512, 56)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(104, 34)
-        Button4.TabIndex = 29
-        Button4.Text = "Go"
-        Button4.UseVisualStyleBackColor = False
-        ' 
         ' FlowLayoutPanel2
         ' 
         FlowLayoutPanel2.Location = New Point(73, 310)
@@ -172,8 +147,6 @@ Partial Class transport_cabuserhistory
         ClientSize = New Size(1133, 713)
         Controls.Add(Button1)
         Controls.Add(FlowLayoutPanel2)
-        Controls.Add(Button4)
-        Controls.Add(TextBox1)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(PictureBox7)
         Controls.Add(PictureBox8)
@@ -197,8 +170,6 @@ Partial Class transport_cabuserhistory
     Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button4 As Button
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents Button1 As Button
 End Class

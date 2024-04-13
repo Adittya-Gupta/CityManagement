@@ -1,4 +1,6 @@
 ﻿Public Class transport_landingPage
+    Public Shared SID As Integer = 11
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         mypanel.panel1.Controls.Clear()
         Dim form As New transport_busSearch

@@ -24,6 +24,7 @@ Partial Class previousRideCard
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(previousRideCard))
         Panel4 = New Panel()
+        Label1 = New Label()
         Label15 = New Label()
         Label14 = New Label()
         Label13 = New Label()
@@ -38,6 +39,7 @@ Partial Class previousRideCard
         ' Panel4
         ' 
         Panel4.BackColor = SystemColors.ButtonHighlight
+        Panel4.Controls.Add(Label1)
         Panel4.Controls.Add(Label15)
         Panel4.Controls.Add(Label14)
         Panel4.Controls.Add(Label13)
@@ -49,6 +51,16 @@ Partial Class previousRideCard
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(537, 164)
         Panel4.TabIndex = 5
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label1.Location = New Point(298, 29)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(43, 20)
+        Label1.TabIndex = 7
+        Label1.Text = "Price"
         ' 
         ' Label15
         ' 
@@ -102,7 +114,7 @@ Partial Class previousRideCard
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Label10.Location = New Point(326, 15)
+        Label10.Location = New Point(359, 26)
         Label10.Name = "Label10"
         Label10.Size = New Size(53, 23)
         Label10.TabIndex = 1
@@ -139,5 +151,6 @@ Partial Class previousRideCard
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents Label1 As Label
 
 End Class

@@ -114,6 +114,7 @@ Partial Class Quer1
         Controls.Add(Submit)
         Controls.Add(Save)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "Quer1"
         Text = "Quer1"
         ResumeLayout(False)

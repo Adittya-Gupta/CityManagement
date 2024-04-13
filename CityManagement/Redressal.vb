@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Redressal
+    Dim idOfCurrentUser As Integer = 926352
     Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
@@ -63,8 +64,28 @@ Public Class Redressal
         ' Fetch data from MySQL and populate DataGridView
         Try
             conn.Open()
-            Dim query As String = "SELECT complaint_id,from_user_id,reply_time,sent_time,complaint,status FROM Complaints where status = false"
+            Dim query As String = ""
+            ' Assuming designation is fetched from the User table
+            Dim designation As String = GetDesignation(idOfCurrentUser)
+            If designation = "Police" Then
+                query = "SELECT c.complaint_id, c.from_user_id, c.reply_time, c.sent_time, c.complaint, c.status " &
+                        "FROM Complaints c " &
+                        "JOIN Police p ON c.to_org_id = p.Station_id " &
+                        "WHERE p.SID = @UserId AND c.status = false"
+            ElseIf designation = "Bank Employee" Then
+                ' Fetch complaints that have to_org_id as -1 (assuming -1 represents Bank)
+                query = "SELECT c.complaint_id, c.from_user_id, c.reply_time, c.sent_time, c.complaint, c.status " &
+                        "FROM Complaints c " &
+                        "WHERE c.to_org_id = -1 AND c.status = false"
+            Else
+                query = "SELECT c.complaint_id, c.from_user_id, c.reply_time, c.sent_time, c.complaint, c.status " &
+                        "FROM Complaints c " &
+                        "WHERE (c.from_user_id = @UserId OR c.to_user_id = @UserId) AND c.status = false"
+            End If
+            ' Assuming idofCurrentUser is an Integer variable containing the user ID
+            ' Create and execute the command with parameterized query
             Using command As New MySqlCommand(query, conn)
+                command.Parameters.AddWithValue("@UserId", idOfCurrentUser)
                 Using reader As MySqlDataReader = command.ExecuteReader()
                     While reader.Read()
                         Dim row As DataGridViewRow = New DataGridViewRow()
@@ -78,12 +99,42 @@ Public Class Redressal
                     End While
                 End Using
             End Using
+
+
         Catch ex As Exception
             MessageBox.Show("Error fetching data: " & ex.Message)
         Finally
             conn.Close()
         End Try
     End Sub
+    Private Function GetDesignation(userId As Integer) As String
+        Dim designation As String = ""
+
+        Try
+            ' Open connection
+
+
+            ' Query to fetch designation from User table based on SID
+            Dim query As String = "SELECT Designation FROM User WHERE SID = @UserId"
+
+            Using command As New MySqlCommand(query, conn)
+                command.Parameters.AddWithValue("@UserId", userId)
+
+                ' Execute the query and get the result
+                Dim result As Object = command.ExecuteScalar()
+
+                If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                    designation = result.ToString()
+                End If
+            End Using
+        Catch ex As Exception
+            ' Handle exceptions
+            MessageBox.Show("Error fetching designation: " & ex.Message)
+
+        End Try
+
+        Return designation
+    End Function
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the button column and perform action accordingly

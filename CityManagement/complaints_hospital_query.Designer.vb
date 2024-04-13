@@ -78,7 +78,7 @@ Partial Class complaints_hospital_query
         Label2.Font = New Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(12, 12)
         Label2.Name = "Label2"
-        Label2.Size = New Size(169, 22)
+        Label2.Size = New Size(141, 20)
         Label2.TabIndex = 8
         Label2.Text = "Complaint Portal  >"
         ' 
@@ -89,7 +89,7 @@ Partial Class complaints_hospital_query
         Label1.Font = New Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(187, 12)
         Label1.Name = "Label1"
-        Label1.Size = New Size(100, 22)
+        Label1.Size = New Size(82, 20)
         Label1.TabIndex = 7
         Label1.Text = "Hospital  >"
         ' 
@@ -100,7 +100,7 @@ Partial Class complaints_hospital_query
         Label3.Font = New Font("Book Antiqua", 11.25F, FontStyle.Bold)
         Label3.Location = New Point(293, 11)
         Label3.Name = "Label3"
-        Label3.Size = New Size(144, 23)
+        Label3.Size = New Size(115, 19)
         Label3.TabIndex = 9
         Label3.Text = "Hospital_name"
         ' 
@@ -133,7 +133,7 @@ Partial Class complaints_hospital_query
         Label4.Font = New Font("Book Antiqua", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(521, 251)
         Label4.Name = "Label4"
-        Label4.Size = New Size(218, 28)
+        Label4.Size = New Size(179, 23)
         Label4.TabIndex = 12
         Label4.Text = "Describe the issue :"
         ' 

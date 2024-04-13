@@ -47,9 +47,9 @@ Partial Class Redressal
         Panel2.AutoScroll = True
         Panel2.AutoSize = True
         Panel2.Controls.Add(DataGridView1)
-        Panel2.Location = New Point(27, 176)
+        Panel2.Location = New Point(27, 205)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1197, 511)
+        Panel2.Size = New Size(996, 482)
         Panel2.TabIndex = 0
         ' 
         ' DataGridView1
@@ -66,7 +66,7 @@ Partial Class Redressal
         DataGridView1.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.White
         DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Black
-        DataGridView1.Size = New Size(1197, 511)
+        DataGridView1.Size = New Size(996, 482)
         DataGridView1.TabIndex = 0
         ' 
         ' Redressal
@@ -75,7 +75,7 @@ Partial Class Redressal
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(1089, 713)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel2)
         Controls.Add(Label1)
         DoubleBuffered = True

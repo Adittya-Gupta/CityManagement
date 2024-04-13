@@ -39,7 +39,7 @@ Public Class complaints_transport_query
         End Try
     End Sub
 
-    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox1.SelectedIndexChanged
+    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -4,11 +4,11 @@ Imports System.Diagnostics
 Imports PdfSharp.Pdf
 Imports PdfSharp.Pdf.IO
 
-Public Class EducationMinister
+Public Class HealthMinister
 
     Private isPendingView As Boolean = False ' Flag to track if pending view is active
 
-    Private Sub EducationMinister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub HealthMinister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadMinisterRequests()
     End Sub
 
@@ -26,7 +26,7 @@ Public Class EducationMinister
 
             ' Set the command text to retrieve data from minister_req and User tables based on status
             Dim statusFilter As String = If(isPendingView, "1 OR mr.Status = -1", "0")
-            cmd.CommandText = "SELECT mr.SID, u.Name, u.ProfilePic, mr.Date, mr.details, mr.Status FROM minister_req mr JOIN User u ON mr.SID = u.SID WHERE mr.Ministry = 'Education' AND mr.Status = " & statusFilter
+            cmd.CommandText = "SELECT mr.SID, u.Name, u.ProfilePic, mr.Date, mr.details, mr.Status FROM minister_req mr JOIN User u ON mr.SID = u.SID WHERE mr.Ministry = 'Health' AND mr.Status = " & statusFilter
 
             ' Set the connection for the command
             cmd.Connection = conn
@@ -79,11 +79,11 @@ Public Class EducationMinister
                 Dim status As Integer = Convert.ToInt32(reader("Status"))
                 Select Case status
                     Case 0
-                        minReqControl.lblAccRej.Text = "Pending"
+                        minReqControl.lblAccrej.Text = "Pending"
                     Case 1
-                        minReqControl.lblAccRej.Text = "Approved"
+                        minReqControl.lblAccrej.Text = "Approved"
                     Case -1
-                        minReqControl.lblAccRej.Text = "Rejected"
+                        minReqControl.lblAccrej.Text = "Rejected"
                 End Select
                 ' Add the min_req control to the FlowLayoutPanel
                 flowLayoutPanel.Controls.Add(minReqControl)

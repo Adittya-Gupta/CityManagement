@@ -33,33 +33,31 @@ Partial Class organization_details
         Name2.BackColor = Color.Black
         Name2.Font = New Font("Microsoft Sans Serif", 11F, FontStyle.Bold)
         Name2.ForeColor = Color.White
-        Name2.Location = New Point(244, 50)
+        Name2.Location = New Point(279, 67)
         Name2.Name = "Name2"
-        Name2.Size = New Size(210, 54)
+        Name2.Size = New Size(240, 72)
         Name2.TabIndex = 1
         ' 
         ' profilePhoto
         ' 
         profilePhoto.BackgroundImage = CType(resources.GetObject("profilePhoto.BackgroundImage"), Image)
         profilePhoto.BackgroundImageLayout = ImageLayout.Stretch
-        profilePhoto.Location = New Point(42, 17)
-        profilePhoto.Margin = New Padding(3, 2, 3, 2)
+        profilePhoto.Location = New Point(48, 23)
         profilePhoto.Name = "profilePhoto"
-        profilePhoto.Size = New Size(175, 144)
+        profilePhoto.Size = New Size(200, 192)
         profilePhoto.TabIndex = 8
         profilePhoto.TabStop = False
         ' 
         ' organization_details
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.None
         Controls.Add(profilePhoto)
         Controls.Add(Name2)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "organization_details"
-        Size = New Size(553, 175)
+        Size = New Size(632, 233)
         CType(profilePhoto, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub

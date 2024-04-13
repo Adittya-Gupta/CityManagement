@@ -79,6 +79,7 @@ Partial Class Redressal
         Controls.Add(Panel2)
         Controls.Add(Label1)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "Redressal"
         Text = "Redressal"
         Panel2.ResumeLayout(False)

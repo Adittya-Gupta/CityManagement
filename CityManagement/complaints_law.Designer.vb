@@ -36,10 +36,10 @@ Partial Class complaints_law
         Panel1.AutoScroll = True
         Panel1.BackColor = Color.White
         Panel1.BackgroundImageLayout = ImageLayout.None
-        Panel1.Location = New Point(417, 102)
+        Panel1.Location = New Point(166, 92)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(654, 439)
+        Panel1.Size = New Size(754, 543)
         Panel1.TabIndex = 14
         ' 
         ' Panel3

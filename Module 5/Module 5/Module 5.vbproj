@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CA9E3DAD-747C-4765-886C-9442AF54A8DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Module_5.MainPanel</StartupObject>
+    <StartupObject>Module_5.MainPanel_M5</StartupObject>
     <RootNamespace>Module_5</RootNamespace>
     <AssemblyName>Module 5</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -290,10 +290,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_Attributes.vb" />
-    <Compile Include="MainPanel.Designer.vb">
-      <DependentUpon>MainPanel.vb</DependentUpon>
+    <Compile Include="MainPanel_M5.Designer.vb">
+      <DependentUpon>MainPanel_M5.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainPanel.vb">
+    <Compile Include="MainPanel_M5.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Banking_Money_Management_Credit_Card.Designer.vb">
@@ -466,8 +466,8 @@
     <EmbeddedResource Include="Banking_Panel.resx">
       <DependentUpon>Banking_Panel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPanel.resx">
-      <DependentUpon>MainPanel.vb</DependentUpon>
+    <EmbeddedResource Include="MainPanel_M5.resx">
+      <DependentUpon>MainPanel_M5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking_Money_Management_Credit_Card.resx">
       <DependentUpon>Banking_Money_Management_Credit_Card.vb</DependentUpon>

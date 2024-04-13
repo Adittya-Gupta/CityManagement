@@ -1,4 +1,4 @@
-﻿Public Class MainPanel
+﻿Public Class MainPanel_M5
 
     'Make this form full screen
 

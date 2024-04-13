@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Event_OfferService
+Partial Class FestivalEvents_Offer_Service2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,9 +22,8 @@ Partial Class Event_OfferService
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Event_OfferService))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FestivalEvents_Offer_Service2))
         Label1 = New Label()
-        Label2 = New Label()
         Panel1 = New Panel()
         Description = New Label()
         EventTime = New Label()
@@ -37,6 +36,7 @@ Partial Class Event_OfferService
         Label10 = New Label()
         FlowLayoutPanelVendorServices = New FlowLayoutPanel()
         PictureBox1 = New PictureBox()
+        Label2 = New Label()
         Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -46,26 +46,14 @@ Partial Class Event_OfferService
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Abhaya Libre Medium", 28F)
+        Label1.Font = New Font("Abhaya Libre Medium", 16F)
         Label1.ForeColor = SystemColors.ControlDarkDark
-        Label1.Location = New Point(32, 12)
+        Label1.Location = New Point(33, 22)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(367, 55)
+        Label1.Size = New Size(213, 32)
         Label1.TabIndex = 24
         Label1.Text = "Events Festivals  >"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Abhaya Libre Medium", 28F)
-        Label2.ForeColor = Color.Black
-        Label2.Location = New Point(397, 12)
-        Label2.Margin = New Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(290, 55)
-        Label2.TabIndex = 25
-        Label2.Text = "Offer Services"
         ' 
         ' Panel1
         ' 
@@ -83,7 +71,7 @@ Partial Class Event_OfferService
         Panel1.Controls.Add(PictureBox1)
         Panel1.Location = New Point(32, 70)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1034, 657)
+        Panel1.Size = New Size(1034, 631)
         Panel1.TabIndex = 26
         ' 
         ' Description
@@ -168,19 +156,19 @@ Partial Class Event_OfferService
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Abhaya Libre Medium", 28F)
-        Label10.Location = New Point(49, 389)
+        Label10.Font = New Font("Abhaya Libre Medium", 16F)
+        Label10.Location = New Point(49, 282)
         Label10.Name = "Label10"
-        Label10.Size = New Size(411, 55)
+        Label10.Size = New Size(239, 32)
         Label10.TabIndex = 8
         Label10.Text = "Vendor Service Tags"
         ' 
         ' FlowLayoutPanelVendorServices
         ' 
-        FlowLayoutPanelVendorServices.Location = New Point(49, 451)
+        FlowLayoutPanelVendorServices.Location = New Point(49, 317)
         FlowLayoutPanelVendorServices.Name = "FlowLayoutPanelVendorServices"
         FlowLayoutPanelVendorServices.Padding = New Padding(18, 17, 18, 17)
-        FlowLayoutPanelVendorServices.Size = New Size(969, 176)
+        FlowLayoutPanelVendorServices.Size = New Size(957, 293)
         FlowLayoutPanelVendorServices.TabIndex = 9
         ' 
         ' PictureBox1
@@ -188,30 +176,42 @@ Partial Class Event_OfferService
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.Location = New Point(49, 40)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(606, 318)
+        PictureBox1.Size = New Size(500, 225)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Abhaya Libre Medium", 16F)
+        Label2.ForeColor = Color.Black
+        Label2.Location = New Point(254, 22)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(169, 32)
+        Label2.TabIndex = 25
+        Label2.Text = "Offer Services"
         ' 
         ' Panel2
         ' 
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Panel1)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(12, 12)
+        Panel2.Location = New Point(-1, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1090, 749)
-        Panel2.TabIndex = 27
+        Panel2.Size = New Size(1090, 713)
+        Panel2.TabIndex = 28
         ' 
-        ' Event_OfferService
+        ' FestivalEvents_Offer_Service2
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1107, 760)
+        ClientSize = New Size(1089, 713)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None
-        Name = "Event_OfferService"
-        Text = "Event_OfferService"
+        Name = "FestivalEvents_Offer_Service2"
+        Text = "FestivalEvents_Offer_Service2"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -221,12 +221,8 @@ Partial Class Event_OfferService
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents FlowLayoutPanelVendorServices As FlowLayoutPanel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Description As Label
     Friend WithEvents EventTime As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents EventDate As Label
@@ -234,5 +230,9 @@ Partial Class Event_OfferService
     Friend WithEvents EventVenue As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents EventName As Label
-    Friend WithEvents Description As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents FlowLayoutPanelVendorServices As FlowLayoutPanel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel2 As Panel
 End Class

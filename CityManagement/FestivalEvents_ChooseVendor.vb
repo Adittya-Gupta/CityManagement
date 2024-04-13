@@ -1,5 +1,5 @@
 ﻿Imports System.Windows.Forms
-Imports CityManagement.Event_OfferService
+Imports CityManagement.FestivalEvents_Offer_Service2
 Imports MySql.Data.MySqlClient
 
 Public Class FestivalEvents_ChooseVendor

@@ -79,7 +79,9 @@ Public Class FestivalEvents_NewEvent
             Debug.WriteLine(owner_id)
 
             ' Insert the new event into the database
-            Dim query As String = "INSERT INTO festivals (dateTime, description, event_type, id, image, isapproved, isopen, name, owner_sid, venue) VALUES (@datetime, @descr, @etype, @EID, @image, 0, @isopen, @Name, @ownerid, @venue)"
+            Dim defaultVendorServiceTagsJson As String = "[{""TagServiceName"":""Catering"",""IsRequired"":false,""ListofVendorSIDs"":[],""ApprovedVendorSID"":null},{""TagServiceName"":""Photography"",""IsRequired"":false,""ListofVendorSIDs"":[],""ApprovedVendorSID"":null},{""TagServiceName"":""Music & DJ"",""IsRequired"":false,""ListofVendorSIDs"":[],""ApprovedVendorSID"":null},{""TagServiceName"":""Cleaning"",""IsRequired"":false,""ListofVendorSIDs"":[],""ApprovedVendorSID"":null}]"
+
+            Dim query As String = "INSERT INTO festivals (dateTime, description, event_type, id, image, isapproved, isopen, name, owner_sid, venue, vendor_service_tags) VALUES (@datetime, @descr, @etype, @EID, @image, 0, @isopen, @Name, @ownerid, @venue, @vendorServiceTags)"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@EID", eid)
                 cmd.Parameters.AddWithValue("@Name", eventname)
@@ -90,8 +92,10 @@ Public Class FestivalEvents_NewEvent
                 cmd.Parameters.AddWithValue("@ownerid", owner_id)
                 cmd.Parameters.AddWithValue("@venue", venue)
                 cmd.Parameters.AddWithValue("@datetime", eventdate)
+                cmd.Parameters.AddWithValue("@vendorServiceTags", defaultVendorServiceTagsJson)
                 cmd.ExecuteNonQuery()
             End Using
+
 
             MessageBox.Show("Event Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 

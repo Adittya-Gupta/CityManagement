@@ -1,20 +1,17 @@
-﻿Imports System.Drawing.Text
-Imports Microsoft.VisualBasic.ApplicationServices
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json
-Imports Org.BouncyCastle.Asn1.IsisMtt.X509
 
-Public Class Event_Participation
+Public Class FestivalEvents_Participation2
     ' Database connection string
     Dim connString As String = Module1.connString
     ' MySqlConnection object to handle communication with the MySQL database
     Dim conn As New MySqlConnection(connString)
 
-    'Dim EventId As Integer = CurrEventID
-    'Dim UserSID As Integer = CurrUserSID
+    Dim EventId As Integer = CurrEventID
+    Dim UserSID As Integer = CurrUserSID
 
-    Dim EventId As Integer = 4
-    Dim UserSID As Integer = 1
+    'Dim EventId As Integer = 4
+    'Dim UserSID As Integer = 1
 
     Public Class Restrictions
         Public Property minAge As Integer?
@@ -133,12 +130,15 @@ Public Class Event_Participation
                 cmdRestrictions.Parameters.AddWithValue("@EventID", EventId)
                 Dim restrictionsJson As String = cmdRestrictions.ExecuteScalar().ToString()
                 Dim restrictions As Restrictions = JsonConvert.DeserializeObject(Of Restrictions)(restrictionsJson)
-                If restrictions.minAge.HasValue AndAlso userAge < restrictions.minAge Then
-                    isAgeValid = False
+                If restrictions IsNot Nothing Then
+                    If restrictions.minAge.HasValue AndAlso userAge < restrictions.minAge Then
+                        isAgeValid = False
+                    End If
+                    If restrictions.maxAge.HasValue AndAlso userAge > restrictions.maxAge Then
+                        isAgeValid = False
+                    End If
                 End If
-                If restrictions.maxAge.HasValue AndAlso userAge > restrictions.maxAge Then
-                    isAgeValid = False
-                End If
+
             End Using
 
             ' Check if the user is already registered for the event

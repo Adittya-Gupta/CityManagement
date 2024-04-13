@@ -302,10 +302,12 @@ Partial Class MainPanel
         ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(9F, 18F)
+        AutoScaleDimensions = New SizeF(12F, 24F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
+
         ClientSize = New Size(1308, 761)
+
         Controls.Add(PictureBox10)
         Controls.Add(PictureBox9)
         Controls.Add(PictureBox8)
@@ -326,7 +328,7 @@ Partial Class MainPanel
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Panel1)
-        Font = New Font("Abhaya Libre Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
         Name = "MainPanel"
         Text = "MainPanel"

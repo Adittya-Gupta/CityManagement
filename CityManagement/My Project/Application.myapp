@@ -4,8 +4,9 @@
   <MainForm>MainPanel</MainForm>
   <MainForm>User_Login</MainForm>
   <SingleInstance>false</SingleInstance>
-  <ShutdownMode>0</ShutdownMode>
+  <ShutdownMode>1</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
   <AuthenticationMode>0</AuthenticationMode>
   <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+  <HighDpiMode>0</HighDpiMode>
 </MyApplicationData>

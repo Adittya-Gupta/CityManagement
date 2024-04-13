@@ -40,8 +40,20 @@ Public Class electionResults
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        Dim electiondashboard As New election_dashboard()
-        electiondashboard.Show()
-        Me.Hide()
+        Dim form As New election_dashboard()
+        mypanel.Panel1.Controls.Clear()
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        Label1.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        Label1.Cursor = Cursors.Default
     End Sub
 End Class

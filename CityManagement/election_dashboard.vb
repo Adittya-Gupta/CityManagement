@@ -255,4 +255,93 @@ Public Class election_dashboard
         'allResults.Show()
         'Me.Hide()
     End Sub
+
+    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles apply_to_become_voter.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        apply_to_become_voter.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles apply_to_become_voter.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        apply_to_become_voter.Cursor = Cursors.Default
+    End Sub
+    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles voting_portal.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        voting_portal.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles voting_portal.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        voting_portal.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label3_MouseEnter(sender As Object, e As EventArgs) Handles nomination_rules.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        nomination_rules.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles nomination_rules.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        nomination_rules.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label4_MouseEnter(sender As Object, e As EventArgs) Handles voting_rules.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        voting_rules.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles voting_rules.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        voting_rules.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label5_MouseEnter(sender As Object, e As EventArgs) Handles nomination_portal.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        nomination_portal.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label5_MouseLeave(sender As Object, e As EventArgs) Handles nomination_portal.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        nomination_portal.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label6_MouseEnter(sender As Object, e As EventArgs) Handles nominees_details.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        nominees_details.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label6_MouseLeave(sender As Object, e As EventArgs) Handles nominees_details.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        nominees_details.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label7_MouseEnter(sender As Object, e As EventArgs) Handles results_portal.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        results_portal.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label7_MouseLeave(sender As Object, e As EventArgs) Handles results_portal.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        results_portal.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label8_MouseEnter(sender As Object, e As EventArgs) Handles AllResults.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        AllResults.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label8_MouseLeave(sender As Object, e As EventArgs) Handles AllResults.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        AllResults.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label9_MouseEnter(sender As Object, e As EventArgs) Handles back.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        back.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label9_MouseLeave(sender As Object, e As EventArgs) Handles back.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        back.Cursor = Cursors.Default
+    End Sub
 End Class

@@ -305,8 +305,40 @@ Public Class votingPortal
         Hide()
     End Sub
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Dim electiondashboard As New election_dashboard()
-        electiondashboard.show()
-        Me.Hide()
+        Dim form As New election_dashboard()
+        mypanel.Panel1.Controls.Clear()
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles back.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        back.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles back.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        back.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles Vote.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        Vote.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Vote.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        Vote.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label3_MouseEnter(sender As Object, e As EventArgs) Handles NOTA.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        NOTA.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles NOTA.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        NOTA.Cursor = Cursors.Default
     End Sub
 End Class

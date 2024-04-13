@@ -133,4 +133,24 @@ Public Class candidateDetails
             conn.Close()
         End Try
     End Sub
+
+    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles OpenManifesto.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        OpenManifesto.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles OpenManifesto.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        OpenManifesto.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles CheckBox.MouseEnter
+        ' Change mouse cursor to hand when hovering over the label
+        CheckBox.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles CheckBox.MouseLeave
+        ' Reset mouse cursor to default when leaving the label
+        CheckBox.Cursor = Cursors.Default
+    End Sub
 End Class

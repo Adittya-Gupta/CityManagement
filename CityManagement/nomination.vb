@@ -141,8 +141,10 @@ Public Class nomination
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Dim electiondashboard As New election_dashboard()
-        electiondashboard.Show()
-        Me.Hide()
+        Dim form As New election_dashboard()
+        mypanel.Panel1.Controls.Clear()
+        form.TopLevel = False
+        mypanel.Panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

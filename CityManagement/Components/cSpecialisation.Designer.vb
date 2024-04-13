@@ -93,7 +93,7 @@ Partial Class cspecialisation
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(560, 42)
+        Label4.Location = New Point(479, 42)
         Label4.Name = "Label4"
         Label4.Size = New Size(40, 18)
         Label4.TabIndex = 5
@@ -103,7 +103,7 @@ Partial Class cspecialisation
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(482, 41)
+        Label5.Location = New Point(401, 41)
         Label5.Name = "Label5"
         Label5.Size = New Size(71, 18)
         Label5.TabIndex = 4
@@ -113,7 +113,7 @@ Partial Class cspecialisation
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(572, 67)
+        Label6.Location = New Point(491, 67)
         Label6.Name = "Label6"
         Label6.Size = New Size(41, 18)
         Label6.TabIndex = 7
@@ -123,7 +123,7 @@ Partial Class cspecialisation
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(482, 66)
+        Label7.Location = New Point(401, 66)
         Label7.Name = "Label7"
         Label7.Size = New Size(97, 18)
         Label7.TabIndex = 6
@@ -133,7 +133,7 @@ Partial Class cspecialisation
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(754, 68)
+        Label8.Location = New Point(673, 68)
         Label8.Name = "Label8"
         Label8.Size = New Size(120, 18)
         Label8.TabIndex = 11
@@ -143,7 +143,7 @@ Partial Class cspecialisation
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(678, 67)
+        Label9.Location = New Point(597, 67)
         Label9.Name = "Label9"
         Label9.Size = New Size(73, 18)
         Label9.TabIndex = 10
@@ -153,7 +153,7 @@ Partial Class cspecialisation
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(749, 43)
+        Label10.Location = New Point(668, 43)
         Label10.Name = "Label10"
         Label10.Size = New Size(71, 18)
         Label10.TabIndex = 9
@@ -163,7 +163,7 @@ Partial Class cspecialisation
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(671, 42)
+        Label11.Location = New Point(590, 42)
         Label11.Name = "Label11"
         Label11.Size = New Size(80, 18)
         Label11.TabIndex = 8
@@ -224,7 +224,7 @@ Partial Class cspecialisation
         Controls.Add(Label1)
         Controls.Add(Guna2PictureBox1)
         Name = "cspecialisation"
-        Size = New Size(914, 113)
+        Size = New Size(814, 113)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

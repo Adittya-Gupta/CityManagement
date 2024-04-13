@@ -69,9 +69,11 @@ Partial Class specialisation
         ComboBox2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
+        ComboBox2.ImeMode = ImeMode.NoControl
         ComboBox2.IntegralHeight = False
         ComboBox2.ItemHeight = 24
-        ComboBox2.Location = New Point(434, 82)
+        ComboBox2.Items.AddRange(New Object() {"Heart Center", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
+        ComboBox2.Location = New Point(374, 84)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
         ComboBox2.Size = New Size(283, 30)
@@ -91,7 +93,7 @@ Partial Class specialisation
         Guna2TextBox1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox1.ForeColor = Color.Black
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(138, 74)
+        Guna2TextBox1.Location = New Point(78, 76)
         Guna2TextBox1.Margin = New Padding(4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
@@ -106,7 +108,7 @@ Partial Class specialisation
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(837, 87)
+        Guna2PictureBox2.Location = New Point(721, 87)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2PictureBox2.Size = New Size(22, 19)
@@ -118,7 +120,7 @@ Partial Class specialisation
         ' 
         ComboBox1.Font = New Font("Segoe UI", 11F)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(833, 82)
+        ComboBox1.Location = New Point(717, 82)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(100, 28)
         ComboBox1.TabIndex = 35
@@ -128,7 +130,7 @@ Partial Class specialisation
         ' 
         ComboBox3.Font = New Font("Segoe UI", 11F)
         ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(939, 82)
+        ComboBox3.Location = New Point(823, 82)
         ComboBox3.Name = "ComboBox3"
         ComboBox3.Size = New Size(100, 28)
         ComboBox3.TabIndex = 36
@@ -139,7 +141,7 @@ Partial Class specialisation
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(940, 87)
+        Guna2PictureBox1.Location = New Point(824, 87)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2PictureBox1.Size = New Size(22, 19)
@@ -159,7 +161,7 @@ Partial Class specialisation
         Guna2GradientTileButton4.FillColor2 = Color.Black
         Guna2GradientTileButton4.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton4.ForeColor = Color.White
-        Guna2GradientTileButton4.Location = New Point(930, 7)
+        Guna2GradientTileButton4.Location = New Point(803, 9)
         Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
         Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2GradientTileButton4.Size = New Size(180, 35)
@@ -178,7 +180,7 @@ Partial Class specialisation
         Guna2GradientTileButton3.FillColor2 = Color.Black
         Guna2GradientTileButton3.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton3.ForeColor = Color.White
-        Guna2GradientTileButton3.Location = New Point(670, 8)
+        Guna2GradientTileButton3.Location = New Point(545, 8)
         Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
         Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientTileButton3.Size = New Size(180, 35)
@@ -197,7 +199,7 @@ Partial Class specialisation
         Guna2GradientTileButton2.FillColor2 = Color.Black
         Guna2GradientTileButton2.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton2.ForeColor = Color.White
-        Guna2GradientTileButton2.Location = New Point(327, 6)
+        Guna2GradientTileButton2.Location = New Point(275, 7)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
         Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientTileButton2.Size = New Size(180, 35)
@@ -216,7 +218,7 @@ Partial Class specialisation
         Guna2GradientTileButton1.FillColor2 = Color.Black
         Guna2GradientTileButton1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         Guna2GradientTileButton1.ForeColor = Color.White
-        Guna2GradientTileButton1.Location = New Point(26, 6)
+        Guna2GradientTileButton1.Location = New Point(26, 7)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
         Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientTileButton1.Size = New Size(202, 35)
@@ -236,9 +238,9 @@ Partial Class specialisation
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.Location = New Point(74, 193)
+        Panel1.Location = New Point(62, 138)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(970, 565)
+        Panel1.Size = New Size(873, 406)
         Panel1.TabIndex = 51
         ' 
         ' specialisation
@@ -246,7 +248,7 @@ Partial Class specialisation
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1097, 770)
+        ClientSize = New Size(969, 570)
         Controls.Add(Panel1)
         Controls.Add(Guna2GradientTileButton4)
         Controls.Add(Guna2GradientTileButton3)

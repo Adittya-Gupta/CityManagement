@@ -2,7 +2,7 @@
 
 Public Class listHospitals
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-
+    Dim selection As String
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
         Dim specialisation As New specialisation()
 
@@ -85,7 +85,46 @@ Public Class listHospitals
 
     End Sub
 
-    Private Sub Guna2TextBox2_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox2.TextChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        selection = ComboBox1.SelectedItem
 
+    End Sub
+
+    Private Sub Guna2TextBox3_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox3.TextChanged
+        Dim text = Guna2TextBox3.Text
+        Dim queryString As String = "SELECT name, location, contact,hos_id FROM hospitals"
+        If (selection = "Location") Then
+            queryString = "SELECT name, location, contact, hos_id FROM hospitals " &
+                            "WHERE location LIKE '%" & text & "%';"
+        Else
+            queryString = "SELECT name, location, contact, hos_id FROM hospitals " &
+                            "WHERE name LIKE '%" & text & "%';"
+        End If
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(queryString, connection)
+            connection.Open()
+
+            Dim reader As MySqlDataReader = command.ExecuteReader()
+            Dim yPos As Integer = 0 ' Initial Y position for the first row
+            Panel1.Controls.Clear()
+            Try
+                While reader.Read()
+                    ' Create an instance of cListHospitals with data from the database
+                    Dim hospitalName As String = reader("name").ToString()
+                    Dim location As String = reader("location").ToString()
+                    Dim contact As String = reader("contact").ToString()
+                    Dim id As String = reader("hos_id").ToString()
+
+                    Dim newHospital As New cListHospitals(hospitalName, location, contact, id)
+                    newHospital.Location = New Point(0, yPos) ' Set the location of the newHospital control
+                    Panel1.Controls.Add(newHospital) ' Add the newHospital control to Panel1
+
+                    yPos += newHospital.Height + 20 ' Update the Y position for the next row
+                End While
+            Finally
+                reader.Close()
+            End Try
+        End Using
     End Sub
 End Class

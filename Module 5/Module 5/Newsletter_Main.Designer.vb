@@ -88,7 +88,6 @@ Partial Class Newsletter_Main
         '
         'PictureBox12
         '
-        Me.PictureBox12.Image = Global.Module_5.My.Resources.Resources.Newspaper_logo
         Me.PictureBox12.Location = New System.Drawing.Point(9, 9)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(91, 91)

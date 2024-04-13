@@ -34,7 +34,7 @@ Public Class FestivalEvents_MainMenu
         Try
             conn.Open()
             ' Query to check if the current user has designation as "minister"
-            Dim query As String = "SELECT designation FROM user WHERE SID = @SID"
+            Dim query As String = "SELECT designation FROM User WHERE SID = @SID"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@SID", Module1.CurrUserSID)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()

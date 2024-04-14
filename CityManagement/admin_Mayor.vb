@@ -37,15 +37,15 @@ Public Class admin_Mayor
 
                         ' Load images into PictureBoxes based on the values
                         If nomination = 0 Then
-                            PictureBox1.ImageLocation = "C:\Users\tsriv\Downloads\nominate-0.png"
+                            PictureBox1.ImageLocation = "..\..\..\MediaFiles\nominate-0.png"
                         Else
-                            PictureBox1.ImageLocation = "C:\Users\tsriv\Downloads\nominate-1.png"
+                            PictureBox1.ImageLocation = "..\..\..\MediaFiles\nominate-1.png"
                         End If
 
                         If voting = 0 Then
-                            PictureBox2.ImageLocation = "C:\Users\tsriv\Downloads\vote-0.png"
+                            PictureBox2.ImageLocation = "..\..\..\MediaFiles\vote-0.png"
                         Else
-                            PictureBox2.ImageLocation = "C:\Users\tsriv\Downloads\vote-1.png"
+                            PictureBox2.ImageLocation = "..\..\..\MediaFiles\vote-1.png"
                         End If
                     End If
                 End Using

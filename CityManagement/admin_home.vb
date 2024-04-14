@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class admin_home
     Private OriginalSize As Size = Me.Size
-    Dim idOfCurrentUser As Integer = 1
+    Dim idOfCurrentUser As Integer = 40
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 

@@ -153,7 +153,15 @@ Public Class SHO
 
         ' Extract userID from Tag property
         Dim userID As Integer = Convert.ToInt32(workerReqControl.Tag)
-
+        Dim query2 As String = "UPDATE User SET Designation = 'Police' WHERE SID = @userID"
+        Using conn As New MySqlConnection("server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none")
+            conn.Open()
+            Using cmd2 As New MySqlCommand(query2, conn)
+                cmd2.Parameters.AddWithValue("@userID", userID)
+                cmd2.ExecuteNonQuery()
+                conn.Close()
+            End Using
+        End Using
         ' Update the Status column to 'Accepted' in the workerEmployReq table for the given userID
         UpdateStatus(userID, "Accepted")
 

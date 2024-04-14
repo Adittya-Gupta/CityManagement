@@ -10,7 +10,9 @@ Public Class WelcomeScreen
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MainPanel.Show()
-        Me.Hide()
+    End Sub
+
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+
     End Sub
 End Class

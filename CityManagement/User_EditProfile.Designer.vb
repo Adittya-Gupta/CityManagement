@@ -45,7 +45,7 @@ Partial Class User_EditProfile
         ' 
         EmailTextBox.Cursor = Cursors.No
         EmailTextBox.Font = New Font("Exo 2", 12F)
-        EmailTextBox.Location = New Point(750, 356)
+        EmailTextBox.Location = New Point(587, 308)
         EmailTextBox.Name = "EmailTextBox"
         EmailTextBox.ReadOnly = True
         EmailTextBox.Size = New Size(289, 31)
@@ -57,7 +57,7 @@ Partial Class User_EditProfile
         EmailLabel.AutoSize = True
         EmailLabel.Font = New Font("Exo 2", 12F)
         EmailLabel.ForeColor = Color.Black
-        EmailLabel.Location = New Point(751, 321)
+        EmailLabel.Location = New Point(588, 273)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New Size(61, 24)
         EmailLabel.TabIndex = 15
@@ -69,7 +69,7 @@ Partial Class User_EditProfile
         Label1.AutoSize = True
         Label1.Font = New Font("Centauri", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(431, 206)
+        Label1.Location = New Point(281, 168)
         Label1.Name = "Label1"
         Label1.Size = New Size(577, 46)
         Label1.TabIndex = 10
@@ -79,7 +79,7 @@ Partial Class User_EditProfile
         ' 
         SignUpButton.Cursor = Cursors.Hand
         SignUpButton.Font = New Font("Exo 2", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        SignUpButton.Location = New Point(633, 833)
+        SignUpButton.Location = New Point(454, 635)
         SignUpButton.Name = "SignUpButton"
         SignUpButton.Size = New Size(235, 76)
         SignUpButton.TabIndex = 11
@@ -89,7 +89,7 @@ Partial Class User_EditProfile
         ' NameTextBox
         ' 
         NameTextBox.Font = New Font("Exo 2", 12F)
-        NameTextBox.Location = New Point(444, 356)
+        NameTextBox.Location = New Point(281, 308)
         NameTextBox.Name = "NameTextBox"
         NameTextBox.Size = New Size(289, 31)
         NameTextBox.TabIndex = 1
@@ -100,7 +100,7 @@ Partial Class User_EditProfile
         Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 12F)
         Label3.ForeColor = Color.Black
-        Label3.Location = New Point(444, 321)
+        Label3.Location = New Point(281, 273)
         Label3.Name = "Label3"
         Label3.Size = New Size(64, 24)
         Label3.TabIndex = 20
@@ -109,7 +109,7 @@ Partial Class User_EditProfile
         ' ContactTextBox
         ' 
         ContactTextBox.Font = New Font("Exo 2", 12F)
-        ContactTextBox.Location = New Point(444, 479)
+        ContactTextBox.Location = New Point(281, 431)
         ContactTextBox.Name = "ContactTextBox"
         ContactTextBox.Size = New Size(289, 31)
         ContactTextBox.TabIndex = 3
@@ -120,7 +120,7 @@ Partial Class User_EditProfile
         Label4.AutoSize = True
         Label4.Font = New Font("Exo 2", 12F)
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(444, 444)
+        Label4.Location = New Point(281, 396)
         Label4.Name = "Label4"
         Label4.Size = New Size(81, 24)
         Label4.TabIndex = 24
@@ -132,7 +132,7 @@ Partial Class User_EditProfile
         Label6.AutoSize = True
         Label6.Font = New Font("Exo 2", 12F)
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(750, 570)
+        Label6.Location = New Point(587, 522)
         Label6.Name = "Label6"
         Label6.Size = New Size(48, 24)
         Label6.TabIndex = 30
@@ -144,7 +144,7 @@ Partial Class User_EditProfile
         Label8.AutoSize = True
         Label8.Font = New Font("Exo 2", 12F)
         Label8.ForeColor = Color.Black
-        Label8.Location = New Point(444, 570)
+        Label8.Location = New Point(281, 522)
         Label8.Name = "Label8"
         Label8.Size = New Size(76, 24)
         Label8.TabIndex = 26
@@ -155,7 +155,7 @@ Partial Class User_EditProfile
         GenderComboBox.Font = New Font("Exo 2", 11F)
         GenderComboBox.FormattingEnabled = True
         GenderComboBox.ItemHeight = 22
-        GenderComboBox.Location = New Point(444, 615)
+        GenderComboBox.Location = New Point(281, 567)
         GenderComboBox.Name = "GenderComboBox"
         GenderComboBox.Size = New Size(194, 30)
         GenderComboBox.TabIndex = 7
@@ -164,7 +164,7 @@ Partial Class User_EditProfile
         ' 
         DateOfBirthDateTimePicker.Font = New Font("Exo 2", 11F)
         DateOfBirthDateTimePicker.Format = DateTimePickerFormat.Short
-        DateOfBirthDateTimePicker.Location = New Point(751, 616)
+        DateOfBirthDateTimePicker.Location = New Point(588, 568)
         DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker"
         DateOfBirthDateTimePicker.Size = New Size(194, 29)
         DateOfBirthDateTimePicker.TabIndex = 8
@@ -182,7 +182,7 @@ Partial Class User_EditProfile
         Label5.AutoSize = True
         Label5.Font = New Font("Exo 2", 12F)
         Label5.ForeColor = Color.Black
-        Label5.Location = New Point(750, 444)
+        Label5.Location = New Point(587, 396)
         Label5.Name = "Label5"
         Label5.Size = New Size(131, 24)
         Label5.TabIndex = 37
@@ -190,7 +190,7 @@ Partial Class User_EditProfile
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(751, 483)
+        Button1.Location = New Point(588, 435)
         Button1.Name = "Button1"
         Button1.Size = New Size(289, 34)
         Button1.TabIndex = 4
@@ -214,7 +214,7 @@ Partial Class User_EditProfile
         Label7.AutoSize = True
         Label7.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(235, 70)
+        Label7.Location = New Point(228, 70)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(166, 35)
@@ -225,7 +225,7 @@ Partial Class User_EditProfile
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-        ClientSize = New Size(1423, 1064)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Label2)
         Controls.Add(Label7)
         Controls.Add(Button1)

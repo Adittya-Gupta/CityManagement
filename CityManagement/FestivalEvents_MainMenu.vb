@@ -42,7 +42,7 @@ Public Class FestivalEvents_MainMenu
                 ' Check if any rows are returned (i.e., if the current user is a minister)
                 If reader.Read() Then
                     Designation = Convert.ToString(reader("designation"))
-                    Designation = "Minister"        'Comment this
+                    'Designation = "Minister"        'Comment this
                 End If
                 reader.Close()
             End Using
@@ -58,7 +58,7 @@ Public Class FestivalEvents_MainMenu
                     Dim isOpen As Boolean = reader("isopen")
 
                     If Not isApproved Then
-                        If Designation <> "Minister" Then
+                        If Designation <> "Municipal Officer" Then
                             Continue While
                         End If
                     End If

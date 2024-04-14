@@ -37,7 +37,7 @@ Partial Class Quer1
         Save.BackColor = Color.DodgerBlue
         Save.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Save.ForeColor = SystemColors.Control
-        Save.Location = New Point(180, 537)
+        Save.Location = New Point(189, 561)
         Save.Name = "Save"
         Save.Size = New Size(158, 49)
         Save.TabIndex = 0
@@ -50,7 +50,7 @@ Partial Class Quer1
         Submit.BackColor = Color.LimeGreen
         Submit.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Submit.ForeColor = SystemColors.Control
-        Submit.Location = New Point(705, 537)
+        Submit.Location = New Point(714, 561)
         Submit.Name = "Submit"
         Submit.Size = New Size(168, 49)
         Submit.TabIndex = 1
@@ -72,7 +72,7 @@ Partial Class Quer1
         Label2.Anchor = AnchorStyles.Left
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(26, 266)
+        Label2.Location = New Point(26, 290)
         Label2.Name = "Label2"
         Label2.Size = New Size(166, 39)
         Label2.TabIndex = 3
@@ -83,7 +83,7 @@ Partial Class Quer1
         response.Anchor = AnchorStyles.Left
         response.BorderStyle = BorderStyle.FixedSingle
         response.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        response.Location = New Point(91, 323)
+        response.Location = New Point(91, 347)
         response.Multiline = True
         response.Name = "response"
         response.Size = New Size(825, 187)
@@ -102,11 +102,10 @@ Partial Class Quer1
         ' 
         ' Quer1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1089, 713)
+        ClientSize = New Size(1107, 760)
         Controls.Add(description)
         Controls.Add(response)
         Controls.Add(Label2)

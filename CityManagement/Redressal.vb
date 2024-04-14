@@ -17,31 +17,31 @@ Public Class Redressal
         Dim complaintIDColumn As New DataGridViewTextBoxColumn()
         complaintIDColumn.Name = "ComplaintID"
         complaintIDColumn.HeaderText = "Complaint ID"
-        complaintIDColumn.Width = 148
+        complaintIDColumn.Width = 140
         DataGridView1.Columns.Add(complaintIDColumn)
 
         Dim senderColumn As New DataGridViewTextBoxColumn()
         senderColumn.Name = "Sender"
         senderColumn.HeaderText = "Sender"
-        senderColumn.Width = 198
+        senderColumn.Width = 170
         DataGridView1.Columns.Add(senderColumn)
 
         Dim dateColumn As New DataGridViewTextBoxColumn()
         dateColumn.Name = "sent_time"
         dateColumn.HeaderText = "Sent time"
-        dateColumn.Width = 248
+        dateColumn.Width = 230
         DataGridView1.Columns.Add(dateColumn)
 
         Dim lastModifiedColumn As New DataGridViewTextBoxColumn()
         lastModifiedColumn.Name = "LastModified"
         lastModifiedColumn.HeaderText = "Last Modified"
-        lastModifiedColumn.Width = 250
+        lastModifiedColumn.Width = 230
         DataGridView1.Columns.Add(lastModifiedColumn)
 
         Dim queryColumn As New DataGridViewTextBoxColumn()
         queryColumn.Name = "Query"
         queryColumn.HeaderText = "Query"
-        queryColumn.Width = 200
+        queryColumn.Width = 190
         DataGridView1.Columns.Add(queryColumn)
 
         ' Add Status column as button
@@ -52,7 +52,7 @@ Public Class Redressal
         statusColumn.UseColumnTextForButtonValue = True
         statusColumn.FlatStyle = FlatStyle.Popup ' Set button style to popup
         statusColumn.DefaultCellStyle.BackColor = Color.Red ' Set button background color to red
-        statusColumn.Width = 150
+        statusColumn.Width = 120
         DataGridView1.Columns.Add(statusColumn)
 
 
@@ -81,7 +81,7 @@ Public Class Redressal
             Else
                 query = "SELECT c.complaint_id, c.from_user_id, c.reply_time, c.sent_time, c.complaint, c.status " &
                         "FROM Complaints c " &
-                        "WHERE (c.from_user_id = @UserId OR c.to_user_id = @UserId) AND c.status = false"
+                        "WHERE (c.to_user_id = @UserId) AND c.status = false"
             End If
             ' Assuming idofCurrentUser is an Integer variable containing the user ID
             ' Create and execute the command with parameterized query

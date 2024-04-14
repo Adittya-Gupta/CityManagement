@@ -34,8 +34,7 @@ Partial Class IncomingEmploymentReq
         ' 
         ' IncomingEmploymentReq
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         AutoScroll = True
         ClientSize = New Size(1107, 687)
         Controls.Add(Panel1)

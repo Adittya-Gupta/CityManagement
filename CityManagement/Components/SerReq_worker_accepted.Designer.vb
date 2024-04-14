@@ -37,8 +37,8 @@ Partial Class SerReq_worker_accepted
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
+        PictureBox1.Image = Mask_group
+        PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(22, 18)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(92, 88)
@@ -73,7 +73,7 @@ Partial Class SerReq_worker_accepted
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Exo 2", 10.2F)
         Button1.ForeColor = Color.White
-        Button1.Image = My.Resources.Resources.Group_1891
+        Button1.Image = Group_1891
         Button1.Location = New Point(794, 67)
         Button1.Name = "Button1"
         Button1.Size = New Size(158, 39)
@@ -89,7 +89,7 @@ Partial Class SerReq_worker_accepted
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Exo 2", 10.2F)
         Button2.ForeColor = Color.White
-        Button2.Image = My.Resources.Resources.Group_190
+        Button2.Image = Group_190
         Button2.Location = New Point(794, 20)
         Button2.Name = "Button2"
         Button2.Size = New Size(158, 39)
@@ -99,7 +99,7 @@ Partial Class SerReq_worker_accepted
         ' 
         ' Label6
         ' 
-        Label6.Image = My.Resources.Resources.Frame_10591
+        Label6.Image = Frame_10591
         Label6.Location = New Point(581, 31)
         Label6.Name = "Label6"
         Label6.Size = New Size(157, 67)
@@ -118,7 +118,7 @@ Partial Class SerReq_worker_accepted
         ' Label8
         ' 
         Label8.Cursor = Cursors.Hand
-        Label8.Image = My.Resources.Resources.Vector
+        Label8.Image = Vector
         Label8.Location = New Point(472, 87)
         Label8.Name = "Label8"
         Label8.Size = New Size(33, 22)
@@ -141,8 +141,7 @@ Partial Class SerReq_worker_accepted
         ' 
         ' SerReq_worker_accepted
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)

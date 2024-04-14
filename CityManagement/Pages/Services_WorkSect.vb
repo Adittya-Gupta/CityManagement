@@ -9,8 +9,8 @@ Public Class Services_WorkSect
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim workerID As Integer ' Worker ID of the current user
-    Dim userID As Integer = 112546 ' User ID of the applicant
-
+    'Dim userID As Integer = 112546 ' User ID of the applicant
+    Dim userID As Integer = Module1.CurrUserSID
     Public Sub New()
         InitializeComponent()
 

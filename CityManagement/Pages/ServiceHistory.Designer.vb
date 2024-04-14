@@ -39,7 +39,7 @@ Partial Class ServiceHistory
         ' Label3
         ' 
         Label3.BackColor = Color.Black
-        Label3.Image = My.Resources.Resources.Search_icon
+        Label3.Image = Search_icon
         Label3.Location = New Point(332, 74)
         Label3.Name = "Label3"
         Label3.Size = New Size(60, 49)
@@ -49,7 +49,7 @@ Partial Class ServiceHistory
         ' 
         TextBox1.BackColor = Color.Black
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Exo 2 Medium", 12.0F)
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F)
         TextBox1.ForeColor = Color.Gray
         TextBox1.Location = New Point(73, 84)
         TextBox1.Multiline = True
@@ -60,7 +60,7 @@ Partial Class ServiceHistory
         ' 
         ' Label2
         ' 
-        Label2.Image = My.Resources.Resources.Group_183
+        Label2.Image = Group_183
         Label2.Location = New Point(52, 74)
         Label2.Name = "Label2"
         Label2.Size = New Size(340, 50)
@@ -68,7 +68,7 @@ Partial Class ServiceHistory
         ' 
         ' Label1
         ' 
-        Label1.Image = My.Resources.Resources.Frame_1054__2_
+        Label1.Image = Frame_1054__2_
         Label1.Location = New Point(726, 56)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 67)
@@ -119,7 +119,7 @@ Partial Class ServiceHistory
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(944, 12)
         Button1.Name = "Button1"
@@ -144,8 +144,7 @@ Partial Class ServiceHistory
         ' 
         ' ServiceHistory
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 685)
         Controls.Add(Label8)

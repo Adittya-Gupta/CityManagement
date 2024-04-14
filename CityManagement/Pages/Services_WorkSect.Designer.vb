@@ -69,8 +69,7 @@ Partial Class Services_WorkSect
         ' 
         ' Services_WorkSect
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(1107, 705)
         Controls.Add(Label8)

@@ -38,8 +38,8 @@ Partial Class SerReq_worker_pending
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
+        PictureBox1.Image = Mask_group
+        PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(22, 18)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(92, 88)
@@ -74,7 +74,7 @@ Partial Class SerReq_worker_pending
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Exo 2", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Image = My.Resources.Resources.Group_1891
+        Button1.Image = Group_1891
         Button1.Location = New Point(794, 67)
         Button1.Name = "Button1"
         Button1.Size = New Size(158, 39)
@@ -90,7 +90,7 @@ Partial Class SerReq_worker_pending
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Exo 2", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Image = My.Resources.Resources.Group_190
+        Button2.Image = Group_190
         Button2.Location = New Point(794, 20)
         Button2.Name = "Button2"
         Button2.Size = New Size(158, 39)
@@ -100,7 +100,7 @@ Partial Class SerReq_worker_pending
         ' 
         ' Label6
         ' 
-        Label6.Image = My.Resources.Resources.Group_194
+        Label6.Image = Group_194
         Label6.Location = New Point(581, 31)
         Label6.Name = "Label6"
         Label6.Size = New Size(157, 67)
@@ -124,7 +124,7 @@ Partial Class SerReq_worker_pending
         ' Label8
         ' 
         Label8.Cursor = Cursors.Hand
-        Label8.Image = My.Resources.Resources.Vector
+        Label8.Image = Vector
         Label8.Location = New Point(481, 89)
         Label8.Name = "Label8"
         Label8.Size = New Size(33, 22)
@@ -149,8 +149,7 @@ Partial Class SerReq_worker_pending
         ' 
         ' SerReq_worker_pending
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         Controls.Add(DateTimePicker1)
         Controls.Add(TextBox2)

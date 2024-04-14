@@ -10,7 +10,8 @@ Public Class EmployApplication
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
-    Dim userID As Integer = 984584 ' User ID of the applicant
+    'Dim userID As Integer = 984584 ' User ID of the applicant
+    Dim userID As Integer = Module1.CurrUserSID
     Dim orgID As Integer ' Organization ID where the applicant is applying
 
     Dim tempProfilePictureBytes As Byte() ' Temporary storage for profile picture bytes

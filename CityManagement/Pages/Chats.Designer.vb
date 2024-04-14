@@ -46,7 +46,7 @@ Partial Class Chats
         ' 
         ' Label1
         ' 
-        Label1.Image = My.Resources.Resources.Ellipse_25
+        Label1.Image = Ellipse_25
         Label1.Location = New Point(1017, 600)
         Label1.Name = "Label1"
         Label1.Size = New Size(70, 63)
@@ -65,7 +65,7 @@ Partial Class Chats
         ' 
         RichTextBox1.BackColor = Color.Black
         RichTextBox1.BorderStyle = BorderStyle.None
-        RichTextBox1.Font = New Font("Exo 2 Medium", 12.0F)
+        RichTextBox1.Font = New Font("Microsoft Sans Serif", 12F)
         RichTextBox1.ForeColor = Color.Gray
         RichTextBox1.Location = New Point(36, 609)
         RichTextBox1.MaxLength = 1000
@@ -89,7 +89,7 @@ Partial Class Chats
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.download
+        PictureBox1.BackgroundImage = download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(36, 13)
         PictureBox1.Name = "PictureBox1"
@@ -105,7 +105,7 @@ Partial Class Chats
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(944, 8)
         Button1.Name = "Button1"
@@ -116,8 +116,7 @@ Partial Class Chats
         ' 
         ' Chats
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 685)
         Controls.Add(Button1)

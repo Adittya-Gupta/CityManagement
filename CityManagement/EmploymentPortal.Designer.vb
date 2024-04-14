@@ -71,8 +71,7 @@ Partial Class EmploymentPortal
         ' 
         ' EmploymentPortal
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(Button1)
         Controls.Add(CurvedLabel1)

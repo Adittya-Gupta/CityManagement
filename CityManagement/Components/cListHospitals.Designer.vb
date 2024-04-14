@@ -45,11 +45,8 @@ Partial Class cListHospitals
         CurvedLabel5.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel5.CornerRadius = 10
         CurvedLabel5.Font = New Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-<<<<<<< Updated upstream
         CurvedLabel5.Location = New Point(809, 27)
-=======
         CurvedLabel5.Location = New Point(682, 20)
->>>>>>> Stashed changes
         CurvedLabel5.Name = "CurvedLabel5"
         CurvedLabel5.Size = New Size(90, 30)
         CurvedLabel5.TabIndex = 22
@@ -61,11 +58,8 @@ Partial Class cListHospitals
         CurvedLabel6.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel6.CornerRadius = 10
         CurvedLabel6.Font = New Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-<<<<<<< Updated upstream
         CurvedLabel6.Location = New Point(455, 24)
-=======
         CurvedLabel6.Location = New Point(395, 18)
->>>>>>> Stashed changes
         CurvedLabel6.Name = "CurvedLabel6"
         CurvedLabel6.Size = New Size(98, 30)
         CurvedLabel6.TabIndex = 21
@@ -114,11 +108,8 @@ Partial Class cListHospitals
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-<<<<<<< Updated upstream
         Guna2TextBox1.Size = New Size(1063, 35)
-=======
         Guna2TextBox1.Size = New Size(855, 26)
->>>>>>> Stashed changes
         Guna2TextBox1.TabIndex = 16
         ' 
         ' Guna2TileButton1
@@ -141,11 +132,8 @@ Partial Class cListHospitals
         Guna2TileButton1.Name = "Guna2TileButton1"
         Guna2TileButton1.PressedColor = Color.BlanchedAlmond
         Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-<<<<<<< Updated upstream
         Guna2TileButton1.Size = New Size(1061, 121)
-=======
         Guna2TileButton1.Size = New Size(856, 91)
->>>>>>> Stashed changes
         Guna2TileButton1.TabIndex = 15
         Guna2TileButton1.TextRenderingHint = Drawing.Text.TextRenderingHint.SystemDefault
         ' 
@@ -170,11 +158,8 @@ Partial Class cListHospitals
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-<<<<<<< Updated upstream
         Guna2TextBox2.Size = New Size(1064, 25)
-=======
         Guna2TextBox2.Size = New Size(856, 19)
->>>>>>> Stashed changes
         Guna2TextBox2.TabIndex = 23
         ' 
         ' CurvedLabel3
@@ -183,11 +168,8 @@ Partial Class cListHospitals
         CurvedLabel3.BackColor = Color.White
         CurvedLabel3.CornerRadius = 1
         CurvedLabel3.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-<<<<<<< Updated upstream
         CurvedLabel3.Location = New Point(767, 81)
-=======
         CurvedLabel3.Location = New Point(637, 61)
->>>>>>> Stashed changes
         CurvedLabel3.Name = "CurvedLabel3"
         CurvedLabel3.Size = New Size(200, 24)
         CurvedLabel3.TabIndex = 25
@@ -199,11 +181,8 @@ Partial Class cListHospitals
         CurvedLabel2.BackColor = Color.White
         CurvedLabel2.CornerRadius = 1
         CurvedLabel2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-<<<<<<< Updated upstream
         CurvedLabel2.Location = New Point(415, 81)
-=======
         CurvedLabel2.Location = New Point(351, 61)
->>>>>>> Stashed changes
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Size = New Size(200, 24)
         CurvedLabel2.TabIndex = 26
@@ -225,11 +204,8 @@ Partial Class cListHospitals
         Controls.Add(Guna2TileButton1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "cListHospitals"
-<<<<<<< Updated upstream
         Size = New Size(1062, 136)
-=======
         Size = New Size(854, 102)
->>>>>>> Stashed changes
         ResumeLayout(False)
         PerformLayout()
     End Sub

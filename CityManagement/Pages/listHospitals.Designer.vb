@@ -161,16 +161,13 @@ Partial Class listHospitals
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-<<<<<<< Updated upstream
         Panel1.Location = New Point(25, 217)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1187, 757)
-=======
         Panel1.Location = New Point(102, 163)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(959, 568)
->>>>>>> Stashed changes
         Panel1.TabIndex = 56
         ' 
         ' Guna2GradientTileButton4

@@ -124,10 +124,10 @@
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAMNJREFUSEtjYBgFIx7oA7EYuiASAMmB1JAFcoD4PxC/BWJNNDkQ0GKAyIHUgNSS
-        DKYyQDSD8H0glkCSA7FBYjD5KUhyRANJBlRDzgAxDxSD2LgsJwmAguEdA8KwLVAM44PkQGooAvZA/IMB
-        YSgMg8RAclQBUUD8jwFhOIgNEqMaiGTAtAAkRhVA0yACpX/kSN7KQMVIRk/rVE+moMyDyxD0PDIZSY5o
-        gFxUYAsG5KIiE02OaKDPgL+wEwViXXTBUTDCAABUaU3GZ2A3MAAAAABJRU5ErkJggg==
+        DAAACwwBP0AiyAAAAL1JREFUSEvtlM0JAkEMRqcAr4qWoCCWYB3agWA3aifahT1YgZ49qd9jNzCEFZk1
+        npwHD7LJbAbmL1UqCzlqwk6oMaYXW/mUVzkl4ZhJaoxhbDEHyc94kWNpEJOz+l4WM5F5k7MctBJb3k9e
+        BMtwk9bs2Grf1BjzFUt5l9bUJEcthLV8SGtOTC6MlfQTkAvhp0vE+c83+STDNtmf9fBjyuV518TfkZ0s
+        Jn8qupYhfyo2JPrw6bEbynkTVv6UlF5UaU3GM2M4YAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="CurvedBorderLabel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

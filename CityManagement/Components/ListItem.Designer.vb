@@ -60,7 +60,7 @@ Partial Class ListItem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.download
+        PictureBox1.Image = download
         PictureBox1.Location = New Point(28, 18)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(65, 65)
@@ -71,7 +71,7 @@ Partial Class ListItem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Segoe UI", 13.0F)
+        Label1.Font = New Font("Segoe UI", 13F)
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(151, 11)
         Label1.Name = "Label1"
@@ -82,7 +82,7 @@ Partial Class ListItem
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Exo 2", 10.0F)
+        Label2.Font = New Font("Exo 2", 10F)
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(210, 58)
         Label2.Name = "Label2"
@@ -93,7 +93,7 @@ Partial Class ListItem
         ' Label3
         ' 
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Abhaya Libre Medium", 12.0F)
+        Label3.Font = New Font("Abhaya Libre Medium", 12F)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(487, 57)
         Label3.Name = "Label3"
@@ -104,7 +104,7 @@ Partial Class ListItem
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.Image = My.Resources.Resources.download__2_
+        PictureBox2.Image = download__2_
         PictureBox2.Location = New Point(151, 53)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(31, 38)
@@ -116,7 +116,7 @@ Partial Class ListItem
         ' 
         Rating1.Location = New Point(80, 7)
         Rating1.Name = "Rating1"
-        Rating1.RatingValue = 5.0R
+        Rating1.RatingValue = 5R
         Rating1.Size = New Size(35, 25)
         Rating1.TabIndex = 29
         ' 
@@ -124,7 +124,7 @@ Partial Class ListItem
         ' 
         Label5.BackColor = Color.White
         Label5.Cursor = Cursors.Hand
-        Label5.Image = My.Resources.Resources.Frame_1051
+        Label5.Image = Frame_1051
         Label5.Location = New Point(683, 57)
         Label5.Name = "Label5"
         Label5.Size = New Size(80, 34)
@@ -134,7 +134,7 @@ Partial Class ListItem
         ' 
         Label6.BackColor = Color.White
         Label6.Cursor = Cursors.Hand
-        Label6.Image = My.Resources.Resources.Frame_1050
+        Label6.Image = Frame_1050
         Label6.Location = New Point(766, 57)
         Label6.Name = "Label6"
         Label6.Size = New Size(135, 34)
@@ -143,7 +143,7 @@ Partial Class ListItem
         ' Label4
         ' 
         Label4.BackColor = Color.White
-        Label4.Image = My.Resources.Resources.Frame_1013
+        Label4.Image = Frame_1013
         Label4.Location = New Point(677, 7)
         Label4.Name = "Label4"
         Label4.Size = New Size(224, 45)
@@ -152,7 +152,7 @@ Partial Class ListItem
         ' Label7
         ' 
         Label7.BackColor = Color.FromArgb(CByte(107), CByte(255), CByte(11))
-        Label7.Font = New Font("Exo 2", 9.0F, FontStyle.Bold)
+        Label7.Font = New Font("Exo 2", 9F, FontStyle.Bold)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(732, 15)
         Label7.Name = "Label7"
@@ -164,7 +164,7 @@ Partial Class ListItem
         ' Label9
         ' 
         Label9.BackColor = Color.White
-        Label9.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
         Label9.Location = New Point(487, 11)
         Label9.Name = "Label9"
@@ -174,8 +174,7 @@ Partial Class ListItem
         ' 
         ' ListItem
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Controls.Add(Label9)
         Controls.Add(Label7)
         Controls.Add(Label4)

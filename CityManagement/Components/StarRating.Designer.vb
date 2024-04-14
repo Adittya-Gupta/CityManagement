@@ -26,8 +26,7 @@ Partial Class Star_Rating
         ' 
         ' Star_Rating
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Name = "Star_Rating"
         Size = New Size(333, 112)
         ResumeLayout(False)

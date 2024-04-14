@@ -41,8 +41,7 @@ Partial Class Rating
         ' 
         ' Rating
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Controls.Add(Label5)
         Name = "Rating"
         Size = New Size(35, 25)

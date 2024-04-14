@@ -118,10 +118,11 @@ Partial Class EmployOrgList
         ' 
         ' Label8
         ' 
+        Label8.AutoSize = True
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
         Label8.Location = New Point(319, 18)
         Label8.Name = "Label8"
-        Label8.Size = New Size(455, 58)
+        Label8.Size = New Size(450, 59)
         Label8.TabIndex = 49
         Label8.Text = "List of Organizations"
         ' 
@@ -140,6 +141,7 @@ Partial Class EmployOrgList
         Name = "EmployOrgList"
         Text = "EmployOrgList"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents CurvedLabel4 As CurvedLabel

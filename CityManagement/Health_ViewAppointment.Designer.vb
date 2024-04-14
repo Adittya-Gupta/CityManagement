@@ -47,7 +47,7 @@ Partial Class Health_ViewAppointment
         Label4.AutoSize = True
         Label4.BackColor = Color.Black
         Label4.Cursor = Cursors.Hand
-        Label4.Font = New Font("Segoe UI", 18.0F)
+        Label4.Font = New Font("Segoe UI", 18F)
         Label4.ForeColor = SystemColors.GrayText
         Label4.Location = New Point(26, 20)
         Label4.Name = "Label4"
@@ -60,7 +60,7 @@ Partial Class Health_ViewAppointment
         Label3.AutoSize = True
         Label3.BackColor = Color.Black
         Label3.Cursor = Cursors.Hand
-        Label3.Font = New Font("Segoe UI", 18.0F)
+        Label3.Font = New Font("Segoe UI", 18F)
         Label3.ForeColor = SystemColors.GrayText
         Label3.Location = New Point(614, 19)
         Label3.Name = "Label3"
@@ -73,7 +73,7 @@ Partial Class Health_ViewAppointment
         Label2.AutoSize = True
         Label2.BackColor = Color.Black
         Label2.Cursor = Cursors.Hand
-        Label2.Font = New Font("Segoe UI", 18.0F)
+        Label2.Font = New Font("Segoe UI", 18F)
         Label2.ForeColor = SystemColors.GrayText
         Label2.Location = New Point(349, 19)
         Label2.Name = "Label2"
@@ -86,7 +86,7 @@ Partial Class Health_ViewAppointment
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
         Label1.Cursor = Cursors.Hand
-        Label1.Font = New Font("Segoe UI", 18.0F)
+        Label1.Font = New Font("Segoe UI", 18F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(958, 19)
         Label1.Name = "Label1"
@@ -96,8 +96,7 @@ Partial Class Health_ViewAppointment
         ' 
         ' Health_ViewAppointment
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)

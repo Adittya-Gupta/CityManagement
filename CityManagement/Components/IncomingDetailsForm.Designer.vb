@@ -99,8 +99,7 @@ Partial Class IncomingDetailsForm
         ' 
         ' IncomingDetailsForm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(416, 461)
         Controls.Add(Button1)
         Controls.Add(RichTextBox3)

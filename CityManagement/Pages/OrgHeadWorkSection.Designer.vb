@@ -69,12 +69,12 @@ Partial Class OrgHeadWorkSection
         ' 
         CurvedLabel1.AutoSize = True
         CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Font = New Font("Segoe UI", 19F)
+        CurvedLabel1.Font = New Font("Exo 2", 19.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel1.Location = New Point(355, 117)
         CurvedLabel1.Name = "CurvedLabel1"
-        CurvedLabel1.Size = New Size(405, 45)
+        CurvedLabel1.Size = New Size(167, 38)
         CurvedLabel1.TabIndex = 3
-        CurvedLabel1.Text = "Welcome, Electrician Head!"
+        CurvedLabel1.Text = "Welcome, "
         ' 
         ' Panel1
         ' 
@@ -89,9 +89,9 @@ Partial Class OrgHeadWorkSection
         Label1.Font = New Font("Exo 2", 25.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(205, 117)
         Label1.Name = "Label1"
-        Label1.Size = New Size(728, 50)
+        Label1.Size = New Size(527, 50)
         Label1.TabIndex = 2
-        Label1.Text = "Employment Requests for Electrician"
+        Label1.Text = "Employment Requests for "
         ' 
         ' OrgHeadWorkSection
         ' 

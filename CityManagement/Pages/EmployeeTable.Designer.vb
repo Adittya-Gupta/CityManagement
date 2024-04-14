@@ -29,16 +29,17 @@ Partial Class EmployeeTable
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Exo 2", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(366, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(180, 46)
+        Label1.Size = New Size(187, 41)
         Label1.TabIndex = 0
         Label1.Text = "Employees"
         Label1.UseMnemonic = False
         ' 
         ' Panel1
         ' 
+        Panel1.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Panel1.Location = New Point(0, 73)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(914, 332)

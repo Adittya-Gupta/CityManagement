@@ -14,10 +14,18 @@ Public Class Incoming_Emp_Req
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
-    Public Sub New(ParentForm As Form, ByVal dateValue As Date, Optional ByVal name As String = "Name", Optional ByVal i As Integer = 1,
-                   Optional ByVal contactDetails As String = "contactDetails", Optional ByVal bankAccountNumber As Int64 = 123, Optional ByVal anyPrevWork As String = "anyPreviousWork",
-                   Optional ByVal userID As Int32 = 123, Optional ByVal orgID As Int32 = 101
+    Public Sub New(ParentForm As Form, ByVal dateValue As Date,
+                   Optional ByVal name As String = "Name",
+                   Optional ByVal i As Integer = 1,
+                   Optional ByVal contactDetails As String = "contactDetails",
+                   Optional ByVal bankAccountNumber As Int64 = 123,
+                   Optional ByVal anyPrevWork As String = "anyPreviousWork",
+                   Optional ByVal userID As Int32 = 123,
+                   Optional ByVal orgID As Int32 = 101,
+                   Optional ByVal img As Image = Nothing
         )
+        '          Optional ByVal img As Image = Nothing
+
         InitializeComponent()
 
         _parentForm = ParentForm
@@ -33,6 +41,10 @@ Public Class Incoming_Emp_Req
         _orgID = orgID
         _name = name
 
+        If img IsNot Nothing Then
+            PictureBox1.Image = img
+            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        End If
     End Sub
 
     Private Sub RemoveSelfFromParentControl()
@@ -66,13 +78,36 @@ Public Class Incoming_Emp_Req
                 cmd.Parameters.AddWithValue("@A", _orgID)
                 cmd.Parameters.AddWithValue("@B", _userID)
                 cmd.ExecuteNonQuery()
-                MsgBox(_i.ToString() & " accepted")
                 RemoveSelfFromParentControl()
             End Using
         Catch ex As Exception
             MsgBox("Could not accept. Problem with database. " & ex.Message)
             Return
         End Try
+
+        Dim msg As String = "Your employment request at org_id: " & _orgID & " has been confirmed. Time: " & Date.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+        Using cmd2 As New MySqlCommand(query2, conn)
+            cmd2.Parameters.AddWithValue("@clientID", _userID)
+            cmd2.Parameters.AddWithValue("@msg", msg)
+            cmd2.ExecuteNonQuery()
+        End Using
+        MessageBox.Show("Employment request confirmed. Notification sent to " & _name, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+        'If newStatus = "Upcoming" Then
+        '    ' Insert a notification for the client
+        'ElseIf newStatus = "Rejected" Then
+        '    ' Insert a notification for the client
+        '    Dim msg As String = "Your service request has been rejected."
+        '    Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+        '    Using cmd2 As New MySqlCommand(query2, conn)
+        '        cmd2.Parameters.AddWithValue("@clientID", clientID)
+        '        cmd2.Parameters.AddWithValue("@msg", msg)
+        '        cmd2.ExecuteNonQuery()
+        '    End Using
+        '    MessageBox.Show("Service request rejected. Notification sent to the client.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End If
 
     End Sub
 
@@ -85,13 +120,22 @@ Public Class Incoming_Emp_Req
                 cmd.Parameters.AddWithValue("@A", _orgID)
                 cmd.Parameters.AddWithValue("@B", _userID)
                 cmd.ExecuteNonQuery()
-                MsgBox(_i.ToString() & " rejected")
                 RemoveSelfFromParentControl()
             End Using
         Catch ex As Exception
             MsgBox("Could not accept. Problem with database. " & ex.Message)
             Return
         End Try
+
+        Dim msg As String = "Your employment request at org_id: " & _orgID & " has been confirmed. Time: " & Date.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+        Using cmd2 As New MySqlCommand(query2, conn)
+            cmd2.Parameters.AddWithValue("@clientID", _userID)
+            cmd2.Parameters.AddWithValue("@msg", msg)
+            cmd2.ExecuteNonQuery()
+        End Using
+        MessageBox.Show("Employment request dismissed. Notification sent to " & _name, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
 
     End Sub
 
@@ -116,6 +160,10 @@ Public Class Incoming_Emp_Req
     End Sub
 
     Private Sub Incoming_Emp_Req_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Incoming_Emp_Req_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

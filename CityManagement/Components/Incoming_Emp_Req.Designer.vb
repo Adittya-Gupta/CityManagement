@@ -37,7 +37,7 @@ Partial Class Incoming_Emp_Req
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 14F, FontStyle.Bold)
-        Label3.ForeColor = Color.FromArgb(122, 121, 121)
+        Label3.ForeColor = Color.FromArgb(CByte(122), CByte(121), CByte(121))
         Label3.Location = New Point(148, 77)
         Label3.Name = "Label3"
         Label3.Size = New Size(110, 29)
@@ -52,7 +52,7 @@ Partial Class Incoming_Emp_Req
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Image = Group_190
-        Button2.Location = New Point(681, 81)
+        Button2.Location = New Point(545, 81)
         Button2.Name = "Button2"
         Button2.Size = New Size(130, 45)
         Button2.TabIndex = 20
@@ -67,7 +67,7 @@ Partial Class Incoming_Emp_Req
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
         Button1.Image = Group_1891
-        Button1.Location = New Point(826, 81)
+        Button1.Location = New Point(708, 81)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 45)
         Button1.TabIndex = 19
@@ -107,7 +107,7 @@ Partial Class Incoming_Emp_Req
         ' 
         Button3.Location = New Point(264, 81)
         Button3.Name = "Button3"
-        Button3.Size = New Size(54, 29)
+        Button3.Size = New Size(67, 29)
         Button3.TabIndex = 25
         Button3.Text = "View"
         Button3.UseVisualStyleBackColor = True
@@ -115,7 +115,7 @@ Partial Class Incoming_Emp_Req
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(808, 32)
+        Label1.Location = New Point(733, 32)
         Label1.Name = "Label1"
         Label1.Size = New Size(53, 20)
         Label1.TabIndex = 26
@@ -134,7 +134,7 @@ Partial Class Incoming_Emp_Req
         Controls.Add(Label2)
         Controls.Add(PictureBox1)
         Name = "Incoming_Emp_Req"
-        Size = New Size(914, 150)
+        Size = New Size(882, 150)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

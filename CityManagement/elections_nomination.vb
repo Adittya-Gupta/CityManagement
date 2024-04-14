@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.IO
 Public Class elections_nomination
-    Dim idOfCurrentUser As Integer = 984571
+    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()
@@ -52,47 +52,118 @@ Public Class elections_nomination
         End Try
 
     End Sub
-    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
-        parentpanel.Controls.Clear()
-        childform.TopLevel = False
-        childform.FormBorderStyle = FormBorderStyle.None
-        childform.Dock = DockStyle.Fill
-        childform.BringToFront()
-        parentpanel.Controls.Add(childform)
-        childform.Show()
-    End Sub
+    'Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+    '    parentpanel.Controls.Clear()
+    '    childform.TopLevel = False
+    '    childform.FormBorderStyle = FormBorderStyle.None
+    '    childform.Dock = DockStyle.Fill
+    '    childform.BringToFront()
+    '    parentpanel.Controls.Add(childform)
+    '    childform.Show()
+    'End Sub
 
-    Public Shared Sub ChildForm2(ByVal childform As Form)
-        mypanel.panel1.Controls.Clear()
-        childform.TopLevel = False
-        mypanel.panel1.Controls.Add(childform)
-        childform.Show()
-    End Sub
+    'Public Shared Sub ChildForm2(ByVal childform As Form)
+    '    mypanel.panel1.Controls.Clear()
+    '    childform.TopLevel = False
+    '    mypanel.panel1.Controls.Add(childform)
+    '    childform.Show()
+    'End Sub
     Private Sub PayDeposit_Click(sender As Object, e As EventArgs) Handles PayDeposit.Click
         'Link banking database and banking forms for further process here
-        Dim paidDeposit = True
+        Dim paidDeposit = False
         'Dim form As New Banking_Money_Management_Homepage()
         'mypanel.Panel1.Controls.Clear()
         'form.TopLevel = False
         'mypanel.Panel1.Controls.Add(form)
         'form.Show()
-        banking_recv_username = "mayor"
-        Go_Back = 2
-        Go_Back_Form = election_dashboard
-        banking_payment_amount = 100
+        'banking_recv_username = "mayor"
+        'Go_Back = 2
+        'Go_Back_Form = election_dashboard
+        'banking_payment_amount = 100
 
-        Banking_Main.Panel1.Controls.Clear()
-        Newsletter_Main.Panel1.Controls.Clear()
+        'Banking_Main.Panel1.Controls.Clear()
+        'Newsletter_Main.Panel1.Controls.Clear()
 
-        ChildForm(Banking_Main.Panel1, Banking_Homepage)
-        mypanel.panel1.Controls.Clear()
-        ChildForm2(Banking_Main)
+        'ChildForm(Banking_Main.Panel1, Banking_Homepage)
+        'mypanel.panel1.Controls.Clear()
+        'ChildForm2(Banking_Main)
+        'To check if the current user has bank account
+        Try
+            conn.Open()
+            Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
+                Dim reader = cmd.ExecuteReader
+                If Not reader.Read() Then
+                    MessageBox.Show("You dont have bank account", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Dim form As New election_dashboard()
+                    mypanel.panel1.Controls.Clear()
+                    form.TopLevel = False
+                    mypanel.panel1.Controls.Add(form)
+                    form.Show()
+                    Exit Sub
+                End If
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+        'To deduct the money if the bank account exists, now only deducting 100 rupees for convenience
+        Try
+            conn.Open()
+            Dim query As String = "use banking_database; select Identification_Number,Balance from UserData where Identification_Number=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
+                Dim reader = cmd.ExecuteReader
+                If Convert.ToInt32(reader("Balance")) < 100 Then
+                    MessageBox.Show("You dont have enough balance", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Dim form As New election_dashboard()
+                    mypanel.panel1.Controls.Clear()
+                    form.TopLevel = False
+                    mypanel.panel1.Controls.Add(form)
+                    form.Show()
+                    Exit Sub
+                End If
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+
+        'To deduct the money
+        Try
+            conn.Open()
+            Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@a", idOfCurrentUser.ToString())
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+        'To add money to the mayor john doe
+        Try
+            conn.Open()
+            Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim mayor_sid As Integer = 1
+                cmd.Parameters.AddWithValue("@a", mayor_sid.ToString())
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+
+        paidDeposit = True
+
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
             Try
                 conn.Open()
                 'To check if the nominee already present in the table
-                Dim query = "select SID from Nominees where SID=?"
+                Dim query As String = "select SID from Nominees where SID=?"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("?", idOfCurrentUser)
                     Dim reader = cmd.ExecuteReader
@@ -122,9 +193,9 @@ Public Class elections_nomination
                 End Using
                 MessageBox.Show("You have successfully nominated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim form As New election_dashboard()
-                mypanel.Panel1.Controls.Clear()
+                mypanel.panel1.Controls.Clear()
                 form.TopLevel = False
-                mypanel.Panel1.Controls.Add(form)
+                mypanel.panel1.Controls.Add(form)
                 form.Show()
             Catch ex As Exception
 

@@ -116,8 +116,7 @@ Partial Class transport_busResuts
         ' 
         ' transport_busResuts
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 720)
         Controls.Add(Button1)

@@ -203,8 +203,7 @@ Partial Class User_Admin
         ' 
         ' User_Admin
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 760)
         Controls.Add(ClearButton)

@@ -280,8 +280,7 @@ Partial Class FestivalEvents_Participation2
         ' 
         ' FestivalEvents_Participation2
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None

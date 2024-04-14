@@ -22,6 +22,7 @@ Partial Class complaints_History
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(complaints_History))
         Panel1 = New Panel()
         DataGridView1 = New DataGridView()
@@ -50,6 +51,14 @@ Partial Class complaints_History
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(251), CByte(251), CByte(252))
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.Dock = DockStyle.Fill
         DataGridView1.Location = New Point(0, 0)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
@@ -65,7 +74,7 @@ Partial Class complaints_History
         Label1.Font = New Font("Book Antiqua", 10.2F, FontStyle.Bold)
         Label1.Location = New Point(179, 12)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 22)
+        Label1.Size = New Size(58, 19)
         Label1.TabIndex = 1
         Label1.Text = "History"
         ' 
@@ -75,7 +84,7 @@ Partial Class complaints_History
         Label2.Font = New Font("Book Antiqua", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(14, 12)
         Label2.Name = "Label2"
-        Label2.Size = New Size(159, 22)
+        Label2.Size = New Size(132, 18)
         Label2.TabIndex = 2
         Label2.Text = "Complaint Portal  >"
         ' 
@@ -88,7 +97,7 @@ Partial Class complaints_History
         Label3.Location = New Point(14, 56)
         Label3.Name = "Label3"
         Label3.Padding = New Padding(6, 7, 6, 7)
-        Label3.Size = New Size(211, 40)
+        Label3.Size = New Size(173, 35)
         Label3.TabIndex = 3
         Label3.Text = "Complaints History"
         ' 

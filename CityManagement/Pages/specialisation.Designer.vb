@@ -65,18 +65,18 @@ Partial Class specialisation
         ' ComboBox2
         ' 
         ComboBox2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ComboBox2.DrawMode = DrawMode.OwnerDrawVariable
         ComboBox2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
         ComboBox2.ImeMode = ImeMode.NoControl
-        ComboBox2.IntegralHeight = False
-        ComboBox2.ItemHeight = 24
+        ComboBox2.ItemHeight = 19
         ComboBox2.Items.AddRange(New Object() {"Heart Center", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
-        ComboBox2.Location = New Point(374, 84)
+        ComboBox2.Location = New Point(427, 112)
+        ComboBox2.Margin = New Padding(3, 4, 3, 4)
+        ComboBox2.MaxLength = 20
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(283, 30)
+        ComboBox2.Size = New Size(323, 27)
         ComboBox2.TabIndex = 31
         ComboBox2.Text = "    Select  Specialisation"
         ' 
@@ -93,25 +93,28 @@ Partial Class specialisation
         Guna2TextBox1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox1.ForeColor = Color.Black
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(78, 76)
-        Guna2TextBox1.Margin = New Padding(4)
+        Guna2TextBox1.Location = New Point(89, 101)
+        Guna2TextBox1.Margin = New Padding(5)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2TextBox1.Size = New Size(294, 38)
+        Guna2TextBox1.Size = New Size(336, 51)
         Guna2TextBox1.TabIndex = 32
         ' 
         ' Guna2PictureBox2
         ' 
+        Guna2PictureBox2.BorderRadius = 1
+        Guna2PictureBox2.BorderStyle = BorderStyle.FixedSingle
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(721, 87)
+        Guna2PictureBox2.Location = New Point(819, 109)
+        Guna2PictureBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2PictureBox2.Size = New Size(22, 19)
+        Guna2PictureBox2.Size = New Size(25, 28)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox2.TabIndex = 34
         Guna2PictureBox2.TabStop = False
@@ -120,31 +123,38 @@ Partial Class specialisation
         ' 
         ComboBox1.Font = New Font("Segoe UI", 11F)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(717, 82)
+        ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        ComboBox1.Location = New Point(843, 109)
+        ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(100, 28)
+        ComboBox1.Size = New Size(72, 28)
         ComboBox1.TabIndex = 35
-        ComboBox1.Text = "      Rating"
+        ComboBox1.Text = " Rating"
         ' 
         ' ComboBox3
         ' 
         ComboBox3.Font = New Font("Segoe UI", 11F)
         ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(823, 82)
+        ComboBox3.Items.AddRange(New Object() {"Male", "Female"})
+        ComboBox3.Location = New Point(974, 109)
+        ComboBox3.Margin = New Padding(3, 4, 3, 4)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(100, 28)
+        ComboBox3.Size = New Size(104, 28)
         ComboBox3.TabIndex = 36
-        ComboBox3.Text = "      Gender"
+        ComboBox3.Text = " Gender"
         ' 
         ' Guna2PictureBox1
         ' 
+        Guna2PictureBox1.BorderRadius = 1
+        Guna2PictureBox1.BorderStyle = BorderStyle.FixedSingle
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(824, 87)
+        Guna2PictureBox1.Location = New Point(950, 109)
+        Guna2PictureBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2PictureBox1.Size = New Size(22, 19)
+        Guna2PictureBox1.Size = New Size(25, 28)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox1.TabIndex = 45
         Guna2PictureBox1.TabStop = False
@@ -161,10 +171,11 @@ Partial Class specialisation
         Guna2GradientTileButton4.FillColor2 = Color.Black
         Guna2GradientTileButton4.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton4.ForeColor = Color.White
-        Guna2GradientTileButton4.Location = New Point(803, 9)
+        Guna2GradientTileButton4.Location = New Point(918, 12)
+        Guna2GradientTileButton4.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
         Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2GradientTileButton4.Size = New Size(180, 35)
+        Guna2GradientTileButton4.Size = New Size(206, 47)
         Guna2GradientTileButton4.TabIndex = 50
         Guna2GradientTileButton4.Text = "Work"
         ' 
@@ -180,10 +191,11 @@ Partial Class specialisation
         Guna2GradientTileButton3.FillColor2 = Color.Black
         Guna2GradientTileButton3.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton3.ForeColor = Color.White
-        Guna2GradientTileButton3.Location = New Point(545, 8)
+        Guna2GradientTileButton3.Location = New Point(623, 11)
+        Guna2GradientTileButton3.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
         Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2GradientTileButton3.Size = New Size(180, 35)
+        Guna2GradientTileButton3.Size = New Size(206, 47)
         Guna2GradientTileButton3.TabIndex = 49
         Guna2GradientTileButton3.Text = "Health Record"
         ' 
@@ -199,10 +211,11 @@ Partial Class specialisation
         Guna2GradientTileButton2.FillColor2 = Color.Black
         Guna2GradientTileButton2.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton2.ForeColor = Color.White
-        Guna2GradientTileButton2.Location = New Point(275, 7)
+        Guna2GradientTileButton2.Location = New Point(314, 9)
+        Guna2GradientTileButton2.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
         Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2GradientTileButton2.Size = New Size(180, 35)
+        Guna2GradientTileButton2.Size = New Size(206, 47)
         Guna2GradientTileButton2.TabIndex = 48
         Guna2GradientTileButton2.Text = "Hospitals"
         ' 
@@ -218,10 +231,11 @@ Partial Class specialisation
         Guna2GradientTileButton1.FillColor2 = Color.Black
         Guna2GradientTileButton1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         Guna2GradientTileButton1.ForeColor = Color.White
-        Guna2GradientTileButton1.Location = New Point(26, 7)
+        Guna2GradientTileButton1.Location = New Point(30, 9)
+        Guna2GradientTileButton1.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
         Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2GradientTileButton1.Size = New Size(202, 35)
+        Guna2GradientTileButton1.Size = New Size(231, 47)
         Guna2GradientTileButton1.TabIndex = 47
         Guna2GradientTileButton1.Text = "Specialisations"
         ' 
@@ -229,26 +243,27 @@ Partial Class specialisation
         ' 
         RichTextBox2.BackColor = Color.Black
         RichTextBox2.BorderStyle = BorderStyle.None
-        RichTextBox2.Location = New Point(-23, 0)
+        RichTextBox2.Location = New Point(-26, 0)
+        RichTextBox2.Margin = New Padding(3, 4, 3, 4)
         RichTextBox2.Name = "RichTextBox2"
-        RichTextBox2.Size = New Size(1262, 48)
+        RichTextBox2.Size = New Size(1442, 64)
         RichTextBox2.TabIndex = 46
         RichTextBox2.Text = ""
         ' 
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.Location = New Point(62, 138)
+        Panel1.Location = New Point(71, 184)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(873, 406)
+        Panel1.Size = New Size(998, 541)
         Panel1.TabIndex = 51
         ' 
         ' specialisation
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
-        ClientSize = New Size(969, 570)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)
         Controls.Add(Guna2GradientTileButton4)
         Controls.Add(Guna2GradientTileButton3)
@@ -262,6 +277,7 @@ Partial Class specialisation
         Controls.Add(Guna2TextBox1)
         Controls.Add(ComboBox2)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 4, 3, 4)
         Name = "specialisation"
         Text = "Form1"
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()

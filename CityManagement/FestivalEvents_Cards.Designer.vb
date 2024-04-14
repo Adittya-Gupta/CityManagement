@@ -133,8 +133,7 @@ Partial Class FestivalEvents_Cards
         ' 
         ' FestivalEvents_Cards
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(EventID)
         Controls.Add(PictureBox2)

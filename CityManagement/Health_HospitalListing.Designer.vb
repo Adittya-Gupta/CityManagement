@@ -224,8 +224,7 @@ Partial Class Health_HospitalListing
         ' 
         ' Health_HospitalListing
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(backButton)
         Controls.Add(Label2)

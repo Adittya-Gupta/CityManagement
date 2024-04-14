@@ -37,7 +37,7 @@ Partial Class EmployOrgList
         CurvedLabel4.Cursor = Cursors.Hand
         CurvedLabel4.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel4.ForeColor = Color.White
-        CurvedLabel4.Image = My.Resources.Resources.Employ_transport
+        CurvedLabel4.Image = Employ_transport
         CurvedLabel4.ImageAlign = ContentAlignment.TopLeft
         CurvedLabel4.Location = New Point(579, 297)
         CurvedLabel4.Name = "CurvedLabel4"
@@ -54,7 +54,7 @@ Partial Class EmployOrgList
         CurvedLabel3.Cursor = Cursors.Hand
         CurvedLabel3.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel3.ForeColor = Color.White
-        CurvedLabel3.Image = My.Resources.Resources.Employ_ed
+        CurvedLabel3.Image = Employ_ed
         CurvedLabel3.ImageAlign = ContentAlignment.TopLeft
         CurvedLabel3.Location = New Point(579, 95)
         CurvedLabel3.Name = "CurvedLabel3"
@@ -71,7 +71,7 @@ Partial Class EmployOrgList
         CurvedLabel2.Cursor = Cursors.Hand
         CurvedLabel2.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel2.ForeColor = Color.White
-        CurvedLabel2.Image = My.Resources.Resources.Employ_police
+        CurvedLabel2.Image = Employ_police
         CurvedLabel2.ImageAlign = ContentAlignment.TopLeft
         CurvedLabel2.Location = New Point(319, 500)
         CurvedLabel2.Name = "CurvedLabel2"
@@ -89,7 +89,7 @@ Partial Class EmployOrgList
         CurvedLabel1.FlatStyle = FlatStyle.Popup
         CurvedLabel1.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel1.ForeColor = Color.White
-        CurvedLabel1.Image = My.Resources.Resources.Employ_hosp
+        CurvedLabel1.Image = Employ_hosp
         CurvedLabel1.ImageAlign = ContentAlignment.TopLeft
         CurvedLabel1.Location = New Point(62, 95)
         CurvedLabel1.Name = "CurvedLabel1"
@@ -106,7 +106,7 @@ Partial Class EmployOrgList
         CurvedLabel10.Cursor = Cursors.Hand
         CurvedLabel10.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CurvedLabel10.ForeColor = Color.White
-        CurvedLabel10.Image = My.Resources.Resources.Employ_service2
+        CurvedLabel10.Image = Employ_service2
         CurvedLabel10.ImageAlign = ContentAlignment.TopLeft
         CurvedLabel10.Location = New Point(68, 298)
         CurvedLabel10.Name = "CurvedLabel10"
@@ -118,17 +118,17 @@ Partial Class EmployOrgList
         ' 
         ' Label8
         ' 
+        Label8.AutoSize = True
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
         Label8.Location = New Point(319, 18)
         Label8.Name = "Label8"
-        Label8.Size = New Size(455, 58)
+        Label8.Size = New Size(450, 59)
         Label8.TabIndex = 49
         Label8.Text = "List of Organizations"
         ' 
         ' EmployOrgList
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(1107, 705)
         Controls.Add(Label8)
@@ -141,6 +141,7 @@ Partial Class EmployOrgList
         Name = "EmployOrgList"
         Text = "EmployOrgList"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents CurvedLabel4 As CurvedLabel

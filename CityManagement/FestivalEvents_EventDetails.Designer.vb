@@ -31,14 +31,14 @@ Partial Class FestivalEvents_EventDetails
         Label4 = New Label()
         Label5 = New Label()
         Label6 = New Label()
-        Button2 = New Button()
+        Choose_service_button = New Button()
         Label7 = New Label()
         Panel1 = New Panel()
-        Button1 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
+        Restrictions_Button = New Button()
+        Edit_event_button = New Button()
+        Approve_Button = New Button()
+        Request_Button = New Button()
+        Register_Button = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -134,21 +134,21 @@ Partial Class FestivalEvents_EventDetails
         Label6.TabIndex = 33
         Label6.Text = "Time : 8:00 Pm"
         ' 
-        ' Button2
+        ' Choose_service_button
         ' 
-        Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button2.BackColor = Color.Black
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(612, 38)
-        Button2.Margin = New Padding(4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(135, 70)
-        Button2.TabIndex = 35
-        Button2.Text = "Choose Service"
-        Button2.TextAlign = ContentAlignment.MiddleRight
-        Button2.UseVisualStyleBackColor = False
+        Choose_service_button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Choose_service_button.BackColor = Color.Black
+        Choose_service_button.FlatStyle = FlatStyle.Flat
+        Choose_service_button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Choose_service_button.ForeColor = Color.White
+        Choose_service_button.Location = New Point(701, 38)
+        Choose_service_button.Margin = New Padding(4)
+        Choose_service_button.Name = "Choose_service_button"
+        Choose_service_button.Size = New Size(135, 70)
+        Choose_service_button.TabIndex = 35
+        Choose_service_button.Text = "Choose Service"
+        Choose_service_button.TextAlign = ContentAlignment.MiddleRight
+        Choose_service_button.UseVisualStyleBackColor = False
         ' 
         ' Label7
         ' 
@@ -177,98 +177,97 @@ Partial Class FestivalEvents_EventDetails
         Panel1.Size = New Size(1022, 599)
         Panel1.TabIndex = 39
         ' 
-        ' Button1
+        ' Restrictions_Button
         ' 
-        Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button1.BackColor = Color.Black
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(842, 38)
-        Button1.Margin = New Padding(4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(110, 70)
-        Button1.TabIndex = 40
-        Button1.Text = "Restrictions"
-        Button1.TextAlign = ContentAlignment.MiddleRight
-        Button1.UseVisualStyleBackColor = False
+        Restrictions_Button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Restrictions_Button.BackColor = Color.Black
+        Restrictions_Button.FlatStyle = FlatStyle.Flat
+        Restrictions_Button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Restrictions_Button.ForeColor = Color.White
+        Restrictions_Button.Location = New Point(842, 38)
+        Restrictions_Button.Margin = New Padding(4)
+        Restrictions_Button.Name = "Restrictions_Button"
+        Restrictions_Button.Size = New Size(110, 70)
+        Restrictions_Button.TabIndex = 40
+        Restrictions_Button.Text = "Restrictions"
+        Restrictions_Button.TextAlign = ContentAlignment.MiddleRight
+        Restrictions_Button.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' Edit_event_button
         ' 
-        Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button3.BackColor = Color.Black
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(958, 38)
-        Button3.Margin = New Padding(4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(96, 70)
-        Button3.TabIndex = 41
-        Button3.Text = "Edit Event"
-        Button3.TextAlign = ContentAlignment.MiddleRight
-        Button3.UseVisualStyleBackColor = False
+        Edit_event_button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Edit_event_button.BackColor = Color.Black
+        Edit_event_button.FlatStyle = FlatStyle.Flat
+        Edit_event_button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Edit_event_button.ForeColor = Color.White
+        Edit_event_button.Location = New Point(958, 38)
+        Edit_event_button.Margin = New Padding(4)
+        Edit_event_button.Name = "Edit_event_button"
+        Edit_event_button.Size = New Size(96, 70)
+        Edit_event_button.TabIndex = 41
+        Edit_event_button.Text = "Edit Event"
+        Edit_event_button.TextAlign = ContentAlignment.MiddleRight
+        Edit_event_button.UseVisualStyleBackColor = False
         ' 
-        ' Button4
+        ' Approve_Button
         ' 
-        Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button4.BackColor = Color.Black
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(752, 38)
-        Button4.Margin = New Padding(4)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(85, 70)
-        Button4.TabIndex = 42
-        Button4.Text = "Approve"
-        Button4.TextAlign = ContentAlignment.MiddleRight
-        Button4.UseVisualStyleBackColor = False
+        Approve_Button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Approve_Button.BackColor = Color.Black
+        Approve_Button.FlatStyle = FlatStyle.Flat
+        Approve_Button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Approve_Button.ForeColor = Color.White
+        Approve_Button.Location = New Point(612, 38)
+        Approve_Button.Margin = New Padding(4)
+        Approve_Button.Name = "Approve_Button"
+        Approve_Button.Size = New Size(85, 70)
+        Approve_Button.TabIndex = 42
+        Approve_Button.Text = "Approve"
+        Approve_Button.TextAlign = ContentAlignment.MiddleRight
+        Approve_Button.UseVisualStyleBackColor = False
         ' 
-        ' Button5
+        ' Request_Button
         ' 
-        Button5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button5.BackColor = Color.Black
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button5.ForeColor = Color.White
-        Button5.Location = New Point(519, 38)
-        Button5.Margin = New Padding(4)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(85, 70)
-        Button5.TabIndex = 43
-        Button5.Text = "Request"
-        Button5.TextAlign = ContentAlignment.MiddleRight
-        Button5.UseVisualStyleBackColor = False
+        Request_Button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Request_Button.BackColor = Color.Black
+        Request_Button.FlatStyle = FlatStyle.Flat
+        Request_Button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Request_Button.ForeColor = Color.White
+        Request_Button.Location = New Point(519, 38)
+        Request_Button.Margin = New Padding(4)
+        Request_Button.Name = "Request_Button"
+        Request_Button.Size = New Size(85, 70)
+        Request_Button.TabIndex = 43
+        Request_Button.Text = "Request"
+        Request_Button.TextAlign = ContentAlignment.MiddleRight
+        Request_Button.UseVisualStyleBackColor = False
         ' 
-        ' Button6
+        ' Register_Button
         ' 
-        Button6.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button6.BackColor = Color.Black
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
-        Button6.ForeColor = Color.White
-        Button6.Location = New Point(426, 38)
-        Button6.Margin = New Padding(4)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(85, 70)
-        Button6.TabIndex = 44
-        Button6.Text = "Register"
-        Button6.TextAlign = ContentAlignment.MiddleRight
-        Button6.UseVisualStyleBackColor = False
+        Register_Button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Register_Button.BackColor = Color.Black
+        Register_Button.FlatStyle = FlatStyle.Flat
+        Register_Button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
+        Register_Button.ForeColor = Color.White
+        Register_Button.Location = New Point(426, 38)
+        Register_Button.Margin = New Padding(4)
+        Register_Button.Name = "Register_Button"
+        Register_Button.Size = New Size(85, 70)
+        Register_Button.TabIndex = 44
+        Register_Button.Text = "Register"
+        Register_Button.TextAlign = ContentAlignment.MiddleRight
+        Register_Button.UseVisualStyleBackColor = False
         ' 
         ' FestivalEvents_EventDetails
         ' 
-        AutoScaleDimensions = New SizeF(10F, 18F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
-        Controls.Add(Button6)
-        Controls.Add(Button5)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button1)
+        Controls.Add(Register_Button)
+        Controls.Add(Request_Button)
+        Controls.Add(Approve_Button)
+        Controls.Add(Edit_event_button)
+        Controls.Add(Restrictions_Button)
         Controls.Add(Panel1)
-        Controls.Add(Button2)
+        Controls.Add(Choose_service_button)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -291,12 +290,12 @@ Partial Class FestivalEvents_EventDetails
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Choose_service_button As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Restrictions_Button As Button
+    Friend WithEvents Edit_event_button As Button
+    Friend WithEvents Approve_Button As Button
+    Friend WithEvents Request_Button As Button
+    Friend WithEvents Register_Button As Button
 End Class

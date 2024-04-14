@@ -49,7 +49,7 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Black
-        Label8.Font = New Font("Segoe UI", 12.0F)
+        Label8.Font = New Font("Segoe UI", 12F)
         Label8.ForeColor = Color.White
         Label8.Location = New Point(103, 18)
         Label8.Name = "Label8"
@@ -61,7 +61,7 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Black
-        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(462, 18)
         Label7.Name = "Label7"
@@ -73,7 +73,7 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(800, 18)
         Label1.Name = "Label1"
@@ -85,7 +85,7 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         Label4.AutoSize = True
         Label4.BackColor = SystemColors.ActiveCaptionText
-        Label4.Font = New Font("Segoe UI", 10.0F)
+        Label4.Font = New Font("Segoe UI", 10F)
         Label4.ForeColor = SystemColors.ControlLightLight
         Label4.Location = New Point(0, 62)
         Label4.Name = "Label4"
@@ -101,7 +101,7 @@ Partial Class Health_Doctor_Employment_Requests
         Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+        Guna2ComboBox1.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
         Guna2ComboBox1.ForeColor = Color.Black
         Guna2ComboBox1.ItemHeight = 30
         Guna2ComboBox1.Items.AddRange(New Object() {"Select Specialisation", "Cardiology", "Pulmonology", "Orthopedics", "Neurology", "Homeopathy", "General Physician"})
@@ -114,10 +114,10 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         ' Health_Doctor_Employment_Requests
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(1097, 690)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Guna2ComboBox1)
         Controls.Add(Label4)
         Controls.Add(Panel1)

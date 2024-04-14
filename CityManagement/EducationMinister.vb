@@ -188,4 +188,8 @@ Public Class EducationMinister
         Label1.Text = If(isPendingView, "Pending", "Approved")
         LoadMinisterRequests()
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

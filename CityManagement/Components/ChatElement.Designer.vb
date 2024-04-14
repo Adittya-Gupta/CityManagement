@@ -30,7 +30,7 @@ Partial Class ChatElement
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.download
+        PictureBox1.BackgroundImage = download
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(3, 3)
         PictureBox1.Name = "PictureBox1"
@@ -44,7 +44,7 @@ Partial Class ChatElement
         CurvedLabel1.BackColor = Color.Transparent
         CurvedLabel1.CornerRadius = 10
         CurvedLabel1.Dock = DockStyle.Left
-        CurvedLabel1.Font = New Font("Segoe UI", 14.0F)
+        CurvedLabel1.Font = New Font("Segoe UI", 14F)
         CurvedLabel1.Location = New Point(0, 0)
         CurvedLabel1.Margin = New Padding(0)
         CurvedLabel1.MinimumSize = New Size(100, 60)
@@ -63,14 +63,13 @@ Partial Class ChatElement
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(100, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(50, 20)
+        Label1.Size = New Size(49, 17)
         Label1.TabIndex = 4
         Label1.Text = "Label1"
         ' 
         ' ChatElement
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.Transparent
         Controls.Add(PictureBox1)
         Controls.Add(Label1)

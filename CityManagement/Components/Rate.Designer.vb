@@ -33,7 +33,7 @@ Partial Class Rate
         ' 
         CurvedLabel1.BackColor = Color.FromArgb(CByte(97), CByte(160), CByte(255))
         CurvedLabel1.CornerRadius = 10
-        CurvedLabel1.Font = New Font("Segoe UI", 24.0F)
+        CurvedLabel1.Font = New Font("Segoe UI", 24F)
         CurvedLabel1.ForeColor = Color.White
         CurvedLabel1.Location = New Point(36, 256)
         CurvedLabel1.Name = "CurvedLabel1"
@@ -44,7 +44,7 @@ Partial Class Rate
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.Location = New Point(36, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(253, 61)
@@ -55,7 +55,7 @@ Partial Class Rate
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.White
-        PictureBox1.Image = My.Resources.Resources.image_2
+        PictureBox1.Image = image_2
         PictureBox1.Location = New Point(60, 82)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(212, 89)
@@ -72,8 +72,7 @@ Partial Class Rate
         ' 
         ' Rate
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(247), CByte(247), CByte(247))
         ClientSize = New Size(329, 336)
         Controls.Add(Star_Rating1)

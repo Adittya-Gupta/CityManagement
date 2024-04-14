@@ -38,12 +38,10 @@ Partial Class Health_Record_Tracker
         Label9 = New Label()
         Label8 = New Label()
         Label7 = New Label()
-        Panel3 = New Panel()
         Label20 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
-        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -64,7 +62,7 @@ Partial Class Health_Record_Tracker
         Label4.AutoSize = True
         Label4.BackColor = Color.Black
         Label4.Cursor = Cursors.Hand
-        Label4.Font = New Font("Segoe UI", 18.0F)
+        Label4.Font = New Font("Segoe UI", 18F)
         Label4.ForeColor = SystemColors.GrayText
         Label4.Location = New Point(65, 15)
         Label4.Name = "Label4"
@@ -77,7 +75,7 @@ Partial Class Health_Record_Tracker
         Label3.AutoSize = True
         Label3.BackColor = Color.Black
         Label3.Cursor = Cursors.Hand
-        Label3.Font = New Font("Segoe UI", 18.0F)
+        Label3.Font = New Font("Segoe UI", 18F)
         Label3.ForeColor = SystemColors.ControlLightLight
         Label3.Location = New Point(629, 14)
         Label3.Name = "Label3"
@@ -90,7 +88,7 @@ Partial Class Health_Record_Tracker
         Label2.AutoSize = True
         Label2.BackColor = Color.Black
         Label2.Cursor = Cursors.Hand
-        Label2.Font = New Font("Segoe UI", 18.0F)
+        Label2.Font = New Font("Segoe UI", 18F)
         Label2.ForeColor = SystemColors.GrayText
         Label2.Location = New Point(371, 14)
         Label2.Name = "Label2"
@@ -103,7 +101,7 @@ Partial Class Health_Record_Tracker
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
         Label1.Cursor = Cursors.Hand
-        Label1.Font = New Font("Segoe UI", 18.0F)
+        Label1.Font = New Font("Segoe UI", 18F)
         Label1.ForeColor = Color.DarkGray
         Label1.Location = New Point(921, 14)
         Label1.Name = "Label1"
@@ -126,7 +124,7 @@ Partial Class Health_Record_Tracker
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label5.Location = New Point(74, 74)
         Label5.Name = "Label5"
         Label5.Size = New Size(128, 15)
@@ -161,7 +159,7 @@ Partial Class Health_Record_Tracker
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12.0F)
+        Label13.Font = New Font("Segoe UI", 12F)
         Label13.Location = New Point(27, 84)
         Label13.Name = "Label13"
         Label13.Size = New Size(106, 21)
@@ -171,7 +169,7 @@ Partial Class Health_Record_Tracker
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 12.0F)
+        Label12.Font = New Font("Segoe UI", 12F)
         Label12.Location = New Point(27, 205)
         Label12.Name = "Label12"
         Label12.Size = New Size(253, 21)
@@ -181,7 +179,7 @@ Partial Class Health_Record_Tracker
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 12.0F)
+        Label11.Font = New Font("Segoe UI", 12F)
         Label11.Location = New Point(27, 144)
         Label11.Name = "Label11"
         Label11.Size = New Size(105, 21)
@@ -191,7 +189,7 @@ Partial Class Health_Record_Tracker
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 12.0F)
+        Label10.Font = New Font("Segoe UI", 12F)
         Label10.Location = New Point(27, 174)
         Label10.Name = "Label10"
         Label10.Size = New Size(129, 21)
@@ -201,7 +199,7 @@ Partial Class Health_Record_Tracker
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12.0F)
+        Label9.Font = New Font("Segoe UI", 12F)
         Label9.Location = New Point(27, 53)
         Label9.Name = "Label9"
         Label9.Size = New Size(66, 21)
@@ -211,7 +209,7 @@ Partial Class Health_Record_Tracker
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12.0F)
+        Label8.Font = New Font("Segoe UI", 12F)
         Label8.Location = New Point(27, 114)
         Label8.Name = "Label8"
         Label8.Size = New Size(119, 21)
@@ -221,28 +219,19 @@ Partial Class Health_Record_Tracker
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.Font = New Font("Segoe UI", 12F)
         Label7.Location = New Point(27, 22)
         Label7.Name = "Label7"
         Label7.Size = New Size(161, 21)
         Label7.TabIndex = 0
         Label7.Text = "Name : Anand Keshav"
         ' 
-        ' Panel3
-        ' 
-        Panel3.AutoScroll = True
-        Panel3.Controls.Add(Label20)
-        Panel3.Location = New Point(24, 351)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(266, 39)
-        Panel3.TabIndex = 29
-        ' 
         ' Label20
         ' 
         Label20.AutoSize = True
         Label20.BackColor = Color.LightSteelBlue
-        Label20.Font = New Font("Segoe UI", 20.0F)
-        Label20.Location = New Point(0, 0)
+        Label20.Font = New Font("Segoe UI", 20F)
+        Label20.Location = New Point(24, 348)
         Label20.Name = "Label20"
         Label20.Size = New Size(265, 37)
         Label20.TabIndex = 0
@@ -250,11 +239,11 @@ Partial Class Health_Record_Tracker
         ' 
         ' Health_Record_Tracker
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1097, 690)
-        Controls.Add(Panel3)
+        ClientSize = New Size(1107, 760)
+        Controls.Add(Label20)
         Controls.Add(Panel2)
         Controls.Add(PictureBox1)
         Controls.Add(Label5)
@@ -270,8 +259,6 @@ Partial Class Health_Record_Tracker
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -292,6 +279,5 @@ Partial Class Health_Record_Tracker
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents Label20 As Label
 End Class

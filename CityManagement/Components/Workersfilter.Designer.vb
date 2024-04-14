@@ -134,8 +134,7 @@ Partial Class Workersfilter
         ' 
         ' Workersfilter
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(362, 295)
         Controls.Add(Button2)

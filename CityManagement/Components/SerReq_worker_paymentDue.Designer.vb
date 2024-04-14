@@ -34,7 +34,7 @@ Partial Class SerReq_worker_paymentDue
         ' 
         ' Label6
         ' 
-        Label6.Image = My.Resources.Resources.Frame_1060
+        Label6.Image = Frame_1060
         Label6.Location = New Point(581, 31)
         Label6.Name = "Label6"
         Label6.Size = New Size(157, 67)
@@ -52,8 +52,8 @@ Partial Class SerReq_worker_paymentDue
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
+        PictureBox1.Image = Mask_group
+        PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(22, 18)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(92, 88)
@@ -98,8 +98,7 @@ Partial Class SerReq_worker_paymentDue
         ' 
         ' SerReq_worker_paymentDue
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)

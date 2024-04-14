@@ -32,7 +32,7 @@ Partial Class ListofChats
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
         Label4.Location = New Point(196, 53)
         Label4.Name = "Label4"
@@ -42,7 +42,7 @@ Partial Class ListofChats
         ' 
         ' Label1
         ' 
-        Label1.Font = New Font("Exo 2 SemiBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
         Label1.Location = New Point(753, 53)
         Label1.Name = "Label1"
@@ -70,7 +70,7 @@ Partial Class ListofChats
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(935, 12)
         Button1.Name = "Button1"
@@ -81,8 +81,7 @@ Partial Class ListofChats
         ' 
         ' ListOfChats
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 685)
         Controls.Add(Button1)

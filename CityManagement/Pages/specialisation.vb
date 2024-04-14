@@ -2,9 +2,9 @@
 Imports Windows.Media.Capture
 
 Public Class specialisation
-    Dim spec As String = ""
-    Dim rate As String = ""
-    Dim gin As String = ""
+    Shared spec As String = ""
+    Shared rate As String = ""
+    Shared gin As String = ""
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
@@ -14,12 +14,12 @@ Public Class specialisation
         Dim listHospitals As New listHospitals()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(listHospitals)
+            MainPanel.ShowChildFormInPanel(listHospitals)
         End If
     End Sub
 
@@ -32,12 +32,12 @@ Public Class specialisation
         Dim Health_ViewAppointment As New Health_ViewAppointment()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(Health_ViewAppointment)
+            MainPanel.ShowChildFormInPanel(Health_ViewAppointment)
         End If
     End Sub
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
@@ -147,7 +147,7 @@ Public Class specialisation
         End If
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
-            'command.Parameters.AddWithValue("@gin", gin)
+            command.Parameters.AddWithValue("@gin", gin)
             command.Parameters.AddWithValue("@spec", spec)
             If (rate <> "") Then command.Parameters.AddWithValue("@rate", Convert.ToInt32(rate))
 

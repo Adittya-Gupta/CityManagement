@@ -101,7 +101,7 @@ Public Class ServiceHistory
         ' Critical section - access shared resource
         semaphore.Release() ' Release semaphore
         If statusChanged Then
-            MessageBox.Show("Status Changed")
+            'MessageBox.Show("Status Changed")
             ' Call the ServiceHistory_Load method to update the UI
             ServiceHistory_Load()
 

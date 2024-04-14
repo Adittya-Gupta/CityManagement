@@ -1,4 +1,6 @@
-﻿Public Class Banking_Money_Management_Final
+﻿Imports CityManagement.HistoryItem
+
+Public Class Banking_Money_Management_Final
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
@@ -11,7 +13,7 @@
     End Sub
 
     Public Shared Sub ChildForm2(ByVal childform As Form)
-        mypanel.Panel1.Controls.Clear()
+        mypanel.panel1.Controls.Clear()
         childform.TopLevel = False
         mypanel.Panel1.Controls.Add(childform)
         childform.Show()
@@ -19,6 +21,7 @@
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
         Global_Attributes.banking_recv_username = ""
         Global_Attributes.banking_payment_amount = 0
+        Global_Attributes.banking_payment_done = 1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -33,6 +36,24 @@
             ChildForm(Newsletter_Main.Panel1, Global_Attributes.Go_Back_Form)
             mypanel.Panel1.Controls.Clear()
             ChildForm2(Newsletter_Main)
+        ElseIf Global_Attributes.Go_Back = 2 Then
+            Global_Attributes.Go_Back = 0
+            Banking_Main.Panel1.Controls.Clear()
+            Newsletter_Main.Panel1.Controls.Clear()
+            ChildForm2(Global_Attributes.Go_Back_Form)
+            'Dim form As New election_dashboard()
+            'mypanel.panel1.Controls.Clear()
+            'Form.TopLevel = False
+            'mypanel.panel1.Controls.Add(form)
+            'Form'.Show()
+        ElseIf Global_Attributes.Go_Back = 3 Then
+
+            Global_Attributes.banking_payment_done = 0
+            Global_Attributes.HistoryItem.HandleAction(CustomerAction.Pay)
+            Global_Attributes.Go_Back = 0
+            Banking_Main.Panel1.Controls.Clear()
+            Newsletter_Main.Panel1.Controls.Clear()
+            ChildForm2(Global_Attributes.Go_Back_Form)
         End If
     End Sub
 End Class

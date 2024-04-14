@@ -23,7 +23,6 @@ Partial Class transport_govOfficial
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_govOfficial))
-        PictureBox1 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
         Label4 = New Label()
@@ -49,19 +48,10 @@ Partial Class transport_govOfficial
         Button1 = New Button()
         Label12 = New Label()
         TextBox9 = New TextBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        PictureBox1 = New PictureBox()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.oliver_cole_n8a06dCP_fQ_unsplash
-        PictureBox1.Location = New Point(1, 1)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(433, 618)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
         ' 
         ' Label1
         ' 
@@ -71,7 +61,7 @@ Partial Class transport_govOfficial
         Label1.BorderStyle = BorderStyle.FixedSingle
         Label1.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Transparent
-        Label1.Location = New Point(525, 159)
+        Label1.Location = New Point(642, 178)
         Label1.Name = "Label1"
         Label1.Size = New Size(266, 39)
         Label1.TabIndex = 4
@@ -85,7 +75,7 @@ Partial Class transport_govOfficial
         Label2.BorderStyle = BorderStyle.Fixed3D
         Label2.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label2.ForeColor = Color.DimGray
-        Label2.Location = New Point(710, 227)
+        Label2.Location = New Point(834, 249)
         Label2.Name = "Label2"
         Label2.Size = New Size(81, 27)
         Label2.TabIndex = 7
@@ -99,7 +89,7 @@ Partial Class transport_govOfficial
         Label4.BorderStyle = BorderStyle.Fixed3D
         Label4.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label4.ForeColor = Color.DimGray
-        Label4.Location = New Point(738, 276)
+        Label4.Location = New Point(862, 298)
         Label4.Name = "Label4"
         Label4.Size = New Size(64, 27)
         Label4.TabIndex = 9
@@ -113,7 +103,7 @@ Partial Class transport_govOfficial
         Label5.BorderStyle = BorderStyle.Fixed3D
         Label5.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label5.ForeColor = Color.DimGray
-        Label5.Location = New Point(485, 324)
+        Label5.Location = New Point(609, 346)
         Label5.Name = "Label5"
         Label5.Size = New Size(61, 27)
         Label5.TabIndex = 10
@@ -127,7 +117,7 @@ Partial Class transport_govOfficial
         Label6.BorderStyle = BorderStyle.Fixed3D
         Label6.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label6.ForeColor = Color.DimGray
-        Label6.Location = New Point(485, 371)
+        Label6.Location = New Point(609, 393)
         Label6.Name = "Label6"
         Label6.Size = New Size(76, 27)
         Label6.TabIndex = 11
@@ -141,7 +131,7 @@ Partial Class transport_govOfficial
         Label7.BorderStyle = BorderStyle.Fixed3D
         Label7.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label7.ForeColor = Color.DimGray
-        Label7.Location = New Point(485, 422)
+        Label7.Location = New Point(609, 444)
         Label7.Name = "Label7"
         Label7.Size = New Size(70, 27)
         Label7.TabIndex = 12
@@ -155,7 +145,7 @@ Partial Class transport_govOfficial
         Label8.BorderStyle = BorderStyle.Fixed3D
         Label8.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label8.ForeColor = Color.DimGray
-        Label8.Location = New Point(660, 417)
+        Label8.Location = New Point(784, 439)
         Label8.Name = "Label8"
         Label8.Size = New Size(99, 27)
         Label8.TabIndex = 13
@@ -169,7 +159,7 @@ Partial Class transport_govOfficial
         Label9.BorderStyle = BorderStyle.Fixed3D
         Label9.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label9.ForeColor = Color.DimGray
-        Label9.Location = New Point(660, 366)
+        Label9.Location = New Point(784, 388)
         Label9.Name = "Label9"
         Label9.Size = New Size(105, 27)
         Label9.TabIndex = 14
@@ -183,7 +173,7 @@ Partial Class transport_govOfficial
         Label10.BorderStyle = BorderStyle.Fixed3D
         Label10.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label10.ForeColor = Color.DimGray
-        Label10.Location = New Point(483, 227)
+        Label10.Location = New Point(607, 249)
         Label10.Name = "Label10"
         Label10.Size = New Size(72, 27)
         Label10.TabIndex = 15
@@ -197,7 +187,7 @@ Partial Class transport_govOfficial
         Label11.BorderStyle = BorderStyle.Fixed3D
         Label11.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label11.ForeColor = Color.DimGray
-        Label11.Location = New Point(485, 467)
+        Label11.Location = New Point(609, 489)
         Label11.Name = "Label11"
         Label11.Size = New Size(130, 27)
         Label11.TabIndex = 16
@@ -206,72 +196,72 @@ Partial Class transport_govOfficial
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(466, 17)
+        PictureBox2.Location = New Point(524, 3)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(400, 124)
+        PictureBox2.Size = New Size(564, 147)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 17
         PictureBox2.TabStop = False
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(601, 227)
+        TextBox1.Location = New Point(725, 249)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(31, 23)
         TextBox1.TabIndex = 18
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(601, 422)
+        TextBox2.Location = New Point(725, 444)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(31, 23)
         TextBox2.TabIndex = 19
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(601, 371)
+        TextBox3.Location = New Point(725, 393)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(31, 23)
         TextBox3.TabIndex = 20
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(822, 276)
+        TextBox4.Location = New Point(946, 298)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(31, 23)
         TextBox4.TabIndex = 21
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(822, 231)
+        TextBox5.Location = New Point(946, 253)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(31, 23)
         TextBox5.TabIndex = 22
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(781, 421)
+        TextBox6.Location = New Point(905, 443)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(31, 23)
         TextBox6.TabIndex = 23
         ' 
         ' TextBox7
         ' 
-        TextBox7.Location = New Point(781, 370)
+        TextBox7.Location = New Point(905, 392)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(31, 23)
         TextBox7.TabIndex = 24
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.Location = New Point(582, 324)
+        DateTimePicker1.Location = New Point(706, 346)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(138, 23)
         DateTimePicker1.TabIndex = 25
         ' 
         ' TextBox8
         ' 
-        TextBox8.Location = New Point(660, 467)
+        TextBox8.Location = New Point(784, 489)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(142, 23)
         TextBox8.TabIndex = 26
@@ -284,7 +274,7 @@ Partial Class transport_govOfficial
         Label3.BorderStyle = BorderStyle.Fixed3D
         Label3.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label3.ForeColor = Color.DimGray
-        Label3.Location = New Point(484, 276)
+        Label3.Location = New Point(608, 298)
         Label3.Name = "Label3"
         Label3.Size = New Size(62, 27)
         Label3.TabIndex = 27
@@ -295,7 +285,7 @@ Partial Class transport_govOfficial
         DateTimePicker2.CalendarMonthBackground = SystemColors.Info
         DateTimePicker2.CustomFormat = "hh:mm:ss tt"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.Location = New Point(582, 276)
+        DateTimePicker2.Location = New Point(706, 298)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.ShowUpDown = True
         DateTimePicker2.Size = New Size(109, 23)
@@ -306,7 +296,7 @@ Partial Class transport_govOfficial
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(737, 569)
+        Button1.Location = New Point(917, 635)
         Button1.Name = "Button1"
         Button1.Size = New Size(75, 29)
         Button1.TabIndex = 29
@@ -321,7 +311,7 @@ Partial Class transport_govOfficial
         Label12.BorderStyle = BorderStyle.Fixed3D
         Label12.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label12.ForeColor = Color.DimGray
-        Label12.Location = New Point(485, 514)
+        Label12.Location = New Point(609, 536)
         Label12.Name = "Label12"
         Label12.Size = New Size(120, 27)
         Label12.TabIndex = 30
@@ -329,17 +319,27 @@ Partial Class transport_govOfficial
         ' 
         ' TextBox9
         ' 
-        TextBox9.Location = New Point(660, 514)
+        TextBox9.Location = New Point(784, 536)
         TextBox9.Name = "TextBox9"
         TextBox9.Size = New Size(142, 23)
         TextBox9.TabIndex = 31
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(2, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(516, 755)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 32
+        PictureBox1.TabStop = False
+        ' 
         ' transport_govOfficial
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
-        ClientSize = New Size(889, 619)
+        ClientSize = New Size(1091, 760)
+        Controls.Add(PictureBox1)
         Controls.Add(TextBox9)
         Controls.Add(Label12)
         Controls.Add(Button1)
@@ -365,16 +365,14 @@ Partial Class transport_govOfficial
         Controls.Add(Label4)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(PictureBox1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "transport_govOfficial"
         Text = "transport_govOfficial"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
@@ -400,4 +398,5 @@ Partial Class transport_govOfficial
     Friend WithEvents Button1 As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -96,8 +96,7 @@ Partial Class Health_ViewAppointment
         ' 
         ' Health_ViewAppointment
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)

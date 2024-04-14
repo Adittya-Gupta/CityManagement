@@ -1,43 +1,104 @@
-﻿Imports System.Reflection.Emit
+﻿Imports System.CodeDom
+Imports System.Reflection.Emit
 Imports MySql.Data.MySqlClient
 Public Class complaints_History
     Private Sub complaints_History_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim userID As String = "11"
         Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-        Using connection As New MySqlConnection(connString)
 
-            Dim conn As New MySqlConnection(connString)
-            Try
+        ' Set up DataGridView
+        DataGridView1.AutoGenerateColumns = False
+        DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None
+        DataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True ' Enable text wrapping
+        DataGridView1.RowHeadersVisible = False ' Hide row headers
 
-                Dim query As String = "SELECT * FROM Complaints WHERE from_user_id = @userID"
 
-                Dim command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@userID", userID)
+        ' Add columns to the DataGridView
+        Dim complaintIDColumn As New DataGridViewTextBoxColumn()
+        complaintIDColumn.Name = "ComplaintID"
+        complaintIDColumn.HeaderText = "Complaint ID"
+        complaintIDColumn.Width = 95
+        DataGridView1.Columns.Add(complaintIDColumn)
 
-                Dim dataAdapter As New MySqlDataAdapter(command)
+        Dim sentToColumn As New DataGridViewTextBoxColumn()
+        sentToColumn.Name = "Sent_to"
+        sentToColumn.HeaderText = "Sent To"
+        sentToColumn.Width = 150
+        DataGridView1.Columns.Add(sentToColumn)
 
-                Dim dataTable As New DataTable
-                dataAdapter.Fill(dataTable)
-                DataGridView1.DataSource = dataTable
-                DataGridView1.AllowUserToAddRows = False
-                DataGridView1.RowHeadersVisible = False
-                DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-                DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-                DataGridView1.ScrollBars = ScrollBars.Vertical
-                'Dim newColumn As New DataGridViewButtonColumn()
-                'newColumn.Name = "Cancel Leave"
-                'newColumn.UseColumnTextForButtonValue = True
-                'newColumn.Text = "Cancel"
-                'newColumn.DefaultCellStyle.BackColor = Color.Crimson
-                'newColumn.DefaultCellStyle.SelectionBackColor = Color.Crimson
-                'newColumn.DefaultCellStyle.ForeColor = Color.White
-                'newColumn.DefaultCellStyle.SelectionForeColor = Color.White
-                'newColumn.FlatStyle = FlatStyle.Flat
-                'DataGridView1.Columns.Add(newColumn)
+        Dim dateColumn As New DataGridViewTextBoxColumn()
+        dateColumn.Name = "sent_time"
+        dateColumn.HeaderText = "Sent time"
+        dateColumn.Width = 185
+        DataGridView1.Columns.Add(dateColumn)
 
-            Catch ex As MySqlException
-                MessageBox.Show("Error: " & ex.Message)
-            End Try
-        End Using
+        Dim lastModifiedColumn As New DataGridViewTextBoxColumn()
+        lastModifiedColumn.Name = "LastModified"
+        lastModifiedColumn.HeaderText = "Last Modified"
+        lastModifiedColumn.Width = 185
+        DataGridView1.Columns.Add(lastModifiedColumn)
+
+        Dim queryColumn As New DataGridViewTextBoxColumn()
+        queryColumn.Name = "Query"
+        queryColumn.HeaderText = "Query"
+        queryColumn.Width = 363
+        DataGridView1.Columns.Add(queryColumn)
+
+        ' Add Status column as button
+        Dim statusColumn As New DataGridViewTextBoxColumn()
+        statusColumn.Name = "Status"
+        statusColumn.HeaderText = "Status"
+        statusColumn.Width = 100
+        DataGridView1.Columns.Add(statusColumn)
+
+
+        For Each col As DataGridViewColumn In DataGridView1.Columns
+            col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Next
+
+
+        Dim conn As New MySqlConnection(connString)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT complaint_id,to_user_id,to_org_id,Name,reply_time,sent_time,complaint,status FROM Complaints JOIN User WHERE from_user_id = @userid AND Complaints.to_user_id = User.SID UNION ALL SELECT complaint_id,to_user_id,to_org_id,Name,reply_time,sent_time,complaint,status as Org_Name FROM Complaints JOIN Institutes WHERE from_user_id = @userid AND Complaints.to_org_id = Institutes.ID"
+            Using command As New MySqlCommand(query, conn)
+                command.Parameters.AddWithValue("@userid", userID)
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    While reader.Read()
+                        Dim row As DataGridViewRow = New DataGridViewRow()
+                        row.CreateCells(DataGridView1)
+                        row.Cells(0).Value = reader("complaint_id").ToString()
+                        row.Cells(1).Value = reader("Name").ToString()
+                        row.Cells(2).Value = reader("sent_time").ToString()
+                        row.Cells(3).Value = reader("reply_time").ToString()
+                        row.Cells(4).Value = reader("complaint").ToString()
+                        Dim status As Integer = reader("status")
+                        row.Cells(5).Style.ForeColor = Color.White
+                        If status = 0 Then
+                            If row.Cells(3).Value = "" Then
+                                row.Cells(5).Value = "Pending"
+                                row.Cells(5).Style.BackColor = Color.Red
+                            Else
+                                row.Cells(5).Value = "Processing"
+                                row.Cells(5).Style.BackColor = Color.Blue
+                            End If
+                        ElseIf status = 1 Then
+                            row.Cells(5).Value = "Processing"
+                            row.Cells(5).Style.BackColor = Color.Blue
+                        Else
+                            row.Cells(5).Value = "Resolved"
+                            row.Cells(5).Style.BackColor = Color.Green
+                        End If
+                        DataGridView1.Rows.Add(row)
+                    End While
+                End Using
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 End Class

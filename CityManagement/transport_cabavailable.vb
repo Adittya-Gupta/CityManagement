@@ -173,15 +173,122 @@ Public Class transport_cabavailable
                                 card.Label5.Text = arrivalTime.ToString
                                 card.Label8.Text = driverName
                                 card.Label3.Text = "Rs. " & price
+                                AddHandler card.Button2.Click, Sub()
+                                                                   banking_recv_username = "transport"
+                                                                   Go_Back = 2
+                                                                   Go_Back_Form = Me
+                                                                   banking_payment_amount = price
+
+                                                                   Banking_Main.Panel1.Controls.Clear()
+                                                                   Newsletter_Main.Panel1.Controls.Clear()
+
+                                                                   ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                                   mypanel.panel1.Controls.Clear()
+                                                                   ChildForm2(Banking_Main)
+                                                               End Sub
                                 AddHandler card.Button1.Click, Sub()
                                                                    ' Open the page here
                                                                    ' For example, you can open a new form
+                                                                   If Global_Attributes.banking_payment_done = 0 Then
+                                                                       MessageBox.Show("Please make payment first!")
+                                                                       Return
+                                                                   End If
+                                                                   Global_Attributes.banking_payment_done = 0
                                                                    cost = price
                                                                    selected_cab = cabId
                                                                    cab_arrival = arrivalTime
                                                                    'Dim newForm As New transport_cabconfirm()
+                                                                   'Dim newForm As New transport_cabconfirm()
 
+
+
+                                                                   Dim email As String = ""
+                                                                   Dim contactNo As String = ""
+                                                                   Dim name As String = ""
+                                                                   Dim sid As Integer = transport_landingPage.SID
+
+                                                                   ' SQL query to fetch data from the User table based on SID
+                                                                   Dim selectQuery As String = "SELECT Name, EmailAddress, ContactNo FROM User WHERE SID = @sid"
+
+
+                                                                   ' Open the connection
+                                                                   conn2.Open()
+
+                                                                   ' Create a command for SELECT query
+                                                                   Using selectCommand As New MySqlCommand(selectQuery, conn2)
+                                                                       ' Add parameters for SID
+                                                                       selectCommand.Parameters.AddWithValue("@SID", sid)
+
+                                                                       ' Execute the SELECT query and get the reader
+                                                                       Using reader As MySqlDataReader = selectCommand.ExecuteReader()
+
+                                                                           ' Check if there are rows returned
+                                                                           If reader.HasRows Then
+                                                                               ' Read the data and store it in variables
+                                                                               reader.Read()
+                                                                               name = reader("Name").ToString()
+                                                                               email = reader("EmailAddress").ToString()
+                                                                               contactNo = reader("ContactNo").ToString()
+                                                                           Else
+                                                                               MessageBox.Show("No data found for the given SID.")
+                                                                           End If
+                                                                       End Using
+
+
+                                                                   End Using
+                                                                   Dim userEmail = email
+                                                                   Dim selectedCabId = selected_cab
+
+                                                                   Dim checksqlQuery As String = "SELECT COUNT(*) FROM cab_user WHERE user_id = @SID"
+                                                                   Using command As New MySqlCommand(checksqlQuery, conn2)
+                                                                       command.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+
+                                                                       Dim rowCount As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                                                                       If rowCount = 0 Then
+                                                                           ' SQL query to insert data into cab_users table
+                                                                           Dim insertQuery As String = "INSERT INTO cab_user (user_id, name, email, phone, current_ride, current_from, current_to, current_arrival, current_cost) 
+                                                    VALUES (@SID, @Name, @EmailAddress, @ContactNo, @selectedCabId, @from, @to, @time, @price)"
+
+                                                                           ' Create a command for INSERT query
+                                                                           Using insertCommand As New MySqlCommand(insertQuery, conn2)
+                                                                               ' Add parameters for INSERT query
+                                                                               insertCommand.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+                                                                               insertCommand.Parameters.AddWithValue("@Name", name)
+                                                                               insertCommand.Parameters.AddWithValue("@EmailAddress", email)
+                                                                               insertCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                               insertCommand.Parameters.AddWithValue("@ContactNo", contactNo)
+                                                                               insertCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                               insertCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                               insertCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                               insertCommand.Parameters.AddWithValue("@price", cost)
+
+                                                                               ' Execute the INSERT query
+                                                                               insertCommand.ExecuteNonQuery()
+                                                                               'MessageBox.Show("Data inserted successfully into cab_users table.")
+                                                                           End Using
+                                                                       Else
+                                                                           Dim updateUserCabQuery = "UPDATE cab_user SET current_ride = @selectedCabId, current_from = @from, current_to=@to, current_arrival = @time,current_cost = @price WHERE user_id = @id"
+                                                                           Using updateUserCabCommand As New MySqlCommand(updateUserCabQuery, conn2)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@id", transport_landingPage.SID)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                               updateUserCabCommand.Parameters.AddWithValue("@price", cost)
+                                                                               updateUserCabCommand.ExecuteNonQuery()
+                                                                           End Using
+                                                                       End If
+                                                                   End Using
+                                                                   Dim updateRunningCabQuery = "UPDATE running_cabs SET vacancies = vacancies - 1 WHERE cab_id = @selectedCabId"
+                                                                   Using updateRunningCabCommand As New MySqlCommand(updateRunningCabQuery, conn2)
+                                                                       updateRunningCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                       updateRunningCabCommand.ExecuteNonQuery()
+                                                                   End Using
+
+                                                                   MessageBox.Show("Cab booking confirmed. Enjoy the ride!")
                                                                    'newForm.ShowDialog()
+                                                                   conn2.Close()
                                                                End Sub
 
                                 FlowLayoutPanel1.Controls.Add(card)
@@ -234,15 +341,120 @@ Public Class transport_cabavailable
                                     card.Label5.Text = arrivalTime.ToString
                                     card.Label8.Text = driverName
                                     card.Label3.Text = "Rs. " & price
+                                    AddHandler card.Button2.Click, Sub()
+                                                                       banking_recv_username = "transport"
+                                                                       Go_Back = 2
+                                                                       Go_Back_Form = Me
+                                                                       banking_payment_amount = price
+
+                                                                       Banking_Main.Panel1.Controls.Clear()
+                                                                       Newsletter_Main.Panel1.Controls.Clear()
+
+                                                                       ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                                       mypanel.panel1.Controls.Clear()
+                                                                       ChildForm2(Banking_Main)
+                                                                   End Sub
                                     AddHandler card.Button1.Click, Sub()
                                                                        ' Open the page here
                                                                        ' For example, you can open a new form
+                                                                       If Global_Attributes.banking_payment_done = 0 Then
+                                                                           MessageBox.Show("Please make payment first!")
+                                                                           Return
+                                                                       End If
                                                                        cost = price
                                                                        extended = newPathId
                                                                        selected_cab = cabId
                                                                        cab_arrival = arrivalTime
                                                                        'Dim newForm As New transport_cabconfirm()
+                                                                       Dim email As String = ""
+                                                                       Dim contactNo As String = ""
+                                                                       Dim name As String = ""
+                                                                       Dim sid As Integer = transport_landingPage.SID
 
+                                                                       ' SQL query to fetch data from the User table based on SID
+                                                                       Dim selectQuery As String = "SELECT Name, EmailAddress, ContactNo FROM User WHERE SID = @sid"
+
+
+                                                                       ' Open the connection
+
+                                                                       conn2.Open()
+                                                                       ' Create a command for SELECT query
+                                                                       Using selectCommand As New MySqlCommand(selectQuery, conn2)
+                                                                           ' Add parameters for SID
+                                                                           selectCommand.Parameters.AddWithValue("@SID", sid)
+
+                                                                           ' Execute the SELECT query and get the reader
+                                                                           Using reader As MySqlDataReader = selectCommand.ExecuteReader()
+
+                                                                               ' Check if there are rows returned
+                                                                               If reader.HasRows Then
+                                                                                   ' Read the data and store it in variables
+                                                                                   reader.Read()
+                                                                                   name = reader("Name").ToString()
+                                                                                   email = reader("EmailAddress").ToString()
+                                                                                   contactNo = reader("ContactNo").ToString()
+                                                                               Else
+                                                                                   MessageBox.Show("No data found for the given SID.")
+                                                                               End If
+                                                                           End Using
+
+
+                                                                       End Using
+                                                                       Dim userEmail = email
+                                                                       Dim selectedCabId = selected_cab
+
+                                                                       Dim checksqlQuery As String = "SELECT COUNT(*) FROM cab_user WHERE user_id = @SID"
+                                                                       Using command As New MySqlCommand(checksqlQuery, conn2)
+                                                                           command.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+
+                                                                           Dim rowCount As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                                                                           If rowCount = 0 Then
+                                                                               ' SQL query to insert data into cab_users table
+                                                                               Dim insertQuery As String = "INSERT INTO cab_user (user_id, name, email, phone, current_ride, current_from, current_to, current_arrival, current_cost) 
+                                                    VALUES (@SID, @Name, @EmailAddress, @ContactNo, @selectedCabId, @from, @to, @time, @price)"
+
+                                                                               ' Create a command for INSERT query
+                                                                               Using insertCommand As New MySqlCommand(insertQuery, conn2)
+                                                                                   ' Add parameters for INSERT query
+                                                                                   insertCommand.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+                                                                                   insertCommand.Parameters.AddWithValue("@Name", name)
+                                                                                   insertCommand.Parameters.AddWithValue("@EmailAddress", email)
+                                                                                   insertCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                                   insertCommand.Parameters.AddWithValue("@ContactNo", contactNo)
+                                                                                   insertCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                                   insertCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                                   insertCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                                   insertCommand.Parameters.AddWithValue("@price", cost)
+
+                                                                                   ' Execute the INSERT query
+                                                                                   insertCommand.ExecuteNonQuery()
+                                                                                   'MessageBox.Show("Data inserted successfully into cab_users table.")
+                                                                               End Using
+                                                                           Else
+                                                                               Dim updateUserCabQuery = "UPDATE cab_user SET current_ride = @selectedCabId, current_from = @from, current_to=@to, current_arrival = @time,current_cost = @price WHERE user_id = @id"
+                                                                               Using updateUserCabCommand As New MySqlCommand(updateUserCabQuery, conn2)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@id", transport_landingPage.SID)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                                   updateUserCabCommand.Parameters.AddWithValue("@price", cost)
+                                                                                   updateUserCabCommand.ExecuteNonQuery()
+                                                                               End Using
+                                                                           End If
+                                                                       End Using
+                                                                       ' Update running_cab with new path ID
+                                                                       'Dim newPathId = GetNewPathId(transport_cabbooking.FromLocation, transport_cabbooking.ToLocation)
+                                                                       Dim updateRunningCabQuery = "UPDATE running_cabs SET path_id = @newPathId,vacancies = vacancies - 1,to_location=@to WHERE cab_id = @selectedCabId"
+                                                                       Using updateRunningCabCommand As New MySqlCommand(updateRunningCabQuery, conn2)
+                                                                           updateRunningCabCommand.Parameters.AddWithValue("@newPathId", extended)
+                                                                           updateRunningCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                           updateRunningCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                           updateRunningCabCommand.ExecuteNonQuery()
+                                                                       End Using
+                                                                       MessageBox.Show("Cab booking confirmed. Enjoy the ride!")
+                                                                       conn2.Close()
                                                                        'newForm.ShowDialog()
                                                                    End Sub
                                     FlowLayoutPanel1.Controls.Add(card)
@@ -337,9 +549,7 @@ Public Class transport_cabavailable
                             driverName = Convert.ToString(result)
                         End If
                     End Using
-                    selected_cab = availableCabId
-                    newcab = 1
-                    cost = price
+
                     cab_arrival = transport_cabbooking.sqlFormattedDateTime
                     Dim card As New transport_cabCards
                     card.Label6.Text = transport_cabbooking.FromLocation
@@ -347,7 +557,151 @@ Public Class transport_cabavailable
                     card.Label5.Text = transport_cabbooking.sqlFormattedDateTime.ToString
                     card.Label8.Text = driverName
                     card.Label3.Text = "Rs. " & price
-                    AddHandler card.Button1.Click, AddressOf CardButton_Click
+                    AddHandler card.Button2.Click, Sub()
+                                                       banking_recv_username = "transport"
+                                                       Go_Back = 2
+                                                       Go_Back_Form = Me
+                                                       banking_payment_amount = price
+
+                                                       Banking_Main.Panel1.Controls.Clear()
+                                                       Newsletter_Main.Panel1.Controls.Clear()
+
+                                                       ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                       mypanel.panel1.Controls.Clear()
+                                                       ChildForm2(Banking_Main)
+                                                   End Sub
+                    AddHandler card.Button1.Click, Sub()
+                                                       If Global_Attributes.banking_payment_done = 0 Then
+                                                           MessageBox.Show("Please make payment first!")
+                                                           Return
+                                                       End If
+                                                       selected_cab = availableCabId
+                                                       newcab = 1
+                                                       cost = price
+                                                       Dim email As String = ""
+                                                       Dim contactNo As String = ""
+                                                       Dim name As String = ""
+                                                       Dim sid As Integer = transport_landingPage.SID
+
+                                                       ' SQL query to fetch data from the User table based on SID
+                                                       Dim selectQuery As String = "SELECT Name, EmailAddress, ContactNo FROM User WHERE SID = @sid"
+
+
+                                                       ' Open the connection
+                                                       conn2.Open()
+
+                                                       ' Create a command for SELECT query
+                                                       Using selectCommand As New MySqlCommand(selectQuery, conn2)
+                                                           ' Add parameters for SID
+                                                           selectCommand.Parameters.AddWithValue("@SID", sid)
+
+                                                           ' Execute the SELECT query and get the reader
+                                                           Using reader As MySqlDataReader = selectCommand.ExecuteReader()
+
+                                                               ' Check if there are rows returned
+                                                               If reader.HasRows Then
+                                                                   ' Read the data and store it in variables
+                                                                   reader.Read()
+                                                                   name = reader("Name").ToString()
+                                                                   email = reader("EmailAddress").ToString()
+                                                                   contactNo = reader("ContactNo").ToString()
+                                                               Else
+                                                                   MessageBox.Show("No data found for the given SID.")
+                                                               End If
+                                                           End Using
+
+
+                                                       End Using
+                                                       Dim userEmail = email
+                                                       Dim selectedCabId = selected_cab
+
+                                                       Dim checksqlQuery As String = "SELECT COUNT(*) FROM cab_user WHERE user_id = @SID"
+                                                       Using command As New MySqlCommand(checksqlQuery, conn2)
+                                                           command.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+
+                                                           Dim rowCount As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                                                           If rowCount = 0 Then
+                                                               ' SQL query to insert data into cab_users table
+                                                               Dim insertQuery As String = "INSERT INTO cab_user (user_id, name, email, phone, current_ride, current_from, current_to, current_arrival, current_cost) 
+                                                    VALUES (@SID, @Name, @EmailAddress, @ContactNo, @selectedCabId, @from, @to, @time, @price)"
+
+                                                               ' Create a command for INSERT query
+                                                               Using insertCommand As New MySqlCommand(insertQuery, conn2)
+                                                                   ' Add parameters for INSERT query
+                                                                   insertCommand.Parameters.AddWithValue("@SID", transport_landingPage.SID)
+                                                                   insertCommand.Parameters.AddWithValue("@Name", name)
+                                                                   insertCommand.Parameters.AddWithValue("@EmailAddress", email)
+                                                                   insertCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                   insertCommand.Parameters.AddWithValue("@ContactNo", contactNo)
+                                                                   insertCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                   insertCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                   insertCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                   insertCommand.Parameters.AddWithValue("@price", cost)
+
+                                                                   ' Execute the INSERT query
+                                                                   insertCommand.ExecuteNonQuery()
+                                                                   'MessageBox.Show("Data inserted successfully into cab_users table.")
+                                                               End Using
+                                                           Else
+                                                               Dim updateUserCabQuery = "UPDATE cab_user SET current_ride = @selectedCabId, current_from = @from, current_to=@to, current_arrival = @time,current_cost = @price WHERE user_id = @id"
+                                                               Using updateUserCabCommand As New MySqlCommand(updateUserCabQuery, conn2)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@id", transport_landingPage.SID)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@time", cab_arrival)
+                                                                   updateUserCabCommand.Parameters.AddWithValue("@price", cost)
+                                                                   updateUserCabCommand.ExecuteNonQuery()
+                                                               End Using
+                                                           End If
+                                                       End Using
+                                                       Dim isSharable = 1
+                                                       Dim vacancyquery = "SELECT max_limit FROM all_cabs WHERE cab_id=@cabId"
+                                                       Dim vacancies = -1
+                                                       Using command As New MySqlCommand(vacancyquery, conn2)
+                                                           command.Parameters.AddWithValue("@cabId", selectedCabId)
+                                                           Dim result = command.ExecuteScalar
+                                                           If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                                                               vacancies = Convert.ToInt32(result)
+                                                           End If
+                                                       End Using
+                                                       'MessageBox.Show(vacancies)
+                                                       Dim available = 0
+                                                       Dim updatecab = "UPDATE all_cabs SET is_available = @avail WHERE cab_id = @cabId"
+                                                       Using cmd2 As New MySqlCommand(updatecab, conn2)
+                                                           cmd2.Parameters.AddWithValue("@cabId", selectedCabId)
+                                                           cmd2.Parameters.AddWithValue("@avail", available)
+                                                           cmd2.ExecuteNonQuery()
+                                                       End Using
+                                                       'MessageBox.Show("OOF")
+                                                       Dim newPathId = -1
+                                                       'MessageBox.Show(transport_cabbooking.FromLocation & " " & transport_cabbooking.ToLocation)
+                                                       Dim newPathIdQuery = "SELECT path_id FROM cab_path WHERE from_node = @fromLocation AND to_node = @toLocation"
+                                                       Using newPathIdCommand As New MySqlCommand(newPathIdQuery, conn2)
+                                                           newPathIdCommand.Parameters.AddWithValue("@fromLocation", fromNodeId)
+                                                           newPathIdCommand.Parameters.AddWithValue("@toLocation", toNodeId)
+                                                           Dim result = newPathIdCommand.ExecuteScalar
+                                                           If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                                                               newPathId = Convert.ToInt32(result)
+                                                           End If
+                                                       End Using
+                                                       'MessageBox.Show(newPathId)
+                                                       'MessageBox.Show(selectedCabId)
+                                                       Dim insertRunningCabQuery = "INSERT INTO running_cabs (cab_id, path_id,from_location,to_location,depart_time,vacancies,is_sharable) VALUES (@selectedCabId, @newPathId,@from, @to, @depart,@vacancies, @shared)"
+                                                       Using insertRunningCabCommand As New MySqlCommand(insertRunningCabQuery, conn2)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@newPathId", newPathId)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@from", transport_cabbooking.FromLocation)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@to", transport_cabbooking.ToLocation)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@depart", transport_cabbooking.sqlFormattedDateTime)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@vacancies", vacancies - 1)
+                                                           insertRunningCabCommand.Parameters.AddWithValue("@shared", isSharable)
+                                                           insertRunningCabCommand.ExecuteNonQuery()
+                                                       End Using
+                                                       MessageBox.Show("Cab booking confirmed. Enjoy the ride!")
+                                                       conn2.Close()
+                                                   End Sub
                     FlowLayoutPanel1.Controls.Add(card)
                 Else
                     ' No available cabs
@@ -841,5 +1195,22 @@ Public Class transport_cabavailable
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
+    End Sub
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public Shared Sub ChildForm2(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
     End Sub
 End Class

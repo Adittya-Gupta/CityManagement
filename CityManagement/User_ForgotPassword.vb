@@ -50,6 +50,7 @@ Public Class ForgotPassword
         Return isPresent
     End Function
 
+
     Sub switchPanel(ByVal panel As Form)
         Panel1.Controls.Clear()
         panel.TopLevel = False
@@ -178,7 +179,11 @@ Public Class ForgotPassword
         If elapsedTime < 180 Then ' Check if the elapsed time is less than 180 seconds
             If TextBox1.Text.Equals(randomCode) Then
                 timer.Stop()
-                switchPanel(User_ChangePassword)
+                Dim Form As New User_ChangePassword()
+                Form.StartPosition = FormStartPosition.Manual
+                Form.Location = Me.Location ' Set the location of the new form to the current form's location
+                Form.Show()
+                Me.Close()
             ElseIf elapsedTime = 0 Then
                 MessageBox.Show("Please click on send code to get a code")
                 Return
@@ -221,12 +226,11 @@ Public Class ForgotPassword
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ' Open the login form when the button is clicked
         Dim LoginForm As New User_Login()
         LoginForm.StartPosition = FormStartPosition.Manual
         LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
+
         LoginForm.Show()
-        Me.Close()
     End Sub
 
 End Class

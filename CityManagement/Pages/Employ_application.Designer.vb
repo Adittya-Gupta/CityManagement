@@ -26,7 +26,6 @@ Partial Class EmployApplication
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        Label5 = New Label()
         applyBtn = New Button()
         profPic = New PictureBox()
         Details = New RichTextBox()
@@ -89,19 +88,10 @@ Partial Class EmployApplication
         Label3.TabIndex = 33
         Label3.Text = "Contact Number*"
         ' 
-        ' Label5
-        ' 
-        Label5.Font = New Font("Exo 2", 15F, FontStyle.Bold)
-        Label5.Location = New Point(895, 145)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(179, 35)
-        Label5.TabIndex = 35
-        Label5.Text = "Profile Picture"
-        ' 
         ' applyBtn
         ' 
         applyBtn.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        applyBtn.BackgroundImage = My.Resources.Resources.Employ_button
+        applyBtn.BackgroundImage = Employ_button
         applyBtn.Cursor = Cursors.Hand
         applyBtn.FlatAppearance.BorderColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         applyBtn.FlatStyle = FlatStyle.Flat
@@ -116,9 +106,9 @@ Partial Class EmployApplication
         ' 
         ' profPic
         ' 
-        profPic.Image = My.Resources.Resources.Employ_prof_pic
-        profPic.InitialImage = My.Resources.Resources.Employ_prof_pic
-        profPic.Location = New Point(761, 84)
+        profPic.Image = Employ_prof_pic
+        profPic.InitialImage = Employ_prof_pic
+        profPic.Location = New Point(745, 93)
         profPic.Name = "profPic"
         profPic.Size = New Size(231, 227)
         profPic.TabIndex = 37
@@ -157,7 +147,7 @@ Partial Class EmployApplication
         Document.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Document.Cursor = Cursors.Hand
         Document.Font = New Font("Exo 2", 17F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Document.Image = My.Resources.Resources.Employ_rect
+        Document.Image = Employ_rect
         Document.Location = New Point(181, 513)
         Document.Name = "Document"
         Document.Size = New Size(766, 76)
@@ -168,8 +158,8 @@ Partial Class EmployApplication
         ' upload
         ' 
         upload.Cursor = Cursors.Hand
-        upload.Image = My.Resources.Resources.Employ_Upload
-        upload.Location = New Point(974, 271)
+        upload.Image = Employ_Upload
+        upload.Location = New Point(957, 278)
         upload.Name = "upload"
         upload.Size = New Size(58, 52)
         upload.TabIndex = 46
@@ -261,8 +251,7 @@ Partial Class EmployApplication
         ' 
         ' EmployApplication
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         ClientSize = New Size(1107, 705)
         Controls.Add(bankAcc)
@@ -281,7 +270,6 @@ Partial Class EmployApplication
         Controls.Add(Details)
         Controls.Add(profPic)
         Controls.Add(applyBtn)
-        Controls.Add(Label5)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -298,7 +286,6 @@ Partial Class EmployApplication
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents applyBtn As Button
     Friend WithEvents profPic As PictureBox
     Friend WithEvents Details As RichTextBox

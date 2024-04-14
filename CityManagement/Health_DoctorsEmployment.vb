@@ -159,7 +159,7 @@ Public Class Health_DoctorsEmployment
                             ' Create and configure a Button to display hospital information
                             Dim button As New Button()
                             button.Name = "HospitalButton" & hosID
-                            button.Width = 800
+                            button.Width = 920
                             button.Height = 50
                             button.BackColor = Color.FromArgb(235, 231, 231)
                             button.Text = $"{hosName}                        {hosLocation}                        {vacancyCount}"

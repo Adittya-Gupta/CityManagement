@@ -45,7 +45,7 @@ Partial Class transport_busSearch
         Button1.ForeColor = Color.Transparent
         Button1.Location = New Point(852, 0)
         Button1.Name = "Button1"
-        Button1.Size = New Size(153, 62)
+        Button1.Size = New Size(253, 62)
         Button1.TabIndex = 0
         Button1.Text = "Main Page"
         Button1.UseVisualStyleBackColor = False
@@ -57,7 +57,7 @@ Partial Class transport_busSearch
         PictureBox1.Image = world_map_homepage_e1619301116606_1
         PictureBox1.Location = New Point(2, 68)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1003, 689)
+        PictureBox1.Size = New Size(1103, 689)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
@@ -84,7 +84,7 @@ Partial Class transport_busSearch
         ComboBox1.Items.AddRange(New Object() {"Rajeev Chowk(B)", "Martin School(A)", "BT hospital(L)", "Public park(M)", "Main Market(J)", "Gym(K)", "RK plaza(I)", "Manipal University(C)", "BHK Mall(D)", "RH Chowraha(E)", "Government Office(N)", "Cricket Ground(O)", "Mk Hospital(P)", "General playground(Q)", "BH Bazar(G)", "Football ground(F)"})
         ComboBox1.Location = New Point(47, 287)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(204, 33)
+        ComboBox1.Size = New Size(234, 33)
         ComboBox1.TabIndex = 4
         ' 
         ' ComboBox2
@@ -93,9 +93,9 @@ Partial Class transport_busSearch
         ComboBox2.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
         ComboBox2.Items.AddRange(New Object() {"Rajeev Chowk(B)", "Martin School(A)", "BT hospital(L)", "Public park(M)", "Main Market(J)", "Gym(K)", "RK plaza(I)", "Manipal University(C)", "BHK Mall(D)", "RH Chowraha(E)", "Government Office(N)", "Cricket Ground(O)", "Mk Hospital(P)", "General playground(Q)", "BH Bazar(G)", "Football ground(F)"})
-        ComboBox2.Location = New Point(286, 287)
+        ComboBox2.Location = New Point(342, 287)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(180, 33)
+        ComboBox2.Size = New Size(224, 33)
         ComboBox2.TabIndex = 5
         ' 
         ' Label2
@@ -120,7 +120,7 @@ Partial Class transport_busSearch
         Label3.BorderStyle = BorderStyle.Fixed3D
         Label3.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         Label3.ForeColor = Color.DimGray
-        Label3.Location = New Point(286, 250)
+        Label3.Location = New Point(342, 257)
         Label3.Name = "Label3"
         Label3.Size = New Size(41, 27)
         Label3.TabIndex = 7
@@ -134,7 +134,7 @@ Partial Class transport_busSearch
         Button3.ForeColor = Color.Transparent
         Button3.Location = New Point(342, 366)
         Button3.Name = "Button3"
-        Button3.Size = New Size(124, 56)
+        Button3.Size = New Size(224, 56)
         Button3.TabIndex = 8
         Button3.Text = "Search"
         Button3.UseVisualStyleBackColor = False
@@ -172,9 +172,8 @@ Partial Class transport_busSearch
         ' 
         ' transport_busSearch
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1007, 760)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 760)
         Controls.Add(DateTimePicker1)
         Controls.Add(Label4)
         Controls.Add(Button3)

@@ -29,14 +29,14 @@ Partial Class Doctor_Emp_Req
         Label4 = New Label()
         Label5 = New Label()
         Label1 = New Label()
-        Label6 = New Label()
+        Button4 = New Button()
         SuspendLayout()
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Microsoft Sans Serif", 14.0F, FontStyle.Bold)
+        Label3.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Bold)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(27, 61)
         Label3.Name = "Label3"
@@ -49,7 +49,7 @@ Partial Class Doctor_Emp_Req
         Button2.FlatAppearance.BorderColor = SystemColors.Control
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Image = My.Resources.Resources.Group_190
         Button2.Location = New Point(589, 56)
@@ -65,7 +65,7 @@ Partial Class Doctor_Emp_Req
         Button1.FlatAppearance.BorderColor = SystemColors.Control
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.Group_1891
         Button1.Location = New Point(735, 56)
@@ -79,7 +79,7 @@ Partial Class Doctor_Emp_Req
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 14.0F, FontStyle.Bold)
+        Label2.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Bold)
         Label2.Location = New Point(79, 31)
         Label2.Name = "Label2"
         Label2.Size = New Size(83, 24)
@@ -89,7 +89,7 @@ Partial Class Doctor_Emp_Req
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
         Label4.Location = New Point(168, 30)
         Label4.Name = "Label4"
         Label4.Size = New Size(141, 25)
@@ -99,7 +99,7 @@ Partial Class Doctor_Emp_Req
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
         Label5.Location = New Point(168, 61)
         Label5.Name = "Label5"
         Label5.Size = New Size(110, 25)
@@ -109,29 +109,35 @@ Partial Class Doctor_Emp_Req
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.0F)
+        Label1.Font = New Font("Segoe UI", 14F)
         Label1.Location = New Point(672, 19)
         Label1.Name = "Label1"
         Label1.Size = New Size(67, 25)
         Label1.TabIndex = 28
         Label1.Text = "Label1"
         ' 
-        ' Label6
+        ' Button4
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
-        Label6.Location = New Point(386, 47)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(117, 25)
-        Label6.TabIndex = 29
-        Label6.Text = "Resume.pdf"
+        Button4.BackColor = Color.Black
+        Button4.FlatAppearance.BorderColor = SystemColors.Control
+        Button4.FlatAppearance.BorderSize = 0
+        Button4.FlatStyle = FlatStyle.Flat
+        Button4.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button4.ForeColor = Color.Transparent
+        Button4.Location = New Point(387, 52)
+        Button4.Margin = New Padding(3, 2, 3, 2)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(114, 34)
+        Button4.TabIndex = 30
+        Button4.Text = "Resume.pdf"
+        Button4.UseVisualStyleBackColor = False
         ' 
         ' Doctor_Emp_Req
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        Controls.Add(Label6)
+        Controls.Add(Button4)
         Controls.Add(Label1)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -153,6 +159,6 @@ Partial Class Doctor_Emp_Req
     Friend WithEvents Button3 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Button4 As Button
 
 End Class

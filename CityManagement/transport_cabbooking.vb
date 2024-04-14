@@ -51,7 +51,6 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
         Try
             ' SQL query to fetch Designation from User table based on SID
             Dim selectQuery As String = "SELECT Designation FROM User WHERE SID = @SID"

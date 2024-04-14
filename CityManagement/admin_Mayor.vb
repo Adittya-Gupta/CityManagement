@@ -37,15 +37,15 @@ Public Class admin_Mayor
 
                         ' Load images into PictureBoxes based on the values
                         If nomination = 0 Then
-                            PictureBox1.ImageLocation = "C:\Users\tsriv\Downloads\nominate-0.png"
+                            PictureBox1.ImageLocation = "..\..\..\MediaFiles\nominate-0.png"
                         Else
-                            PictureBox1.ImageLocation = "C:\Users\tsriv\Downloads\nominate-1.png"
+                            PictureBox1.ImageLocation = "..\..\..\MediaFiles\nominate-1.png"
                         End If
 
                         If voting = 0 Then
-                            PictureBox2.ImageLocation = "C:\Users\tsriv\Downloads\vote-0.png"
+                            PictureBox2.ImageLocation = "..\..\..\MediaFiles\vote-0.png"
                         Else
-                            PictureBox2.ImageLocation = "C:\Users\tsriv\Downloads\vote-1.png"
+                            PictureBox2.ImageLocation = "..\..\..\MediaFiles\vote-1.png"
                         End If
                     End If
                 End Using
@@ -67,6 +67,8 @@ Public Class admin_Mayor
 
         ' Reload the form to reflect the changes
         LoadImagesFromDatabase()
+
+
     End Sub
 
     Private Sub ToggleNominationValue()
@@ -80,11 +82,30 @@ Public Class admin_Mayor
 
             ' Create MySqlCommand object
             Using cmd As New MySqlCommand(query, conn)
-                ' Execute the command
+                ' Execute the first query
                 cmd.ExecuteNonQuery()
+
+                ' Check if Nomination = -1 after the update
+                query = "SELECT Nomination FROM ElectionCommissioner"
+                Using cmdCheckNomination As New MySqlCommand(query, conn)
+                    Dim result As Integer = CInt(cmdCheckNomination.ExecuteScalar())
+
+                    ' If Nomination = 1, update values in Voters table
+                    If result = -1 Then
+                        ' Define the SQL query to update values in Voters table
+                        Dim updateVotersQuery As String = "UPDATE Voters SET Health = -2, Education = -2, Muncipal = -2, Commerce = -2, Transportation = -2"
+
+                        ' Create MySqlCommand object
+                        Using cmdUpdateVoters As New MySqlCommand(updateVotersQuery, conn)
+                            ' Execute the update query for Voters table
+                            cmdUpdateVoters.ExecuteNonQuery()
+                        End Using
+                    End If
+                End Using
             End Using
         End Using
     End Sub
+
 
     Private Sub ToggleVotingValue()
         ' Create MySqlConnection object
@@ -92,16 +113,103 @@ Public Class admin_Mayor
             ' Open the connection
             conn.Open()
 
-            ' Define the SQL query to update Voting value
-            Dim query As String = "UPDATE ElectionCommissioner SET Voting = ABS(Voting - 1), Nomination = 0"
+            ' Define the SQL query to fetch the current voting status
+            Dim query As String = "SELECT Voting FROM ElectionCommissioner"
 
             ' Create MySqlCommand object
             Using cmd As New MySqlCommand(query, conn)
-                ' Execute the command
-                cmd.ExecuteNonQuery()
+                ' Execute the command and get the current voting status
+                Dim currentVoting As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' Define the new voting status
+                Dim newVoting As Integer = Math.Abs(currentVoting - 1)
+
+                ' Define the SQL query to update Voting value
+                Dim updateQuery As String = $"UPDATE ElectionCommissioner SET Voting = {newVoting}, Nomination = 0"
+
+                ' Create MySqlCommand object for the update command
+                Using updateCmd As New MySqlCommand(updateQuery, conn)
+                    ' Execute the update command
+                    updateCmd.ExecuteNonQuery()
+
+                    ' Check if the voting has been changed to 0
+                    If newVoting = 0 Then
+                        ' If yes, update user designations
+                        UpdateUserDesignations()
+                    End If
+                End Using
+            End Using
+        End Using
+
+        ' Reload the form to reflect the changes
+        LoadImagesFromDatabase()
+    End Sub
+
+
+    Private Sub UpdateUserDesignations()
+        ' Create MySqlConnection object
+        Using conn As New MySqlConnection(connString)
+            ' Open the connection
+            conn.Open()
+
+            ' Clear previous ministers
+            Dim clearPreviousQuery As String = "UPDATE User SET Designation = 'Not Employed' WHERE Designation IN ('Education Minister', 'Health Minister', 'Home Minister', 'Transport Minister', 'Finance Minister')"
+            Using clearCmd As New MySqlCommand(clearPreviousQuery, conn)
+                clearCmd.ExecuteNonQuery()
+            End Using
+
+            ' Perform the provided query to get SIDs and corresponding Designations
+            Dim query As String = "WITH RankedNominees AS (
+                                SELECT 
+                                    n.SID,
+                                    n.Designation,
+                                    n.VoteCount,
+                                    u.Name as Name,
+                                    ROW_NUMBER() OVER (PARTITION BY n.Designation ORDER BY n.VoteCount DESC, u.DOB ASC) AS rank_within_designation
+                                FROM 
+                                    Nominees n
+                                INNER JOIN User u ON n.SID = u.SID
+                              )
+                              SELECT 
+                                  R.SID,
+                                  R.Designation
+                              FROM 
+                                  RankedNominees R
+                              WHERE 
+                                  rank_within_designation = 1"
+
+            ' Create MySqlCommand object
+            Using cmd As New MySqlCommand(query, conn)
+                ' Execute the query and create a data reader
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    ' Create lists to store SID and Designation
+                    Dim sids As New List(Of Integer)()
+                    Dim designations As New List(Of String)()
+
+                    ' Loop through the data reader and populate the lists
+                    While reader.Read()
+                        sids.Add(reader.GetInt32("SID"))
+                        designations.Add(reader.GetString("Designation"))
+                    End While
+
+                    ' Close the data reader
+                    reader.Close()
+
+                    ' Update Designations in Users table
+                    For i As Integer = 0 To sids.Count - 1
+                        Dim updateQuery As String = $"UPDATE User SET Designation = '{designations(i)}' WHERE SID = {sids(i)}"
+                        Using updateCmd As New MySqlCommand(updateQuery, conn)
+                            updateCmd.ExecuteNonQuery()
+                        End Using
+                    Next
+                End Using
             End Using
         End Using
     End Sub
+
+
+
+
 
     Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter
         Me.Label1.Cursor = Cursors.Hand

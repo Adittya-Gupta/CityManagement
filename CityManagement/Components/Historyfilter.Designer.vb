@@ -39,7 +39,7 @@ Partial Class Historyfilter
         ' 
         CheckBox1.Appearance = Appearance.Button
         CheckBox1.BackColor = Color.Black
-        CheckBox1.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox1.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox1.ForeColor = Color.White
         CheckBox1.Location = New Point(12, 50)
         CheckBox1.Margin = New Padding(0)
@@ -53,7 +53,7 @@ Partial Class Historyfilter
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Abhaya Libre Medium", 10.0F)
+        Label5.Font = New Font("Abhaya Libre Medium", 10F)
         Label5.Location = New Point(122, 9)
         Label5.Name = "Label5"
         Label5.Size = New Size(130, 25)
@@ -65,7 +65,7 @@ Partial Class Historyfilter
         ' 
         CheckBox2.Appearance = Appearance.Button
         CheckBox2.BackColor = Color.Black
-        CheckBox2.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox2.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox2.ForeColor = Color.White
         CheckBox2.Location = New Point(9, 164)
         CheckBox2.Margin = New Padding(0)
@@ -81,7 +81,7 @@ Partial Class Historyfilter
         ' 
         CheckBox3.Appearance = Appearance.Button
         CheckBox3.BackColor = Color.Black
-        CheckBox3.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox3.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox3.ForeColor = Color.White
         CheckBox3.Location = New Point(9, 320)
         CheckBox3.Margin = New Padding(0)
@@ -97,7 +97,7 @@ Partial Class Historyfilter
         ' 
         CheckBox4.Appearance = Appearance.Button
         CheckBox4.BackColor = Color.Black
-        CheckBox4.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox4.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox4.ForeColor = Color.White
         CheckBox4.Location = New Point(183, 241)
         CheckBox4.Margin = New Padding(0)
@@ -113,7 +113,7 @@ Partial Class Historyfilter
         ' 
         CheckBox5.Appearance = Appearance.Button
         CheckBox5.BackColor = Color.Black
-        CheckBox5.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox5.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox5.ForeColor = Color.White
         CheckBox5.Location = New Point(9, 241)
         CheckBox5.Margin = New Padding(0)
@@ -129,7 +129,7 @@ Partial Class Historyfilter
         ' 
         CheckBox6.Appearance = Appearance.Button
         CheckBox6.BackColor = Color.Black
-        CheckBox6.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox6.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox6.ForeColor = Color.White
         CheckBox6.Location = New Point(183, 164)
         CheckBox6.Margin = New Padding(0)
@@ -144,7 +144,7 @@ Partial Class Historyfilter
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Abhaya Libre Medium", 10.0F)
+        Label6.Font = New Font("Abhaya Libre Medium", 10F)
         Label6.Location = New Point(122, 128)
         Label6.Name = "Label6"
         Label6.Size = New Size(130, 25)
@@ -156,7 +156,7 @@ Partial Class Historyfilter
         ' 
         CheckBox7.Appearance = Appearance.Button
         CheckBox7.BackColor = Color.Black
-        CheckBox7.Font = New Font("Abhaya Libre Medium", 10.0F)
+        CheckBox7.Font = New Font("Abhaya Libre Medium", 10F)
         CheckBox7.ForeColor = Color.White
         CheckBox7.Location = New Point(183, 320)
         CheckBox7.Margin = New Padding(0)
@@ -171,7 +171,7 @@ Partial Class Historyfilter
         ' Button2
         ' 
         Button2.BackColor = Color.FromArgb(CByte(166), CByte(2), CByte(2))
-        Button2.Font = New Font("Abhaya Libre Medium", 10.0F)
+        Button2.Font = New Font("Abhaya Libre Medium", 10F)
         Button2.ForeColor = Color.White
         Button2.Location = New Point(178, 405)
         Button2.Name = "Button2"
@@ -183,7 +183,7 @@ Partial Class Historyfilter
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(37), CByte(2), CByte(156))
-        Button1.Font = New Font("Abhaya Libre Medium", 10.0F)
+        Button1.Font = New Font("Abhaya Libre Medium", 10F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(9, 405)
         Button1.Name = "Button1"
@@ -194,8 +194,7 @@ Partial Class Historyfilter
         ' 
         ' Historyfilter
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(361, 469)
         Controls.Add(Button2)

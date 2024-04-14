@@ -6,8 +6,10 @@ Public Class SerReq_worker_accepted
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim requestId As Integer
+    Dim clientID As Integer
     ' Constructor with optional parameters
     Public Sub New(ByVal id As Integer,
+                   Optional ByVal clientId As Integer = -1,
                   Optional ByVal name As String = "Name",
                    Optional ByVal serviceTime As String = "Will be updated",
                    Optional ByVal billAmount As String = "To be Decided",
@@ -20,6 +22,7 @@ Public Class SerReq_worker_accepted
         TextBox1.Text = serviceTime
         TextBox2.Text = billAmount
         requestId = id
+        Me.clientID = clientId
 
         If profpic IsNot Nothing AndAlso profpic.Length > 0 Then
             ' Convert byte array to image
@@ -62,6 +65,28 @@ Public Class SerReq_worker_accepted
                 cmd.Parameters.AddWithValue("@id", requestId)
                 cmd.ExecuteNonQuery()
             End Using
+
+            If newStatus = "InProgress" Then
+                ' Insert a notification for the client
+                Dim msg As String = "Your service requirement is completed. Payment due: " & TextBox2.Text
+                Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@clientID", clientID)
+                    cmd2.Parameters.AddWithValue("@msg", msg)
+                    cmd2.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Work Done. Payment notification sent to the client.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf newStatus = "Cancelled" Then
+                ' Insert a notification for the client
+                Dim msg As String = "Your service request has been cancelled."
+                Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@clientID", clientID)
+                    cmd2.Parameters.AddWithValue("@msg", msg)
+                    cmd2.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Service request cancelled. Notification sent to the client.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
 
             ' After updating the status, call LoadServiceRequests() from the parent form
             Dim parentForm As Services_WorkSect = TryCast(Me.ParentForm, Services_WorkSect)

@@ -199,9 +199,13 @@ Public Class election_dashboard
 
     Private Sub nomination_portal_Click(sender As Object, e As EventArgs) Handles nomination_portal.Click
         If isNominationPeriod And eligibleToNominate Then
-            Dim nominationPortal As New elections_nomination()
-            nominationPortal.Show()
-            Me.Hide()
+
+            mypanel.panel1.Controls.Clear()
+            Dim form As New elections_nomination()
+
+            form.TopLevel = False
+            mypanel.panel1.Controls.Add(form)
+            form.Show()
         ElseIf Not isNominationPeriod Then
             MessageBox.Show("The current period is not Nomination Period,Please try in nomination Period", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf Not eligibleToNominate Then

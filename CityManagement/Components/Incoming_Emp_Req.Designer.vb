@@ -52,7 +52,7 @@ Partial Class Incoming_Emp_Req
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Image = Group_190
-        Button2.Location = New Point(605, 81)
+        Button2.Location = New Point(681, 81)
         Button2.Name = "Button2"
         Button2.Size = New Size(130, 45)
         Button2.TabIndex = 20
@@ -67,7 +67,7 @@ Partial Class Incoming_Emp_Req
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
         Button1.Image = Group_1891
-        Button1.Location = New Point(756, 81)
+        Button1.Location = New Point(826, 81)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 45)
         Button1.TabIndex = 19
@@ -123,9 +123,8 @@ Partial Class Incoming_Emp_Req
         ' 
         ' Incoming_Emp_Req
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(217, 217, 217)
+        AutoScaleMode = AutoScaleMode.None
+        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(Label1)
         Controls.Add(Button3)
         Controls.Add(Label4)

@@ -99,8 +99,7 @@ Partial Class Incoming_details
         ' 
         ' Incoming_details
         ' 
-        AutoScaleDimensions = New SizeF(10F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Controls.Add(Button1)
         Controls.Add(RichTextBox3)
         Controls.Add(Label3)

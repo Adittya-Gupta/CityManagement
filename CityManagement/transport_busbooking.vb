@@ -131,23 +131,34 @@ Public Class transport_busbooking
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If String.IsNullOrWhiteSpace(TextBox9.Text) OrElse String.IsNullOrWhiteSpace(TextBox10.Text) Then
+            MessageBox.Show("Please enter your phone number and email address.")
+            Return
+        End If
+
+        If Global_Attributes.banking_payment_done = 0 Then
+            MessageBox.Show("Make Payment First")
+            Return
+        End If
+
+
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
-        Dim document = New PdfDocument()
+        Dim document = New PdfDocument
         Dim margin As Double = 10
 
         ' Add a page.
-        Dim page = document.Pages.Add()
+        Dim page = document.Pages.Add
 
         ' Generate the ticket name with the current time.
-        Dim ticketName As String = "Tickets" & DateTime.Now.ToString("yyyyMMddHHmmss")
+        Dim ticketName = "Tickets" & Date.Now.ToString("yyyyMMddHHmmss")
 
-        Dim ticketContent As String = $"Bus Ticket
+        Dim ticketContent = $"Bus Ticket
 -----------------------------------------
 From: {_from}
 To: {_endpoint}
-Date: {DateTime.Now.ToString("dd/MM/yyyy")}
-Time: {DateTime.Now.ToString("HH:mm")}
+Date: {Date.Now.ToString("dd/MM/yyyy")}
+Time: {Date.Now.ToString("HH:mm")}
 -----------------------------------------
 Driver: {Label28.Text}
 Driver Number: {Label29.Text}
@@ -162,7 +173,7 @@ Your Email Address: {TextBox10.Text}
 -----------------------------------------
 Thank you for choosing our service!"
         ' Write the ticket name on the PDF.
-        Using formattedText = New PdfFormattedText()
+        Using formattedText = New PdfFormattedText
             formattedText.TextAlignment = PdfTextAlignment.Center
             formattedText.MaxTextWidth = 200
             formattedText.Append(ticketContent)
@@ -175,8 +186,8 @@ Thank you for choosing our service!"
         End Using
 
         ' Specify the path where you want to save the PDF file.
-        Dim myDocumentsPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-        Dim filePath As String = Path.Combine(myDocumentsPath, ticketName & ".pdf")
+        Dim myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        Dim filePath = Path.Combine(myDocumentsPath, ticketName & ".pdf")
 
         ' Save the PDF document to the specified path.
         document.Save(filePath)
@@ -186,5 +197,43 @@ Thank you for choosing our service!"
 
         MessageBox.Show("PDF file Downloaded! Check your MyDocuments for the Pdf file")
 
+        Global_Attributes.banking_payment_done = 0
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If String.IsNullOrWhiteSpace(TextBox9.Text) OrElse String.IsNullOrWhiteSpace(TextBox10.Text) Then
+            MessageBox.Show("Please enter your phone number and email address.")
+            Return
+        End If
+
+        banking_recv_username = "transport"
+        Go_Back = 2
+        Go_Back_Form = Me
+        banking_payment_amount = Label22.Text
+
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+
+        ChildForm(Banking_Main.Panel1, Banking_Homepage)
+        mypanel.panel1.Controls.Clear()
+        ChildForm2(Banking_Main)
+
+    End Sub
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public Shared Sub ChildForm2(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
     End Sub
 End Class

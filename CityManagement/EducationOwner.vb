@@ -159,7 +159,19 @@ Public Class EducationOwner
 
         ' Reload the workerEmployReq after processing the click event
         LoadOwnerRequests()
+
+        ' Additional query to update the designation
+        Dim query2 As String = "UPDATE User SET Designation = 'Teacher' WHERE SID = @userID"
+        Using conn As New MySqlConnection("server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none")
+            conn.Open()
+            Using cmd2 As New MySqlCommand(query2, conn)
+                cmd2.Parameters.AddWithValue("@userID", userID)
+                cmd2.ExecuteNonQuery()
+                conn.Close()
+            End Using
+        End Using
     End Sub
+
 
     Private Sub lblReject_Click(sender As Object, e As EventArgs)
         ' Handle lblReject click event

@@ -77,7 +77,7 @@ Public Class elections_nomination
         'mypanel.Panel1.Controls.Add(form)
         'form.Show()
         banking_recv_username = "mayor"
-        Go_Back = 1
+        Go_Back = 2
         Go_Back_Form = election_dashboard
         banking_payment_amount = 100
 

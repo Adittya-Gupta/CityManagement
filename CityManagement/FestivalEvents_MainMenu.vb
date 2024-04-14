@@ -72,9 +72,12 @@ Public Class FestivalEvents_MainMenu
                     Dim time As String = "Time: " + datetime.ToString("hh:mm tt")
                     eventCard.Label3.Text = date1
                     eventCard.Label4.Text = time
-                    Dim img As Byte() = DirectCast(reader("Image"), Byte())
-                    Dim ms As New IO.MemoryStream(img)
-                    eventCard.PictureBox1.Image = Image.FromStream(ms)
+                    ' Check if Image data is NULL
+                    If Not IsDBNull(reader("Image")) Then
+                        Dim img As Byte() = DirectCast(reader("Image"), Byte())
+                        Dim ms As New IO.MemoryStream(img)
+                        eventCard.PictureBox1.Image = Image.FromStream(ms)
+                    End If
 
                     ' Add event card to the flow layout panel
                     FlowLayoutPanel1.Controls.Add(eventCard)

@@ -25,7 +25,6 @@ Partial Class User_Profile
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_Profile))
         Label1 = New Label()
         Label2 = New Label()
-        PictureBox1 = New PictureBox()
         NotificationPanel = New Panel()
         NameLabel = New Label()
         PictureBox2 = New PictureBox()
@@ -51,7 +50,8 @@ Partial Class User_Profile
         Label12 = New Label()
         LogoutButton = New Button()
         AdminButton = New Button()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2 = New Panel()
+        Panel3 = New Panel()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -79,18 +79,6 @@ Partial Class User_Profile
         Label2.Size = New Size(108, 25)
         Label2.TabIndex = 1
         Label2.Text = "Dashboard"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.notification
-        PictureBox1.Image = My.Resources.Resources.notification
-        PictureBox1.Location = New Point(231, 0)
-        PictureBox1.Margin = New Padding(4, 6, 4, 6)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(27, 31)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 2
-        PictureBox1.TabStop = False
         ' 
         ' NotificationPanel
         ' 
@@ -336,7 +324,6 @@ Partial Class User_Profile
         ' 
         Panel1.BackColor = Color.LightGray
         Panel1.Controls.Add(Label10)
-        Panel1.Controls.Add(PictureBox1)
         Panel1.Location = New Point(44, 404)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(258, 32)
@@ -398,12 +385,29 @@ Partial Class User_Profile
         AdminButton.Text = "ADMIN PAGE"
         AdminButton.UseVisualStyleBackColor = True
         ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel2.Location = New Point(407, 313)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(654, 1)
+        Panel2.TabIndex = 29
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel3.Location = New Point(44, 382)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(257, 1)
+        Panel3.TabIndex = 30
+        ' 
         ' User_Profile
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 760)
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
         Controls.Add(ListBox1)
         Controls.Add(AdminButton)
         Controls.Add(LogoutButton)
@@ -435,7 +439,6 @@ Partial Class User_Profile
         Margin = New Padding(4, 6, 4, 6)
         Name = "User_Profile"
         Text = "Profile"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -446,7 +449,6 @@ Partial Class User_Profile
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents NotificationPanel As Panel
     Friend WithEvents NameLabel As Label
     Friend WithEvents PictureBox2 As PictureBox
@@ -472,4 +474,6 @@ Partial Class User_Profile
     Friend WithEvents Label12 As Label
     Friend WithEvents LogoutButton As Button
     Friend WithEvents AdminButton As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
 End Class

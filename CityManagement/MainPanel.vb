@@ -163,9 +163,9 @@
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        CLearPanels()
+        CLearPanels
         ChildForm2(Newsletter_Main.Panel1, Newsletter_Homepage)
-        mypanel.panel1.Controls.Clear()
+        mypanel.panel1.Controls.Clear
         ChildForm(Newsletter_Main)
     End Sub
 

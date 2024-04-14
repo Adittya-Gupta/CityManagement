@@ -10,9 +10,9 @@ Public Class elections_apply_for_voter
     Dim conn As New MySqlConnection(connString)
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Dim form As New election_dashboard()
-        mypanel.Panel1.Controls.Clear()
+        mypanel.panel1.Controls.Clear()
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
     Private Sub apply_Click_1(sender As Object, e As EventArgs) Handles apply.Click

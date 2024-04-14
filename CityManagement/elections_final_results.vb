@@ -15,7 +15,7 @@ Public Class elections_final_results
         Try
             conn.Open()
             Dim previousControlBottom As Integer = 0
-            Dim query As String = "SELECT N.Designation, MAX(VoteCount) AS MaxVotes,Name,N.SID as SID, (SELECT VoteCount FROM Nominees WHERE Designation = N.Designation ORDER BY VoteCount DESC LIMIT 1, 1) AS SecondMaxVotes FROM Nominees N INNER JOIN User on N.SID = User.SID GROUP BY N.Designation"
+            Dim query As String = "WITH RankedNominees AS (SELECT n.SID,n.Designation,n.VoteCount,u.Name as Name,ROW_NUMBER() OVER (PARTITION BY n.Designation ORDER BY n.VoteCount DESC, u.DOB ASC) AS rank_within_designation FROM Nominees n INNER JOIN User u ON n.SID = u.SID) SELECT R.Designation,R.SID,R.Name,(SELECT MAX(VoteCount) FROM RankedNominees WHERE Designation = R.Designation) AS MaxVotes,COALESCE((SELECT VoteCount FROM RankedNominees WHERE Designation = R.Designation AND rank_within_designation = 2), 0) AS SecondMaxVotes FROM RankedNominees R WHERE rank_within_designation = 1"
             Using cmd As New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 While reader.Read()
@@ -27,8 +27,8 @@ Public Class elections_final_results
                     minister.NomineeName = Convert.ToString(reader("Name"))
                     minister.NomineeSID = Convert.ToInt32(reader("SID"))
                     minister.Designation = Convert.ToString(reader("Designation"))
-                    Dim maxVotes As Integer = reader.GetInt32(1)
-                    Dim secondMaxVotes As Integer = If(reader.IsDBNull(2), 0, reader.GetInt32(4))
+                    Dim maxVotes As Integer = reader.GetInt32(3)
+                    Dim secondMaxVotes As Integer = reader.GetInt32(4)
                     minister.NomineevMargin = maxVotes - secondMaxVotes
                     previousControlBottom = minister.Bottom
                     Candidates.Controls.Add(minister)

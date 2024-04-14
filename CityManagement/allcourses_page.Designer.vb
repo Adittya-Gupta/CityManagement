@@ -23,50 +23,25 @@ Partial Class allcourses_page
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(allcourses_page))
-        Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Label3 = New Label()
         Button4 = New Button()
         PictureBox6 = New PictureBox()
-        PictureBox7 = New PictureBox()
+        Education = New Button()
+        Button1 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.Silver
-        Label1.Location = New Point(28, 20)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(129, 29)
-        Label1.TabIndex = 2
-        Label1.Text = "Education"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(163, 20)
+        PictureBox1.Location = New Point(151, 26)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(24, 23)
+        PictureBox1.Size = New Size(21, 17)
         PictureBox1.TabIndex = 6
         PictureBox1.TabStop = False
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.Black
-        Label3.Location = New Point(206, 20)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(110, 29)
-        Label3.TabIndex = 7
-        Label3.Text = "Courses"
         ' 
         ' Button4
         ' 
@@ -74,9 +49,10 @@ Partial Class allcourses_page
         Button4.FlatStyle = FlatStyle.Popup
         Button4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.WhiteSmoke
-        Button4.Location = New Point(714, 12)
+        Button4.Location = New Point(495, 9)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Size = New Size(351, 62)
+        Button4.Size = New Size(360, 48)
         Button4.TabIndex = 22
         Button4.Text = "what do you want to learn?"
         Button4.UseVisualStyleBackColor = False
@@ -85,49 +61,60 @@ Partial Class allcourses_page
         ' 
         PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), Image)
         PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox6.Location = New Point(1138, 12)
+        PictureBox6.Location = New Point(851, 9)
+        PictureBox6.Margin = New Padding(3, 2, 3, 2)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(86, 62)
+        PictureBox6.Size = New Size(75, 48)
         PictureBox6.TabIndex = 44
         PictureBox6.TabStop = False
         ' 
-        ' PictureBox7
+        ' Education
         ' 
-        PictureBox7.BackColor = SystemColors.ActiveCaptionText
-        PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), Image)
-        PictureBox7.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox7.BorderStyle = BorderStyle.Fixed3D
-        PictureBox7.Location = New Point(1062, 12)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(70, 62)
-        PictureBox7.TabIndex = 45
-        PictureBox7.TabStop = False
+        Education.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Education.ForeColor = SystemColors.ActiveBorder
+        Education.Location = New Point(24, 18)
+        Education.Margin = New Padding(3, 2, 3, 2)
+        Education.Name = "Education"
+        Education.Size = New Size(122, 31)
+        Education.TabIndex = 46
+        Education.Text = "Education"
+        Education.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = SystemColors.ActiveCaptionText
+        Button1.Location = New Point(178, 20)
+        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(108, 29)
+        Button1.TabIndex = 47
+        Button1.Text = "Courses"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' allcourses_page
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.Control
+        BackColor = Color.White
         BackgroundImageLayout = ImageLayout.Zoom
-        ClientSize = New Size(1236, 849)
-        Controls.Add(PictureBox7)
+        ClientSize = New Size(953, 535)
+        Controls.Add(Button1)
+        Controls.Add(Education)
         Controls.Add(PictureBox6)
         Controls.Add(Button4)
-        Controls.Add(Label3)
         Controls.Add(PictureBox1)
-        Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "allcourses_page"
         Text = "allcourses_page"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Education As Button
+    Friend WithEvents Button1 As Button
 End Class

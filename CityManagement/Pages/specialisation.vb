@@ -2,9 +2,9 @@
 Imports Windows.Media.Capture
 
 Public Class specialisation
-    Dim spec As String = ""
-    Dim rate As String = ""
-    Dim gin As String = ""
+    Shared spec As String = ""
+    Shared rate As String = ""
+    Shared gin As String = ""
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click
@@ -147,7 +147,7 @@ Public Class specialisation
         End If
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
-            'command.Parameters.AddWithValue("@gin", gin)
+            command.Parameters.AddWithValue("@gin", gin)
             command.Parameters.AddWithValue("@spec", spec)
             If (rate <> "") Then command.Parameters.AddWithValue("@rate", Convert.ToInt32(rate))
 

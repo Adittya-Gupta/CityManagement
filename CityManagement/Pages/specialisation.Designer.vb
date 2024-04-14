@@ -65,19 +65,18 @@ Partial Class specialisation
         ' ComboBox2
         ' 
         ComboBox2.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ComboBox2.DrawMode = DrawMode.OwnerDrawVariable
         ComboBox2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
         ComboBox2.ImeMode = ImeMode.NoControl
-        ComboBox2.IntegralHeight = False
-        ComboBox2.ItemHeight = 24
+        ComboBox2.ItemHeight = 19
         ComboBox2.Items.AddRange(New Object() {"Heart Center", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
         ComboBox2.Location = New Point(427, 112)
         ComboBox2.Margin = New Padding(3, 4, 3, 4)
+        ComboBox2.MaxLength = 20
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(323, 30)
+        ComboBox2.Size = New Size(323, 27)
         ComboBox2.TabIndex = 31
         ComboBox2.Text = "    Select  Specialisation"
         ' 
@@ -95,7 +94,7 @@ Partial Class specialisation
         Guna2TextBox1.ForeColor = Color.Black
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Location = New Point(89, 101)
-        Guna2TextBox1.Margin = New Padding(5, 5, 5, 5)
+        Guna2TextBox1.Margin = New Padding(5)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
@@ -106,14 +105,16 @@ Partial Class specialisation
         ' 
         ' Guna2PictureBox2
         ' 
+        Guna2PictureBox2.BorderRadius = 1
+        Guna2PictureBox2.BorderStyle = BorderStyle.FixedSingle
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(824, 116)
+        Guna2PictureBox2.Location = New Point(819, 109)
         Guna2PictureBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2PictureBox2.Size = New Size(25, 25)
+        Guna2PictureBox2.Size = New Size(25, 28)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox2.TabIndex = 34
         Guna2PictureBox2.TabStop = False
@@ -122,34 +123,38 @@ Partial Class specialisation
         ' 
         ComboBox1.Font = New Font("Segoe UI", 11F)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(819, 109)
+        ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        ComboBox1.Location = New Point(843, 109)
         ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(114, 33)
+        ComboBox1.Size = New Size(72, 28)
         ComboBox1.TabIndex = 35
-        ComboBox1.Text = "      Rating"
+        ComboBox1.Text = " Rating"
         ' 
         ' ComboBox3
         ' 
         ComboBox3.Font = New Font("Segoe UI", 11F)
         ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(941, 109)
+        ComboBox3.Items.AddRange(New Object() {"Male", "Female"})
+        ComboBox3.Location = New Point(974, 109)
         ComboBox3.Margin = New Padding(3, 4, 3, 4)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(114, 33)
+        ComboBox3.Size = New Size(104, 28)
         ComboBox3.TabIndex = 36
-        ComboBox3.Text = "      Gender"
+        ComboBox3.Text = " Gender"
         ' 
         ' Guna2PictureBox1
         ' 
+        Guna2PictureBox1.BorderRadius = 1
+        Guna2PictureBox1.BorderStyle = BorderStyle.FixedSingle
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(942, 116)
+        Guna2PictureBox1.Location = New Point(950, 109)
         Guna2PictureBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2PictureBox1.Size = New Size(25, 25)
+        Guna2PictureBox1.Size = New Size(25, 28)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox1.TabIndex = 45
         Guna2PictureBox1.TabStop = False

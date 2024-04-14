@@ -19,6 +19,7 @@
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
         Global_Attributes.banking_recv_username = ""
         Global_Attributes.banking_payment_amount = 0
+        Global_Attributes.banking_payment_done = 1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -37,7 +38,7 @@
             Global_Attributes.Go_Back = 0
             Banking_Main.Panel1.Controls.Clear()
             Newsletter_Main.Panel1.Controls.Clear()
-            ChildForm2(election_dashboard)
+            ChildForm2(Global_Attributes.Go_Back_Form)
             'Dim form As New election_dashboard()
             'mypanel.panel1.Controls.Clear()
             'Form.TopLevel = False

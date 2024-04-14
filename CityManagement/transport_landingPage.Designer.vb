@@ -41,7 +41,7 @@ Partial Class transport_landingPage
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(64, 232)
+        PictureBox1.Location = New Point(114, 234)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(274, 244)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -51,7 +51,7 @@ Partial Class transport_landingPage
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(691, 232)
+        PictureBox2.Location = New Point(741, 234)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(274, 244)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -61,7 +61,7 @@ Partial Class transport_landingPage
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(408, 567)
+        PictureBox3.Location = New Point(458, 569)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(215, 116)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -73,7 +73,7 @@ Partial Class transport_landingPage
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(737, 182)
+        Button1.Location = New Point(787, 184)
         Button1.Name = "Button1"
         Button1.Size = New Size(173, 33)
         Button1.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class transport_landingPage
         Button2.BackColor = Color.Black
         Button2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(107, 182)
+        Button2.Location = New Point(157, 184)
         Button2.Name = "Button2"
         Button2.Size = New Size(173, 33)
         Button2.TabIndex = 4
@@ -97,7 +97,7 @@ Partial Class transport_landingPage
         Button3.BackColor = Color.Black
         Button3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(431, 528)
+        Button3.Location = New Point(481, 530)
         Button3.Name = "Button3"
         Button3.Size = New Size(173, 33)
         Button3.TabIndex = 5
@@ -129,7 +129,7 @@ Partial Class transport_landingPage
         Button4.BackColor = Color.Black
         Button4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(431, 330)
+        Button4.Location = New Point(481, 332)
         Button4.Name = "Button4"
         Button4.Size = New Size(173, 52)
         Button4.TabIndex = 7
@@ -141,7 +141,7 @@ Partial Class transport_landingPage
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1007, 760)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Button4)
         Controls.Add(Panel1)
         Controls.Add(Button3)

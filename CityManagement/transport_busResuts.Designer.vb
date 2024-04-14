@@ -38,7 +38,7 @@ Partial Class transport_busResuts
         FlowLayoutPanel1.FlowDirection = FlowDirection.TopDown
         FlowLayoutPanel1.Location = New Point(4, 154)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(991, 516)
+        FlowLayoutPanel1.Size = New Size(1100, 554)
         FlowLayoutPanel1.TabIndex = 0
         FlowLayoutPanel1.WrapContents = False
         ' 
@@ -107,7 +107,7 @@ Partial Class transport_busResuts
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.Transparent
-        Button1.Location = New Point(908, 12)
+        Button1.Location = New Point(1013, 12)
         Button1.Name = "Button1"
         Button1.Size = New Size(82, 44)
         Button1.TabIndex = 15
@@ -119,7 +119,7 @@ Partial Class transport_busResuts
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1007, 720)
+        ClientSize = New Size(1107, 720)
         Controls.Add(Button1)
         Controls.Add(Label6)
         Controls.Add(Label5)

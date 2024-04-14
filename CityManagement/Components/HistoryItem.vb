@@ -85,7 +85,7 @@ Public Class HistoryItem
         CurvedLabel3.ForeColor = stateColors(currentAppointmentState)
         CurvedLabel4.BackColor = actionColors(CurvedLabel4.Text)
     End Sub
-    Private Sub HandleAction(action As CustomerAction)
+    Public Sub HandleAction(action As CustomerAction)
         Dim newState As AppointmentState
         Dim previousState As AppointmentState = currentAppointmentState
 
@@ -171,7 +171,33 @@ Public Class HistoryItem
             Case AppointmentState.Upcoming
                 HandleAction(CustomerAction.Cancel)
             Case AppointmentState.InProgress
-                HandleAction(CustomerAction.Pay)
+                'HandleAction(CustomerAction.Pay)
+                If Global_Attributes.banking_payment_done = 0 Then
+
+                    Dim PaytoUserID As Integer = GetUserIdFromBookingsFor(Me.BookingId)
+                    MessageBox.Show(PaytoUserID)
+                    Dim Payto As String = GetUsername(PaytoUserID)
+                    'Dim Payfrom As String = GetUsername(Globals.UserId)
+                    MessageBox.Show("I am Here")
+
+                    'banking_recv_username = "transport"
+                    banking_recv_username = Payto
+                    Go_Back = 3
+                    Go_Back_Form = Globals.UrbanClapNavForm
+                    banking_payment_amount = Label3.Text
+                    Global_Attributes.HistoryItem = Me
+
+                    Banking_Main.Panel1.Controls.Clear()
+                    Newsletter_Main.Panel1.Controls.Clear()
+
+                    ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                    mypanel.panel1.Controls.Clear()
+                    ChildForm2(Banking_Main)
+                End If
+                'If Global_Attributes.banking_payment_done = 1 Then
+                'Global_Attributes.banking_payment_done = 0
+                'HandleAction(CustomerAction.Pay)
+                'End If
             Case AppointmentState.Completed
                 Using rateform As New Rate()
                     'Change the position to be in the centre of the screen
@@ -207,5 +233,73 @@ Public Class HistoryItem
             End Using
         End Using
     End Sub
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
+    Public Shared Sub ChildForm2(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public Shared Function GetUserIdFromBookingsFor(bookingID As Integer) As Integer
+        Dim userID As Integer = -1
+        Try
+            Dim query As String = "SELECT userID FROM serviceWorkers WHERE workerID = (SELECT workerID FROM serviceBooking WHERE serviceBookingId = @bookingId)"
+            Using connection As New MySqlConnection(Globals.connectionstring)
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@bookingId", bookingID)
+                    Dim result As Object = command.ExecuteScalar()
+                    If result IsNot DBNull.Value Then
+                        userID = Convert.ToInt32(result)
+                    End If
+                End Using
+                connection.Close()
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error occurred while getting UserID from Bookings: " & ex.Message)
+        End Try
+        Return userID
+    End Function
+
+    Private Function GetUsername(Userid As Integer) As String
+        Dim Username As String = ""
+        'Dim query As String = "SELECT Username FROM UserData WHERE Identification_Number = @userId"
+        Dim query As String = "SELECT Username FROM UserData WHERE Identification_Number = '" & Userid & "'"
+
+        Try
+            Using connection As New MySqlConnection(Global_Attributes.slqConnection_banking)
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+                    'command.Parameters.AddWithValue("@userId", Userid)
+                    Dim result As Object = command.ExecuteScalar()
+                    If result IsNot DBNull.Value Then
+                        Username = result.ToString()
+                    End If
+                End Using
+                connection.Close()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error occurred while getting UserID from WorkerID: " & ex.Message)
+        End Try
+        MessageBox.Show(Username)
+        Return Username
+    End Function
+
+    Private Sub HistoryItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub HistoryItem_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

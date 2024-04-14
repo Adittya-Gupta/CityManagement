@@ -7,6 +7,8 @@
     Public banking_payment_amount As Double = 0
     Public banking_payment_done As Double = 0
 
+    Public HistoryItem As HistoryItem
+
     Public slqConnection_banking As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
     'Public slqConnection_banking As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none;"
     Public slqConnection_newsletter As String = "server=localhost;userid=root;password=Aasneh18;database=newsdatabase;"

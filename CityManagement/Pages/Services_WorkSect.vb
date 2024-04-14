@@ -68,7 +68,7 @@ Public Class Services_WorkSect
         Try
             'Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = @workerID"
 
-            Dim query As String = "SELECT sb.serviceBookingId, sb.clientName, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
+            Dim query As String = "SELECT sb.serviceBookingId, sb.clientID, sb.clientName, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
                       "FROM serviceBooking sb " &
                       "INNER JOIN User u ON sb.clientID = u.SID " &
                       "WHERE sb.workerID = @workerID"
@@ -78,6 +78,7 @@ Public Class Services_WorkSect
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
                         Dim reqId As Integer = reader.GetInt32("serviceBookingId")
+                        Dim clientID As Integer = reader.GetInt32("clientID")
                         Dim name As String = reader.GetString("clientName")
                         Dim time As String = If(reader.IsDBNull(reader.GetOrdinal("serviceTime")), "To be Decided", reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss"))
                         'Dim time As String = reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss")
@@ -89,9 +90,9 @@ Public Class Services_WorkSect
 
 
                         If status = "EnquirySent" Then
-                            pendingRequests.Add(New SerReq_worker_pending(reqId, name, time, billAmountString, profpic))
+                            pendingRequests.Add(New SerReq_worker_pending(reqId, clientID, name, time, billAmountString, profpic))
                         ElseIf status = "Upcoming" Then
-                            acceptedRequests.Add(New SerReq_worker_accepted(reqId, name, time, billAmountString, profpic))
+                            acceptedRequests.Add(New SerReq_worker_accepted(reqId, clientID, name, time, billAmountString, profpic))
                         ElseIf status = "Completed" Then
                             completedRequests.Add(New SerReq_worker_completed(name, time, billAmountString, profpic))
                         ElseIf status = "InProgress" Then

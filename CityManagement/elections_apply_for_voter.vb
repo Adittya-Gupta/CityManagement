@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class elections_apply_for_voter
-    Dim idOfCurrentUser As Integer = 984571
+    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()
@@ -26,9 +26,11 @@ Public Class elections_apply_for_voter
             End Using
             MessageBox.Show("You are now a Voter", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             'showing the old form back as current operation is successfully completed
-            Dim electiondashboard As New election_dashboard()
-            electiondashboard.Show()
-            Me.Hide()
+            Dim form As New election_dashboard()
+            mypanel.panel1.Controls.Clear()
+            form.TopLevel = False
+            mypanel.panel1.Controls.Add(form)
+            form.Show()
         Catch ex As Exception
         Finally
             conn.Close()

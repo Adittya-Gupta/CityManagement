@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.IO
 Public Class elections_nomination
-    Dim idOfCurrentUser As Integer = 984571
+    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()

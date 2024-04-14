@@ -17,4 +17,8 @@
         mypanel.Panel1.Controls.Add(form)
         form.Show()
     End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Button1_Click(sender, e)
+    End Sub
 End Class

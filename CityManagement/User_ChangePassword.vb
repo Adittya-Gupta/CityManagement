@@ -173,7 +173,7 @@ Public Class User_ChangePassword
                 ' Check if the update was successful based on affected rows.
                 If result > 0 Then
                     MessageBox.Show("Password updated successfully!! , You will now be redirected back to Login Page")
-                    Button3.PerformClick()
+                    Button3_Click(sender, e)
                 Else
                     MessageBox.Show("Password update failed!!")
                 End If
@@ -193,15 +193,15 @@ Public Class User_ChangePassword
         TextBox2.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ' Open the login form when the button is clicked
+    Private Sub Form_Close(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Closed
         Dim LoginForm As New User_Login()
         LoginForm.StartPosition = FormStartPosition.Manual
         LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
-        LoginForm.Show()
-        Me.Hide()
-        Me.Close()
-        Me.Dispose()
 
+        LoginForm.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
     End Sub
 End Class

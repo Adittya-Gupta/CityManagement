@@ -249,10 +249,4 @@ Public Class UserProfile_ChangePassword
         TextBox3.UseSystemPasswordChar = Not CheckBox1.Checked
     End Sub
 
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ' Open the login form when the button is clicked
-        User_Profile.Show()
-        Me.Hide()
-    End Sub
 End Class

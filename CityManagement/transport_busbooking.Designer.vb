@@ -494,9 +494,9 @@ Partial Class transport_busbooking
         ' PictureBox1
         ' 
         PictureBox1.Image = juan_encalada_6mcVaoGNz1w_unsplash
-        PictureBox1.Location = New Point(2, -1)
+        PictureBox1.Location = New Point(0, -1)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1007, 760)
+        PictureBox1.Size = New Size(1107, 760)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
@@ -591,7 +591,7 @@ Partial Class transport_busbooking
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
-        ClientSize = New Size(1007, 760)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Label30)
         Controls.Add(Panel4)
         Controls.Add(Panel3)

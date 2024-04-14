@@ -14,12 +14,12 @@
         makeAppointment.makeappointment(hos_id)
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(makeAppointment)
+            MainPanel.ShowChildFormInPanel(makeAppointment)
         End If
     End Sub
 End Class

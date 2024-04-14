@@ -37,7 +37,7 @@ Partial Class Incoming_Emp_Req
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 14F, FontStyle.Bold)
-        Label3.ForeColor = Color.FromArgb(CByte(122), CByte(121), CByte(121))
+        Label3.ForeColor = Color.FromArgb(122, 121, 121)
         Label3.Location = New Point(148, 77)
         Label3.Name = "Label3"
         Label3.Size = New Size(110, 29)
@@ -51,8 +51,8 @@ Partial Class Incoming_Emp_Req
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
-        Button2.Image = My.Resources.Resources.Group_190
-        Button2.Location = New Point(681, 81)
+        Button2.Image = Group_190
+        Button2.Location = New Point(605, 81)
         Button2.Name = "Button2"
         Button2.Size = New Size(130, 45)
         Button2.TabIndex = 20
@@ -66,8 +66,8 @@ Partial Class Incoming_Emp_Req
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
-        Button1.Image = My.Resources.Resources.Group_1891
-        Button1.Location = New Point(826, 81)
+        Button1.Image = Group_1891
+        Button1.Location = New Point(756, 81)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 45)
         Button1.TabIndex = 19
@@ -86,8 +86,8 @@ Partial Class Incoming_Emp_Req
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
+        PictureBox1.Image = Mask_group
+        PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(30, 32)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(92, 88)
@@ -115,7 +115,7 @@ Partial Class Incoming_Emp_Req
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(852, 32)
+        Label1.Location = New Point(808, 32)
         Label1.Name = "Label1"
         Label1.Size = New Size(53, 20)
         Label1.TabIndex = 26
@@ -125,7 +125,7 @@ Partial Class Incoming_Emp_Req
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
+        BackColor = Color.FromArgb(217, 217, 217)
         Controls.Add(Label1)
         Controls.Add(Button3)
         Controls.Add(Label4)
@@ -135,7 +135,7 @@ Partial Class Incoming_Emp_Req
         Controls.Add(Label2)
         Controls.Add(PictureBox1)
         Name = "Incoming_Emp_Req"
-        Size = New Size(986, 150)
+        Size = New Size(914, 150)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

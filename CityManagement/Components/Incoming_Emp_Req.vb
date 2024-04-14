@@ -51,6 +51,8 @@ Public Class Incoming_Emp_Req
             End If
         Next
 
+        _parentForm.Panel1.Height -= 200
+
         Me.Dispose()
     End Sub
 
@@ -113,4 +115,7 @@ Public Class Incoming_Emp_Req
         MsgBox(_i)
     End Sub
 
+    Private Sub Incoming_Emp_Req_Load(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

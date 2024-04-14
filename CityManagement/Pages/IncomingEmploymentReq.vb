@@ -26,6 +26,9 @@ Public Class IncomingEmploymentReq
     Private Sub IncomingEmploymentReq_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
 
+        Panel1.HorizontalScroll.Enabled = False
+        Panel1.HorizontalScroll.Visible = False
+
         Dim userID_ As Integer
         Dim orgID_ As Integer
         Dim name_ As String
@@ -64,6 +67,7 @@ Public Class IncomingEmploymentReq
                     i = i + 1
                 End While
             End Using
+            Panel1.Height = i * 200
         Catch ex As Exception
             ' Handle exception
         End Try

@@ -183,7 +183,18 @@ Public Class makeAppointment
             command.Parameters.AddWithValue("@date", datee)
             command.Parameters.AddWithValue("@time", stimee)
             connection.Open()
-            Dim affectedRows As Integer = command.ExecuteNonQuery()
+            Dim affectedRows As Integer
+            Try
+                ' Code that may cause an exception
+                affectedRows = command.ExecuteNonQuery()
+            Catch ex As Exception
+                ' Handle the exception here
+                Console.WriteLine("An error occurred: " & ex.Message)
+            Finally
+                ' Code that always executes, regardless of whether an exception occurred or not
+                Console.WriteLine("End of Try...Catch block")
+            End Try
+
             If affectedRows > 0 Then
                 ' Insert successful
                 MessageBox.Show("Appointment is made")

@@ -336,8 +336,7 @@ Partial Class transport_govOfficial
         ' 
         ' transport_govOfficial
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1091, 760)
         Controls.Add(PictureBox1)

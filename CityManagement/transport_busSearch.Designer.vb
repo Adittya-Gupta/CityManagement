@@ -172,8 +172,7 @@ Partial Class transport_busSearch
         ' 
         ' transport_busSearch
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(DateTimePicker1)
         Controls.Add(Label4)

@@ -110,6 +110,7 @@ Public Class Banking_Money_Management_Homepage
         If Global_Attributes.Go_Back = 0 Then
             Go_Back_Form = Me
         End If
+        Global_Attributes.banking_payment_done = 0
 
     End Sub
 

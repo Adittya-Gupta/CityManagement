@@ -173,14 +173,35 @@ Public Class transport_cabavailable
                                 card.Label5.Text = arrivalTime.ToString
                                 card.Label8.Text = driverName
                                 card.Label3.Text = "Rs. " & price
+                                AddHandler card.Button2.Click, Sub()
+                                                                   banking_recv_username = "transport"
+                                                                   Go_Back = 2
+                                                                   Go_Back_Form = Me
+                                                                   banking_payment_amount = price
+
+                                                                   Banking_Main.Panel1.Controls.Clear()
+                                                                   Newsletter_Main.Panel1.Controls.Clear()
+
+                                                                   ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                                   mypanel.panel1.Controls.Clear()
+                                                                   ChildForm2(Banking_Main)
+                                                               End Sub
                                 AddHandler card.Button1.Click, Sub()
                                                                    ' Open the page here
                                                                    ' For example, you can open a new form
+                                                                   If Global_Attributes.banking_payment_done = 0 Then
+                                                                       MessageBox.Show("Please make payment first!")
+                                                                       Return
+                                                                   End If
+                                                                   Global_Attributes.banking_payment_done = 0
                                                                    cost = price
                                                                    selected_cab = cabId
                                                                    cab_arrival = arrivalTime
                                                                    'Dim newForm As New transport_cabconfirm()
                                                                    'Dim newForm As New transport_cabconfirm()
+
+
+
                                                                    Dim email As String = ""
                                                                    Dim contactNo As String = ""
                                                                    Dim name As String = ""
@@ -264,6 +285,7 @@ Public Class transport_cabavailable
                                                                        updateRunningCabCommand.Parameters.AddWithValue("@selectedCabId", selectedCabId)
                                                                        updateRunningCabCommand.ExecuteNonQuery()
                                                                    End Using
+
                                                                    MessageBox.Show("Cab booking confirmed. Enjoy the ride!")
                                                                    'newForm.ShowDialog()
                                                                    conn2.Close()
@@ -319,9 +341,26 @@ Public Class transport_cabavailable
                                     card.Label5.Text = arrivalTime.ToString
                                     card.Label8.Text = driverName
                                     card.Label3.Text = "Rs. " & price
+                                    AddHandler card.Button2.Click, Sub()
+                                                                       banking_recv_username = "transport"
+                                                                       Go_Back = 2
+                                                                       Go_Back_Form = Me
+                                                                       banking_payment_amount = price
+
+                                                                       Banking_Main.Panel1.Controls.Clear()
+                                                                       Newsletter_Main.Panel1.Controls.Clear()
+
+                                                                       ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                                       mypanel.panel1.Controls.Clear()
+                                                                       ChildForm2(Banking_Main)
+                                                                   End Sub
                                     AddHandler card.Button1.Click, Sub()
                                                                        ' Open the page here
                                                                        ' For example, you can open a new form
+                                                                       If Global_Attributes.banking_payment_done = 0 Then
+                                                                           MessageBox.Show("Please make payment first!")
+                                                                           Return
+                                                                       End If
                                                                        cost = price
                                                                        extended = newPathId
                                                                        selected_cab = cabId
@@ -518,7 +557,24 @@ Public Class transport_cabavailable
                     card.Label5.Text = transport_cabbooking.sqlFormattedDateTime.ToString
                     card.Label8.Text = driverName
                     card.Label3.Text = "Rs. " & price
+                    AddHandler card.Button2.Click, Sub()
+                                                       banking_recv_username = "transport"
+                                                       Go_Back = 2
+                                                       Go_Back_Form = Me
+                                                       banking_payment_amount = price
+
+                                                       Banking_Main.Panel1.Controls.Clear()
+                                                       Newsletter_Main.Panel1.Controls.Clear()
+
+                                                       ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                                                       mypanel.panel1.Controls.Clear()
+                                                       ChildForm2(Banking_Main)
+                                                   End Sub
                     AddHandler card.Button1.Click, Sub()
+                                                       If Global_Attributes.banking_payment_done = 0 Then
+                                                           MessageBox.Show("Please make payment first!")
+                                                           Return
+                                                       End If
                                                        selected_cab = availableCabId
                                                        newcab = 1
                                                        cost = price
@@ -1139,5 +1195,22 @@ Public Class transport_cabavailable
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
+    End Sub
+
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
+
+    Public Shared Sub ChildForm2(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
     End Sub
 End Class

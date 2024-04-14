@@ -107,7 +107,12 @@ Public Class Newsletter_AddNews
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        If payment_done = 0 Then
+        'If payment_done = 0 Then
+        '    MessageBox.Show("Please Make payment!")
+        '    Return
+        'End If
+
+        If Global_Attributes.banking_payment_done = 0 Then
             MessageBox.Show("Please Make payment!")
             Return
         End If
@@ -171,6 +176,7 @@ Public Class Newsletter_AddNews
             MessageBox.Show("Some Error has occured!")
         End If
         ' Close the connection after use
+        Global_Attributes.banking_payment_done = 0
         Mysqlconn.Close()
         ChildForm(Newsletter_Main.Panel1, Newsletter_Homepage)
     End Sub

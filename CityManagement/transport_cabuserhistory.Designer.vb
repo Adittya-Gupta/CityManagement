@@ -122,6 +122,7 @@ Partial Class transport_cabuserhistory
         ' 
         ' FlowLayoutPanel2
         ' 
+        FlowLayoutPanel2.AutoScroll = True
         FlowLayoutPanel2.Location = New Point(73, 310)
         FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         FlowLayoutPanel2.Size = New Size(951, 342)
@@ -131,7 +132,7 @@ Partial Class transport_cabuserhistory
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Popup
-        Button1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(911, 15)
         Button1.Name = "Button1"

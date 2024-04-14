@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class election_dashboard
-    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
+    Dim idOfCurrentUser As Integer = 984571
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()
@@ -138,11 +138,9 @@ Public Class election_dashboard
                 End If
 
                 If age >= 18 Then
-                    panel1.Controls.Clear()
-                    Dim form As New elections_apply_for_voter
-                    form.TopLevel = False
-                    panel1.Controls.Add(form)
-                    form.Show()
+                    Dim votingApplication As New elections_apply_for_voter()
+                    votingApplication.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("You are not eligible to vote as your age is less than 18", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
@@ -158,11 +156,11 @@ Public Class election_dashboard
     Private Sub voting_portal_Click(sender As Object, e As EventArgs) Handles voting_portal.Click
         If alreadyVoter And isVotingPeriod And Not hasVoted Then
             'Dim voting_portal As New votingPortal()
-            panel1.Controls.Clear()
-            Dim form As New elections_votingPortal
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New elections_votingPortal()
 
             form.TopLevel = False
-            panel1.Controls.Add(form)
+            mypanel.Panel1.Controls.Add(form)
             form.Show()
 
 
@@ -177,11 +175,11 @@ Public Class election_dashboard
 
     Private Sub nomination_rules_Click(sender As Object, e As EventArgs) Handles nomination_rules.Click
         ' Dim nominationrules As New nomination_rules()
-        panel1.Controls.Clear()
-        Dim form As New elections_nomination_rules
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New elections_nomination_rules()
 
         form.TopLevel = False
-        panel1.Controls.Add(form)
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
 
 
@@ -189,11 +187,11 @@ Public Class election_dashboard
 
     Private Sub voting_rules_Click(sender As Object, e As EventArgs) Handles voting_rules.Click
         ' Dim votingrules As New voting_rules()
-        panel1.Controls.Clear()
-        Dim form As New elections_voting_rules
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New elections_voting_rules()
 
         form.TopLevel = False
-        panel1.Controls.Add(form)
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
         ' votingrules.Show()
 
@@ -201,10 +199,12 @@ Public Class election_dashboard
 
     Private Sub nomination_portal_Click(sender As Object, e As EventArgs) Handles nomination_portal.Click
         If isNominationPeriod And eligibleToNominate Then
-            panel1.Controls.Clear()
-            Dim form As New elections_nomination
+
+            mypanel.panel1.Controls.Clear()
+            Dim form As New elections_nomination()
+
             form.TopLevel = False
-            panel1.Controls.Add(form)
+            mypanel.panel1.Controls.Add(form)
             form.Show()
         ElseIf Not isNominationPeriod Then
             MessageBox.Show("The current period is not Nomination Period,Please try in nomination Period", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -215,22 +215,22 @@ Public Class election_dashboard
 
     Private Sub nominees_details_Click(sender As Object, e As EventArgs) Handles nominees_details.Click
         'Nominee details form to be shown here
-        panel1.Controls.Clear()
-        Dim form As New elections_viewNominees
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New elections_viewNominees()
 
         form.TopLevel = False
-        panel1.Controls.Add(form)
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
     End Sub
 
     Private Sub results_portal_Click(sender As Object, e As EventArgs) Handles results_portal.Click
         If resultsReleased Then
             ' Dim electionresults As New electionResults()
-            panel1.Controls.Clear()
-            Dim form As New elections_final_results
+            mypanel.Panel1.Controls.Clear()
+            Dim form As New elections_final_results()
 
             form.TopLevel = False
-            panel1.Controls.Add(form)
+            mypanel.Panel1.Controls.Add(form)
             form.Show()
             ' electionresults.Show()
             ' Me.Hide()
@@ -240,21 +240,21 @@ Public Class election_dashboard
     End Sub
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         'show the administration form here
-        panel1.Controls.Clear()
-        Dim form As New admin_home
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New admin_home()
 
         form.TopLevel = False
-        panel1.Controls.Add(form)
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
     End Sub
 
     Private Sub AllResults_Click(sender As Object, e As EventArgs) Handles AllResults.Click
         'Dim allResults As New AllResults()
-        panel1.Controls.Clear()
-        Dim form As New elections_AllResults
+        mypanel.Panel1.Controls.Clear()
+        Dim form As New elections_AllResults()
 
         form.TopLevel = False
-        panel1.Controls.Add(form)
+        mypanel.Panel1.Controls.Add(form)
         form.Show()
         'allResults.Show()
         'Me.Hide()

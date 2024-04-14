@@ -51,10 +51,11 @@ Partial Class cspecialisation
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(12, 19)
+        Guna2PictureBox1.Location = New Point(14, 25)
+        Guna2PictureBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox1.Size = New Size(100, 77)
+        Guna2PictureBox1.Size = New Size(114, 103)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox1.TabIndex = 0
         Guna2PictureBox1.TabStop = False
@@ -63,9 +64,9 @@ Partial Class cspecialisation
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Bahnschrift", 14F)
-        Label1.Location = New Point(120, 32)
+        Label1.Location = New Point(137, 43)
         Label1.Name = "Label1"
-        Label1.Size = New Size(166, 23)
+        Label1.Size = New Size(213, 29)
         Label1.TabIndex = 1
         Label1.Text = "Dr. Aditya Agrawal"
         ' 
@@ -73,9 +74,9 @@ Partial Class cspecialisation
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(120, 66)
+        Label2.Location = New Point(137, 88)
         Label2.Name = "Label2"
-        Label2.Size = New Size(78, 18)
+        Label2.Size = New Size(99, 23)
         Label2.TabIndex = 2
         Label2.Text = "Hospital - "
         ' 
@@ -83,9 +84,9 @@ Partial Class cspecialisation
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(190, 67)
+        Label3.Location = New Point(217, 89)
         Label3.Name = "Label3"
-        Label3.Size = New Size(154, 18)
+        Label3.Size = New Size(195, 23)
         Label3.TabIndex = 3
         Label3.Text = "Ram Krishna Hospital"
         ' 
@@ -93,9 +94,9 @@ Partial Class cspecialisation
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(479, 42)
+        Label4.Location = New Point(547, 56)
         Label4.Name = "Label4"
-        Label4.Size = New Size(40, 18)
+        Label4.Size = New Size(51, 23)
         Label4.TabIndex = 5
         Label4.Text = "Male"
         ' 
@@ -103,9 +104,9 @@ Partial Class cspecialisation
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(401, 41)
+        Label5.Location = New Point(458, 55)
         Label5.Name = "Label5"
-        Label5.Size = New Size(71, 18)
+        Label5.Size = New Size(90, 23)
         Label5.TabIndex = 4
         Label5.Text = "Gender - "
         ' 
@@ -113,9 +114,9 @@ Partial Class cspecialisation
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(491, 67)
+        Label6.Location = New Point(561, 89)
         Label6.Name = "Label6"
-        Label6.Size = New Size(41, 18)
+        Label6.Size = New Size(52, 23)
         Label6.TabIndex = 7
         Label6.Text = "6 yrs"
         ' 
@@ -123,9 +124,9 @@ Partial Class cspecialisation
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(401, 66)
+        Label7.Location = New Point(458, 88)
         Label7.Name = "Label7"
-        Label7.Size = New Size(97, 18)
+        Label7.Size = New Size(123, 23)
         Label7.TabIndex = 6
         Label7.Text = "Experience - "
         ' 
@@ -133,9 +134,9 @@ Partial Class cspecialisation
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(673, 68)
+        Label8.Location = New Point(769, 91)
         Label8.Name = "Label8"
-        Label8.Size = New Size(120, 18)
+        Label8.Size = New Size(154, 23)
         Label8.TabIndex = 11
         Label8.Text = "+91 98788866776"
         ' 
@@ -143,9 +144,9 @@ Partial Class cspecialisation
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(597, 67)
+        Label9.Location = New Point(682, 89)
         Label9.Name = "Label9"
-        Label9.Size = New Size(73, 18)
+        Label9.Size = New Size(93, 23)
         Label9.TabIndex = 10
         Label9.Text = "Contact - "
         ' 
@@ -153,9 +154,9 @@ Partial Class cspecialisation
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(668, 43)
+        Label10.Location = New Point(763, 57)
         Label10.Name = "Label10"
-        Label10.Size = New Size(71, 18)
+        Label10.Size = New Size(88, 23)
         Label10.TabIndex = 9
         Label10.Text = "Near IITG"
         ' 
@@ -163,9 +164,9 @@ Partial Class cspecialisation
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(590, 42)
+        Label11.Location = New Point(674, 56)
         Label11.Name = "Label11"
-        Label11.Size = New Size(80, 18)
+        Label11.Size = New Size(101, 23)
         Label11.TabIndex = 8
         Label11.Text = "Location - "
         ' 
@@ -173,9 +174,9 @@ Partial Class cspecialisation
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Bahnschrift", 10F)
-        Label12.Location = New Point(183, 86)
+        Label12.Location = New Point(209, 115)
         Label12.Name = "Label12"
-        Label12.Size = New Size(15, 17)
+        Label12.Size = New Size(19, 21)
         Label12.TabIndex = 13
         Label12.Text = "3"
         ' 
@@ -183,9 +184,9 @@ Partial Class cspecialisation
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Bahnschrift", 10F)
-        Label13.Location = New Point(121, 85)
+        Label13.Location = New Point(138, 113)
         Label13.Name = "Label13"
-        Label13.Size = New Size(64, 17)
+        Label13.Size = New Size(76, 21)
         Label13.TabIndex = 12
         Label13.Text = "Rating - "
         ' 
@@ -194,18 +195,18 @@ Partial Class cspecialisation
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(204, 89)
+        Guna2PictureBox2.Location = New Point(233, 119)
+        Guna2PictureBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2PictureBox2.Size = New Size(13, 13)
+        Guna2PictureBox2.Size = New Size(15, 17)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox2.TabIndex = 14
         Guna2PictureBox2.TabStop = False
         ' 
         ' cspecialisation
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         AutoScrollMargin = New Size(100, 0)
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(Guna2PictureBox2)
@@ -223,8 +224,9 @@ Partial Class cspecialisation
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(Guna2PictureBox1)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "cspecialisation"
-        Size = New Size(814, 113)
+        Size = New Size(930, 151)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

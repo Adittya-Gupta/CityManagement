@@ -51,7 +51,7 @@ Partial Class Incoming_Emp_Req
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
-        Button2.Image = My.Resources.Resources.Group_190
+        Button2.Image = Group_190
         Button2.Location = New Point(681, 81)
         Button2.Name = "Button2"
         Button2.Size = New Size(130, 45)
@@ -66,7 +66,7 @@ Partial Class Incoming_Emp_Req
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
-        Button1.Image = My.Resources.Resources.Group_1891
+        Button1.Image = Group_1891
         Button1.Location = New Point(826, 81)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 45)
@@ -86,8 +86,8 @@ Partial Class Incoming_Emp_Req
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.Mask_group
-        PictureBox1.InitialImage = My.Resources.Resources.Mask_group
+        PictureBox1.Image = Mask_group
+        PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(30, 32)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(92, 88)
@@ -123,8 +123,7 @@ Partial Class Incoming_Emp_Req
         ' 
         ' Incoming_Emp_Req
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(Label1)
         Controls.Add(Button3)

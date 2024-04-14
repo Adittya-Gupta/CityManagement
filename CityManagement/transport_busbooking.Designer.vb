@@ -488,7 +488,7 @@ Partial Class transport_busbooking
         Button2.Name = "Button2"
         Button2.Size = New Size(191, 36)
         Button2.TabIndex = 12
-        Button2.Text = "Pay"
+        Button2.Text = "Pay and Print"
         Button2.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
@@ -578,7 +578,7 @@ Partial Class transport_busbooking
         ' 
         Label30.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label30.AutoSize = True
-        Label30.BackColor = Color.White
+        Label30.BackColor = Color.Transparent
         Label30.Font = New Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label30.Location = New Point(403, 9)
         Label30.Name = "Label30"

@@ -51,13 +51,13 @@ Partial Class HistoryItem
         ' 
         Rating1.Location = New Point(71, 3)
         Rating1.Name = "Rating1"
-        Rating1.RatingValue = 5.0R
+        Rating1.RatingValue = 5R
         Rating1.Size = New Size(35, 25)
         Rating1.TabIndex = 41
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.download
+        PictureBox1.Image = download
         PictureBox1.Location = New Point(21, 17)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(65, 65)
@@ -68,7 +68,7 @@ Partial Class HistoryItem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(175, 3)
         Label1.Name = "Label1"
@@ -91,7 +91,7 @@ Partial Class HistoryItem
         ' Label3
         ' 
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Abhaya Libre Medium", 10.0F)
+        Label3.Font = New Font("Abhaya Libre Medium", 10F)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(342, 60)
         Label3.Name = "Label3"
@@ -113,7 +113,7 @@ Partial Class HistoryItem
         ' 
         CurvedLabel3.BackColor = Color.Transparent
         CurvedLabel3.CornerRadius = 20
-        CurvedLabel3.Font = New Font("Exo 2", 16.0F)
+        CurvedLabel3.Font = New Font("Exo 2", 16F)
         CurvedLabel3.ForeColor = Color.Gainsboro
         CurvedLabel3.Location = New Point(529, 25)
         CurvedLabel3.Name = "CurvedLabel3"
@@ -126,7 +126,7 @@ Partial Class HistoryItem
         ' Label4
         ' 
         Label4.BackColor = Color.White
-        Label4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
         Label4.Location = New Point(103, 3)
         Label4.Name = "Label4"
@@ -137,7 +137,7 @@ Partial Class HistoryItem
         ' Label5
         ' 
         Label5.BackColor = Color.White
-        Label5.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(103, 52)
         Label5.Name = "Label5"
@@ -148,7 +148,7 @@ Partial Class HistoryItem
         ' Label6
         ' 
         Label6.BackColor = Color.White
-        Label6.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(370, 25)
         Label6.Name = "Label6"
@@ -160,7 +160,7 @@ Partial Class HistoryItem
         ' 
         CurvedLabel4.BackColor = Color.FromArgb(CByte(254), CByte(0), CByte(0))
         CurvedLabel4.FlatStyle = FlatStyle.Flat
-        CurvedLabel4.Font = New Font("Exo 2", 16.0F)
+        CurvedLabel4.Font = New Font("Exo 2", 16F)
         CurvedLabel4.ForeColor = Color.Gainsboro
         CurvedLabel4.Location = New Point(765, 25)
         CurvedLabel4.Name = "CurvedLabel4"
@@ -171,8 +171,7 @@ Partial Class HistoryItem
         ' 
         ' HistoryItem
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Controls.Add(CurvedLabel4)
         Controls.Add(Label6)
         Controls.Add(Label5)

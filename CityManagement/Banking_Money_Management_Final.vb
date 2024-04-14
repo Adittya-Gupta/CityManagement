@@ -33,6 +33,17 @@
             ChildForm(Newsletter_Main.Panel1, Global_Attributes.Go_Back_Form)
             mypanel.Panel1.Controls.Clear()
             ChildForm2(Newsletter_Main)
+        ElseIf Global_Attributes.Go_Back = 2 Then
+            Global_Attributes.Go_Back = 0
+            Banking_Main.Panel1.Controls.Clear()
+            Newsletter_Main.Panel1.Controls.Clear()
+            ChildForm2(election_dashboard)
+            'Dim form As New election_dashboard()
+            'mypanel.panel1.Controls.Clear()
+            'Form.TopLevel = False
+            'mypanel.panel1.Controls.Add(form)
+            'Form'.Show()
+
         End If
     End Sub
 End Class

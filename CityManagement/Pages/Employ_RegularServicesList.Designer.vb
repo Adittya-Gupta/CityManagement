@@ -38,7 +38,7 @@ Partial Class RegularServicesList
         ' 
         CurvedLabel8.CornerRadius = 10
         CurvedLabel8.Cursor = Cursors.Hand
-        CurvedLabel8.Image = My.Resources.Resources.Employ_househelp
+        CurvedLabel8.Image = Employ_househelp
         CurvedLabel8.Location = New Point(567, 411)
         CurvedLabel8.Name = "CurvedLabel8"
         CurvedLabel8.Size = New Size(497, 220)
@@ -63,7 +63,7 @@ Partial Class RegularServicesList
         ' 
         CurvedLabel7.CornerRadius = 10
         CurvedLabel7.Cursor = Cursors.Hand
-        CurvedLabel7.Image = My.Resources.Resources.Employ_merchant
+        CurvedLabel7.Image = Employ_merchant
         CurvedLabel7.Location = New Point(44, 410)
         CurvedLabel7.Name = "CurvedLabel7"
         CurvedLabel7.Size = New Size(497, 220)
@@ -88,7 +88,7 @@ Partial Class RegularServicesList
         ' 
         CurvedLabel6.CornerRadius = 10
         CurvedLabel6.Cursor = Cursors.Hand
-        CurvedLabel6.Image = My.Resources.Resources.Employ_plumber
+        CurvedLabel6.Image = Employ_plumber
         CurvedLabel6.Location = New Point(568, 123)
         CurvedLabel6.Name = "CurvedLabel6"
         CurvedLabel6.Size = New Size(497, 220)
@@ -113,7 +113,7 @@ Partial Class RegularServicesList
         ' 
         CurvedLabel5.CornerRadius = 10
         CurvedLabel5.Cursor = Cursors.Hand
-        CurvedLabel5.Image = My.Resources.Resources.Employ_Electrician
+        CurvedLabel5.Image = Employ_Electrician
         CurvedLabel5.Location = New Point(45, 123)
         CurvedLabel5.Name = "CurvedLabel5"
         CurvedLabel5.Size = New Size(497, 220)
@@ -152,10 +152,11 @@ Partial Class RegularServicesList
         ' 
         ' Label8
         ' 
+        Label8.AutoSize = True
         Label8.Font = New Font("Abhaya Libre Medium", 30F)
         Label8.Location = New Point(290, 28)
         Label8.Name = "Label8"
-        Label8.Size = New Size(503, 58)
+        Label8.Size = New Size(500, 59)
         Label8.TabIndex = 50
         Label8.Text = "List of Regular Services"
         ' 

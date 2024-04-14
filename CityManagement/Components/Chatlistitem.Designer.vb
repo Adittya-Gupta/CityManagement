@@ -22,7 +22,7 @@ Partial Class Chatlistitem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label2 = New Label()
         PictureBox1 = New PictureBox()
         CurvedLabel1 = New CurvedLabel()
@@ -45,7 +45,7 @@ Partial Class Chatlistitem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.download
+        PictureBox1.Image = download
         PictureBox1.Location = New Point(21, 21)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(71, 65)
@@ -75,7 +75,7 @@ Partial Class Chatlistitem
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Abhaya Libre Medium", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Abhaya Libre Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(111, 21)
         Label1.Name = "Label1"
@@ -96,15 +96,14 @@ Partial Class Chatlistitem
         Label3.ForeColor = Color.White
         Label3.Location = New Point(404, 11)
         Label3.Name = "Label3"
-        Label3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Label3.ShadowDecoration.CustomizableEdges = CustomizableEdges1
         Label3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Label3.Size = New Size(45, 45)
         Label3.TabIndex = 43
         ' 
         ' Chatlistitem
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)

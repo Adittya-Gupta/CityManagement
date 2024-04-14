@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA9E3DAD-747C-4765-886C-9442AF54A8DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Module_5.MainPanel_M5</StartupObject>
+    <RootNamespace>Module_5</RootNamespace>
+    <AssemblyName>Module 5</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Module 5.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Module 5.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.3.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlConnector.2.3.6\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banking_Admin_Home.Designer.vb">
+      <DependentUpon>Banking_Admin_Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Admin_Login.Designer.vb">
+      <DependentUpon>Banking_Admin_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Admin_NewAccRegistration.Designer.vb">
+      <DependentUpon>Banking_Admin_NewAccRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Admin_NewAccRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Apply_Credit_Card.Designer.vb">
+      <DependentUpon>Banking_Apply_Credit_Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Apply_Credit_Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Card_Management.Designer.vb">
+      <DependentUpon>Banking_Card_Management.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Card_Management.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Credit_Card_Page.Designer.vb">
+      <DependentUpon>Banking_Credit_Card_Page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Credit_Card_Page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Debit_Card_Page.Designer.vb">
+      <DependentUpon>Banking_Debit_Card_Page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Debit_Card_Page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Homepage.Designer.vb">
+      <DependentUpon>Banking_Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoanDetails.designer.vb">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoanDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoanManagement.Designer.vb">
+      <DependentUpon>Banking_LoanManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoanManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansApplication.designer.vb">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.designer.vb">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansHomepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.designer.vb">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_LoansPayNow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Main.Designer.vb">
+      <DependentUpon>Banking_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Passbook.Designer.vb">
+      <DependentUpon>Banking_Passbook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Passbook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Queries_User.Designer.vb">
+      <DependentUpon>Banking_Queries_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Queries_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_QueryLog.Designer.vb">
+      <DependentUpon>Banking_QueryLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_QueryLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Draft.Designer.vb">
+      <DependentUpon>Email_Draft.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Draft.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Landing.Designer.vb">
+      <DependentUpon>Email_Landing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Landing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Login.Designer.vb">
+      <DependentUpon>Email_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Register.Designer.vb">
+      <DependentUpon>Email_Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Panel.Designer.vb">
+      <DependentUpon>Banking_Panel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Panel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global_Attributes.vb" />
+    <Compile Include="MainPanel_M5.Designer.vb">
+      <DependentUpon>MainPanel_M5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanel_M5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Credit_Card.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Credit_Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Credit_Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Debit_Card.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Debit_Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Debit_Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Final.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Final.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Final.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Homepage.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Net_Banking.Designer.vb">
+      <DependentUpon>Banking_Money_Management_Net_Banking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Money_Management_Net_Banking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Login.Designer.vb">
+      <DependentUpon>Banking_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mypanel.vb" />
+    <Compile Include="Newsletter_AddNews.Designer.vb">
+      <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_AddNews.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_articlespage.designer.vb">
+      <DependentUpon>Newsletter_articlespage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_articlespage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Editor.Designer.vb">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Editor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_EditorLogin.Designer.vb">
+      <DependentUpon>Newsletter_EditorLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_EditorLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Homepage.Designer.vb">
+      <DependentUpon>Newsletter_Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newsletter_Main.Designer.vb">
+      <DependentUpon>Newsletter_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Registration.Designer.vb">
+      <DependentUpon>Banking_Registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_Profile.Designer.vb">
+      <DependentUpon>Banking_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking_ContactUs.Designer.vb">
+      <DependentUpon>Banking_ContactUs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking_ContactUs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Banking_Admin_Home.resx">
+      <DependentUpon>Banking_Admin_Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Admin_Login.resx">
+      <DependentUpon>Banking_Admin_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Admin_NewAccRegistration.resx">
+      <DependentUpon>Banking_Admin_NewAccRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Apply_Credit_Card.resx">
+      <DependentUpon>Banking_Apply_Credit_Card.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Card_Management.resx">
+      <DependentUpon>Banking_Card_Management.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Credit_Card_Page.resx">
+      <DependentUpon>Banking_Credit_Card_Page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Debit_Card_Page.resx">
+      <DependentUpon>Banking_Debit_Card_Page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Homepage.resx">
+      <DependentUpon>Banking_Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoanDetails.resx">
+      <DependentUpon>Banking_LoanDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoanManagement.resx">
+      <DependentUpon>Banking_LoanManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansApplication.resx">
+      <DependentUpon>Banking_LoansApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansHomepage.resx">
+      <DependentUpon>Banking_LoansHomepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_LoansPayNow.resx">
+      <DependentUpon>Banking_LoansPayNow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Main.resx">
+      <DependentUpon>Banking_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Passbook.resx">
+      <DependentUpon>Banking_Passbook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Queries_User.resx">
+      <DependentUpon>Banking_Queries_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_QueryLog.resx">
+      <DependentUpon>Banking_QueryLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Draft.resx">
+      <DependentUpon>Email_Draft.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Landing.resx">
+      <DependentUpon>Email_Landing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Login.resx">
+      <DependentUpon>Email_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Register.resx">
+      <DependentUpon>Email_Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Panel.resx">
+      <DependentUpon>Banking_Panel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel_M5.resx">
+      <DependentUpon>MainPanel_M5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Money_Management_Credit_Card.resx">
+      <DependentUpon>Banking_Money_Management_Credit_Card.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Money_Management_Debit_Card.resx">
+      <DependentUpon>Banking_Money_Management_Debit_Card.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Money_Management_Final.resx">
+      <DependentUpon>Banking_Money_Management_Final.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Money_Management_Homepage.resx">
+      <DependentUpon>Banking_Money_Management_Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Money_Management_Net_Banking.resx">
+      <DependentUpon>Banking_Money_Management_Net_Banking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_AddNews.resx">
+      <DependentUpon>Newsletter_AddNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_articlespage.resx">
+      <DependentUpon>Newsletter_articlespage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Editor.resx">
+      <DependentUpon>Newsletter_Editor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_EditorLogin.resx">
+      <DependentUpon>Newsletter_EditorLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Homepage.resx">
+      <DependentUpon>Newsletter_Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newsletter_Main.resx">
+      <DependentUpon>Newsletter_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Registration.resx">
+      <DependentUpon>Banking_Registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Login.resx">
+      <DependentUpon>Banking_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_Profile.resx">
+      <DependentUpon>Banking_Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking_ContactUs.resx">
+      <DependentUpon>Banking_ContactUs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Bank_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank img2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card_Page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card_Page2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

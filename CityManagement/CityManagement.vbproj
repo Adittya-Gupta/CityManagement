@@ -7,9 +7,17 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <ImportedNamespaces>System.Data=False,System.Drawing=False,System.Windows.Forms=False,System.Windows.Forms.DataVisualization.Charting=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,CityManagement=True</ImportedNamespaces>
     <UseWPF>False</UseWPF>
   </PropertyGroup>
+<ItemGroup>
+    <Compile Remove="Newsletter_articlespage.designer.vb" />
+    <Compile Remove="Newsletter_articlespage.vb" />
+  </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Remove="Newsletter_articlespage.resx" />
+  </ItemGroup>
   <ItemGroup>
     <Import Include="CityManagement.My.Resources" />
     <Import Include="MySql.Data.MySqlClient" />
@@ -17,6 +25,12 @@
     <Import Include="System.Data.SqlClient" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
+    <Import Include="System.Windows.Forms.DataVisualization.Charting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,9 +7,11 @@ Public Class SerReq_worker_pending
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim requestId As Integer
+    Dim clientID As Integer
 
     ' Constructor with optional parameters
     Public Sub New(ByVal id As Integer,
+                   Optional ByVal clientId As Integer = -1,
                   Optional ByVal name As String = "Name",
                    Optional ByVal serviceTime As String = "To be Decided",
                    Optional ByVal billAmount As String = "To be Decided",
@@ -22,6 +24,7 @@ Public Class SerReq_worker_pending
         TextBox1.Text = serviceTime
         TextBox2.Text = billAmount
         requestId = id
+        Me.clientID = clientId
 
         If profpic IsNot Nothing AndAlso profpic.Length > 0 Then
             ' Convert byte array to image
@@ -77,9 +80,32 @@ Public Class SerReq_worker_pending
                 cmd.ExecuteNonQuery()
             End Using
 
+            If newStatus = "Upcoming" Then
+                ' Insert a notification for the client
+                Dim msg As String = "Your service request has been confirmed. Service Time: " & selectedServiceTime.Value.ToString("yyyy-MM-dd HH:mm:ss")
+                Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@clientID", clientID)
+                    cmd2.Parameters.AddWithValue("@msg", msg)
+                    cmd2.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Service request confirmed. Notification sent to the client.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf newStatus = "Rejected" Then
+                ' Insert a notification for the client
+                Dim msg As String = "Your service request has been rejected."
+                Dim query2 As String = "INSERT INTO Notifications (UserID, Type, Message) " & "VALUES (@clientID, 0, @msg)"
+                Using cmd2 As New MySqlCommand(query2, conn)
+                    cmd2.Parameters.AddWithValue("@clientID", clientID)
+                    cmd2.Parameters.AddWithValue("@msg", msg)
+                    cmd2.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Service request rejected. Notification sent to the client.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+
             ' After updating the status, service time, and bill amount, call LoadServiceRequests() from the parent form
             Dim parentForm As Services_WorkSect = TryCast(Me.ParentForm, Services_WorkSect)
-            If parentForm IsNot Nothing Then
+                If parentForm IsNot Nothing Then
                 parentForm.LoadServiceRequests()
             End If
         Catch ex As Exception
@@ -88,6 +114,8 @@ Public Class SerReq_worker_pending
             ' Close the database connection
             conn.Close()
         End Try
+
+
     End Sub
 
     'Private Sub UpdateStatus(ByVal newStatus As String)

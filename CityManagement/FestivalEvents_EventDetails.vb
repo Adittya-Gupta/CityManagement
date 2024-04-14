@@ -15,11 +15,13 @@ Public Class FestivalEvents_EventDetails
         Me.ControlBox = False
         Label7.MaximumSize = New Size(Panel1.Size.Width - 100, 0) ' Adjust the width as needed
         Label7.AutoSize = True
-        'Button1.Visible = False
-        'Button2.Visible = False
-        'Button3.Visible = False
-        'Button4.Visible = False
-        'Button5.Visible = False
+
+        Request_Button.Visible = False
+        Approve_Button.Visible = False
+        Choose_service_button.Visible = False
+        Restrictions_Button.Visible = False
+        Edit_event_button.Visible = False
+
 
 
         Dim designation As String = ""
@@ -58,15 +60,16 @@ Public Class FestivalEvents_EventDetails
 
         ' Display buttons based on user's designation and ownership
         Select Case designation
-            Case "Vendor"
-                Button2.Visible = True
-            Case "Minister"
-                Button4.Visible = True
+            Case "Merchant"
+                Request_Button.Visible = True
+            Case "Municipal Officer"
+                Approve_Button.Visible = True
         End Select
 
         If Module1.CurrUserSID = Owner_id Then
-            Button3.Visible = True
-            Button1.Visible = True
+            Edit_event_button.Visible = True
+            Restrictions_Button.Visible = True
+            Choose_service_button.Visible = True
         End If
 
 
@@ -110,16 +113,13 @@ Public Class FestivalEvents_EventDetails
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        mypanel.Panel1.Controls.Clear
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Choose_service_button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_ChooseServices
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
-        form.Show
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
@@ -127,10 +127,10 @@ Public Class FestivalEvents_EventDetails
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        mypanel.Panel1.Controls.Clear()
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_MainMenu
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
 
@@ -138,43 +138,43 @@ Public Class FestivalEvents_EventDetails
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        mypanel.Panel1.Controls.Clear
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Restrictions_Button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_RegRestrictions
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
-        form.Show
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        mypanel.Panel1.Controls.Clear()
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Approve_Button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_Approval
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        mypanel.Panel1.Controls.Clear()
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Edit_event_button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_EditEvent
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        mypanel.Panel1.Controls.Clear()
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Request_Button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_Offer_Service2
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        mypanel.Panel1.Controls.Clear()
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Register_Button.Click
+        mypanel.panel1.Controls.Clear()
         Dim form As New FestivalEvents_Participation2
         form.TopLevel = False
-        mypanel.Panel1.Controls.Add(form)
+        mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
 End Class

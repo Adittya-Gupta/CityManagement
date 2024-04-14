@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class UrbanClapNav
-    Dim userID As Integer = 112546 ' User ID of the applicant (Electrician)
+    Dim userID As Integer = Module1.CurrUserSID ' User ID of the applicant (Electrician)
     'Dim userID As Integer = 112547 ' User ID of the applicant (Head Electrician)
     'Dim userID As Integer = 124918 ' User ID of the applicant (unemployed)
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
@@ -75,10 +75,10 @@ Public Class UrbanClapNav
                 conn.Close()
             End Try
         Else
-                Button1.Text = "Service History"
-                Button3.Text = "Work Section"
-                ShowFormInPanel1(Globals.listofServicesForm)
-                HideCurvedLabels()
+            Button1.Text = "Service History"
+            Button3.Text = "Work Section"
+            ShowFormInPanel1(Globals.listofServicesForm)
+            HideCurvedLabels()
         End If
         'Me.Hide()
     End Sub
@@ -126,4 +126,7 @@ Public Class UrbanClapNav
         CurvedLabel2.Visible = False
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

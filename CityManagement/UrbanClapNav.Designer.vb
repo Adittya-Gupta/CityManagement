@@ -90,7 +90,7 @@ Partial Class UrbanClapNav
         ' 
         Panel1.Location = New Point(0, 76)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1107, 685)
+        Panel1.Size = New Size(1108, 685)
         Panel1.TabIndex = 6
         ' 
         ' Button3
@@ -110,8 +110,7 @@ Partial Class UrbanClapNav
         ' 
         ' UrbanClapNav
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 760)
         Controls.Add(Button3)

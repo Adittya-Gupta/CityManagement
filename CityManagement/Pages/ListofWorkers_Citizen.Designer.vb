@@ -35,7 +35,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         ' Label1
         ' 
-        Label1.Image = My.Resources.Resources.Frame_1054__2_
+        Label1.Image = Frame_1054__2_
         Label1.Location = New Point(709, 57)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 67)
@@ -43,7 +43,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         ' Label2
         ' 
-        Label2.Image = My.Resources.Resources.Group_183
+        Label2.Image = Group_183
         Label2.Location = New Point(64, 74)
         Label2.Name = "Label2"
         Label2.Size = New Size(340, 50)
@@ -53,7 +53,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         TextBox1.BackColor = Color.Black
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Exo 2 Medium", 12.0F)
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F)
         TextBox1.ForeColor = Color.Gray
         TextBox1.Location = New Point(80, 82)
         TextBox1.Multiline = True
@@ -65,7 +65,7 @@ Partial Class LIstofWorkers_Citizen
         ' Label3
         ' 
         Label3.BackColor = Color.Black
-        Label3.Image = My.Resources.Resources.Search_icon
+        Label3.Image = Search_icon
         Label3.Location = New Point(342, 77)
         Label3.Name = "Label3"
         Label3.Size = New Size(51, 47)
@@ -86,7 +86,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14.0F)
+        Button1.Font = New Font("Abhaya Libre Medium", 14F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(944, 12)
         Button1.Name = "Button1"
@@ -107,8 +107,7 @@ Partial Class LIstofWorkers_Citizen
         ' 
         ' ListofWorkers_Citizen
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 22.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
         ClientSize = New Size(1107, 685)
         Controls.Add(Label4)
@@ -118,7 +117,7 @@ Partial Class LIstofWorkers_Citizen
         Controls.Add(TextBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Font = New Font("Exo 2", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Exo 2", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.ControlLightLight
         FormBorderStyle = FormBorderStyle.None
         Name = "ListofWorkers_Citizen"

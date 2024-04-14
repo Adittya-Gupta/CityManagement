@@ -86,14 +86,6 @@ Public Class User_Profile
         End If
     End Sub
 
-    Private Sub User_Profile_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
-        ' Drawing lines
-        Dim g As Graphics = e.Graphics
-        Dim pen As New Pen(Color.Gainsboro, 2)
-        'g.DrawLine(pen, New Point(270, 100), New Point(270, 600))
-        g.DrawLine(pen, New Point(40, 310), New Point(230, 310))
-        g.DrawLine(pen, New Point(310, 255), New Point(820, 255))
-    End Sub
 
     Private Sub User_Profile_Click(sender As Object, e As EventArgs) Handles MyBase.Click
         ' When the form is clicked, set focus to another control

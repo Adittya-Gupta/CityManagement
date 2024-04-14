@@ -6,7 +6,7 @@ Imports GemBox.Pdf
 Public Class elections_votingPortal
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
-    Dim idOfCurrentUser As Integer = 984571
+    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()
@@ -290,7 +290,7 @@ Public Class elections_votingPortal
                     cmd.ExecuteNonQuery()
                 End Using
             End If
-            If userVotes("Transportation Minister") >= 0 Then
+            If userVotes("Transport Minister") >= 0 Then
                 query = "update Nominees set VoteCount = VoteCount + 1 where SID=@a"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@a", userVotes("Transport Minister"))
@@ -302,7 +302,11 @@ Public Class elections_votingPortal
         Finally
             conn.Close()
         End Try
-        Hide()
+        Dim form As New election_dashboard()
+        mypanel.panel1.Controls.Clear()
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Dim form As New election_dashboard()

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class transport_cabuserhistory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class transport_cabuserhistory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(transport_cabuserhistory))
         Label8 = New Label()
@@ -40,7 +40,7 @@ Partial Class transport_cabuserhistory
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F)
+        Label8.Font = New Font("Segoe UI", 12.0F)
         Label8.Location = New Point(57, 42)
         Label8.Name = "Label8"
         Label8.Size = New Size(98, 21)
@@ -50,7 +50,7 @@ Partial Class transport_cabuserhistory
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12F)
+        Label9.Font = New Font("Segoe UI", 12.0F)
         Label9.Location = New Point(58, 197)
         Label9.Name = "Label9"
         Label9.Size = New Size(112, 21)
@@ -136,7 +136,7 @@ Partial Class transport_cabuserhistory
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Popup
-        Button1.Font = New Font("Abhaya Libre Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(797, 11)
         Button1.Margin = New Padding(3, 2, 3, 2)
@@ -148,7 +148,7 @@ Partial Class transport_cabuserhistory
         ' 
         ' transport_cabuserhistory
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1107, 760)
         Controls.Add(Button1)

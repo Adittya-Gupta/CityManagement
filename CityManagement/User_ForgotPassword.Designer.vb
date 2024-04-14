@@ -80,7 +80,7 @@ Partial Class ForgotPassword
         ResendLabel.Cursor = Cursors.Hand
         ResendLabel.Location = New Point(542, 469)
         ResendLabel.Name = "ResendLabel"
-        ResendLabel.Size = New Size(196, 20)
+        ResendLabel.Size = New Size(207, 21)
         ResendLabel.TabIndex = 54
         ResendLabel.Text = "Having Issues? Resend Code"
         ' 
@@ -302,10 +302,11 @@ Partial Class ForgotPassword
         AutoScroll = True
         AutoScrollMinSize = New Size(0, 1100)
         BackColor = Color.LightGray
-        ClientSize = New Size(938, 700)
+        ClientSize = New Size(959, 700)
         Controls.Add(Panel1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "ForgotPassword"
+        Text = "Forgot Password"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)

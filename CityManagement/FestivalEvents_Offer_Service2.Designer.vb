@@ -79,7 +79,7 @@ Partial Class FestivalEvents_Offer_Service2
         Description.Font = New Font("Abhaya Libre Medium", 18F, FontStyle.Bold)
         Description.Location = New Point(678, 216)
         Description.Name = "Description"
-        Description.Size = New Size(284, 129)
+        Description.Size = New Size(328, 98)
         Description.TabIndex = 18
         Description.Text = "Label3"
         ' 
@@ -205,9 +205,8 @@ Partial Class FestivalEvents_Offer_Service2
         ' 
         ' FestivalEvents_Offer_Service2
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1089, 713)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 760)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None
         Name = "FestivalEvents_Offer_Service2"

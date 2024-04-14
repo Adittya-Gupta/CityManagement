@@ -49,7 +49,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label3.Location = New Point(14, 9)
+        Label3.Location = New Point(34, 53)
         Label3.Name = "Label3"
         Label3.Size = New Size(329, 37)
         Label3.TabIndex = 32
@@ -66,9 +66,9 @@ Partial Class FestivalEvents_RegRestrictions
         GroupBoxAgeRestrictions.Controls.Add(LabelMaxAgeValue)
         GroupBoxAgeRestrictions.Controls.Add(LabelMinAgeValue)
         GroupBoxAgeRestrictions.Font = New Font("Segoe UI", 10F)
-        GroupBoxAgeRestrictions.Location = New Point(40, 104)
+        GroupBoxAgeRestrictions.Location = New Point(48, 110)
         GroupBoxAgeRestrictions.Name = "GroupBoxAgeRestrictions"
-        GroupBoxAgeRestrictions.Size = New Size(706, 195)
+        GroupBoxAgeRestrictions.Size = New Size(918, 331)
         GroupBoxAgeRestrictions.TabIndex = 33
         GroupBoxAgeRestrictions.TabStop = False
         GroupBoxAgeRestrictions.Text = "Age Restrictions"
@@ -77,7 +77,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         CheckBox2.AutoSize = True
         CheckBox2.Font = New Font("Segoe UI", 10F)
-        CheckBox2.Location = New Point(444, 29)
+        CheckBox2.Location = New Point(444, 57)
         CheckBox2.Name = "CheckBox2"
         CheckBox2.Size = New Size(143, 27)
         CheckBox2.TabIndex = 42
@@ -88,7 +88,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         CheckBox1.AutoSize = True
         CheckBox1.Font = New Font("Segoe UI", 10F)
-        CheckBox1.Location = New Point(27, 29)
+        CheckBox1.Location = New Point(27, 57)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(140, 27)
         CheckBox1.TabIndex = 41
@@ -98,7 +98,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' LabelMaxAge
         ' 
         LabelMaxAge.AutoSize = True
-        LabelMaxAge.Location = New Point(490, 143)
+        LabelMaxAge.Location = New Point(490, 193)
         LabelMaxAge.Name = "LabelMaxAge"
         LabelMaxAge.Size = New Size(81, 23)
         LabelMaxAge.TabIndex = 5
@@ -107,7 +107,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' LabelMinAge
         ' 
         LabelMinAge.AutoSize = True
-        LabelMinAge.Location = New Point(27, 143)
+        LabelMinAge.Location = New Point(27, 193)
         LabelMinAge.Name = "LabelMinAge"
         LabelMinAge.Size = New Size(78, 23)
         LabelMinAge.TabIndex = 4
@@ -115,7 +115,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         ' TrackBarMaxAge
         ' 
-        TrackBarMaxAge.Location = New Point(444, 64)
+        TrackBarMaxAge.Location = New Point(444, 92)
         TrackBarMaxAge.Maximum = 120
         TrackBarMaxAge.Name = "TrackBarMaxAge"
         TrackBarMaxAge.Size = New Size(225, 56)
@@ -124,7 +124,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         ' TrackBarMinAge
         ' 
-        TrackBarMinAge.Location = New Point(27, 64)
+        TrackBarMinAge.Location = New Point(27, 92)
         TrackBarMinAge.Maximum = 120
         TrackBarMinAge.Name = "TrackBarMinAge"
         TrackBarMinAge.Size = New Size(225, 56)
@@ -134,7 +134,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' LabelMaxAgeValue
         ' 
         LabelMaxAgeValue.AutoSize = True
-        LabelMaxAgeValue.Location = New Point(601, 143)
+        LabelMaxAgeValue.Location = New Point(601, 193)
         LabelMaxAgeValue.Name = "LabelMaxAgeValue"
         LabelMaxAgeValue.Size = New Size(19, 23)
         LabelMaxAgeValue.TabIndex = 1
@@ -143,7 +143,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' LabelMinAgeValue
         ' 
         LabelMinAgeValue.AutoSize = True
-        LabelMinAgeValue.Location = New Point(198, 143)
+        LabelMinAgeValue.Location = New Point(198, 193)
         LabelMinAgeValue.Name = "LabelMinAgeValue"
         LabelMinAgeValue.Size = New Size(19, 23)
         LabelMinAgeValue.TabIndex = 0
@@ -153,7 +153,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10F)
-        Label1.Location = New Point(269, 33)
+        Label1.Location = New Point(279, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(183, 23)
         Label1.TabIndex = 34
@@ -162,7 +162,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' TextBoxMaxParticipants
         ' 
         TextBoxMaxParticipants.Font = New Font("Segoe UI", 10F)
-        TextBoxMaxParticipants.Location = New Point(512, 29)
+        TextBoxMaxParticipants.Location = New Point(522, 16)
         TextBoxMaxParticipants.Name = "TextBoxMaxParticipants"
         TextBoxMaxParticipants.Size = New Size(112, 30)
         TextBoxMaxParticipants.TabIndex = 35
@@ -174,7 +174,7 @@ Partial Class FestivalEvents_RegRestrictions
         ButtonSave.FlatStyle = FlatStyle.Flat
         ButtonSave.Font = New Font("Segoe UI", 10F)
         ButtonSave.ForeColor = Color.White
-        ButtonSave.Location = New Point(34, 426)
+        ButtonSave.Location = New Point(34, 674)
         ButtonSave.Name = "ButtonSave"
         ButtonSave.Size = New Size(112, 42)
         ButtonSave.TabIndex = 36
@@ -188,7 +188,7 @@ Partial Class FestivalEvents_RegRestrictions
         ButtonBack.FlatStyle = FlatStyle.Flat
         ButtonBack.Font = New Font("Segoe UI", 10F)
         ButtonBack.ForeColor = Color.White
-        ButtonBack.Location = New Point(210, 426)
+        ButtonBack.Location = New Point(210, 674)
         ButtonBack.Name = "ButtonBack"
         ButtonBack.Size = New Size(112, 42)
         ButtonBack.TabIndex = 37
@@ -199,7 +199,7 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         CheckBoxApplyMaxParticipants.AutoSize = True
         CheckBoxApplyMaxParticipants.Font = New Font("Segoe UI", 10F)
-        CheckBoxApplyMaxParticipants.Location = New Point(48, 33)
+        CheckBoxApplyMaxParticipants.Location = New Point(58, 20)
         CheckBoxApplyMaxParticipants.Name = "CheckBoxApplyMaxParticipants"
         CheckBoxApplyMaxParticipants.Size = New Size(157, 27)
         CheckBoxApplyMaxParticipants.TabIndex = 40
@@ -214,16 +214,16 @@ Partial Class FestivalEvents_RegRestrictions
         Panel1.Controls.Add(CheckBoxApplyMaxParticipants)
         Panel1.Controls.Add(TextBoxMaxParticipants)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(14, 67)
+        Panel1.Location = New Point(34, 159)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(835, 331)
+        Panel1.Size = New Size(1034, 495)
         Panel1.TabIndex = 41
         ' 
         ' Button1
         ' 
         Button1.BackColor = SystemColors.ActiveCaptionText
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(669, 24)
+        Button1.Location = New Point(824, 7)
         Button1.Name = "Button1"
         Button1.Size = New Size(142, 36)
         Button1.TabIndex = 41
@@ -232,9 +232,8 @@ Partial Class FestivalEvents_RegRestrictions
         ' 
         ' FestivalEvents_RegRestrictions
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(897, 492)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 760)
         Controls.Add(ButtonBack)
         Controls.Add(ButtonSave)
         Controls.Add(Label3)

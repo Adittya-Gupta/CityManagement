@@ -317,8 +317,7 @@ Partial Class FestivalEvents_NewEvent
         ' 
         ' FestivalEvents_NewEvent
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Panel1)

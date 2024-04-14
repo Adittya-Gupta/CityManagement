@@ -259,8 +259,7 @@ Partial Class FestivalEvents_EventDetails
         ' 
         ' FestivalEvents_EventDetails
         ' 
-        AutoScaleDimensions = New SizeF(10F, 18F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(Button6)
         Controls.Add(Button5)

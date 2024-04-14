@@ -34,9 +34,10 @@ Partial Class FestivalEvents_MainMenu
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(22, 22)
+        Label1.Location = New Point(28, 31)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(384, 42)
+        Label1.Size = New Size(475, 54)
         Label1.TabIndex = 0
         Label1.Text = "Events and Festivals"
         ' 
@@ -47,9 +48,10 @@ Partial Class FestivalEvents_MainMenu
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(624, 12)
+        Button1.Location = New Point(802, 17)
+        Button1.Margin = New Padding(4, 4, 4, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(203, 54)
+        Button1.Size = New Size(261, 76)
         Button1.TabIndex = 1
         Button1.Text = "Register for an event"
         Button1.TextAlign = ContentAlignment.MiddleRight
@@ -60,9 +62,10 @@ Partial Class FestivalEvents_MainMenu
         PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         PictureBox1.BackColor = Color.Black
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(642, 24)
+        PictureBox1.Location = New Point(825, 34)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(32, 29)
+        PictureBox1.Size = New Size(41, 41)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
@@ -71,21 +74,22 @@ Partial Class FestivalEvents_MainMenu
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         FlowLayoutPanel1.AutoScroll = True
-        FlowLayoutPanel1.Location = New Point(30, 82)
+        FlowLayoutPanel1.Location = New Point(39, 115)
+        FlowLayoutPanel1.Margin = New Padding(4, 4, 4, 4)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(797, 421)
+        FlowLayoutPanel1.Size = New Size(1025, 589)
         FlowLayoutPanel1.TabIndex = 3
         ' 
         ' FestivalEvents_MainMenu
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(861, 543)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 760)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(PictureBox1)
         Controls.Add(Button1)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "FestivalEvents_MainMenu"
         Text = "FestivalEvents_MainMenu"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

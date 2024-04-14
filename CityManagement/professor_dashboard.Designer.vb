@@ -23,62 +23,40 @@ Partial Class professor_dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(professor_dashboard))
-        Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Label3 = New Label()
-        Button4 = New Button()
+        Btnadd = New Button()
         Button1 = New Button()
         PictureBox2 = New PictureBox()
+        Education = New Button()
+        Button2 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.Silver
-        Label1.Location = New Point(47, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(129, 29)
-        Label1.TabIndex = 3
-        Label1.Text = "Education"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(182, 19)
+        PictureBox1.Location = New Point(145, 16)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(24, 23)
+        PictureBox1.Size = New Size(21, 17)
         PictureBox1.TabIndex = 7
         PictureBox1.TabStop = False
         ' 
-        ' Label3
+        ' Btnadd
         ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.Black
-        Label3.Location = New Point(212, 19)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(260, 29)
-        Label3.TabIndex = 8
-        Label3.Text = "Professor Dashboard"
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = SystemColors.WindowText
-        Button4.FlatStyle = FlatStyle.Popup
-        Button4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.WhiteSmoke
-        Button4.Location = New Point(670, 38)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(301, 87)
-        Button4.TabIndex = 23
-        Button4.Text = "ADD NEW COURSE"
-        Button4.UseVisualStyleBackColor = False
+        Btnadd.BackColor = SystemColors.WindowText
+        Btnadd.FlatStyle = FlatStyle.Popup
+        Btnadd.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btnadd.ForeColor = Color.WhiteSmoke
+        Btnadd.Location = New Point(495, 22)
+        Btnadd.Margin = New Padding(3, 2, 3, 2)
+        Btnadd.Name = "Btnadd"
+        Btnadd.Size = New Size(263, 65)
+        Btnadd.TabIndex = 23
+        Btnadd.Text = "ADD NEW COURSE"
+        Btnadd.UseVisualStyleBackColor = False
         ' 
         ' Button1
         ' 
@@ -86,46 +64,75 @@ Partial Class professor_dashboard
         Button1.FlatStyle = FlatStyle.Popup
         Button1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.WhiteSmoke
-        Button1.Location = New Point(81, 156)
+        Button1.Location = New Point(71, 117)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(176, 60)
+        Button1.Size = New Size(154, 45)
         Button1.TabIndex = 24
         Button1.Text = "My Courses"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), Image)
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(1054, 3)
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(764, 9)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(182, 156)
+        PictureBox2.Size = New Size(159, 117)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 25
         PictureBox2.TabStop = False
         ' 
+        ' Education
+        ' 
+        Education.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Education.ForeColor = SystemColors.ActiveBorder
+        Education.Location = New Point(18, 9)
+        Education.Margin = New Padding(3, 2, 3, 2)
+        Education.Name = "Education"
+        Education.Size = New Size(122, 31)
+        Education.TabIndex = 47
+        Education.Text = "Education"
+        Education.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = SystemColors.ActiveCaptionText
+        Button2.Location = New Point(180, 9)
+        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(183, 29)
+        Button2.TabIndex = 48
+        Button2.Text = "Professor Dashboard"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' professor_dashboard
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1236, 849)
+        BackColor = Color.White
+        ClientSize = New Size(953, 535)
+        Controls.Add(Button2)
+        Controls.Add(Education)
         Controls.Add(PictureBox2)
         Controls.Add(Button1)
-        Controls.Add(Button4)
-        Controls.Add(Label3)
+        Controls.Add(Btnadd)
         Controls.Add(PictureBox1)
-        Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "professor_dashboard"
         Text = "professor_dashboard"
+        WindowState = FormWindowState.Maximized
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents Btnadd As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Education As Button
+    Friend WithEvents Button2 As Button
 End Class

@@ -1,14 +1,14 @@
-﻿Imports DocumentFormat.OpenXml.Bibliography
-Imports Microsoft.SqlServer
+﻿Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
 Imports Mysqlx
 Imports Org.BouncyCastle.Ocsp
 Imports System.IO
-Imports System.Windows
-Imports System.Windows.Forms.DataVisualization.Charting
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+'Imports System.Windows
+'Imports System.Windows.Forms.DataVisualization.Charting
+'Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+'Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports Chart = System.Windows.Forms.DataVisualization.Charting.Chart
+Imports System.Drawing
 Public Class Newsletter_articlespage
     Public Mysqlconn As New MySqlConnection
     'Public sqlCmd As New MySqlCommand

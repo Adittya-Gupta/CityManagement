@@ -13,13 +13,10 @@
 
 	<ItemGroup>
 	  <Compile Remove="Doctor_Emp_Req.vb" />
-	  <Compile Remove="Newsletter_articlespage.designer.vb" />
-	  <Compile Remove="Newsletter_articlespage.vb" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <EmbeddedResource Remove="Doctor_Emp_Req.resx" />
-	  <EmbeddedResource Remove="Newsletter_articlespage.resx" />
 	</ItemGroup>
   <ItemGroup>
     <Import Include="CityManagement.My.Resources" />

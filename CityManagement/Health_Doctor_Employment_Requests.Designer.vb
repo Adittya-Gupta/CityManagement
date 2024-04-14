@@ -114,8 +114,7 @@ Partial Class Health_Doctor_Employment_Requests
         ' 
         ' Health_Doctor_Employment_Requests
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1107, 760)
         Controls.Add(Guna2ComboBox1)

@@ -46,7 +46,7 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Black
-        Label8.Font = New Font("Segoe UI", 12.0F)
+        Label8.Font = New Font("Segoe UI", 12F)
         Label8.ForeColor = Color.White
         Label8.Location = New Point(103, 18)
         Label8.Name = "Label8"
@@ -58,7 +58,7 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Black
-        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(462, 18)
         Label7.Name = "Label7"
@@ -70,7 +70,7 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(800, 18)
         Label1.Name = "Label1"
@@ -82,7 +82,7 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label2.AutoSize = True
         Label2.BackColor = SystemColors.ActiveCaptionText
-        Label2.Font = New Font("Segoe UI", 10.0F)
+        Label2.Font = New Font("Segoe UI", 10F)
         Label2.ForeColor = SystemColors.ControlLightLight
         Label2.Location = New Point(10, 69)
         Label2.Name = "Label2"
@@ -92,8 +92,7 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         ' Health_View_Previous_Vacancies
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1107, 760)
         Controls.Add(Label2)

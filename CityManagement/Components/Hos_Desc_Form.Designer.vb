@@ -30,41 +30,43 @@ Partial Class Hos_Desc_Form
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(97), CByte(160), CByte(255))
-        Button1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(22, 233)
+        Button1.Location = New Point(19, 175)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(370, 58)
+        Button1.Size = New Size(324, 44)
         Button1.TabIndex = 13
         Button1.Text = "Close"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' RichTextBox3
         ' 
-        RichTextBox3.Location = New Point(22, 65)
+        RichTextBox3.Location = New Point(19, 49)
+        RichTextBox3.Margin = New Padding(3, 2, 3, 2)
         RichTextBox3.Name = "RichTextBox3"
-        RichTextBox3.Size = New Size(370, 137)
+        RichTextBox3.Size = New Size(324, 104)
         RichTextBox3.TabIndex = 12
         RichTextBox3.Text = ""
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Bold)
-        Label3.Location = New Point(22, 29)
+        Label3.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold)
+        Label3.Location = New Point(19, 22)
         Label3.Name = "Label3"
-        Label3.Size = New Size(124, 20)
+        Label3.Size = New Size(105, 17)
         Label3.TabIndex = 11
         Label3.Text = "Description : "
         ' 
         ' Hos_Desc_Form
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(416, 329)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(364, 247)
         Controls.Add(Button1)
         Controls.Add(RichTextBox3)
         Controls.Add(Label3)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Hos_Desc_Form"
         Text = "IncomingDetailsForm"
         ResumeLayout(False)

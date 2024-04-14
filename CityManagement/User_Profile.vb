@@ -7,7 +7,22 @@ Public Class User_Profile
     Dim userDetailsTable As New DataTable()
     Dim notifications As New List(Of (Integer, String))()
 
+    Public Shared Sub ChildForm(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
+    Public Shared Sub ChildForm2(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
 
     Private Sub User_Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -111,7 +126,7 @@ Public Class User_Profile
                         Dim userID As Integer = reader.GetInt32("UserID")
                         Dim type As Integer = reader.GetInt32("Type")
                         Dim message As String = reader.GetString("Message")
-                        AddNotificationToPanel(message)
+                        AddNotificationToPanel(userID, type, message) ' Pass all three parameters to AddNotificationToPanel
                     End While
                 End Using
             End Using
@@ -273,9 +288,9 @@ Public Class User_Profile
 
 
     ' Function to add a notification to the FlowLayoutPanel
-    Private Sub AddNotificationToPanel(notificationText As String)
+    Private Sub AddNotificationToPanel(userID As Integer, type As Integer, message As String)
         Dim notificationLabel As New Label()
-        notificationLabel.Text = notificationText
+        notificationLabel.Text = message
         notificationLabel.AutoSize = False
         notificationLabel.Width = NotificationPanel.Width - 40 ' Set the width as needed
         notificationLabel.Height = 50 ' Set the height as needed
@@ -284,10 +299,12 @@ Public Class User_Profile
         notificationLabel.ForeColor = Color.White
         notificationLabel.Padding = New Padding(10) ' Add padding for better appearance
 
+        notificationLabel.Tag = New Tuple(Of Integer, Integer, String)(userID, Type, Message)
+
 
         ' Calculate the required height based on the text content
         Using g As Graphics = CreateGraphics()
-            Dim textSize As SizeF = g.MeasureString(notificationText, notificationLabel.Font, notificationLabel.Width - notificationLabel.Padding.Horizontal)
+            Dim textSize As SizeF = g.MeasureString(message, notificationLabel.Font, notificationLabel.Width - notificationLabel.Padding.Horizontal)
             notificationLabel.Height = CInt(textSize.Height) + notificationLabel.Padding.Vertical
         End Using
 
@@ -328,11 +345,40 @@ Public Class User_Profile
 
 
     ' Event handler for notification label click
+    ' Event handler for notification label click
     Private Sub NotificationLabel_Click(sender As Object, e As EventArgs)
-        ' Perform action based on the clicked notification
-        ' For example, redirect to a specific page
-        MessageBox.Show("Notification Clicked!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ' Extract the notification text from the clicked label
+        Dim clickedLabel As Label = TryCast(sender, Label)
+        If clickedLabel IsNot Nothing Then
+            ' Retrieve the tag containing notification details
+            Dim notificationDetails As Tuple(Of Integer, Integer, String) = TryCast(clickedLabel.Tag, Tuple(Of Integer, Integer, String))
+            If notificationDetails IsNot Nothing Then
+                ' Extract the values from the tuple
+                Dim userID As Integer = notificationDetails.Item1
+                Dim type As Integer = notificationDetails.Item2
+                Dim message As String = notificationDetails.Item3
+
+                ' Display the notification details
+                MessageBox.Show($"UserID: {userID}, Type: {type}, Message: {message}", "Notification Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                ' Redirect to a new page based on the type of notification
+                Select Case type
+                    Case 1 ' Type 1: Redirect to Page1
+                        Banking_Main.Panel1.Controls.Clear()
+                        Newsletter_Main.Panel1.Controls.Clear()
+                        ChildForm2(Banking_Main.Panel1, Banking_Homepage)
+                        ChildForm(Banking_Main)
+
+                    Case 2 ' Type 2: Redirect to Page2
+                        Newsletter_Main.Panel1.Controls.Clear()
+                        Banking_Main.Panel1.Controls.Clear()
+                        ChildForm2(Newsletter_Main.Panel1, Newsletter_Homepage)
+                        ChildForm(Newsletter_Main)
+                End Select
+            End If
+        End If
     End Sub
+
 
     ' Function to retrieve notifications from a list and add them to the FlowLayoutPanel
 

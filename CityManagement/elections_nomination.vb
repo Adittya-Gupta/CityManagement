@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.IO
 Public Class elections_nomination
-    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
+    Dim idOfCurrentUser As Integer = 984571
     'Input to the form is SID
     'Public Sub New(ByVal userInput As Integer)
     '   InitializeComponent()
@@ -52,7 +52,22 @@ Public Class elections_nomination
         End Try
 
     End Sub
+    Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
+        parentpanel.Controls.Clear()
+        childform.TopLevel = False
+        childform.FormBorderStyle = FormBorderStyle.None
+        childform.Dock = DockStyle.Fill
+        childform.BringToFront()
+        parentpanel.Controls.Add(childform)
+        childform.Show()
+    End Sub
 
+    Public Shared Sub ChildForm2(ByVal childform As Form)
+        mypanel.panel1.Controls.Clear()
+        childform.TopLevel = False
+        mypanel.panel1.Controls.Add(childform)
+        childform.Show()
+    End Sub
     Private Sub PayDeposit_Click(sender As Object, e As EventArgs) Handles PayDeposit.Click
         'Link banking database and banking forms for further process here
         Dim paidDeposit = True
@@ -61,7 +76,17 @@ Public Class elections_nomination
         'form.TopLevel = False
         'mypanel.Panel1.Controls.Add(form)
         'form.Show()
+        banking_recv_username = "mayor"
+        Go_Back = 1
+        Go_Back_Form = election_dashboard
+        banking_payment_amount = 100
 
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+
+        ChildForm(Banking_Main.Panel1, Banking_Homepage)
+        mypanel.panel1.Controls.Clear()
+        ChildForm2(Banking_Main)
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
             Try

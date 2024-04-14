@@ -131,6 +131,10 @@ Public Class transport_busbooking
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If String.IsNullOrWhiteSpace(TextBox9.Text) OrElse String.IsNullOrWhiteSpace(TextBox10.Text) Then
+            MessageBox.Show("Please enter your phone number and email address.")
+            Return
+        End If
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         Dim document = New PdfDocument()

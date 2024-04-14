@@ -147,19 +147,19 @@ Public Class EmployApplication
                 cmd.ExecuteNonQuery()
             End Using
 
-            If orgID = 103 Then
-                Dim query2 As String = "UPDATE User SET Designation = 'Teacher' WHERE SID = @userID"
-                Using cmd2 As New MySqlCommand(query2, conn)
-                    cmd2.Parameters.AddWithValue("@userID", userID)
-                    cmd2.ExecuteNonQuery()
-                End Using
-            ElseIf orgID = 107 Then
-                Dim query2 As String = "UPDATE User SET Designation = 'Driver' WHERE SID = @userID"
-                Using cmd2 As New MySqlCommand(query2, conn)
-                    cmd2.Parameters.AddWithValue("@userID", userID)
-                    cmd2.ExecuteNonQuery()
-                End Using
-            End If
+            'If orgID = 103 Then
+            '    Dim query2 As String = "UPDATE User SET Designation = 'Teacher' WHERE SID = @userID"
+            '    Using cmd2 As New MySqlCommand(query2, conn)
+            '        cmd2.Parameters.AddWithValue("@userID", userID)
+            '        cmd2.ExecuteNonQuery()
+            '    End Using
+            'ElseIf orgID = 107 Then
+            '    Dim query2 As String = "UPDATE User SET Designation = 'Driver' WHERE SID = @userID"
+            '    Using cmd2 As New MySqlCommand(query2, conn)
+            '        cmd2.Parameters.AddWithValue("@userID", userID)
+            '        cmd2.ExecuteNonQuery()
+            '    End Using
+            'End If
 
             MessageBox.Show("Application submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception

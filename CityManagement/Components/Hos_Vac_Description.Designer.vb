@@ -38,17 +38,17 @@ Partial Class Hos_Vac_Description
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold)
+        Label3.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Bold)
         Label3.Location = New Point(31, 40)
         Label3.Name = "Label3"
-        Label3.Size = New Size(90, 17)
+        Label3.Size = New Size(106, 20)
         Label3.TabIndex = 4
         Label3.Text = "Description"
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(97), CByte(160), CByte(255))
-        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(31, 265)
         Button1.Name = "Button1"
@@ -59,7 +59,8 @@ Partial Class Hos_Vac_Description
         ' 
         ' Hos_Vac_Description
         ' 
-        AutoScaleMode = AutoScaleMode.None
+        AutoScaleDimensions = New SizeF(10.0F, 20.0F)
+        AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Button1)
         Controls.Add(RichTextBox3)
         Controls.Add(Label3)

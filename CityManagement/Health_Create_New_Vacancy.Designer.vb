@@ -248,7 +248,8 @@ Partial Class Health_Create_New_Vacancy
         ' 
         ' Health_Create_New_Vacancy
         ' 
-        AutoScaleMode = AutoScaleMode.None
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1107, 760)
         Controls.Add(Label2)
         Controls.Add(Label15)

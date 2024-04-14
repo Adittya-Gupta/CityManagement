@@ -112,7 +112,7 @@ Partial Class Health_Record_Tracker
         ' PictureBox1
         ' 
         PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Image = arrow_icons
+        PictureBox1.Image = My.Resources.Resources.arrow_icons
         PictureBox1.Location = New Point(60, 76)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
@@ -239,7 +239,8 @@ Partial Class Health_Record_Tracker
         ' 
         ' Health_Record_Tracker
         ' 
-        AutoScaleMode = AutoScaleMode.None
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Label20)

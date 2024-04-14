@@ -51,7 +51,7 @@ Partial Class Doctor_Emp_Req
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = Color.White
-        Button2.Image = Group_190
+        Button2.Image = My.Resources.Resources.Group_190
         Button2.Location = New Point(589, 56)
         Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
@@ -67,7 +67,7 @@ Partial Class Doctor_Emp_Req
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = Color.White
-        Button1.Image = Group_1891
+        Button1.Image = My.Resources.Resources.Group_1891
         Button1.Location = New Point(735, 56)
         Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
@@ -134,7 +134,8 @@ Partial Class Doctor_Emp_Req
         ' 
         ' Doctor_Emp_Req
         ' 
-        AutoScaleMode = AutoScaleMode.None
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Controls.Add(Button4)
         Controls.Add(Label1)

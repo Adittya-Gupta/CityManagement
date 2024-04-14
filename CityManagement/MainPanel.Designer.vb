@@ -171,7 +171,7 @@ Partial Class MainPanel
         Button7.FlatAppearance.BorderSize = 0
         Button7.FlatStyle = FlatStyle.Flat
         Button7.ForeColor = SystemColors.ControlLightLight
-        Button7.Location = New Point(58, 480)
+        Button7.Location = New Point(55, 480)
         Button7.Margin = New Padding(0)
         Button7.Name = "Button7"
         Button7.Size = New Size(145, 41)
@@ -222,7 +222,7 @@ Partial Class MainPanel
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(41, 181)
+        PictureBox2.Location = New Point(41, 188)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(22, 22)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage

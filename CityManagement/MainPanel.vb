@@ -27,6 +27,30 @@
             mypanel.panel1 = Panel1
             Button1_Click(sender, e)
         End If
+        'Change the background color of button during hover
+        Button1.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button2.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button3.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button4.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button5.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button6.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button7.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button8.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button9.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button10.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button11.FlatAppearance.MouseOverBackColor = Color.Transparent
+        'Change the background color of button during click
+        Button1.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button2.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button3.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button4.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button5.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button6.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button7.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button8.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button9.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button10.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button11.FlatAppearance.MouseDownBackColor = Color.Transparent
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ShowFormInPanel(specialisation)

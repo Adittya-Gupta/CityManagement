@@ -10,14 +10,6 @@
     <ImportedNamespaces>System.Data=False,System.Drawing=False,System.Windows.Forms=False,System.Windows.Forms.DataVisualization.Charting=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,CityManagement=True</ImportedNamespaces>
     <UseWPF>False</UseWPF>
   </PropertyGroup>
-<ItemGroup>
-    <Compile Remove="Newsletter_articlespage.designer.vb" />
-    <Compile Remove="Newsletter_articlespage.vb" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Newsletter_articlespage.resx" />
-  </ItemGroup>
   <ItemGroup>
     <Import Include="CityManagement.My.Resources" />
     <Import Include="MySql.Data.MySqlClient" />
@@ -41,6 +33,7 @@
     <PackageReference Include="GemBox.Pdf" Version="17.0.1508" />
     <PackageReference Include="MySql.Data" Version="8.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
   <ItemGroup>

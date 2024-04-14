@@ -118,15 +118,16 @@ Public Class User_Profile
     Private Sub LoadNotifications()
         Try
             conn.Open()
-            Dim query As String = "SELECT UserID, Type, Message FROM Notifications WHERE UserID = @UserID"
+            Dim query As String = "SELECT ID,UserID, Type, Message FROM Notifications WHERE UserID = @UserID"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@UserID", Module1.CurrUserSID)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
+                        Dim ID As Integer = reader.GetInt32("ID")
                         Dim userID As Integer = reader.GetInt32("UserID")
                         Dim type As Integer = reader.GetInt32("Type")
                         Dim message As String = reader.GetString("Message")
-                        AddNotificationToPanel(userID, type, message) ' Pass all three parameters to AddNotificationToPanel
+                        AddNotificationToPanel(ID, userID, type, message) ' Pass all three parameters to AddNotificationToPanel
                     End While
                 End Using
             End Using
@@ -288,7 +289,7 @@ Public Class User_Profile
 
 
     ' Function to add a notification to the FlowLayoutPanel
-    Private Sub AddNotificationToPanel(userID As Integer, type As Integer, message As String)
+    Private Sub AddNotificationToPanel(ID As Integer, userID As Integer, type As Integer, message As String)
         Dim notificationLabel As New Label()
         notificationLabel.Text = message
         notificationLabel.AutoSize = False
@@ -298,16 +299,16 @@ Public Class User_Profile
         notificationLabel.BackColor = Color.Gray
         notificationLabel.ForeColor = Color.White
         notificationLabel.Padding = New Padding(10) ' Add padding for better appearance
+        notificationLabel.AutoEllipsis = True ' Enable AutoEllipsis
 
-        notificationLabel.Tag = New Tuple(Of Integer, Integer, String)(userID, Type, Message)
-
+        notificationLabel.Tag = New Tuple(Of Integer, Integer, Integer, String)(ID, userID, type, message)
 
         ' Calculate the required height based on the text content
-        Using g As Graphics = CreateGraphics()
-            Dim textSize As SizeF = g.MeasureString(message, notificationLabel.Font, notificationLabel.Width - notificationLabel.Padding.Horizontal)
-            notificationLabel.Height = CInt(textSize.Height) + notificationLabel.Padding.Vertical
-        End Using
-
+        'Using g As Graphics = CreateGraphics()
+        'Dim textSize As SizeF = g.MeasureString(message, notificationLabel.Font, notificationLabel.Width - notificationLabel.Padding.Horizontal)
+        notificationLabel.Height = notificationLabel.PreferredHeight + notificationLabel.Padding.Vertical
+        'notificationLabel.Height = 90
+        'End Using
 
         ' Apply rounded corners
         Dim path As New System.Drawing.Drawing2D.GraphicsPath()
@@ -344,6 +345,7 @@ Public Class User_Profile
 
 
 
+
     ' Event handler for notification label click
     ' Event handler for notification label click
     Private Sub NotificationLabel_Click(sender As Object, e As EventArgs)
@@ -351,15 +353,20 @@ Public Class User_Profile
         Dim clickedLabel As Label = TryCast(sender, Label)
         If clickedLabel IsNot Nothing Then
             ' Retrieve the tag containing notification details
-            Dim notificationDetails As Tuple(Of Integer, Integer, String) = TryCast(clickedLabel.Tag, Tuple(Of Integer, Integer, String))
+            Dim notificationDetails As Tuple(Of Integer, Integer, Integer, String) = TryCast(clickedLabel.Tag, Tuple(Of Integer, Integer, Integer, String))
             If notificationDetails IsNot Nothing Then
                 ' Extract the values from the tuple
-                Dim userID As Integer = notificationDetails.Item1
-                Dim type As Integer = notificationDetails.Item2
-                Dim message As String = notificationDetails.Item3
+                Dim ID As Integer = notificationDetails.Item1
+                Dim userID As Integer = notificationDetails.Item2
+                Dim type As Integer = notificationDetails.Item3
+                Dim message As String = notificationDetails.Item4
 
                 ' Display the notification details
-                MessageBox.Show($"UserID: {userID}, Type: {type}, Message: {message}", "Notification Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'MessageBox.Show($"UserID: {userID}, Type: {type}, Message: {message}", "Notification Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show($"Message: {message}", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                DeleteNotification(ID, type, message)
+                NotificationPanel.Controls.Remove(clickedLabel)
 
                 ' Redirect to a new page based on the type of notification
                 Select Case type
@@ -377,8 +384,26 @@ Public Class User_Profile
                 End Select
             End If
         End If
+
+
     End Sub
 
+    Private Sub DeleteNotification(ID As Integer, type As Integer, message As String)
+        Try
+            conn.Open()
+            Dim query As String = "DELETE FROM Notifications WHERE ID = @ID AND Type = @Type AND Message = @Message"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@ID", ID)
+                cmd.Parameters.AddWithValue("@Type", type)
+                cmd.Parameters.AddWithValue("@Message", message)
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error deleting notification: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
 
     ' Function to retrieve notifications from a list and add them to the FlowLayoutPanel
 

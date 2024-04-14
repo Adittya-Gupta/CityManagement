@@ -39,6 +39,8 @@
         Button9.FlatAppearance.MouseOverBackColor = Color.Transparent
         Button10.FlatAppearance.MouseOverBackColor = Color.Transparent
         Button11.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button12.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button13.FlatAppearance.MouseOverBackColor = Color.Transparent
         'Change the background color of button during click
         Button1.FlatAppearance.MouseDownBackColor = Color.Transparent
         Button2.FlatAppearance.MouseDownBackColor = Color.Transparent
@@ -51,6 +53,8 @@
         Button9.FlatAppearance.MouseDownBackColor = Color.Transparent
         Button10.FlatAppearance.MouseDownBackColor = Color.Transparent
         Button11.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button12.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button13.FlatAppearance.MouseDownBackColor = Color.Transparent
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ShowFormInPanel(specialisation)

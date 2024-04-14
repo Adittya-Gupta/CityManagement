@@ -79,7 +79,7 @@ Partial Class HistoryItem
         ' Label2
         ' 
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Exo 2", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(175, 40)
         Label2.Name = "Label2"
@@ -91,7 +91,7 @@ Partial Class HistoryItem
         ' Label3
         ' 
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Abhaya Libre Medium", 10F)
+        Label3.Font = New Font("Microsoft Sans Serif", 10F)
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(342, 60)
         Label3.Name = "Label3"
@@ -113,7 +113,7 @@ Partial Class HistoryItem
         ' 
         CurvedLabel3.BackColor = Color.Transparent
         CurvedLabel3.CornerRadius = 20
-        CurvedLabel3.Font = New Font("Exo 2", 16F)
+        CurvedLabel3.Font = New Font("Microsoft Sans Serif", 16F)
         CurvedLabel3.ForeColor = Color.Gainsboro
         CurvedLabel3.Location = New Point(529, 25)
         CurvedLabel3.Name = "CurvedLabel3"
@@ -160,7 +160,7 @@ Partial Class HistoryItem
         ' 
         CurvedLabel4.BackColor = Color.FromArgb(CByte(254), CByte(0), CByte(0))
         CurvedLabel4.FlatStyle = FlatStyle.Flat
-        CurvedLabel4.Font = New Font("Exo 2", 16F)
+        CurvedLabel4.Font = New Font("Microsoft Sans Serif", 16F)
         CurvedLabel4.ForeColor = Color.Gainsboro
         CurvedLabel4.Location = New Point(765, 25)
         CurvedLabel4.Name = "CurvedLabel4"

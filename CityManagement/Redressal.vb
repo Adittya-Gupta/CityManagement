@@ -64,6 +64,7 @@ Public Class Redressal
         ' Fetch data from MySQL and populate DataGridView
         Try
             conn.Open()
+            
             Dim query As String = ""
             ' Assuming designation is fetched from the User table
             Dim designation As String = GetDesignation(idOfCurrentUser)
@@ -144,6 +145,7 @@ Public Class Redressal
 
             ' Set the complaint ID as an environment variable
             Environment.SetEnvironmentVariable("ComplaintID", complaintID)
+            conn.Close()
             Dim Quer1 As New Quer1()
             ' MainPanel.switchPanel(Quer1)
             mypanel.Panel1.Controls.Clear()

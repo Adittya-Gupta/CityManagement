@@ -135,7 +135,7 @@
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        ShowFormInPanel(New EmploymentPortal())
+        ShowFormInPanel(New EmploymentPortal)
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click

@@ -37,7 +37,7 @@ Partial Class Health_DoctorsEmployment
         ' Label2
         ' 
         Label2.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label2.Font = New Font("Segoe UI", 14F)
+        Label2.Font = New Font("Segoe UI", 14.0F)
         Label2.Location = New Point(67, 31)
         Label2.Name = "Label2"
         Label2.Size = New Size(259, 49)
@@ -47,7 +47,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         ' ComboBox1
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 18F)
+        ComboBox1.Font = New Font("Segoe UI", 18.0F)
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(460, 31)
         ComboBox1.Name = "ComboBox1"
@@ -57,7 +57,7 @@ Partial Class Health_DoctorsEmployment
         ' Label3
         ' 
         Label3.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
-        Label3.Font = New Font("Segoe UI", 18F)
+        Label3.Font = New Font("Segoe UI", 18.0F)
         Label3.Location = New Point(67, 545)
         Label3.Name = "Label3"
         Label3.Size = New Size(459, 52)
@@ -72,7 +72,7 @@ Partial Class Health_DoctorsEmployment
         Button1.Cursor = Cursors.Hand
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 18F)
+        Button1.Font = New Font("Segoe UI", 18.0F)
         Button1.Location = New Point(478, 636)
         Button1.Name = "Button1"
         Button1.Size = New Size(172, 51)
@@ -94,7 +94,7 @@ Partial Class Health_DoctorsEmployment
         backButton.Cursor = Cursors.Hand
         backButton.FlatAppearance.BorderSize = 0
         backButton.FlatStyle = FlatStyle.Flat
-        backButton.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        backButton.Font = New Font("Microsoft Sans Serif", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         backButton.ForeColor = Color.White
         backButton.Location = New Point(950, 31)
         backButton.Name = "backButton"
@@ -106,7 +106,7 @@ Partial Class Health_DoctorsEmployment
         ' Label1
         ' 
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Segoe UI", 18F)
+        Label1.Font = New Font("Segoe UI", 18.0F)
         Label1.Location = New Point(610, 545)
         Label1.Name = "Label1"
         Label1.Size = New Size(430, 52)
@@ -116,7 +116,7 @@ Partial Class Health_DoctorsEmployment
         ' Label4
         ' 
         Label4.BackColor = Color.White
-        Label4.Font = New Font("Segoe UI", 18F)
+        Label4.Font = New Font("Segoe UI", 18.0F)
         Label4.Location = New Point(243, 98)
         Label4.Name = "Label4"
         Label4.Size = New Size(140, 48)
@@ -127,7 +127,7 @@ Partial Class Health_DoctorsEmployment
         ' Label5
         ' 
         Label5.BackColor = Color.White
-        Label5.Font = New Font("Segoe UI", 18F)
+        Label5.Font = New Font("Segoe UI", 18.0F)
         Label5.Location = New Point(554, 98)
         Label5.Name = "Label5"
         Label5.Size = New Size(134, 37)
@@ -138,7 +138,7 @@ Partial Class Health_DoctorsEmployment
         ' Label6
         ' 
         Label6.BackColor = Color.White
-        Label6.Font = New Font("Segoe UI", 18F)
+        Label6.Font = New Font("Segoe UI", 18.0F)
         Label6.Location = New Point(745, 98)
         Label6.Name = "Label6"
         Label6.Size = New Size(145, 48)
@@ -148,7 +148,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         ' Health_DoctorsEmployment
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1107, 760)

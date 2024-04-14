@@ -50,7 +50,7 @@ Partial Class min_req
         lbldateTime.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lbldateTime.AutoSize = True
         lbldateTime.BackColor = Color.Transparent
-        lbldateTime.Location = New Point(438, 87)
+        lbldateTime.Location = New Point(427, 87)
         lbldateTime.Name = "lbldateTime"
         lbldateTime.Size = New Size(69, 20)
         lbldateTime.TabIndex = 1
@@ -105,7 +105,7 @@ Partial Class min_req
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(373, 88)
+        Label1.Location = New Point(346, 87)
         Label1.Name = "Label1"
         Label1.Size = New Size(45, 20)
         Label1.TabIndex = 7

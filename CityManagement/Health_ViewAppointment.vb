@@ -30,22 +30,22 @@ Public Class Health_ViewAppointment
         GetDoctorID()
 
         listView1.Name = "listView1"
-        listView1.Width = 880 ' Set width to 1150
+        listView1.Width = 1010 ' Set width to 1150
         listView1.View = View.Details ' Set view to Details mode
         listView1.FullRowSelect = True ' Select entire row when clicked
         'listView1.BorderStyle = BorderStyle.None
         listView1.Font = New Font("Arial", 14)
-        listView1.Columns.Add("Appointment ID", 150)
-        listView1.Columns.Add("Patient Name", 150)
+        listView1.Columns.Add("Appointment ID", 185)
+        listView1.Columns.Add("Patient Name", 200)
         listView1.Columns.Add("Gender", 100)
         listView1.Columns.Add("Date", 160)
         listView1.Columns.Add("Time", 120)
-        listView1.Columns.Add("Status", 180)
+        listView1.Columns.Add("Status", 220)
         listView1.BackColor = ColorTranslator.FromHtml("#F5F1F1")
         listView1.HeaderStyle = ColumnHeaderStyle.Nonclickable ' Make column headers non-clickable
         listView1.HideSelection = True ' Remove highlighting effect after clicking
 
-        Dim queryString As String = "SELECT appointment_id, user_id, DATE(date) as date, time , status FROM hospitalAppointment WHERE doctor_id = @doctorID"
+        Dim queryString As String = "SELECT appointment_id, user_id, CONCAT(date, ' ', time) AS combined_datetime , status FROM hospitalAppointment WHERE doctor_id = @doctorID"
 
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
@@ -68,7 +68,12 @@ Public Class Health_ViewAppointment
                         Case Else
                             status = "Unknown"
                     End Select
-                    Dim row As New ListViewItem(New String() {reader("appointment_id").ToString(), userDetails(0), userDetails(1), Convert.ToDateTime(reader("date")).ToString("yyyy-MM-dd"), reader("time").ToString(), status})
+                    Dim combinedDateTime As String = reader.GetString("combined_datetime")
+                    Dim components() As String = combinedDateTime.Split(" "c)
+                    Dim dateComponent As String = components(0)
+                    Dim timeComponent As String = components(1)
+
+                    Dim row As New ListViewItem(New String() {reader("appointment_id").ToString(), userDetails(0), userDetails(1), dateComponent, timeComponent, status})
                     listView1.Items.Add(row)
                 End While
             Finally
@@ -84,10 +89,10 @@ Public Class Health_ViewAppointment
         'listView1.Items.AddRange(New ListViewItem() {row1, row2, row3, row4})
 
         ' Set the location of the ListView
-        listView1.Location = New Point(45, 100) ' Set location to (30, 200)
+        listView1.Location = New Point(48, 100) ' Set location to (30, 200)
 
         ' Set the ListView's height to fit its content
-        listView1.Height = (450) ' Add some extra space for aesthetics
+        listView1.Height = (630) ' Add some extra space for aesthetics
 
         ' Add the ListView to the form
         Me.Controls.Add(listView1)

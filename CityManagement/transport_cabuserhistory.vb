@@ -143,7 +143,14 @@ Public Class transport_cabuserhistory
                                                                    End If
                                                                End Using
                                                            End If
-                                                           MessageBox.Show("Ride ended successfully and details added to cab_history.")
+                                                           MessageBox.Show("Ride ended successfully.")
+                                                           Me.Close()
+
+                                                           mypanel.panel1.Controls.Clear()
+                                                           Dim newForm As New transport_cabuserhistory
+                                                           newForm.TopLevel = False
+                                                           mypanel.panel1.Controls.Add(newForm)
+                                                           newForm.Show()
                                                            ' Optionally, you may also update the cab_user table to indicate that the ride has ended.
                                                        End Sub
                         FlowLayoutPanel1.Controls.Add(card)

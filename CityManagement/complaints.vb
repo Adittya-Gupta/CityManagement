@@ -46,7 +46,7 @@
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         '  Dim transport As New complaints_Transport()
         mypanel.Panel1.Controls.Clear()
-        Dim form As New complaints_Transport()
+        Dim form As New complaints_transport_query()
         form.TopLevel = False
         mypanel.Panel1.Controls.Add(form)
         form.Show()

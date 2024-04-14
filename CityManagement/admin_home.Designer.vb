@@ -49,7 +49,7 @@ Partial Class admin_home
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.BackColor = Color.Black
-        Label1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label1.ForeColor = SystemColors.ButtonHighlight
         Label1.Location = New Point(870, 27)
         Label1.Name = "Label1"
@@ -61,67 +61,67 @@ Partial Class admin_home
         ' Label2
         ' 
         Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label2.BackColor = Color.FromArgb(CByte(255), CByte(220), CByte(52))
+        Label2.BackColor = Color.FromArgb(255, 220, 52)
         Label2.Location = New Point(466, 161)
         Label2.Name = "Label2"
         Label2.Size = New Size(148, 53)
         Label2.TabIndex = 1
-        Label2.Text = "Name" & vbCrLf & "Mayor"
+        Label2.Text = "Name" + vbCrLf + "Mayor"
         Label2.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label3
         ' 
         Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label3.BackColor = Color.FromArgb(CByte(176), CByte(164), CByte(252))
+        Label3.BackColor = Color.FromArgb(176, 164, 252)
         Label3.Location = New Point(80, 414)
         Label3.Name = "Label3"
         Label3.Size = New Size(147, 55)
         Label3.TabIndex = 2
-        Label3.Text = "Name" & vbCrLf & "Education Minister" & vbCrLf
+        Label3.Text = "Name" + vbCrLf + "Education Minister" + vbCrLf
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label4.BackColor = Color.FromArgb(CByte(176), CByte(164), CByte(252))
+        Label4.BackColor = Color.FromArgb(176, 164, 252)
         Label4.Location = New Point(270, 414)
         Label4.Name = "Label4"
         Label4.Size = New Size(156, 55)
         Label4.TabIndex = 3
-        Label4.Text = "Name" & vbCrLf & "Health Minister"
+        Label4.Text = "Name" + vbCrLf + "Health Minister"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label5
         ' 
         Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label5.BackColor = Color.FromArgb(CByte(176), CByte(164), CByte(252))
+        Label5.BackColor = Color.FromArgb(176, 164, 252)
         Label5.Location = New Point(466, 412)
         Label5.Name = "Label5"
         Label5.Size = New Size(165, 59)
         Label5.TabIndex = 4
-        Label5.Text = "Name" & vbCrLf & "Transport Minister"
+        Label5.Text = "Name" + vbCrLf + "Transport Minister"
         Label5.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label6
         ' 
         Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label6.BackColor = Color.FromArgb(CByte(176), CByte(164), CByte(252))
+        Label6.BackColor = Color.FromArgb(176, 164, 252)
         Label6.Location = New Point(676, 412)
         Label6.Name = "Label6"
         Label6.Size = New Size(149, 57)
         Label6.TabIndex = 5
-        Label6.Text = "Name" & vbCrLf & "Finance Minister"
+        Label6.Text = "Name" + vbCrLf + "Finance Minister"
         Label6.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label7
         ' 
         Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label7.BackColor = Color.FromArgb(CByte(176), CByte(164), CByte(252))
+        Label7.BackColor = Color.FromArgb(176, 164, 252)
         Label7.Location = New Point(876, 406)
         Label7.Name = "Label7"
         Label7.Size = New Size(168, 63)
         Label7.TabIndex = 6
-        Label7.Text = "Name" & vbCrLf & "Home Minister"
+        Label7.Text = "Name" + vbCrLf + "Home Minister"
         Label7.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' PictureBox1
@@ -188,13 +188,13 @@ Partial Class admin_home
         ' 
         Label8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label8.BackColor = Color.Black
-        Label8.Font = New Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label8.ForeColor = SystemColors.ButtonHighlight
         Label8.Location = New Point(870, 118)
         Label8.Name = "Label8"
         Label8.Size = New Size(212, 54)
         Label8.TabIndex = 13
-        Label8.Text = "Minister"
+        Label8.Text = "Work"
         Label8.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' admin_home

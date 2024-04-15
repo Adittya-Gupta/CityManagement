@@ -37,20 +37,19 @@ Partial Class Health_View_Previous_Vacancies
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1097, 60)
+        Panel1.Size = New Size(1254, 80)
         Panel1.TabIndex = 0
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Black
-        Label8.Font = New Font("Segoe UI", 12.0F)
+        Label8.Font = New Font("Segoe UI", 12F)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(103, 18)
+        Label8.Location = New Point(118, 24)
         Label8.Name = "Label8"
-        Label8.Size = New Size(151, 21)
+        Label8.Size = New Size(187, 28)
         Label8.TabIndex = 2
         Label8.Text = "Create New Vacancy"
         ' 
@@ -58,11 +57,11 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Black
-        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(462, 18)
+        Label7.Location = New Point(461, 24)
         Label7.Name = "Label7"
-        Label7.Size = New Size(179, 21)
+        Label7.Size = New Size(220, 28)
         Label7.TabIndex = 1
         Label7.Text = "View Previous Vacancies"
         ' 
@@ -70,11 +69,11 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Black
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(800, 18)
+        Label1.Location = New Point(824, 24)
         Label1.Name = "Label1"
-        Label1.Size = New Size(209, 21)
+        Label1.Size = New Size(263, 28)
         Label1.TabIndex = 0
         Label1.Text = "Doctor Employment Request"
         ' 
@@ -82,24 +81,23 @@ Partial Class Health_View_Previous_Vacancies
         ' 
         Label2.AutoSize = True
         Label2.BackColor = SystemColors.ActiveCaptionText
-        Label2.Font = New Font("Segoe UI", 10.0F)
+        Label2.Font = New Font("Segoe UI", 10F)
         Label2.ForeColor = SystemColors.ControlLightLight
-        Label2.Location = New Point(10, 69)
+        Label2.Location = New Point(1041, 98)
         Label2.Name = "Label2"
-        Label2.Size = New Size(142, 19)
+        Label2.Size = New Size(45, 23)
         Label2.TabIndex = 1
-        Label2.Text = "Health Record Tracker"
+        Label2.Text = "Back"
         ' 
         ' Health_View_Previous_Vacancies
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
+        AutoScroll = True
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1107, 760)
         Controls.Add(Label2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Health_View_Previous_Vacancies"
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)

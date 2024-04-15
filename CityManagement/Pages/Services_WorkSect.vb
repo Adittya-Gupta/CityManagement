@@ -6,7 +6,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class Services_WorkSect
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim workerID As Integer ' Worker ID of the current user
     'Dim userID As Integer = 112546 ' User ID of the applicant

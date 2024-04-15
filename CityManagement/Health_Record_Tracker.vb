@@ -4,6 +4,7 @@ Public Class Health_Record_Tracker
 
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim listView1 As New ListView()
+    Dim userID As Integer = Module1.CurrUserSID
     Private Sub Health_Record_Tracker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listView1.Name = "listView1"
         listView1.Width = 1000 ' Set width to 1150
@@ -77,17 +78,86 @@ Public Class Health_Record_Tracker
         End Using
     End Function
 
+    Public Function GetUserDesignation(ByVal userID As Integer) As String
+
+        ' SQL query to fetch user designation based on userID
+        Dim query As String = "SELECT Designation FROM User WHERE SID = @UserID"
+
+        ' Initialize designation variable
+        Dim designation As String = Nothing
+
+        ' Create connection and command objects
+        Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(query, connection)
+                ' Add parameters
+                command.Parameters.AddWithValue("@UserID", userID)
+
+                Try
+                    ' Open connection
+                    connection.Open()
+
+                    ' Execute command and get the result
+                    designation = Convert.ToString(command.ExecuteScalar())
+                Catch ex As Exception
+                    ' Handle any errors here
+                    MessageBox.Show("Error fetching user designation: " & ex.Message)
+                End Try
+            End Using
+        End Using
+
+        ' Return the designation
+        Return designation
+    End Function
+
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
-        Dim Health_Doctor_Employment_Requests As New Health_Doctor_Employment_Requests()
+        Dim designation As String = GetUserDesignation(userID)
+
+        ' Check the designation
+        Select Case designation
+            Case "Doctor"
+                Dim Health_ViewAppointment As New Health_ViewAppointment()
+                ' Get the instance of MainForm (assuming MainForm is the parent form)
+                Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
+                ' Check if the main form instance is not null
+                If MainPanel IsNot Nothing Then
+                    ' Call the public method of the main form to show the child form in the panel
+                    MainPanel.ShowChildFormInPanel(Health_ViewAppointment)
+                End If
+            Case "Hospital Owner"
+                Dim Health_Doctor_Employment_Requests As New Health_Doctor_Employment_Requests()
+                Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
+                If MainPanel IsNot Nothing Then
+                    MainPanel.ShowChildFormInPanel(Health_Doctor_Employment_Requests)
+                End If
+            Case Else
+                MessageBox.Show("You are not employed.")
+        End Select
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Dim specialisation As New specialisation()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(Health_Doctor_Employment_Requests)
+            MainPanel.ShowChildFormInPanel(specialisation)
+        End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Dim listHospitals As New listHospitals()
+
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
+
+        ' Check if the main form instance is not null
+        If MainPanel IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            MainPanel.ShowChildFormInPanel(listHospitals)
         End If
     End Sub
 End Class

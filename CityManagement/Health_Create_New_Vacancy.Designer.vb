@@ -51,9 +51,8 @@ Partial Class Health_Create_New_Vacancy
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1097, 60)
+        Panel1.Size = New Size(1254, 80)
         Panel1.TabIndex = 0
         ' 
         ' Label8
@@ -62,9 +61,9 @@ Partial Class Health_Create_New_Vacancy
         Label8.BackColor = Color.Black
         Label8.Font = New Font("Segoe UI", 12F)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(103, 18)
+        Label8.Location = New Point(118, 24)
         Label8.Name = "Label8"
-        Label8.Size = New Size(151, 21)
+        Label8.Size = New Size(187, 28)
         Label8.TabIndex = 2
         Label8.Text = "Create New Vacancy"
         ' 
@@ -74,9 +73,9 @@ Partial Class Health_Create_New_Vacancy
         Label7.BackColor = Color.Black
         Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(462, 18)
+        Label7.Location = New Point(458, 24)
         Label7.Name = "Label7"
-        Label7.Size = New Size(179, 21)
+        Label7.Size = New Size(220, 28)
         Label7.TabIndex = 1
         Label7.Text = "View Previous Vacancies"
         ' 
@@ -86,18 +85,18 @@ Partial Class Health_Create_New_Vacancy
         Label1.BackColor = Color.Black
         Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(800, 18)
+        Label1.Location = New Point(820, 24)
         Label1.Name = "Label1"
-        Label1.Size = New Size(209, 21)
+        Label1.Size = New Size(263, 28)
         Label1.TabIndex = 0
         Label1.Text = "Doctor Employment Request"
         ' 
         ' Label4
         ' 
         Label4.BorderStyle = BorderStyle.FixedSingle
-        Label4.Location = New Point(103, 204)
+        Label4.Location = New Point(29, 230)
         Label4.Name = "Label4"
-        Label4.Size = New Size(328, 51)
+        Label4.Size = New Size(375, 67)
         Label4.TabIndex = 3
         ' 
         ' TextBox1
@@ -105,18 +104,17 @@ Partial Class Health_Create_New_Vacancy
         TextBox1.BackColor = SystemColors.Control
         TextBox1.BorderStyle = BorderStyle.None
         TextBox1.Font = New Font("Segoe UI", 15F)
-        TextBox1.Location = New Point(117, 215)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
+        TextBox1.Location = New Point(45, 245)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(298, 27)
+        TextBox1.Size = New Size(341, 34)
         TextBox1.TabIndex = 4
         ' 
         ' Label5
         ' 
         Label5.BorderStyle = BorderStyle.FixedSingle
-        Label5.Location = New Point(800, 204)
+        Label5.Location = New Point(825, 230)
         Label5.Name = "Label5"
-        Label5.Size = New Size(221, 51)
+        Label5.Size = New Size(252, 67)
         Label5.TabIndex = 5
         ' 
         ' TextBox3
@@ -124,18 +122,17 @@ Partial Class Health_Create_New_Vacancy
         TextBox3.BackColor = SystemColors.Control
         TextBox3.BorderStyle = BorderStyle.None
         TextBox3.Font = New Font("Segoe UI", 15F)
-        TextBox3.Location = New Point(508, 214)
-        TextBox3.Margin = New Padding(3, 2, 3, 2)
+        TextBox3.Location = New Point(492, 243)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(256, 27)
+        TextBox3.Size = New Size(293, 34)
         TextBox3.TabIndex = 8
         ' 
         ' Label6
         ' 
         Label6.BorderStyle = BorderStyle.FixedSingle
-        Label6.Location = New Point(493, 204)
+        Label6.Location = New Point(474, 230)
         Label6.Name = "Label6"
-        Label6.Size = New Size(288, 51)
+        Label6.Size = New Size(329, 67)
         Label6.TabIndex = 7
         ' 
         ' TextBox5
@@ -143,10 +140,9 @@ Partial Class Health_Create_New_Vacancy
         TextBox5.BackColor = SystemColors.Control
         TextBox5.BorderStyle = BorderStyle.None
         TextBox5.Font = New Font("Segoe UI", 15F)
-        TextBox5.Location = New Point(133, 340)
-        TextBox5.Margin = New Padding(3, 2, 3, 2)
+        TextBox5.Location = New Point(64, 390)
         TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(298, 27)
+        TextBox5.Size = New Size(341, 34)
         TextBox5.TabIndex = 12
         ' 
         ' TextBox6
@@ -154,19 +150,18 @@ Partial Class Health_Create_New_Vacancy
         TextBox6.BackColor = SystemColors.Control
         TextBox6.BorderStyle = BorderStyle.None
         TextBox6.Font = New Font("Segoe UI", 12F)
-        TextBox6.Location = New Point(111, 359)
-        TextBox6.Margin = New Padding(3, 2, 3, 2)
+        TextBox6.Location = New Point(39, 416)
         TextBox6.Multiline = True
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(898, 150)
+        TextBox6.Size = New Size(1026, 200)
         TextBox6.TabIndex = 14
         ' 
         ' Label9
         ' 
         Label9.BorderStyle = BorderStyle.FixedSingle
-        Label9.Location = New Point(103, 350)
+        Label9.Location = New Point(30, 404)
         Label9.Name = "Label9"
-        Label9.Size = New Size(918, 173)
+        Label9.Size = New Size(1049, 230)
         Label9.TabIndex = 13
         ' 
         ' TextBox2
@@ -174,10 +169,9 @@ Partial Class Health_Create_New_Vacancy
         TextBox2.BackColor = SystemColors.Control
         TextBox2.BorderStyle = BorderStyle.None
         TextBox2.Font = New Font("Segoe UI", 15F)
-        TextBox2.Location = New Point(813, 214)
-        TextBox2.Margin = New Padding(3, 2, 3, 2)
+        TextBox2.Location = New Point(840, 243)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(197, 27)
+        TextBox2.Size = New Size(225, 34)
         TextBox2.TabIndex = 8
         ' 
         ' Button1
@@ -186,10 +180,9 @@ Partial Class Health_Create_New_Vacancy
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Button1.Location = New Point(468, 551)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(439, 653)
         Button1.Name = "Button1"
-        Button1.Size = New Size(173, 61)
+        Button1.Size = New Size(198, 81)
         Button1.TabIndex = 17
         Button1.Text = "Add New Vacancy"
         Button1.UseVisualStyleBackColor = False
@@ -198,9 +191,9 @@ Partial Class Health_Create_New_Vacancy
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label10.Location = New Point(103, 306)
+        Label10.Location = New Point(30, 345)
         Label10.Name = "Label10"
-        Label10.Size = New Size(275, 21)
+        Label10.Size = New Size(343, 28)
         Label10.TabIndex = 18
         Label10.Text = "Description of the job requirement"
         ' 
@@ -208,9 +201,9 @@ Partial Class Health_Create_New_Vacancy
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label11.Location = New Point(493, 171)
+        Label11.Location = New Point(474, 186)
         Label11.Name = "Label11"
-        Label11.Size = New Size(102, 21)
+        Label11.Size = New Size(127, 28)
         Label11.TabIndex = 19
         Label11.Text = "Department"
         ' 
@@ -218,9 +211,9 @@ Partial Class Health_Create_New_Vacancy
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label12.Location = New Point(102, 171)
+        Label12.Location = New Point(28, 186)
         Label12.Name = "Label12"
-        Label12.Size = New Size(95, 21)
+        Label12.Size = New Size(118, 28)
         Label12.TabIndex = 20
         Label12.Text = "Hospital ID"
         ' 
@@ -228,9 +221,9 @@ Partial Class Health_Create_New_Vacancy
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label15.Location = New Point(800, 171)
+        Label15.Location = New Point(825, 186)
         Label15.Name = "Label15"
-        Label15.Size = New Size(135, 21)
+        Label15.Size = New Size(168, 28)
         Label15.TabIndex = 23
         Label15.Text = "No. of vacancies"
         ' 
@@ -240,16 +233,15 @@ Partial Class Health_Create_New_Vacancy
         Label2.BackColor = SystemColors.ActiveCaptionText
         Label2.Font = New Font("Segoe UI", 10F)
         Label2.ForeColor = SystemColors.ControlLightLight
-        Label2.Location = New Point(0, 62)
+        Label2.Location = New Point(1050, 92)
         Label2.Name = "Label2"
-        Label2.Size = New Size(142, 19)
+        Label2.Size = New Size(45, 23)
         Label2.TabIndex = 24
-        Label2.Text = "Health Record Tracker"
+        Label2.Text = "Back"
         ' 
         ' Health_Create_New_Vacancy
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1107, 760)
         Controls.Add(Label2)
         Controls.Add(Label15)
@@ -268,7 +260,6 @@ Partial Class Health_Create_New_Vacancy
         Controls.Add(Label4)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Health_Create_New_Vacancy"
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)

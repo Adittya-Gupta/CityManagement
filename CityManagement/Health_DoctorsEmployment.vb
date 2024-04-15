@@ -8,7 +8,7 @@ Public Class Health_DoctorsEmployment
     Dim hosName As String = ""
     Dim userNames As String = ""
     Dim selectedDept As String = ""
-    Dim userID As Integer = 984580
+    Dim userID As Integer = Module1.CurrUserSID
 
     'Constructor
     Public Sub New(ParentForm As EmploymentPortal)

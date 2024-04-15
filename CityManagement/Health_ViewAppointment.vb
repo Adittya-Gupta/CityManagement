@@ -3,7 +3,7 @@
 Public Class Health_ViewAppointment
 
     Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim userID = 2
+    Dim userID As Integer = Module1.CurrUserSID
     Dim doctorID As Integer = 0 ' Global variable to store doctor ID
 
     Dim listView1 As New ListView()
@@ -227,5 +227,16 @@ Public Class Health_ViewAppointment
         End Using
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Dim Health_Record_Tracker As New Health_Record_Tracker()
 
+        ' Get the instance of MainForm (assuming MainForm is the parent form)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
+
+        ' Check if the main form instance is not null
+        If MainPanel IsNot Nothing Then
+            ' Call the public method of the main form to show the child form in the panel
+            MainPanel.ShowChildFormInPanel(Health_Record_Tracker)
+        End If
+    End Sub
 End Class

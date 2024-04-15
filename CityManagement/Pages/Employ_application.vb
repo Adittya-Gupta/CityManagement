@@ -7,7 +7,8 @@ Public Class EmployApplication
     Private initialImage As Image
 
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
 
     'Dim userID As Integer = 984584 ' User ID of the applicant
@@ -69,6 +70,11 @@ Public Class EmployApplication
            String.IsNullOrWhiteSpace(bankAcc.Text) OrElse
             String.IsNullOrWhiteSpace(emailAddr.Text) Then
             MessageBox.Show("Please fill in all required fields.", "Incomplete Application", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return
+        End If
+
+        If String.IsNullOrEmpty(emailAddr.Text) OrElse Not emailAddr.Text.Contains("@") OrElse Not emailAddr.Text.Contains(".") Then
+            MessageBox.Show("Please enter correct email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 

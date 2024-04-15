@@ -13,7 +13,7 @@
         Set(value As Integer)
             If _ChatIdAsCitizen <> value Then
                 _ChatIdAsCitizen = value
-                MessageBox.Show("ChatIdAsCitizen: " & _ChatIdAsCitizen)
+                'MessageBox.Show("ChatIdAsCitizen: " & _ChatIdAsCitizen)
                 RaiseEvent ChatIdAsCitizenChanged(Nothing, EventArgs.Empty)
             End If
         End Set

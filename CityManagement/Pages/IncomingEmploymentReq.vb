@@ -1,8 +1,11 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
+Imports Org.BouncyCastle.Utilities
 
 Public Class IncomingEmploymentReq
 
     Private OrgHeadWorkSectionForm As OrgHeadWorkSection
+    Private _orgID As Int32
 
     'Constructor
     'Public Sub New(ParentForm As EmploymentPortal)
@@ -13,8 +16,10 @@ Public Class IncomingEmploymentReq
     'End Sub
 
     'Constructor
-    Public Sub New(ParentForm As OrgHeadWorkSection)
+    Public Sub New(ParentForm As OrgHeadWorkSection,
+                   ByVal orgID As Int32)
         InitializeComponent()
+        _orgID = orgID
         'Me.EmployOrgListForm = ParentForm
         Me.OrgHeadWorkSectionForm = ParentForm ' Initialize EmploymentPortalForm
     End Sub
@@ -25,6 +30,9 @@ Public Class IncomingEmploymentReq
 
     Private Sub IncomingEmploymentReq_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
+
+        Panel1.HorizontalScroll.Enabled = False
+        Panel1.HorizontalScroll.Visible = False
 
         Dim userID_ As Integer
         Dim orgID_ As Integer
@@ -40,9 +48,9 @@ Public Class IncomingEmploymentReq
         Dim conn As New MySqlConnection(connString)
         Try
             conn.Open()
-            Dim query As String = "select userID, orgID, name, date, contactDetails, bank_account_no, detailsPrevWork from workerEmployReq where orgID = @A and status = 'Submitted' "
+            Dim query As String = "select userID, orgID, name, date, contactDetails, bank_account_no, detailsPrevWork, profile_picture from workerEmployReq where orgID = @A and status = 'Submitted' "
             Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@A", 101)
+                cmd.Parameters.AddWithValue("@A", _orgID)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 While reader.Read()
                     userID_ = Convert.ToInt32(reader("userID"))
@@ -53,7 +61,18 @@ Public Class IncomingEmploymentReq
                     bank_account_no_ = Convert.ToInt64(reader("bank_account_no"))
                     detailsPrevWork_ = Convert.ToString(reader("detailsPrevWork"))
 
-                    Dim listItem As New Incoming_Emp_Req(Me, date_, name_, i, contactDetails_, bank_account_no_, detailsPrevWork_, userID_, orgID_)
+                    ' Handling the profile_picture BLOB field
+                    Dim img_bytes As Byte() = TryCast(reader("profile_picture"), Byte())
+                    Dim img As Image = Nothing
+                    If img_bytes IsNot Nothing Then
+                        Using ms As New MemoryStream(img_bytes)
+                            img = Image.FromStream(ms)
+                        End Using
+                    End If
+
+
+                    'Dim listItem As New Incoming_Emp_Req(Me, date_, name_, i, contactDetails_, bank_account_no_, detailsPrevWork_, userID_, orgID_)
+                    Dim listItem As New Incoming_Emp_Req(Me, date_, name_, i, contactDetails_, bank_account_no_, detailsPrevWork_, userID_, orgID_, img)
                     Panel1.Controls.Add(listItem)
 
                     ' Set margin top for ListItem2 to ListItem4
@@ -64,6 +83,7 @@ Public Class IncomingEmploymentReq
                     i = i + 1
                 End While
             End Using
+            Panel1.Height = i * 200
         Catch ex As Exception
             ' Handle exception
         End Try

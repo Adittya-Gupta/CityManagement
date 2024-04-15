@@ -27,16 +27,17 @@ Partial Class IncomingEmploymentReq
         ' 
         ' Panel1
         ' 
+        Panel1.AutoScroll = True
         Panel1.Location = New Point(2, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1083, 689)
+        Panel1.Size = New Size(914, 600)
         Panel1.TabIndex = 1
         ' 
         ' IncomingEmploymentReq
         ' 
         AutoScaleMode = AutoScaleMode.None
         AutoScroll = True
-        ClientSize = New Size(1107, 687)
+        ClientSize = New Size(930, 846)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "IncomingEmploymentReq"

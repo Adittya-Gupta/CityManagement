@@ -4,7 +4,8 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Imports GemBox.Pdf
 Public Class elections_votingPortal
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     'Input to the form is SID

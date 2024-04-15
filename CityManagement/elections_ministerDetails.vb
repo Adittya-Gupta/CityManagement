@@ -8,7 +8,8 @@ Imports System.Windows.Controls
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Media
 Public Class elections_ministerDetails
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Private SID As Integer
     Private vMargin As Integer

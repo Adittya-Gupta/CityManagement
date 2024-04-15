@@ -6,8 +6,9 @@ Public Class election_dashboard
     '   InitializeComponent()
     '   Me.idOfCurrentUser = userInput
     'End Sub
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     'Dim connString As String = "Server=localhost;Database=smart_city_management;Uid=username;"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Dim alreadyVoter As Boolean = False
     Dim isVotingPeriod As Boolean = False

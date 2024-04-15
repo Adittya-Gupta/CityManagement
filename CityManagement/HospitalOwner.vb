@@ -19,7 +19,8 @@ Public Class HospitalOwner
 
     Private Sub LoadOwnerRequests()
         ' Establish connection to the database
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Globals.connectionstring
         Dim conn As New MySqlConnection(connString)
 
         Try

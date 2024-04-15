@@ -6,7 +6,7 @@ Public Class admin_home
 
 
     Dim idOfCurrentUser As Integer = Module1.CurrUserSID
-    Dim connString As String = Globals.connectionstring
+    Dim connString As String = Module1.connString
 
     Dim conn As New MySqlConnection(connString)
 
@@ -288,31 +288,18 @@ Public Class admin_home
 
     End Sub
 
-    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
-
+    Private Sub Label_Click(sender As Object, e As EventArgs) Handles Label16.Click, Label18.Click, Label22.Click, Label17.Click, Label14.Click, Label15.Click, Label7.Click, Label13.Click, Label12.Click, Label20.Click, Label19.Click
+        Dim clickedLabel As Label = DirectCast(sender, Label) ' Get the label that was clicked
+        OpenNewFormWithLabelText(clickedLabel.Text)
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-
+    ' Function to open a new form with the input text
+    Private Sub OpenNewFormWithLabelText(inputText As String)
+        panel1.Controls.Clear()
+        Dim form As New admin_Joblisting(inputText) ' Pass the text as input to the constructor of admin_Joblisting form
+        form.TopLevel = False
+        panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
-    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
-
-    End Sub
-
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
-
-    End Sub
-
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
-
-    End Sub
-
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
 End Class

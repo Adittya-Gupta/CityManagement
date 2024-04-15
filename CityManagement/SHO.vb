@@ -19,7 +19,7 @@ Public Class SHO
 
     Private Sub LoadOwnerRequests()
         ' Establish connection to the database
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Dim conn As New MySqlConnection(connString)
 
         Try
@@ -120,7 +120,7 @@ Public Class SHO
         Dim userID As Integer = Convert.ToInt32(workerReqControl.Tag)
 
         ' Retrieve resume details from the database for the given userID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()
@@ -154,7 +154,7 @@ Public Class SHO
         ' Extract userID from Tag property
         Dim userID As Integer = Convert.ToInt32(workerReqControl.Tag)
         Dim query2 As String = "UPDATE User SET Designation = 'Police' WHERE SID = @userID"
-        Using conn As New MySqlConnection("server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none")
+        Using conn As New MySqlConnection(Module1.connString)
             conn.Open()
             Using cmd2 As New MySqlCommand(query2, conn)
                 cmd2.Parameters.AddWithValue("@userID", userID)
@@ -186,7 +186,7 @@ Public Class SHO
 
     Private Sub UpdateStatus(userID As Integer, status As String)
         ' Update the Status column in the workerEmployReq table for the given userID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()

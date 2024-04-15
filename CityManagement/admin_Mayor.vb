@@ -3,7 +3,7 @@
 Public Class admin_Mayor
     ' Define connection string
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim connString As String = Globals.connectionstring
+    Dim connString As String = Module1.connString
     Private Sub admin_Mayor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Label1.Location = Me.PictureBox1.PointToClient(Me.PointToScreen(Me.Label1.Location))
         Me.Label1.Parent = Me.PictureBox1

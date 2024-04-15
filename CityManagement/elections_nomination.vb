@@ -14,7 +14,7 @@ Public Class elections_nomination
     Dim fileContent As Byte()
     Dim AgendaText As String = ""
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim connString As String = Globals.connectionstring
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Private Sub nomination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mapping("Teacher") = "Education Minister"

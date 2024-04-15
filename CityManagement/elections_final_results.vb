@@ -2,7 +2,7 @@
 Imports GemBox.Pdf
 Public Class elections_final_results
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim connString As String = Globals.connectionstring
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Private ministerDetailsList As New List(Of elections_ministerDetails)
     Private Sub electionResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load

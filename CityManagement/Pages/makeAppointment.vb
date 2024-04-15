@@ -4,7 +4,8 @@ Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Asn1.Cms
 
 Public Class makeAppointment
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim date1 As Date
     Shared hos_id As String
     Shared stimee As String

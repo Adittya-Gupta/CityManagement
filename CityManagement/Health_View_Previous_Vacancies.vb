@@ -29,7 +29,8 @@ Public Class Health_View_Previous_Vacancies
         Me.Controls.Add(panelListView)
 
         ' Retrieve data from the hospitalVacancy table
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
+        'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim query As String = "SELECT * FROM hospitalVacancy"
         Using connection As New MySqlConnection(connectionString)
             Using command As New MySqlCommand(query, connection)

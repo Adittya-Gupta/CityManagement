@@ -1,6 +1,7 @@
 ﻿Public Class OrgHeadWorkSection
     ' Establish your database connection string
-    Private connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Private connString As String = Module1.connString
+    'Private connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Private conn As New MySqlConnection(connString)
     Private _orgID As Int32 = 0
 

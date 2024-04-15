@@ -5,7 +5,8 @@ Public Class specialisation
     Shared spec As String = ""
     Shared rate As String = ""
     Shared gin As String = ""
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim userID As Integer = Module1.CurrUserSID
 
     Private Sub Guna2GradientTileButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton1.Click

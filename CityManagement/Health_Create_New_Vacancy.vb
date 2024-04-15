@@ -3,7 +3,8 @@
 
 Public Class Health_Create_New_Vacancy
     ' Connection string for MySQL database
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try

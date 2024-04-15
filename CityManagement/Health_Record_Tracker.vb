@@ -2,7 +2,8 @@
 Imports System.Windows.Forms
 Public Class Health_Record_Tracker
 
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim listView1 As New ListView()
     Dim userID As Integer = Module1.CurrUserSID
     Private Sub Health_Record_Tracker_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -5,7 +5,8 @@ Public Class UrbanClapNav
     'Dim userID As Integer = 112547 ' User ID of the applicant (Head Electrician)
     'Dim userID As Integer = 124918 ' User ID of the applicant (unemployed)
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim designation As String
 

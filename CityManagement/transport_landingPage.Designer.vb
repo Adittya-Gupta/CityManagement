@@ -138,8 +138,7 @@ Partial Class transport_landingPage
         ' 
         ' transport_landingPage
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Button4)

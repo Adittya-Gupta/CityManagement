@@ -3,14 +3,11 @@ Imports MySql.Data.MySqlClient
 
 Public Class admin_home
     Private OriginalSize As Size = Me.Size
-<<<<<<< Updated upstream
-    Dim idOfCurrentUser As Integer = 40
-    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-    Dim connString As String = Globals.connectionstring
-=======
+
+
     Dim idOfCurrentUser As Integer = Module1.CurrUserSID
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
->>>>>>> Stashed changes
+    Dim connString As String = Globals.connectionstring
+
     Dim conn As New MySqlConnection(connString)
 
     Private Sub complaints_Load(sender As Object, e As EventArgs) Handles MyBase.Load

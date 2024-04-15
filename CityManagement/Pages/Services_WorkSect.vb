@@ -69,7 +69,7 @@ Public Class Services_WorkSect
         Try
             'Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = @workerID"
 
-            Dim query As String = "SELECT sb.serviceBookingId, sb.clientID, sb.clientName, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
+            Dim query As String = "SELECT sb.serviceBookingId, sb.clientID, u.Name, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
                       "FROM serviceBooking sb " &
                       "INNER JOIN User u ON sb.clientID = u.SID " &
                       "WHERE sb.workerID = @workerID"
@@ -80,7 +80,7 @@ Public Class Services_WorkSect
                     While reader.Read()
                         Dim reqId As Integer = reader.GetInt32("serviceBookingId")
                         Dim clientID As Integer = reader.GetInt32("clientID")
-                        Dim name As String = reader.GetString("clientName")
+                        Dim name As String = reader.GetString("Name")
                         Dim time As String = If(reader.IsDBNull(reader.GetOrdinal("serviceTime")), "To be Decided", reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss"))
                         'Dim time As String = reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss")
                         Dim billAmount As Object = reader("billAmount")

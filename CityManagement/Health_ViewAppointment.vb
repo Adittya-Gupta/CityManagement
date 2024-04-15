@@ -2,7 +2,8 @@
 
 Public Class Health_ViewAppointment
 
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim userID As Integer = Module1.CurrUserSID
     Dim doctorID As Integer = 0 ' Global variable to store doctor ID
 

@@ -41,7 +41,8 @@ Public Class Hospital_Vac_Comp
 
     Private Function RemoveEntryFromDatabase(hosID As Integer) As Boolean
         ' Execute a MySQL delete query to remove the entry from the database
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
+        'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim query As String = "DELETE FROM hospitalVacancy WHERE hos_id = @hos_id"
 
         Using connection As New MySqlConnection(connectionString)

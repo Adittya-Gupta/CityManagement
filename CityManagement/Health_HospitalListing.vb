@@ -3,7 +3,8 @@
 Public Class Health_HospitalListing
     Private EmploymentPortalForm As EmploymentPortal
 
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim user_id As Integer = Module1.CurrUserSID
 
     'Constructor

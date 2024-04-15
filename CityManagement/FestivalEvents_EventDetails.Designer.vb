@@ -47,7 +47,7 @@ Partial Class FestivalEvents_EventDetails
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
-        Label2.Location = New Point(283, 58)
+        Label2.Location = New Point(268, 58)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(95, 25)
@@ -147,7 +147,6 @@ Partial Class FestivalEvents_EventDetails
         Choose_service_button.Size = New Size(135, 70)
         Choose_service_button.TabIndex = 35
         Choose_service_button.Text = "Choose Service"
-        Choose_service_button.TextAlign = ContentAlignment.MiddleRight
         Choose_service_button.UseVisualStyleBackColor = False
         ' 
         ' Label7
@@ -190,7 +189,6 @@ Partial Class FestivalEvents_EventDetails
         Restrictions_Button.Size = New Size(110, 70)
         Restrictions_Button.TabIndex = 40
         Restrictions_Button.Text = "Restrictions"
-        Restrictions_Button.TextAlign = ContentAlignment.MiddleRight
         Restrictions_Button.UseVisualStyleBackColor = False
         ' 
         ' Edit_event_button
@@ -206,7 +204,6 @@ Partial Class FestivalEvents_EventDetails
         Edit_event_button.Size = New Size(96, 70)
         Edit_event_button.TabIndex = 41
         Edit_event_button.Text = "Edit Event"
-        Edit_event_button.TextAlign = ContentAlignment.MiddleRight
         Edit_event_button.UseVisualStyleBackColor = False
         ' 
         ' Approve_Button
@@ -222,7 +219,6 @@ Partial Class FestivalEvents_EventDetails
         Approve_Button.Size = New Size(85, 70)
         Approve_Button.TabIndex = 42
         Approve_Button.Text = "Approve"
-        Approve_Button.TextAlign = ContentAlignment.MiddleRight
         Approve_Button.UseVisualStyleBackColor = False
         ' 
         ' Request_Button
@@ -238,7 +234,6 @@ Partial Class FestivalEvents_EventDetails
         Request_Button.Size = New Size(85, 70)
         Request_Button.TabIndex = 43
         Request_Button.Text = "Request"
-        Request_Button.TextAlign = ContentAlignment.MiddleRight
         Request_Button.UseVisualStyleBackColor = False
         ' 
         ' Register_Button
@@ -248,13 +243,12 @@ Partial Class FestivalEvents_EventDetails
         Register_Button.FlatStyle = FlatStyle.Flat
         Register_Button.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold)
         Register_Button.ForeColor = Color.White
-        Register_Button.Location = New Point(426, 38)
+        Register_Button.Location = New Point(432, 38)
         Register_Button.Margin = New Padding(4)
         Register_Button.Name = "Register_Button"
-        Register_Button.Size = New Size(85, 70)
+        Register_Button.Size = New Size(79, 70)
         Register_Button.TabIndex = 44
         Register_Button.Text = "Register"
-        Register_Button.TextAlign = ContentAlignment.MiddleRight
         Register_Button.UseVisualStyleBackColor = False
         ' 
         ' FestivalEvents_EventDetails

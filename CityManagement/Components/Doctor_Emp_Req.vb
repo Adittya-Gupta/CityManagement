@@ -68,7 +68,8 @@ Public Class Doctor_Emp_Req
 
     Private Function RemoveEntryFromDatabase(userID As Integer) As Boolean
         ' Execute a MySQL delete query to remove the entry from the database
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
+        'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim query As String = "DELETE FROM DoctorEmploymentRequest WHERE user_id = @user_id"
 
         Using connection As New MySqlConnection(connectionString)
@@ -94,7 +95,8 @@ Public Class Doctor_Emp_Req
 
     Private Function AddDoctorToTable(user_id As Integer) As Boolean
         ' Execute a SQL query to insert the doctor entry into the Doctors table
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
+        'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim query As String = "INSERT INTO Doctors (user_id, hos_id, prof_email, experience, speciality, salary, rating, total_ratings, visiting_time_start, visiting_time_end) VALUES (@user_id, @hos_id, @prof_email, @experience, @speciality, @salary, 0, 0, @visiting_time_start, @visiting_time_end)"
 
         Using connection As New MySqlConnection(connectionString)

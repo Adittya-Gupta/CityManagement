@@ -34,17 +34,16 @@ Partial Class elections_nomination_rules
         back.Size = New Size(89, 40)
         back.TabIndex = 10
         ' 
-        ' nomination_rules
+        ' elections_nomination_rules
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1089, 713)
         Controls.Add(back)
         FormBorderStyle = FormBorderStyle.None
-        Name = "nomination_rules"
+        Name = "elections_nomination_rules"
         Text = "nomination_rules"
         ResumeLayout(False)
     End Sub

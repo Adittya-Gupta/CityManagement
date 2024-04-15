@@ -6,7 +6,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class Services_WorkSect
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim workerID As Integer ' Worker ID of the current user
     'Dim userID As Integer = 112546 ' User ID of the applicant
@@ -68,7 +69,7 @@ Public Class Services_WorkSect
         Try
             'Dim query As String = "SELECT serviceBookingId, clientName, serviceTime, billAmount, status FROM serviceBooking WHERE workerID = @workerID"
 
-            Dim query As String = "SELECT sb.serviceBookingId, sb.clientID, sb.clientName, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
+            Dim query As String = "SELECT sb.serviceBookingId, sb.clientID, u.Name, sb.serviceTime, sb.billAmount, sb.status, u.ProfilePic " &
                       "FROM serviceBooking sb " &
                       "INNER JOIN User u ON sb.clientID = u.SID " &
                       "WHERE sb.workerID = @workerID"
@@ -79,7 +80,7 @@ Public Class Services_WorkSect
                     While reader.Read()
                         Dim reqId As Integer = reader.GetInt32("serviceBookingId")
                         Dim clientID As Integer = reader.GetInt32("clientID")
-                        Dim name As String = reader.GetString("clientName")
+                        Dim name As String = reader.GetString("Name")
                         Dim time As String = If(reader.IsDBNull(reader.GetOrdinal("serviceTime")), "To be Decided", reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss"))
                         'Dim time As String = reader.GetDateTime("serviceTime").ToString("yyyy-MM-dd HH:mm:ss")
                         Dim billAmount As Object = reader("billAmount")

@@ -9,10 +9,10 @@
 
     Public HistoryItem As HistoryItem
 
-    Public slqConnection_banking As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
-    'Public slqConnection_banking As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none;"
-    Public slqConnection_newsletter As String = "server=localhost;userid=root;password=Aasneh18;database=newsdatabase;"
-    'Public slqConnection_newsletter As String = "server=172.16.114.244;userid=admin;Password=nimda;database=newsdatabase;sslmode=none;"
-    Public slqConnection_email As String = "server=localhost;userid=root;password=Aasneh18;database=emaildatabase;"
-    'Public slqConnection_email As String = "server=172.16.114.244;userid=admin;Password=nimda;database=emaildatabase;sslmode=none;"
+    'Public slqConnection_banking As String = "server=localhost;userid=root;password=Aasneh18;database=bankingdatabase;"
+    Public slqConnection_banking As String = "server=172.16.114.244;userid=admin;Password=nimda;database=banking_database;sslmode=none;"
+    'Public slqConnection_newsletter As String = "server=localhost;userid=root;password=Aasneh18;database=newsdatabase;"
+    Public slqConnection_newsletter As String = "server=172.16.114.244;userid=admin;Password=nimda;database=newsdatabase;sslmode=none;"
+    'Public slqConnection_email As String = "server=localhost;userid=root;password=Aasneh18;database=emaildatabase;"
+    Public slqConnection_email As String = "server=172.16.114.244;userid=admin;Password=nimda;database=emaildatabase;sslmode=none;"
 End Module

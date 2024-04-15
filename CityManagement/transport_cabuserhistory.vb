@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class transport_cabuserhistory
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Dim conn2 As New MySqlConnection(connString)
     Private Sub Label6_Click(sender As Object, e As EventArgs)

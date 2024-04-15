@@ -13,7 +13,8 @@ Public Class elections_AllResults
         Panel1.AutoScroll = True
 
         ' Establish connection to the database
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 ' Open the database connection

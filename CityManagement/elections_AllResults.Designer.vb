@@ -62,7 +62,7 @@ Partial Class elections_AllResults
         ' back
         ' 
         back.BackColor = SystemColors.ActiveCaptionText
-        back.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        back.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         back.Location = New Point(931, 9)
         back.Name = "back"
         back.Size = New Size(86, 42)
@@ -70,10 +70,9 @@ Partial Class elections_AllResults
         back.Text = "Back"
         back.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' AllResults
+        ' elections_AllResults
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
         Controls.Add(back)
@@ -83,7 +82,7 @@ Partial Class elections_AllResults
         DoubleBuffered = True
         ForeColor = SystemColors.ButtonHighlight
         FormBorderStyle = FormBorderStyle.None
-        Name = "AllResults"
+        Name = "elections_AllResults"
         Text = "AllResults"
         ResumeLayout(False)
     End Sub

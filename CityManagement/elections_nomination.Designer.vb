@@ -72,10 +72,9 @@ Partial Class elections_nomination
         Minister.Size = New Size(775, 47)
         Minister.TabIndex = 14
         ' 
-        ' nomination
+        ' elections_nomination
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
@@ -88,7 +87,7 @@ Partial Class elections_nomination
         DoubleBuffered = True
         ForeColor = Color.Transparent
         FormBorderStyle = FormBorderStyle.None
-        Name = "nomination"
+        Name = "elections_nomination"
         Text = "nomination"
         ResumeLayout(False)
     End Sub

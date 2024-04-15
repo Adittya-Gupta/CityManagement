@@ -14,7 +14,8 @@ Public Class FinanceMinister
 
     Private Sub LoadMinisterRequests()
         ' Establish connection to the database
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Dim conn As New MySqlConnection(connString)
 
         Try
@@ -109,7 +110,7 @@ Public Class FinanceMinister
         Dim SID As Integer = Convert.ToInt32(minReqControl.Tag)
 
         ' Retrieve details from the database for the given SID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()
@@ -167,7 +168,7 @@ Public Class FinanceMinister
 
     Private Sub UpdateStatus(SID As Integer, status As Integer)
         ' Update the Status column in the minister_req table for the given SID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()

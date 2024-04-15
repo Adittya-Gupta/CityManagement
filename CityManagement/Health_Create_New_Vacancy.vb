@@ -3,7 +3,8 @@
 
 Public Class Health_Create_New_Vacancy
     ' Connection string for MySQL database
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connectionString As String = Module1.connString
+    'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
@@ -47,12 +48,12 @@ Public Class Health_Create_New_Vacancy
         Dim Health_View_Previous_Vacancies As New Health_View_Previous_Vacancies()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(Health_View_Previous_Vacancies)
+            MainPanel.ShowChildFormInPanel(Health_View_Previous_Vacancies)
         End If
     End Sub
 
@@ -61,28 +62,27 @@ Public Class Health_Create_New_Vacancy
         Dim Health_Doctor_Employment_Requests As New Health_Doctor_Employment_Requests()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(Health_Doctor_Employment_Requests)
+            MainPanel.ShowChildFormInPanel(Health_Doctor_Employment_Requests)
         End If
     End Sub
 
 
 
     Private Sub Label2_Click_1(sender As Object, e As EventArgs) Handles Label2.Click
-
-        Dim Health_Record_Tracker As New Health_Record_Tracker()
+        Dim specialisation As New specialisation()
 
         ' Get the instance of MainForm (assuming MainForm is the parent form)
-        Dim Temp2 As Temp2 = CType(Application.OpenForms("Temp2"), Temp2)
+        Dim MainPanel As MainPanel = CType(Application.OpenForms("MainPanel"), MainPanel)
 
         ' Check if the main form instance is not null
-        If Temp2 IsNot Nothing Then
+        If MainPanel IsNot Nothing Then
             ' Call the public method of the main form to show the child form in the panel
-            Temp2.ShowChildFormInPanel(Health_Record_Tracker)
+            MainPanel.ShowChildFormInPanel(specialisation)
         End If
     End Sub
 

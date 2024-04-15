@@ -5,7 +5,8 @@ Public Class UrbanClapNav
     'Dim userID As Integer = 112547 ' User ID of the applicant (Head Electrician)
     'Dim userID As Integer = 124918 ' User ID of the applicant (unemployed)
     'Dim connString As String = "server=localhost;userid=root;password=pwd;database=smart_city_management"
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
     Dim designation As String
 
@@ -21,8 +22,13 @@ Public Class UrbanClapNav
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Show ListofWorkersForm inside Panel1
         If Button1.Text = "Service Request" Then
+            Button2.Visible = True
             ShowFormInPanel1(Globals.WorkPage)
+        ElseIf Button1.Text = "Employment Request" Then
+            Button2.Visible = False
+            ShowFormInPanel1(Globals.OrgHeadWorkSection)
         Else
+            Button2.Visible = True
             ShowFormInPanel1(Globals.ServiceHistoryForm)
         End If
 
@@ -43,7 +49,7 @@ Public Class UrbanClapNav
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ' Create an instance of Form2
         If Button3.Text = "Work Section" Then
-            Button1.Text = "Service Request"
+            'Button1.Text = "Service Request"
             Button3.Text = "Back"
 
             Try
@@ -55,13 +61,18 @@ Public Class UrbanClapNav
                     If reader.Read() Then
                         Dim designation As String = reader.GetString("Designation")
                         If designation = "Electrician" OrElse designation = "Plumber" OrElse designation = "Househelp" OrElse designation = "Merchant" Then
+                            Button1.Text = "Service Request"
+                            Button2.Visible = True
                             ShowFormInPanel1(Globals.WorkPage)
                             ShowCurvedLabels_history()
                         ElseIf designation = "Head Electrician" OrElse designation = "Head Plumber" OrElse designation = "Head Househelp" OrElse designation = "Head Merchant" Then
+                            Button1.Text = "Employment Request"
+                            Button2.Visible = False
                             ShowFormInPanel1(Globals.OrgHeadWorkSection)
                             ShowCurvedLabels_history()
                         Else
                             Button1.Text = "Service History"
+                            Button2.Visible = True
                             Button3.Text = "Work Section"
                             MessageBox.Show("You are not employed as a Service Worker")
                             Return
@@ -76,6 +87,7 @@ Public Class UrbanClapNav
             End Try
         Else
             Button1.Text = "Service History"
+            Button2.Visible = True
             Button3.Text = "Work Section"
             ShowFormInPanel1(Globals.listofServicesForm)
             HideCurvedLabels()

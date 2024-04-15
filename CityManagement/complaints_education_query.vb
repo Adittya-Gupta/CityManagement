@@ -1,10 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class complaints_education_query
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
     Dim profs As New Dictionary(Of String, Integer)
-    Dim user_id As Integer = 11
+    Dim user_id As Integer = Module1.CurrUserSID
     Private Sub compl_edu_query_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim institute_id As Integer = Convert.ToInt32(Environment.GetEnvironmentVariable("institute_id"))
         Label3.Text = Environment.GetEnvironmentVariable("institute_name")
@@ -17,6 +17,7 @@ Public Class complaints_education_query
                 Dim reader = cmd.ExecuteReader
                 reader.Read()
                 owner_id = Convert.ToInt32(reader("Owner_ID"))
+                reader.Close()
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -32,6 +33,7 @@ Public Class complaints_education_query
                 reader.Read()
                 CheckedListBox1.Items.Add(reader("Name"))
                 profs.Add(reader("Name"), owner_id)
+                reader.Close()
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -49,6 +51,7 @@ Public Class complaints_education_query
                 While reader.Read()
                     prof_ids.Add(Convert.ToInt32(reader("user_id")))
                 End While
+                reader.Close()
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -100,9 +103,26 @@ Public Class complaints_education_query
             End Try
         Next
         MessageBox.Show("Complaint registered successfully")
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints_Education
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

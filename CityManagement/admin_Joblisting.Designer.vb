@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EmployeeTable
+Partial Class admin_Joblisting
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,42 +23,42 @@ Partial Class EmployeeTable
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Label1 = New Label()
-        Panel1 = New Panel()
+        DataGridView1 = New DataGridView()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Exo 2", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(366, 9)
+        Label1.Location = New Point(371, 56)
         Label1.Name = "Label1"
-        Label1.Size = New Size(187, 41)
-        Label1.TabIndex = 0
-        Label1.Text = "Employees"
-        Label1.UseMnemonic = False
+        Label1.Size = New Size(53, 20)
+        Label1.TabIndex = 1
+        Label1.Text = "Label1"
         ' 
-        ' Panel1
+        ' DataGridView1
         ' 
-        Panel1.AutoScroll = True
-        Panel1.Font = New Font("Exo 2", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel1.Location = New Point(0, 73)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(914, 332)
-        Panel1.TabIndex = 1
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(248, 214)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(420, 188)
+        DataGridView1.TabIndex = 2
         ' 
-        ' EmployeeTable
+        ' admin_Joblisting
         ' 
-        AutoScaleMode = AutoScaleMode.None
-        ClientSize = New Size(1107, 687)
-        Controls.Add(Panel1)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1107, 760)
+        Controls.Add(DataGridView1)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.None
-        Name = "EmployeeTable"
-        Text = "EmployeeTable"
+        Name = "admin_Joblisting"
+        Text = "Joblisting"
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
     Friend WithEvents Label1 As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

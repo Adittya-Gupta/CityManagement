@@ -118,8 +118,7 @@ Partial Class HospitalOwner
         ' 
         ' HospitalOwner
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         Controls.Add(Label7)

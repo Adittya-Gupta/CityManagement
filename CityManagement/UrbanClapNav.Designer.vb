@@ -42,6 +42,7 @@ Partial Class UrbanClapNav
         ' 
         ' Button1
         ' 
+        Button1.AutoSize = True
         Button1.BackColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
@@ -56,6 +57,7 @@ Partial Class UrbanClapNav
         ' 
         ' Button2
         ' 
+        Button2.AutoSize = True
         Button2.BackColor = Color.Black
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
@@ -124,6 +126,7 @@ Partial Class UrbanClapNav
         Name = "UrbanClapNav"
         Text = "UrbanClapNav"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label

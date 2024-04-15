@@ -39,7 +39,6 @@ Partial Class complaints_failed_transaction
         RichTextBox1.Location = New Point(181, 158)
         RichTextBox1.Margin = New Padding(3, 4, 3, 4)
         RichTextBox1.MaxLength = 300
-        RichTextBox1.Multiline = False
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(646, 161)
         RichTextBox1.TabIndex = 8

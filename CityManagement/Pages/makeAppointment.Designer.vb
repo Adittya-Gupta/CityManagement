@@ -66,33 +66,13 @@ Partial Class makeAppointment
         ComboBox2.ForeColor = Color.Black
         ComboBox2.FormattingEnabled = True
         ComboBox2.ImeMode = ImeMode.NoControl
-        ComboBox2.ItemHeight = 24
-        ComboBox2.Items.AddRange(New Object() {"Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
-        ComboBox2.Location = New Point(850, 109)
+        ComboBox2.ItemHeight = 31
+        ComboBox2.Items.AddRange(New Object() {"Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist", "", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
+        ComboBox2.Location = New Point(809, 82)
         ComboBox2.Margin = New Padding(3, 4, 3, 4)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(217, 30)
-        ComboBox2.TabIndex = 1
-        ComboBox2.Text = "      Specialisation"
-        ' 
-        ' Button1
-        ' 
-        'Button1.ImageAlign = ContentAlignment.MiddleRight
-        'Button1.Location = New Point(1127, 64)
-        'Button1.Margin = New Padding(3, 4, 3, 4)
-        'Button1.Name = "Button1"
-        'Button1.Size = New Size(122, 31)
-        'Button1.TabIndex = 5
-        'Button1.TextAlign = ContentAlignment.MiddleLeft
-        'Button1.UseVisualStyleBackColor = True
-        ' 
-        ComboBox2.ItemHeight = 25
-        ComboBox2.Items.AddRange(New Object() {"", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
-        ComboBox2.Location = New Point(759, 82)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.RightToLeft = RightToLeft.No
-        ComboBox2.Size = New Size(234, 33)
+        ComboBox2.Size = New Size(234, 39)
         ComboBox2.TabIndex = 1
         ComboBox2.Text = "      Specialisation"
         ' 
@@ -151,7 +131,6 @@ Partial Class makeAppointment
         Guna2GradientTileButton1.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton1.Name = "Guna2GradientTileButton1"
         Guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2GradientTileButton1.Size = New Size(189, 44)
         Guna2GradientTileButton1.Size = New Size(165, 33)
         Guna2GradientTileButton1.TabIndex = 19
         Guna2GradientTileButton1.Text = "Specialisations"
@@ -168,12 +147,8 @@ Partial Class makeAppointment
         Guna2GradientTileButton2.FillColor2 = Color.Black
         Guna2GradientTileButton2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         Guna2GradientTileButton2.ForeColor = Color.White
-        Guna2GradientTileButton2.Location = New Point(313, 9)
-        Guna2GradientTileButton2.Margin = New Padding(3, 4, 3, 4)
-        Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
-        Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2GradientTileButton2.Size = New Size(190, 44)
         Guna2GradientTileButton2.Location = New Point(305, 7)
+        Guna2GradientTileButton2.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton2.Name = "Guna2GradientTileButton2"
         Guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientTileButton2.Size = New Size(166, 33)
@@ -192,15 +167,11 @@ Partial Class makeAppointment
         Guna2GradientTileButton3.FillColor2 = Color.Black
         Guna2GradientTileButton3.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton3.ForeColor = Color.White
-        Guna2GradientTileButton3.Location = New Point(585, 9)
+        Guna2GradientTileButton3.Location = New Point(592, 7)
         Guna2GradientTileButton3.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
         Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2GradientTileButton3.Size = New Size(191, 47)
-        Guna2GradientTileButton3.Location = New Point(592, 7)
-        Guna2GradientTileButton3.Name = "Guna2GradientTileButton3"
-        Guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2GradientTileButton3.Size = New Size(167, 35)
+        Guna2GradientTileButton3.Size = New Size(191, 35)
         Guna2GradientTileButton3.TabIndex = 21
         Guna2GradientTileButton3.Text = "Health Record"
         ' 
@@ -216,12 +187,8 @@ Partial Class makeAppointment
         Guna2GradientTileButton4.FillColor2 = Color.Black
         Guna2GradientTileButton4.Font = New Font("Segoe UI", 13F)
         Guna2GradientTileButton4.ForeColor = Color.White
-        Guna2GradientTileButton4.Location = New Point(816, 9)
-        Guna2GradientTileButton4.Margin = New Padding(3, 4, 3, 4)
-        Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
-        Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2GradientTileButton4.Size = New Size(206, 47)
         Guna2GradientTileButton4.Location = New Point(849, 7)
+        Guna2GradientTileButton4.Margin = New Padding(3, 4, 3, 4)
         Guna2GradientTileButton4.Name = "Guna2GradientTileButton4"
         Guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientTileButton4.Size = New Size(180, 35)
@@ -237,14 +204,12 @@ Partial Class makeAppointment
         Guna2DateTimePicker1.ForeColor = Color.Black
         Guna2DateTimePicker1.Format = DateTimePickerFormat.Long
         Guna2DateTimePicker1.ImeMode = ImeMode.NoControl
-        Guna2DateTimePicker1.Location = New Point(293, 113)
+        Guna2DateTimePicker1.Location = New Point(290, 86)
         Guna2DateTimePicker1.Margin = New Padding(3, 4, 3, 4)
-        Guna2DateTimePicker1.Location = New Point(292, 85)
         Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
         Guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2DateTimePicker1.Size = New Size(207, 40)
         Guna2DateTimePicker1.Size = New Size(181, 30)
         Guna2DateTimePicker1.TabIndex = 24
         Guna2DateTimePicker1.Value = New Date(2024, 3, 29, 0, 0, 0, 0)
@@ -260,17 +225,12 @@ Partial Class makeAppointment
         Guna2Button4.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
         Guna2Button4.ForeColor = Color.White
         Guna2Button4.ImageAlign = HorizontalAlignment.Left
-        Guna2Button4.Location = New Point(511, 193)
+        Guna2Button4.Location = New Point(524, 145)
         Guna2Button4.Margin = New Padding(3, 4, 3, 4)
         Guna2Button4.Name = "Guna2Button4"
         Guna2Button4.PressedColor = Color.Lime
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2Button4.Size = New Size(97, 51)
-        Guna2Button4.Location = New Point(524, 145)
-        Guna2Button4.Name = "Guna2Button4"
-        Guna2Button4.PressedColor = Color.Lime
-        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2Button4.Size = New Size(85, 38)
+        Guna2Button4.Size = New Size(102, 38)
         Guna2Button4.TabIndex = 25
         Guna2Button4.Text = "Apply"
         Guna2Button4.TextAlign = HorizontalAlignment.Right
@@ -281,8 +241,7 @@ Partial Class makeAppointment
         Label1.BackColor = Color.White
         Label1.Font = New Font("Segoe UI", 14F)
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(608, 113)
-        Label1.Location = New Point(551, 85)
+        Label1.Location = New Point(545, 85)
         Label1.Name = "Label1"
         Label1.Size = New Size(254, 32)
         Label1.TabIndex = 28
@@ -294,8 +253,7 @@ Partial Class makeAppointment
         Label2.BackColor = Color.White
         Label2.Font = New Font("Segoe UI", 14F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(71, 112)
-        Label2.Location = New Point(98, 84)
+        Label2.Location = New Point(43, 84)
         Label2.Name = "Label2"
         Label2.Size = New Size(241, 32)
         Label2.TabIndex = 29
@@ -305,11 +263,8 @@ Partial Class makeAppointment
         ' 
         Panel1.AutoScroll = True
         Panel1.ForeColor = Color.Black
-        Panel1.Location = New Point(14, 273)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1064, 399)
         Panel1.Location = New Point(62, 205)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(982, 469)
         Panel1.TabIndex = 30
@@ -324,12 +279,8 @@ Partial Class makeAppointment
         Guna2TileButton1.FillColor = Color.Lime
         Guna2TileButton1.Font = New Font("Bahnschrift SemiBold", 12F, FontStyle.Bold)
         Guna2TileButton1.ForeColor = Color.Black
-        Guna2TileButton1.Location = New Point(478, 695)
-        Guna2TileButton1.Margin = New Padding(3, 4, 3, 4)
-        Guna2TileButton1.Name = "Guna2TileButton1"
-        Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2TileButton1.Size = New Size(187, 49)
         Guna2TileButton1.Location = New Point(447, 695)
+        Guna2TileButton1.Margin = New Padding(3, 4, 3, 4)
         Guna2TileButton1.Name = "Guna2TileButton1"
         Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2TileButton1.Size = New Size(164, 37)
@@ -341,7 +292,6 @@ Partial Class makeAppointment
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
-        ClientSize = New Size(1097, 770)
         Controls.Add(Guna2TileButton1)
         Controls.Add(Panel1)
         Controls.Add(Label2)

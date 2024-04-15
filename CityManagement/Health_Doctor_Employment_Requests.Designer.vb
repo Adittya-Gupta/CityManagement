@@ -40,9 +40,8 @@ Partial Class Health_Doctor_Employment_Requests
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1097, 60)
+        Panel1.Size = New Size(1254, 80)
         Panel1.TabIndex = 0
         ' 
         ' Label8
@@ -51,9 +50,9 @@ Partial Class Health_Doctor_Employment_Requests
         Label8.BackColor = Color.Black
         Label8.Font = New Font("Segoe UI", 12F)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(103, 18)
+        Label8.Location = New Point(118, 24)
         Label8.Name = "Label8"
-        Label8.Size = New Size(151, 21)
+        Label8.Size = New Size(187, 28)
         Label8.TabIndex = 2
         Label8.Text = "Create New Vacancy"
         ' 
@@ -63,9 +62,9 @@ Partial Class Health_Doctor_Employment_Requests
         Label7.BackColor = Color.Black
         Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(462, 18)
+        Label7.Location = New Point(462, 24)
         Label7.Name = "Label7"
-        Label7.Size = New Size(179, 21)
+        Label7.Size = New Size(220, 28)
         Label7.TabIndex = 1
         Label7.Text = "View Previous Vacancies"
         ' 
@@ -75,9 +74,9 @@ Partial Class Health_Doctor_Employment_Requests
         Label1.BackColor = Color.Black
         Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(800, 18)
+        Label1.Location = New Point(824, 24)
         Label1.Name = "Label1"
-        Label1.Size = New Size(209, 21)
+        Label1.Size = New Size(263, 28)
         Label1.TabIndex = 0
         Label1.Text = "Doctor Employment Request"
         ' 
@@ -87,11 +86,11 @@ Partial Class Health_Doctor_Employment_Requests
         Label4.BackColor = SystemColors.ActiveCaptionText
         Label4.Font = New Font("Segoe UI", 10F)
         Label4.ForeColor = SystemColors.ControlLightLight
-        Label4.Location = New Point(0, 62)
+        Label4.Location = New Point(1042, 99)
         Label4.Name = "Label4"
-        Label4.Size = New Size(142, 19)
+        Label4.Size = New Size(45, 23)
         Label4.TabIndex = 33
-        Label4.Text = "Health Record Tracker"
+        Label4.Text = "Back"
         ' 
         ' Guna2ComboBox1
         ' 
@@ -105,24 +104,24 @@ Partial Class Health_Doctor_Employment_Requests
         Guna2ComboBox1.ForeColor = Color.Black
         Guna2ComboBox1.ItemHeight = 30
         Guna2ComboBox1.Items.AddRange(New Object() {"Select Specialisation", "Cardiology", "Pulmonology", "Orthopedics", "Neurology", "Homeopathy", "General Physician"})
-        Guna2ComboBox1.Location = New Point(396, 100)
+        Guna2ComboBox1.Location = New Point(453, 133)
+        Guna2ComboBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2ComboBox1.Name = "Guna2ComboBox1"
         Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2ComboBox1.Size = New Size(215, 36)
+        Guna2ComboBox1.Size = New Size(245, 36)
         Guna2ComboBox1.StartIndex = 0
         Guna2ComboBox1.TabIndex = 34
         ' 
         ' Health_Doctor_Employment_Requests
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
+        AutoScroll = True
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1107, 760)
         Controls.Add(Guna2ComboBox1)
         Controls.Add(Label4)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Health_Doctor_Employment_Requests"
         Text = "Health_HospitalListing"
         Panel1.ResumeLayout(False)

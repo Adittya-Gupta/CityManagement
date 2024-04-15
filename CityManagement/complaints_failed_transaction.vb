@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class complaints_failed_transaction
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
-    Dim user_id As Integer = 11
+    Dim user_id As Integer = Module1.CurrUserSID
     Private Sub compl_hospital_query_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -28,9 +28,18 @@ Public Class complaints_failed_transaction
         End Try
 
         MessageBox.Show("Complaint registered successfully")
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

@@ -37,7 +37,7 @@ Partial Class TransportMinister
         Label3.Name = "Label3"
         Label3.Size = New Size(188, 27)
         Label3.TabIndex = 9
-        Label3.Text = "Health Minister"
+        Label3.Text = "Transport Minister"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label2
@@ -74,8 +74,7 @@ Partial Class TransportMinister
         ' 
         ' TransportMinister
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1089, 713)
@@ -85,7 +84,7 @@ Partial Class TransportMinister
         Controls.Add(Panel1)
         DoubleBuffered = True
         Name = "TransportMinister"
-        Text = "TransportMinister"
+        Text = "Transport Minister"
         ResumeLayout(False)
     End Sub
 

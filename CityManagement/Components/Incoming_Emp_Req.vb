@@ -11,7 +11,8 @@ Public Class Incoming_Emp_Req
     Private _userID As Int32
     Private _orgID As Int32
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
+    'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 
     Public Sub New(ParentForm As Form, ByVal dateValue As Date,

@@ -58,7 +58,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         Label3.BackColor = Color.FromArgb(CByte(235), CByte(231), CByte(231))
         Label3.Font = New Font("Segoe UI", 18F)
-        Label3.Location = New Point(67, 545)
+        Label3.Location = New Point(67, 520)
         Label3.Name = "Label3"
         Label3.Size = New Size(459, 52)
         Label3.TabIndex = 34
@@ -73,7 +73,7 @@ Partial Class Health_DoctorsEmployment
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 18F)
-        Button1.Location = New Point(478, 636)
+        Button1.Location = New Point(478, 587)
         Button1.Name = "Button1"
         Button1.Size = New Size(172, 51)
         Button1.TabIndex = 35
@@ -107,7 +107,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         Label1.BackColor = Color.White
         Label1.Font = New Font("Segoe UI", 18F)
-        Label1.Location = New Point(610, 545)
+        Label1.Location = New Point(610, 520)
         Label1.Name = "Label1"
         Label1.Size = New Size(430, 52)
         Label1.TabIndex = 38
@@ -150,7 +150,7 @@ Partial Class Health_DoctorsEmployment
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
-        ClientSize = New Size(1107, 760)
+        ClientSize = New Size(1107, 705)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)

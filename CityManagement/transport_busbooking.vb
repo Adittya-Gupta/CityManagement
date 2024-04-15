@@ -49,7 +49,7 @@ Public Class transport_busbooking
         End Set
     End Property
 
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Private Sub transport_busbooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try

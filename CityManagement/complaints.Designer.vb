@@ -35,6 +35,8 @@ Partial Class complaints
         ' 
         Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button1.BackColor = Color.Transparent
+        Button1.Cursor = Cursors.Hand
+        Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Location = New Point(38, 320)
         Button1.Margin = New Padding(3, 4, 3, 4)
@@ -47,6 +49,8 @@ Partial Class complaints
         ' 
         Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button2.BackColor = Color.Transparent
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Location = New Point(214, 311)
         Button2.Margin = New Padding(3, 4, 3, 4)
@@ -59,6 +63,8 @@ Partial Class complaints
         ' 
         Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button3.BackColor = Color.Transparent
+        Button3.Cursor = Cursors.Hand
+        Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Location = New Point(425, 320)
         Button3.Margin = New Padding(3, 4, 3, 4)
@@ -72,6 +78,8 @@ Partial Class complaints
         Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button4.BackColor = Color.Transparent
         Button4.BackgroundImageLayout = ImageLayout.Stretch
+        Button4.Cursor = Cursors.Hand
+        Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Location = New Point(664, 311)
         Button4.Margin = New Padding(3, 4, 3, 4)
@@ -84,6 +92,8 @@ Partial Class complaints
         ' 
         Button5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button5.BackColor = Color.Transparent
+        Button5.Cursor = Cursors.Hand
+        Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Location = New Point(913, 311)
         Button5.Margin = New Padding(3, 4, 3, 4)
@@ -96,6 +106,8 @@ Partial Class complaints
         ' 
         Button6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button6.BackColor = Color.Transparent
+        Button6.Cursor = Cursors.Hand
+        Button6.FlatAppearance.BorderSize = 0
         Button6.FlatStyle = FlatStyle.Flat
         Button6.Location = New Point(893, 44)
         Button6.Margin = New Padding(3, 4, 3, 4)

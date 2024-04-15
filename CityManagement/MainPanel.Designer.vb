@@ -378,11 +378,11 @@ Partial Class MainPanel
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Exo 2 Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(44, 731)
         Label1.Name = "Label1"
-        Label1.Size = New Size(112, 14)
+        Label1.Size = New Size(150, 18)
         Label1.TabIndex = 0
         Label1.Text = "Made By Group 2B"
         ' 
@@ -438,8 +438,7 @@ Partial Class MainPanel
         ' 
         ' MainPanel
         ' 
-        AutoScaleDimensions = New SizeF(10F, 18F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(29), CByte(28), CByte(23))
         ClientSize = New Size(1308, 761)
         Controls.Add(PictureBox15)

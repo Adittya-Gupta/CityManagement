@@ -70,10 +70,9 @@ Partial Class elections_votingPortal
         NOTA.Size = New Size(166, 56)
         NOTA.TabIndex = 14
         ' 
-        ' votingPortal
+        ' elections_votingPortal
         ' 
-        AutoScaleDimensions = New SizeF(8F, 17F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
@@ -86,7 +85,7 @@ Partial Class elections_votingPortal
         DoubleBuffered = True
         Font = New Font("Microsoft Sans Serif", 8.25F)
         FormBorderStyle = FormBorderStyle.None
-        Name = "votingPortal"
+        Name = "elections_votingPortal"
         Text = "votingPortal"
         ResumeLayout(False)
     End Sub

@@ -32,7 +32,7 @@ Partial Class elections_viewNominees
         ' Label1
         ' 
         Label1.BackColor = SystemColors.ActiveCaptionText
-        Label1.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(168, 67)
         Label1.Name = "Label1"
         Label1.Size = New Size(231, 57)
@@ -63,7 +63,7 @@ Partial Class elections_viewNominees
         ' back
         ' 
         back.BackColor = SystemColors.ActiveCaptionText
-        back.Font = New Font("Exo 2", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        back.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         back.Location = New Point(961, 18)
         back.Name = "back"
         back.Size = New Size(86, 42)
@@ -71,10 +71,9 @@ Partial Class elections_viewNominees
         back.Text = "Back"
         back.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' viewNominees
+        ' elections_viewNominees
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
@@ -85,7 +84,7 @@ Partial Class elections_viewNominees
         DoubleBuffered = True
         ForeColor = SystemColors.ButtonHighlight
         FormBorderStyle = FormBorderStyle.None
-        Name = "viewNominees"
+        Name = "elections_viewNominees"
         Text = "viewNominees"
         ResumeLayout(False)
     End Sub

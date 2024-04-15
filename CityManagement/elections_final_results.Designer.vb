@@ -51,10 +51,9 @@ Partial Class elections_final_results
         Candidates.Size = New Size(765, 375)
         Candidates.TabIndex = 12
         ' 
-        ' electionResults
+        ' elections_final_results
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
@@ -64,7 +63,7 @@ Partial Class elections_final_results
         Controls.Add(back)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
-        Name = "electionResults"
+        Name = "elections_final_results"
         Text = "electionResults"
         ResumeLayout(False)
     End Sub

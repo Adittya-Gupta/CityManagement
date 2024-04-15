@@ -32,7 +32,7 @@ Partial Class HealthMinister
         ' Label1
         ' 
         Label1.BackColor = Color.Black
-        Label1.Font = New Font("Segoe UI", 14.0F)
+        Label1.Font = New Font("Segoe UI", 14F)
         Label1.ForeColor = SystemColors.ButtonHighlight
         Label1.Location = New Point(760, 37)
         Label1.Name = "Label1"
@@ -74,8 +74,7 @@ Partial Class HealthMinister
         ' 
         ' HealthMinister
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1089, 713)

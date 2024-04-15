@@ -20,7 +20,7 @@ Public Class MuncipalOffice
     Private Sub LoadOwnerRequests()
         ' Establish connection to the database
         'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
-        Dim connString As String = Globals.connectionstring
+        Dim connString As String = Module1.connString
         Dim conn As New MySqlConnection(connString)
 
         Try
@@ -121,7 +121,7 @@ Public Class MuncipalOffice
         Dim userID As Integer = Convert.ToInt32(workerReqControl.Tag)
 
         ' Retrieve resume details from the database for the given userID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()
@@ -179,7 +179,7 @@ Public Class MuncipalOffice
 
     Private Sub UpdateStatus(userID As Integer, status As String)
         ' Update the Status column in the workerEmployReq table for the given userID
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()

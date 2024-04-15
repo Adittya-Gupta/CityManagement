@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Redressal
-    Dim idOfCurrentUser As Integer = 926352
+    Dim idOfCurrentUser As Integer = Module1.CurrUserSID
     Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
 

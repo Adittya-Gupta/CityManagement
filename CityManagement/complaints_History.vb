@@ -3,7 +3,7 @@ Imports System.Reflection.Emit
 Imports MySql.Data.MySqlClient
 Public Class complaints_History
     Private Sub complaints_History_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim userID As String = "11"
+        Dim userID As String = Module1.CurrUserSID.ToString()
         Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
 
         ' Set up DataGridView

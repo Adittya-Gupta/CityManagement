@@ -3,7 +3,7 @@
 Public Class complaints_failed_transaction
     Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim conn As New MySqlConnection(connString)
-    Dim user_id As Integer = 11
+    Dim user_id As Integer = Module1.CurrUserSID
     Private Sub compl_hospital_query_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

@@ -107,7 +107,7 @@ Public Class searchComponent
         Dim pathName As String = ""
 
         ' Your connection string
-        Dim connString As String = Globals.connectionstring
+        Dim connectionString As String = Globals.connectionstring
 
         ' Your SQL query to retrieve path name based on busId
         Dim query As String = "SELECT p.path_name FROM bus b JOIN path p ON b.path_id = p.path_id WHERE b.bus_id = @busId"

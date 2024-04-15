@@ -10,7 +10,7 @@ Public Class complaints_transport_query
         'MessageBox.Show("Owner: " + owner_id.ToString())
         Try
             conn.Open()
-            Dim query As String = "select SID, Name from User where Designation = Driver"
+            Dim query As String = "select SID, Name from User where Designation = 'Driver'"
             Using cmd As New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 While reader.Read()
@@ -47,6 +47,18 @@ Public Class complaints_transport_query
             End Try
         Next
         MessageBox.Show("Complaint registered successfully")
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class

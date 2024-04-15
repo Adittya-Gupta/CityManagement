@@ -1,10 +1,17 @@
 ﻿Public Class complaints
     Private Sub complaints_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-
+        Button1.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button1.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button2.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button2.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button3.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button3.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button4.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button4.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button5.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button5.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button6.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button6.FlatAppearance.MouseDownBackColor = Color.Transparent
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -60,4 +67,5 @@
         mypanel.Panel1.Controls.Add(form)
         form.Show()
     End Sub
+
 End Class

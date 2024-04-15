@@ -100,9 +100,26 @@ Public Class complaints_hospital_query
             End Try
         Next
         MessageBox.Show("Complaint registered successfully")
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints_Hospital
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New complaints
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

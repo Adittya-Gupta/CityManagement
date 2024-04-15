@@ -42,7 +42,6 @@ Partial Class complaints_hospital_query
         RichTextBox1.Location = New Point(521, 292)
         RichTextBox1.Margin = New Padding(3, 4, 3, 4)
         RichTextBox1.MaxLength = 300
-        RichTextBox1.Multiline = False
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(541, 206)
         RichTextBox1.TabIndex = 2

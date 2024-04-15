@@ -62,7 +62,6 @@ Partial Class complaints_law_query
         RichTextBox1.Location = New Point(607, 115)
         RichTextBox1.Margin = New Padding(3, 5, 3, 5)
         RichTextBox1.MaxLength = 300
-        RichTextBox1.Multiline = False
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(618, 273)
         RichTextBox1.TabIndex = 29
@@ -75,7 +74,7 @@ Partial Class complaints_law_query
         Label3.Font = New Font("Book Antiqua", 11.25F, FontStyle.Bold)
         Label3.Location = New Point(347, 7)
         Label3.Name = "Label3"
-        Label3.Size = New Size(191, 23)
+        Label3.Size = New Size(152, 19)
         Label3.TabIndex = 33
         Label3.Text = "Police_station_name"
         ' 
@@ -86,7 +85,7 @@ Partial Class complaints_law_query
         Label2.Font = New Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(13, 8)
         Label2.Name = "Label2"
-        Label2.Size = New Size(169, 22)
+        Label2.Size = New Size(141, 20)
         Label2.TabIndex = 32
         Label2.Text = "Complaint Portal  >"
         ' 
@@ -97,7 +96,7 @@ Partial Class complaints_law_query
         Label1.Font = New Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(213, 8)
         Label1.Name = "Label1"
-        Label1.Size = New Size(66, 22)
+        Label1.Size = New Size(56, 20)
         Label1.TabIndex = 31
         Label1.Text = "Law  >"
         ' 
@@ -108,7 +107,7 @@ Partial Class complaints_law_query
         Label4.Font = New Font("Book Antiqua", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(607, 56)
         Label4.Name = "Label4"
-        Label4.Size = New Size(218, 28)
+        Label4.Size = New Size(179, 23)
         Label4.TabIndex = 35
         Label4.Text = "Describe the issue :"
         ' 
@@ -126,7 +125,7 @@ Partial Class complaints_law_query
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
-        ClientSize = New Size(1265, 1013)
+        ClientSize = New Size(1265, 788)
         Controls.Add(Button1)
         Controls.Add(Panel3)
         Controls.Add(RichTextBox1)

@@ -190,7 +190,7 @@ Public Class ServiceHistory
                             End While
                         Else
                             ' Handle case where no service history is found for the user
-                            MessageBox.Show("No service history found for the user.")
+                            'MessageBox.Show("No service history found for the user.")
                         End If
                     End Using
                 End Using

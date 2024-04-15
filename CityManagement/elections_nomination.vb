@@ -69,6 +69,32 @@ Public Class elections_nomination
     '    childform.Show()
     'End Sub
     Private Sub PayDeposit_Click(sender As Object, e As EventArgs) Handles PayDeposit.Click
+        Try
+            conn.Open()
+            'To check if the nominee already present in the table
+            Dim query As String = "select SID from Nominees where SID=?"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("?", idOfCurrentUser)
+                Dim reader = cmd.ExecuteReader
+                If reader.Read Then
+                    MessageBox.Show("You have already entered your agenda and manifesto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Dim form As New election_dashboard()
+                    mypanel.panel1.Controls.Clear()
+                    form.TopLevel = False
+                    mypanel.panel1.Controls.Add(form)
+                    form.Show()
+                    Exit Sub
+                Else
+                End If
+            End Using
+            'MessageBox.Show("Checked for duplicate entry in Nominees table successfully")
+        Catch ex As Exception
+
+        Finally
+            conn.Close()
+        End Try
+
+
         'Link banking database and banking forms for further process here
         Dim paidDeposit = False
         'Dim form As New Banking_Money_Management_Homepage()
@@ -160,25 +186,7 @@ Public Class elections_nomination
 
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
-            Try
-                conn.Open()
-                'To check if the nominee already present in the table
-                Dim query As String = "select SID from Nominees where SID=?"
-                Using cmd As New MySqlCommand(query, conn)
-                    cmd.Parameters.AddWithValue("?", idOfCurrentUser)
-                    Dim reader = cmd.ExecuteReader
-                    If reader.Read Then
-                        MessageBox.Show("You have already entered your agenda and manifesto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    Else
-                    End If
-                End Using
-                'MessageBox.Show("Checked for duplicate entry in Nominees table successfully")
-            Catch ex As Exception
 
-            Finally
-                conn.Close()
-            End Try
 
             Try
                 conn.Open()

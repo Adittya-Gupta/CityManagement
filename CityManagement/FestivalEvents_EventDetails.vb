@@ -98,9 +98,11 @@ Public Class FestivalEvents_EventDetails
                 Label5.Text = date1
                 Label6.Text = time
                 Label7.Text = reader("description")
-                Dim img As Byte() = DirectCast(reader("Image"), Byte())
-                Dim ms As New IO.MemoryStream(img)
-                Me.PictureBox1.Image = Image.FromStream(ms)
+                If Not IsDBNull(reader("Image")) Then
+                    Dim img As Byte() = DirectCast(reader("Image"), Byte())
+                    Dim ms As New IO.MemoryStream(img)
+                    Me.PictureBox1.Image = Image.FromStream(ms)
+                End If
 
                 'eventCard.Label1.Text = "Venue: " + reader("Venue")
                 'eventCard.Label2.Text = reader("name")

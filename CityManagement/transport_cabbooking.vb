@@ -2,7 +2,7 @@
     Public Shared FromLocation As String
     Public Shared ToLocation As String
     Public Shared sqlFormattedDateTime As String
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)

@@ -7,7 +7,7 @@ Imports System.Text
 Imports Org.BouncyCastle.Asn1.Ocsp
 Imports System.Globalization
 Public Class transport_cabavailable
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Dim conn2 As New MySqlConnection(connString)
     Dim pathNodesMap As New Dictionary(Of Integer, List(Of Integer))

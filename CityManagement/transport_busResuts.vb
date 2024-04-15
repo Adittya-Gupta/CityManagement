@@ -95,7 +95,7 @@ Public Class transport_busResuts
     Private Sub transport_busResuts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Retrieve data from the bus table
         Dim query As String = "SELECT b.*, p.path_string FROM bus b JOIN path p ON b.path_id = p.path_id"
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Globals.connectionstring
         EdgeWeights = New Dictionary(Of String, Integer) From {
             {"AB", 20},
             {"BC", 30},

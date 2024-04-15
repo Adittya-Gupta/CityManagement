@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class transport_govOfficial
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
 
     Private Sub InsertIntoBusTable(busId As Integer, driverName As String, driverNumber As String, girlsSeat As Integer, boysSeat As Integer, girlsPrice As Double, boysPrice As Double, pathId As Integer, isDaily As Integer, departTime As TimeSpan)

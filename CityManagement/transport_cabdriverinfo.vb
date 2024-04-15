@@ -3,7 +3,7 @@ Imports Mysqlx
 Imports Org.BouncyCastle.Asn1.Ocsp
 
 Public Class transport_cabdriverinfo
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Globals.connectionstring
     Dim conn As New MySqlConnection(connString)
     Dim conn2 As New MySqlConnection(connString)
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint

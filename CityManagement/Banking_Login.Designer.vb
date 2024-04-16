@@ -22,129 +22,138 @@ Partial Class Banking_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ButtonLogin = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBoxpassword = New System.Windows.Forms.TextBox()
-        Me.SuspendLayout()
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox1.Location = New System.Drawing.Point(393, 237)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
-        Me.CheckBox1.TabIndex = 40
-        Me.CheckBox1.Text = "Show"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(26, 126)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(0, 13)
-        Me.Label13.TabIndex = 39
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(398, 322)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(54, 15)
-        Me.Label12.TabIndex = 38
-        Me.Label12.Text = "Register"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(274, 322)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(132, 13)
-        Me.Label11.TabIndex = 37
-        Me.Label11.Text = "Don't  Have An Account ?"
-        '
-        'ButtonLogin
-        '
-        Me.ButtonLogin.BackColor = System.Drawing.SystemColors.Highlight
-        Me.ButtonLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLogin.Location = New System.Drawing.Point(274, 275)
-        Me.ButtonLogin.Name = "ButtonLogin"
-        Me.ButtonLogin.Size = New System.Drawing.Size(177, 29)
-        Me.ButtonLogin.TabIndex = 36
-        Me.ButtonLogin.Text = "Login"
-        Me.ButtonLogin.UseVisualStyleBackColor = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(274, 142)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(91, 20)
-        Me.Label9.TabIndex = 35
-        Me.Label9.Text = "Username"
-        '
-        'TextBoxUsername
-        '
-        Me.TextBoxUsername.BackColor = System.Drawing.SystemColors.Info
-        Me.TextBoxUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUsername.Location = New System.Drawing.Point(274, 162)
-        Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(177, 21)
-        Me.TextBoxUsername.TabIndex = 34
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(274, 192)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 20)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "Password"
-        '
-        'TextBoxpassword
-        '
-        Me.TextBoxpassword.BackColor = System.Drawing.SystemColors.Info
-        Me.TextBoxpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxpassword.Location = New System.Drawing.Point(274, 211)
-        Me.TextBoxpassword.Name = "TextBoxpassword"
-        Me.TextBoxpassword.Size = New System.Drawing.Size(177, 21)
-        Me.TextBoxpassword.TabIndex = 32
-        Me.TextBoxpassword.UseSystemPasswordChar = True
-        '
-        'Banking_Login
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(830, 521)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.ButtonLogin)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBoxUsername)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBoxpassword)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Banking_Login"
-        Me.Text = "Banking_Login"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CheckBox1 = New CheckBox()
+        Label13 = New Label()
+        Label12 = New Label()
+        Label11 = New Label()
+        ButtonLogin = New Button()
+        Label9 = New Label()
+        TextBoxUsername = New TextBox()
+        Label8 = New Label()
+        TextBoxpassword = New TextBox()
+        SuspendLayout()
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.BackgroundImageLayout = ImageLayout.None
+        CheckBox1.Cursor = Cursors.Hand
+        CheckBox1.Location = New Point(524, 365)
+        CheckBox1.Margin = New Padding(4, 5, 4, 5)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(67, 24)
+        CheckBox1.TabIndex = 40
+        CheckBox1.Text = "Show"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Location = New Point(35, 194)
+        Label13.Margin = New Padding(4, 0, 4, 0)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(0, 20)
+        Label13.TabIndex = 39
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Cursor = Cursors.Hand
+        Label12.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.ForeColor = SystemColors.Highlight
+        Label12.Location = New Point(531, 495)
+        Label12.Margin = New Padding(4, 0, 4, 0)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(67, 20)
+        Label12.TabIndex = 38
+        Label12.Text = "Register"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(365, 495)
+        Label11.Margin = New Padding(4, 0, 4, 0)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(178, 20)
+        Label11.TabIndex = 37
+        Label11.Text = "Don't  Have An Account ?"
+        ' 
+        ' ButtonLogin
+        ' 
+        ButtonLogin.BackColor = SystemColors.Highlight
+        ButtonLogin.Cursor = Cursors.Hand
+        ButtonLogin.Location = New Point(365, 423)
+        ButtonLogin.Margin = New Padding(4, 5, 4, 5)
+        ButtonLogin.Name = "ButtonLogin"
+        ButtonLogin.Size = New Size(236, 45)
+        ButtonLogin.TabIndex = 36
+        ButtonLogin.Text = "Login"
+        ButtonLogin.UseVisualStyleBackColor = False
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(365, 218)
+        Label9.Margin = New Padding(4, 0, 4, 0)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(110, 25)
+        Label9.TabIndex = 35
+        Label9.Text = "Username"
+        ' 
+        ' TextBoxUsername
+        ' 
+        TextBoxUsername.BackColor = SystemColors.Info
+        TextBoxUsername.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBoxUsername.Location = New Point(365, 249)
+        TextBoxUsername.Margin = New Padding(4, 5, 4, 5)
+        TextBoxUsername.Name = "TextBoxUsername"
+        TextBoxUsername.Size = New Size(235, 24)
+        TextBoxUsername.TabIndex = 34
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(365, 295)
+        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(106, 25)
+        Label8.TabIndex = 33
+        Label8.Text = "Password"
+        ' 
+        ' TextBoxpassword
+        ' 
+        TextBoxpassword.BackColor = SystemColors.Info
+        TextBoxpassword.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBoxpassword.Location = New Point(365, 325)
+        TextBoxpassword.Margin = New Padding(4, 5, 4, 5)
+        TextBoxpassword.Name = "TextBoxpassword"
+        TextBoxpassword.Size = New Size(235, 24)
+        TextBoxpassword.TabIndex = 32
+        TextBoxpassword.UseSystemPasswordChar = True
+        ' 
+        ' Banking_Login
+        ' 
+        AutoScaleMode = AutoScaleMode.None
+        BackColor = Color.White
+        ClientSize = New Size(1107, 802)
+        ControlBox = False
+        Controls.Add(CheckBox1)
+        Controls.Add(Label13)
+        Controls.Add(Label12)
+        Controls.Add(Label11)
+        Controls.Add(ButtonLogin)
+        Controls.Add(Label9)
+        Controls.Add(TextBoxUsername)
+        Controls.Add(Label8)
+        Controls.Add(TextBoxpassword)
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 5, 4, 5)
+        Name = "Banking_Login"
+        Text = "Banking_Login"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents ButtonPhoto As Button

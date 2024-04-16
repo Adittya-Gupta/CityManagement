@@ -117,7 +117,7 @@ Public Class professor_dashboard
     Private Sub InitializePanel1()
         With Panel1
             .Location = New Point(0, 220)
-            .Size = New Size(1254, 696)
+            .Size = New Size(1107, 500)
             .BackColor = Color.White
             .AutoScroll = True ' Enable auto-scrolling
         End With

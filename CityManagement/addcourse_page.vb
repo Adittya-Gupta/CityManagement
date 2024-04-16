@@ -42,7 +42,7 @@ Public Class addcourse_page
         video_link.Text = "Video"
         video_link.Font = New Font("Segoe UI", 12)
         video_link.BackColor = ColorTranslator.FromHtml("#0642DE")
-        video_link.Size() = New Size(80, 50)
+        video_link.Size() = New Size(70, 40)
         video_link.Location = New Point(95, 40)
 
         buton2.Text = "Delete Course"
@@ -341,4 +341,6 @@ Public Class addcourse_page
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
+
+
 End Class

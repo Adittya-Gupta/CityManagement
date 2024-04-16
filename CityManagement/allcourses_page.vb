@@ -132,10 +132,12 @@ Public Class allcourses_page
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
 
-        Dim form1Instance As New student_dashboard()
-        form1Instance.SetUserID(userid)
-        form1Instance.Show()
-        Me.Hide()
+        mypanel.panel1.Controls.Clear()
+        Dim form As New student_dashboard()
+        form.SetUserID(userid)
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
 
     End Sub
 
@@ -152,15 +154,20 @@ Public Class allcourses_page
     End Sub
 
     Private Sub Education_Click(sender As Object, e As EventArgs) Handles Education.Click
-        Dim educationLandingForm As New education_landing()
-        educationLandingForm.Show()
-        Me.Hide()
+        mypanel.panel1.Controls.Clear()
+        Dim form As New education_landing()
+        form.SetUserID(userid)
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Panel_Click(sender As Object, e As EventArgs)
-        Dim specificCoursePage As New specific_coursepage()
-
-        specificCoursePage.Show()
-        Me.Hide()
+        mypanel.panel1.Controls.Clear()
+        Dim form As New specific_course()
+        form.SetUserID(userid)
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 End Class

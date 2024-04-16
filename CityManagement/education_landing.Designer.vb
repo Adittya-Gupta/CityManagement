@@ -37,10 +37,9 @@ Partial Class education_landing
         ' PictureBox4
         ' 
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(54, 402)
-        PictureBox4.Margin = New Padding(3, 2, 3, 2)
+        PictureBox4.Location = New Point(62, 536)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(130, 101)
+        PictureBox4.Size = New Size(149, 135)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.TabIndex = 3
         PictureBox4.TabStop = False
@@ -48,10 +47,9 @@ Partial Class education_landing
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(195, -2)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(223, -3)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(760, 362)
+        PictureBox1.Size = New Size(869, 483)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -59,10 +57,9 @@ Partial Class education_landing
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(578, 402)
-        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Location = New Point(661, 536)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(136, 101)
+        PictureBox2.Size = New Size(155, 135)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
@@ -72,9 +69,10 @@ Partial Class education_landing
         Btnstud.BackColor = Color.Black
         Btnstud.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btnstud.ForeColor = Color.White
-        Btnstud.Location = New Point(732, 439)
+        Btnstud.Location = New Point(837, 585)
+        Btnstud.Margin = New Padding(3, 4, 3, 4)
         Btnstud.Name = "Btnstud"
-        Btnstud.Size = New Size(173, 33)
+        Btnstud.Size = New Size(198, 44)
         Btnstud.TabIndex = 4
         Btnstud.Text = "Student"
         Btnstud.UseVisualStyleBackColor = False
@@ -84,9 +82,10 @@ Partial Class education_landing
         Btnteach.BackColor = Color.Black
         Btnteach.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btnteach.ForeColor = Color.White
-        Btnteach.Location = New Point(206, 439)
+        Btnteach.Location = New Point(235, 585)
+        Btnteach.Margin = New Padding(3, 4, 3, 4)
         Btnteach.Name = "Btnteach"
-        Btnteach.Size = New Size(173, 33)
+        Btnteach.Size = New Size(198, 44)
         Btnteach.TabIndex = 5
         Btnteach.Text = "Teacher"
         Btnteach.UseVisualStyleBackColor = False
@@ -96,18 +95,19 @@ Partial Class education_landing
         Button3.BackColor = Color.Black
         Button3.Font = New Font("Lucida Console", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(-4, -2)
+        Button3.Location = New Point(-5, -3)
+        Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(203, 367)
+        Button3.Size = New Size(232, 489)
         Button3.TabIndex = 6
         Button3.Text = "WELCOME TO EDUCATION MODULE"
         Button3.UseVisualStyleBackColor = False
         ' 
         ' education_landing
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(953, 535)
+        ClientSize = New Size(1089, 713)
         Controls.Add(Button3)
         Controls.Add(Btnteach)
         Controls.Add(Btnstud)
@@ -115,7 +115,6 @@ Partial Class education_landing
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "education_landing"
         Text = "election_landing"
         WindowState = FormWindowState.Maximized

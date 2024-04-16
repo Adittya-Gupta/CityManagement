@@ -22,33 +22,109 @@ Partial Class courserequests_page
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Button3 = New Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(courserequests_page))
+        Button2 = New Button()
+        Education = New Button()
+        Button1 = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        PictureBox2 = New PictureBox()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Button3
+        ' Button2
         ' 
-        Button3.BackColor = Color.Black
-        Button3.Font = New Font("Lucida Console", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(474, 10)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(468, 285)
-        Button3.TabIndex = 8
-        Button3.Text = "Requests page"
-        Button3.UseVisualStyleBackColor = False
+        Button2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = SystemColors.ActiveCaptionText
+        Button2.Location = New Point(368, 28)
+        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(99, 29)
+        Button2.TabIndex = 49
+        Button2.Text = "Requests"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Education
+        ' 
+        Education.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Education.ForeColor = SystemColors.ActiveBorder
+        Education.Location = New Point(30, 27)
+        Education.Margin = New Padding(3, 2, 3, 2)
+        Education.Name = "Education"
+        Education.Size = New Size(122, 31)
+        Education.TabIndex = 50
+        Education.Text = "Education"
+        Education.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = SystemColors.ActiveBorder
+        Button1.Location = New Point(177, 27)
+        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(166, 31)
+        Button1.TabIndex = 51
+        Button1.Text = "Professor Dashboard"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(156, 36)
+        Label1.Margin = New Padding(2, 0, 2, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(15, 15)
+        Label1.TabIndex = 52
+        Label1.Text = ">"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(347, 36)
+        Label2.Margin = New Padding(2, 0, 2, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(15, 15)
+        Label2.TabIndex = 53
+        Label2.Text = ">"
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(758, 27)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(159, 117)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 54
+        PictureBox2.TabStop = False
         ' 
         ' courserequests_page
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(953, 535)
-        Controls.Add(Button3)
-        FormBorderStyle = FormBorderStyle.None
+        Controls.Add(PictureBox2)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(Button1)
+        Controls.Add(Education)
+        Controls.Add(Button2)
         Margin = New Padding(3, 2, 3, 2)
         Name = "courserequests_page"
         Text = "courserequests_page"
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
-
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Education As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -110,12 +110,16 @@ Public Class certificate
         End Try
     End Sub
 
-
-
-
     Private Sub b1_Click(sender As Object, e As EventArgs) Handles b1.Click
-        Dim allcoursesForm As New allcourses_page()
-        allcoursesForm.Show()
-        Me.Hide()
+        mypanel.panel1.Controls.Clear()
+        Dim form As New student_dashboard()
+        form.SetUserID(userid)
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class

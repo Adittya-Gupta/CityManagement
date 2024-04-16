@@ -382,7 +382,7 @@ Partial Class MainPanel
         Label1.ForeColor = Color.White
         Label1.Location = New Point(44, 731)
         Label1.Name = "Label1"
-        Label1.Size = New Size(150, 18)
+        Label1.Size = New Size(126, 15)
         Label1.TabIndex = 0
         Label1.Text = "Made By Group 2B"
         ' 

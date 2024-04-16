@@ -81,14 +81,16 @@ Partial Class ListItem
         ' 
         ' Label2
         ' 
+        Label2.AutoSize = True
         Label2.BackColor = Color.White
         Label2.Font = New Font("Exo 2", 10F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(210, 58)
+        Label2.Location = New Point(210, 53)
         Label2.Name = "Label2"
-        Label2.Size = New Size(207, 25)
+        Label2.Size = New Size(105, 25)
         Label2.TabIndex = 3
-        Label2.Text = "Label2"
+        Label2.Text = "sakdsalkdjd"
+        Label2.UseMnemonic = False
         ' 
         ' Label3
         ' 
@@ -193,6 +195,7 @@ Partial Class ListItem
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents CurvedLabel2 As CurvedLabel

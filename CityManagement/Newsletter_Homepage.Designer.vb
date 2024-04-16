@@ -82,7 +82,7 @@ Partial Class Newsletter_Homepage
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.newspaper
+        PictureBox1.Image = newspaper
         PictureBox1.Location = New Point(424, 144)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(265, 267)
@@ -92,7 +92,7 @@ Partial Class Newsletter_Homepage
         ' 
         ' PictureBox13
         ' 
-        PictureBox13.Image = My.Resources.Resources.editor
+        PictureBox13.Image = editor
         PictureBox13.Location = New Point(812, 144)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(265, 267)
@@ -102,7 +102,7 @@ Partial Class Newsletter_Homepage
         ' 
         ' PictureBox11
         ' 
-        PictureBox11.Image = My.Resources.Resources.Newspaper_logo
+        PictureBox11.Image = Newspaper_logo
         PictureBox11.Location = New Point(34, 144)
         PictureBox11.Name = "PictureBox11"
         PictureBox11.Size = New Size(265, 267)

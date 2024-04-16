@@ -41,13 +41,13 @@ Partial Class Banking_ContactUs
         Label4 = New Label()
         TextBox1 = New TextBox()
         Panel5 = New Panel()
+        PictureBox12 = New PictureBox()
         Label10 = New Label()
         Label11 = New Label()
         Label8 = New Label()
         Label9 = New Label()
         Label7 = New Label()
         Label6 = New Label()
-        PictureBox12 = New PictureBox()
         Label3 = New Label()
         Panel6.SuspendLayout()
         CType(PictureBox13, ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +95,7 @@ Partial Class Banking_ContactUs
         Button17.Cursor = Cursors.Hand
         Button17.FlatAppearance.BorderSize = 0
         Button17.FlatStyle = FlatStyle.Flat
-        Button17.Font = New Font("Bodoni MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button17.Font = New Font("Bodoni MT", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button17.ForeColor = Color.White
         Button17.Location = New Point(348, 562)
         Button17.Margin = New Padding(0)
@@ -111,7 +111,7 @@ Partial Class Banking_ContactUs
         Button16.Cursor = Cursors.Hand
         Button16.FlatAppearance.BorderSize = 0
         Button16.FlatStyle = FlatStyle.Flat
-        Button16.Font = New Font("Bodoni MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button16.Font = New Font("Bodoni MT", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button16.ForeColor = Color.White
         Button16.Location = New Point(373, 493)
         Button16.Margin = New Padding(0)
@@ -239,7 +239,6 @@ Partial Class Banking_ContactUs
         ' 
         ' PictureBox13
         ' 
-        '        PictureBox13.Image = Resources.doubt
         PictureBox13.Location = New Point(45, 18)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(81, 79)
@@ -285,18 +284,27 @@ Partial Class Banking_ContactUs
         ' Panel5
         ' 
         Panel5.BorderStyle = BorderStyle.FixedSingle
+        Panel5.Controls.Add(PictureBox12)
         Panel5.Controls.Add(Label10)
         Panel5.Controls.Add(Label11)
         Panel5.Controls.Add(Label8)
         Panel5.Controls.Add(Label9)
         Panel5.Controls.Add(Label7)
         Panel5.Controls.Add(Label6)
-        Panel5.Controls.Add(PictureBox12)
         Panel5.Controls.Add(Label3)
         Panel5.Location = New Point(0, -2)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(485, 644)
         Panel5.TabIndex = 12
+        ' 
+        ' PictureBox12
+        ' 
+        PictureBox12.Location = New Point(77, 18)
+        PictureBox12.Name = "PictureBox12"
+        PictureBox12.Size = New Size(81, 79)
+        PictureBox12.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox12.TabIndex = 16
+        PictureBox12.TabStop = False
         ' 
         ' Label10
         ' 
@@ -376,16 +384,6 @@ Partial Class Banking_ContactUs
         Label6.Text = "How do I access my username and password after registering?"
         Label6.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PictureBox12
-        ' 
-        '    PictureBox12.Image = Resources.Faq_symbol
-        PictureBox12.Location = New Point(103, 19)
-        PictureBox12.Name = "PictureBox12"
-        PictureBox12.Size = New Size(81, 79)
-        PictureBox12.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox12.TabIndex = 9
-        PictureBox12.TabStop = False
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -445,6 +443,6 @@ Partial Class Banking_ContactUs
     Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox12 As PictureBox
 End Class

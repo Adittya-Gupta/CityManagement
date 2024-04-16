@@ -163,7 +163,7 @@ Public Class Newsletter_AddNews
         Mysqlconn.Open()
 
         sqlCmd.Connection = Mysqlconn
-        Dim query As String = "INSERT INTO newsdatabase.NewsData(Published_On,Headline,Publisher,Type,Date,Content,Image)" &
+        Dim query As String = "INSERT INTO NewsData(Published_On,Headline,Publisher,Type,Date,Content,Image)" &
                              "VALUES ('None','" & headline & "','" & published_by & "','" & type & "',CURDATE(),'" & content & "',@img);"
 
         sqlCmd.Parameters.Add("@img", MySqlDbType.Blob).Value = pic.ToArray()

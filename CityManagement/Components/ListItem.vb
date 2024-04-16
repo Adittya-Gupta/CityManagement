@@ -36,6 +36,8 @@ Public Class ListItem
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         Globals.chatsForm.Label2.Text = Label1.Text
+        Globals.ChatIdAsCitizen = Worker_ID
+        'MessageBox.Show(Globals.ChatIdAsCitizen)
         Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
         Globals.UrbanClapNavForm.ShowCurvedLabels_chats()
     End Sub

@@ -23,7 +23,7 @@ Public Class Chats
         'MessageBox.Show("List of Workers Citizen")
         ' Start the timer
         Timer1.Interval = 5000 ' Set the interval to 1 second
-        Timer1.Start()
+        'Timer1.Start()
         MakePictureBoxRound(PictureBox1)
     End Sub
 
@@ -83,6 +83,7 @@ Public Class Chats
                         chatInfo.SentBy = sentBy
                         chatInfo.Seen = seen
                         chatList.Add(chatInfo)
+                        lastMessageID = chatInfo.ChatID
                         ' Set the position of the chat element based on who sent it
                         ' position them one below the other
                         Dim lastControl As Control = Panel1.Controls.Cast(Of Control)().LastOrDefault()

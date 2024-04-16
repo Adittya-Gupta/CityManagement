@@ -63,7 +63,7 @@ Partial Class ChatElement
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(100, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(49, 17)
+        Label1.Size = New Size(50, 20)
         Label1.TabIndex = 4
         Label1.Text = "Label1"
         ' 

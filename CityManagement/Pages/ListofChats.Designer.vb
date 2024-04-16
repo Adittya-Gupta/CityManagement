@@ -46,7 +46,7 @@ Partial Class ListofChats
         Label1.ForeColor = Color.FromArgb(CByte(96), CByte(85), CByte(85))
         Label1.Location = New Point(753, 53)
         Label1.Name = "Label1"
-        Label1.Size = New Size(176, 61)
+        Label1.Size = New Size(181, 61)
         Label1.TabIndex = 7
         Label1.Text = "Old Chats"
         ' 

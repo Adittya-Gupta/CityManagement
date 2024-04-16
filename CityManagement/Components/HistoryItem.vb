@@ -94,6 +94,7 @@ Public Class HistoryItem
                 If currentAppointmentState = AppointmentState.EnquirySent Then
                     ' Perform action to withdraw the enquiry
                     ' Update the state
+                    ' MessageBox.Show()
                     UpdateAppointmentState(AppointmentState.Withdrawn)
                     newState = AppointmentState.Withdrawn
                 End If
@@ -199,12 +200,13 @@ Public Class HistoryItem
                 'HandleAction(CustomerAction.Pay)
                 'End If
             Case AppointmentState.Completed
-                Using rateform As New Rate()
-                    'Change the position to be in the centre of the screen
+                Using rateform As New Rate(GetWorkerIdFromBookings())
+                    ' Change the position to be in the centre of the screen
                     Dim result As DialogResult = rateform.ShowDialog()
                     If result = DialogResult.OK Then
                         ' Get the selected stars count from the child form
                         Dim selectedStarsCount As Integer = rateform.SelectedStars
+                        ' Handle the action
                         HandleAction(CustomerAction.Rate)
                     End If
                 End Using
@@ -294,7 +296,25 @@ Public Class HistoryItem
         MessageBox.Show(Username)
         Return Username
     End Function
-
+    Public Function GetWorkerIdFromBookings() As Integer
+        Dim userID As Integer = -1
+        Try
+            Dim query As String = "SELECT workerID FROM serviceBooking WHERE serviceBookingId = @bookingId"
+            Using connection As New MySqlConnection(Globals.connectionstring)
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@bookingId", Me.BookingId)
+                    Dim result As Object = command.ExecuteScalar()
+                    If result IsNot DBNull.Value Then
+                        userID = Convert.ToInt32(result)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error occurred while getting UserID from Bookings: " & ex.Message)
+        End Try
+        Return userID
+    End Function
     Private Sub HistoryItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

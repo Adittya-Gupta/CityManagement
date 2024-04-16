@@ -40,9 +40,36 @@ Public Class Chatlistitem
 
     Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click, Label1.Click, Label2.Click, PictureBox1.Click, Label3.Click
         Globals.ChatIdAsCitizen = Worker_id
-        Globals.chatsForm.Label2.Text = Label1.Text
-        Globals.Chatspage = Globals.chatsForm
-        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
+        Try
+            ' Create a MySQL connection
+            Using connection As New MySqlConnection(Globals.connectionstring)
+                ' Open the connection
+                connection.Open()
+
+                ' Define the SQL query to update the Seen status
+                Dim query As String = "UPDATE Chats " &
+                              "SET Seen = 1 " &
+                              "WHERE workerID = @ChatIdAsCitizen " &
+                              "AND SentBy = 1 " &
+                              "AND Seen = 0;"
+
+                ' Create MySqlCommand
+                Using command As New MySqlCommand(query, connection)
+                    ' Add parameters
+                    command.Parameters.AddWithValue("@ChatIdAsCitizen", Globals.ChatIdAsCitizen)
+
+                    ' Execute the command
+                    command.ExecuteNonQuery()
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Handle exceptions
+            MessageBox.Show("Error occurred while updating Seen status: " & ex.Message)
+        Finally
+            Globals.chatsForm.Label2.Text = Label1.Text
+            Globals.Chatspage = Globals.chatsForm
+            Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
+        End Try
     End Sub
 
 End Class

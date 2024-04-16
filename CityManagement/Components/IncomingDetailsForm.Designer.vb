@@ -29,6 +29,8 @@ Partial Class IncomingDetailsForm
         Label2 = New Label()
         RichTextBox1 = New RichTextBox()
         Label1 = New Label()
+        Label4 = New Label()
+        Button2 = New Button()
         SuspendLayout()
         ' 
         ' Button1
@@ -36,7 +38,7 @@ Partial Class IncomingDetailsForm
         Button1.BackColor = Color.FromArgb(CByte(97), CByte(160), CByte(255))
         Button1.Font = New Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(22, 385)
+        Button1.Location = New Point(22, 416)
         Button1.Name = "Button1"
         Button1.Size = New Size(370, 58)
         Button1.TabIndex = 13
@@ -97,10 +99,33 @@ Partial Class IncomingDetailsForm
         Label1.TabIndex = 7
         Label1.Text = "Contact details"
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Exo 2", 10F, FontStyle.Bold)
+        Label4.Location = New Point(22, 364)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(93, 20)
+        Label4.TabIndex = 14
+        Label4.Text = "Resume :- "
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Lime
+        Button2.Font = New Font("Exo 2", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(114, 361)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(116, 29)
+        Button2.TabIndex = 15
+        Button2.Text = "Download"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' IncomingDetailsForm
         ' 
         AutoScaleMode = AutoScaleMode.None
-        ClientSize = New Size(416, 461)
+        ClientSize = New Size(416, 498)
+        Controls.Add(Button2)
+        Controls.Add(Label4)
         Controls.Add(Button1)
         Controls.Add(RichTextBox3)
         Controls.Add(Label3)
@@ -121,4 +146,6 @@ Partial Class IncomingDetailsForm
     Friend WithEvents Label2 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button2 As Button
 End Class

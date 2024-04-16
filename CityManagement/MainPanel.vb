@@ -173,6 +173,10 @@
         ChildForm(Newsletter_Main)
     End Sub
 
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        ChildForm(Email_Login)
+    End Sub
+
     'Private Sub Button10_Click(sender As Object, e As EventArgs)
     'Dim form2 As New transport_landingPage
     '

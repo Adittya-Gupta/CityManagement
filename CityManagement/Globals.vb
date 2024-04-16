@@ -1,7 +1,8 @@
 ﻿Public Class Globals
 
     'Global Variables and  Events
-    Public Shared UserId As Integer = 1
+    Public Shared UserId As Integer = Module1.CurrUserSID
+    'Public Shared UserId As Integer = 1
     Public Shared connectionstring As String = GlobalConnString.str
     'Public Shared connectionstring As String = "Server=RASHAADPC\SQLEXPRESS;Database=City;Uid=Rashaad;Pwd=Poiuy$098;"
 

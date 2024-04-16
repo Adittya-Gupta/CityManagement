@@ -52,6 +52,7 @@ Partial Class SerReq_worker_paymentDue
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Image = Mask_group
         PictureBox1.InitialImage = Mask_group
         PictureBox1.Location = New Point(22, 18)

@@ -13,10 +13,10 @@ Public Class Health_Doctor_Employment_Requests
 
         ' Create a new Panel control
         Dim panelListView As New Panel()
-        panelListView.Size = New Size(1100, 600) ' Set the size as needed
+        panelListView.Size = New Size(1065, 550) ' Set the size as needed
         panelListView.Location = New Point(5, comboBoxLocation.Y + comboBoxHeight + 10) ' Adjust the position as needed
         panelListView.BackColor = Color.White ' Set background color as needed
-        panelListView.AutoScroll = True ' Make the panel scrollable
+        panelListView.AutoScroll = True
 
         ' Create and position the ListView control within the new Panel
         Dim listView1 As New ListView()
@@ -34,6 +34,10 @@ Public Class Health_Doctor_Employment_Requests
 
         ' Add the new Panel to the form
         Me.Controls.Add(panelListView)
+
+        ' Set the ListView's location and size
+        listView1.Location = New Point(0, 0) ' Adjust as needed
+        listView1.Size = New Size(panelListView.Width - SystemInformation.VerticalScrollBarWidth, panelListView.Height) ' Adjust as needed
 
         ' Retrieve data from the DoctorEmploymentRequest table
         Dim connectionString As String = Module1.connString
@@ -59,7 +63,7 @@ Public Class Health_Doctor_Employment_Requests
                         listItem.Button2.Tag = user_id ' Button2 is the accept button
 
                         listView1.Controls.Add(listItem)
-                        listItem.Left = 80
+                        listItem.Left = 45
 
                         ' Set margin top for ListItem2 to ListItem4
                         If i > 1 Then
@@ -71,6 +75,8 @@ Public Class Health_Doctor_Employment_Requests
                 End Using
             End Using
         End Using
+
+
 
 
 

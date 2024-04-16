@@ -29,7 +29,7 @@ Public Class SerReq_worker_accepted
             ' Convert byte array to image
             Using ms As New MemoryStream(profpic)
                 Dim img As Image = Image.FromStream(ms)
-                PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+                PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
                 PictureBox1.Image = img
             End Using
         Else

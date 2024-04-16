@@ -20,14 +20,21 @@ Public Class election_dashboard
     Private Sub election_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mapping("Teacher") = "Education Minister"
         mapping("Educational Institute Owner") = "Education Minister"
+        mapping("Institute Owner") = "Education Minister"
         mapping("Education Minister") = "Education Minister"
         mapping("Doctor") = "Health Minister"
         mapping("Hospital Owner") = "Health Minister"
         mapping("Health Minister") = "Health Minister"
-        mapping("Driver") = "Transportation Minister"
-        mapping("Transportation Minister") = "Transportation Minister"
+        mapping("Driver") = "Transport Minister"
+        mapping("Transportation Minister") = "Transport Minister"
+        mapping("Transport Officer") = "Transport Minister"
         mapping("Finance Minister") = "Finance Minister"
+        mapping("Muncipal Officer") = "Finance Minister"
+        mapping("Employee") = "Finance Minister"
         mapping("Home Minister") = "Home Minister"
+        mapping("SHO") = "Home Minister"
+        mapping("Police") = "Home Minister"
+        mapping("Owner") = "Home Minister"
         Try
             conn.Open()
             'First check if the current user is already voter
@@ -139,9 +146,11 @@ Public Class election_dashboard
                 End If
 
                 If age >= 18 Then
-                    Dim votingApplication As New elections_apply_for_voter()
-                    votingApplication.Show()
-                    Me.Hide()
+                    mypanel.panel1.Controls.Clear()
+                    Dim form As New elections_apply_for_voter()
+                    form.TopLevel = False
+                    mypanel.panel1.Controls.Add(form)
+                    form.Show()
                 Else
                     MessageBox.Show("You are not eligible to vote as your age is less than 18", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If

@@ -28,7 +28,7 @@ Partial Class admin_Mayor
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        Label4 = New Label()
+        ClearNominees = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -89,17 +89,17 @@ Partial Class admin_Mayor
         Label3.Text = "View Nominees"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label4
+        ' ClearNominees
         ' 
-        Label4.BackColor = Color.Black
-        Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = SystemColors.ButtonHighlight
-        Label4.Location = New Point(843, 523)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(215, 41)
-        Label4.TabIndex = 5
-        Label4.Text = "View Statistics"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
+        ClearNominees.BackColor = Color.Black
+        ClearNominees.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ClearNominees.ForeColor = SystemColors.ButtonHighlight
+        ClearNominees.Location = New Point(843, 497)
+        ClearNominees.Name = "ClearNominees"
+        ClearNominees.Size = New Size(215, 67)
+        ClearNominees.TabIndex = 5
+        ClearNominees.Text = "Clear Nominees and Votes"
+        ClearNominees.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' admin_Mayor
         ' 
@@ -107,7 +107,7 @@ Partial Class admin_Mayor
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
-        Controls.Add(Label4)
+        Controls.Add(ClearNominees)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -127,5 +127,5 @@ Partial Class admin_Mayor
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents ClearNominees As Label
 End Class

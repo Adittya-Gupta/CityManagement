@@ -6,8 +6,8 @@ Public Class Health_View_Previous_Vacancies
 
         ' Create a new Panel control
         Dim panelListView As New Panel()
-        panelListView.Size = New Size(1100, 600) ' Set the size as needed
-        panelListView.Location = New Point(5, 150) ' Adjust the position as needed
+        panelListView.Size = New Size(1050, 550) ' Set the size as needed
+        panelListView.Location = New Point(15, 150) ' Adjust the position as needed
         panelListView.BackColor = Color.White ' Set background color as needed
         panelListView.AutoScroll = True ' Make the panel scrollable
 
@@ -48,7 +48,7 @@ Public Class Health_View_Previous_Vacancies
                         ' Add the HospitalVacancy instance to the ListView or Panel
                         vacancyItem.Button1.Tag = hos_id ' Button1 is the delete button
                         listView1.Controls.Add(vacancyItem)
-                        vacancyItem.Left = 80
+                        vacancyItem.Left = 40
 
                         ' Set margin top for HospitalVacancy items
                         If i > 1 Then

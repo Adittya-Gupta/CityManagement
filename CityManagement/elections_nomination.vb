@@ -184,7 +184,7 @@ Public Class elections_nomination
         End Try
 
         paidDeposit = True
-
+        MessageBox.Show("The amount required is deducted from your bank account and is transferred to the authority", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
 
@@ -223,16 +223,20 @@ Public Class elections_nomination
         openFileDialog.Title = "Select a PDF File"
         ' Show the dialog and check if the user selected a file
         If openFileDialog.ShowDialog = DialogResult.OK Then
-            Dim selectedFileName = openFileDialog.FileName
-            ' Check if the selected file exists
-            If File.Exists(selectedFileName) Then
-                fileContent = File.ReadAllBytes(selectedFileName)
-                uploaded = True
-                'MessageBox.Show(selectedFileName)
-            Else
-                ' Handle the case where the selected file does not exist
-                MessageBox.Show("The selected file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+            Try
+                Dim selectedFileName = openFileDialog.FileName
+                ' Check if the selected file exists
+                If File.Exists(selectedFileName) Then
+                    fileContent = File.ReadAllBytes(selectedFileName)
+                    uploaded = True
+                    'MessageBox.Show(selectedFileName)
+                Else
+                    ' Handle the case where the selected file does not exist
+                    MessageBox.Show("The selected file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception 'This could happen if the file size is large
+                MessageBox.Show($"Error loading PDF file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         End If
     End Sub
     Private Sub UploadManifesto_MouseEnter(sender As Object, e As EventArgs) Handles UploadManifesto.MouseEnter

@@ -49,7 +49,7 @@ Public Class Banking_LoanHomepage
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & bank_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 AC_no = reader.GetString("Bank_Account_Number")
@@ -80,10 +80,10 @@ Public Class Banking_LoanHomepage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'Take join of 2 tables according to a/c no. Displaying all loans of current user.
-        sqlCmd.CommandText = "SELECT * FROM loanplans " &
-                      "JOIN loanmanagement " &
-                      "ON loanplans.Loan_Plan_ID = loanmanagement.LoanPlanID " &
-                      "WHERE loanmanagement.Bank_Account_Number = '" & AC_no & "';"
+        sqlCmd.CommandText = "SELECT * FROM BankLoanPlans " &
+                      "JOIN BankLoanManagement " &
+                      "ON BankLoanPlans.Loan_Plan_ID = BankLoanManagement.LoanPlanID " &
+                      "WHERE BankLoanManagement.Bank_Account_Number = '" & AC_no & "';"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
@@ -109,7 +109,7 @@ Public Class Banking_LoanHomepage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the user info
-        sqlCmd.CommandText = "SELECT Bank_Account_Number,Balance,CIBIL_score FROM userdata WHERE Username='" & bank_username & "';"
+        sqlCmd.CommandText = "SELECT Bank_Account_Number,Balance,CIBIL_score FROM BankUserData WHERE Username='" & bank_username & "';"
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -148,7 +148,7 @@ Public Class Banking_LoanHomepage
 
             sqlCmd.Connection = Mysqlconn
             'Displaying all pending Loan Requests for current user.
-            sqlCmd.CommandText = "SELECT * FROM querylog " &
+            sqlCmd.CommandText = "SELECT * FROM BankQueryLog " &
                                 "WHERE Bank_Account_Number='" & AC_no &
                                 "' AND Type_of_Query='Loan request';"
 

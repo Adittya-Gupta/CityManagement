@@ -65,7 +65,7 @@ Public Class Banking_LoanDetails
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select the user info
-        sqlCmd.CommandText = "SELECT * FROM userdata WHERE Username='" & bank_username & "';"
+        sqlCmd.CommandText = "SELECT * FROM BankUserData WHERE Username='" & bank_username & "';"
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -165,7 +165,7 @@ Public Class Banking_LoanDetails
             Dim sqlCmd As New MySqlCommand
             sqlCmd.Connection = Mysqlconn
             'select the user info
-            sqlCmd.CommandText = "INSERT INTO querylog " &
+            sqlCmd.CommandText = "INSERT INTO BankQueryLog " &
                                 "(Query_ID, Bank_Account_Number, Type_of_Query, Day, Query, Status, Reply) " &
                                 "VALUES (@Value1, @Value2, 'Loan request', @Value3, @Value4, 'pending', 'pending');"
 

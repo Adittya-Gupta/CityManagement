@@ -199,7 +199,7 @@ Partial Class Banking_Passbook
         Panel4.Controls.Add(Label7)
         Panel4.Controls.Add(Label6)
         Panel4.Controls.Add(Label5)
-        Panel4.Location = New Point(196, 594)
+        Panel4.Location = New Point(291, 545)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(659, 35)
         Panel4.TabIndex = 36
@@ -257,12 +257,12 @@ Partial Class Banking_Passbook
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
-        DataGridView1.Size = New Size(1075, 282)
+        DataGridView1.Size = New Size(1075, 247)
         DataGridView1.TabIndex = 35
         ' 
         ' PictureBox12
         ' 
-        PictureBox12.Image = My.Resources.Resources.profile_pic
+        PictureBox12.Image = profile_pic
         PictureBox12.Location = New Point(78, 12)
         PictureBox12.Name = "PictureBox12"
         PictureBox12.Size = New Size(101, 97)
@@ -313,7 +313,7 @@ Partial Class Banking_Passbook
         Button16.FlatStyle = FlatStyle.Flat
         Button16.Font = New Font("Bodoni MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button16.ForeColor = Color.White
-        Button16.Location = New Point(22, 579)
+        Button16.Location = New Point(117, 545)
         Button16.Margin = New Padding(0)
         Button16.Name = "Button16"
         Button16.Size = New Size(145, 53)

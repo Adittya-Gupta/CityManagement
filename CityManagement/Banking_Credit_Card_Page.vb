@@ -17,7 +17,7 @@ Public Class Banking_Credit_Card_Page
 
 
             Dim query = "SELECT CardNumber,Join_date
-                 FROM CreditDebitCard
+                 FROM BankCreditDebitCard
                 WHERE Type='CREDIT' and bank_username = '" & bank_username & "';"
 
             Dim cmd = New MySqlCommand(query, conn)
@@ -61,7 +61,7 @@ Public Class Banking_Credit_Card_Page
                 'MessageBox.Show(bank_username)
 
                 Dim query2 = "SELECT Name
-                 From UserData
+                 From BankUserData
                 WHERE Username = '" & bank_username & "';"
 
                 Dim cmd2 = New MySqlCommand(query2, conn)

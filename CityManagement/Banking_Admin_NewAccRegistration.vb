@@ -53,7 +53,7 @@ Public Class Banking_Admin_NewAccRegistration
 
     Private Function IsAccountNumberUnique(ByVal accountNumber As String) As Boolean
         ' Check if the generated account number exists in the database
-        Dim query As String = "SELECT COUNT(*) FROM UserData WHERE Bank_Account_Number = @Bank_Account_Number"
+        Dim query As String = "SELECT COUNT(*) FROM BankUserData WHERE Bank_Account_Number = @Bank_Account_Number"
         Using cmd As New MySqlCommand(query, sqlConn) ' Use MySqlCommand here
             cmd.Parameters.AddWithValue("@Bank_Account_Number", accountNumber)
             Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
@@ -87,7 +87,7 @@ Public Class Banking_Admin_NewAccRegistration
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & AccNo_Registration & "','NAN','New Account Created',0,NOW(),'Successfully created new account');"
+            sqlCmd.CommandText = "Insert Into BankTransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & AccNo_Registration & "','NAN','New Account Created',0,NOW(),'Successfully created new account');"
 
             sqlRd = sqlCmd.ExecuteReader
             sqlDt.Clear()
@@ -123,7 +123,7 @@ Public Class Banking_Admin_NewAccRegistration
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "SELECT * FROM UserData WHERE Approved=0"
+            sqlCmd.CommandText = "SELECT * FROM BankUserData WHERE Approved=0"
 
             sqlRd = sqlCmd.ExecuteReader
             sqlDt.Clear()
@@ -207,7 +207,7 @@ Public Class Banking_Admin_NewAccRegistration
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "UPDATE UserData SET Bank_Account_Number=@Bank_Account_Number, Email_ID=@Email_ID, Name=@Name, Address=@Address, Phone_Number=@Phone_Number, Password=@Password, DOB='" & DOB_Registration & "', Identification_Number=@Identification_Number, Approved=@Approved, Profile_Image=@Profile_Image, Signature=@Signature, Gender=@Gender WHERE Username=@Username"
+                .CommandText = "UPDATE BankUserData SET Bank_Account_Number=@Bank_Account_Number, Email_ID=@Email_ID, Name=@Name, Address=@Address, Phone_Number=@Phone_Number, Password=@Password, DOB='" & DOB_Registration & "', Identification_Number=@Identification_Number, Approved=@Approved, Profile_Image=@Profile_Image, Signature=@Signature, Gender=@Gender WHERE Username=@Username"
                 .CommandType = CommandType.Text
 
                 .Parameters.Clear()

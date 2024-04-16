@@ -22,386 +22,386 @@ Partial Class Banking_LoanHomepage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.HomeLoan_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.EduLoan_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.BusinessLowRisk_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TransportLoan_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.PersonalMedical_tb = New System.Windows.Forms.RichTextBox()
-        Me.BusinessHighRisk_tb = New System.Windows.Forms.RichTextBox()
-        Me.PersonalOtherwise_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Balance_tb = New System.Windows.Forms.RichTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.CIBILScore_tb = New System.Windows.Forms.RichTextBox()
-        Me.TableTitle = New System.Windows.Forms.TextBox()
-        Me.PayNow_btn = New System.Windows.Forms.Button()
-        Me.CurrentLoans_table = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PendingRequests_btn = New System.Windows.Forms.Button()
-        Me.ApplyNow_btn = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(878, 12)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(220, 35)
-        Me.TextBox3.TabIndex = 23
-        Me.TextBox3.Text = "Interest rates today:"
-        '
-        'HomeLoan_tb
-        '
-        Me.HomeLoan_tb.BackColor = System.Drawing.Color.White
-        Me.HomeLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.HomeLoan_tb.Location = New System.Drawing.Point(887, 86)
-        Me.HomeLoan_tb.Name = "HomeLoan_tb"
-        Me.HomeLoan_tb.ReadOnly = True
-        Me.HomeLoan_tb.Size = New System.Drawing.Size(198, 44)
-        Me.HomeLoan_tb.TabIndex = 24
-        Me.HomeLoan_tb.Text = "6.75% p.a."
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(883, 59)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(123, 25)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "Home Loans"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(885, 138)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(158, 25)
-        Me.Label4.TabIndex = 27
-        Me.Label4.Text = "Education Loans"
-        '
-        'EduLoan_tb
-        '
-        Me.EduLoan_tb.BackColor = System.Drawing.Color.White
-        Me.EduLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.EduLoan_tb.Location = New System.Drawing.Point(887, 165)
-        Me.EduLoan_tb.Name = "EduLoan_tb"
-        Me.EduLoan_tb.ReadOnly = True
-        Me.EduLoan_tb.Size = New System.Drawing.Size(198, 44)
-        Me.EduLoan_tb.TabIndex = 26
-        Me.EduLoan_tb.Text = "10% p.a."
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(883, 222)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(151, 25)
-        Me.Label5.TabIndex = 29
-        Me.Label5.Text = "Business Loans"
-        '
-        'BusinessLowRisk_tb
-        '
-        Me.BusinessLowRisk_tb.BackColor = System.Drawing.Color.White
-        Me.BusinessLowRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.BusinessLowRisk_tb.Location = New System.Drawing.Point(887, 271)
-        Me.BusinessLowRisk_tb.Name = "BusinessLowRisk_tb"
-        Me.BusinessLowRisk_tb.ReadOnly = True
-        Me.BusinessLowRisk_tb.Size = New System.Drawing.Size(198, 44)
-        Me.BusinessLowRisk_tb.TabIndex = 28
-        Me.BusinessLowRisk_tb.Text = "11% p.a."
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(883, 391)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 25)
-        Me.Label6.TabIndex = 31
-        Me.Label6.Text = "Transport Loans"
-        '
-        'TransportLoan_tb
-        '
-        Me.TransportLoan_tb.BackColor = System.Drawing.Color.White
-        Me.TransportLoan_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.TransportLoan_tb.Location = New System.Drawing.Point(887, 418)
-        Me.TransportLoan_tb.Name = "TransportLoan_tb"
-        Me.TransportLoan_tb.ReadOnly = True
-        Me.TransportLoan_tb.Size = New System.Drawing.Size(198, 44)
-        Me.TransportLoan_tb.TabIndex = 30
-        Me.TransportLoan_tb.Text = "7% p.a."
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(883, 465)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(148, 25)
-        Me.Label7.TabIndex = 33
-        Me.Label7.Text = "Personal Loans"
-        '
-        'PersonalMedical_tb
-        '
-        Me.PersonalMedical_tb.BackColor = System.Drawing.Color.White
-        Me.PersonalMedical_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.PersonalMedical_tb.Location = New System.Drawing.Point(887, 513)
-        Me.PersonalMedical_tb.Name = "PersonalMedical_tb"
-        Me.PersonalMedical_tb.ReadOnly = True
-        Me.PersonalMedical_tb.Size = New System.Drawing.Size(198, 44)
-        Me.PersonalMedical_tb.TabIndex = 32
-        Me.PersonalMedical_tb.Text = "10% p.a."
-        '
-        'BusinessHighRisk_tb
-        '
-        Me.BusinessHighRisk_tb.BackColor = System.Drawing.Color.White
-        Me.BusinessHighRisk_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.BusinessHighRisk_tb.Location = New System.Drawing.Point(887, 341)
-        Me.BusinessHighRisk_tb.Name = "BusinessHighRisk_tb"
-        Me.BusinessHighRisk_tb.ReadOnly = True
-        Me.BusinessHighRisk_tb.Size = New System.Drawing.Size(198, 44)
-        Me.BusinessHighRisk_tb.TabIndex = 34
-        Me.BusinessHighRisk_tb.Text = "19.8% p.a."
-        '
-        'PersonalOtherwise_tb
-        '
-        Me.PersonalOtherwise_tb.BackColor = System.Drawing.Color.White
-        Me.PersonalOtherwise_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!)
-        Me.PersonalOtherwise_tb.Location = New System.Drawing.Point(887, 579)
-        Me.PersonalOtherwise_tb.Name = "PersonalOtherwise_tb"
-        Me.PersonalOtherwise_tb.ReadOnly = True
-        Me.PersonalOtherwise_tb.Size = New System.Drawing.Size(198, 44)
-        Me.PersonalOtherwise_tb.TabIndex = 35
-        Me.PersonalOtherwise_tb.Text = "17% p.a."
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(887, 252)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 16)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Low Risk"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(889, 325)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(65, 16)
-        Me.Label9.TabIndex = 37
-        Me.Label9.Text = "High Risk"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(887, 494)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 16)
-        Me.Label10.TabIndex = 38
-        Me.Label10.Text = "Medical"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(887, 560)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(66, 16)
-        Me.Label11.TabIndex = 39
-        Me.Label11.Text = "Otherwise"
-        '
-        'Balance_tb
-        '
-        Me.Balance_tb.BackColor = System.Drawing.Color.White
-        Me.Balance_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Balance_tb.Location = New System.Drawing.Point(106, 17)
-        Me.Balance_tb.Name = "Balance_tb"
-        Me.Balance_tb.ReadOnly = True
-        Me.Balance_tb.Size = New System.Drawing.Size(158, 35)
-        Me.Balance_tb.TabIndex = 19
-        Me.Balance_tb.Text = ""
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 25)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Balance"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(297, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 25)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "CIBIL score"
-        '
-        'CIBILScore_tb
-        '
-        Me.CIBILScore_tb.BackColor = System.Drawing.Color.White
-        Me.CIBILScore_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CIBILScore_tb.Location = New System.Drawing.Point(430, 17)
-        Me.CIBILScore_tb.Name = "CIBILScore_tb"
-        Me.CIBILScore_tb.ReadOnly = True
-        Me.CIBILScore_tb.Size = New System.Drawing.Size(158, 35)
-        Me.CIBILScore_tb.TabIndex = 40
-        Me.CIBILScore_tb.Text = ""
-        '
-        'TableTitle
-        '
-        Me.TableTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TableTitle.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TableTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableTitle.ForeColor = System.Drawing.Color.White
-        Me.TableTitle.Location = New System.Drawing.Point(22, 90)
-        Me.TableTitle.Multiline = True
-        Me.TableTitle.Name = "TableTitle"
-        Me.TableTitle.ReadOnly = True
-        Me.TableTitle.Size = New System.Drawing.Size(209, 35)
-        Me.TableTitle.TabIndex = 41
-        Me.TableTitle.Text = "Current Loans:"
-        '
-        'PayNow_btn
-        '
-        Me.PayNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.PayNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PayNow_btn.ForeColor = System.Drawing.Color.White
-        Me.PayNow_btn.Location = New System.Drawing.Point(577, 590)
-        Me.PayNow_btn.Name = "PayNow_btn"
-        Me.PayNow_btn.Size = New System.Drawing.Size(119, 39)
-        Me.PayNow_btn.TabIndex = 42
-        Me.PayNow_btn.Text = "Pay Now"
-        Me.PayNow_btn.UseVisualStyleBackColor = False
-        '
-        'CurrentLoans_table
-        '
-        Me.CurrentLoans_table.AllowUserToAddRows = False
-        Me.CurrentLoans_table.AllowUserToDeleteRows = False
-        Me.CurrentLoans_table.BackgroundColor = System.Drawing.Color.LightGray
-        Me.CurrentLoans_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CurrentLoans_table.Location = New System.Drawing.Point(22, 142)
-        Me.CurrentLoans_table.Name = "CurrentLoans_table"
-        Me.CurrentLoans_table.ReadOnly = True
-        Me.CurrentLoans_table.RowHeadersWidth = 51
-        Me.CurrentLoans_table.RowTemplate.Height = 24
-        Me.CurrentLoans_table.Size = New System.Drawing.Size(803, 430)
-        Me.CurrentLoans_table.TabIndex = 43
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightGray
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.CIBILScore_tb)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Balance_tb)
-        Me.Panel1.Location = New System.Drawing.Point(241, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(612, 71)
-        Me.Panel1.TabIndex = 44
-        '
-        'PendingRequests_btn
-        '
-        Me.PendingRequests_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.PendingRequests_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PendingRequests_btn.ForeColor = System.Drawing.Color.White
-        Me.PendingRequests_btn.Location = New System.Drawing.Point(29, 590)
-        Me.PendingRequests_btn.Name = "PendingRequests_btn"
-        Me.PendingRequests_btn.Size = New System.Drawing.Size(267, 39)
-        Me.PendingRequests_btn.TabIndex = 45
-        Me.PendingRequests_btn.Text = "View Pending Requests"
-        Me.PendingRequests_btn.UseVisualStyleBackColor = False
-        '
-        'ApplyNow_btn
-        '
-        Me.ApplyNow_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ApplyNow_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApplyNow_btn.ForeColor = System.Drawing.Color.White
-        Me.ApplyNow_btn.Location = New System.Drawing.Point(378, 590)
-        Me.ApplyNow_btn.Name = "ApplyNow_btn"
-        Me.ApplyNow_btn.Size = New System.Drawing.Size(137, 39)
-        Me.ApplyNow_btn.TabIndex = 47
-        Me.ApplyNow_btn.Text = "Apply Now"
-        Me.ApplyNow_btn.UseVisualStyleBackColor = False
-        '
-        'Button16
-        '
-        Me.Button16.BackColor = System.Drawing.Color.Black
-        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button16.FlatAppearance.BorderSize = 0
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.ForeColor = System.Drawing.Color.White
-        Me.Button16.Location = New System.Drawing.Point(29, 19)
-        Me.Button16.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(145, 53)
-        Me.Button16.TabIndex = 52
-        Me.Button16.Text = "REFRESH"
-        Me.Button16.UseVisualStyleBackColor = False
-        '
-        'Banking_LoanHomepage
-        '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(1107, 641)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Button16)
-        Me.Controls.Add(Me.PayNow_btn)
-        Me.Controls.Add(Me.ApplyNow_btn)
-        Me.Controls.Add(Me.PendingRequests_btn)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.CurrentLoans_table)
-        Me.Controls.Add(Me.TableTitle)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.PersonalOtherwise_tb)
-        Me.Controls.Add(Me.BusinessHighRisk_tb)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.PersonalMedical_tb)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TransportLoan_tb)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.BusinessLowRisk_tb)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.EduLoan_tb)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.HomeLoan_tb)
-        Me.Controls.Add(Me.TextBox3)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Banking_LoanHomepage"
-        Me.Text = "Loan Management"
-        CType(Me.CurrentLoans_table, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        TextBox3 = New TextBox()
+        HomeLoan_tb = New RichTextBox()
+        Label3 = New Label()
+        Label4 = New Label()
+        EduLoan_tb = New RichTextBox()
+        Label5 = New Label()
+        BusinessLowRisk_tb = New RichTextBox()
+        Label6 = New Label()
+        TransportLoan_tb = New RichTextBox()
+        Label7 = New Label()
+        PersonalMedical_tb = New RichTextBox()
+        BusinessHighRisk_tb = New RichTextBox()
+        PersonalOtherwise_tb = New RichTextBox()
+        Label8 = New Label()
+        Label9 = New Label()
+        Label10 = New Label()
+        Label11 = New Label()
+        Balance_tb = New RichTextBox()
+        Label1 = New Label()
+        Label2 = New Label()
+        CIBILScore_tb = New RichTextBox()
+        TableTitle = New TextBox()
+        PayNow_btn = New Button()
+        CurrentLoans_table = New DataGridView()
+        Panel1 = New Panel()
+        PendingRequests_btn = New Button()
+        ApplyNow_btn = New Button()
+        Button16 = New Button()
+        CType(CurrentLoans_table, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.BackColor = Color.FromArgb(CByte(0), CByte(103), CByte(199))
+        TextBox3.BorderStyle = BorderStyle.None
+        TextBox3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox3.ForeColor = Color.White
+        TextBox3.Location = New Point(878, 12)
+        TextBox3.Multiline = True
+        TextBox3.Name = "TextBox3"
+        TextBox3.ReadOnly = True
+        TextBox3.Size = New Size(220, 35)
+        TextBox3.TabIndex = 23
+        TextBox3.Text = "Interest rates today:"
+        ' 
+        ' HomeLoan_tb
+        ' 
+        HomeLoan_tb.BackColor = Color.White
+        HomeLoan_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        HomeLoan_tb.Location = New Point(882, 74)
+        HomeLoan_tb.Name = "HomeLoan_tb"
+        HomeLoan_tb.ReadOnly = True
+        HomeLoan_tb.Size = New Size(198, 44)
+        HomeLoan_tb.TabIndex = 24
+        HomeLoan_tb.Text = "6.75% p.a."
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(878, 47)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(123, 25)
+        Label3.TabIndex = 25
+        Label3.Text = "Home Loans"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(880, 126)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(158, 25)
+        Label4.TabIndex = 27
+        Label4.Text = "Education Loans"
+        ' 
+        ' EduLoan_tb
+        ' 
+        EduLoan_tb.BackColor = Color.White
+        EduLoan_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        EduLoan_tb.Location = New Point(882, 153)
+        EduLoan_tb.Name = "EduLoan_tb"
+        EduLoan_tb.ReadOnly = True
+        EduLoan_tb.Size = New Size(198, 44)
+        EduLoan_tb.TabIndex = 26
+        EduLoan_tb.Text = "10% p.a."
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(878, 210)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(151, 25)
+        Label5.TabIndex = 29
+        Label5.Text = "Business Loans"
+        ' 
+        ' BusinessLowRisk_tb
+        ' 
+        BusinessLowRisk_tb.BackColor = Color.White
+        BusinessLowRisk_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        BusinessLowRisk_tb.Location = New Point(882, 259)
+        BusinessLowRisk_tb.Name = "BusinessLowRisk_tb"
+        BusinessLowRisk_tb.ReadOnly = True
+        BusinessLowRisk_tb.Size = New Size(198, 44)
+        BusinessLowRisk_tb.TabIndex = 28
+        BusinessLowRisk_tb.Text = "11% p.a."
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(878, 379)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(155, 25)
+        Label6.TabIndex = 31
+        Label6.Text = "Transport Loans"
+        ' 
+        ' TransportLoan_tb
+        ' 
+        TransportLoan_tb.BackColor = Color.White
+        TransportLoan_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        TransportLoan_tb.Location = New Point(882, 406)
+        TransportLoan_tb.Name = "TransportLoan_tb"
+        TransportLoan_tb.ReadOnly = True
+        TransportLoan_tb.Size = New Size(198, 44)
+        TransportLoan_tb.TabIndex = 30
+        TransportLoan_tb.Text = "7% p.a."
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(878, 453)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(148, 25)
+        Label7.TabIndex = 33
+        Label7.Text = "Personal Loans"
+        ' 
+        ' PersonalMedical_tb
+        ' 
+        PersonalMedical_tb.BackColor = Color.White
+        PersonalMedical_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        PersonalMedical_tb.Location = New Point(882, 501)
+        PersonalMedical_tb.Name = "PersonalMedical_tb"
+        PersonalMedical_tb.ReadOnly = True
+        PersonalMedical_tb.Size = New Size(198, 44)
+        PersonalMedical_tb.TabIndex = 32
+        PersonalMedical_tb.Text = "10% p.a."
+        ' 
+        ' BusinessHighRisk_tb
+        ' 
+        BusinessHighRisk_tb.BackColor = Color.White
+        BusinessHighRisk_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        BusinessHighRisk_tb.Location = New Point(882, 329)
+        BusinessHighRisk_tb.Name = "BusinessHighRisk_tb"
+        BusinessHighRisk_tb.ReadOnly = True
+        BusinessHighRisk_tb.Size = New Size(198, 44)
+        BusinessHighRisk_tb.TabIndex = 34
+        BusinessHighRisk_tb.Text = "19.8% p.a."
+        ' 
+        ' PersonalOtherwise_tb
+        ' 
+        PersonalOtherwise_tb.BackColor = Color.White
+        PersonalOtherwise_tb.Font = New Font("Microsoft Sans Serif", 13.8F)
+        PersonalOtherwise_tb.Location = New Point(882, 567)
+        PersonalOtherwise_tb.Name = "PersonalOtherwise_tb"
+        PersonalOtherwise_tb.ReadOnly = True
+        PersonalOtherwise_tb.Size = New Size(198, 44)
+        PersonalOtherwise_tb.TabIndex = 35
+        PersonalOtherwise_tb.Text = "17% p.a."
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(882, 240)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(66, 20)
+        Label8.TabIndex = 36
+        Label8.Text = "Low Risk"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(884, 313)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(71, 20)
+        Label9.TabIndex = 37
+        Label9.Text = "High Risk"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(882, 482)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(62, 20)
+        Label10.TabIndex = 38
+        Label10.Text = "Medical"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(882, 548)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(75, 20)
+        Label11.TabIndex = 39
+        Label11.Text = "Otherwise"
+        ' 
+        ' Balance_tb
+        ' 
+        Balance_tb.BackColor = Color.White
+        Balance_tb.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Balance_tb.Location = New Point(106, 17)
+        Balance_tb.Name = "Balance_tb"
+        Balance_tb.ReadOnly = True
+        Balance_tb.Size = New Size(158, 35)
+        Balance_tb.TabIndex = 19
+        Balance_tb.Text = ""
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(17, 20)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(83, 25)
+        Label1.TabIndex = 20
+        Label1.Text = "Balance"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(297, 20)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(114, 25)
+        Label2.TabIndex = 21
+        Label2.Text = "CIBIL score"
+        ' 
+        ' CIBILScore_tb
+        ' 
+        CIBILScore_tb.BackColor = Color.White
+        CIBILScore_tb.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CIBILScore_tb.Location = New Point(430, 17)
+        CIBILScore_tb.Name = "CIBILScore_tb"
+        CIBILScore_tb.ReadOnly = True
+        CIBILScore_tb.Size = New Size(158, 35)
+        CIBILScore_tb.TabIndex = 40
+        CIBILScore_tb.Text = ""
+        ' 
+        ' TableTitle
+        ' 
+        TableTitle.BackColor = Color.FromArgb(CByte(0), CByte(103), CByte(199))
+        TableTitle.BorderStyle = BorderStyle.None
+        TableTitle.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TableTitle.ForeColor = Color.White
+        TableTitle.Location = New Point(22, 90)
+        TableTitle.Multiline = True
+        TableTitle.Name = "TableTitle"
+        TableTitle.ReadOnly = True
+        TableTitle.Size = New Size(209, 35)
+        TableTitle.TabIndex = 41
+        TableTitle.Text = "Current Loans:"
+        ' 
+        ' PayNow_btn
+        ' 
+        PayNow_btn.BackColor = Color.FromArgb(CByte(1), CByte(0), CByte(70))
+        PayNow_btn.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PayNow_btn.ForeColor = Color.White
+        PayNow_btn.Location = New Point(645, 560)
+        PayNow_btn.Name = "PayNow_btn"
+        PayNow_btn.Size = New Size(119, 39)
+        PayNow_btn.TabIndex = 42
+        PayNow_btn.Text = "Pay Now"
+        PayNow_btn.UseVisualStyleBackColor = False
+        ' 
+        ' CurrentLoans_table
+        ' 
+        CurrentLoans_table.AllowUserToAddRows = False
+        CurrentLoans_table.AllowUserToDeleteRows = False
+        CurrentLoans_table.BackgroundColor = Color.LightGray
+        CurrentLoans_table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        CurrentLoans_table.Location = New Point(22, 142)
+        CurrentLoans_table.Name = "CurrentLoans_table"
+        CurrentLoans_table.ReadOnly = True
+        CurrentLoans_table.RowHeadersWidth = 51
+        CurrentLoans_table.RowTemplate.Height = 24
+        CurrentLoans_table.Size = New Size(803, 402)
+        CurrentLoans_table.TabIndex = 43
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.LightGray
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(CIBILScore_tb)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(Balance_tb)
+        Panel1.Location = New Point(241, 12)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(612, 71)
+        Panel1.TabIndex = 44
+        ' 
+        ' PendingRequests_btn
+        ' 
+        PendingRequests_btn.BackColor = Color.FromArgb(CByte(1), CByte(0), CByte(70))
+        PendingRequests_btn.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PendingRequests_btn.ForeColor = Color.White
+        PendingRequests_btn.Location = New Point(97, 560)
+        PendingRequests_btn.Name = "PendingRequests_btn"
+        PendingRequests_btn.Size = New Size(267, 39)
+        PendingRequests_btn.TabIndex = 45
+        PendingRequests_btn.Text = "View Pending Requests"
+        PendingRequests_btn.UseVisualStyleBackColor = False
+        ' 
+        ' ApplyNow_btn
+        ' 
+        ApplyNow_btn.BackColor = Color.FromArgb(CByte(1), CByte(0), CByte(70))
+        ApplyNow_btn.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ApplyNow_btn.ForeColor = Color.White
+        ApplyNow_btn.Location = New Point(446, 560)
+        ApplyNow_btn.Name = "ApplyNow_btn"
+        ApplyNow_btn.Size = New Size(137, 39)
+        ApplyNow_btn.TabIndex = 47
+        ApplyNow_btn.Text = "Apply Now"
+        ApplyNow_btn.UseVisualStyleBackColor = False
+        ' 
+        ' Button16
+        ' 
+        Button16.BackColor = Color.Black
+        Button16.Cursor = Cursors.Hand
+        Button16.FlatAppearance.BorderSize = 0
+        Button16.FlatStyle = FlatStyle.Flat
+        Button16.Font = New Font("Bodoni MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button16.ForeColor = Color.White
+        Button16.Location = New Point(29, 19)
+        Button16.Margin = New Padding(0)
+        Button16.Name = "Button16"
+        Button16.Size = New Size(145, 53)
+        Button16.TabIndex = 52
+        Button16.Text = "REFRESH"
+        Button16.UseVisualStyleBackColor = False
+        ' 
+        ' Banking_LoanHomepage
+        ' 
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 641)
+        ControlBox = False
+        Controls.Add(Button16)
+        Controls.Add(PayNow_btn)
+        Controls.Add(ApplyNow_btn)
+        Controls.Add(PendingRequests_btn)
+        Controls.Add(Panel1)
+        Controls.Add(CurrentLoans_table)
+        Controls.Add(TableTitle)
+        Controls.Add(Label11)
+        Controls.Add(Label10)
+        Controls.Add(Label9)
+        Controls.Add(Label8)
+        Controls.Add(PersonalOtherwise_tb)
+        Controls.Add(BusinessHighRisk_tb)
+        Controls.Add(Label7)
+        Controls.Add(PersonalMedical_tb)
+        Controls.Add(Label6)
+        Controls.Add(TransportLoan_tb)
+        Controls.Add(Label5)
+        Controls.Add(BusinessLowRisk_tb)
+        Controls.Add(Label4)
+        Controls.Add(EduLoan_tb)
+        Controls.Add(Label3)
+        Controls.Add(HomeLoan_tb)
+        Controls.Add(TextBox3)
+        FormBorderStyle = FormBorderStyle.None
+        Name = "Banking_LoanHomepage"
+        Text = "Loan Management"
+        CType(CurrentLoans_table, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents TextBox3 As TextBox

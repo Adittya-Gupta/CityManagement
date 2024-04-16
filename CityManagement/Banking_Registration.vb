@@ -139,7 +139,7 @@ Public Class Banking_Registration
             conn.Open()
             'MessageBox.Show("Connected to MySQL database!")
 
-            Dim query2 As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
+            Dim query2 As String = "INSERT INTO `BankUserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
             Dim cmd As MySqlCommand = New MySqlCommand(query2, conn)
             'Dim reader As MySqlDataReader = cmd.ExecuteReader()
             'reader.Close()
@@ -365,7 +365,7 @@ Public Class Banking_Registration
             conn.Open()
             ' MessageBox.Show("Connected to MySQL database!")
 
-            Dim query = "SELECT * FROM `UserData` WHERE username = '" & Username & "'"
+            Dim query = "SELECT * FROM `BankUserData` WHERE username = '" & Username & "'"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 

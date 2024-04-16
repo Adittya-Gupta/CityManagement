@@ -46,7 +46,7 @@ Public Class Banking_ContactUs
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & bank_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 bank_account_no = reader.GetString("Bank_Account_Number")
@@ -69,7 +69,7 @@ Public Class Banking_ContactUs
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "INSERT INTO QueryLog(Bank_Account_Number,Type_of_Query,Day,Query,Status,Reply)" &
+        sqlCmd.CommandText = "INSERT INTO BankQueryLog(Bank_Account_Number,Type_of_Query,Day,Query,Status,Reply)" &
                              "VALUES (@BAN,'" & query_type & "',CURDATE(),'" & TextBox2.Text & "','PENDING','-');"
 
         sqlCmd.Parameters.Add("@BAN", MySqlDbType.VarChar).Value = bank_account_no

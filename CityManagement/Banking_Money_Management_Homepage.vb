@@ -29,7 +29,7 @@ Public Class Banking_Money_Management_Homepage
         conn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = conn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & Global_Attributes.banking_recv_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & Global_Attributes.banking_recv_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 RichTextBox_Account_Number.Text = reader.GetString("Bank_Account_Number")
@@ -58,7 +58,7 @@ Public Class Banking_Money_Management_Homepage
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM UserData Where Bank_Account_Number = '" & account_number & "' AND Name = '" & receiver_name & "' ;"
+                Dim query = "SELECT * FROM BankUserData Where Bank_Account_Number = '" & account_number & "' AND Name = '" & receiver_name & "' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 sqlDt.Load(reader)
@@ -115,6 +115,10 @@ Public Class Banking_Money_Management_Homepage
     End Sub
 
     Private Sub RichTextBox_Amount_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox_Amount.TextChanged
+
+    End Sub
+
+    Private Sub RichTextBox_Name_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox_Name.TextChanged
 
     End Sub
 End Class

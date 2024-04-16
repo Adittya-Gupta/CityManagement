@@ -239,7 +239,7 @@ Partial Class Banking_ContactUs
         ' 
         ' PictureBox13
         ' 
-        PictureBox13.Image = My.Resources.Resources.doubt
+        '        PictureBox13.Image = Resources.doubt
         PictureBox13.Location = New Point(45, 18)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(81, 79)
@@ -295,7 +295,7 @@ Partial Class Banking_ContactUs
         Panel5.Controls.Add(Label3)
         Panel5.Location = New Point(0, -2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(493, 644)
+        Panel5.Size = New Size(485, 644)
         Panel5.TabIndex = 12
         ' 
         ' Label10
@@ -378,7 +378,7 @@ Partial Class Banking_ContactUs
         ' 
         ' PictureBox12
         ' 
-        PictureBox12.Image = My.Resources.Resources.Faq_symbol
+        '    PictureBox12.Image = Resources.Faq_symbol
         PictureBox12.Location = New Point(103, 19)
         PictureBox12.Name = "PictureBox12"
         PictureBox12.Size = New Size(81, 79)
@@ -400,8 +400,7 @@ Partial Class Banking_ContactUs
         ' 
         ' Banking_ContactUs
         ' 
-        AutoScaleDimensions = New SizeF(12F, 24F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 641)
         ControlBox = False

@@ -43,7 +43,7 @@ Public Class Banking_Passbook
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & bank_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 bank_account_no = reader.GetString("Bank_Account_Number")
@@ -54,14 +54,15 @@ Public Class Banking_Passbook
     End Sub
 
     Private Sub LoadFields()
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from UserData where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "Select * from BankUserData where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
@@ -99,7 +100,7 @@ Public Class Banking_Passbook
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM TransactionLog where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "SELECT * FROM BankTransactionLog where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
@@ -226,7 +227,9 @@ Public Class Banking_Passbook
         Dim Trans_ID As String = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
 
 
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
+
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
@@ -234,7 +237,7 @@ Public Class Banking_Passbook
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from TransactionLog where Transaction_ID = @ID;"
+        sqlCmd.CommandText = "Select * from BankTransactionLog where Transaction_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.VarChar).Value = Trans_ID
 

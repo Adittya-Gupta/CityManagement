@@ -231,7 +231,7 @@ Partial Class Banking_Queries_User
         ' 
         ' PictureBox12
         ' 
-        PictureBox12.Image = My.Resources.Resources.profile_pic
+        PictureBox12.Image = profile_pic
         PictureBox12.Location = New Point(192, 3)
         PictureBox12.Name = "PictureBox12"
         PictureBox12.Size = New Size(101, 97)
@@ -257,8 +257,7 @@ Partial Class Banking_Queries_User
         ' 
         ' Banking_Queries_User
         ' 
-        AutoScaleDimensions = New SizeF(12F, 24F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 641)
         ControlBox = False

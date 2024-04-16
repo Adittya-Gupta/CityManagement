@@ -41,7 +41,7 @@ Public Class Banking_Money_Management_Net_Banking
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM UserData Where Username = '" & username & "' AND Password = '" & password & "' ;"
+                Dim query = "SELECT * FROM BankUserData Where Username = '" & username & "' AND Password = '" & password & "' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 Dim sqlDt As New DataTable
@@ -58,19 +58,19 @@ Public Class Banking_Money_Management_Net_Banking
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Username = '" & username & "' AND Password = '" & password & "' ;"
+                        query = "UPDATE BankUserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Username = '" & username & "' AND Password = '" & password & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' deposit
-                        query = "UPDATE UserData SET Balance = Balance + " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Banking_Money_Management_Homepage.account_number & "' ;"
+                        query = "UPDATE BankUserData SET Balance = Balance + " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Banking_Money_Management_Homepage.account_number & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' log
-                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
+                        query = "Insert Into BankTransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()

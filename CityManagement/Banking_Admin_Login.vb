@@ -26,7 +26,7 @@ Public Class Banking_Admin_Login
             Using sqlConn As New MySqlConnection(connectionString)
                 sqlConn.Open()
 
-                Dim query As String = "SELECT COUNT(*) FROM Admindata WHERE Username = @Username AND Password = @Password"
+                Dim query As String = "SELECT COUNT(*) FROM BankAdmindata WHERE Username = @Username AND Password = @Password"
                 Using cmd As New MySqlCommand(query, sqlConn)
                     cmd.Parameters.AddWithValue("@Username", username)
                     cmd.Parameters.AddWithValue("@Password", password)

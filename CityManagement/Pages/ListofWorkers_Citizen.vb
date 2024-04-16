@@ -97,7 +97,7 @@ Public Class ListofWorkers_Citizen
         OriginalWorkersList.Clear()
         Filterform = New Workersfilter()
         ' Execute SQL query to fetch data from the database
-        Dim query As String = "SELECT SW.workerID as WorkerId, U.Name AS WorkerName, O.Location AS OrgLocation, SW.rating AS WorkerRating, SW.noOfRatings AS WorkerNumberOfRatings, U.ContactNo AS WorkerPhoneNumber FROM serviceWorkers SW JOIN User U ON SW.userID = U.SID JOIN serviceOrganizations O ON SW.orgID = O.OrgID WHERE U.Designation = @Designation"
+        Dim query As String = "SELECT SW.workerID as WorkerId, U.Name AS WorkerName,SW.address As OrgLocation, SW.rating AS WorkerRating, SW.noOfRatings AS WorkerNumberOfRatings, U.ContactNo AS WorkerPhoneNumber FROM serviceWorkers SW JOIN User U ON SW.userID = U.SID JOIN serviceOrganizations O ON SW.orgID = O.OrgID WHERE U.Designation = @Designation"
 
         ' Create MySQL connection
         ' Create MySQL connection

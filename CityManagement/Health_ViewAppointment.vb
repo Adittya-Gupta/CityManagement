@@ -31,7 +31,7 @@ Public Class Health_ViewAppointment
         GetDoctorID()
 
         listView1.Name = "listView1"
-        listView1.Width = 1010 ' Set width to 1150
+        listView1.Width = 1000 ' Set width to 1150
         listView1.View = View.Details ' Set view to Details mode
         listView1.FullRowSelect = True ' Select entire row when clicked
         'listView1.BorderStyle = BorderStyle.None
@@ -147,7 +147,7 @@ Public Class Health_ViewAppointment
                 End If
                 If currentStatus = 0 Then
                     ' Increment the status value
-                    Dim newStatus As Integer = currentStatus + 1
+                    Dim newStatus As Integer = currentStatus + 2
 
                     ' Update the status text
                     selectedItem.SubItems(statusColumnIndex).Text = GetStatusText(newStatus)

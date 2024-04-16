@@ -143,7 +143,7 @@ Partial Class Email_Draft
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1089, 594)
+        ClientSize = New Size(1089, 592)
         Controls.Add(Refresh_Button)
         Controls.Add(Delete_Button)
         Controls.Add(Clear_Button)

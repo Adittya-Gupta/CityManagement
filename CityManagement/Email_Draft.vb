@@ -3,6 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class Email_Draft
 
+    Public Property User_EmailID As String
 
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -17,12 +18,13 @@ Public Class Email_Draft
     ' Dim password As String = "12345678"
     ' Dim database As String = "emaildatabase"
 
-    Public server As String = "localhost"
-    Public username As String = "root"
-    Public password As String = "Aasneh18"
-    Public database As String = "emaildatabase"
+    Public server As String = "MYSQL9001.site4now.net"
+    Public username As String = "aa78df_scms"
+    Public password As String = "abcd1234"
+    Public database As String = "db_aa78df_scms"
 
-    Dim username_test As String = "achyut@gmail.com"
+    ' Dim username_test As String = "achyut@gmail.com"
+    Dim username_test As String = User_EmailID
 
 
 
@@ -45,7 +47,7 @@ Public Class Email_Draft
             Next
 
             ' Set the connection string property
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
 
             ' Open the connection
             sqlConn.Open()
@@ -84,7 +86,7 @@ Public Class Email_Draft
 
     Private Sub Delete_Button_Click(sender As Object, e As EventArgs) Handles Delete_Button.Click
         Try
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
@@ -175,7 +177,7 @@ Public Class Email_Draft
 
     Private Sub Draft_Button_Click(sender As Object, e As EventArgs) Handles Draft_Button.Click
         Try
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
@@ -221,7 +223,7 @@ Public Class Email_Draft
 
     Private Sub Send_Button_Click(sender As Object, e As EventArgs) Handles Send_Button.Click
         Try
-            sqlConn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn

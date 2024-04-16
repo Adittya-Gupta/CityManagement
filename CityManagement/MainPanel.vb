@@ -174,7 +174,11 @@
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        ChildForm(Email_Login)
+        mypanel.panel1.Controls.Clear()
+        Dim form As New Email_Landing
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click

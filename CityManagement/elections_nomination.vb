@@ -150,7 +150,9 @@ Public Class elections_nomination
         'To check if the current user has bank account
         Try
             conn.Open()
-            Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
+            ' Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from UserData where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
                 Dim reader = cmd.ExecuteReader
@@ -171,7 +173,9 @@ Public Class elections_nomination
         'To deduct the money if the bank account exists, now only deducting 100 rupees for convenience
         Try
             conn.Open()
-            Dim query As String = "use banking_database; select Identification_Number,Balance from UserData where Identification_Number=@a"
+            'Dim query As String = "use banking_database; select Identification_Number,Balance from UserData where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
                 Dim reader = cmd.ExecuteReader
@@ -193,7 +197,9 @@ Public Class elections_nomination
         'To deduct the money
         Try
             conn.Open()
-            Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
+            'Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser.ToString())
                 cmd.ExecuteNonQuery()
@@ -205,7 +211,9 @@ Public Class elections_nomination
         'To add money to the mayor john doe
         Try
             conn.Open()
-            Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
+            'Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 Dim mayor_sid As Integer = 1
                 cmd.Parameters.AddWithValue("@a", mayor_sid.ToString())
@@ -215,7 +223,6 @@ Public Class elections_nomination
         Finally
             conn.Close()
         End Try
-
         paidDeposit = True
         MessageBox.Show("The amount required is deducted from your bank account and is transferred to the authority", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)

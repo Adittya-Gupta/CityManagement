@@ -116,7 +116,7 @@ Public Class Newsletter_Editor
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM newsdatabase.NewsData;"
+        sqlCmd.CommandText = "SELECT * FROM NewsData;"
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)
@@ -156,7 +156,7 @@ Public Class Newsletter_Editor
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        Dim query As String = "INSERT INTO newsdatabase.NewsData(Published_On,Headline,Publisher,Type,Date,Content,Image)" &
+        Dim query As String = "INSERT INTO NewsData(Published_On,Headline,Publisher,Type,Date,Content,Image)" &
                              "VALUES ('None','" & headline & "','" & published_by & "','" & type & "',CURDATE(),'" & content & "',@img);"
 
         sqlCmd.Parameters.Add("@img", MySqlDbType.Blob).Value = pic.ToArray()
@@ -201,7 +201,7 @@ Public Class Newsletter_Editor
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "UPDATE newsdatabase.NewsData SET Published_On = @PublishedOn, Headline = @Headline, Publisher = @Publisher, " &
+        sqlCmd.CommandText = "UPDATE NewsData SET Published_On = @PublishedOn, Headline = @Headline, Publisher = @Publisher, " &
                             "Type = @Type, Content = @Content, Image = @Image where News_ID = @ID;"
 
         sqlCmd.Parameters.Add("@PublishedOn", MySqlDbType.VarChar).Value = published_on
@@ -240,7 +240,7 @@ Public Class Newsletter_Editor
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "DELETE FROM newsdatabase.NewsData WHERE News_ID = @ID;"
+        sqlCmd.CommandText = "DELETE FROM NewsData WHERE News_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = ID
 
@@ -290,7 +290,7 @@ Public Class Newsletter_Editor
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
-        Dim query As String = "SELECT COUNT(*) AS EntryCount FROM newsdatabase.NewsData WHERE Published_On = @PublishedOn;"
+        Dim query As String = "SELECT COUNT(*) AS EntryCount FROM NewsData WHERE Published_On = @PublishedOn;"
 
         ' Create a MySqlCommand object
         Dim sqlCmd As New MySqlCommand(query, Mysqlconn)
@@ -510,7 +510,7 @@ Public Class Newsletter_Editor
         Dim sqlCmd As New MySqlCommand
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from newsdatabase.NewsData where News_ID = @ID;"
+        sqlCmd.CommandText = "Select * from NewsData where News_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.Int64).Value = ID
 
@@ -619,7 +619,7 @@ Public Class Newsletter_Editor
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM newsdatabase.NewsData where Type = '" & type & "';"
+        sqlCmd.CommandText = "SELECT * FROM NewsData where Type = '" & type & "';"
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)
@@ -649,7 +649,7 @@ Public Class Newsletter_Editor
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM newsdatabase.NewsData where Publisher = '" & published_by & "';"
+        sqlCmd.CommandText = "SELECT * FROM NewsData where Publisher = '" & published_by & "';"
 
         sqlRd = sqlCmd.ExecuteReader
         sqlDt.Load(sqlRd)

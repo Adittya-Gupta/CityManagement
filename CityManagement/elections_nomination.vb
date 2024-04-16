@@ -16,17 +16,50 @@ Public Class elections_nomination
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
-    Private Sub nomination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub fillMapping()
         mapping("Teacher") = "Education Minister"
-        mapping("Educational Institute Owner") = "Education Minister"
         mapping("Education Minister") = "Education Minister"
         mapping("Doctor") = "Health Minister"
-        mapping("Hospital Owner") = "Health Minister"
         mapping("Health Minister") = "Health Minister"
-        mapping("Driver") = "Transportation Minister"
-        mapping("Transportation Minister") = "Transportation Minister"
-        mapping("Finance Minister") = "Finance Minister"
+        mapping("Driver") = "Transport Minister"
+        mapping("Transport Minister") = "Transport Minister"
+        mapping("Employee") = "Finance Minister"
+        mapping("Police") = "Home Minister"
         mapping("Home Minister") = "Home Minister"
+        mapping("Finance Minister") = "Finance Minister"
+        mapping("Hospital Owner") = "Health Minister"
+        Dim Type As String = ""
+        Try
+            conn.Open()
+            Dim query As String = "select Type from Institutes where Owner_ID=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
+                Dim reader = cmd.ExecuteScalar
+                If reader.Read() Then
+                    Type = Convert.ToString(reader("Type"))
+                End If
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+        If Not (Type = "") Then
+            Select Case Type
+                Case "Education"
+                    mapping("Owner") = "Education Minister"
+                Case "Law"
+                    mapping("Owner") = "Home Minister"
+                Case "Hospital"
+                    mapping("Owner") = "Health Minister"
+                Case "Transport"
+                    mapping("Owner") = "Transport Minister"
+                Case "Finance"
+                    mapping("Owner") = "Finance Minister"
+            End Select
+        End If
+    End Sub
+    Private Sub nomination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        fillMapping()
         'PayDeposit.FlatStyle = FlatStyle.Flat
         'PayDeposit.FlatAppearance.BorderSize = 0
         'PayDeposit.BackColor = System.Drawing.ColorTranslator.FromHtml("#0cb43b")

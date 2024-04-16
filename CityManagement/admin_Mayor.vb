@@ -246,4 +246,29 @@ Public Class admin_Mayor
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
+
+    Private Sub ClearNominees_Click(sender As Object, e As EventArgs) Handles ClearNominees.Click
+        'To clear Nominees table and set the vote values back to -2 as the elections have been ended
+        Dim conn As New MySqlConnection(connString)
+        Try
+            conn.Open()
+            Dim query As String = "delete from Nominees"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+        Try
+            conn.Open()
+            Dim updateVotersQuery As String = "UPDATE Voters SET Health = -2, Education = -2, Muncipal = -2, Commerce = -2, Transportation = -2"
+            Using cmdUpdateVoters As New MySqlCommand(updateVotersQuery, conn)
+                cmdUpdateVoters.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+    End Sub
 End Class

@@ -101,8 +101,10 @@ Public Class Email_Landing
 
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-
+        childform(New Email_inbox(), User_EmailID)
     End Sub
 
-
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        childform(New Email_SentEmails(), User_EmailID)
+    End Sub
 End Class

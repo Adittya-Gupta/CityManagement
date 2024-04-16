@@ -1,4 +1,4 @@
-﻿Public Class Email_inbox
+﻿Public Class Email_SentEmails
 
 
     Public Property User_EmailID As String
@@ -70,9 +70,7 @@
 
 
 
-
-
-    Private Sub Email_inbox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Email_SentEmails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
     End Sub
 
@@ -91,7 +89,6 @@
             Content_TextBox.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString
 
 
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -101,6 +98,8 @@
     Private Sub Refresh_Button_Click(sender As Object, e As EventArgs)
         updateTable()
     End Sub
+
+
 
 
 End Class

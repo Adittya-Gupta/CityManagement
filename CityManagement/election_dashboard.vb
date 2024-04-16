@@ -146,9 +146,11 @@ Public Class election_dashboard
                 End If
 
                 If age >= 18 Then
-                    Dim votingApplication As New elections_apply_for_voter()
-                    votingApplication.Show()
-                    Me.Hide()
+                    mypanel.panel1.Controls.Clear()
+                    Dim form As New elections_apply_for_voter()
+                    form.TopLevel = False
+                    mypanel.panel1.Controls.Add(form)
+                    form.Show()
                 Else
                     MessageBox.Show("You are not eligible to vote as your age is less than 18", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If

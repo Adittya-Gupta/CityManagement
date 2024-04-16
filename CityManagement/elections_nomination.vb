@@ -34,7 +34,7 @@ Public Class elections_nomination
             Dim query As String = "select Type from Institutes where Owner_ID=@a"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
-                Dim reader = cmd.ExecuteScalar
+                Dim reader = cmd.ExecuteReader
                 If reader.Read() Then
                     Type = Convert.ToString(reader("Type"))
                 End If

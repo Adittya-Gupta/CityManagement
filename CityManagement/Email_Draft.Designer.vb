@@ -101,7 +101,6 @@ Partial Class Email_Draft
         Draft_Button.Name = "Draft_Button"
         Draft_Button.Size = New Size(91, 56)
         Draft_Button.TabIndex = 7
-        Draft_Button.Text = "Draft"
         Draft_Button.UseVisualStyleBackColor = True
         ' 
         ' Send_Button

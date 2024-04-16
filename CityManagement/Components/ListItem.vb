@@ -43,7 +43,7 @@ Public Class ListItem
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         ' Define the SQL query to insert into the serviceBooking table
 
-        Dim query As String = "INSERT INTO serviceBooking (workerID, orgID, clientID, clientName, status) VALUES (@workerID, @orgID, @clientID, @clientName, @status)"
+        Dim query As String = "INSERT INTO serviceBooking (workerID, orgID, clientID, status) VALUES (@workerID, @orgID, @clientID, @status)"
 
         ' Create MySQL connection
         Using connection As New MySqlConnection(Globals.connectionstring)
@@ -56,7 +56,6 @@ Public Class ListItem
                 command.Parameters.AddWithValue("@workerID", Me.Worker_ID)
                 command.Parameters.AddWithValue("@orgID", Globals.OrgId)
                 command.Parameters.AddWithValue("@clientID", Globals.UserId)
-                command.Parameters.AddWithValue("@clientName", "Jane Smith")
                 command.Parameters.AddWithValue("@status", "EnquirySent")
 
                 ' Execute the command

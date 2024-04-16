@@ -26,8 +26,6 @@ Partial Class Email_Landing
         Button12 = New Button()
         Button11 = New Button()
         Button10 = New Button()
-        Label3 = New Label()
-        Label2 = New Label()
         Label1 = New Label()
         Panel1 = New Panel()
         CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
@@ -91,33 +89,13 @@ Partial Class Email_Landing
         Button10.Text = "COMPOSE"
         Button10.UseVisualStyleBackColor = False
         ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Bodoni MT", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(144, 9)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(83, 34)
-        Label3.TabIndex = 15
-        Label3.Text = "Inbox"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Bodoni MT", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(104, 9)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(34, 34)
-        Label2.TabIndex = 14
-        Label2.Text = ">"
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Bodoni MT", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Bodoni MT Black", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(86, 34)
+        Label1.Size = New Size(120, 40)
         Label1.TabIndex = 13
         Label1.Text = "Email"
         ' 
@@ -141,8 +119,6 @@ Partial Class Email_Landing
         Controls.Add(Button12)
         Controls.Add(Button11)
         Controls.Add(Button10)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
         Controls.Add(Label1)
         Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.ControlText
@@ -159,8 +135,6 @@ Partial Class Email_Landing
     Friend WithEvents Button12 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button10 As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
 End Class

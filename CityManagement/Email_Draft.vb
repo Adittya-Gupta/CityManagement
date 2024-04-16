@@ -1,9 +1,6 @@
-﻿Imports System.IO
-Imports MySql.Data.MySqlClient
+﻿Public Class Email_Draft
 
-Public Class Email_Draft
-
-    Public Property User_EmailID As String
+    Public Property username_test As String
 
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -24,7 +21,8 @@ Public Class Email_Draft
     Public database As String = "db_aa78df_scms"
 
     ' Dim username_test As String = "achyut@gmail.com"
-    Dim username_test As String = User_EmailID
+    'Dim username_test As String = Email_Landing.User_EmailID
+
 
 
 

@@ -137,7 +137,7 @@ Public Class User_ChangePassword
         End If
 
         Dim StrengthCheck = PasswordStrengthCheck(inputString)
-        Dim message = MessageBox.Show("The password you have entered is weak. Do you still want to proceed?", "Weak Password", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim message = MessageBox.Show("Kindly Confirm. Do you want to change password?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If message = DialogResult.No Then
             Return ' Do nothing, return back
         End If

@@ -27,11 +27,12 @@ Partial Class specific_course
         Button1 = New Button()
         Label2 = New Label()
         Button2 = New Button()
+        Button3 = New Button()
         SuspendLayout()
         ' 
         ' Education
         ' 
-        Education.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Education.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Education.ForeColor = SystemColors.ActiveBorder
         Education.Location = New Point(49, 46)
         Education.Name = "Education"
@@ -52,7 +53,7 @@ Partial Class specific_course
         ' 
         ' Button1
         ' 
-        Button1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = SystemColors.ActiveBorder
         Button1.Location = New Point(217, 46)
         Button1.Name = "Button1"
@@ -82,11 +83,24 @@ Partial Class specific_course
         Button2.Text = "Course"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.Lime
+        Button3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = SystemColors.ActiveCaptionText
+        Button3.Location = New Point(557, 12)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(113, 39)
+        Button3.TabIndex = 57
+        Button3.Text = "Pay Now"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' specific_course
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1089, 713)
+        Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Label2)
         Controls.Add(Button1)
@@ -103,4 +117,5 @@ Partial Class specific_course
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

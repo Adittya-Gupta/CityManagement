@@ -1,6 +1,4 @@
-﻿Imports DocumentFormat.OpenXml.Wordprocessing
-
-Public Class MainPanel
+﻿Public Class MainPanel
 
     Public Shared Sub CLearPanels()
         Banking_Main.Panel1.Controls.Clear()
@@ -169,18 +167,14 @@ Public Class MainPanel
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        CLearPanels()
+        CLearPanels
         ChildForm2(Newsletter_Main.Panel1, Newsletter_Homepage)
-        mypanel.panel1.Controls.Clear()
+        mypanel.panel1.Controls.Clear
         ChildForm(Newsletter_Main)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        mypanel.panel1.Controls.Clear()
-        Dim form As New Email_Landing
-        form.TopLevel = False
-        mypanel.panel1.Controls.Add(form)
-        form.Show()
+        ChildForm(Email_Login)
     End Sub
 
     'Private Sub Button10_Click(sender As Object, e As EventArgs)

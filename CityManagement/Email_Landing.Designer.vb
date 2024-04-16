@@ -110,7 +110,7 @@ Partial Class Email_Landing
         ' 
         ' PictureBox11
         ' 
-        PictureBox11.Image = My.Resources.Resources.image_4__1_
+        PictureBox11.Image = Resources.image_4__1_
         PictureBox11.Location = New Point(50, 62)
         PictureBox11.Name = "PictureBox11"
         PictureBox11.Size = New Size(62, 53)

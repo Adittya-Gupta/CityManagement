@@ -2,6 +2,7 @@
     ' This variable to be set
     Public banking_username As String = "admin"
     Public banking_recv_username As String = ""
+    Public banking_recv_name As String = ""
     Public Go_Back_Form As Form
     Public Go_Back As Short = 0
     Public banking_payment_amount As Double = 0

@@ -203,6 +203,8 @@ Public Class Newsletter_AddNews
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         banking_recv_username = "news"
+        banking_recv_name = "news"
+
         Go_Back = 1
         Go_Back_Form = Me
         banking_payment_amount = 100

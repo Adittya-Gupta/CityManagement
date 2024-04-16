@@ -225,12 +225,16 @@ Public Class ForgotPassword
         ' Label2.Visible = True
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Form_Close(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Closed
         Dim LoginForm As New User_Login()
         LoginForm.StartPosition = FormStartPosition.Manual
         LoginForm.Location = Me.Location ' Set the location of the new form to the current form's location
 
         LoginForm.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
     End Sub
 
 End Class

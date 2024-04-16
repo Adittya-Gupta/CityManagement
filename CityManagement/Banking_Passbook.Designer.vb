@@ -253,11 +253,11 @@ Partial Class Banking_Passbook
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(20, 290)
+        DataGridView1.Location = New Point(52, 290)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
-        DataGridView1.Size = New Size(1075, 247)
+        DataGridView1.Size = New Size(1003, 247)
         DataGridView1.TabIndex = 35
         ' 
         ' PictureBox12

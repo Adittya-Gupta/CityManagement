@@ -42,7 +42,8 @@ Public Class Email_Landing
         Dim email As String = ""
         Try
             ' Open the connection
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
             sqlConn.Open()
 
             ' Construct the SQL query

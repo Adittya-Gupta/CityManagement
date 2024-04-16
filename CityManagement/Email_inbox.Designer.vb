@@ -36,7 +36,7 @@ Partial Class Email_inbox
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(144, 355)
+        DataGridView1.Location = New Point(181, 366)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.Size = New Size(794, 225)
@@ -45,7 +45,7 @@ Partial Class Email_inbox
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(166, 30)
+        Label1.Location = New Point(181, 41)
         Label1.Name = "Label1"
         Label1.Size = New Size(43, 20)
         Label1.TabIndex = 11
@@ -54,7 +54,7 @@ Partial Class Email_inbox
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(166, 103)
+        Label2.Location = New Point(181, 114)
         Label2.Name = "Label2"
         Label2.Size = New Size(58, 20)
         Label2.TabIndex = 12
@@ -63,7 +63,7 @@ Partial Class Email_inbox
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(166, 173)
+        Label3.Location = New Point(181, 184)
         Label3.Name = "Label3"
         Label3.Size = New Size(61, 20)
         Label3.TabIndex = 13
@@ -71,7 +71,7 @@ Partial Class Email_inbox
         ' 
         ' Content_TextBox
         ' 
-        Content_TextBox.Location = New Point(260, 170)
+        Content_TextBox.Location = New Point(275, 181)
         Content_TextBox.Multiline = True
         Content_TextBox.Name = "Content_TextBox"
         Content_TextBox.Size = New Size(585, 159)
@@ -79,21 +79,21 @@ Partial Class Email_inbox
         ' 
         ' Subject_TextBox
         ' 
-        Subject_TextBox.Location = New Point(260, 100)
+        Subject_TextBox.Location = New Point(275, 111)
         Subject_TextBox.Name = "Subject_TextBox"
         Subject_TextBox.Size = New Size(585, 27)
         Subject_TextBox.TabIndex = 9
         ' 
         ' From_TextBox
         ' 
-        From_TextBox.Location = New Point(260, 23)
+        From_TextBox.Location = New Point(275, 34)
         From_TextBox.Name = "From_TextBox"
         From_TextBox.Size = New Size(585, 27)
         From_TextBox.TabIndex = 8
         ' 
         ' Refresh_Button
         ' 
-        Refresh_Button.Location = New Point(937, 85)
+        Refresh_Button.Location = New Point(952, 96)
         Refresh_Button.Name = "Refresh_Button"
         Refresh_Button.Size = New Size(91, 56)
         Refresh_Button.TabIndex = 14
@@ -102,9 +102,9 @@ Partial Class Email_inbox
         ' 
         ' Email_inbox
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1089, 592)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 639)
+        ControlBox = False
         Controls.Add(Refresh_Button)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -113,6 +113,7 @@ Partial Class Email_inbox
         Controls.Add(Subject_TextBox)
         Controls.Add(From_TextBox)
         Controls.Add(DataGridView1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Email_inbox"
         Text = "Email_inbox"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

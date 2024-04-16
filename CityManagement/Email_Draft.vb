@@ -15,10 +15,10 @@
     ' Dim password As String = "12345678"
     ' Dim database As String = "emaildatabase"
 
-    Public server As String = "MYSQL9001.site4now.net"
-    Public username As String = "aa78df_scms"
-    Public password As String = "abcd1234"
-    Public database As String = "db_aa78df_scms"
+    'Public server As String = "MYSQL9001.site4now.net"
+    'Public username As String = "aa78df_scms"
+    'Public password As String = "abcd1234"
+    'Public database As String = "db_aa78df_scms"
 
     ' Dim username_test As String = "achyut@gmail.com"
     'Dim username_test As String = Email_Landing.User_EmailID
@@ -45,7 +45,8 @@
             Next
 
             ' Set the connection string property
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
 
             ' Open the connection
             sqlConn.Open()
@@ -66,7 +67,7 @@
             ' Close the connection after use
             sqlConn.Close()
 
-            'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             DataGridView1.ScrollBars = ScrollBars.Both
             DataGridView1.DataSource = sqlDt
 
@@ -84,13 +85,15 @@
 
     Private Sub Delete_Button_Click(sender As Object, e As EventArgs) Handles Delete_Button.Click
         Try
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
+
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "DELETE FROM emailsdata WHERE Subject=@Subject AND Content=@Content"
+                .CommandText = "DELETE FROM EmailsData WHERE Subject=@Subject AND Content=@Content"
                 .CommandType = CommandType.Text
 
                 .Parameters.AddWithValue("@Subject", Subject_TextBox.Text)
@@ -175,7 +178,8 @@
 
     Private Sub Draft_Button_Click(sender As Object, e As EventArgs) Handles Draft_Button.Click
         Try
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
@@ -221,7 +225,8 @@
 
     Private Sub Send_Button_Click(sender As Object, e As EventArgs) Handles Send_Button.Click
         Try
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn

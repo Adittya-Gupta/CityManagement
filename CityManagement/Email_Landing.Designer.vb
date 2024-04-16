@@ -109,8 +109,7 @@ Partial Class Email_Landing
         ' 
         ' Email_Landing
         ' 
-        AutoScaleDimensions = New SizeF(12F, 24F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1107, 760)
         ControlBox = False

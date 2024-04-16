@@ -92,8 +92,8 @@ Public Class Banking_Passbook
             DataGridView1.Rows.Remove(row)
         Next
         ' Set the connection string property
-        Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
-
+        'Mysqlconn.ConnectionString = "server=" & server & ";user id=" & username & ";password=" & password & ";database=" & database & ";"
+        Mysqlconn.ConnectionString = Global_Attributes.slqConnection_banking
         ' Open the connection
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
@@ -295,5 +295,9 @@ Public Class Banking_Passbook
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         RefreshDataGrid()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

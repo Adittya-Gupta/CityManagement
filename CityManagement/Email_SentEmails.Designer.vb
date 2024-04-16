@@ -102,9 +102,9 @@ Partial Class Email_SentEmails
         ' 
         ' Email_SentEmails
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1089, 592)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 639)
+        ControlBox = False
         Controls.Add(Refresh_Button)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -113,6 +113,7 @@ Partial Class Email_SentEmails
         Controls.Add(Subject_TextBox)
         Controls.Add(From_TextBox)
         Controls.Add(DataGridView1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Email_SentEmails"
         Text = "Email_SentEmails"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

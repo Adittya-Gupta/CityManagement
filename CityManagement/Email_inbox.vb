@@ -38,7 +38,8 @@
             Next
 
             ' Set the connection string property
-            sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            'sqlConn.ConnectionString = "server=MYSQL9001.site4now.net;userid=aa78df_scms;Password=abcd1234;database=db_aa78df_scms;sslmode=none"
+            sqlConn.ConnectionString = GlobalConnString.str
 
             ' Open the connection
             sqlConn.Open()
@@ -59,7 +60,7 @@
             ' Close the connection after use
             sqlConn.Close()
 
-            'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             DataGridView1.ScrollBars = ScrollBars.Both
             DataGridView1.DataSource = sqlDt
 

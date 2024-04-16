@@ -49,7 +49,7 @@ Public Class Newsletter_EditorLogin
         sqlDt.Clear()
         ' Open the connection
         Mysqlconn.Open()
-        Dim query As String = "SELECT Password FROM NewsAdminData WHERE Username = '" & editor_username & "';"
+        Dim query As String = "SELECT Password FROM NewsAdmindata WHERE Username = '" & editor_username & "';"
 
         Dim cmd As MySqlCommand = New MySqlCommand(query, Mysqlconn)
         Dim reader As MySqlDataReader = cmd.ExecuteReader()

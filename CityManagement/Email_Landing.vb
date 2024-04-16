@@ -1,4 +1,5 @@
 ﻿Imports Mysqlx
+Imports Syncfusion.Compression.Zip
 Imports System.Data.SqlTypes
 
 
@@ -26,18 +27,12 @@ Public Class Email_Landing
     Public User_EmailID As String = ""
 
 
-    Sub childform(ByVal form As Form, ByVal userEmail As String)
-        ' Set TopLevel property to False
-        form.TopLevel = False
+    Sub childform(ByVal form As Form)
+        form.TopLevel = False ' Set TopLevel property to False
         form.FormBorderStyle = FormBorderStyle.None
         form.Dock = DockStyle.Fill
         Panel1.Controls.Clear()
         Panel1.Controls.Add(form)
-        ' Pass the User_EmailID to the child form
-        If TypeOf form Is Email_Draft Then
-            Dim emailDraftForm As Email_Draft = DirectCast(form, Email_Draft)
-            emailDraftForm.User_EmailID = userEmail
-        End If
         form.Show()
     End Sub
 
@@ -96,15 +91,21 @@ Public Class Email_Landing
 
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        childform(New Email_Draft(), User_EmailID)
+        Dim obj1 As New Email_Draft
+        obj1.username_test = User_EmailID
+        childform(obj1)
     End Sub
 
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        childform(New Email_inbox(), User_EmailID)
+        Dim obj2 As New Email_inbox
+        obj2.username_test = User_EmailID
+        childform(obj2)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        childform(New Email_SentEmails(), User_EmailID)
+        Dim obj3 As New Email_SentEmails
+        obj3.username_test = User_EmailID
+        childform(obj3)
     End Sub
 End Class

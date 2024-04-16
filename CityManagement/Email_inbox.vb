@@ -1,7 +1,7 @@
 ﻿Public Class Email_inbox
 
 
-    Public Property User_EmailID As String
+    Public Property username_test As String
 
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -22,7 +22,7 @@
     Public database As String = "db_aa78df_scms"
 
     ' Dim username_test As String = "achyut@gmail.com"
-    Dim username_test As String = User_EmailID
+    'Dim username_test As String = Email_Landing.User_EmailID
 
 
 
@@ -44,9 +44,9 @@
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "SELECT * FROM EmailsData WHERE Email_From=@Email_From"
+            sqlCmd.CommandText = "SELECT * FROM EmailsData WHERE Email_To=@Email_To"
             sqlCmd.CommandType = CommandType.Text
-            sqlCmd.Parameters.AddWithValue("@Email_From", username_test)
+            sqlCmd.Parameters.AddWithValue("@Email_To", username_test)
 
             sqlRd = sqlCmd.ExecuteReader
             sqlCmd.Parameters.Clear()

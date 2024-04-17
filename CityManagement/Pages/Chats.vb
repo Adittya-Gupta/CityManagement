@@ -20,7 +20,7 @@ Public Class Chats
     Public Sub New(Optional ByVal Username As String = "John Doe")
         InitializeComponent()
         Me.username = Username
-        AddHandler Globals.ChatIdAsCitizenChanged, AddressOf LoadChatMessages
+        'dHandler Globals.ChatIdAsCitizenChanged, AddressOf LoadChatMessages
         'MessageBox.Show("List of Workers Citizen")
         ' Start the timer
         Timer1.Interval = 5000 ' Set the interval to 1 second

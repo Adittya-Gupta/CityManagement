@@ -12,9 +12,9 @@ Public Class ListOfChats
         InitializeComponent()
         ' Set the interval for the timer to 1 second (1000 milliseconds)
         ' Start the timer
-        LoadWorkerMessageCounts()
+        'LoadWorkerMessageCounts()
         Timer1.Interval = 1000
-        Timer1.Start()
+        'smer1.Start()
     End Sub
     Private Sub LoadChats()
         ' Clear panels before reloading chats

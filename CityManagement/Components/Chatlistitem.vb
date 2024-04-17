@@ -105,11 +105,11 @@ Public Class Chatlistitem
                 'Globals.Chatspage.PictureBox1.Image = PictureBox1.Image
                 Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
             Else
-                Globals.chats_workerform.Label2.Text = Label1.Text
-                Globals.chats_workerform.PictureBox1.Image = PictureBox1.Image
-                Globals.ChatIdAsWorker = Worker_id
-                Debug.Write("chats_worker")
-                Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chats_workerform)
+                'Globals.chats_workerform.Label2.Text = Label1.Text
+                'Globals.chats_workerform.PictureBox1.Image = PictureBox1.Image
+                'Globals.ChatIdAsWorker = Worker_id
+                'Debug.Write("chats_worker")
+                'Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chats_workerform)
             End If
         End Try
     End Sub

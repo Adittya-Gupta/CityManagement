@@ -167,6 +167,7 @@ Public Class Banking_Admin_NewAccRegistration
             'AccNo_Registration = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
             username_Registration = DataGridView1.SelectedRows(0).Cells(5).Value.ToString
             password_Registration = DataGridView1.SelectedRows(0).Cells(6).Value.ToString
+            Identification_number = DataGridView1.SelectedRows(0).Cells(7).Value.ToString
             Address_Registration = DataGridView1.SelectedRows(0).Cells(3).Value.ToString
             DOB_Registration = DataGridView1.SelectedRows(0).Cells(8).Value.ToString
             Gender_Registration = DataGridView1.SelectedRows(0).Cells(14).Value.ToString

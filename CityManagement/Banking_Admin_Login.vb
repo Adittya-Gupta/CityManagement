@@ -48,6 +48,6 @@ Public Class Banking_Admin_Login
     End Sub
 
     Private Sub Banking_Admin_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Password_TextBox.UseSystemPasswordChar = True
     End Sub
 End Class

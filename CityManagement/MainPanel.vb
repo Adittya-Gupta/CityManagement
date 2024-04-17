@@ -177,6 +177,8 @@
         mypanel.panel1.Controls.Clear()
         Dim form As New Email_Landing
         form.TopLevel = False
+        form.FormBorderStyle = FormBorderStyle.None
+        form.Dock = DockStyle.Fill
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub

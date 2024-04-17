@@ -49,6 +49,7 @@ Partial Class transport_govOfficial
         Label12 = New Label()
         TextBox9 = New TextBox()
         PictureBox1 = New PictureBox()
+        Button2 = New Button()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -63,7 +64,7 @@ Partial Class transport_govOfficial
         Label1.ForeColor = Color.Transparent
         Label1.Location = New Point(642, 178)
         Label1.Name = "Label1"
-        Label1.Size = New Size(266, 39)
+        Label1.Size = New Size(338, 48)
         Label1.TabIndex = 4
         Label1.Text = "         ADD BUS          "
         ' 
@@ -77,7 +78,7 @@ Partial Class transport_govOfficial
         Label2.ForeColor = Color.DimGray
         Label2.Location = New Point(834, 249)
         Label2.Name = "Label2"
-        Label2.Size = New Size(81, 27)
+        Label2.Size = New Size(100, 34)
         Label2.TabIndex = 7
         Label2.Text = "Path Id:"
         ' 
@@ -91,7 +92,7 @@ Partial Class transport_govOfficial
         Label4.ForeColor = Color.DimGray
         Label4.Location = New Point(862, 298)
         Label4.Name = "Label4"
-        Label4.Size = New Size(64, 27)
+        Label4.Size = New Size(80, 34)
         Label4.TabIndex = 9
         Label4.Text = "Daily:"
         ' 
@@ -105,7 +106,7 @@ Partial Class transport_govOfficial
         Label5.ForeColor = Color.DimGray
         Label5.Location = New Point(609, 346)
         Label5.Name = "Label5"
-        Label5.Size = New Size(61, 27)
+        Label5.Size = New Size(74, 34)
         Label5.TabIndex = 10
         Label5.Text = "Date:"
         ' 
@@ -119,7 +120,7 @@ Partial Class transport_govOfficial
         Label6.ForeColor = Color.DimGray
         Label6.Location = New Point(609, 393)
         Label6.Name = "Label6"
-        Label6.Size = New Size(76, 27)
+        Label6.Size = New Size(93, 34)
         Label6.TabIndex = 11
         Label6.Text = "M seat:"
         ' 
@@ -133,7 +134,7 @@ Partial Class transport_govOfficial
         Label7.ForeColor = Color.DimGray
         Label7.Location = New Point(609, 444)
         Label7.Name = "Label7"
-        Label7.Size = New Size(70, 27)
+        Label7.Size = New Size(85, 34)
         Label7.TabIndex = 12
         Label7.Text = "F seat:"
         ' 
@@ -147,7 +148,7 @@ Partial Class transport_govOfficial
         Label8.ForeColor = Color.DimGray
         Label8.Location = New Point(784, 439)
         Label8.Name = "Label8"
-        Label8.Size = New Size(99, 27)
+        Label8.Size = New Size(123, 34)
         Label8.TabIndex = 13
         Label8.Text = "F price($):"
         ' 
@@ -161,7 +162,7 @@ Partial Class transport_govOfficial
         Label9.ForeColor = Color.DimGray
         Label9.Location = New Point(784, 388)
         Label9.Name = "Label9"
-        Label9.Size = New Size(105, 27)
+        Label9.Size = New Size(131, 34)
         Label9.TabIndex = 14
         Label9.Text = "M price($):"
         ' 
@@ -175,7 +176,7 @@ Partial Class transport_govOfficial
         Label10.ForeColor = Color.DimGray
         Label10.Location = New Point(607, 249)
         Label10.Name = "Label10"
-        Label10.Size = New Size(72, 27)
+        Label10.Size = New Size(89, 34)
         Label10.TabIndex = 15
         Label10.Text = "Bus Id:"
         ' 
@@ -189,7 +190,7 @@ Partial Class transport_govOfficial
         Label11.ForeColor = Color.DimGray
         Label11.Location = New Point(609, 489)
         Label11.Name = "Label11"
-        Label11.Size = New Size(130, 27)
+        Label11.Size = New Size(162, 34)
         Label11.TabIndex = 16
         Label11.Text = "Driver Name:"
         ' 
@@ -207,63 +208,63 @@ Partial Class transport_govOfficial
         ' 
         TextBox1.Location = New Point(725, 249)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(31, 23)
+        TextBox1.Size = New Size(31, 27)
         TextBox1.TabIndex = 18
         ' 
         ' TextBox2
         ' 
         TextBox2.Location = New Point(725, 444)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(31, 23)
+        TextBox2.Size = New Size(31, 27)
         TextBox2.TabIndex = 19
         ' 
         ' TextBox3
         ' 
         TextBox3.Location = New Point(725, 393)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(31, 23)
+        TextBox3.Size = New Size(31, 27)
         TextBox3.TabIndex = 20
         ' 
         ' TextBox4
         ' 
         TextBox4.Location = New Point(946, 298)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(31, 23)
+        TextBox4.Size = New Size(31, 27)
         TextBox4.TabIndex = 21
         ' 
         ' TextBox5
         ' 
         TextBox5.Location = New Point(946, 253)
         TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(31, 23)
+        TextBox5.Size = New Size(31, 27)
         TextBox5.TabIndex = 22
         ' 
         ' TextBox6
         ' 
         TextBox6.Location = New Point(905, 443)
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(31, 23)
+        TextBox6.Size = New Size(31, 27)
         TextBox6.TabIndex = 23
         ' 
         ' TextBox7
         ' 
         TextBox7.Location = New Point(905, 392)
         TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(31, 23)
+        TextBox7.Size = New Size(31, 27)
         TextBox7.TabIndex = 24
         ' 
         ' DateTimePicker1
         ' 
         DateTimePicker1.Location = New Point(706, 346)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(138, 23)
+        DateTimePicker1.Size = New Size(138, 27)
         DateTimePicker1.TabIndex = 25
         ' 
         ' TextBox8
         ' 
         TextBox8.Location = New Point(784, 489)
         TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(142, 23)
+        TextBox8.Size = New Size(142, 27)
         TextBox8.TabIndex = 26
         ' 
         ' Label3
@@ -276,7 +277,7 @@ Partial Class transport_govOfficial
         Label3.ForeColor = Color.DimGray
         Label3.Location = New Point(608, 298)
         Label3.Name = "Label3"
-        Label3.Size = New Size(62, 27)
+        Label3.Size = New Size(75, 34)
         Label3.TabIndex = 27
         Label3.Text = "Time:"
         ' 
@@ -288,7 +289,7 @@ Partial Class transport_govOfficial
         DateTimePicker2.Location = New Point(706, 298)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.ShowUpDown = True
-        DateTimePicker2.Size = New Size(109, 23)
+        DateTimePicker2.Size = New Size(109, 27)
         DateTimePicker2.TabIndex = 28
         ' 
         ' Button1
@@ -296,11 +297,11 @@ Partial Class transport_govOfficial
         Button1.BackColor = Color.Black
         Button1.Font = New Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(917, 635)
+        Button1.Location = New Point(895, 626)
         Button1.Name = "Button1"
-        Button1.Size = New Size(75, 29)
+        Button1.Size = New Size(97, 38)
         Button1.TabIndex = 29
-        Button1.Text = "Button1"
+        Button1.Text = "Confirm"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Label12
@@ -313,7 +314,7 @@ Partial Class transport_govOfficial
         Label12.ForeColor = Color.DimGray
         Label12.Location = New Point(609, 536)
         Label12.Name = "Label12"
-        Label12.Size = New Size(120, 27)
+        Label12.Size = New Size(150, 34)
         Label12.TabIndex = 30
         Label12.Text = "Driver Num:"
         ' 
@@ -321,7 +322,7 @@ Partial Class transport_govOfficial
         ' 
         TextBox9.Location = New Point(784, 536)
         TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(142, 23)
+        TextBox9.Size = New Size(142, 27)
         TextBox9.TabIndex = 31
         ' 
         ' PictureBox1
@@ -334,11 +335,25 @@ Partial Class transport_govOfficial
         PictureBox1.TabIndex = 32
         PictureBox1.TabStop = False
         ' 
+        ' Button2
+        ' 
+        Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Button2.BackColor = Color.Black
+        Button2.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.Transparent
+        Button2.Location = New Point(12, 12)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(156, 55)
+        Button2.TabIndex = 33
+        Button2.Text = "Main Page"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' transport_govOfficial
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.White
         ClientSize = New Size(1091, 760)
+        Controls.Add(Button2)
         Controls.Add(PictureBox1)
         Controls.Add(TextBox9)
         Controls.Add(Label12)
@@ -399,4 +414,5 @@ Partial Class transport_govOfficial
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class

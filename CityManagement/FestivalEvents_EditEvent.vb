@@ -113,12 +113,18 @@ Public Class FestivalEvents_EditEvent
     ' Event handler for the Save Changes button click
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
+
+
+            Dim combinedDateTime As DateTime = DateTimePicker1.Value.Date + DateTimePicker2.Value.TimeOfDay
+            Dim sql As String = "UPDATE festivals SET name = @EventName, isapproved = 0 ,venue = @Venue, description = @EventDescription, dateTime = @DateTime, image = @CoverImage, event_type = @EventType WHERE id = @EventID"
+            If combinedDateTime < DateTime.Now Then
+                MessageBox.Show("Date of event cannot be before current date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
             conn.Open() ' Open the database connection
             ' SQL query to update event details in the database
-            Dim sql As String = "UPDATE festivals SET name = @EventName, venue = @Venue, description = @EventDescription, dateTime = @DateTime, image = @CoverImage, event_type = @EventType WHERE id = @EventID"
 
             ' Combine Date and Time from the two DateTimePicker controls
-            Dim combinedDateTime As DateTime = DateTimePicker1.Value.Date + DateTimePicker2.Value.TimeOfDay
 
             Using cmd As New MySqlCommand(sql, conn)
                 ' Bind the form field values to the SQL query parameters
@@ -157,7 +163,7 @@ Public Class FestivalEvents_EditEvent
                 cmd.ExecuteNonQuery()
 
                 ' Display a success message
-                MessageBox.Show("Event details updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Event details updated successfully. However this will be sent for an approval again ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Using
         Catch ex As Exception
             ' Display an error message if updating the event fails
@@ -177,5 +183,12 @@ Public Class FestivalEvents_EditEvent
         Next
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New FestivalEvents_EventDetails
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class
 

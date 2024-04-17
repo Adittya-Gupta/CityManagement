@@ -24,7 +24,7 @@ Public Class EmployeeTable
         'Dim dataInput As String(,) = {{"1", "2 years", "3.1", "1234567890"},
         '                              {"5", "6 years", "4.2", "8123456789"},
         '                              {"9", "10 years", "4.6", "1209876543"}}
-        Dim headerInput As String() = {"Email ID", "Experience", "Rating", "Phone Number"}
+        Dim headerInput As String() = {"User ID", "Email ID", "Experience", "Rating", "Phone Number"}
 
         ' fetch data and headers from database in actual code
         Dim dataInput As String(,) = {}
@@ -32,45 +32,48 @@ Public Class EmployeeTable
         Dim experience As String
         Dim rating As Decimal
         Dim Phone_Number As Int64
+        Dim userID As Int32
 
         Dim connString As String = Module1.connString
         'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim conn As New MySqlConnection(connString)
         Try
             conn.Open()
-            Dim query As String = "select prof_email, experience, rating, Phone_Number from serviceWorkers where orgID = @A"
+            Dim query As String = "select userID, prof_email, experience, rating, Phone_Number from serviceWorkers where orgID = @A"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@A", _orgID)
 
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 While reader.Read()
+                    userID = Convert.ToInt32(reader("userID"))
                     emailID = Convert.ToString(reader("prof_email"))
                     experience = Convert.ToString(reader("experience"))
                     rating = Convert.ToDecimal(reader("rating"))
                     Phone_Number = Convert.ToInt64(reader("Phone_Number"))
 
                     ' Create a new array to hold the values
-                    Dim newDataInput(0 To 3) As String
-                    newDataInput(0) = emailID.ToString()
-                    newDataInput(1) = experience & " years"
-                    newDataInput(2) = rating.ToString()
-                    newDataInput(3) = Phone_Number.ToString()
+                    Dim newDataInput(0 To 4) As String
+                    newDataInput(0) = userID.ToString()
+                    newDataInput(1) = emailID.ToString()
+                    newDataInput(2) = experience & " years"
+                    newDataInput(3) = rating.ToString()
+                    newDataInput(4) = Phone_Number.ToString()
 
                     ' Resize and copy the original dataInput array
                     Dim newDataSize As Integer = dataInput.GetLength(0) + 1
                     Dim newDataInputIndex As Integer = 0
                     Dim newDataInputColumnIndex As Integer
                     Dim newDataInputRowIndex As Integer
-                    Dim newDataInputArray(newDataSize - 1, 3) As String
+                    Dim newDataInputArray(newDataSize - 1, 4) As String
 
                     For newDataInputRowIndex = 0 To newDataSize - 2
-                        For newDataInputColumnIndex = 0 To 3
+                        For newDataInputColumnIndex = 0 To 4
                             newDataInputArray(newDataInputRowIndex, newDataInputColumnIndex) = dataInput(newDataInputRowIndex, newDataInputColumnIndex)
                         Next
                     Next
 
                     ' Add the new data to the last row
-                    For newDataInputColumnIndex = 0 To 3
+                    For newDataInputColumnIndex = 0 To 4
                         newDataInputArray(newDataSize - 1, newDataInputColumnIndex) = newDataInput(newDataInputColumnIndex)
                     Next
 
@@ -87,10 +90,11 @@ Public Class EmployeeTable
 
         ' Set column width to fill the Panel
         Dim totalWidth As Integer = Panel1.Width - 1
-        tableControl.dataGridView.Columns(0).Width = totalWidth * 0.4
-        tableControl.dataGridView.Columns(1).Width = totalWidth * 0.15
-        tableControl.dataGridView.Columns(2).Width = totalWidth * 0.15
-        tableControl.dataGridView.Columns(3).Width = totalWidth * 0.3
+        tableControl.dataGridView.Columns(0).Width = totalWidth * 0.16
+        tableControl.dataGridView.Columns(1).Width = totalWidth * 0.3
+        tableControl.dataGridView.Columns(2).Width = totalWidth * 0.14
+        tableControl.dataGridView.Columns(3).Width = totalWidth * 0.1
+        tableControl.dataGridView.Columns(4).Width = totalWidth * 0.3
 
         For Each row As DataGridViewRow In tableControl.dataGridView.Rows
             row.Height *= 2

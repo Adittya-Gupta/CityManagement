@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
+Imports Grpc.Core
 
 Public Class Chatlistitem
     Public Worker_id As Integer
@@ -67,13 +68,21 @@ Public Class Chatlistitem
             Using connection As New MySqlConnection(Globals.connectionstring)
                 ' Open the connection
                 connection.Open()
-
-                ' Define the SQL query to update the Seen status
-                Dim query As String = "UPDATE Chats " &
+                Dim query As String
+                If Globals.UrbanClapNavForm.Button1.Text = "Service History" Then
+                    ' Define the SQL query to update the Seen status
+                    query = "UPDATE Chats " &
                               "SET Seen = 1 " &
                               "WHERE workerID = @ChatIdAsCitizen " &
                               "AND SentBy = 1 " &
                               "AND Seen = 0;"
+                Else
+                    query = "UPDATE Chats " &
+                              "SET Seen = 1 " &
+                              "WHERE userID = @ChatIdAsWorker " &
+                              "AND SentBy = 0 " &
+                              "AND Seen = 0;"
+                End If
 
                 ' Create MySqlCommand
                 Using command As New MySqlCommand(query, connection)
@@ -88,11 +97,20 @@ Public Class Chatlistitem
             ' Handle exceptions
             MessageBox.Show("Error occurred while updating Seen status: " & ex.Message)
         Finally
-            Globals.chatsForm.Label2.Text = Label1.Text
-            Globals.chatsForm.PictureBox1.Image = PictureBox1.Image
-            MessageBox.Show(Globals.ChatIdAsCitizen)
-            'Globals.Chatspage.PictureBox1.Image = PictureBox1.Image
-            Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
+            If Globals.UrbanClapNavForm.Button1.Text = "Service History" Then
+                Globals.chatsForm.Label2.Text = Label1.Text
+
+                Globals.chatsForm.PictureBox1.Image = PictureBox1.Image
+                'MessageBox.Show(Globals.ChatIdAsCitizen)
+                'Globals.Chatspage.PictureBox1.Image = PictureBox1.Image
+                Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
+            Else
+                'Globals.chats_workerform.Label2.Text = Label1.Text
+                'Globals.chats_workerform.PictureBox1.Image = PictureBox1.Image
+                'Globals.ChatIdAsWorker = Worker_id
+                'Debug.Write("chats_worker")
+                'Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chats_workerform)
+            End If
         End Try
     End Sub
 

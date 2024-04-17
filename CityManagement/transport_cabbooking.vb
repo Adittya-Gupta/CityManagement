@@ -94,4 +94,12 @@
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New transport_landingPage
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class

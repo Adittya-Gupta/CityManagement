@@ -47,6 +47,7 @@ Partial Class IncomingDetailsForm
         ' 
         ' RichTextBox3
         ' 
+        RichTextBox3.Enabled = False
         RichTextBox3.Location = New Point(22, 212)
         RichTextBox3.Name = "RichTextBox3"
         RichTextBox3.Size = New Size(370, 117)
@@ -65,6 +66,7 @@ Partial Class IncomingDetailsForm
         ' 
         ' RichTextBox2
         ' 
+        RichTextBox2.Enabled = False
         RichTextBox2.Location = New Point(22, 125)
         RichTextBox2.Name = "RichTextBox2"
         RichTextBox2.Size = New Size(305, 32)
@@ -83,6 +85,7 @@ Partial Class IncomingDetailsForm
         ' 
         ' RichTextBox1
         ' 
+        RichTextBox1.Enabled = False
         RichTextBox1.Location = New Point(22, 36)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(305, 32)

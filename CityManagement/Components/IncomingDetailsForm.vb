@@ -3,12 +3,14 @@
 Public Class IncomingDetailsForm
     Private _userID As Int32
     Private _orgID As Int32
+    Private _name As String
 
     Public Sub New(Optional ByVal contactDetails As String = "Contact Details",
                Optional ByVal bankAccountNumber As String = "Bank account number",
                Optional ByVal anyPreviousWork As String = "Any previous work",
                Optional ByVal userID As Int32 = 102,
-               Optional ByVal orgID As Int32 = 101
+               Optional ByVal orgID As Int32 = 101,
+               Optional ByVal name As String = "Name"
                )
 
         InitializeComponent()
@@ -35,21 +37,31 @@ Public Class IncomingDetailsForm
                 Dim cmd As New MySqlCommand("SELECT resume FROM workerEmployReq WHERE userID = @SID AND orgID = @orgID", conn)
                 cmd.Parameters.AddWithValue("@SID", _userID)
                 cmd.Parameters.AddWithValue("@orgID", _orgID)
-                Dim resume_ As Byte() = DirectCast(cmd.ExecuteScalar(), Byte())
-                If resume_ IsNot Nothing Then
+
+                ' Execute the command and handle DB null values
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                    Dim resume_ As Byte() = DirectCast(result, Byte())
+
                     ' Generate a unique temporary file name with .pdf extension in the temp folder
-                    Dim tempPdfFilePath As String = Path.Combine(Application.StartupPath, "..\..\..\MediaFiles\EmpReqResume", _orgID.ToString() & "--" & _userID.ToString() & "--resume.pdf")
+                    Dim tempPdfFilePath As String = Path.Combine(Application.StartupPath, "..\..\..\MediaFiles\EmpReqResume", _orgID.ToString() & "--" & _name & "--" & _userID.ToString() & "--resume.pdf")
 
                     ' Write the binary data to the temporary PDF file
                     File.WriteAllBytes(tempPdfFilePath, resume_)
-                    MessageBox.Show("PDF downloaded in  " & tempPdfFilePath)
+                    MessageBox.Show("PDF downloaded in " & tempPdfFilePath)
 
                 Else
                     MessageBox.Show("Resume not found for SID: " & _userID)
                 End If
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
+            Finally
+                ' Ensure the connection is closed after the operation
+                If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then
+                    conn.Close()
+                End If
             End Try
+
         End Using
     End Sub
 End Class

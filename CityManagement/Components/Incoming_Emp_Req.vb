@@ -233,7 +233,7 @@ Public Class Incoming_Emp_Req
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim childForm As New IncomingDetailsForm(_contactDetails, _bankAccountNumber.ToString(), _anyPrevWork, _userID, _orgID)
+        Dim childForm As New IncomingDetailsForm(_contactDetails, _bankAccountNumber.ToString(), _anyPrevWork, _userID, _orgID, _name)
         '_parentForm.Controls.Add(childUserControl)
         childForm.Show()
 

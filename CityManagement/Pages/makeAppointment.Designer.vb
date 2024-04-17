@@ -272,6 +272,7 @@ Partial Class makeAppointment
         ' Guna2TileButton1
         ' 
         Guna2TileButton1.CustomizableEdges = CustomizableEdges13
+        Guna2TileButton1.DefaultAutoSize = True
         Guna2TileButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2TileButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2TileButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -283,7 +284,7 @@ Partial Class makeAppointment
         Guna2TileButton1.Margin = New Padding(3, 4, 3, 4)
         Guna2TileButton1.Name = "Guna2TileButton1"
         Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2TileButton1.Size = New Size(164, 37)
+        Guna2TileButton1.Size = New Size(204, 32)
         Guna2TileButton1.TabIndex = 31
         Guna2TileButton1.Text = "Make Appointment"
         ' 

@@ -117,8 +117,9 @@
         If NavBarCheck() Then
             Return
         End If
+        Dim Banking_Money_Management_Homepage_form As New Banking_Money_Management_Homepage
         'Banking_Money_Management_Homepage.bank_username = Global_Attributes.banking_username
-        ChildForm(Panel1, Banking_Money_Management_Homepage)
+        ChildForm(Panel1, Banking_Money_Management_Homepage_form)
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click

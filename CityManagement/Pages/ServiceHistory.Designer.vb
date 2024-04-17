@@ -83,7 +83,7 @@ Partial Class ServiceHistory
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(192, 124)
         Label5.Name = "Label5"
@@ -94,7 +94,7 @@ Partial Class ServiceHistory
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(572, 124)
         Label6.Name = "Label6"
@@ -105,7 +105,7 @@ Partial Class ServiceHistory
         ' 
         ' Label7
         ' 
-        Label7.Font = New Font("Exo 2", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Black
         Label7.Location = New Point(797, 124)
         Label7.Name = "Label7"
@@ -118,7 +118,7 @@ Partial Class ServiceHistory
         ' 
         Button1.BackColor = Color.Black
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Abhaya Libre Medium", 14F)
+        Button1.Font = New Font("Microsoft Sans Serif", 14F)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(944, 12)
         Button1.Name = "Button1"

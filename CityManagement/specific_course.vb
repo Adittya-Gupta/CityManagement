@@ -6,6 +6,8 @@ Public Class specific_course
     Dim conn As New MySqlConnection(connString)
     Public course_price As Integer
     Private userid As Integer
+    Public prof_id As Integer
+    Public prof_bank_username As String
 
     Public Sub SetUserID(id As Integer)
         userid = id
@@ -19,18 +21,35 @@ Public Class specific_course
         _courseId = courseId ' Assign the parameter value to the class member
     End Sub
 
+    Public Sub CalculateBankAccNumber()
+        'conn.ConnectionString = Global_Attributes.slqConnection_banking
+        ' sqlDt.Clear()
+        'Mysqlconn.Open()
+        conn.Open()
+        Dim sqlCmd As New MySqlCommand
+        sqlCmd.Connection = conn
+        sqlCmd.CommandText = "Select Username from BankUserData where '" & prof_id & "';"
+        Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
+            If reader.Read() Then
+                prof_bank_username = reader.GetString("Bank_Account_Number")
+            End If
+        End Using
+        conn.Close()
+        sqlCmd.Dispose()
+    End Sub
+
     Private Sub specific_course_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             conn.Open()
 
-            Dim query As String = "SELECT c.course_name, c.course_description, c.course_photo, c.no_of_studenroll, u.Name as UserName FROM Courses c INNER JOIN User u ON c.user_id = u.SID WHERE c.course_id = " & _courseId
+            Dim query As String = "SELECT c.user_id as prof_id, c.course_name, c.course_description, c.course_photo, c.no_of_studenroll, u.Name as UserName FROM Courses c INNER JOIN User u ON c.user_id = u.SID WHERE c.course_id = " & _courseId
             Dim cmd As New MySqlCommand(query, conn)
 
             Using reader As MySqlDataReader = cmd.ExecuteReader()
                 If reader.Read() Then
                     Label3.Text = reader("course_name").ToString()
                     TextBox1.Text = reader("course_description").ToString()
-
+                    prof_id = Convert.ToInt32(reader("prof_id"))
                     ' Load course photo from database
                     Dim imageData As Byte() = DirectCast(reader("course_photo"), Byte())
                     If imageData IsNot Nothing AndAlso imageData.Length > 0 Then
@@ -135,6 +154,19 @@ Public Class specific_course
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ' Your button click logic here
+        banking_recv_username = prof_bank_username
+        banking_recv_name = "Vallabh"
+
+        Go_Back = 2
+        Go_Back_Form = Me
+        banking_payment_amount = 100
+
+        Banking_Main.Panel1.Controls.Clear()
+        Newsletter_Main.Panel1.Controls.Clear()
+
+        ChildForm(Banking_Main.Panel1, Banking_Homepage)
+        mypanel.panel1.Controls.Clear()
+        ChildForm2(Banking_Main)
     End Sub
 
     Public Shared Sub ChildForm(ByVal parentpanel As Panel, ByVal childform As Form)

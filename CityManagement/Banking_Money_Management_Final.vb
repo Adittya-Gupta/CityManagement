@@ -23,6 +23,7 @@ Public Class Banking_Money_Management_Final
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Banking_Money_Management_Homepage.Close()
         If Global_Attributes.Go_Back = 0 Then
             Global_Attributes.Go_Back = 0
             ChildForm(Banking_Main.Panel1, Global_Attributes.Go_Back_Form)
@@ -32,7 +33,7 @@ Public Class Banking_Money_Management_Final
             Newsletter_Main.Panel1.Controls.Clear()
             Newsletter_AddNews.payment_done = 1
             ChildForm(Newsletter_Main.Panel1, Global_Attributes.Go_Back_Form)
-            mypanel.Panel1.Controls.Clear()
+            mypanel.panel1.Controls.Clear()
             ChildForm2(Newsletter_Main)
         ElseIf Global_Attributes.Go_Back = 2 Then
             Global_Attributes.Go_Back = 0

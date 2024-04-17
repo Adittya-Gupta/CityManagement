@@ -122,26 +122,26 @@ Public Class ServiceHistory
     End Sub
 
 
-    Public Sub ServiceHistory_Load()
-        InitializeStatusCount()
+    Public Sub ServiceHistory_Load() Handles MyBase.Load
+        InitializeStatusCount
         Timer1.Enabled = False
         Debug.WriteLine("Service History disabled")
-        Panel1.Controls.Clear()
-        OriginalBookingsList.Clear()
+        Panel1.Controls.Clear
+        OriginalBookingsList.Clear
         HistoryCount = 0
-        Historyfilterform = New Historyfilter()
+        Historyfilterform = New Historyfilter
         'MessageBox.Show("Service")
 
         Try
             ' SQL query to retrieve service history information
-            Dim query As String = "SELECT SB.serviceBookingId AS BookingId, U.Name AS WorkerName, SW.rating AS WorkerRating, SB.serviceTime, SB.billAmount, SB.status ,U.ContactNo AS WorkerPhoneNumber, U.ProfilePic As Profile " &
+            Dim query = "SELECT SB.serviceBookingId AS BookingId, U.Name AS WorkerName, SW.rating AS WorkerRating, SB.serviceTime, SB.billAmount, SB.status ,U.ContactNo AS WorkerPhoneNumber, U.ProfilePic As Profile " &
                                   "FROM serviceBooking SB " &
                                   "JOIN serviceWorkers SW ON SB.workerID = SW.workerID " &
                                   "JOIN User U ON SW.userID = U.SID " &
                                   "WHERE SB.clientID = @UserID;"
 
             ' Suspends the layout during initialization
-            Panel1.SuspendLayout()
+            Panel1.SuspendLayout
 
             ' Database connection and command setup
             Using connection As New MySqlConnection(Globals.connectionstring)
@@ -150,38 +150,38 @@ Public Class ServiceHistory
                     command.Parameters.AddWithValue("@UserID", Globals.UserId)
 
                     ' Open the connection
-                    connection.Open()
+                    connection.Open
 
                     ' Execute the command and create a reader
-                    Using reader As MySqlDataReader = command.ExecuteReader()
+                    Using reader = command.ExecuteReader
                         ' Check if the reader has rows
                         If reader.HasRows Then
                             ' Loop through the results and create HistoryItem controls
-                            Dim topPosition As Integer = 0
-                            While reader.Read()
+                            Dim topPosition = 0
+                            While reader.Read
                                 ' Read data from the reader
-                                Dim bookingId As String = reader("BookingId").ToString()
-                                Dim workerName As String = reader("WorkerName").ToString()
-                                Dim workerRating As Double = Convert.ToDouble(reader("WorkerRating"))
+                                Dim bookingId = reader("BookingId").ToString
+                                Dim workerName = reader("WorkerName").ToString
+                                Dim workerRating = Convert.ToDouble(reader("WorkerRating"))
                                 Dim serviceTime As String
                                 Dim billAmount As String
                                 ' Check for DBNull values and assign default values if necessary
                                 If reader("serviceTime") IsNot DBNull.Value Then
-                                    serviceTime = Convert.ToDateTime(reader("serviceTime")).ToString()
+                                    serviceTime = Convert.ToDateTime(reader("serviceTime")).ToString
                                 Else
                                     serviceTime = "To be declared"
                                 End If
 
                                 If reader("billAmount") IsNot DBNull.Value Then
-                                    billAmount = reader("billAmount").ToString()
+                                    billAmount = reader("billAmount").ToString
                                 Else
                                     billAmount = "To be Updated"
                                 End If
 
                                 ' Map status string to AppointmentState enum
-                                Dim status As String = reader("status").ToString()
-                                Dim currentState As AppointmentState = MapStatusToAppointmentState(status)
-                                Dim workerPhoneNumber As String = reader("WorkerPhoneNumber").ToString()
+                                Dim status = reader("status").ToString
+                                Dim currentState = MapStatusToAppointmentState(status)
+                                Dim workerPhoneNumber = reader("WorkerPhoneNumber").ToString
 
                                 Dim workerPic As Byte() = Nothing
                                 If Not reader.IsDBNull(reader.GetOrdinal("Profile")) Then
@@ -213,9 +213,9 @@ Public Class ServiceHistory
         Finally
             Timer1.Enabled = True
             Debug.WriteLine("Service History Enabled")
-            UpdateUIWithFilteredBookings()
+            UpdateUIWithFilteredBookings
             ' Resume layout after initialization
-            Panel1.ResumeLayout()
+            Panel1.ResumeLayout
         End Try
 
     End Sub

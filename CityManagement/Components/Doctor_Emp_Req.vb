@@ -92,12 +92,40 @@ Public Class Doctor_Emp_Req
         End Using
     End Function
 
+    Public Function UpdateUserDesignationToDoctor(ByVal userId As Integer) As Boolean
+        ' Dim connectionString As String = "Your_Connection_String_Here"
+        Dim connectionString As String = Module1.connString
+        Dim query As String = "UPDATE User SET Designation = 'Doctor' WHERE SID = @UserId"
+
+        Try
+            Using connection As New MySqlConnection(connString)
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@UserId", userId)
+                    connection.Open()
+                    Dim rowsAffected As Integer = command.ExecuteNonQuery()
+                    If rowsAffected > 0 Then
+                        Console.WriteLine("User designation updated successfully.")
+                        Return True
+                    Else
+                        Console.WriteLine("User with specified ID not found.")
+                        Return False
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("An error occurred: " & ex.Message)
+            Return False
+        End Try
+    End Function
+
 
     Private Function AddDoctorToTable(user_id As Integer) As Boolean
         ' Execute a SQL query to insert the doctor entry into the Doctors table
         Dim connectionString As String = Module1.connString
         'Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
         Dim query As String = "INSERT INTO Doctors (user_id, hos_id, prof_email, experience, speciality, salary, rating, total_ratings, visiting_time_start, visiting_time_end) VALUES (@user_id, @hos_id, @prof_email, @experience, @speciality, @salary, 0, 0, @visiting_time_start, @visiting_time_end)"
+
+        UpdateUserDesignationToDoctor(user_id)
 
         Using connection As New MySqlConnection(connectionString)
             Using command As New MySqlCommand(query, connection)

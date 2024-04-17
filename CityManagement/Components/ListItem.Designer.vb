@@ -30,7 +30,6 @@ Partial Class ListItem
         Label3 = New Label()
         PictureBox2 = New PictureBox()
         Rating1 = New Rating()
-        Label5 = New Label()
         Label6 = New Label()
         Label4 = New Label()
         Label7 = New Label()
@@ -87,7 +86,7 @@ Partial Class ListItem
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(210, 53)
         Label2.Name = "Label2"
-        Label2.Size = New Size(105, 25)
+        Label2.Size = New Size(102, 20)
         Label2.TabIndex = 3
         Label2.Text = "sakdsalkdjd"
         Label2.UseMnemonic = False
@@ -121,16 +120,6 @@ Partial Class ListItem
         Rating1.RatingValue = 5R
         Rating1.Size = New Size(35, 25)
         Rating1.TabIndex = 29
-        ' 
-        ' Label5
-        ' 
-        Label5.BackColor = Color.White
-        Label5.Cursor = Cursors.Hand
-        Label5.Image = Frame_1051
-        Label5.Location = New Point(683, 57)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(80, 34)
-        Label5.TabIndex = 30
         ' 
         ' Label6
         ' 
@@ -181,7 +170,6 @@ Partial Class ListItem
         Controls.Add(Label7)
         Controls.Add(Label4)
         Controls.Add(Label6)
-        Controls.Add(Label5)
         Controls.Add(Rating1)
         Controls.Add(PictureBox2)
         Controls.Add(Label3)
@@ -206,7 +194,6 @@ Partial Class ListItem
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Rating1 As Rating
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label

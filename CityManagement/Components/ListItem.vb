@@ -60,15 +60,6 @@ Public Class ListItem
         pictureBox.Region = New Region(path)
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Globals.chatsForm.Label2.Text = Label1.Text
-        Globals.Chatspage = Globals.chatsForm
-        Globals.Chatspage.PictureBox1.Image = PictureBox1.Image
-        Globals.ChatIdAsCitizen = Worker_ID
-        'MessageBox.Show(Globals.ChatIdAsCitizen)
-        Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
-        Globals.UrbanClapNavForm.ShowCurvedLabels_chats()
-    End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         ' Define the SQL query to insert into the serviceBooking table
@@ -115,7 +106,4 @@ Public Class ListItem
             End Try
         End If
     End Sub
-
-
-
 End Class

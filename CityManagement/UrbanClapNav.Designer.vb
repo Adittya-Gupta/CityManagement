@@ -69,6 +69,7 @@ Partial Class UrbanClapNav
         Button2.TabIndex = 2
         Button2.Text = "Chats"
         Button2.UseVisualStyleBackColor = False
+        Button2.Visible = False
         ' 
         ' CurvedLabel1
         ' 

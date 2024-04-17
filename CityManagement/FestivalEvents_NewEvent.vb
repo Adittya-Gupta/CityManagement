@@ -64,6 +64,11 @@ Public Class FestivalEvents_NewEvent
                 Return
             End If
 
+            If eventdate < DateTime.Now Then
+                MessageBox.Show("Date of event cannot be before current date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+
             ' You may add more validation checks here...
 
             conn.Open()

@@ -237,5 +237,11 @@ Public Class FestivalEvents_Participation2
         Next
     End Sub
 
-
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New FestivalEvents_EventDetails
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
 End Class

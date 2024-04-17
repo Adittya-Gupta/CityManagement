@@ -71,6 +71,7 @@ Public Class specialisation
 
     Private Sub Guna2GradientTileButton4_Click(sender As Object, e As EventArgs) Handles Guna2GradientTileButton4.Click
         Dim designation As String = GetUserDesignation(userID)
+        'MessageBox.Show(designation)
 
         ' Check the designation
         Select Case designation

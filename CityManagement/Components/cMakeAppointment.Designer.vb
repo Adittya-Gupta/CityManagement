@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class cMakeAppointment
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class cMakeAppointment
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cMakeAppointment))
@@ -47,7 +47,7 @@ Partial Class cMakeAppointment
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(66, 4)
+        Guna2PictureBox1.Location = New Point(78, 4)
         Guna2PictureBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
@@ -60,7 +60,7 @@ Partial Class cMakeAppointment
         ' 
         CurvedLabel5.AutoSize = True
         CurvedLabel5.CornerRadius = 10
-        CurvedLabel5.Font = New Font("Bahnschrift", 14F)
+        CurvedLabel5.Font = New Font("Bahnschrift", 14.0F)
         CurvedLabel5.Location = New Point(34, 188)
         CurvedLabel5.Name = "CurvedLabel5"
         CurvedLabel5.Size = New Size(213, 29)
@@ -186,7 +186,7 @@ Partial Class cMakeAppointment
         Controls.Add(Guna2PictureBox1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "cMakeAppointment"
-        Size = New Size(243, 411)
+        Size = New Size(270, 411)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

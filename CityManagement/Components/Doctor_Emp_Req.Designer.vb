@@ -124,7 +124,7 @@ Partial Class Doctor_Emp_Req
         Button4.ForeColor = Color.Transparent
         Button4.Location = New Point(442, 69)
         Button4.Name = "Button4"
-        Button4.Size = New Size(130, 45)
+        Button4.Size = New Size(146, 45)
         Button4.TabIndex = 30
         Button4.Text = "Resume.pdf"
         Button4.UseVisualStyleBackColor = False

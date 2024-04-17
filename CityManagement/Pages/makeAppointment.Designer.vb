@@ -67,7 +67,7 @@ Partial Class makeAppointment
         ComboBox2.FormattingEnabled = True
         ComboBox2.ImeMode = ImeMode.NoControl
         ComboBox2.ItemHeight = 31
-        ComboBox2.Items.AddRange(New Object() {"Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist", "", "Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
+        ComboBox2.Items.AddRange(New Object() {"Cardiology", "Orthopedics", "Psychiatrist", "Neurologist", "Ophthalmologist", "Dermatologist"})
         ComboBox2.Location = New Point(809, 82)
         ComboBox2.Margin = New Padding(3, 4, 3, 4)
         ComboBox2.Name = "ComboBox2"

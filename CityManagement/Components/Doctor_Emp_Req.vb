@@ -31,7 +31,7 @@ Public Class Doctor_Emp_Req
 
         ' Remove the entry from the database using the user ID
         Dim success = RemoveEntryFromDatabase(userID)
-        MsgBox(userID)
+        'MsgBox(userID)
 
         If success Then
             ' Insert the new doctor entry into the Doctors table
@@ -102,7 +102,7 @@ Public Class Doctor_Emp_Req
         Using connection As New MySqlConnection(connectionString)
             Using command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@user_id", user_id)
-                command.Parameters.AddWithValue("@hos_id", 1123) ' Default value
+                command.Parameters.AddWithValue("@hos_id", 20) ' Default value
                 command.Parameters.AddWithValue("@prof_email", "s.gosh@gamil.com") ' Default value
                 command.Parameters.AddWithValue("@experience", 3) ' Default value
                 command.Parameters.AddWithValue("@speciality", "Cardiology") ' Default value
@@ -139,16 +139,13 @@ Public Class Doctor_Emp_Req
         tempFilePath = Path.ChangeExtension(tempFilePath, "pdf") ' Change the file extension to .pdf
         File.WriteAllBytes(tempFilePath, _resumeData)
 
-        ' Specify the path to Microsoft Edge
-        Dim edgePath As String = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+        ' Specify the path to save the resume file
+        Dim saveFilePath As String = "..\..\..\MediaFiles\DocEmpReq\Resume.pdf"
 
-        ' Check if Microsoft Edge exists at the specified path
-        If File.Exists(edgePath) Then
-            ' Open the PDF file with Microsoft Edge
-            Process.Start(edgePath, tempFilePath)
-        Else
-            ' Display an error message if Microsoft Edge is not found
-            MessageBox.Show("Microsoft Edge is not installed on this computer.")
-        End If
+        ' Save the file
+        File.Copy(tempFilePath, saveFilePath, True)
+
+        MessageBox.Show("Resume file downloaded successfully to: " & saveFilePath)
     End Sub
+
 End Class

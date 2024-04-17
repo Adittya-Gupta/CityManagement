@@ -210,7 +210,7 @@ Public Class makeAppointment
                     componentCount += 1
 
                     ' If 4 components are reached, start a new row
-                    If componentCount >= 4 Then
+                    If componentCount >= 3 Then
                         yPos += cmake.Height + 10 ' Adjust Y position for the next row
                         componentCount = 0 ' Reset component count for the new row
                     End If
@@ -318,9 +318,12 @@ Public Class makeAppointment
                     Dim hour1 As Int32 = parsedTime.Hours
                     Dim min1 As Int32 = parsedTime.Minutes
 
+                    hour += (min + count * 20) \ 60
+                    min = (min + count * 20) Mod 60
 
-                    hour = (hour * 60 + (count) * 20) / 60
-                    min = (hour * 60 + (count) * 20) Mod 60
+                    ' If min exceeds 59, increment hour accordingly
+
+
 
                     Dim d_id As String = reader("doctor_id").ToString()
                     Dim uid As String = reader("user_id").ToString()

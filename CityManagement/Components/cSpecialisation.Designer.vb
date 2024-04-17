@@ -195,7 +195,7 @@ Partial Class cspecialisation
         Guna2PictureBox2.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(233, 119)
+        Guna2PictureBox2.Location = New Point(237, 118)
         Guna2PictureBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
         Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4

@@ -12,10 +12,14 @@
   </PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Components\Health_Doctor_Employment_Requests.Designer.vb" />
+	  <Compile Remove="Components\Health_Doctor_Employment_Requests.vb" />
+	  <Compile Remove="Doctor_Emp_Req.Designer.vb" />
 	  <Compile Remove="Doctor_Emp_Req.vb" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Remove="Components\Health_Doctor_Employment_Requests.resx" />
 	  <EmbeddedResource Remove="Doctor_Emp_Req.resx" />
 	</ItemGroup>
   <ItemGroup>
@@ -83,6 +87,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MediaFiles\DocEmpReq\" />
   </ItemGroup>
 
 </Project>

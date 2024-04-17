@@ -53,7 +53,13 @@ Public Class Health_Doctor_Employment_Requests
                         Dim name As String = reader("Name").ToString()
                         Dim hospital_id As Integer = Convert.ToInt32(reader("hospital_id"))
                         Dim dept As String = reader("dept").ToString()
-                        Dim resumeBytes As Byte() = DirectCast(reader("resume"), Byte())
+                        ' Check for DBNull for the "resume" field
+                        Dim resumeBytes As Byte()
+                        If Not reader.IsDBNull(reader.GetOrdinal("resume")) Then
+                            resumeBytes = DirectCast(reader("resume"), Byte())
+                        Else
+                            resumeBytes = New Byte() {} ' Set resumeBytes to an empty byte array or handle the DBNull case as needed
+                        End If
                         Dim [date] As Date = Convert.ToDateTime(reader("Date"))
 
                         ' Create Doctor_Emp_Req instance and add it to the ListView

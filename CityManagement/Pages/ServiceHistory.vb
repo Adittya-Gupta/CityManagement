@@ -213,9 +213,9 @@ Public Class ServiceHistory
         Finally
             Timer1.Enabled = True
             Debug.WriteLine("Service History Enabled")
-            UpdateUIWithFilteredBookings
+            UpdateUIWithFilteredBookings()
             ' Resume layout after initialization
-            Panel1.ResumeLayout
+            Panel1.ResumeLayout()
         End Try
 
     End Sub

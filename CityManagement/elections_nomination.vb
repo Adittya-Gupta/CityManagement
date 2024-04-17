@@ -148,10 +148,11 @@ Public Class elections_nomination
         'mypanel.panel1.Controls.Clear()
         'ChildForm2(Banking_Main)
         'To check if the current user has bank account
+        Dim currentUserBankAccountNumber As Integer
         Try
             conn.Open()
             ' Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
-            Dim query As String = "select Identification_Number from UserData where Identification_Number=@a"
+            Dim query As String = "select Identification_Number,Bank_Account_Number from bankUserData where Identification_Number=@a"
 
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
@@ -164,6 +165,8 @@ Public Class elections_nomination
                     mypanel.panel1.Controls.Add(form)
                     form.Show()
                     Exit Sub
+                Else
+                    currentUserBankAccountNumber = Convert.ToInt32(reader("Bank_Account_Number"))
                 End If
             End Using
         Catch ex As Exception
@@ -197,9 +200,8 @@ Public Class elections_nomination
         'To deduct the money
         Try
             conn.Open()
-            'Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
-            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
-
+            Dim query As String = "update bankUserData set Balance = Balance - 100 where Identification_Number=@a"
+            'Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser.ToString())
                 cmd.ExecuteNonQuery()
@@ -211,12 +213,30 @@ Public Class elections_nomination
         'To add money to the mayor john doe
         Try
             conn.Open()
-            'Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
-            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+            Dim query As String = "update bankUserData set Balance = Balance + 100 where Identification_Number=@a"
+            ' Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
 
             Using cmd As New MySqlCommand(query, conn)
                 Dim mayor_sid As Integer = 1
                 cmd.Parameters.AddWithValue("@a", mayor_sid.ToString())
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+
+        Try
+            conn.Open()
+            Dim query As String = "insert into banktransactionlog (Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) values (?,?,?,?,?,?)"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim currentTime As DateTime = DateTime.Now
+                cmd.Parameters.AddWithValue("?", currentUserBankAccountNumber)
+                cmd.Parameters.AddWithValue("?", 15)
+                cmd.Parameters.AddWithValue("?", "Money transfer via net banking")
+                cmd.Parameters.AddWithValue("?", 100)
+                cmd.Parameters.AddWithValue("?", currentTime)
+                cmd.Parameters.AddWithValue("?", "For Nomination")
                 cmd.ExecuteNonQuery()
             End Using
         Catch ex As Exception

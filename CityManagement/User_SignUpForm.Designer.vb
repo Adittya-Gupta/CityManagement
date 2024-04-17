@@ -102,7 +102,7 @@ Partial Class User_SignUpForm
         SignUpButton.Name = "SignUpButton"
         SignUpButton.Size = New Size(204, 68)
         SignUpButton.TabIndex = 11
-        SignUpButton.Text = "SIgn Up"
+        SignUpButton.Text = "Sign Up"
         SignUpButton.UseVisualStyleBackColor = True
         ' 
         ' NameTextBox

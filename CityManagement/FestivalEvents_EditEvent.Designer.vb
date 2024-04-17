@@ -107,7 +107,7 @@ Partial Class FestivalEvents_EditEvent
         ' 
         NameTextBox.Location = New Point(456, 189)
         NameTextBox.Name = "NameTextBox"
-        NameTextBox.Size = New Size(205, 29)
+        NameTextBox.Size = New Size(205, 27)
         NameTextBox.TabIndex = 28
         ' 
         ' Label4
@@ -134,7 +134,7 @@ Partial Class FestivalEvents_EditEvent
         ' 
         SpaceTextBox.Location = New Point(456, 274)
         SpaceTextBox.Name = "SpaceTextBox"
-        SpaceTextBox.Size = New Size(205, 29)
+        SpaceTextBox.Size = New Size(205, 27)
         SpaceTextBox.TabIndex = 32
         ' 
         ' Label6
@@ -182,7 +182,7 @@ Partial Class FestivalEvents_EditEvent
         DateTimePicker1.Format = DateTimePickerFormat.Short
         DateTimePicker1.Location = New Point(734, 189)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(205, 29)
+        DateTimePicker1.Size = New Size(205, 27)
         DateTimePicker1.TabIndex = 44
         ' 
         ' OpenFileDialog1
@@ -194,7 +194,7 @@ Partial Class FestivalEvents_EditEvent
         DateTimePicker2.Format = DateTimePickerFormat.Time
         DateTimePicker2.Location = New Point(735, 276)
         DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(202, 29)
+        DateTimePicker2.Size = New Size(202, 27)
         DateTimePicker2.TabIndex = 45
         ' 
         ' Panel1

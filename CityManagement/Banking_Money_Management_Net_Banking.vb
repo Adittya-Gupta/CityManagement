@@ -70,10 +70,11 @@ Public Class Banking_Money_Management_Net_Banking
                         reader.Close()
 
                         ' log
-                        query = "Insert Into BankTransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
-                        cmd = New MySqlCommand(query, conn)
-                        reader = cmd.ExecuteReader
-                        reader.Close()
+                        'query = "INSERT Into BankTransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & sqlDt.Rows(0)("Bank_Account_Number").ToString() & "','" & Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number").ToString() & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
+                        'cmd = New MySqlCommand(query, conn)
+                        'reader = cmd.ExecuteReader
+                        'reader.Close()
+
                         conn.Close()
                         'Money_Management_Final.Show()
                         ChildForm(Banking_Main.Panel1, Banking_Money_Management_Final)
@@ -82,6 +83,7 @@ Public Class Banking_Money_Management_Net_Banking
                 End If
             Catch ex As Exception
                 MessageBox.Show("Error: {0}", ex.Message)
+                'conn.Close()
             End Try
         End If
     End Sub

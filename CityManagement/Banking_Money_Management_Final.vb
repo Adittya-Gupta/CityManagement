@@ -23,7 +23,7 @@ Public Class Banking_Money_Management_Final
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Banking_Money_Management_Homepage.Close()
+        'Banking_Money_Management_Homepage.Close()
         If Global_Attributes.Go_Back = 0 Then
             Global_Attributes.Go_Back = 0
             ChildForm(Banking_Main.Panel1, Global_Attributes.Go_Back_Form)

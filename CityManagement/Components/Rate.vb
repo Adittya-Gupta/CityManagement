@@ -3,7 +3,7 @@
 Public Class Rate
     ' Public property to store the number of stars selected by the user
     Public Property SelectedStars As Integer
-
+    Public Property FinalValue As Double
     ' Private field to store the WorkerID
     Private workerID As Integer
 
@@ -19,9 +19,10 @@ Public Class Rate
             MessageBox.Show("Please select a rating between 1 and 5 stars.")
         Else
             SelectedStars = Star_Rating1._highlightedStars
+            Dim updatedRating As Double = UpdateRatingInDatabase()
+            Me.FinalValue = updatedRating
 
             ' Update the rating in the database
-            Dim updatedRating As Double = UpdateRatingInDatabase()
 
             ' Pass the updated rating to the parent form
             Me.DialogResult = DialogResult.OK
@@ -49,6 +50,7 @@ Public Class Rate
 
                 ' Create MySqlCommand
                 Using command As New MySqlCommand(query, connection)
+                    'MessageBox.Show(SelectedStars)
                     ' Add parameters
                     command.Parameters.AddWithValue("@SelectedStars", SelectedStars)
                     command.Parameters.AddWithValue("@WorkerID", workerID)
@@ -60,6 +62,7 @@ Public Class Rate
                         ' Convert the result to a double and assign it to updatedRating
                         updatedRating = Convert.ToDouble(result)
                     End If
+                    'MessageBox.Show(updatedRating)
                 End Using
                 connection.Close()
             End Using

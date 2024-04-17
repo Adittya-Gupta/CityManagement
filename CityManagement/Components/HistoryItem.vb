@@ -237,9 +237,10 @@ Public Class HistoryItem
                     Dim result As DialogResult = rateform.ShowDialog()
                     If result = DialogResult.OK Then
                         ' Get the selected stars count from the child form
-                        Dim selectedStarsCount As Integer = rateform.SelectedStars
+                        Dim finalrating As Double = rateform.FinalValue
+                        'MessageBox.Show(finalrating)
                         ' Handle the action
-                        Rating1.RatingValue = selectedStarsCount
+                        Rating1.RatingValue = finalrating
                         HandleAction(CustomerAction.Rate)
                     End If
                 End Using

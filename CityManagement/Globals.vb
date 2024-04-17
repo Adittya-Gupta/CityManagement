@@ -1,6 +1,7 @@
 ﻿Public Class Globals
     'Global Variables and  Events
     Public Shared Property UserId As Integer = Module1.CurrUserSID
+    Public Shared Property WorkerId As Integer = -2
     Public Shared Property connectionstring As String = GlobalConnString.str
 
     Private Shared _ChatIdAsCitizen As Integer = 1
@@ -75,6 +76,9 @@
         Job_Selected = "1"
         OrgId = 1
 
+        ' Get the workerID of the user
+        WorkerId = GetWorkerIDByUserID(UserId)
+        MessageBox.Show(WorkerId)
         ' Reset forms
         listofServicesForm.Dispose()
         ServiceHistoryForm.Dispose()
@@ -100,4 +104,33 @@
         HomePage = listofServicesForm
         Chatspage = listofChatsForm
     End Sub
+    Public Shared Function GetWorkerIDByUserID(userID As Integer) As Integer
+        Dim workerID As Integer = -1
+
+        ' Define the SQL query to retrieve the workerID based on the userID
+        Dim query As String = "SELECT workerID FROM serviceWorkers WHERE userID = @userID"
+
+        ' Create a MySQL connection
+        Using connection As New MySqlConnection(connectionstring)
+            ' Open the connection
+            connection.Open()
+
+            ' Create MySqlCommand
+            Using command As New MySqlCommand(query, connection)
+                ' Add parameters
+                command.Parameters.AddWithValue("@userID", userID)
+
+                ' Execute the command and get the workerID
+                Dim result As Object = command.ExecuteScalar()
+
+                ' Check if the result is not null
+                If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                    workerID = Convert.ToInt32(result)
+                End If
+            End Using
+        End Using
+
+        Return workerID
+    End Function
+
 End Class

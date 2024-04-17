@@ -59,6 +59,7 @@ Public Class ServiceHistory
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Enabled = False
+        Debug.WriteLine("Service History disabled")
         'MessageBox.Show("H I")
         ' Define the SQL query to fetch count of each status for a user
         Dim countQuery As String = "SELECT status, COUNT(*) FROM serviceBooking SB WHERE SB.clientID = @UserID GROUP BY status"
@@ -112,11 +113,11 @@ Public Class ServiceHistory
             Timer1.Interval = 5000
         Else
             ' If count has not changed, double the interval up to 128 seconds
-            If Timer1.Interval < 128000 Then
+            If Timer1.Interval < 10000 Then
                 Timer1.Interval *= 2
             End If
         End If
-
+        Debug.WriteLine("Service History Enabled")
         Timer1.Enabled = True
     End Sub
 
@@ -124,6 +125,7 @@ Public Class ServiceHistory
     Public Sub ServiceHistory_Load()
         InitializeStatusCount()
         Timer1.Enabled = False
+        Debug.WriteLine("Service History disabled")
         Panel1.Controls.Clear()
         OriginalBookingsList.Clear()
         HistoryCount = 0
@@ -205,11 +207,12 @@ Public Class ServiceHistory
             End Using
         Catch ex As Exception
             Timer1.Enabled = False
+            Debug.WriteLine("Service History disabled")
             ' Handle any exceptions that occur during database operations
             MessageBox.Show("An error occurred while loading service history: " & ex.Message)
         Finally
             Timer1.Enabled = True
-
+            Debug.WriteLine("Service History Enabled")
             UpdateUIWithFilteredBookings()
             ' Resume layout after initialization
             Panel1.ResumeLayout()
@@ -349,6 +352,7 @@ Public Class ServiceHistory
         ' Get the search query from the TextBox
         Dim searchQuery As String = TextBox1.Text.Trim()
         Timer1.Enabled = False
+        Debug.WriteLine("Service History disabled")
         ' Acquire the semaphore to avoid concurrent access to OriginalBookingsList
         semaphore.WaitOne()
         Dim topPosition As Integer = 0
@@ -377,6 +381,6 @@ Public Class ServiceHistory
             semaphore.Release()
         End Try
         Timer1.Enabled = True
-
+        Debug.WriteLine("Service History Enabled")
     End Sub
 End Class

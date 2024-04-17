@@ -79,6 +79,7 @@ Public Class ListofWorkers_Citizen
                     If Timer1.Interval < 128000 Then
                         Timer1.Interval *= 2
                     End If
+                    Debug.WriteLine("Worker Count" & WorkerCount)
                 End If
             End Using
         End Using
@@ -137,6 +138,7 @@ Public Class ListofWorkers_Citizen
                             Dim worker As New Worker(workerId, workerName, orgLocation, Double.Parse(workerRating), workerNumberOfRatings, workerPhoneNumber, workerPic)
 
                             WorkerCount += 1
+                            Debug.WriteLine("Worker Count" & WorkerCount)
                             ' Add worker to original list
                             OriginalWorkersList.Add(worker)
                         End While
@@ -182,7 +184,7 @@ Public Class ListofWorkers_Citizen
 
             ' Set the top position of the ListItem
             listItem.Top = topPosition
-
+            Debug.WriteLine("Updated UI " & topPosition)
             ' Add the ListItem to Panel1
             Panel1.Controls.Add(listItem)
 

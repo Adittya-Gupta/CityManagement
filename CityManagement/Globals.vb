@@ -78,7 +78,7 @@
 
         ' Get the workerID of the user
         WorkerId = GetWorkerIDByUserID(UserId)
-        MessageBox.Show(WorkerId)
+        'MessageBox.Show(WorkerId)
         ' Reset forms
         listofServicesForm.Dispose()
         ServiceHistoryForm.Dispose()

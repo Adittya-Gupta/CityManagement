@@ -22,10 +22,10 @@ Partial Class OrgHeadWorkSection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         CurvedLabel1 = New CurvedLabel()
@@ -35,7 +35,7 @@ Partial Class OrgHeadWorkSection
         ' 
         ' Guna2Button1
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges1
+        Guna2Button1.CustomizableEdges = CustomizableEdges9
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -44,14 +44,14 @@ Partial Class OrgHeadWorkSection
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Location = New Point(101, 29)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2Button1.Size = New Size(225, 56)
         Guna2Button1.TabIndex = 0
         Guna2Button1.Text = "View Employees"
         ' 
         ' Guna2Button2
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges3
+        Guna2Button2.CustomizableEdges = CustomizableEdges11
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -60,7 +60,7 @@ Partial Class OrgHeadWorkSection
         Guna2Button2.ForeColor = Color.White
         Guna2Button2.Location = New Point(790, 29)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button2.Size = New Size(225, 56)
         Guna2Button2.TabIndex = 1
         Guna2Button2.Text = "Employment Requests"
@@ -78,6 +78,7 @@ Partial Class OrgHeadWorkSection
         ' 
         ' Panel1
         ' 
+        Panel1.AutoSize = True
         Panel1.Location = New Point(101, 184)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(914, 760)
@@ -96,6 +97,7 @@ Partial Class OrgHeadWorkSection
         ' OrgHeadWorkSection
         ' 
         AutoScaleMode = AutoScaleMode.None
+        AutoScroll = True
         ClientSize = New Size(1107, 687)
         ControlBox = False
         Controls.Add(Label1)

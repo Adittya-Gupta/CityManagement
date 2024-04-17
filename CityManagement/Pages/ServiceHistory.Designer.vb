@@ -56,7 +56,6 @@ Partial Class ServiceHistory
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(256, 34)
         TextBox1.TabIndex = 8
-        TextBox1.Text = "Search History"
         ' 
         ' Label2
         ' 

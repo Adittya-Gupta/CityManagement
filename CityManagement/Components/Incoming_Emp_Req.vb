@@ -136,9 +136,9 @@ Public Class Incoming_Emp_Req
                     cmd3.Parameters.Add("@A", MySqlDbType.Int32).Value = _userID
                     cmd3.Parameters.Add("@B", MySqlDbType.Int32).Value = _orgID
                     cmd3.Parameters.Add("@C", MySqlDbType.Int32).Value = 0
-                    cmd3.Parameters.Add("@D", MySqlDbType.Int32).Value = 0
+                    cmd3.Parameters.Add("@D", MySqlDbType.Int32).Value = 3.0
                     cmd3.Parameters.Add("@E", MySqlDbType.VarChar).Value = _prof_email
-                    cmd3.Parameters.Add("@F", MySqlDbType.Int32).Value = 0
+                    cmd3.Parameters.Add("@F", MySqlDbType.Int32).Value = 1
                     cmd3.Parameters.Add("@G", MySqlDbType.VarChar).Value = _contactDetails
                     cmd3.Parameters.Add("@H", MySqlDbType.VarChar).Value = _address
                     If PictureBox1.Image IsNot Nothing Then

@@ -183,7 +183,7 @@ Public Class ForgotPassword
                 Form.StartPosition = FormStartPosition.Manual
                 Form.Location = Me.Location ' Set the location of the new form to the current form's location
                 Form.Show()
-                Me.Close()
+                Me.Hide()
             ElseIf elapsedTime = 0 Then
                 MessageBox.Show("Please click on send code to get a code")
                 Return

@@ -60,7 +60,6 @@ Partial Class LIstofWorkers_Citizen
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(256, 34)
         TextBox1.TabIndex = 2
-        TextBox1.Text = "Search for Vendors"
         ' 
         ' Label3
         ' 

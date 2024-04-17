@@ -36,10 +36,9 @@ Partial Class courserequests_page
         ' 
         Button2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = SystemColors.ActiveCaptionText
-        Button2.Location = New Point(368, 28)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(421, 37)
         Button2.Name = "Button2"
-        Button2.Size = New Size(99, 29)
+        Button2.Size = New Size(113, 39)
         Button2.TabIndex = 49
         Button2.Text = "Requests"
         Button2.UseVisualStyleBackColor = True
@@ -48,10 +47,9 @@ Partial Class courserequests_page
         ' 
         Education.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Education.ForeColor = SystemColors.ActiveBorder
-        Education.Location = New Point(30, 27)
-        Education.Margin = New Padding(3, 2, 3, 2)
+        Education.Location = New Point(34, 36)
         Education.Name = "Education"
-        Education.Size = New Size(122, 31)
+        Education.Size = New Size(139, 41)
         Education.TabIndex = 50
         Education.Text = "Education"
         Education.UseVisualStyleBackColor = True
@@ -60,10 +58,9 @@ Partial Class courserequests_page
         ' 
         Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = SystemColors.ActiveBorder
-        Button1.Location = New Point(177, 27)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(202, 36)
         Button1.Name = "Button1"
-        Button1.Size = New Size(166, 31)
+        Button1.Size = New Size(190, 41)
         Button1.TabIndex = 51
         Button1.Text = "Professor Dashboard"
         Button1.UseVisualStyleBackColor = True
@@ -71,20 +68,20 @@ Partial Class courserequests_page
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(156, 36)
+        Label1.Location = New Point(178, 48)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(15, 15)
+        Label1.Size = New Size(19, 20)
         Label1.TabIndex = 52
         Label1.Text = ">"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(347, 36)
+        Label2.Location = New Point(397, 48)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(15, 15)
+        Label2.Size = New Size(19, 20)
         Label2.TabIndex = 53
         Label2.Text = ">"
         ' 
@@ -92,26 +89,24 @@ Partial Class courserequests_page
         ' 
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(758, 27)
-        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Location = New Point(866, 36)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(159, 117)
+        PictureBox2.Size = New Size(182, 156)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 54
         PictureBox2.TabStop = False
         ' 
         ' courserequests_page
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(953, 535)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1089, 713)
         Controls.Add(PictureBox2)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(Button1)
         Controls.Add(Education)
         Controls.Add(Button2)
-        Margin = New Padding(3, 2, 3, 2)
+        FormBorderStyle = FormBorderStyle.None
         Name = "courserequests_page"
         Text = "courserequests_page"
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()

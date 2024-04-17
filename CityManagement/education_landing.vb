@@ -57,7 +57,7 @@ Public Class education_landing
     End Sub
 
     Private Function GetDesignation(userid As Integer) As String
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
         Dim query As String = "SELECT Designation FROM User WHERE SID = @userid"
 
         Dim designation As String = ""

@@ -20,7 +20,7 @@ Public Class student_dashboard
         userid = id
     End Sub
 
-    Dim connstrig As String = "server= 172.16.114.244;userid=admin;password=nimda;database=smart_city_management; sslmode=none"
+    Dim connstrig As String = Module1.connString
     Dim conn As New MySqlConnection(connstrig)
     Dim conn1 As New MySqlConnection(connstrig)
     Dim vertical = 20

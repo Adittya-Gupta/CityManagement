@@ -280,7 +280,7 @@ Public Class addcourse_page
                 Return
             End If
         End Using
-        Dim connstrig As String = "server= 172.16.114.244;userid=admin;password=nimda;database=smart_city_management; sslmode=none"
+        Dim connstrig As String = Module1.connString
         Dim conn As New MySqlConnection(connstrig)
         Try
             conn.Open()

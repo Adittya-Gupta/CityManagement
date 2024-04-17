@@ -3,9 +3,9 @@ Imports MySql.Data.MySqlClient
 Imports System.IO
 
 Public Class allcourses_page
-    Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
-
+    Public Property CourseID As Integer
     Private Const PanelWidth As Integer = 250 ' Width of each panel
     Private Const PanelHeight As Integer = 300 ' Height of each panel
     Private Const PhotoSize As Integer = 150 ' Size of the course photo
@@ -32,7 +32,7 @@ Public Class allcourses_page
 
         Try
             conn.Open()
-            Dim query As String = "SELECT c.course_photo, c.course_name, i.name , i.pic FROM Courses c INNER JOIN Institutes i ON c.user_id = i.Owner_id"
+            Dim query As String = "SELECT c.course_id, c.course_photo, c.course_name, i.name , i.pic FROM Courses c INNER JOIN Institutes i ON c.user_id = i.Owner_id"
             Dim cmd As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -45,6 +45,7 @@ Public Class allcourses_page
                     panelIndex = 0
                 End If
 
+                CourseID = reader.GetInt32("course_id")
                 Dim coursePhoto As Byte() = DirectCast(reader("course_photo"), Byte())
                 Dim courseTitle As String = reader("course_name").ToString()
                 Dim instituteName As String = reader("name").ToString()
@@ -57,6 +58,9 @@ Public Class allcourses_page
                 panel.BackColor = Color.WhiteSmoke
                 AddHandler panel.MouseEnter, AddressOf Panel_MouseEnter
                 AddHandler panel.MouseLeave, AddressOf Panel_MouseLeave
+
+                ' Store course_id in the Tag property of the panel
+                panel.Tag = courseId
 
                 ' PictureBox for course photo
                 Dim coursePictureBox As New PictureBox()
@@ -131,14 +135,12 @@ Public Class allcourses_page
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
         mypanel.panel1.Controls.Clear()
         Dim form As New student_dashboard()
         form.SetUserID(userid)
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
-
     End Sub
 
     ' Event handler for panel mouse enter
@@ -163,11 +165,21 @@ Public Class allcourses_page
     End Sub
 
     Private Sub Panel_Click(sender As Object, e As EventArgs)
+        ' Retrieve the course_id from the clicked panel's Tag property
+        Dim panel As Panel = DirectCast(sender, Panel)
+        Dim courseId As Integer = CInt(panel.Tag)
+
+        ' Open specific_course form and pass the course_id
         mypanel.panel1.Controls.Clear()
-        Dim form As New specific_course()
+        Dim form As New specific_course(courseId)
         form.SetUserID(userid)
+
+        ' Assign the course_id using the public property
+        courseId = courseId
+
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
+
 End Class

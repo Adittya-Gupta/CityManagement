@@ -1,15 +1,27 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class courserequests_page
+
+    Private _courseId As Integer
+
+    ' Constructor to accept course_id as a parameter
+    Public Sub New(courseId As Integer)
+        InitializeComponent()
+        _courseId = courseId
+    End Sub
     Private Sub courserequests_page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
+
+        ' courseId is the course_id passed from another form
+        Dim courseId As Integer = _courseId ' Get the course_id from wherever it is passed
 
         Try
             Using conn As New MySqlConnection(connString)
                 conn.Open()
 
-                Dim query As String = "SELECT course_id, user_id FROM CourseRequests WHERE request_status = 0"
+                Dim query As String = "SELECT course_id, user_id FROM CourseRequests WHERE request_status = 0 AND course_id = @courseId"
                 Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@courseId", courseId)
                     Using reader As MySqlDataReader = cmd.ExecuteReader()
                         ' Calculate the vertical position for the first panel to center it vertically
                         Dim yPos As Integer = (Me.ClientSize.Height - 100) \ 2
@@ -55,10 +67,12 @@ Public Class courserequests_page
                             Dim acceptButton As New Button()
                             acceptButton.Text = "Accept"
                             acceptButton.Location = New Point(60, 50)
+                            acceptButton.Size = New Size(100, 30) ' Set the size here
                             ' Store the course_id and user_id in the button's Tag property
                             acceptButton.Tag = New Tuple(Of Integer, Integer)(reader("course_id"), reader("user_id"))
                             AddHandler acceptButton.Click, AddressOf AcceptButtonClick
                             requestPanel.Controls.Add(acceptButton)
+
 
                             ' Add the request panel to the form
                             Me.Controls.Add(requestPanel)
@@ -80,7 +94,7 @@ Public Class courserequests_page
         Try
             ' Check if the request has already been accepted
             Dim isAlreadyAccepted As Boolean = False
-            Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+            Dim connString As String = Module1.connString
             Using conn As New MySqlConnection(connString)
                 conn.Open()
                 Dim query As String = "SELECT COUNT(*) FROM CourseRequests WHERE course_id = @courseId AND user_id = @userId AND request_status = 1"

@@ -11,7 +11,7 @@ Public Class my_learning
 
     Private Sub specific_coursepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Connect to the database
-        Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connString As String = Module1.connString
 
         Try
             Using conn As New MySqlConnection(connString)

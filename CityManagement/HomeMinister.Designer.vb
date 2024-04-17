@@ -83,6 +83,7 @@ Partial Class HomeMinister
         Controls.Add(Label1)
         Controls.Add(Panel1)
         DoubleBuffered = True
+        FormBorderStyle = FormBorderStyle.None
         Name = "HomeMinister"
         Text = "HomeMinister"
         ResumeLayout(False)

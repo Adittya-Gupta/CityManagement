@@ -57,7 +57,7 @@ Partial Class HistoryItem
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = download
+        PictureBox1.Image = Mask_group
         PictureBox1.Location = New Point(21, 17)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(65, 65)

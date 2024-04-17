@@ -89,7 +89,7 @@ Partial Class Chats
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = download
+        PictureBox1.BackgroundImage = Mask_group
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(36, 13)
         PictureBox1.Name = "PictureBox1"

@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports System.IO
 Imports System.Windows.Media.Effects
-
 Public Class ChatElement
     Private Sub Label1_Paint(sender As Object, e As PaintEventArgs) Handles CurvedLabel1.Paint
         ' Get the graphics object
@@ -29,9 +29,12 @@ Public Class ChatElement
         ' Fill the rectangle with the gradient brush
         g.FillEllipse(brush, center.X - diagonalLength / 2, center.Y - diagonalLength / 2, 2 * diagonalLength, 2 * diagonalLength)
     End Sub
-    Public Sub New(ByVal labelText As String, Optional ByVal specificDateTime As DateTime = Nothing)
+    Public Sub New(ByVal labelText As String, Optional ByVal specificDateTime As DateTime = Nothing, Optional ByVal imageBytes As Byte() = Nothing)
         InitializeComponent()
-
+        PictureBox1.Image = Globals.chatsForm.PictureBox1.Image
+        If (PictureBox1.Image IsNot Nothing) Then
+            'Debug.WriteLine("An error occurred:  Listitem22222222222222211")
+        End If
         ' Set the text for the CurvedLabel
         CurvedLabel1.Text = labelText
 
@@ -39,6 +42,17 @@ Public Class ChatElement
         If specificDateTime = Nothing Then
             specificDateTime = DateTime.Now ' Set default value to current date time
         End If
+        ' Set the image for PictureBox1 if imageBytes are provided
+        If imageBytes IsNot Nothing Then
+            Try
+                Using stream As New MemoryStream(imageBytes)
+                    PictureBox1.Image = Image.FromStream(stream)
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error loading image: " & ex.Message)
+            End Try
+        End If
+
         Label1.Text = specificDateTime.ToString("dd MMMM") & vbCrLf & specificDateTime.ToString("HH:mm")
         ' Adjust the size of the label based on the text
         AdjustLabelSize(CurvedLabel1, labelText)

@@ -1,11 +1,19 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports System.IO
 
 Public Class Chatlistitem
     Public Worker_id As Integer
     'Constructor
-    Public Sub New(Optional ByVal ID As Integer = 1, Optional ByVal name As String = "Default Name", Optional ByVal lastmessage As String = "Sure What time works for you?", Optional ByVal unreadcount As Integer = 0)
+    Public Sub New(
+    Optional ByVal ID As Integer = 1,
+    Optional ByVal name As String = "Default Name",
+    Optional ByVal lastmessage As String = "Sure What time works for you?",
+    Optional ByVal unreadcount As Integer = 0,
+    Optional ByVal imageBytes As Byte() = Nothing)
+
         ' This call is required by the designer.
         InitializeComponent()
+
         ' Set the values to the controls
         Worker_id = ID
         Label1.Text = name
@@ -25,9 +33,22 @@ Public Class Chatlistitem
             Label3.Show()
         End If
 
+        ' Set the image for PictureBox1 if imageBytes are provided
+        If imageBytes IsNot Nothing Then
+            Debug.WriteLine("An error occurred:  Listchatitem")
+            Try
+                Using stream As New MemoryStream(imageBytes)
+                    PictureBox1.Image = Image.FromStream(stream)
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error loading image: " & ex.Message)
+            End Try
+        End If
+
         ' Make the PictureBox round
         MakePictureBoxRound(PictureBox1)
     End Sub
+
 
     Private Sub MakePictureBoxRound(pictureBox As PictureBox)
         ' Create a GraphicsPath to define a circle
@@ -40,6 +61,7 @@ Public Class Chatlistitem
 
     Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click, Label1.Click, Label2.Click, PictureBox1.Click, Label3.Click
         Globals.ChatIdAsCitizen = Worker_id
+
         Try
             ' Create a MySQL connection
             Using connection As New MySqlConnection(Globals.connectionstring)
@@ -67,8 +89,10 @@ Public Class Chatlistitem
             MessageBox.Show("Error occurred while updating Seen status: " & ex.Message)
         Finally
             Globals.chatsForm.Label2.Text = Label1.Text
-            Globals.Chatspage = Globals.chatsForm
-            Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.Chatspage)
+            Globals.chatsForm.PictureBox1.Image = PictureBox1.Image
+            MessageBox.Show(Globals.ChatIdAsCitizen)
+            'Globals.Chatspage.PictureBox1.Image = PictureBox1.Image
+            Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.chatsForm)
         End Try
     End Sub
 

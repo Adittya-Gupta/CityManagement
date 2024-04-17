@@ -7,6 +7,8 @@ Public Class Chats
         Public Property ChatID As Integer
         Public Property SentBy As Integer
         Public Property Seen As Integer
+
+        Public Property Image As Byte()
     End Class
 
     Public username As String
@@ -14,7 +16,6 @@ Public Class Chats
     Private lastMessageID As Integer = -1
     ' Declare a list to store chat information
     Private chatList As New List(Of ChatInfo)()
-
 
     Public Sub New(Optional ByVal Username As String = "John Doe")
         InitializeComponent()
@@ -42,7 +43,7 @@ Public Class Chats
 
     Private Sub LoadChatMessages()
         'MessageBox.Show("Loading chat messages")
-        Label2.Text = Globals.ChatIdAsCitizen
+        'Label2.Text = Globals.ChatIdAsCitizen
         Panel1.Controls.Clear()
         ' Define the SQL query to retrieve chat messages
         Dim query As String = "SELECT chatID, Content, Sent_Time, Recieving_Time, SentBy, Seen FROM Chats WHERE userID = @userID AND workerID = @workerID"
@@ -76,7 +77,7 @@ Public Class Chats
                         'Dim receivedTime As DateTime = If(isSentByWorker = 1 & seen = 0, DateTime.Now, Convert.ToDateTime(reader("Recieving_Time")))
 
                         ' Create a new ChatElement with the message content and sent time
-                        Dim newChatElement As New ChatElement(content, sentTime)
+                        Dim newChatElement As New ChatElement(content, sentTime,)
                         ' Add chat information to the chatList
                         Dim chatInfo As New ChatInfo()
                         chatInfo.ChatID = Convert.ToInt32(reader("chatID"))
@@ -393,9 +394,5 @@ Public Class Chats
 
         ' Fill rectangle with gradient brush
         e.Graphics.FillRectangle(brush, rect)
-    End Sub
-
-    Private Sub CurvedLabel1_Click(sender As Object, e As EventArgs) Handles CurvedLabel1.Click
-
     End Sub
 End Class

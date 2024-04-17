@@ -25,9 +25,10 @@ Public Class ListOfChats
         Dim query As String = "SELECT NameWorkerCount.WorkerID AS WorkerID,
                                         NameWorkerCount.WorkerName AS WorkerName,
                                         NameWorkerCount.unread_messages AS unread_messages,
-                                        LastMessage.LastMessage AS last_message
+                                        LastMessage.LastMessage AS last_message,
+                                        NameWorkerCount.ProfilePic AS Profile
                                 FROM (
-                                    SELECT SW.workerID, U.Name AS workerName, COUNT(C.chatID) AS unread_messages
+                                    SELECT SW.workerID, U.Name AS workerName, COUNT(C.chatID) AS unread_messages, U.ProfilePic AS ProfilePic
                                     FROM serviceWorkers SW 
                                     LEFT JOIN Chats C ON C.workerID = SW.workerID AND C.SentBy = 1 AND C.Seen = 0 AND C.userID = @userID
                                     JOIN User U ON SW.userID = U.SID 
@@ -58,9 +59,12 @@ Public Class ListOfChats
                         Dim workerName As String = reader("WorkerName").ToString()
                         Dim unreadMessages As Integer = Convert.ToInt32(reader("unread_messages"))
                         Dim lastMessage As String = reader("last_message").ToString()
-
+                        Dim workerPic As Byte() = Nothing
+                        If Not reader.IsDBNull(reader.GetOrdinal("Profile")) Then
+                            workerPic = DirectCast(reader("Profile"), Byte())
+                        End If
                         ' Create a new ChatListItem
-                        Dim chatListItem As New Chatlistitem(workerId, workerName, lastMessage, unreadMessages)
+                        Dim chatListItem As New Chatlistitem(workerId, workerName, lastMessage, unreadMessages, workerPic)
 
                         ' Add the ChatListItem to the appropriate panel if there are unread messages
                         If unreadMessages = 0 Then

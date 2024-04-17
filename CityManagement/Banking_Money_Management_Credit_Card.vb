@@ -85,7 +85,7 @@ Public Class Banking_Money_Management_Credit_Card
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM BankCreditDebitCard Where CardNumber = '" & spaced_card & "' AND Cvv = " & cvv & " AND Type = 'CREDIT' AND Expiry_Date = '" & expiry & "' ;"
+                Dim query = "SELECT * FROM BankCreditDebitCard Where CardNumber = '" & card & "' AND Cvv = " & cvv & " AND Type = 'CREDIT' AND Expiry_Date = '" & expiry & "' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 Dim sqlDt As New DataTable
@@ -97,7 +97,7 @@ Public Class Banking_Money_Management_Credit_Card
                     MessageBox.Show("Wrong Card Details.")
                 Else
                     conn.Open()
-                    query = "SELECT * FROM BankUserData Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                    query = "SELECT * FROM BankUserData Where bank_username = '" & CType(sqlDt.Rows(0)("bank_username"), String) & "' ;"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader
                     Dim sqlDt2 As New DataTable

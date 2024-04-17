@@ -19,7 +19,7 @@ Public Class student_dashboard
     Public Sub SetUserID(id As Integer)
         userid = id
     End Sub
-
+    Dim courseId As Integer
     Dim connstrig As String = Module1.connString
     Dim conn As New MySqlConnection(connstrig)
     Dim conn1 As New MySqlConnection(connstrig)
@@ -66,23 +66,23 @@ Public Class student_dashboard
         cr.user_id = @userid"
 
             Dim query As String = "
-            SELECT 
-                CourseRequests.course_id, 
-                 CourseRequests.paymemt_status,
-                Courses.course_photo, 
-                Courses.course_name, 
-                 Courses.course_id,
-                CourseProgress.no_of_sec_completed, 
-                Courses.sections
-            FROM 
-                CourseRequests
-            JOIN 
-                Courses ON CourseRequests.course_id = Courses.course_id
-            LEFT JOIN 
-                CourseProgress  ON CourseRequests.course_id = CourseProgress.course_id
-            WHERE 
-                CourseRequests.request_status = 1 
-                AND CourseRequests.user_id = @userid"
+    SELECT 
+        CourseRequests.course_id, 
+        CourseRequests.paymemt_status,
+        Courses.course_photo, 
+        Courses.course_name, 
+        Courses.course_id,
+        CourseProgress.no_of_sec_completed, 
+        Courses.sections
+    FROM 
+        CourseRequests
+    JOIN 
+        Courses ON CourseRequests.course_id = Courses.course_id
+    LEFT JOIN 
+        CourseProgress  ON CourseRequests.course_id = CourseProgress.course_id
+    WHERE 
+        CourseRequests.request_status = 1 
+        AND CourseRequests.user_id = @userid"
 
 
             Using command As New MySqlCommand(query, conn)
@@ -90,7 +90,7 @@ Public Class student_dashboard
                 Using reader As MySqlDataReader = command.ExecuteReader()
                     While reader.Read()
                         If (Convert.ToDouble(reader("paymemt_status"))) = 1 Then
-                            Dim courseId As Integer = reader.GetInt32("course_id")
+                            courseId = reader.GetInt32("course_id")
                             Dim groupBox As New GroupBox()
                             groupBox.BackColor = ColorTranslator.FromHtml("#F5F5F5")
                             groupBox.Size = New Size(330, 100)
@@ -137,7 +137,8 @@ Public Class student_dashboard
                             groupBox.Controls.Add(label)
                             AddHandler groupBox.MouseEnter, AddressOf GroupBox_MouseEnter
                             AddHandler groupBox.MouseLeave, AddressOf GroupBox_MouseLeave
-                            AddHandler btn.Click, AddressOf resume_click
+                            AddHandler btn.Click, Sub() resume_click(courseId)
+
 
                             If length < 200 Then
                                 Me.Controls.Add(groupBox)
@@ -365,14 +366,15 @@ Public Class student_dashboard
         Dim groupBox As GroupBox = DirectCast(sender, GroupBox)
         groupBox.BackColor = SystemColors.Control ' Change back to default color or desired color
     End Sub
-    Private Sub resume_click()
+    Private Sub resume_click(courseId As Integer)
         mypanel.panel1.Controls.Clear()
-        Dim form As New my_learning()
+        Dim form As New my_learning(courseId)
         ' form.SetUserID(userid)
         form.TopLevel = False
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
+
     Private Sub b1_Click(sender As Object, e As EventArgs) Handles b1.Click
         mypanel.panel1.Controls.Clear()
         Dim form As New allcourses_page()

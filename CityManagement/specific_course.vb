@@ -23,7 +23,7 @@ Public Class specific_course
         Try
             conn.Open()
 
-            Dim query As String = "SELECT course_name, course_description, course_photo, no_of_studenroll FROM Courses WHERE course_id = " & _courseId
+            Dim query As String = "SELECT c.course_name, c.course_description, c.course_photo, c.no_of_studenroll, u.Name as UserName FROM Courses c INNER JOIN User u ON c.user_id = u.SID WHERE c.course_id = " & _courseId
             Dim cmd As New MySqlCommand(query, conn)
 
             Using reader As MySqlDataReader = cmd.ExecuteReader()
@@ -40,6 +40,7 @@ Public Class specific_course
                     End If
                     PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
                     Label1.Text = reader("no_of_studenroll").ToString()
+                    Label2.Text = reader("UserName").ToString() ' Display user name
                 End If
             End Using
 

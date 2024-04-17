@@ -97,7 +97,7 @@ Partial Class specific_course
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Location = New Point(736, 543)
+        Label2.Location = New Point(735, 534)
         Label2.Name = "Label2"
         Label2.Size = New Size(53, 20)
         Label2.TabIndex = 63

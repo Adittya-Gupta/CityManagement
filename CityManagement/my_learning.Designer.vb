@@ -82,17 +82,17 @@ Partial Class my_learning
         Label2.TabIndex = 51
         Label2.Text = ">"
         ' 
-        ' specific_coursepage
+        ' my_learning
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         ClientSize = New Size(1089, 713)
         Controls.Add(Label2)
         Controls.Add(Button2)
         Controls.Add(Label1)
         Controls.Add(Button1)
         Controls.Add(Education)
-        Name = "specific_coursepage"
+        FormBorderStyle = FormBorderStyle.None
+        Name = "my_learning"
         Text = "specific_coursepage"
         ResumeLayout(False)
         PerformLayout()

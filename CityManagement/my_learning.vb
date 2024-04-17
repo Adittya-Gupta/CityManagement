@@ -9,18 +9,30 @@ Public Class my_learning
     Private videoUrls As New List(Of String)
     Private currentVideoIndex As Integer = 0
 
+    Private courseId As Integer ' Variable to hold the course ID
+
+    ' Constructor with courseId argument
+    Public Sub New(courseId As Integer)
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Initialize courseId
+        Me.courseId = courseId
+    End Sub
     Private Sub specific_coursepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Connect to the database
         Dim connString As String = Module1.connString
-
+        MessageBox.Show(courseId)
         Try
             Using conn As New MySqlConnection(connString)
                 conn.Open()
 
-                ' Fetch course data from courses and CourseData tables
+                ' Fetch course data for the specific courseId from courses and CourseData tables
                 Dim query As String = "SELECT c.course_name, c.sections, cd.section_id, cd.section_description, cd.section_video " &
-                                      "FROM Courses c INNER JOIN CourseData cd ON c.course_id = cd.course_id"
+                                      "FROM Courses c INNER JOIN CourseData cd ON c.course_id = cd.course_id " &
+                                      "WHERE c.course_id = @courseId" ' Add WHERE clause to filter by courseId
                 Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@courseId", courseId) ' Add parameter for courseId
                     Using reader As MySqlDataReader = cmd.ExecuteReader()
                         ' Iterate through the fetched data and populate the form dynamically
                         Dim verticalPosition As Integer = 90 ' Initial vertical position
@@ -139,7 +151,7 @@ Public Class my_learning
 
     Private Sub UpdateCourseProgress(sectionId As Integer, totalSections As Integer)
         Try
-            Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+            Dim connString As String = Module1.connString
 
             Using conn As New MySqlConnection(connString)
                 conn.Open()

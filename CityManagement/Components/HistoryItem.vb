@@ -312,7 +312,7 @@ Public Class HistoryItem
     Private Function GetUsername(Userid As Integer) As String
         Dim Username As String = ""
         'Dim query As String = "SELECT Username FROM UserData WHERE Identification_Number = @userId"
-        Dim query As String = "SELECT Username FROM UserData WHERE Identification_Number = '" & Userid & "'"
+        Dim query As String = "SELECT Username FROM BankUserData WHERE Identification_Number = '" & Userid & "'"
 
         Try
             Using connection As New MySqlConnection(Global_Attributes.slqConnection_banking)

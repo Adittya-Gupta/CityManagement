@@ -30,7 +30,7 @@ Partial Class ChatElement
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = download
+        PictureBox1.BackgroundImage = Mask_group
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(3, 3)
         PictureBox1.Name = "PictureBox1"
@@ -63,7 +63,7 @@ Partial Class ChatElement
         Label1.ForeColor = Color.Black
         Label1.Location = New Point(100, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(49, 17)
+        Label1.Size = New Size(50, 20)
         Label1.TabIndex = 4
         Label1.Text = "Label1"
         ' 

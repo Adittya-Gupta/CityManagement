@@ -173,6 +173,22 @@
         ChildForm(Newsletter_Main)
     End Sub
 
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New Email_Landing
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        mypanel.panel1.Controls.Clear()
+        Dim form As New education_landing
+        form.TopLevel = False
+        mypanel.panel1.Controls.Add(form)
+        form.Show()
+    End Sub
+
     'Private Sub Button10_Click(sender As Object, e As EventArgs)
     'Dim form2 As New transport_landingPage
     '

@@ -41,6 +41,9 @@ Public Class transport_cabavailable
 
     End Sub
     Private Sub transport_cabavailable_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        pathNodesMap.Clear()
+        relpathNodesMap.Clear()
+        cab_arrival_times.Clear()
         Me.WindowState = FormWindowState.Maximized
         Me.FormBorderStyle = FormBorderStyle.Sizable
         Me.ControlBox = False
@@ -175,6 +178,8 @@ Public Class transport_cabavailable
                                 card.Label3.Text = "Rs. " & price
                                 AddHandler card.Button2.Click, Sub()
                                                                    banking_recv_username = "transport"
+                                                                   banking_recv_name = "transport"
+
                                                                    Go_Back = 2
                                                                    Go_Back_Form = Me
                                                                    banking_payment_amount = price
@@ -343,6 +348,8 @@ Public Class transport_cabavailable
                                     card.Label3.Text = "Rs. " & price
                                     AddHandler card.Button2.Click, Sub()
                                                                        banking_recv_username = "transport"
+                                                                       banking_recv_name = "transport"
+
                                                                        Go_Back = 2
                                                                        Go_Back_Form = Me
                                                                        banking_payment_amount = price
@@ -559,6 +566,8 @@ Public Class transport_cabavailable
                     card.Label3.Text = "Rs. " & price
                     AddHandler card.Button2.Click, Sub()
                                                        banking_recv_username = "transport"
+                                                       banking_recv_name = "transport"
+
                                                        Go_Back = 2
                                                        Go_Back_Form = Me
                                                        banking_payment_amount = price

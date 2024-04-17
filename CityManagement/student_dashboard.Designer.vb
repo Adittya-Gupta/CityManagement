@@ -36,7 +36,7 @@ Partial Class student_dashboard
         Label1.Location = New Point(204, 11)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(21, 21)
+        Label1.Size = New Size(26, 28)
         Label1.TabIndex = 0
         Label1.Text = ">"
         ' 
@@ -72,7 +72,7 @@ Partial Class student_dashboard
         Lab2.Location = New Point(48, 73)
         Lab2.Margin = New Padding(4, 0, 4, 0)
         Lab2.Name = "Lab2"
-        Lab2.Size = New Size(90, 20)
+        Lab2.Size = New Size(117, 25)
         Lab2.TabIndex = 5
         Lab2.Text = "My Learning"
         ' 
@@ -83,16 +83,16 @@ Partial Class student_dashboard
         Label3.Font = New Font("Segoe UI", 8F)
         Label3.Location = New Point(48, 115)
         Label3.Name = "Label3"
-        Label3.Size = New Size(65, 13)
+        Label3.Size = New Size(78, 19)
         Label3.TabIndex = 6
         Label3.Text = "In progress"
         ' 
         ' student_dashboard
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1478, 881)
+        ClientSize = New Size(1107, 760)
         Controls.Add(Label3)
         Controls.Add(Lab2)
         Controls.Add(b1)

@@ -98,7 +98,7 @@ Public Class Banking_Admin_Home
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "SELECT * FROM UserData WHERE Approved=1"
+            sqlCmd.CommandText = "SELECT * FROM BankUserData WHERE Approved=1"
 
             sqlRd = sqlCmd.ExecuteReader
             sqlDt.Clear()
@@ -190,7 +190,7 @@ Public Class Banking_Admin_Home
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "UPDATE UserData SET Bank_Account_Number = @Bank_Account_Number, Email_ID=@Email_ID, Name=@Name, Address=@Address,Phone_Number=@Phone_Number, Username=@Username, Password=@Password, DOB=@DOB, Balance=@Balance, CIBIL_Score=@CIBIL_Score, Identification_Number=@Identification_Number, Approved=@Approved, Gender=@Gender WHERE Username=@OldUsername"
+                .CommandText = "UPDATE BankUserData SET Bank_Account_Number = @Bank_Account_Number, Email_ID=@Email_ID, Name=@Name, Address=@Address,Phone_Number=@Phone_Number, Username=@Username, Password=@Password, DOB=@DOB, Balance=@Balance, CIBIL_Score=@CIBIL_Score, Identification_Number=@Identification_Number, Approved=@Approved, Gender=@Gender WHERE Username=@OldUsername"
                 .CommandType = CommandType.Text
 
 
@@ -305,7 +305,7 @@ Public Class Banking_Admin_Home
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "INSERT INTO UserData(Bank_Account_Number,Email_ID,Name,Address,Phone_Number,Username,Password,DOB,Balance,CIBIL_Score,Identification_Number,Approved,Gender) VALUES (@Bank_Account_Number,@Email_ID,@Name,@Address,@Phone_Number,@Username,@Password,@DOB,@Balance,@CIBIL_Score,@Identification_Number,@Approved,@Gender)"
+                .CommandText = "INSERT INTO BankUserData(Bank_Account_Number,Email_ID,Name,Address,Phone_Number,Username,Password,DOB,Balance,CIBIL_Score,Identification_Number,Approved,Gender) VALUES (@Bank_Account_Number,@Email_ID,@Name,@Address,@Phone_Number,@Username,@Password,@DOB,@Balance,@CIBIL_Score,@Identification_Number,@Approved,@Gender)"
                 .CommandType = CommandType.Text
 
 
@@ -362,7 +362,7 @@ Public Class Banking_Admin_Home
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "DELETE FROM UserData WHERE Username=@OldUsername"
+                .CommandText = "DELETE FROM BankUserData WHERE Username=@OldUsername"
                 .CommandType = CommandType.Text
 
                 .Parameters.AddWithValue("@OldUsername", Username_TextBox.Text)

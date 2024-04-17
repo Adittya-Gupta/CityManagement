@@ -21,23 +21,34 @@ Public Class Health_Record_Tracker
         listView1.BackColor = ColorTranslator.FromHtml("#F5F1F1")
         listView1.HeaderStyle = ColumnHeaderStyle.Nonclickable ' Make column headers non-clickable
         listView1.HideSelection = True ' Remove highlighting effect after clicking
+        Dim userName As String = GetUserName(Module1.CurrUserSID)
+        Label12.Text = userName
 
-        Dim queryString As String = "SELECT DATE(date) as date, department, hos_id, prescription , bill FROM appointmentRecord"
+        Dim queryString As String = "SELECT DATE(date) as date, department, hos_id, prescription , bill FROM appointmentRecord WHERE user_id = @UserID"
+        'Dim queryString1 As String = "SELECT Name FROM User where SID = Module1.CurrUserSID"
 
         Using connection As New MySqlConnection(connectionString)
             Dim command As New MySqlCommand(queryString, connection)
+            command.Parameters.AddWithValue("@UserID", Module1.CurrUserSID)
             connection.Open()
 
             Dim reader As MySqlDataReader = command.ExecuteReader()
             Try
                 While reader.Read()
                     Dim row As New ListViewItem(New String() {Convert.ToDateTime(reader("date")).ToString("yyyy-MM-dd"), reader("hos_id").ToString(), reader("department").ToString(), reader("prescription").ToString(), reader("bill").ToString()})
+
+
                     listView1.Items.Add(row)
+
+
                 End While
             Finally
                 reader.Close()
             End Try
         End Using
+
+
+
 
 
         ' Add sample data rows to the ListView
@@ -48,7 +59,7 @@ Public Class Health_Record_Tracker
         'listView1.Items.AddRange(New ListViewItem() {row1, row2, row3, row4})
 
         ' Set the location of the ListView
-        listView1.Location = New Point(27, 400) ' Set location to (30, 200)
+        listView1.Location = New Point(35, 400) ' Set location to (30, 200)
 
 
 
@@ -62,6 +73,26 @@ Public Class Health_Record_Tracker
         listView1.BringToFront()
     End Sub
 
+
+    Private Function GetUserName(userId As Integer) As String
+        ' SQL query to fetch user's name based on SID
+        Dim queryString As String = "SELECT Name FROM User WHERE SID = @SID"
+
+        Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(queryString, connection)
+                command.Parameters.AddWithValue("@SID", userId)
+
+                Try
+                    connection.Open()
+                    Dim userName As String = Convert.ToString(command.ExecuteScalar())
+                    Return userName
+                Catch ex As Exception
+                    MessageBox.Show("Error fetching user's name: " & ex.Message)
+                    Return "Anand Keshav"
+                End Try
+            End Using
+        End Using
+    End Function
     Private Function GetUserDetails(userId As String, connectionString As String) As String
         Dim queryString As String = "SELECT Name, Gender FROM User WHERE SID = @userId"
 

@@ -16,17 +16,50 @@ Public Class elections_nomination
     'Dim connString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
     Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
-    Private Sub nomination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub fillMapping()
         mapping("Teacher") = "Education Minister"
-        mapping("Educational Institute Owner") = "Education Minister"
         mapping("Education Minister") = "Education Minister"
         mapping("Doctor") = "Health Minister"
-        mapping("Hospital Owner") = "Health Minister"
         mapping("Health Minister") = "Health Minister"
-        mapping("Driver") = "Transportation Minister"
-        mapping("Transportation Minister") = "Transportation Minister"
-        mapping("Finance Minister") = "Finance Minister"
+        mapping("Driver") = "Transport Minister"
+        mapping("Transport Minister") = "Transport Minister"
+        mapping("Employee") = "Finance Minister"
+        mapping("Police") = "Home Minister"
         mapping("Home Minister") = "Home Minister"
+        mapping("Finance Minister") = "Finance Minister"
+        mapping("Hospital Owner") = "Health Minister"
+        Dim Type As String = ""
+        Try
+            conn.Open()
+            Dim query As String = "select Type from Institutes where Owner_ID=@a"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
+                Dim reader = cmd.ExecuteReader
+                If reader.Read() Then
+                    Type = Convert.ToString(reader("Type"))
+                End If
+            End Using
+        Catch ex As Exception
+        Finally
+            conn.Close()
+        End Try
+        If Not (Type = "") Then
+            Select Case Type
+                Case "Education"
+                    mapping("Owner") = "Education Minister"
+                Case "Law"
+                    mapping("Owner") = "Home Minister"
+                Case "Hospital"
+                    mapping("Owner") = "Health Minister"
+                Case "Transport"
+                    mapping("Owner") = "Transport Minister"
+                Case "Finance"
+                    mapping("Owner") = "Finance Minister"
+            End Select
+        End If
+    End Sub
+    Private Sub nomination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        fillMapping()
         'PayDeposit.FlatStyle = FlatStyle.Flat
         'PayDeposit.FlatAppearance.BorderSize = 0
         'PayDeposit.BackColor = System.Drawing.ColorTranslator.FromHtml("#0cb43b")
@@ -117,7 +150,9 @@ Public Class elections_nomination
         'To check if the current user has bank account
         Try
             conn.Open()
-            Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
+            ' Dim query As String = "use banking_database; select Identification_Number from UserData where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from UserData where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
                 Dim reader = cmd.ExecuteReader
@@ -138,7 +173,9 @@ Public Class elections_nomination
         'To deduct the money if the bank account exists, now only deducting 100 rupees for convenience
         Try
             conn.Open()
-            Dim query As String = "use banking_database; select Identification_Number,Balance from UserData where Identification_Number=@a"
+            'Dim query As String = "use banking_database; select Identification_Number,Balance from UserData where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser)
                 Dim reader = cmd.ExecuteReader
@@ -160,7 +197,9 @@ Public Class elections_nomination
         'To deduct the money
         Try
             conn.Open()
-            Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
+            'Dim query As String = "use banking_database; update UserData set Balance = Balance - 100 where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@a", idOfCurrentUser.ToString())
                 cmd.ExecuteNonQuery()
@@ -172,7 +211,9 @@ Public Class elections_nomination
         'To add money to the mayor john doe
         Try
             conn.Open()
-            Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
+            'Dim query As String = "use banking_database; update UserData set Balance = Balance + 100 where Identification_Number=@a"
+            Dim query As String = "select Identification_Number from bankuserdata where Identification_Number=@a"
+
             Using cmd As New MySqlCommand(query, conn)
                 Dim mayor_sid As Integer = 1
                 cmd.Parameters.AddWithValue("@a", mayor_sid.ToString())
@@ -182,9 +223,8 @@ Public Class elections_nomination
         Finally
             conn.Close()
         End Try
-
         paidDeposit = True
-
+        MessageBox.Show("The amount required is deducted from your bank account and is transferred to the authority", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'To check if the contestant has uploaded manifesto and written his agenda(non empty)
         If uploaded And Agenda.Text.Length > 0 And paidDeposit Then
 
@@ -223,16 +263,20 @@ Public Class elections_nomination
         openFileDialog.Title = "Select a PDF File"
         ' Show the dialog and check if the user selected a file
         If openFileDialog.ShowDialog = DialogResult.OK Then
-            Dim selectedFileName = openFileDialog.FileName
-            ' Check if the selected file exists
-            If File.Exists(selectedFileName) Then
-                fileContent = File.ReadAllBytes(selectedFileName)
-                uploaded = True
-                'MessageBox.Show(selectedFileName)
-            Else
-                ' Handle the case where the selected file does not exist
-                MessageBox.Show("The selected file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+            Try
+                Dim selectedFileName = openFileDialog.FileName
+                ' Check if the selected file exists
+                If File.Exists(selectedFileName) Then
+                    fileContent = File.ReadAllBytes(selectedFileName)
+                    uploaded = True
+                    'MessageBox.Show(selectedFileName)
+                Else
+                    ' Handle the case where the selected file does not exist
+                    MessageBox.Show("The selected file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception 'This could happen if the file size is large
+                MessageBox.Show($"Error loading PDF file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         End If
     End Sub
     Private Sub UploadManifesto_MouseEnter(sender As Object, e As EventArgs) Handles UploadManifesto.MouseEnter

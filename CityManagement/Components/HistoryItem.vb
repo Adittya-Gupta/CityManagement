@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports System.IO
 Imports MySql.Data.MySqlClient
 
 Public Class HistoryItem
@@ -94,6 +95,7 @@ Public Class HistoryItem
                 If currentAppointmentState = AppointmentState.EnquirySent Then
                     ' Perform action to withdraw the enquiry
                     ' Update the state
+                    ' MessageBox.Show()
                     UpdateAppointmentState(AppointmentState.Withdrawn)
                     newState = AppointmentState.Withdrawn
                 End If
@@ -130,12 +132,13 @@ Public Class HistoryItem
 
     ' Constructor with optional parameters
     Public Sub New(
-                Optional ByVal bookingid As String = "1",
-                Optional ByVal name As String = "Default Name",
-               Optional ByVal serviceTime As String = "Will be updated",
-               Optional ByVal billAmount As String = "To be Decided",
-               Optional ByVal ratingValue As Double = 3.5,
-               Optional ByVal currentState As AppointmentState = AppointmentState.EnquirySent)
+    Optional ByVal bookingid As String = "1",
+    Optional ByVal name As String = "Default Name",
+    Optional ByVal serviceTime As String = "Will be updated",
+    Optional ByVal billAmount As String = "To be Decided",
+    Optional ByVal ratingValue As Double = 3.5,
+    Optional ByVal currentState As AppointmentState = AppointmentState.EnquirySent,
+    Optional ByVal imageBytes As Byte() = Nothing)
 
         InitializeComponent()
 
@@ -149,9 +152,22 @@ Public Class HistoryItem
         ' Initialize the appointment state
         UpdateAppointmentState(currentState)
 
+        ' Set the image for PictureBox1 if imageBytes are provided
+        If imageBytes IsNot Nothing Then
+            'Debug.WriteLine("An error occurred:  Lhistory 49402433")
+            Try
+                Using stream As New MemoryStream(imageBytes)
+                    PictureBox1.Image = Image.FromStream(stream)
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error loading image: " & ex.Message)
+            End Try
+        End If
+
         ' Make the PictureBox round
         MakePictureBoxRound(PictureBox1)
     End Sub
+
 
     Private Sub MakePictureBoxRound(pictureBox As PictureBox)
         ' Create a GraphicsPath to define a circle
@@ -167,47 +183,69 @@ Public Class HistoryItem
         Globals.ServiceHistoryForm.semaphore.WaitOne()
         Select Case currentAppointmentState
             Case AppointmentState.EnquirySent
-                HandleAction(CustomerAction.Withdraw)
+                ' Show message dialog box
+                Dim result As DialogResult = MessageBox.Show("Are you sure you want to withdraw this enquiry?", "Confirm Withdrawal", MessageBoxButtons.OKCancel)
+                ' Change the state only if the user presses "OK"
+                If result = DialogResult.OK Then
+                    HandleAction(CustomerAction.Withdraw)
+                End If
             Case AppointmentState.Upcoming
-                HandleAction(CustomerAction.Cancel)
+                ' Show message dialog box
+                Dim result As DialogResult = MessageBox.Show("Are you sure you want to cancel this appointment?", "Confirm Cancellation", MessageBoxButtons.OKCancel)
+                ' Change the state only if the user presses "OK"
+                If result = DialogResult.OK Then
+                    HandleAction(CustomerAction.Cancel)
+                End If
             Case AppointmentState.InProgress
-                'HandleAction(CustomerAction.Pay)
-                If Global_Attributes.banking_payment_done = 0 Then
+                ' Show message dialog box
+                Dim result As DialogResult = MessageBox.Show("Are you sure you want to proceed with payment?", "Confirm Payment", MessageBoxButtons.OKCancel)
+                ' Change the state only if the user presses "OK"
+                If result = DialogResult.OK Then
+                    'HandleAction(CustomerAction.Pay)
+                    If Global_Attributes.banking_payment_done = 0 Then
 
-                    Dim PaytoUserID As Integer = GetUserIdFromBookingsFor(Me.BookingId)
-                    MessageBox.Show(PaytoUserID)
-                    Dim Payto As String = GetUsername(PaytoUserID)
-                    'Dim Payfrom As String = GetUsername(Globals.UserId)
-                    MessageBox.Show("I am Here")
+                        Dim PaytoUserID As Integer = GetUserIdFromBookingsFor(Me.BookingId)
+                        'MessageBox.Show(PaytoUserID)
+                        Dim Payto As String = GetUsername(PaytoUserID)
+                        'Dim Payfrom As String = GetUsername(Globals.UserId)
+                        'MessageBox.Show("I am Here")
 
-                    'banking_recv_username = "transport"
-                    banking_recv_username = Payto
-                    Go_Back = 3
-                    Go_Back_Form = Globals.UrbanClapNavForm
-                    banking_payment_amount = Label3.Text
-                    Global_Attributes.HistoryItem = Me
+                        'banking_recv_username = "transport"
+                        banking_recv_username = Payto
+                        Go_Back = 3
+                        Go_Back_Form = Globals.UrbanClapNavForm
+                        banking_payment_amount = Label3.Text
+                        Global_Attributes.HistoryItem = Me
 
-                    Banking_Main.Panel1.Controls.Clear()
-                    Newsletter_Main.Panel1.Controls.Clear()
+                        Banking_Main.Panel1.Controls.Clear()
+                        Newsletter_Main.Panel1.Controls.Clear()
 
-                    ChildForm(Banking_Main.Panel1, Banking_Homepage)
-                    mypanel.panel1.Controls.Clear()
-                    ChildForm2(Banking_Main)
+                        ChildForm(Banking_Main.Panel1, Banking_Homepage)
+                        mypanel.panel1.Controls.Clear()
+                        ChildForm2(Banking_Main)
+                    End If
+
                 End If
                 'If Global_Attributes.banking_payment_done = 1 Then
                 'Global_Attributes.banking_payment_done = 0
                 'HandleAction(CustomerAction.Pay)
                 'End If
             Case AppointmentState.Completed
-                Using rateform As New Rate()
-                    'Change the position to be in the centre of the screen
+                Globals.ServiceHistoryForm.Timer1.Enabled = False
+                Using rateform As New Rate(GetWorkerIdFromBookings())
+                    ' Change the position to be in the centre of the screen
                     Dim result As DialogResult = rateform.ShowDialog()
                     If result = DialogResult.OK Then
                         ' Get the selected stars count from the child form
-                        Dim selectedStarsCount As Integer = rateform.SelectedStars
+                        Dim finalrating As Double = rateform.FinalValue
+                        'MessageBox.Show(finalrating)
+                        ' Handle the action
+                        Rating1.RatingValue = finalrating
                         HandleAction(CustomerAction.Rate)
                     End If
                 End Using
+                Globals.ServiceHistoryForm.Timer1.Enabled = True
+
         End Select
         Globals.ServiceHistoryForm.semaphore.Release()
     End Sub
@@ -291,10 +329,28 @@ Public Class HistoryItem
         Catch ex As Exception
             MessageBox.Show("Error occurred while getting UserID from WorkerID: " & ex.Message)
         End Try
-        MessageBox.Show(Username)
+        ' MessageBox.Show(Username)
         Return Username
     End Function
-
+    Public Function GetWorkerIdFromBookings() As Integer
+        Dim userID As Integer = -1
+        Try
+            Dim query As String = "SELECT workerID FROM serviceBooking WHERE serviceBookingId = @bookingId"
+            Using connection As New MySqlConnection(Globals.connectionstring)
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@bookingId", Me.BookingId)
+                    Dim result As Object = command.ExecuteScalar()
+                    If result IsNot DBNull.Value Then
+                        userID = Convert.ToInt32(result)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error occurred while getting UserID from Bookings: " & ex.Message)
+        End Try
+        Return userID
+    End Function
     Private Sub HistoryItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

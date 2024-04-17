@@ -22,6 +22,7 @@ Partial Class admin_Joblisting
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin_Joblisting))
         Label1 = New Label()
         DataGridView1 = New DataGridView()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -30,35 +31,41 @@ Partial Class admin_Joblisting
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(371, 56)
+        Label1.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(445, 138)
         Label1.Name = "Label1"
-        Label1.Size = New Size(53, 20)
-        Label1.TabIndex = 1
+        Label1.Size = New Size(152, 60)
+        Label1.TabIndex = 0
         Label1.Text = "Label1"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(248, 214)
+        DataGridView1.Location = New Point(91, 255)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(420, 188)
-        DataGridView1.TabIndex = 2
+        DataGridView1.Size = New Size(916, 415)
+        DataGridView1.TabIndex = 1
         ' 
         ' admin_Joblisting
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
+        BackColor = SystemColors.ButtonHighlight
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1107, 760)
         Controls.Add(DataGridView1)
         Controls.Add(Label1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "admin_Joblisting"
-        Text = "Joblisting"
+        Text = "admin_Joblisting"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
+
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
 End Class

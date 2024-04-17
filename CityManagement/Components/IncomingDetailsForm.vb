@@ -16,6 +16,7 @@ Public Class IncomingDetailsForm
         InitializeComponent()
         _userID = userID
         _orgID = orgID
+        _name = name
 
         Me.FormBorderStyle = FormBorderStyle.None
 

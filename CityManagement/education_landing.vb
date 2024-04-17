@@ -11,9 +11,9 @@ Public Class education_landing
     End Sub
 
     Public Sub SetManualUserID()
-        ' Set the userid to 2 for student
-        ' Set the userid to 50 for teacher
-        SetUserID(50)
+        ' Set the userid to 949664 for student
+        ' Set the userid to 700016 for teacher
+        SetUserID(Module1.CurrUserSID)
     End Sub
 
     Private Sub Btnteach_Click(sender As Object, e As EventArgs) Handles Btnteach.Click
@@ -57,7 +57,7 @@ Public Class education_landing
     End Sub
 
     Private Function GetDesignation(userid As Integer) As String
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=smart_city_management;sslmode=none"
+        Dim connectionString As String = Module1.connString
         Dim query As String = "SELECT Designation FROM User WHERE SID = @userid"
 
         Dim designation As String = ""
@@ -78,4 +78,6 @@ Public Class education_landing
 
         Return designation
     End Function
+
+
 End Class

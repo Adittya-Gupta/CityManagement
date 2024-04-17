@@ -25,7 +25,7 @@ Public Class Banking_Debit_Card_Page
             conn.Open()
 
             Dim query = "SELECT CardNumber,Join_date
-                 FROM CreditDebitCard
+                 FROM BankCreditDebitCard
                 WHERE Type='DEBIT' and bank_username = '" & bank_username & "';"
 
             Dim cmd = New MySqlCommand(query, conn)
@@ -46,7 +46,7 @@ Public Class Banking_Debit_Card_Page
 
 
 
-                Dim query3 = "INSERT INTO CreditDebitCard (CardNumber, bank_username, Type, CIBIL_Score, Cvv)
+                Dim query3 = "INSERT INTO BankCreditDebitCard (CardNumber, bank_username, Type, CIBIL_Score, Cvv)
                         VALUES ('" & randomString & "','" & bank_username & "', 
                             'DEBIT', 0, 500);"
 
@@ -58,7 +58,7 @@ Public Class Banking_Debit_Card_Page
                 reader3.Close()
 
                 Dim query4 = "SELECT CardNumber,Join_date
-                 FROM CreditDebitCard
+                 FROM BankCreditDebitCard
                 WHERE Type='DEBIT' and bank_username = '" & bank_username & "';"
 
                 Dim cmd4 = New MySqlCommand(query4, conn)
@@ -99,7 +99,7 @@ Public Class Banking_Debit_Card_Page
 
 
                 Dim query5 = "SELECT Name
-                 From UserData
+                 From BankUserData
                 WHERE Username = '" & bank_username & "';"
 
                 Dim cmd5 = New MySqlCommand(query5, conn)
@@ -147,7 +147,7 @@ Public Class Banking_Debit_Card_Page
 
 
                 Dim query2 = "SELECT Name
-                 From UserData
+                 From BankUserData
                 WHERE Username = '" & bank_username & "';"
 
                 Dim cmd2 = New MySqlCommand(query2, conn)

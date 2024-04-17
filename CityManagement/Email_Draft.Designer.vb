@@ -39,14 +39,14 @@ Partial Class Email_Draft
         ' 
         ' To_TextBox
         ' 
-        To_TextBox.Location = New Point(100, 34)
+        To_TextBox.Location = New Point(128, 51)
         To_TextBox.Name = "To_TextBox"
         To_TextBox.Size = New Size(585, 27)
         To_TextBox.TabIndex = 0
         ' 
         ' Subject_TextBox
         ' 
-        Subject_TextBox.Location = New Point(100, 106)
+        Subject_TextBox.Location = New Point(128, 123)
         Subject_TextBox.Name = "Subject_TextBox"
         Subject_TextBox.Size = New Size(585, 27)
         Subject_TextBox.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class Email_Draft
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(24, 37)
+        Label1.Location = New Point(52, 54)
         Label1.Name = "Label1"
         Label1.Size = New Size(25, 20)
         Label1.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class Email_Draft
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(24, 106)
+        Label2.Location = New Point(52, 123)
         Label2.Name = "Label2"
         Label2.Size = New Size(58, 20)
         Label2.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class Email_Draft
         ' 
         ' Content_TextBox
         ' 
-        Content_TextBox.Location = New Point(100, 183)
+        Content_TextBox.Location = New Point(128, 200)
         Content_TextBox.Multiline = True
         Content_TextBox.Name = "Content_TextBox"
         Content_TextBox.Size = New Size(585, 159)
@@ -80,7 +80,7 @@ Partial Class Email_Draft
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(24, 183)
+        Label3.Location = New Point(52, 200)
         Label3.Name = "Label3"
         Label3.Size = New Size(61, 20)
         Label3.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class Email_Draft
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(51, 357)
+        DataGridView1.Location = New Point(79, 374)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.Size = New Size(794, 225)
@@ -97,7 +97,7 @@ Partial Class Email_Draft
         ' 
         ' Draft_Button
         ' 
-        Draft_Button.Location = New Point(939, 5)
+        Draft_Button.Location = New Point(967, 22)
         Draft_Button.Name = "Draft_Button"
         Draft_Button.Size = New Size(91, 56)
         Draft_Button.TabIndex = 7
@@ -106,7 +106,7 @@ Partial Class Email_Draft
         ' 
         ' Send_Button
         ' 
-        Send_Button.Location = New Point(939, 88)
+        Send_Button.Location = New Point(967, 105)
         Send_Button.Name = "Send_Button"
         Send_Button.Size = New Size(91, 56)
         Send_Button.TabIndex = 8
@@ -115,7 +115,7 @@ Partial Class Email_Draft
         ' 
         ' Clear_Button
         ' 
-        Clear_Button.Location = New Point(939, 168)
+        Clear_Button.Location = New Point(967, 185)
         Clear_Button.Name = "Clear_Button"
         Clear_Button.Size = New Size(91, 56)
         Clear_Button.TabIndex = 9
@@ -124,7 +124,7 @@ Partial Class Email_Draft
         ' 
         ' Delete_Button
         ' 
-        Delete_Button.Location = New Point(939, 251)
+        Delete_Button.Location = New Point(967, 268)
         Delete_Button.Name = "Delete_Button"
         Delete_Button.Size = New Size(91, 56)
         Delete_Button.TabIndex = 10
@@ -133,7 +133,7 @@ Partial Class Email_Draft
         ' 
         ' Refresh_Button
         ' 
-        Refresh_Button.Location = New Point(939, 345)
+        Refresh_Button.Location = New Point(967, 362)
         Refresh_Button.Name = "Refresh_Button"
         Refresh_Button.Size = New Size(91, 56)
         Refresh_Button.TabIndex = 11
@@ -142,9 +142,9 @@ Partial Class Email_Draft
         ' 
         ' Email_Draft
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1089, 594)
+        AutoScaleMode = AutoScaleMode.None
+        ClientSize = New Size(1107, 639)
+        ControlBox = False
         Controls.Add(Refresh_Button)
         Controls.Add(Delete_Button)
         Controls.Add(Clear_Button)
@@ -157,6 +157,7 @@ Partial Class Email_Draft
         Controls.Add(Label1)
         Controls.Add(Subject_TextBox)
         Controls.Add(To_TextBox)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Email_Draft"
         Text = "l"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

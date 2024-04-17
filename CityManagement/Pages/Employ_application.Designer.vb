@@ -63,28 +63,31 @@ Partial Class EmployApplication
         ' 
         ' Label1
         ' 
+        Label1.AutoSize = True
         Label1.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label1.Location = New Point(43, 120)
         Label1.Name = "Label1"
-        Label1.Size = New Size(98, 35)
+        Label1.Size = New Size(92, 30)
         Label1.TabIndex = 31
         Label1.Text = "Name*"
         ' 
         ' Label2
         ' 
+        Label2.AutoSize = True
         Label2.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label2.Location = New Point(43, 329)
         Label2.Name = "Label2"
-        Label2.Size = New Size(399, 36)
+        Label2.Size = New Size(413, 30)
         Label2.TabIndex = 32
         Label2.Text = "Details of any previous work done"
         ' 
         ' Label3
         ' 
+        Label3.AutoSize = True
         Label3.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label3.Location = New Point(397, 120)
         Label3.Name = "Label3"
-        Label3.Size = New Size(224, 35)
+        Label3.Size = New Size(216, 30)
         Label3.TabIndex = 33
         Label3.Text = "Contact Number*"
         ' 
@@ -206,10 +209,11 @@ Partial Class EmployApplication
         ' 
         ' Label6
         ' 
+        Label6.AutoSize = True
         Label6.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label6.Location = New Point(43, 200)
         Label6.Name = "Label6"
-        Label6.Size = New Size(132, 36)
+        Label6.Size = New Size(121, 30)
         Label6.TabIndex = 50
         Label6.Text = "Address*"
         ' 
@@ -224,10 +228,11 @@ Partial Class EmployApplication
         ' 
         ' Label7
         ' 
+        Label7.AutoSize = True
         Label7.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label7.Location = New Point(745, 330)
         Label7.Name = "Label7"
-        Label7.Size = New Size(287, 36)
+        Label7.Size = New Size(191, 30)
         Label7.TabIndex = 52
         Label7.Text = "Email Address*"
         ' 
@@ -242,10 +247,11 @@ Partial Class EmployApplication
         ' 
         ' Label4
         ' 
+        Label4.AutoSize = True
         Label4.Font = New Font("Exo 2", 15F, FontStyle.Bold)
         Label4.Location = New Point(745, 417)
         Label4.Name = "Label4"
-        Label4.Size = New Size(287, 36)
+        Label4.Size = New Size(285, 30)
         Label4.TabIndex = 54
         Label4.Text = "Bank Account Number*"
         ' 

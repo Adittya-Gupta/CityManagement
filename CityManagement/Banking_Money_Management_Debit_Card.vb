@@ -32,7 +32,7 @@ Public Class Banking_Money_Management_Debit_Card
         conn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = conn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & Global_Attributes.banking_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & Global_Attributes.banking_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 bank_account_no = reader.GetString("Bank_Account_Number")
@@ -80,7 +80,7 @@ Public Class Banking_Money_Management_Debit_Card
         Else
             Try
                 conn.Open()
-                Dim query = "SELECT * FROM CreditDebitCard Where CardNumber = '" & spaced_card & "' AND Cvv = " & cvv & " AND Type = 'DEBIT' AND Expiry_Date = '" & expiry & "' ;"
+                Dim query = "SELECT * FROM BankCreditDebitCard Where CardNumber = '" & spaced_card & "' AND Cvv = " & cvv & " AND Type = 'DEBIT' AND Expiry_Date = '" & expiry & "' ;"
                 Dim cmd = New MySqlCommand(query, conn)
                 Dim reader = cmd.ExecuteReader
                 Dim sqlDt As New DataTable
@@ -92,7 +92,7 @@ Public Class Banking_Money_Management_Debit_Card
                     MessageBox.Show("Wrong Card Details.")
                 Else
                     conn.Open()
-                    query = "SELECT * FROM UserData Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                    query = "SELECT * FROM BankUserData Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader
                     Dim sqlDt2 As New DataTable
@@ -106,19 +106,19 @@ Public Class Banking_Money_Management_Debit_Card
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE UserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                        query = "UPDATE BankUserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' deposit
-                        query = "UPDATE UserData SET Balance = Balance + " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Banking_Money_Management_Homepage.account_number & "' ;"
+                        query = "UPDATE BankUserData SET Balance = Balance + " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & Banking_Money_Management_Homepage.account_number & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
 
                         ' log
-                        query = "Insert Into TransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
+                        query = "Insert Into BankTransactionLog(Bank_Account_Number,Involved_Bank_Account_Number,Type_of_Transaction,Amount,Date_Time,Description) Values ('" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "','" & CType(Banking_Money_Management_Homepage.sqlDt.Rows(0)("Bank_Account_Number"), String) & "','Money Transfer'," & Banking_Money_Management_Homepage.amount & ",NOW(),'" & remark & "');"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()

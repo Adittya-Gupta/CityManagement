@@ -22,113 +22,129 @@ Partial Class Banking_Panel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Home_Button = New System.Windows.Forms.Button()
-        Me.LoanApproval_Button = New System.Windows.Forms.Button()
-        Me.Queries_Button = New System.Windows.Forms.Button()
-        Me.NewAcc_Button = New System.Windows.Forms.Button()
-        Me.Panel2.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Navy
-        Me.Panel1.Location = New System.Drawing.Point(3, 4)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1083, 63)
-        Me.Panel1.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.Location = New System.Drawing.Point(187, 65)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(899, 510)
-        Me.Panel3.TabIndex = 2
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Navy
-        Me.Panel2.Controls.Add(Me.Home_Button)
-        Me.Panel2.Controls.Add(Me.LoanApproval_Button)
-        Me.Panel2.Controls.Add(Me.Queries_Button)
-        Me.Panel2.Controls.Add(Me.NewAcc_Button)
-        Me.Panel2.Location = New System.Drawing.Point(3, 62)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(190, 513)
-        Me.Panel2.TabIndex = 1
-        '
-        'Home_Button
-        '
-        Me.Home_Button.BackColor = System.Drawing.Color.DarkBlue
-        Me.Home_Button.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Home_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Home_Button.Location = New System.Drawing.Point(0, 0)
-        Me.Home_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Home_Button.Name = "Home_Button"
-        Me.Home_Button.Size = New System.Drawing.Size(187, 76)
-        Me.Home_Button.TabIndex = 31
-        Me.Home_Button.Text = "Home"
-        Me.Home_Button.UseVisualStyleBackColor = False
-        '
-        'LoanApproval_Button
-        '
-        Me.LoanApproval_Button.BackColor = System.Drawing.Color.DarkBlue
-        Me.LoanApproval_Button.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoanApproval_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LoanApproval_Button.Location = New System.Drawing.Point(3, 189)
-        Me.LoanApproval_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.LoanApproval_Button.Name = "LoanApproval_Button"
-        Me.LoanApproval_Button.Size = New System.Drawing.Size(187, 76)
-        Me.LoanApproval_Button.TabIndex = 30
-        Me.LoanApproval_Button.Text = "Loan Approvals"
-        Me.LoanApproval_Button.UseVisualStyleBackColor = False
-        '
-        'Queries_Button
-        '
-        Me.Queries_Button.BackColor = System.Drawing.Color.DarkBlue
-        Me.Queries_Button.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Queries_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Queries_Button.Location = New System.Drawing.Point(3, 281)
-        Me.Queries_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Queries_Button.Name = "Queries_Button"
-        Me.Queries_Button.Size = New System.Drawing.Size(187, 76)
-        Me.Queries_Button.TabIndex = 29
-        Me.Queries_Button.Text = "Queries and Complaints"
-        Me.Queries_Button.UseVisualStyleBackColor = False
-        '
-        'NewAcc_Button
-        '
-        Me.NewAcc_Button.BackColor = System.Drawing.Color.DarkBlue
-        Me.NewAcc_Button.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewAcc_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.NewAcc_Button.Location = New System.Drawing.Point(0, 95)
-        Me.NewAcc_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.NewAcc_Button.Name = "NewAcc_Button"
-        Me.NewAcc_Button.Size = New System.Drawing.Size(187, 76)
-        Me.NewAcc_Button.TabIndex = 27
-        Me.NewAcc_Button.Text = "New Account Registrations"
-        Me.NewAcc_Button.UseVisualStyleBackColor = False
-        '
-        'Banking_Panel
-        '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1089, 570)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "Banking_Panel"
-        Me.Text = "Banking_Panel"
-        Me.Panel2.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        Panel1 = New Panel()
+        Panel3 = New Panel()
+        Panel2 = New Panel()
+        Home_Button = New Button()
+        LoanApproval_Button = New Button()
+        Queries_Button = New Button()
+        NewAcc_Button = New Button()
+        PictureBox1 = New PictureBox()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Navy
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Location = New Point(3, 4)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1083, 63)
+        Panel1.TabIndex = 0
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Location = New Point(187, 65)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(899, 510)
+        Panel3.TabIndex = 2
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.Navy
+        Panel2.Controls.Add(Home_Button)
+        Panel2.Controls.Add(LoanApproval_Button)
+        Panel2.Controls.Add(Queries_Button)
+        Panel2.Controls.Add(NewAcc_Button)
+        Panel2.Location = New Point(3, 62)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(190, 513)
+        Panel2.TabIndex = 1
+        ' 
+        ' Home_Button
+        ' 
+        Home_Button.BackColor = Color.DarkBlue
+        Home_Button.Font = New Font("Corbel", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Home_Button.ForeColor = SystemColors.ButtonHighlight
+        Home_Button.Location = New Point(0, 0)
+        Home_Button.Margin = New Padding(3, 2, 3, 2)
+        Home_Button.Name = "Home_Button"
+        Home_Button.Size = New Size(187, 76)
+        Home_Button.TabIndex = 31
+        Home_Button.Text = "Home"
+        Home_Button.UseVisualStyleBackColor = False
+        ' 
+        ' LoanApproval_Button
+        ' 
+        LoanApproval_Button.BackColor = Color.DarkBlue
+        LoanApproval_Button.Font = New Font("Corbel", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LoanApproval_Button.ForeColor = SystemColors.ButtonHighlight
+        LoanApproval_Button.Location = New Point(3, 189)
+        LoanApproval_Button.Margin = New Padding(3, 2, 3, 2)
+        LoanApproval_Button.Name = "LoanApproval_Button"
+        LoanApproval_Button.Size = New Size(187, 76)
+        LoanApproval_Button.TabIndex = 30
+        LoanApproval_Button.Text = "Loan Approvals"
+        LoanApproval_Button.UseVisualStyleBackColor = False
+        ' 
+        ' Queries_Button
+        ' 
+        Queries_Button.BackColor = Color.DarkBlue
+        Queries_Button.Font = New Font("Corbel", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Queries_Button.ForeColor = SystemColors.ButtonHighlight
+        Queries_Button.Location = New Point(3, 281)
+        Queries_Button.Margin = New Padding(3, 2, 3, 2)
+        Queries_Button.Name = "Queries_Button"
+        Queries_Button.Size = New Size(187, 76)
+        Queries_Button.TabIndex = 29
+        Queries_Button.Text = "Queries and Complaints"
+        Queries_Button.UseVisualStyleBackColor = False
+        ' 
+        ' NewAcc_Button
+        ' 
+        NewAcc_Button.BackColor = Color.DarkBlue
+        NewAcc_Button.Font = New Font("Corbel", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        NewAcc_Button.ForeColor = SystemColors.ButtonHighlight
+        NewAcc_Button.Location = New Point(0, 95)
+        NewAcc_Button.Margin = New Padding(3, 2, 3, 2)
+        NewAcc_Button.Name = "NewAcc_Button"
+        NewAcc_Button.Size = New Size(187, 76)
+        NewAcc_Button.TabIndex = 27
+        NewAcc_Button.Text = "New Account Registrations"
+        NewAcc_Button.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackgroundImage = Bank_Logo
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox1.Location = New Point(9, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(69, 57)
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' Banking_Panel
+        ' 
+        AutoScaleMode = AutoScaleMode.None
+        BackColor = SystemColors.Control
+        ClientSize = New Size(1089, 570)
+        ControlBox = False
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
+        Name = "Banking_Panel"
+        Text = "Banking_Panel"
+        Panel1.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
 
     End Sub
 
@@ -139,5 +155,6 @@ Partial Class Banking_Panel
     Friend WithEvents NewAcc_Button As Button
     Friend WithEvents Home_Button As Button
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class

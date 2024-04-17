@@ -44,7 +44,7 @@ Public Class Newsletter_articlespage
         sqlCmd.Connection = Mysqlconn
         'select the top 3 latest headlines
         'sqlCmd.CommandText = "SELECT * FROM newsdata ORDER BY Date DESC;"
-        sqlCmd.CommandText = "SELECT * FROM newsdata where Published_On != 'None' ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM NewsData where Published_On != 'None' ORDER BY Date DESC;"
 
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
@@ -104,7 +104,7 @@ Public Class Newsletter_articlespage
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
         'select records of desired type only
-        sqlCmd.CommandText = "SELECT * FROM newsdata WHERE Published_On = '" & s & "' ORDER BY Date DESC;"
+        sqlCmd.CommandText = "SELECT * FROM NewsData WHERE Published_On = '" & s & "' ORDER BY Date DESC;"
 
         Dim adapter As New MySqlDataAdapter(sqlCmd)
         Dim table As New DataTable()

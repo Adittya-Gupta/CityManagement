@@ -38,7 +38,7 @@ Public Class Banking_Profile
 
         Try
             conn.Open()
-            Dim query = "SELECT * FROM `UserData` WHERE username = '" & bank_username & "'"
+            Dim query = "SELECT * FROM `BankUserData` WHERE username = '" & bank_username & "'"
             Dim cmd = New MySqlCommand(query, conn)
             Dim reader = cmd.ExecuteReader
             Dim sqlDt As New DataTable

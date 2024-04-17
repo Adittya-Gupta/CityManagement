@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class cListHospitals
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class cListHospitals
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -45,8 +45,7 @@ Partial Class cListHospitals
         CurvedLabel5.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel5.CornerRadius = 10
         CurvedLabel5.Font = New Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CurvedLabel5.Location = New Point(809, 27)
-        CurvedLabel5.Location = New Point(682, 20)
+        CurvedLabel5.Location = New Point(675, 17)
         CurvedLabel5.Name = "CurvedLabel5"
         CurvedLabel5.Size = New Size(90, 30)
         CurvedLabel5.TabIndex = 22
@@ -58,8 +57,7 @@ Partial Class cListHospitals
         CurvedLabel6.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel6.CornerRadius = 10
         CurvedLabel6.Font = New Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CurvedLabel6.Location = New Point(455, 24)
-        CurvedLabel6.Location = New Point(395, 18)
+        CurvedLabel6.Location = New Point(400, 17)
         CurvedLabel6.Name = "CurvedLabel6"
         CurvedLabel6.Size = New Size(98, 30)
         CurvedLabel6.TabIndex = 21
@@ -71,7 +69,7 @@ Partial Class cListHospitals
         CurvedLabel4.BackColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         CurvedLabel4.CornerRadius = 10
         CurvedLabel4.Font = New Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CurvedLabel4.Location = New Point(94, 25)
+        CurvedLabel4.Location = New Point(97, 17)
         CurvedLabel4.Name = "CurvedLabel4"
         CurvedLabel4.Size = New Size(95, 30)
         CurvedLabel4.TabIndex = 20
@@ -82,8 +80,8 @@ Partial Class cListHospitals
         CurvedLabel1.AutoSize = True
         CurvedLabel1.BackColor = Color.White
         CurvedLabel1.CornerRadius = 1
-        CurvedLabel1.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel1.Location = New Point(57, 81)
+        CurvedLabel1.Font = New Font("Bahnschrift", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel1.Location = New Point(70, 70)
         CurvedLabel1.Name = "CurvedLabel1"
         CurvedLabel1.Size = New Size(200, 24)
         CurvedLabel1.TabIndex = 17
@@ -99,16 +97,15 @@ Partial Class cListHospitals
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.FillColor = Color.FromArgb(CByte(217), CByte(217), CByte(217))
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox1.Font = New Font("Segoe UI", 9.0F)
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(0, 24)
+        Guna2TextBox1.Location = New Point(-1, 20)
         Guna2TextBox1.Margin = New Padding(3, 5, 3, 5)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox1.Size = New Size(1063, 35)
         Guna2TextBox1.Size = New Size(855, 26)
         Guna2TextBox1.TabIndex = 16
         ' 
@@ -125,14 +122,13 @@ Partial Class cListHospitals
         Guna2TileButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2TileButton1.FillColor = Color.White
         Guna2TileButton1.FocusedColor = Color.White
-        Guna2TileButton1.Font = New Font("Segoe UI", 9F)
+        Guna2TileButton1.Font = New Font("Segoe UI", 9.0F)
         Guna2TileButton1.ForeColor = Color.White
-        Guna2TileButton1.Location = New Point(-1, 11)
+        Guna2TileButton1.Location = New Point(-1, 13)
         Guna2TileButton1.Margin = New Padding(3, 4, 3, 4)
         Guna2TileButton1.Name = "Guna2TileButton1"
         Guna2TileButton1.PressedColor = Color.BlanchedAlmond
         Guna2TileButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TileButton1.Size = New Size(1061, 121)
         Guna2TileButton1.Size = New Size(856, 91)
         Guna2TileButton1.TabIndex = 15
         Guna2TileButton1.TextRenderingHint = Drawing.Text.TextRenderingHint.SystemDefault
@@ -149,7 +145,7 @@ Partial Class cListHospitals
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.FillColor = Color.DodgerBlue
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox2.Font = New Font("Segoe UI", 9.0F)
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Location = New Point(-1, 0)
         Guna2TextBox2.Margin = New Padding(3, 5, 3, 5)
@@ -158,7 +154,6 @@ Partial Class cListHospitals
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox2.Size = New Size(1064, 25)
         Guna2TextBox2.Size = New Size(856, 19)
         Guna2TextBox2.TabIndex = 23
         ' 
@@ -167,22 +162,20 @@ Partial Class cListHospitals
         CurvedLabel3.AutoSize = True
         CurvedLabel3.BackColor = Color.White
         CurvedLabel3.CornerRadius = 1
-        CurvedLabel3.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel3.Location = New Point(767, 81)
-        CurvedLabel3.Location = New Point(637, 61)
+        CurvedLabel3.Font = New Font("Bahnschrift", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel3.Location = New Point(679, 70)
         CurvedLabel3.Name = "CurvedLabel3"
-        CurvedLabel3.Size = New Size(200, 24)
+        CurvedLabel3.Size = New Size(77, 24)
         CurvedLabel3.TabIndex = 25
-        CurvedLabel3.Text = "CurvedLabel1 Adityta"
+        CurvedLabel3.Text = "contact"
         ' 
         ' CurvedLabel2
         ' 
         CurvedLabel2.AutoSize = True
         CurvedLabel2.BackColor = Color.White
         CurvedLabel2.CornerRadius = 1
-        CurvedLabel2.Font = New Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CurvedLabel2.Location = New Point(415, 81)
-        CurvedLabel2.Location = New Point(351, 61)
+        CurvedLabel2.Font = New Font("Bahnschrift", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CurvedLabel2.Location = New Point(393, 70)
         CurvedLabel2.Name = "CurvedLabel2"
         CurvedLabel2.Size = New Size(200, 24)
         CurvedLabel2.TabIndex = 26
@@ -204,7 +197,6 @@ Partial Class cListHospitals
         Controls.Add(Guna2TileButton1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "cListHospitals"
-        Size = New Size(1062, 136)
         Size = New Size(854, 102)
         ResumeLayout(False)
         PerformLayout()

@@ -208,6 +208,7 @@ Thank you for choosing our service!"
         End If
 
         banking_recv_username = "transport"
+        banking_recv_name = "transport"
         Go_Back = 2
         Go_Back_Form = Me
         banking_payment_amount = Label22.Text

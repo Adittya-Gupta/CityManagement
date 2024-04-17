@@ -44,7 +44,7 @@ Public Class Banking_Queries_User
         Mysqlconn.Open()
         Dim sqlCmd As New MySqlCommand
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select Bank_Account_Number from UserData where Username = '" & bank_username & "';"
+        sqlCmd.CommandText = "Select Bank_Account_Number from BankUserData where Username = '" & bank_username & "';"
         Using reader As MySqlDataReader = sqlCmd.ExecuteReader()
             If reader.Read() Then
                 bank_account_no = reader.GetString("Bank_Account_Number")
@@ -73,7 +73,7 @@ Public Class Banking_Queries_User
         sqlDt.Clear()
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "SELECT * FROM QueryLog where Bank_Account_Number = @BAC;"
+        sqlCmd.CommandText = "SELECT * FROM BankQueryLog where Bank_Account_Number = @BAC;"
 
         sqlCmd.Parameters.Add("@BAC", MySqlDbType.VarChar).Value = bank_account_no
 
@@ -184,7 +184,7 @@ Public Class Banking_Queries_User
 
 
         sqlCmd.Connection = Mysqlconn
-        sqlCmd.CommandText = "Select * from QueryLog where Query_ID = @ID;"
+        sqlCmd.CommandText = "Select * from BankQueryLog where Query_ID = @ID;"
 
         sqlCmd.Parameters.Add("@ID", MySqlDbType.VarChar).Value = Query_ID
 

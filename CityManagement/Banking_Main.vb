@@ -21,6 +21,8 @@
                 Return True
             ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Registration" Then
                 Return True
+            ElseIf TypeOf ctrl Is Form AndAlso DirectCast(ctrl, Form).Name = "Banking_Panel" Then
+                Return True
             End If
         Next
         Return False

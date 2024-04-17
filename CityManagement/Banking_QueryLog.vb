@@ -49,7 +49,7 @@ Public Class Banking_QueryLog
             sqlConn.Open()
 
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "SELECT * FROM QueryLog WHERE Type_of_Query !='Loan request' AND Status='Pending'"
+            sqlCmd.CommandText = "SELECT * FROM BankQueryLog WHERE Type_of_Query !='Loan request' AND Status='Pending'"
 
             sqlRd = sqlCmd.ExecuteReader
             sqlDt.Clear()
@@ -114,7 +114,7 @@ Public Class Banking_QueryLog
             sqlCmd.Connection = sqlConn
 
             With sqlCmd
-                .CommandText = "UPDATE QueryLog SET Bank_Account_Number=@Bank_Account_Number, Type_of_Query=@Type_of_Query, Day=CURDATE(), Query=@Query, Status=@Status, Reply=@Reply WHERE Query_ID=@Query_ID"
+                .CommandText = "UPDATE BankQueryLog SET Bank_Account_Number=@Bank_Account_Number, Type_of_Query=@Type_of_Query, Day=CURDATE(), Query=@Query, Status=@Status, Reply=@Reply WHERE Query_ID=@Query_ID"
                 .CommandType = CommandType.Text
 
                 .Parameters.Clear()

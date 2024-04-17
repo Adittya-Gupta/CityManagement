@@ -20,6 +20,7 @@ Public Class Banking_Money_Management_Final
     End Sub
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
         Global_Attributes.banking_recv_username = ""
+        Global_Attributes.banking_recv_name = ""
         Global_Attributes.banking_payment_amount = 0
         Global_Attributes.banking_payment_done = 1
     End Sub

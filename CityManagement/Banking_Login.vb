@@ -35,7 +35,7 @@ Public Class Banking_Login
         Try
             conn.Open()
 
-            Dim query As String = "SELECT * FROM `UserData` WHERE username = '" & Username & "'"
+            Dim query As String = "SELECT * FROM `BankUserData` WHERE username = '" & Username & "'"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             Dim sqlDt As New DataTable

@@ -2,7 +2,7 @@
 
 Public Class Redressal
     Dim idOfCurrentUser As Integer = Module1.CurrUserSID
-    Dim connString As String = "server=172.16.114.244;userid=admin;password=nimda;database=smart_city_management;sslmode=none"
+    Dim connString As String = Module1.connString
     Dim conn As New MySqlConnection(connString)
 
     Private Sub Redressal_Load(sender As Object, e As EventArgs) Handles MyBase.Load

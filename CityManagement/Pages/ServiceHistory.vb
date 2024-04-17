@@ -1,6 +1,7 @@
 ﻿Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CityManagement.HistoryItem
+Imports CityManagement.ListofWorkers_Citizen
 Imports MySql.Data.MySqlClient
 
 Public Class ServiceHistory
@@ -11,15 +12,18 @@ Public Class ServiceHistory
         Public Property BillAmount As String
         Public Property WorkerRating As Double
         Public Property Status As AppointmentState
+        Public Property WorkerPic As Byte()
+
 
         ' Constructor to initialize properties
-        Public Sub New(ByVal bookingId As String, ByVal workerName As String, ByVal serviceTime As String, ByVal billAmount As String, ByVal workerRating As Double, ByVal status As AppointmentState)
+        Public Sub New(ByVal bookingId As String, ByVal workerName As String, ByVal serviceTime As String, ByVal billAmount As String, ByVal workerRating As Double, ByVal status As AppointmentState, Optional ByVal profpic As Byte() = Nothing)
             Me.BookingId = bookingId
             Me.WorkerName = workerName
             Me.ServiceTime = serviceTime
             Me.BillAmount = billAmount
             Me.WorkerRating = workerRating
             Me.Status = status
+            Me.WorkerPic = profpic
         End Sub
     End Class
 
@@ -30,7 +34,6 @@ Public Class ServiceHistory
     Public semaphore As New Semaphore(initialCount:=1, maximumCount:=1)
 
     ' Declare a Global Lock on the OriginalStatusCount Datastructure
-
     Private Sub InitializeStatusCount()
         ' Initialize status count dictionary with all status set to 0
         For Each state As AppointmentState In [Enum].GetValues(GetType(AppointmentState))
@@ -56,7 +59,8 @@ Public Class ServiceHistory
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Enabled = False
-        'MessageBox.Show("HI")
+        Debug.WriteLine("Service History disabled")
+        'MessageBox.Show("H I")
         ' Define the SQL query to fetch count of each status for a user
         Dim countQuery As String = "SELECT status, COUNT(*) FROM serviceBooking SB WHERE SB.clientID = @UserID GROUP BY status"
 
@@ -109,11 +113,11 @@ Public Class ServiceHistory
             Timer1.Interval = 5000
         Else
             ' If count has not changed, double the interval up to 128 seconds
-            If Timer1.Interval < 128000 Then
+            If Timer1.Interval < 10000 Then
                 Timer1.Interval *= 2
             End If
         End If
-
+        Debug.WriteLine("Service History Enabled")
         Timer1.Enabled = True
     End Sub
 
@@ -121,6 +125,7 @@ Public Class ServiceHistory
     Public Sub ServiceHistory_Load()
         InitializeStatusCount()
         Timer1.Enabled = False
+        Debug.WriteLine("Service History disabled")
         Panel1.Controls.Clear()
         OriginalBookingsList.Clear()
         HistoryCount = 0
@@ -129,7 +134,7 @@ Public Class ServiceHistory
 
         Try
             ' SQL query to retrieve service history information
-            Dim query As String = "SELECT SB.serviceBookingId AS BookingId, U.Name AS WorkerName, SW.rating AS WorkerRating, SB.serviceTime, SB.billAmount, SB.status " &
+            Dim query As String = "SELECT SB.serviceBookingId AS BookingId, U.Name AS WorkerName, SW.rating AS WorkerRating, SB.serviceTime, SB.billAmount, SB.status ,U.ContactNo AS WorkerPhoneNumber, U.ProfilePic As Profile " &
                                   "FROM serviceBooking SB " &
                                   "JOIN serviceWorkers SW ON SB.workerID = SW.workerID " &
                                   "JOIN User U ON SW.userID = U.SID " &
@@ -176,9 +181,14 @@ Public Class ServiceHistory
                                 ' Map status string to AppointmentState enum
                                 Dim status As String = reader("status").ToString()
                                 Dim currentState As AppointmentState = MapStatusToAppointmentState(status)
+                                Dim workerPhoneNumber As String = reader("WorkerPhoneNumber").ToString()
 
+                                Dim workerPic As Byte() = Nothing
+                                If Not reader.IsDBNull(reader.GetOrdinal("Profile")) Then
+                                    workerPic = DirectCast(reader("Profile"), Byte())
+                                End If
                                 ' Create BookingItem object
-                                Dim bookingItem As New BookingItem(bookingId, workerName, serviceTime, billAmount, workerRating, currentState)
+                                Dim bookingItem As New BookingItem(bookingId, workerName, serviceTime, billAmount, workerRating, currentState, workerPic)
                                 HistoryCount += 1
                                 ' Increment the count for the corresponding status
                                 If OriginalStatusCount.ContainsKey(currentState) Then
@@ -196,11 +206,13 @@ Public Class ServiceHistory
                 End Using
             End Using
         Catch ex As Exception
+            Timer1.Enabled = False
+            Debug.WriteLine("Service History disabled")
             ' Handle any exceptions that occur during database operations
             MessageBox.Show("An error occurred while loading service history: " & ex.Message)
         Finally
             Timer1.Enabled = True
-
+            Debug.WriteLine("Service History Enabled")
             UpdateUIWithFilteredBookings()
             ' Resume layout after initialization
             Panel1.ResumeLayout()
@@ -236,19 +248,6 @@ Public Class ServiceHistory
         Globals.UrbanClapNavForm.ShowFormInPanel1(Globals.HomePage)
         Globals.UrbanClapNavForm.HideCurvedLabels()
     End Sub
-    Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
-        If TextBox1.Text = "Search History" Then
-            TextBox1.Text = ""
-            TextBox1.ForeColor = Color.White ' Change text color to normal
-        End If
-    End Sub
-
-    Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles TextBox1.LostFocus
-        If String.IsNullOrWhiteSpace(TextBox1.Text) Then
-            TextBox1.Text = "Search History"
-            TextBox1.ForeColor = Color.Gray ' Change text color to placeholder color
-        End If
-    End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
         ' Check if Filterform is already visible
@@ -274,7 +273,7 @@ Public Class ServiceHistory
         ' Loop through the filtered bookings list and create HistoryItem controls
         For Each booking As BookingItem In filteredBookings
             ' Create HistoryItem control
-            Dim historyItem As New HistoryItem(booking.BookingId, booking.WorkerName, booking.ServiceTime, booking.BillAmount, booking.WorkerRating, booking.Status)
+            Dim historyItem As New HistoryItem(booking.BookingId, booking.WorkerName, booking.ServiceTime, booking.BillAmount, booking.WorkerRating, booking.Status, booking.WorkerPic)
 
             ' Add the HistoryItem control to Panel1
             Panel1.Controls.Add(historyItem)
@@ -349,4 +348,39 @@ Public Class ServiceHistory
         Return filteredBookings
     End Function
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        ' Get the search query from the TextBox
+        Dim searchQuery As String = TextBox1.Text.Trim()
+        Timer1.Enabled = False
+        Debug.WriteLine("Service History disabled")
+        ' Acquire the semaphore to avoid concurrent access to OriginalBookingsList
+        semaphore.WaitOne()
+        Dim topPosition As Integer = 0
+        Try
+            ' Clear any previous results from the panel
+            Panel1.Controls.Clear()
+
+            ' Iterate through the original bookings list
+            For Each booking As BookingItem In OriginalBookingsList
+                ' Check if the worker name contains the search query (case-insensitive)
+                If booking.WorkerName.ToLower().Contains(searchQuery) Then
+                    ' Create a new instance of the BookingListItem with the matching booking
+                    ' Create HistoryItem control
+                    Dim historyItem As New HistoryItem(booking.BookingId, booking.WorkerName, booking.ServiceTime, booking.BillAmount, booking.WorkerRating, booking.Status, booking.WorkerPic)
+
+                    ' Add the HistoryItem control to Panel1
+                    Panel1.Controls.Add(historyItem)
+
+                    ' Set the position of the HistoryItem control
+                    historyItem.Top = topPosition
+                    topPosition += historyItem.Height + 10
+                End If
+            Next
+        Finally
+            ' Release the semaphore
+            semaphore.Release()
+        End Try
+        Timer1.Enabled = True
+        Debug.WriteLine("Service History Enabled")
+    End Sub
 End Class

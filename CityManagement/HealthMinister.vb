@@ -119,7 +119,7 @@ Public Class HealthMinister
                 Dim details As Byte() = DirectCast(cmd.ExecuteScalar(), Byte())
                 If details IsNot Nothing Then
                     ' Generate a unique temporary file name with .pdf extension in the temp folder
-                    Dim tempPdfFilePath As String = Path.Combine(Application.StartupPath, "..\temp", Guid.NewGuid().ToString() & ".pdf")
+                    Dim tempPdfFilePath As String = Path.Combine(Application.StartupPath, "..\..\..\MediaFiles", Guid.NewGuid().ToString() & ".pdf")
 
                     ' Write the binary data to the temporary PDF file
                     File.WriteAllBytes(tempPdfFilePath, details)

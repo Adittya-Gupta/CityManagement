@@ -57,7 +57,7 @@ Public Class Banking_Card_Management
 
 
             Dim query = "SELECT CardNumber, Type, CIBIL_Score, Expiry_Date, Cvv
-                 FROM CreditDebitCard
+                 FROM BankCreditDebitCard
                 WHERE Type='CREDIT' and bank_username = '" & bank_username & "';"
 
             Dim cmd = New MySqlCommand(query, conn)

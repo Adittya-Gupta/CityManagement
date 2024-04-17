@@ -13,8 +13,10 @@
                 ' Update the gradient color based on the new rating value
                 UpdateGradientColor()
             Else
-                Throw New ArgumentOutOfRangeException("Rating value must be between 1.0 and 5.0.")
+                _ratingValue = 3.0
+                'Throw New ArgumentOutOfRangeException("Rating value must be between 1.0 and 5.0.")
             End If
+
         End Set
     End Property
 

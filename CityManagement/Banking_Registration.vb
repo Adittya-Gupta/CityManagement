@@ -121,7 +121,7 @@ Public Class Banking_Registration
             Return
         End If
 
-        If IsValidNumber(Phone) = False Then
+        If IsValidPhoneNumber(Phone) = False Then
             MessageBox.Show("invalid Phone number ")
             Return
         End If
@@ -139,7 +139,7 @@ Public Class Banking_Registration
             conn.Open()
             'MessageBox.Show("Connected to MySQL database!")
 
-            Dim query2 As String = "INSERT INTO `UserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
+            Dim query2 As String = "INSERT INTO `BankUserData`(`Bank_Account_Number`, `Email_ID`, `Name`, `Address`, `Phone_Number`, `Username`, `Password`, `DOB`, `Balance`, `CIBIL_Score`, `Profile_Image`, `Signature`, `Identification_Number`, `Gender`, `Approved`) VALUES ('','" & Email & "','" & Name & "','" & Address & "','" & Phone & "','" & Username & "','" & Password & "','" & DOB & "',0.0,0.0,?photo,?sign,'" & IdentificationNumber & "','" & Gender & "',0)"
             Dim cmd As MySqlCommand = New MySqlCommand(query2, conn)
             'Dim reader As MySqlDataReader = cmd.ExecuteReader()
             'reader.Close()
@@ -206,10 +206,10 @@ Public Class Banking_Registration
         End If
     End Sub
 
-    Function IsValidNumber(phoneNumber As String) As Boolean
+    Function IsValidPhoneNumber(phoneNumber As String) As Boolean
         ' Check if the phone number has a length of 10
         If Len(phoneNumber) <> 10 Then
-            IsValidNumber = False
+            Return False
             Exit Function
         End If
 
@@ -217,15 +217,25 @@ Public Class Banking_Registration
         Dim i As Integer
         For i = 1 To Len(phoneNumber)
             If Not IsNumeric(Mid(phoneNumber, i, 1)) Then
-                IsValidNumber = False
+                Return False
                 Exit Function
             End If
         Next i
-
         ' If all conditions are met, the phone number is valid
-        IsValidNumber = True
+        Return True
     End Function
-
+    Function IsValidNumber(phoneNumber As String) As Boolean
+        ' Check if all characters in the phone number are digits
+        Dim i As Integer
+        For i = 1 To Len(phoneNumber)
+            If Not IsNumeric(Mid(phoneNumber, i, 1)) Then
+                Return False
+                Exit Function
+            End If
+        Next i
+        ' If all conditions are met, the phone number is valid
+        Return True
+    End Function
 
     Private Sub TextBoxConfermPassword_TextChanged(sender As Object, e As EventArgs) Handles TextBoxConfermPassword.TextChanged
         If TextBoxConfermPassword.Text = TextBoxpassword.Text Then
@@ -355,7 +365,7 @@ Public Class Banking_Registration
             conn.Open()
             ' MessageBox.Show("Connected to MySQL database!")
 
-            Dim query = "SELECT * FROM `UserData` WHERE username = '" & Username & "'"
+            Dim query = "SELECT * FROM `BankUserData` WHERE username = '" & Username & "'"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 

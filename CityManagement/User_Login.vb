@@ -168,6 +168,7 @@ Public Class User_Login
                 ' If the passwords match, login successful
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Module1.CurrUserSID = database_sid
+                Globals.ResetMembersAndForms()
                 ' Add code to navigate to the next form or perform other actions upon successful login
                 'Dim profile As New MainPanel()
                 Module1.Global_Main_Panel.StartPosition = FormStartPosition.Manual

@@ -42,7 +42,7 @@ Public Class addcourse_page
         video_link.Text = "Video"
         video_link.Font = New Font("Segoe UI", 12)
         video_link.BackColor = ColorTranslator.FromHtml("#0642DE")
-        video_link.Size() = New Size(80, 50)
+        video_link.Size() = New Size(70, 40)
         video_link.Location = New Point(95, 40)
 
         buton2.Text = "Delete Course"
@@ -280,7 +280,7 @@ Public Class addcourse_page
                 Return
             End If
         End Using
-        Dim connstrig As String = "server= 172.16.114.244;userid=admin;password=nimda;database=smart_city_management; sslmode=none"
+        Dim connstrig As String = Module1.connString
         Dim conn As New MySqlConnection(connstrig)
         Try
             conn.Open()
@@ -341,4 +341,6 @@ Public Class addcourse_page
         mypanel.panel1.Controls.Add(form)
         form.Show()
     End Sub
+
+
 End Class

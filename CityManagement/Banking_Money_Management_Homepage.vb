@@ -24,6 +24,7 @@ Public Class Banking_Money_Management_Homepage
     Public account_number As String
     Public receiver_name As String
     Public sqlDt As New DataTable
+    Public recv_account_number As String
     Private Sub CalculateBankAccNo()
         sqlDt.Clear()
         conn.Open()
@@ -68,6 +69,7 @@ Public Class Banking_Money_Management_Homepage
                 If sqlDt.Rows.Count = 0 Then
                     MessageBox.Show("No user found with current details.")
                 Else
+                    recv_account_number = sqlDt.Rows(0)("Bank_Account_Number").ToString()
                     If ComboBox_Mode_of_Payment.SelectedIndex = 0 Then
                         'Money_Management_Net_Banking.Show()
                         ChildForm(Banking_Main.Panel1, Banking_Money_Management_Net_Banking)

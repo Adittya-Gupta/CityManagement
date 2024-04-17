@@ -97,7 +97,7 @@ Public Class Banking_Money_Management_Credit_Card
                     MessageBox.Show("Wrong Card Details.")
                 Else
                     conn.Open()
-                    query = "SELECT * FROM BankUserData Where bank_username = '" & CType(sqlDt.Rows(0)("bank_username"), String) & "' ;"
+                    query = "SELECT * FROM BankUserData Where Username = '" & CType(sqlDt.Rows(0)("bank_username"), String) & "' ;"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader
                     Dim sqlDt2 As New DataTable
@@ -111,7 +111,7 @@ Public Class Banking_Money_Management_Credit_Card
                     Else
                         conn.Open()
                         ' withdraw
-                        query = "UPDATE BankUserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Bank_Account_Number = '" & CType(sqlDt.Rows(0)("Bank_Account_Number"), String) & "' ;"
+                        query = "UPDATE BankUserData SET Balance = Balance - " & Banking_Money_Management_Homepage.amount & " Where Username = '" & CType(sqlDt.Rows(0)("bank_username"), String) & "' ;"
                         cmd = New MySqlCommand(query, conn)
                         reader = cmd.ExecuteReader
                         reader.Close()
